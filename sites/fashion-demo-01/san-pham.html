@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sản Phẩm — Bộ Sưu Tập Thời Trang | Atelier MS01</title>
+  <meta name="description" content="Khám phá đầy đủ bộ sưu tập thời trang nữ đương đại — áo sơ mi, váy đầm, blazer, quần âu và nhiều hơn nữa.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="library-return-bar">
+    <span>Giao diện mẫu <strong>#MS01</strong>.</span>
+    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+  </div>
+
+  <header>
+    <div class="header-wrap">
+      <div class="logo">Atelier <span>MS01</span></div>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="san-pham.html" class="active">Sản Phẩm</a></li>
+          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
+          <li><a href="lien-he.html">Liên Hệ</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="cart-trigger" id="cart-btn">Giỏ Hàng (<span id="cart-count">0</span>)</button>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="subpage-header">
+    <h1>Bộ Sưu Tập Thời Trang</h1>
+    <p>Khám phá đầy đủ các thiết kế từ áo sơ mi, váy đầm đến áo khoác và phụ kiện</p>
+  </div>
+
+  <!-- Filter Tabs -->
+  <div class="product-filters">
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">Tất Cả</button>
+      <button class="filter-tab" data-filter="ao">Áo</button>
+      <button class="filter-tab" data-filter="vay">Váy & Đầm</button>
+      <button class="filter-tab" data-filter="quan">Quần & Chân Váy</button>
+      <button class="filter-tab" data-filter="khoac">Áo Khoác</button>
+    </div>
+    <span class="product-count">Hiển thị <strong>8</strong> sản phẩm</span>
+  </div>
+
+  <main class="section">
+    <div class="grid" id="product-grid">
+
+      <!-- Product 1 -->
+      <div class="card" data-category="ao">
+        <div class="card-img">
+          <img src="assets/images/ao-so-mi-trang.jpg" alt="Áo sơ mi trắng cotton nữ" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-badge">Áo Sơ Mi</span>
+          <h3>Áo Sơ Mi Trắng Cotton</h3>
+          <p class="card-desc">Sơ mi trắng cổ điển, chất cotton mịn thoáng mát. Form regular fit, phù hợp công sở và phong cách casual.</p>
+          <div class="card-price">
+            650.000₫
+            <small>Giá minh họa — chưa bao gồm khuyến mãi</small>
+          </div>
+          <button class="btn-buy" data-name="Áo Sơ Mi Trắng Cotton">Thêm Vào Giỏ</button>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="card" data-category="vay">
+        <div class="card-img">
+          <img src="assets/images/vay-midi-den.jpg" alt="Váy midi đen chữ A" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-badge">Váy & Đầm</span>
+          <h3>Váy Midi Đen Chữ A</h3>
+          <p class="card-desc">Váy midi xòe nhẹ, cổ thuyền thanh lịch. Chất vải dày dặn, giữ form tốt, phù hợp đi làm và dự tiệc.</p>
+          <div class="card-price">
+            890.000₫
+            <small>Giá minh họa — chưa bao gồm khuyến mãi</small>
+          </div>
+          <button class="btn-buy" data-name="Váy Midi Đen Chữ A">Thêm Vào Giỏ</button>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="card" data-category="khoac">
+        <div class="card-img">
+          <img src="assets/images/ao-blazer-be.jpg" alt="Áo blazer nữ oversize màu be" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-badge">Áo Khoác</span>
+          <h3>Blazer Nữ Oversize Màu Be</h3>
+          <p class="card-desc">Blazer oversize phom rộng, vai suông hiện đại. Chất vải tweed pha len mềm mại, lót lụa bên trong.</p>
+          <div class="card-price">
+            1.250.000₫
+            <small>Giá minh họa — chưa bao gồm khuyến mãi</small>
+          </div>
+          <button class="btn-buy" data-name="Blazer Nữ Oversize Màu Be">Thêm Vào Giỏ</button>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="card" data-category="quan">
+        <div class="card-img">
+          <img src="assets/images/quan-au-den.jpg" alt="Quần âu đen ống đứng nữ" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-badge">Quần</span>
+          <h3>Quần Âu Đen Ống Đứng</h3>
+          <p class="card-desc">Quần âu ống đứng cạp cao, chất vải dày co giãn nhẹ. Đường ly sắc nét, lên dáng chuẩn.</p>
+          <div class="card-price">
+            580.000₫
+            <small>Giá minh họa — chưa bao gồm khuyến mãi</small>
+          </div>
+          <button class="btn-buy" data-name="Quần Âu Đen Ống Đứng">Thêm Vào Giỏ</button>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="card" data-category="quan">
+        <div class="card-img">
+          <img src="assets/images/chan-vay-xep-ly.jpg" alt="Chân váy xếp ly midi hồng phấn" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-badge">Chân Váy</span>
+          <h3>Chân Váy Xếp Ly Midi Hồng Phấn</h3>
+          <p class="card-desc">Chân váy xếp ly mềm mại, dáng midi thanh lịch. Chất voan cao cấp, lớp lót bên trong.</p>
+          <div class="card-price">
+            720.000₫
+            <small>Giá minh họa — chưa bao gồm khuyến mãi</small>
+          </div>
+          <button class="btn-buy" data-name="Chân Váy Xếp Ly Midi">Thêm Vào Giỏ</button>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="card" data-category="ao">
+        <div class="card-img">
+          <img src="assets/images/ao-len-xam.jpg" alt="Áo len xám cổ tròn nữ" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-badge">Áo Len</span>
+          <h3>Áo Len Xám Cổ Tròn</h3>
+          <p class="card-desc">Áo len mềm mại pha cashmere, cổ tròn cổ điển. Ấm áp cho mùa thu đông, dễ phối layer.</p>
+          <div class="card-price">
+            780.000₫
+            <small>Giá minh họa — chưa bao gồm khuyến mãi</small>
+          </div>
+          <button class="btn-buy" data-name="Áo Len Xám Cổ Tròn">Thêm Vào Giỏ</button>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="card" data-category="khoac">
+        <div class="card-img">
+          <img src="assets/images/ao-khoac-da.jpg" alt="Áo khoác da nữ phong cách biker" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-badge">Áo Khoác</span>
+          <h3>Áo Khoác Da Nữ Biker</h3>
+          <p class="card-desc">Áo khoác da thật phong cách biker, khóa kéo chéo, đai lưng. Lót vải mềm, phù hợp thời tiết se lạnh.</p>
+          <div class="card-price">
+            2.450.000₫
+            <small>Giá minh họa — chưa bao gồm khuyến mãi</small>
+          </div>
+          <button class="btn-buy" data-name="Áo Khoác Da Nữ Biker">Thêm Vào Giỏ</button>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="card" data-category="vay">
+        <div class="card-img">
+          <img src="assets/images/dam-lien-than.jpg" alt="Đầm liền thân wrap xanh olive" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-badge">Váy & Đầm</span>
+          <h3>Đầm Wrap Liền Thân Xanh Olive</h3>
+          <p class="card-desc">Đầm liền thân kiểu wrap, cổ chữ V thanh lịch, dáng midi. Chất vải mềm rũ, tôn eo tự nhiên.</p>
+          <div class="card-price">
+            950.000₫
+            <small>Giá minh họa — chưa bao gồm khuyến mãi</small>
+          </div>
+          <button class="btn-buy" data-name="Đầm Wrap Liền Thân Xanh Olive">Thêm Vào Giỏ</button>
+        </div>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="card" data-category="ao">
+        <div class="card-img">
+          <img src="assets/images/ao-thun-co-tron.jpg" alt="Áo thun cổ tròn xanh navy" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-badge">Áo Thun</span>
+          <h3>Áo Thun Cổ Tròn Xanh Navy</h3>
+          <p class="card-desc">Áo thun basic chất cotton premium, dáng regular thoải mái. Màu xanh navy dễ phối, mặc hàng ngày.</p>
+          <div class="card-price">
+            350.000₫
+            <small>Giá minh họa — chưa bao gồm khuyến mãi</small>
+          </div>
+          <button class="btn-buy" data-name="Áo Thun Cổ Tròn Xanh Navy">Thêm Vào Giỏ</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <div class="logo" style="color: #fff;">Atelier <span>MS01</span></div>
+        <p>Thương hiệu thời trang đương đại dành cho phụ nữ hiện đại. Giao diện mẫu demo — không đại diện cho doanh nghiệp thực tế.</p>
+      </div>
+      <div>
+        <h4>Liên Kết</h4>
+        <ul>
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="san-pham.html">Sản Phẩm</a></li>
+          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
+          <li><a href="lien-he.html">Liên Hệ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Danh Mục</h4>
+        <ul>
+          <li><a href="san-pham.html">Áo Sơ Mi & Blouse</a></li>
+          <li><a href="san-pham.html">Váy & Đầm</a></li>
+          <li><a href="san-pham.html">Áo Khoác & Blazer</a></li>
+          <li><a href="san-pham.html">Quần & Chân Váy</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Liên Hệ Tư Vấn</h4>
+        <p>Zalo: <a href="https://zalo.me/0971183939">0971183939</a></p>
+        <p>Hỗ trợ chọn size, phối đồ và đặt hàng.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Atelier — Giao diện mẫu #MS01. Bản quyền giao diện thuộc Thư Viện Theme Library.
+    </div>
+  </footer>
+
+  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Zalo">Zalo</a></aside>
+  <script src="js/app.js"></script>
+</body>
+</html>

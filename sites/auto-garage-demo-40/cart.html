@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ Hàng & Yêu Cầu Đặt Xe | Auto Garage Demo 40</title>
+  <meta name="description" content="Quản lý danh sách xe và gói dịch vụ đã chọn, tính tổng thanh toán và gửi thông tin đặt cọc giữ xe tại Auto Garage Demo 40.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation bar returning to Theme Library -->
+  <div class="library-return-bar">
+    <span>Giao diện mẫu <strong>#MS40 (Auto Garage)</strong> độc lập thuộc Thư Viện Theme.</span>
+    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-main-wrap">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🏎️</div>
+        <div>
+          AUTOGARAGE 40
+          <span class="badge-id">PREMIUM</span>
+        </div>
+      </a>
+
+      <button type="button" class="mobile-menu-btn" aria-label="Mở menu">☰</button>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="san-pham.html">Dòng Xe & Bảng Giá</a></li>
+          <li><a href="gioi-thieu.html">Về Chúng Tôi</a></li>
+          <li><a href="blog.html">Cẩm Nang Ô Tô</a></li>
+          <li><a href="lien-he.html">Liên Hệ & Bản Đồ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="cart.html" class="btn-cart">
+          🛒 Giỏ Hàng (<span id="cart-count" class="cart-badge">0</span>)
+        </a>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo-top">
+          💬 Zalo: 0971183939
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div style="background: linear-gradient(180deg, #111827 0%, #090d16 100%); padding: 3rem 1.25rem 2rem 1.25rem; border-bottom: 1px solid var(--card-border);">
+      <div style="max-width: 1240px; margin: 0 auto; text-align: center;">
+        <span class="section-badge">Thương Mại Điện Tử & Đặt Cọc</span>
+        <h1 style="font-family: var(--font-heading); font-size: 2.4rem; font-weight: 800; text-transform: uppercase;">
+          Giỏ Hàng & Danh Sách Đặt Giữ Xe
+        </h1>
+        <p style="color: var(--text-muted); max-width: 650px; margin: 0.5rem auto 0 auto;">
+          Xem lại danh sách phương tiện và gói dịch vụ đã chọn. Lưu trữ an toàn trên thiết bị của quý khách.
+        </p>
+      </div>
+    </div>
+
+    <section class="section">
+      <!-- Container populated dynamically by renderCartPage() -->
+      <div id="cart-page-content">
+        <!-- Rendered by app.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Zalo Button -->
+  <aside class="floating-zalo">
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Zalo 0971183939">
+      Zalo
+    </a>
+  </aside>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom: 0.5rem;">
+          <div class="logo-icon">🏎️</div>
+          <div>AUTOGARAGE 40</div>
+        </div>
+        <p class="footer-desc">
+          Showroom xe hơi hạng sang và trung tâm dịch vụ kỹ thuật ô tô uy tín hàng đầu.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Menu Nhanh</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="san-pham.html">Danh Sách Dòng Xe</a></li>
+          <li><a href="gioi-thieu.html">Giới Thiệu Showroom</a></li>
+          <li><a href="blog.html">Cẩm Nang Kỹ Thuật</a></li>
+          <li><a href="lien-he.html">Liên Hệ & Bản Đồ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Chính Sách</h4>
+        <ul class="footer-links">
+          <li><a href="gioi-thieu.html">Chính sách bảo hành xe</a></li>
+          <li><a href="gioi-thieu.html">Quy trình giao xe toàn quốc</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Hotline Hỗ Trợ</h4>
+        <div class="footer-contact-item">
+          <span>📞</span>
+          <div>
+            <strong>Zalo Tư Vấn Trực Tiếp:</strong><br>
+            <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700; font-size: 1.1rem;">0971.18.39.39</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 Auto Garage Demo 40. Giao diện được thiết kế độc lập chuẩn Front-end thương mại điện tử.
+    </div>
+  </footer>
+
+  <script src="data/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

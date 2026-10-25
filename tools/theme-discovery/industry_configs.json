@@ -1,0 +1,146 @@
+{
+  "Thời trang": {
+    "primary": "#18181b", "secondary": "#d97706", "bg": "#fafaf9", "surface": "#ffffff", "text": "#27272a",
+    "tagline": "Phong cách định hình đẳng cấp & Thời trang dẫn đầu xu hướng",
+    "catalogTitle": "Bộ Sưu Tập Thời Trang Nổi Bật",
+    "itemType": "Sản phẩm",
+    "items": [
+      { "name": "Áo Sơ Mi Lụa Cao Cấp", "price": "650.000đ", "tag": "Bán chạy" },
+      { "name": "Đầm Dạ Hội Dáng Xòe Sang Trọng", "price": "1.250.000đ", "tag": "Mới về" },
+      { "name": "Áo Khoác Blazer Chuẩn Form", "price": "950.000đ", "tag": "Hot" },
+      { "name": "Quần Tây Form Suông Thanh Lịch", "price": "520.000đ", "tag": "Best Seller" }
+    ]
+  },
+  "Mỹ phẩm": {
+    "primary": "#be185d", "secondary": "#f43f5e", "bg": "#fff1f2", "surface": "#ffffff", "text": "#4c0519",
+    "tagline": "Chăm sóc làn da tỏa sáng tự nhiên & Mỹ phẩm thuần chay",
+    "catalogTitle": "Sản Phẩm Dưỡng Da & Làm Đẹp",
+    "itemType": "Mỹ phẩm",
+    "items": [
+      { "name": "Serum Phục Hồi Bio-Peptide", "price": "480.000đ", "tag": "Best Seller" },
+      { "name": "Kem Dưỡng Trắng Da Chiết Xuất Hoa Hồng", "price": "590.000đ", "tag": "Khuyên dùng" },
+      { "name": "Sữa Rửa Mặt Tạo Bọt Dịu Nhẹ", "price": "280.000đ", "tag": "Organic" },
+      { "name": "Kem Chống Nắng Quang Phổ Rộng SPF50+", "price": "420.000đ", "tag": "Chống nắng" }
+    ]
+  },
+  "Công nghệ": {
+    "primary": "#0284c7", "secondary": "#06b6d4", "bg": "#0f172a", "surface": "#1e293b", "text": "#f8fafc",
+    "tagline": "Thiết bị công nghệ đỉnh cao & Giải pháp số hiện đại",
+    "catalogTitle": "Thiết Bị Công Nghệ Tiên Tiến",
+    "itemType": "Thiết bị",
+    "items": [
+      { "name": "Laptop Hiệu Năng Cao Gen 14", "price": "24.990.000đ", "tag": "Flagship" },
+      { "name": "Bàn Phím Cơ Không Dây RGB", "price": "1.890.000đ", "tag": "Gaming" },
+      { "name": "Tai Nghe Chống Ồn Chủ Động ANC", "price": "3.450.000đ", "tag": "Audio" },
+      { "name": "Màn Hình Cong 4K Ultra Wide", "price": "12.800.000đ", "tag": "Đồ họa" }
+    ]
+  },
+  "Bất động sản": {
+    "primary": "#1e3a8a", "secondary": "#d97706", "bg": "#f8fafc", "surface": "#ffffff", "text": "#0f172a",
+    "tagline": "Kiến tạo không gian sống thượng lưu & Dự án đầu tư sinh lời",
+    "catalogTitle": "Dự Án Bất Động Sản Nổi Bật",
+    "itemType": "Dự án",
+    "items": [
+      { "name": "Căn Hộ Panorama Ven Sông", "price": "3.8 Tỷ", "tag": "View Đẹp" },
+      { "name": "Biệt Thự Đơn Lập Nghỉ Dưỡng", "price": "15.5 Tỷ", "tag": "Cao Cấp" },
+      { "name": "Shophouse Mặt Tiền Đại Lộ", "price": "8.2 Tỷ", "tag": "Đầu Tư" },
+      { "name": "Penthouse Triệu Đô Trung Tâm", "price": "28 Tỷ", "tag": "VIP" }
+    ]
+  },
+  "Nội thất": {
+    "primary": "#78350f", "secondary": "#b45309", "bg": "#fefce8", "surface": "#ffffff", "text": "#451a03",
+    "tagline": "Nội thất tinh tế phong cách Bắc Âu & Tối giản không gian",
+    "catalogTitle": "Bộ Sưu Tập Nội Thất Sang Trọng",
+    "itemType": "Nội thất",
+    "items": [
+      { "name": "Sofa Gỗ Sồi Bọc Nỉ Cao Cấp", "price": "14.500.000đ", "tag": "Bắc Âu" },
+      { "name": "Bàn Ăn 6 Ghế Gỗ Tự Nhiên", "price": "9.800.000đ", "tag": "Ấm Cúng" },
+      { "name": "Tủ Kệ Tivi Tối Giản Scandinavian", "price": "5.200.000đ", "tag": "Tối Giản" },
+      { "name": "Đèn Thả Trần Nghệ Thuật Decor", "price": "1.850.000đ", "tag": "Decor" }
+    ]
+  },
+  "Ẩm thực - Nhà hàng": {
+    "primary": "#b91c1c", "secondary": "#ea580c", "bg": "#fffbeb", "surface": "#ffffff", "text": "#451a03",
+    "tagline": "Hương vị ẩm thực tinh hoa & Không gian ẩm thực ấm cúng",
+    "catalogTitle": "Thực Đơn Món Ăn Đặc Sắc",
+    "itemType": "Món ăn",
+    "items": [
+      { "name": "Set Bánh Mì Men Tự Nhiên Artisan", "price": "120.000đ", "tag": "Đặc biệt" },
+      { "name": "Bánh Mousse Trái Cây Tươi", "price": "85.000đ", "tag": "Tráng miệng" },
+      { "name": "Combo Bữa Sáng Dinh Dưỡng", "price": "155.000đ", "tag": "Yêu thích" },
+      { "name": "Trà Hoa Cúc Mật Ong Thượng Hạng", "price": "65.000đ", "tag": "Thức uống" }
+    ]
+  },
+  "Spa - Làm đẹp": {
+    "primary": "#047857", "secondary": "#059669", "bg": "#f0fdf4", "surface": "#ffffff", "text": "#064e3b",
+    "tagline": "Thư giãn tinh thần, tái tạo năng lượng & Chăm sóc sắc đẹp",
+    "catalogTitle": "Gói Liệu Trình Spa Chuyên Sâu",
+    "itemType": "Liệu trình",
+    "items": [
+      { "name": "Massage Đá Nóng Thư Giãn Toàn Thân", "price": "450.000đ", "tag": "90 phút" },
+      { "name": "Trị Liệu Trẻ Hóa Da Cấp Ẩm Tức Thì", "price": "650.000đ", "tag": "Chuyên sâu" },
+      { "name": "Gội Đầu Dưỡng Sinh Thảo Dược", "price": "250.000đ", "tag": "Thư thái" },
+      { "name": "Gói Chăm Sóc Toàn Diện Thượng Lưu", "price": "1.200.000đ", "tag": "VIP" }
+    ]
+  },
+  "Ô tô - Xe máy": {
+    "primary": "#0f172a", "secondary": "#e11d48", "bg": "#f1f5f9", "surface": "#ffffff", "text": "#0f172a",
+    "tagline": "Công nghệ vận hành vượt bậc & Trải nghiệm lái phấn khích",
+    "catalogTitle": "Danh Mục Dòng Xe & Dịch Vụ Xe",
+    "itemType": "Dòng xe",
+    "items": [
+      { "name": "Sedan Thể Thao Điện Hạng Sang", "price": "1.250.000.000đ", "tag": "Mới 2026" },
+      { "name": "SUV Đa Dụng 7 Chỗ Địa Hình", "price": "1.680.000.000đ", "tag": "Gia đình" },
+      { "name": "Gói Bảo Dưỡng Định Kỳ Toàn Diện", "price": "3.500.000đ", "tag": "Chính hãng" },
+      { "name": "Độ Phụ Kiện & Nâng Cấp Nội Thất", "price": "Liên hệ", "tag": "Custom" }
+    ]
+  },
+  "Du lịch": {
+    "primary": "#0284c7", "secondary": "#f59e0b", "bg": "#f0f9ff", "surface": "#ffffff", "text": "#0c4a6e",
+    "tagline": "Khám phá thế giới, tận hưởng kỳ nghỉ thiên đường trọn gói",
+    "catalogTitle": "Tour Du Lịch Trọn Gói Nổi Bật",
+    "itemType": "Tour",
+    "items": [
+      { "name": "Tour Nghỉ Dưỡng Maldives Thiên Đường", "price": "32.500.000đ", "tag": "5N4Đ" },
+      { "name": "Khám Phá Cung Đường Vàng Nhật Bản", "price": "28.900.000đ", "tag": "Mùa hoa" },
+      { "name": "Kỳ Nghỉ Phú Quốc Resort 5 Sao", "price": "6.800.000đ", "tag": "Biển đảo" },
+      { "name": "Tour Hành Trình Di Sản Miền Trung", "price": "5.200.000đ", "tag": "Văn hóa" }
+    ]
+  },
+  "Y tế": {
+    "primary": "#0284c7", "secondary": "#10b981", "bg": "#f0fdf4", "surface": "#ffffff", "text": "#0f172a",
+    "tagline": "Tận tâm chăm sóc sức khỏe cộng đồng & Dược phẩm chính hãng",
+    "catalogTitle": "Thuốc Kê Đơn & Sản Phẩm Sức Khỏe",
+    "itemType": "Sản phẩm",
+    "items": [
+      { "name": "Viên Uống Bổ Sung Vitamin Tổng Hợp", "price": "350.000đ", "tag": "Chính hãng" },
+      { "name": "Máy Đo Huyết Áp Điện Tử Bắp Tay", "price": "890.000đ", "tag": "Bảo hành 2 năm" },
+      { "name": "Dầu Cá Omega-3 Tinh Khiết", "price": "420.000đ", "tag": "Nhập khẩu" },
+      { "name": "Bộ Hộp Sơ Cứu Gia Đình Chuẩn Y Tế", "price": "260.000đ", "tag": "Cần thiết" }
+    ]
+  },
+  "Thú cưng": {
+    "primary": "#0d9488", "secondary": "#f97316", "bg": "#f0fdfa", "surface": "#ffffff", "text": "#134e4a",
+    "tagline": "Dinh dưỡng thượng hạng cho thú cưng khỏe mạnh & Hạnh phúc",
+    "catalogTitle": "Thức Ăn & Phụ Kiện Thú Cưng",
+    "itemType": "Sản phẩm",
+    "items": [
+      { "name": "Thức Ăn Hạt Hữu Cơ Cao Cấp Cho Chó", "price": "450.000đ", "tag": "Giàu đạm" },
+      { "name": "Pate Dinh Dưỡng Cho Mèo Mọi Lứa Tuổi", "price": "35.000đ", "tag": "Thơm ngon" },
+      { "name": "Nệm Ngủ Êm Ái Cao Cấp Size L", "price": "320.000đ", "tag": "Mềm mại" },
+      { "name": "Sữa Tắm Khử Mùi & Dưỡng Lông Thú Cưng", "price": "180.000đ", "tag": "Thảo mộc" }
+    ]
+  },
+  "Khác": {
+    "primary": "#2563eb", "secondary": "#3b82f6", "bg": "#f8fafc", "surface": "#ffffff", "text": "#0f172a",
+    "tagline": "Giải pháp chuyên nghiệp, chuẩn mực dịch vụ & Khẳng định thương hiệu",
+    "catalogTitle": "Dịch Vụ & Sản Phẩm Tiêu Biểu",
+    "itemType": "Dịch vụ",
+    "items": [
+      { "name": "Gói Dịch Vụ Cơ Bản Tiêu Chuẩn", "price": "1.500.000đ", "tag": "Cơ bản" },
+      { "name": "Gói Giải Pháp Nâng Cao Chuyên Sâu", "price": "3.500.000đ", "tag": "Khuyên dùng" },
+      { "name": "Gói Toàn Diện Doanh Nghiệp VIP", "price": "7.500.000đ", "tag": "Trọn gói" },
+      { "name": "Hỗ Trợ & Tư Vấn Kỹ Thuật 24/7", "price": "Miễn phí", "tag": "Hỗ trợ" }
+    ]
+  }
+}

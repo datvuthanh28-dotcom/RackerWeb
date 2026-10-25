@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bộ Sưu Tập Hoa Tươi Chọn Lọc | Flora Art #MS64</title>
+  <meta name="description" content="Khám phá toàn bộ 14 thiết kế hoa tươi cao cấp tại Flora Art: hoa bó tình yêu, giỏ hoa sinh nhật, kệ hoa khai trương, lan hồ điệp và hoa cưới. Cập nhật giá minh bạch, giao hỏa tốc 2 giờ.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Return bar to Theme Library -->
+  <div class="library-return-bar">
+    <span>Giao diện mẫu <strong>#MS64</strong> thuộc Thư Viện Theme.</span>
+    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+  </div>
+
+  <!-- Announcement strip -->
+  <div class="top-announcement-bar">
+    <div class="announcement-wrap">
+      <span>🌸 100% Hoa tươi tuyển chọn loại 1 từ Đà Lạt & nhập khẩu</span>
+      <span>🚚 Miễn phí giao hàng cho đơn từ 500.000₫ • Tặng thiệp viết tay theo yêu cầu</span>
+      <span>📞 Hotline / Zalo: <strong>0971183939</strong></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-wrap">
+      <div class="brand-logo">
+        <div class="logo-icon">🌸</div>
+        <div class="logo-text-group">
+          <a href="index.html" class="brand-name">Flora Art</a>
+          <span class="brand-tagline">Tiệm Hoa Tươi • MS64</span>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="san-pham.html" class="active">Bộ Sưu Tập Hoa</a></li>
+          <li><a href="gioi-thieu.html">Về Chúng Tôi</a></li>
+          <li><a href="lien-he.html">Liên Hệ & Đặt Hoa</a></li>
+        </ul>
+      </nav>
+
+      <!-- Global Search Input -->
+      <form class="header-search-form" role="search">
+        <input type="search" placeholder="Tìm hoa hồng, lan, sinh nhật..." aria-label="Tìm kiếm hoa tươi">
+        <button type="submit" title="Tìm kiếm">🔍</button>
+      </form>
+
+      <!-- Header Actions: Auth & Cart -->
+      <div class="header-actions">
+        <!-- Demo Auth Button -->
+        <button type="button" id="auth-trigger" class="btn-header-auth" title="Tài khoản Demo">
+          <span>👤</span> Đăng Nhập
+        </button>
+
+        <div id="auth-user-menu" class="user-status-badge" style="display: none;">
+          <span>🌸</span>
+          <span id="auth-user-name">Lan Anh</span>
+          <button type="button" id="auth-logout-btn" class="btn-logout-link" title="Đăng xuất">Thoát</button>
+        </div>
+
+        <!-- Cart Trigger -->
+        <button type="button" class="cart-trigger" aria-label="Xem giỏ hàng">
+          <span>🛒 Giỏ Hàng</span>
+          <span id="cart-count" class="cart-badge-count">0</span>
+        </button>
+
+        <!-- Mobile Nav Toggle -->
+        <button type="button" id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Menu di động">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Subpage Banner -->
+  <div class="subpage-banner">
+    <h1>Bộ Sưu Tập Hoa Tươi Thiết Kế</h1>
+    <p>Khám phá đầy đủ các mẫu hoa bó, giỏ hoa, kệ hoa khai trương và lan hồ điệp được cắm thủ công tỉ mỉ bởi nghệ nhân Flora Art</p>
+  </div>
+
+  <main class="section" style="margin-top: 2.5rem;">
+    <!-- Catalog Filter & Search Toolbar -->
+    <div class="catalog-filter-bar">
+      <!-- Row 1: Quick Category Pills -->
+      <div class="catalog-filter-row">
+        <div class="category-tabs-wrap">
+          <button type="button" class="catalog-tab-btn active" data-cat="all">Tất Cả (14)</button>
+          <button type="button" class="catalog-tab-btn" data-cat="hoa-sinh-nhat">Hoa Sinh Nhật</button>
+          <button type="button" class="catalog-tab-btn" data-cat="hoa-tinh-yeu">Hoa Tình Yêu</button>
+          <button type="button" class="catalog-tab-btn" data-cat="hoa-chuc-mung">Hoa Chúc Mừng</button>
+          <button type="button" class="catalog-tab-btn" data-cat="hoa-khai-truong">Hoa Khai Trương</button>
+          <button type="button" class="catalog-tab-btn" data-cat="hoa-cuoi">Hoa Cưới</button>
+          <button type="button" class="catalog-tab-btn" data-cat="hoa-de-ban">Hoa Để Bàn</button>
+        </div>
+
+        <!-- Inputs: Search & Sort -->
+        <div class="filter-inputs-group">
+          <div class="filter-search-box">
+            <input type="search" id="catalog-search-input" placeholder="Lọc nhanh tên hoa..." aria-label="Lọc tên hoa">
+          </div>
+
+          <select id="catalog-category-filter" class="filter-select" aria-label="Chọn danh mục">
+            <option value="all">Mọi danh mục</option>
+            <option value="hoa-sinh-nhat">Hoa Sinh Nhật</option>
+            <option value="hoa-tinh-yeu">Hoa Tình Yêu</option>
+            <option value="hoa-chuc-mung">Hoa Chúc Mừng</option>
+            <option value="hoa-khai-truong">Hoa Khai Trương</option>
+            <option value="hoa-cuoi">Hoa Cưới</option>
+            <option value="hoa-de-ban">Hoa Để Bàn</option>
+          </select>
+
+          <select id="catalog-sort-filter" class="filter-select" aria-label="Sắp xếp sản phẩm">
+            <option value="default">Sắp xếp: Mặc định</option>
+            <option value="price-asc">Giá: Thấp đến cao</option>
+            <option value="price-desc">Giá: Cao đến thấp</option>
+            <option value="name-asc">Tên: A - Z</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Row 2: Status & Active Filters -->
+      <div class="catalog-meta-info">
+        <div id="catalog-result-count">Đang tải danh sách hoa...</div>
+        <div>
+          <span id="catalog-active-filter" class="active-filter-pill" style="display: none;"></span>
+          <button type="button" id="catalog-clear-filter" class="btn-clear-filter" style="display: none;">Xóa bộ lọc</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Grid (Dynamic rendering) -->
+    <div id="catalog-products-grid" class="product-grid">
+      <!-- Injected by app.js -->
+    </div>
+
+    <!-- Florist Guarantees -->
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem; margin-top: 4rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; text-align: center;">
+      <div>
+        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌸</div>
+        <strong style="display: block; font-size: 0.95rem; margin-bottom: 0.25rem;">Hoa Mới Mỗi Sáng</strong>
+        <span style="font-size: 0.8rem; color: var(--text-muted);">Cam kết không sử dụng hoa đông lạnh hoặc hoa cũ ngày trước.</span>
+      </div>
+      <div>
+        <div style="font-size: 2rem; margin-bottom: 0.5rem;">📸</div>
+        <strong style="display: block; font-size: 0.95rem; margin-bottom: 0.25rem;">Gửi Ảnh Duyệt Mẫu</strong>
+        <span style="font-size: 0.8rem; color: var(--text-muted);">Chụp ảnh thật gửi quý khách xem trước khi đóng gói giao hàng.</span>
+      </div>
+      <div>
+        <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
+        <strong style="display: block; font-size: 0.95rem; margin-bottom: 0.25rem;">Giao Nhanh 2 Giờ</strong>
+        <span style="font-size: 0.8rem; color: var(--text-muted);">Đội ngũ shipper chuyên chở hoa an toàn bằng hộp chống dập nát.</span>
+      </div>
+      <div>
+        <div style="font-size: 2rem; margin-bottom: 0.5rem;">💌</div>
+        <strong style="display: block; font-size: 0.95rem; margin-bottom: 0.25rem;">Tặng Kèm Thiệp & Băng Rôn</strong>
+        <span style="font-size: 0.8rem; color: var(--text-muted);">In ấn thông điệp và nắn nót viết tay lời chúc hoàn toàn miễn phí.</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Floating Zalo Button -->
+  <aside class="floating-zalo">
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn trực tiếp Zalo: 0971183939">Zalo</a>
+  </aside>
+
+  <!-- Professional Footer -->
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <h3>Flora Art 🌸</h3>
+        <p>Tiệm hoa tươi nghệ thuật và quà tặng hoa thiết kế cao cấp. Nâng niu từng khoảnh khắc ý nghĩa trong cuộc sống bằng sắc màu thiên nhiên thuần khiết.</p>
+        <p style="font-size: 0.8rem; color: #a1a1aa;">Mã giao diện: #MS64 • Thư Viện Theme E-commerce</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Bộ Sưu Tập Hoa</h4>
+        <ul class="footer-links">
+          <li><a href="san-pham.html?cat=hoa-sinh-nhat">Hoa Sinh Nhật</a></li>
+          <li><a href="san-pham.html?cat=hoa-tinh-yeu">Hoa Tình Yêu & Valentine</a></li>
+          <li><a href="san-pham.html?cat=hoa-khai-truong">Hoa Khai Trương Phát Tài</a></li>
+          <li><a href="san-pham.html?cat=hoa-cuoi">Hoa Cưới Cô Dâu</a></li>
+          <li><a href="san-pham.html?cat=hoa-de-ban">Bình Hoa Để Bàn Vintage</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Về Flora Art</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="san-pham.html">Tất Cả Sản Phẩm</a></li>
+          <li><a href="gioi-thieu.html">Giới Thiệu Tiệm Hoa</a></li>
+          <li><a href="lien-he.html">Liên Hệ & Đặt Hoa</a></li>
+          <li><a href="../../index.html">&larr; Thư Viện Theme</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact-info">
+        <h4>Liên Hệ Tư Vấn</h4>
+        <p><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" target="_blank">0971183939</a></p>
+        <p><strong>Giờ mở cửa:</strong> 7:30 - 21:30 hàng ngày</p>
+        <p><strong>Địa chỉ Studio:</strong> 64 Đường Hoa Cúc, Phường 7, Phú Nhuận, TP. Hồ Chí Minh</p>
+        <p><strong>Giao hàng:</strong> Hỏa tốc 2H toàn thành phố</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Flora Art (Cửa hàng hoa demo 64). Toàn bộ nội dung giao diện được biên soạn cho Theme Library.</div>
+      <div>Giao diện mẫu trình diễn tính năng thương mại điện tử (Client-side Demo).</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

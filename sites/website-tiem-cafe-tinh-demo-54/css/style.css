@@ -1,0 +1,872 @@
+/* sites/website-tiem-cafe-tinh-demo-54/css/style.css */
+/* Archetype 09: Culinary, Specialty Coffee & Gastronomy Experience */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --espresso: #291811;        /* Deep Roasted Coffee Bean */
+  --roast-dark: #1f120c;
+  --amber: #b45309;           /* Warm Roasted Amber / Terracotta */
+  --amber-hover: #92400e;
+  --amber-light: #fef3c7;
+  --bg-cream: #fbf8f5;        /* Warm Linen Cream */
+  --surface: #ffffff;
+  --surface-warm: #f5eee6;
+  --text: #2c1a12;            /* Deep Warm Brown */
+  --text-muted: #78655b;
+  --border: #e7ded5;
+  --border-light: #f0eae3;
+  --botanical: #065f46;       /* Farm / Harvest Green */
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --shadow-warm: 0 8px 24px rgba(41, 24, 17, 0.08);
+  --shadow-card: 0 4px 16px rgba(41, 24, 17, 0.05);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-cream);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; transition: all 0.2s; }
+img { max-width: 100%; height: auto; display: block; }
+button, input, select, textarea { font-family: inherit; }
+
+/* 1. Return bar back to Theme Library */
+.library-return-bar {
+  background: #1a0e08;
+  color: #a8988e;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid #2e1a10;
+}
+.library-return-bar strong { color: #fbf8f5; }
+.library-return-bar a {
+  color: #f59e0b;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.library-return-bar a:hover { text-decoration: underline; }
+
+/* 2. Top Story Strip */
+.top-story-strip {
+  background: var(--surface-warm);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8rem;
+  padding: 0.45rem 1.5rem;
+  color: var(--text-muted);
+}
+.top-story-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* 3. Site Header */
+header.cafe-header {
+  background: rgba(251, 248, 245, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--espresso);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+.brand-title h1 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--espresso);
+  letter-spacing: -0.3px;
+  line-height: 1.1;
+}
+.brand-title span {
+  font-size: 0.75rem;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+nav.cafe-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+nav.cafe-nav a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+  padding: 0.5rem 0;
+  position: relative;
+}
+nav.cafe-nav a:hover, nav.cafe-nav a.active {
+  color: var(--amber);
+}
+nav.cafe-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--amber);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.btn-cart-trigger {
+  background: var(--surface-warm);
+  border: 1px solid var(--border);
+  color: var(--espresso);
+  padding: 0.55rem 1.1rem;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.2s;
+}
+.btn-cart-trigger:hover {
+  background: var(--espresso);
+  color: #fff;
+  border-color: var(--espresso);
+}
+.cart-badge {
+  background: var(--amber);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.1rem 0.45rem;
+  border-radius: 99px;
+}
+.btn-book-table {
+  background: var(--amber);
+  color: #fff;
+  padding: 0.55rem 1.25rem;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-book-table:hover {
+  background: var(--amber-hover);
+  transform: translateY(-1px);
+}
+.mobile-nav-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--espresso);
+}
+
+/* 4. Warm Editorial Hero */
+.cafe-hero {
+  max-width: 1240px;
+  margin: 2rem auto 4rem;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+.hero-content .subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--amber);
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.hero-content h2 {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  color: var(--espresso);
+  margin-bottom: 1.25rem;
+}
+.hero-content p.description {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 540px;
+}
+.hero-badges-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.25rem;
+}
+.roast-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--espresso);
+}
+.roast-badge svg { color: var(--amber); }
+
+.hero-cta-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.btn-hero-primary {
+  background: var(--espresso);
+  color: #fff;
+  padding: 0.85rem 2rem;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+.btn-hero-primary:hover {
+  background: var(--amber);
+  box-shadow: 0 6px 18px rgba(180, 83, 9, 0.25);
+}
+.btn-hero-secondary {
+  background: transparent;
+  color: var(--espresso);
+  border: 1.5px solid var(--border);
+  padding: 0.85rem 1.75rem;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.btn-hero-secondary:hover {
+  border-color: var(--espresso);
+}
+
+.hero-media {
+  position: relative;
+}
+.hero-img-main {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-warm);
+  height: 480px;
+}
+.hero-img-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-floating-card {
+  position: absolute;
+  bottom: -1.5rem;
+  left: -1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-warm);
+  max-width: 260px;
+}
+.hero-floating-card strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--espresso);
+}
+.hero-floating-card span {
+  font-size: 0.8rem;
+  color: var(--amber);
+  font-weight: 600;
+}
+
+/* 5. Sensory Specialty Coffee Menu */
+.menu-section {
+  max-width: 1240px;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+}
+.section-heading-editorial {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 3rem;
+}
+.section-heading-editorial .sub {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--amber);
+  font-size: 1.1rem;
+}
+.section-heading-editorial h3 {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  color: var(--espresso);
+  margin: 0.35rem 0 0.75rem;
+}
+.section-heading-editorial p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Menu Filter Bar */
+.menu-filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.menu-tab-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.6rem 1.25rem;
+  border-radius: 99px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.menu-tab-btn.active, .menu-tab-btn:hover {
+  background: var(--espresso);
+  color: #fff;
+  border-color: var(--espresso);
+}
+
+.menu-items-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.coffee-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.coffee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-warm);
+}
+.coffee-card-media {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+.coffee-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.coffee-card:hover .coffee-card-media img {
+  transform: scale(1.06);
+}
+.roast-level-pill {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(41, 24, 17, 0.85);
+  color: #fff;
+  padding: 0.25rem 0.65rem;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+.coffee-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.coffee-origin {
+  font-size: 0.8rem;
+  color: var(--botanical);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.35rem;
+}
+.coffee-card-body h4 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--espresso);
+  margin-bottom: 0.5rem;
+}
+.coffee-notes {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.note-tag {
+  background: var(--surface-warm);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+.coffee-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+.coffee-card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.coffee-price {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--espresso);
+}
+.btn-customize-drink {
+  background: var(--surface-warm);
+  border: 1px solid var(--border);
+  color: var(--espresso);
+  padding: 0.45rem 1rem;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-customize-drink:hover {
+  background: var(--amber);
+  color: #fff;
+  border-color: var(--amber);
+}
+
+/* 6. Coffee Ambiance & Space Showcase */
+.space-showcase-section {
+  background: var(--surface-warm);
+  padding: 5rem 1.5rem;
+  margin: 5rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.space-grid {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+.space-content h3 {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  color: var(--espresso);
+  margin-bottom: 1.25rem;
+}
+.space-content p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.space-features {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+.space-features li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+  font-size: 0.95rem;
+}
+.space-features li strong { color: var(--espresso); }
+
+/* 7. Table Reservation / Cupping Session Widget */
+.booking-section {
+  max-width: 900px;
+  margin: 0 auto 5rem;
+  padding: 0 1.5rem;
+}
+.booking-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-warm);
+}
+.booking-card h3 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--espresso);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.booking-card p.subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+.booking-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+.form-group-cafe {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.form-group-cafe label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--espresso);
+}
+.form-group-cafe input, .form-group-cafe select, .form-group-cafe textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-cream);
+  font-size: 0.9rem;
+}
+.form-group-cafe input:focus, .form-group-cafe select:focus, .form-group-cafe textarea:focus {
+  outline: none;
+  border-color: var(--amber);
+  background: #fff;
+}
+.btn-submit-booking {
+  grid-column: span 2;
+  background: var(--espresso);
+  color: #fff;
+  padding: 0.85rem;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.2s;
+}
+.btn-submit-booking:hover {
+  background: var(--amber);
+}
+
+/* 8. Slide-out Cart Drawer */
+.cart-drawer-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(41, 24, 17, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+.cart-drawer-overlay.active { display: block; }
+.cart-drawer {
+  position: fixed;
+  top: 0; right: -420px; bottom: 0;
+  width: 420px;
+  max-width: 100vw;
+  background: var(--surface);
+  box-shadow: -5px 0 25px rgba(0,0,0,0.2);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease-in-out;
+}
+.cart-drawer.open { right: 0; }
+.cart-drawer-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface-warm);
+}
+.cart-drawer-header h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--espresso);
+}
+.close-drawer-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+.cart-drawer-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+.cart-item-row {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.cart-item-info { flex-grow: 1; }
+.cart-item-info h5 {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--espresso);
+  margin-bottom: 0.2rem;
+}
+.cart-item-customs {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+.cart-item-price {
+  font-weight: 700;
+  color: var(--amber);
+  font-size: 0.9rem;
+}
+.cart-qty-ctrl {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.qty-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface-warm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.cart-drawer-footer {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--border);
+  background: var(--surface-warm);
+}
+.cart-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--espresso);
+  margin-bottom: 1rem;
+}
+.btn-checkout-simulated {
+  width: 100%;
+  background: var(--espresso);
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 99px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-checkout-simulated:hover {
+  background: var(--amber);
+}
+
+/* 9. Customize Drink Modal */
+.modal-cafe-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(41, 24, 17, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 1050;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.modal-cafe-overlay.active { display: flex; }
+.modal-cafe-box {
+  background: var(--surface);
+  border-radius: var(--radius);
+  max-width: 520px;
+  width: 100%;
+  box-shadow: var(--shadow-warm);
+  overflow: hidden;
+}
+.modal-cafe-header {
+  padding: 1.25rem 1.5rem;
+  background: var(--surface-warm);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-cafe-header h4 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--espresso);
+}
+.modal-cafe-body {
+  padding: 1.5rem;
+}
+.option-group {
+  margin-bottom: 1.25rem;
+}
+.option-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--espresso);
+  margin-bottom: 0.5rem;
+}
+.pills-selector {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.pill-option {
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  background: var(--bg-cream);
+  color: var(--text);
+  transition: all 0.2s;
+}
+.pill-option.active, .pill-option:hover {
+  background: var(--espresso);
+  color: #fff;
+  border-color: var(--espresso);
+}
+
+/* 10. Discreet Notice & Footer */
+.demo-discreet-notice {
+  background: var(--surface-warm);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+footer.cafe-footer {
+  background: var(--espresso);
+  color: #cbd5e1;
+  padding: 4rem 1.5rem 2rem;
+}
+.footer-wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+.footer-wrap h4 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: #fbf8f5;
+  margin-bottom: 1.25rem;
+}
+.footer-wrap p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #a8988e;
+}
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 0.6rem; }
+.footer-links a { color: #a8988e; font-size: 0.85rem; }
+.footer-links a:hover { color: #f59e0b; padding-left: 4px; }
+.footer-bottom {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid #3b2318;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #8c7b70;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cafe-hero { grid-template-columns: 1fr; gap: 2.5rem; }
+  .space-grid { grid-template-columns: 1fr; }
+  .menu-items-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-wrap { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .top-story-strip { display: none; }
+  nav.cafe-nav { display: none; }
+  nav.cafe-nav.mobile-active {
+    display: block;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-warm);
+  }
+  nav.cafe-nav.mobile-active ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .mobile-nav-btn { display: block; }
+  .menu-items-grid { grid-template-columns: 1fr; }
+  .booking-form-grid { grid-template-columns: 1fr; }
+  .btn-submit-booking { grid-column: span 1; }
+  .hero-content h2 { font-size: 2.3rem; }
+  .hero-floating-card { position: static; margin-top: 1rem; max-width: 100%; }
+}

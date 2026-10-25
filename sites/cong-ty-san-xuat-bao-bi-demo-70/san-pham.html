@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh Mục Bao Bì Kỹ Thuật & Bảng Báo Giá B2B | Tân Phát Packaging #MS70</title>
+  <meta name="description" content="Danh mục đầy đủ các giải pháp bao bì công nghiệp: Thùng carton 3-5-7 lớp, bao bì màng ghép phức hợp, hộp cứng duplex in offset cao cấp. Lọc theo ngành nghề ứng dụng.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .catalog-filter-bar {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+      padding: 1rem 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .cat-filter-btn {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+    .cat-filter-btn.active, .cat-filter-btn:hover {
+      background: var(--secondary);
+      border-color: var(--secondary);
+      color: #fff;
+    }
+    .product-grid-industrial {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .industrial-product-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .industrial-product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+    @media (max-width: 900px) {
+      .product-grid-industrial { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation bar returning to Theme Library -->
+  <div class="library-return-bar">
+    <span>Giao diện mẫu <strong>#MS70 (Bao Bì Công Nghiệp B2B)</strong> độc lập thuộc Thư Viện Theme.</span>
+    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-mark">TP</div>
+        <div class="logo-text">
+          <h1>TÂN PHÁT PACKAGING</h1>
+          <span>Industrial Packaging Solutions • #MS70</span>
+        </div>
+      </a>
+
+      <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="san-pham.html" class="active">Sản Phẩm Bao Bì</a></li>
+          <li><a href="chi-tiet-san-pham.html">Thông Số Kỹ Thuật</a></li>
+          <li><a href="gioi-thieu.html">Năng Lực Nhà Máy</a></li>
+          <li><a href="lien-he.html">Liên Hệ & Báo Giá</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn-rfq-header trigger-rfq-modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>Yêu Cầu Báo Giá (RFQ)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section-wrap">
+    <div class="section-header-b2b" style="margin-top: 2rem;">
+      <span class="eyebrow">Hệ Thống Sản Phẩm B2B</span>
+      <h2>Danh Mục Bao Bì Kỹ Thuật Đạt Chuẩn Xuất Khẩu</h2>
+      <p>Sản xuất theo đơn đặt hàng công nghiệp, hỗ trợ in flexo / in ống đồng / in offset lên tới 9 màu với kiểm soát chất lượng QA/QC nghiêm ngặt.</p>
+    </div>
+
+    <!-- Filter Buttons Bar -->
+    <div class="catalog-filter-bar">
+      <span style="font-weight: 700; font-size: 0.9rem; align-self: center; margin-right: 0.5rem;">Lọc Theo Ngành Ứng Dụng:</span>
+      <button type="button" class="cat-filter-btn active" data-filter="all">Tất Cả Sản Phẩm (6)</button>
+      <button type="button" class="cat-filter-btn" data-filter="carton">Thùng Carton Sóng</button>
+      <button type="button" class="cat-filter-btn" data-filter="flexible">Màng Ghép Phức Hợp</button>
+      <button type="button" class="cat-filter-btn" data-filter="box">Hộp Cứng Mỹ Thuật</button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="product-grid-industrial">
+      <!-- Item 1 -->
+      <article class="industrial-product-card" data-cat="carton">
+        <div class="card-media">
+          <img src="assets/images/boxes-carton.jpg" alt="Thùng carton 5 lớp sóng BC" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Bao Bì Sóng Xuất Khẩu</span>
+          <h3>Thùng Carton 5 Lớp Sóng BC (Chịu Tải 30kg)</h3>
+          <p>Cấu trúc giấy sóng kép BC với lớp mặt Kraft nhập khẩu Nga/Nhật. Chuyên đóng gói linh kiện điện tử và đồ gỗ nội thất.</p>
+          <ul class="spec-list">
+            <li><span>Định lượng mặt ngoài:</span> <strong>Kraft 175 - 250 g/m²</strong></li>
+            <li><span>Độ chịu bục Mullen:</span> <strong>16 - 18 kgf/cm²</strong></li>
+            <li><span>Quy cách:</span> <strong>Sản xuất tùy chỉnh theo bản vẽ</strong></li>
+            <li><span>Moq xuất xưởng:</span> <strong>1.000 thùng</strong></li>
+          </ul>
+          <div class="card-action" style="display: flex; gap: 0.5rem;">
+            <a href="chi-tiet-san-pham.html" class="btn-card-quote" style="flex: 1;">Xem Bảng Thông Số</a>
+            <button type="button" class="btn-card-quote trigger-rfq-modal" data-preset-type="Thùng Carton Sóng 5 Lớp" style="background: var(--accent); color: #fff; border-color: var(--accent);">Báo Giá</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item 2 -->
+      <article class="industrial-product-card" data-cat="carton">
+        <div class="card-media">
+          <img src="assets/images/boxes-carton.jpg" alt="Thùng carton 3 lớp sóng E bế hộp" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Hộp Bế Nắp Gài</span>
+          <h3>Hộp Carton 3 Lớp Sóng E Nắp Gài (E-Commerce)</h3>
+          <p>Thiết kế khóa gài không cần băng keo dán, mặt trong mịn, in sắc nét logo thương hiệu. Tối ưu vận chuyển chuyển phát nhanh.</p>
+          <ul class="spec-list">
+            <li><span>Bước sóng:</span> <strong>Sóng E (Độ dày 1.5mm)</strong></li>
+            <li><span>Độ chịu bục Mullen:</span> <strong>10 - 12 kgf/cm²</strong></li>
+            <li><span>Công nghệ in:</span> <strong>Flexo 3 màu hoặc in Offset bồi</strong></li>
+            <li><span>Moq xuất xưởng:</span> <strong>2.000 hộp</strong></li>
+          </ul>
+          <div class="card-action" style="display: flex; gap: 0.5rem;">
+            <a href="chi-tiet-san-pham.html" class="btn-card-quote" style="flex: 1;">Xem Bảng Thông Số</a>
+            <button type="button" class="btn-card-quote trigger-rfq-modal" data-preset-type="Thùng Carton Sóng 3 Lớp" style="background: var(--accent); color: #fff; border-color: var(--accent);">Báo Giá</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item 3 -->
+      <article class="industrial-product-card" data-cat="carton">
+        <div class="card-media">
+          <img src="assets/images/factory-hero.jpg" alt="Thùng carton 7 lớp tải trọng nặng" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Tải Trọng Nặng (Heavy Duty)</span>
+          <h3>Thùng Carton 7 Lớp Sóng BCE (Chịu Tải 100kg+)</h3>
+          <p>Giải pháp thay thế kiện gỗ xuất khẩu. Chịu lực nén cực đại, chống ẩm kho lạnh cho máy công nghiệp và thủy hải sản đông lạnh.</p>
+          <ul class="spec-list">
+            <li><span>Cấu trúc sóng:</span> <strong>3 lớp sóng kết hợp B + C + E</strong></li>
+            <li><span>Độ chịu bục Mullen:</span> <strong>&gt; 24 kgf/cm²</strong></li>
+            <li><span>Đặc tính:</span> <strong>Chống thấm phủ màng sáp chống ẩm</strong></li>
+            <li><span>Moq xuất xưởng:</span> <strong>500 thùng</strong></li>
+          </ul>
+          <div class="card-action" style="display: flex; gap: 0.5rem;">
+            <a href="chi-tiet-san-pham.html" class="btn-card-quote" style="flex: 1;">Xem Bảng Thông Số</a>
+            <button type="button" class="btn-card-quote trigger-rfq-modal" data-preset-type="Thùng Carton Sóng 7 Lớp" style="background: var(--accent); color: #fff; border-color: var(--accent);">Báo Giá</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item 4 -->
+      <article class="industrial-product-card" data-cat="flexible">
+        <div class="card-media">
+          <img src="assets/images/pouches-flexible.jpg" alt="Túi nhôm màng ghép 4 lớp cản sáng" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Màng Ghép Barrier</span>
+          <h3>Túi Nhôm Màng Ghép 4 Lớp (PET/AL/NY/PE)</h3>
+          <p>Lớp nhôm AL nguyên chất cản ánh sáng, độ ẩm và oxy 100%. Đáp ứng tiêu chuẩn đóng gói dược phẩm và thực phẩm chức năng.</p>
+          <ul class="spec-list">
+            <li><span>Độ dày màng:</span> <strong>90 - 130 microns</strong></li>
+            <li><span>Độ thẩm thấu OTR:</span> <strong>0.01 cc/m²/24h</strong></li>
+            <li><span>Quy cách:</span> <strong>Túi 3 biên, túi xếp hông, túi zipper</strong></li>
+            <li><span>Moq xuất xưởng:</span> <strong>10.000 túi</strong></li>
+          </ul>
+          <div class="card-action" style="display: flex; gap: 0.5rem;">
+            <a href="chi-tiet-san-pham.html" class="btn-card-quote" style="flex: 1;">Xem Bảng Thông Số</a>
+            <button type="button" class="btn-card-quote trigger-rfq-modal" data-preset-type="Túi Màng Ghép Phức Hợp" style="background: var(--accent); color: #fff; border-color: var(--accent);">Báo Giá</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item 5 -->
+      <article class="industrial-product-card" data-cat="flexible">
+        <div class="card-media">
+          <img src="assets/images/pouches-flexible.jpg" alt="Túi zipper đáy đứng màng mờ cafe" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Túi Đáy Đứng (Doypack)</span>
+          <h3>Túi Zipper Đáy Đứng Có Van 1 Chiều (Coffee/Hạt)</h3>
+          <p>Túi đứng tự cân bằng trưng bày kệ hàng siêu thị. Tích hợp van thoát khí Degassing Valve 1 chiều giữ trọn hương vị hạt rang.</p>
+          <ul class="spec-list">
+            <li><span>Cấu trúc:</span> <strong>Matte OPP / VMPET / LLDPE</strong></li>
+            <li><span>Bề mặt:</span> <strong>Hiệu ứng màng mờ sang trọng</strong></li>
+            <li><span>Quy cách tải trọng:</span> <strong>250g, 500g, 1000g</strong></li>
+            <li><span>Moq xuất xưởng:</span> <strong>10.000 túi</strong></li>
+          </ul>
+          <div class="card-action" style="display: flex; gap: 0.5rem;">
+            <a href="chi-tiet-san-pham.html" class="btn-card-quote" style="flex: 1;">Xem Bảng Thông Số</a>
+            <button type="button" class="btn-card-quote trigger-rfq-modal" data-preset-type="Túi Màng Ghép Phức Hợp" style="background: var(--accent); color: #fff; border-color: var(--accent);">Báo Giá</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item 6 -->
+      <article class="industrial-product-card" data-cat="box">
+        <div class="card-media">
+          <img src="assets/banner.webp" alt="Hộp cứng nắp nam châm cao cấp" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Hộp Cứng Quà Tặng</span>
+          <h3>Hộp Cứng Nắp Nam Châm Bồi Carton Lạnh 2mm</h3>
+          <p>Khung carton lạnh đanh chắc bọc ngoài bằng giấy mỹ thuật in offset, ép kim vàng 18K và khay xốp định hình nhung.</p>
+          <ul class="spec-list">
+            <li><span>Độ dày khung:</span> <strong>1.8mm - 2.5mm carton lạnh</strong></li>
+            <li><span>Lớp bọc ngoài:</span> <strong>Giấy mỹ thuật, giấy Couche 150gsm</strong></li>
+            <li><span>Khay định hình:</span> <strong>EVA bọc nhung cắt laser CNC</strong></li>
+            <li><span>Moq xuất xưởng:</span> <strong>1.000 hộp</strong></li>
+          </ul>
+          <div class="card-action" style="display: flex; gap: 0.5rem;">
+            <a href="chi-tiet-san-pham.html" class="btn-card-quote" style="flex: 1;">Xem Bảng Thông Số</a>
+            <button type="button" class="btn-card-quote trigger-rfq-modal" data-preset-type="Hộp Cứng Cao Cấp" style="background: var(--accent); color: #fff; border-color: var(--accent);">Báo Giá</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Discreet Demonstration Notice -->
+  <div class="demo-discreet-notice">
+    <span>⚙️ <strong>LƯU Ý TRÌNH DIỄN:</strong> Bảng danh mục và thông số thử nghiệm mang tính chất trải nghiệm giải pháp mẫu B2B cho Thư Viện Theme (#MS70).</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>TÂN PHÁT PACKAGING</h4>
+        <p>Hệ thống sản xuất bao bì giấy sóng và bao bì màng ghép phức hợp tiêu chuẩn quốc tế ISO 9001:2015 & FSC.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Liên Kết Nhanh</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="san-pham.html">Sản Phẩm Bao Bì</a></li>
+          <li><a href="chi-tiet-san-pham.html">Thông Số Kỹ Thuật</a></li>
+          <li><a href="gioi-thieu.html">Năng Lực Nhà Máy</a></li>
+          <li><a href="lien-he.html">Yêu Cầu Báo Giá</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hỗ Trợ Kỹ Thuật B2B</h4>
+        <p>Hotline & Zalo: <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; font-weight: 700;">0971183939</a></p>
+        <p>Email: rfq@tanphatpack.demo.vn</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tư Vấn Zalo 24/7</h4>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #0068ff; color: #fff; padding: 0.6rem 1.25rem; border-radius: 4px; font-weight: 700;">
+          Chat Zalo: 0971183939
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Tân Phát Packaging. Demo Template #MS70 trong hệ thống DVWeb Marketplace.</span>
+    </div>
+  </footer>
+
+  <!-- RFQ Modal Window -->
+  <div class="modal-overlay" id="rfq-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Lập Phiếu Yêu Cầu Báo Giá Kỹ Thuật (RFQ)</h3>
+        <button type="button" class="modal-close-btn" id="close-rfq-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="rfq-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rfq-name">Họ Tên Đại Diện *</label>
+              <input type="text" id="rfq-name" required placeholder="Nguyễn Văn A">
+            </div>
+            <div class="form-group">
+              <label for="rfq-company">Tên Doanh Nghiệp *</label>
+              <input type="text" id="rfq-company" required placeholder="Công ty TNHH Xuất Nhập Khẩu...">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rfq-phone">Số Điện Thoại / Zalo *</label>
+              <input type="tel" id="rfq-phone" required placeholder="09xxxxxxxx">
+            </div>
+            <div class="form-group">
+              <label for="rfq-email">Email Nhận Báo Giá *</label>
+              <input type="email" id="rfq-email" required placeholder="purchasing@company.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rfq-pkg-type">Chủng Loại Bao Bì *</label>
+              <select id="rfq-pkg-type">
+                <option value="Thùng Carton Sóng 5 Lớp">Thùng Carton Sóng 5 Lớp (Sóng BC)</option>
+                <option value="Thùng Carton Sóng 3 Lớp">Thùng Carton Sóng 3 Lớp (Sóng B/E)</option>
+                <option value="Thùng Carton Sóng 7 Lớp">Thùng Carton Sóng 7 Lớp Tải Nặng</option>
+                <option value="Túi Màng Ghép Phức Hợp">Túi Màng Ghép OPP/AL/PE</option>
+                <option value="Hộp Cứng Cao Cấp">Hộp Cứng Duplex In Offset</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="rfq-quantity">Số Lượng Dự Kiến (Cái/Thùng) *</label>
+              <input type="number" id="rfq-quantity" value="10000" min="1000" step="500">
+            </div>
+          </div>
+          <button type="submit" class="btn-primary-rfq" style="width: 100%; justify-content: center;">
+            Gửi Hồ Sơ Yêu Cầu Báo Giá
+          </button>
+        </form>
+        <div id="rfq-success-notice"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flora Art — Cửa Hàng Hoa Tươi Nghệ Thuật | Giao Hoa Hỏa Tốc #MS64</title>
+  <meta name="description" content="Flora Art - Tiệm hoa tươi nghệ thuật cao cấp. Chuyên bó hoa sinh nhật, hoa tình yêu, hoa khai trương, lan hồ điệp và hoa cưới. Cam kết hoa mới mỗi ngày, giao nhanh 2h nội thành.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Library return bar -->
+  <div class="library-return-bar">
+    <span>Giao diện mẫu <strong>#MS64</strong> thuộc Thư Viện Theme.</span>
+    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+  </div>
+
+  <!-- Announcement strip -->
+  <div class="top-announcement-bar">
+    <div class="announcement-wrap">
+      <span>🌸 Hoa tươi nhập khẩu & tuyển chọn Đà Lạt mỗi sáng sớm</span>
+      <span>🚚 Miễn phí giao hàng cho đơn từ 500.000₫ • Tặng thiệp viết tay theo yêu cầu</span>
+      <span>📞 Hotline / Zalo: <strong>0971183939</strong></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-wrap">
+      <div class="brand-logo">
+        <div class="logo-icon">🌸</div>
+        <div class="logo-text-group">
+          <a href="index.html" class="brand-name">Flora Art</a>
+          <span class="brand-tagline">Tiệm Hoa Tươi • MS64</span>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Trang Chủ</a></li>
+          <li><a href="san-pham.html">Bộ Sưu Tập Hoa</a></li>
+          <li><a href="gioi-thieu.html">Về Chúng Tôi</a></li>
+          <li><a href="lien-he.html">Liên Hệ & Đặt Hoa</a></li>
+        </ul>
+      </nav>
+
+      <!-- Global Search Input -->
+      <form class="header-search-form" role="search">
+        <input type="search" placeholder="Tìm hoa hồng, lan, sinh nhật..." aria-label="Tìm kiếm hoa tươi">
+        <button type="submit" title="Tìm kiếm">🔍</button>
+      </form>
+
+      <!-- Header Actions: Auth & Cart -->
+      <div class="header-actions">
+        <!-- Demo Auth Buttons -->
+        <button type="button" id="auth-trigger" class="btn-header-auth" title="Tài khoản Demo">
+          <span>👤</span> Đăng Nhập
+        </button>
+
+        <div id="auth-user-menu" class="user-status-badge" style="display: none;">
+          <span>🌸</span>
+          <span id="auth-user-name">Lan Anh</span>
+          <button type="button" id="auth-logout-btn" class="btn-logout-link" title="Đăng xuất">Thoát</button>
+        </div>
+
+        <!-- Cart Trigger -->
+        <button type="button" class="cart-trigger" aria-label="Xem giỏ hàng">
+          <span>🛒 Giỏ Hàng</span>
+          <span id="cart-count" class="cart-badge-count">0</span>
+        </button>
+
+        <!-- Mobile Nav Toggle -->
+        <button type="button" id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Menu di động">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO SECTION -->
+    <section class="hero-florist">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span>🌿</span> Tiệm Hoa Tươi Thiết Kế Nghệ Thuật
+        </div>
+        <h1 class="hero-title">
+          Hoa Tươi Cho Những <br><em>Khoảnh Khắc Đáng Nhớ</em>
+        </h1>
+        <p class="hero-description">
+          Tại Flora Art, mỗi nhành hoa là một câu chuyện cảm xúc được gói ghém bằng cả sự trân trọng. Chúng tôi sáng tạo những mẫu hoa bó, lẵng hoa và kệ hoa độc đáo với hoa tươi nhập mới mỗi sáng từ nông trại uy tín.
+        </p>
+        <div class="hero-actions">
+          <a href="san-pham.html" class="btn-primary">Khám Phá Bộ Sưu Tập</a>
+          <a href="lien-he.html" class="btn-outline">Tư Vấn Mẫu Riêng</a>
+        </div>
+        <div class="hero-trust-badges">
+          <div class="trust-item">
+            <span class="trust-icon">🌷</span>
+            <span>100% Hoa tươi loại 1</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">⚡</span>
+            <span>Giao hỏa tốc 2 giờ</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">💌</span>
+            <span>Tặng thiệp viết tay</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <div class="hero-main-photo">
+          <img src="assets/images/hero.jpg" alt="Không gian cắm hoa nghệ thuật tại Flora Art" width="800" height="600">
+        </div>
+        <div class="hero-floating-card">
+          <div class="floating-card-icon">💐</div>
+          <div class="floating-card-text">
+            <strong>Nghệ Thuật Cắm Hoa Tinh Tế</strong>
+            <span>Tuyển chọn & thiết kế thủ công mỗi ngày</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PRODUCT CATEGORIES -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">Khám Phá Theo Nhu Cầu</span>
+        <h2>Danh Mục Hoa Tươi Chọn Lọc</h2>
+        <p>Tìm kiếm dễ dàng theo từng chủ đề kỷ niệm và cảm xúc bạn muốn trao gửi</p>
+      </div>
+
+      <div class="category-grid">
+        <a href="san-pham.html?cat=hoa-sinh-nhat" class="category-card">
+          <div class="category-icon-box">🎂</div>
+          <h3 class="category-title">Hoa Sinh Nhật</h3>
+          <span class="category-count">Tươi vui & rực rỡ</span>
+        </a>
+        <a href="san-pham.html?cat=hoa-tinh-yeu" class="category-card">
+          <div class="category-icon-box">🌹</div>
+          <h3 class="category-title">Hoa Tình Yêu</h3>
+          <span class="category-count">Lãng mạn & nồng nàn</span>
+        </a>
+        <a href="san-pham.html?cat=hoa-chuc-mung" class="category-card">
+          <div class="category-icon-box">🥂</div>
+          <h3 class="category-title">Hoa Chúc Mừng</h3>
+          <span class="category-count">Thanh lịch & trang nhã</span>
+        </a>
+        <a href="san-pham.html?cat=hoa-khai-truong" class="category-card">
+          <div class="category-icon-box">🎊</div>
+          <h3 class="category-title">Hoa Khai Trương</h3>
+          <span class="category-count">Phát tài & thịnh vượng</span>
+        </a>
+        <a href="san-pham.html?cat=hoa-cuoi" class="category-card">
+          <div class="category-icon-box">👰</div>
+          <h3 class="category-title">Hoa Cưới Cô Dâu</h3>
+          <span class="category-count">Thuần khiết & cao quý</span>
+        </a>
+        <a href="san-pham.html?cat=hoa-de-ban" class="category-card">
+          <div class="category-icon-box">🪴</div>
+          <h3 class="category-title">Hoa Để Bàn</h3>
+          <span class="category-count">Thư thái không gian</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 3. FEATURED PRODUCTS (Dynamic from shared catalog data) -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">Tác Phẩm Được Yêu Thích</span>
+        <h2>Mẫu Hoa Tiêu Biểu Trong Tuần</h2>
+        <p>Những thiết kế hoa tươi được khách hàng lựa chọn nhiều nhất tại Flora Art</p>
+      </div>
+
+      <div id="featured-products-grid" class="product-grid">
+        <!-- Injected dynamically by app.js using FLOWER_PRODUCTS data -->
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="san-pham.html" class="btn-primary">Xem Toàn Bộ 14 Mẫu Hoa &rarr;</a>
+      </div>
+    </section>
+
+    <!-- 4. FLORIST CRAFTSMANSHIP BANNER -->
+    <section class="craft-banner">
+      <div class="craft-content">
+        <h2>Từng Búp Hoa Được Nâng Niu Với Đam Mê</h2>
+        <p>
+          Hoa không đơn thuần là một món quà, đó là phương thức diễn đạt sự tinh tế và chân thành. Florist tại Flora Art phối màu dựa trên nguyên tắc mỹ thuật hội họa, tạo nên những bó hoa có chiều sâu và nhịp điệu tự nhiên.
+        </p>
+        <div class="craft-features">
+          <div class="craft-feature-item">
+            <strong>🌸 Nguồn Hoa Tươi Đảm Bảo</strong>
+            <span>Nhập trực tiếp từ nông trại Đà Lạt & nhà vườn Hà Lan đạt chứng nhận sạch.</span>
+          </div>
+          <div class="craft-feature-item">
+            <strong>🎨 Thiết Kế Theo Yêu Cầu</strong>
+            <span>Tùy chỉnh tông màu hoa và phong cách gói giấy phù hợp từng sở thích cá nhân.</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius); padding: 2rem; text-align: center;">
+          <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">💌</span>
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Cần Tư Vấn Thiết Kế Riêng?</h3>
+          <p style="font-size: 0.88rem; color: #fce7f3; margin-bottom: 1.5rem;">Kết nối với nghệ nhân cắm hoa qua Zalo để nhận hình ảnh mẫu hoa thực tế trước khi giao.</p>
+          <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: #0068ff; border: none; width: 100%;">
+            Nhắn Zalo: 0971183939
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. OCCASION-BASED RECOMMENDATIONS -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">Gợi Ý Theo Dịp Lễ</span>
+        <h2>Chọn Hoa Đúng Ý Cho Mọi Sự Kiện</h2>
+        <p>Mỗi dịp kỷ niệm đều mang một ý nghĩa đặc biệt riêng biệt</p>
+      </div>
+
+      <div class="occasions-grid">
+        <div class="occasion-box">
+          <div class="occasion-icon">🎁</div>
+          <h3>Sinh Nhật & Kỷ Niệm</h3>
+          <p>Tông màu ấm áp như cam, hồng phấn hay hướng dương mang lại niềm vui bất ngờ và nụ cười rạng rỡ.</p>
+          <a href="san-pham.html?cat=hoa-sinh-nhat" class="occasion-link">Xem mẫu hoa sinh nhật &rarr;</a>
+        </div>
+
+        <div class="occasion-box">
+          <div class="occasion-icon">💖</div>
+          <h3>Tỏ Tình & Ngày Valentine</h3>
+          <p>Hồng đỏ Ecuador kiêu hãnh hoặc cẩm tú cầu dịu dàng giúp bạn bày tỏ tình cảm chân thành sâu sắc nhất.</p>
+          <a href="san-pham.html?cat=hoa-tinh-yeu" class="occasion-link">Xem mẫu hoa tình yêu &rarr;</a>
+        </div>
+
+        <div class="occasion-box">
+          <div class="occasion-icon">🏆</div>
+          <h3>Khai Trương & Thăng Chức</h3>
+          <p>Lẵng hoa đứng hoành tráng phối lan hồ điệp và hoa đồng tiền cầu chúc công việc hanh thông phát tài.</p>
+          <a href="san-pham.html?cat=hoa-khai-truong" class="occasion-link">Xem kệ hoa khai trương &rarr;</a>
+        </div>
+
+        <div class="occasion-box">
+          <div class="occasion-icon">🌿</div>
+          <h3>Trang Trí Góc Sống</h3>
+          <p>Bình hoa để bàn thanh thoát giúp giải tỏa căng thẳng và thanh lọc không khí góc làm việc.</p>
+          <a href="san-pham.html?cat=hoa-de-ban" class="occasion-link">Xem hoa cắm bình &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FLOWER CARE TIPS -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">Cẩm Nang Florist</span>
+        <h2>Bí Quyết Giữ Hoa Tươi Lâu Tại Nhà</h2>
+        <p>Chăm sóc đơn giản giúp bình hoa giữ trọn vẻ rực rỡ và hương thơm trong 5 - 7 ngày</p>
+      </div>
+
+      <div class="care-tips-grid">
+        <div class="care-card">
+          <span class="care-step-num">1</span>
+          <div class="care-icon-large">✂️</div>
+          <h3>Cắt Vát Cành 45 Độ</h3>
+          <p>Dùng kéo sắc cắt chéo gốc cành để tăng diện tích tiếp xúc và hút nước của hoa.</p>
+        </div>
+
+        <div class="care-card">
+          <span class="care-step-num">2</span>
+          <div class="care-icon-large">💧</div>
+          <h3>Thay Nước Sạch Hằng Ngày</h3>
+          <p>Rửa sạch bình và thay nước mát mỗi sáng, loại bỏ các lá chìm trong nước để ngừa vi khuẩn.</p>
+        </div>
+
+        <div class="care-card">
+          <span class="care-step-num">3</span>
+          <div class="care-icon-large">🍃</div>
+          <h3>Bổ Sung Gói Dưỡng Hoa</h3>
+          <p>Hòa tan gói dưỡng hoa kèm theo đơn hàng để cung cấp dinh dưỡng cần thiết cho cánh hoa căng mịn.</p>
+        </div>
+
+        <div class="care-card">
+          <span class="care-step-num">4</span>
+          <div class="care-icon-large">🌤️</div>
+          <h3>Tránh Nắng & Gió Gắt</h3>
+          <p>Đặt bình hoa nơi thoáng mát (20 - 24°C), tránh luồng gió quạt mạnh hoặc ánh nắng trực tiếp gay gắt.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ SECTION -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">Giải Đáp Thắc Mắc</span>
+        <h2>Câu Hỏi Thường Gặp Về Đặt Hoa</h2>
+        <p>Thông tin minh bạch và rõ ràng giúp quý khách hoàn toàn an tâm khi chọn hoa tại Flora Art</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3><span>❓</span> Thời gian giao hoa hỏa tốc mất bao lâu?</h3>
+          <p>Đối với các khu vực nội thành, chúng tôi giao nhanh trong vòng 90 - 120 phút kể từ lúc nhận đơn và xác nhận mẫu hoa thành phẩm qua ảnh chụp.</p>
+        </div>
+        <div class="faq-item">
+          <h3><span>❓</span> Hoa nhận được có giống với hình ảnh mẫu không?</h3>
+          <p>Flora Art cam kết hoa giống hình mẫu từ 90 - 95%. Chúng tôi luôn chụp ảnh sản phẩm thật gửi quý khách duyệt trước khi nhân viên giao hàng lên đường.</p>
+        </div>
+        <div class="faq-item">
+          <h3><span>❓</span> Cửa hàng có hỗ trợ viết thiệp chúc mừng không?</h3>
+          <p>Có, mỗi đơn hàng hoa tại Flora Art đều được tặng kèm thiệp thiết kế cao cấp và hỗ trợ nắn nót viết tay nội dung lời chúc theo đúng mong muốn của bạn.</p>
+        </div>
+        <div class="faq-item">
+          <h3><span>❓</span> Tôi có thể đặt cắm mẫu hoa theo ngân sách riêng không?</h3>
+          <p>Hoàn toàn được! Quý khách chỉ cần liên hệ Zalo 0971183939, florist sẽ tư vấn phối loại hoa và kích thước phù hợp nhất với ngân sách dự kiến của bạn.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Zalo Button -->
+  <aside class="floating-zalo">
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn trực tiếp Zalo: 0971183939">Zalo</a>
+  </aside>
+
+  <!-- Professional Footer -->
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <h3>Flora Art 🌸</h3>
+        <p>Tiệm hoa tươi nghệ thuật và quà tặng hoa thiết kế cao cấp. Nâng niu từng khoảnh khắc ý nghĩa trong cuộc sống bằng sắc màu thiên nhiên thuần khiết.</p>
+        <p style="font-size: 0.8rem; color: #a1a1aa;">Mã giao diện: #MS64 • Thư Viện Theme E-commerce</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Bộ Sưu Tập Hoa</h4>
+        <ul class="footer-links">
+          <li><a href="san-pham.html?cat=hoa-sinh-nhat">Hoa Sinh Nhật</a></li>
+          <li><a href="san-pham.html?cat=hoa-tinh-yeu">Hoa Tình Yêu & Valentine</a></li>
+          <li><a href="san-pham.html?cat=hoa-khai-truong">Hoa Khai Trương Phát Tài</a></li>
+          <li><a href="san-pham.html?cat=hoa-cuoi">Hoa Cưới Cô Dâu</a></li>
+          <li><a href="san-pham.html?cat=hoa-de-ban">Bình Hoa Để Bàn Vintage</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Về Flora Art</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="san-pham.html">Tất Cả Sản Phẩm</a></li>
+          <li><a href="gioi-thieu.html">Giới Thiệu Tiệm Hoa</a></li>
+          <li><a href="lien-he.html">Liên Hệ & Đặt Hoa</a></li>
+          <li><a href="../../index.html">&larr; Thư Viện Theme</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact-info">
+        <h4>Liên Hệ Tư Vấn</h4>
+        <p><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" target="_blank">0971183939</a></p>
+        <p><strong>Giờ mở cửa:</strong> 7:30 - 21:30 hàng ngày</p>
+        <p><strong>Địa chỉ Studio:</strong> 64 Đường Hoa Cúc, Phường 7, Phú Nhuận, TP. Hồ Chí Minh</p>
+        <p><strong>Giao hàng:</strong> Hỏa tốc 2H toàn thành phố</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Flora Art (Cửa hàng hoa demo 64). Toàn bộ nội dung giao diện được biên soạn cho Theme Library.</div>
+      <div>Giao diện mẫu trình diễn tính năng thương mại điện tử (Client-side Demo).</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
