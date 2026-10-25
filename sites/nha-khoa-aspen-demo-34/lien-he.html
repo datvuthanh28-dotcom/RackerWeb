@@ -1,97 +1,327 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liên Hệ & Tư Vấn | Nha khoa Aspen - demo 34</title>
+  <title>Liên Hệ & Chi Nhánh — ASPEN DENTAL (#MS34)</title>
+  <meta name="description" content="Hệ thống 3 chi nhánh Aspen Dental tại Hà Nội, TP.HCM và Đà Nẵng. Hotline cấp cứu nha khoa 24/7: 0971 183 939. Chính sách trả góp 0% và bảo lãnh viện phí.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .dental-contact-hero {
+      background: linear-gradient(135deg, #0f2744 0%, #0369a1 100%);
+      padding: 5.5rem 1.5rem 3.5rem;
+      text-align: center;
+      color: #fff;
+    }
+    .dental-contact-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+    .c-dental-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3.5rem;
+      margin-top: 3rem;
+    }
+    .branch-card {
+      background: #ffffff;
+      border: 1px solid var(--border-med);
+      border-radius: var(--radius);
+      padding: 2.2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-card);
+    }
+    .branch-item {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 1.6rem;
+      align-items: flex-start;
+    }
+    .branch-item:last-child {
+      margin-bottom: 0;
+    }
+    .branch-icon-box {
+      width: 44px;
+      height: 44px;
+      background: var(--med-ice);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--med-blue);
+      flex-shrink: 0;
+    }
+    .branch-info h4 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--med-navy);
+      margin-bottom: 0.25rem;
+    }
+    .branch-info p, .branch-info a {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .branch-info a:hover {
+      color: var(--med-blue);
+    }
+    .insurance-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: var(--radius);
+      padding: 1.8rem;
+    }
+    .insurance-box h4 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #166534;
+      margin-bottom: 0.6rem;
+    }
+    .insurance-box p {
+      font-size: 0.88rem;
+      color: #14532d;
+      line-height: 1.65;
+    }
+    @media (max-width: 900px) {
+      .c-dental-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Library return bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS34</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS34 · Y Tế & Chăm Sóc Sức Khỏe</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Nha khoa Aspen - demo 34 <span>MS34</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Sản phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html" class="active">Liên Hệ</a></li>
-        </ul>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">✚</div>
+        <div class="brand-text">
+          <span class="brand-title">ASPEN <span>DENTAL</span></span>
+          <span class="brand-subtitle">Viện Nha Khoa Quốc Tế</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Trang Chủ</a>
+        <a href="san-pham.html">Dịch Vụ Chuyên Sâu</a>
+        <a href="gioi-thieu.html">Đội Ngũ Bác Sĩ</a>
+        <a href="index.html#cong-nghe">Công Nghệ 3D</a>
+        <a href="index.html#dat-lich-kham">Đặt Lịch Khám</a>
+        <a href="lien-he.html" class="active">Chi Nhánh</a>
       </nav>
-      <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="header-cta-group">
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-hotline">
+          0971 183 939
+        </a>
+        <a href="index.html#dat-lich-kham" class="btn-book-dental">
+          <span>Đặt Lịch Khám 3D</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Liên Hệ Tư Vấn & Báo Giá</h1>
-    <p>Chúng tôi luôn sẵn sàng lắng nghe và giải đáp mọi yêu cầu của bạn</p>
-  </div>
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html">Trang Chủ</a>
+    <a href="san-pham.html">Dịch Vụ Nha Khoa</a>
+    <a href="gioi-thieu.html">Đội Ngũ Bác Sĩ</a>
+    <a href="index.html#cong-nghe">Công Nghệ 3D</a>
+    <a href="index.html#dat-lich-kham">Đăng Ký Khám Miễn Phí</a>
+    <a href="lien-he.html" class="active">Hệ Thống Phòng Khám</a>
+  </aside>
 
-  <div class="subpage-content">
-    <div class="contact-grid">
-      <div>
-        <h3>Thông Tin Liên Hệ</h3>
-        <p style="color: #64748b; margin: 1rem 0;">Để nhận báo giá và tư vấn nhanh nhất, vui lòng kết nối trực tiếp qua Zalo hoặc để lại lời nhắn.</p>
-        <p><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p><strong>Thời gian làm việc:</strong> 8:00 - 22:00 hàng ngày</p>
-        <p><strong>Lĩnh vực:</strong> Y tế</p>
+  <main>
+    <section class="dental-contact-hero">
+      <div class="container">
+        <span class="badge-certified" style="background:rgba(255,255,255,0.15); color:#fff; border-color:rgba(255,255,255,0.3);">
+          Hệ Thống Toàn Quốc
+        </span>
+        <h1>Hệ Thống Chi Nhánh & Đón Tiếp</h1>
+        <p style="color:#e0f2fe; max-width:650px; margin:0 auto; font-size:1.05rem;">
+          Tất cả cơ sở của Aspen Dental đều được trang bị máy chụp CT ConeBeam 3D tại chỗ và bãi đỗ xe ô tô thuận tiện cho người bệnh.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-dental">
+      <div class="c-dental-grid">
+        <!-- Branches Info -->
+        <div>
+          <div class="branch-card">
+            <h3 style="font-family:var(--font-heading); font-size:1.45rem; font-weight:800; color:var(--med-navy); margin-bottom:1.6rem;">Địa Chỉ 3 Cơ Sở</h3>
+
+            <div class="branch-item">
+              <div class="branch-icon-box">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="branch-info">
+                <h4>Cơ sở 1: TP. Hồ Chí Minh</h4>
+                <p>128 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP.HCM</p>
+                <p style="font-size:0.82rem; color:var(--med-blue); margin-top:0.2rem;">(Đối diện Sunwah Tower, có hầm giữ xe)</p>
+              </div>
+            </div>
+
+            <div class="branch-item">
+              <div class="branch-icon-box">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="branch-info">
+                <h4>Cơ sở 2: Hà Nội</h4>
+                <p>88 Cầu Giấy, Phường Quan Hoa, Quận Cầu Giấy, Hà Nội</p>
+                <p style="font-size:0.82rem; color:var(--med-blue); margin-top:0.2rem;">(Cách ngã tư Cầu Giấy 200m)</p>
+              </div>
+            </div>
+
+            <div class="branch-item">
+              <div class="branch-icon-box">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="branch-info">
+                <h4>Cơ sở 3: Đà Nẵng</h4>
+                <p>45 Nguyễn Văn Linh, Quận Hải Châu, Đà Nẵng</p>
+              </div>
+            </div>
+
+            <div class="branch-item" style="border-top:1px solid #f1f5f9; padding-top:1.4rem;">
+              <div class="branch-icon-box" style="background:#fef2f2; color:#ef4444;">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="branch-info">
+                <h4>Giờ Mở Cửa & Trực Cấp Cứu</h4>
+                <p>Khám thường: <strong>08:00 – 20:00</strong> (Thứ 2 – Chủ Nhật)</p>
+                <p>Hotline Cấp cứu đau răng 24/7: <a href="tel:0971183939" style="color:var(--med-blue); font-weight:800;">0971 183 939</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="insurance-box">
+            <h4>Bảo Lãnh Viện Phí Trực Tiếp</h4>
+            <p>
+              Aspen Dental liên kết bảo lãnh thanh toán viện phí với hơn 20 công ty bảo hiểm uy tín (Bảo Việt, PTI, Liberty, Manulife, PVI, Dai-ichi Life...) giúp người bệnh an tâm điều trị không cần tạm ứng viện phí.
+            </p>
+          </div>
+        </div>
+
+        <!-- Appointment Form Column -->
+        <div>
+          <div style="background:#ffffff; border:1px solid var(--border-med); border-radius:var(--radius); padding:2.5rem; box-shadow:var(--shadow-card);">
+            <h3 style="font-family:var(--font-heading); font-size:1.45rem; font-weight:800; color:var(--med-navy); margin-bottom:0.4rem;">Đăng Ký Khám Ưu Tiên & Chụp CT 3D</h3>
+            <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:1.8rem;">Trợ lý Bác sĩ sẽ gọi điện xác nhận và chuẩn bị hồ sơ bệnh án trước khi bạn đến</p>
+
+            <form class="dental-booking-form">
+              <div class="form-grid-dental">
+                <div class="d-group">
+                  <label>Họ và tên bệnh nhân *</label>
+                  <input type="text" name="patient_name" class="d-input" placeholder="Nguyễn Văn A" required>
+                </div>
+                <div class="d-group">
+                  <label>Số điện thoại liên hệ *</label>
+                  <input type="tel" name="patient_phone" class="d-input" placeholder="09xx xxx xxx" required>
+                </div>
+                <div class="d-group">
+                  <label>Chọn chi nhánh *</label>
+                  <select name="patient_branch" class="d-select" required>
+                    <option value="Quận 1, TP.HCM">Cơ sở 1: Quận 1, TP.HCM</option>
+                    <option value="Cầu Giấy, Hà Nội">Cơ sở 2: Cầu Giấy, Hà Nội</option>
+                    <option value="Hải Châu, Đà Nẵng">Cơ sở 3: Hải Châu, Đà Nẵng</option>
+                  </select>
+                </div>
+                <div class="d-group">
+                  <label>Dịch vụ cần khám *</label>
+                  <select name="patient_service" class="d-select" required>
+                    <option value="Khám & Chụp CT 3D kiểm tra răng">Khám & Chụp CT 3D tổng quát</option>
+                    <option value="Cấy ghép Implant">Cấy ghép Implant phục hình răng mất</option>
+                    <option value="Niềng răng chỉnh nha">Niềng răng (Mắc cài / Khay trong suốt)</option>
+                    <option value="Bọc răng sứ & Veneer">Dán sứ Veneer & Răng sứ thẩm mỹ</option>
+                    <option value="Nhổ răng khôn Piezotome">Nhổ răng khôn không đau</option>
+                    <option value="Điều trị tủy & Nha chu">Điều trị tủy răng & Viêm nha chu</option>
+                  </select>
+                </div>
+                <div class="d-group full">
+                  <label>Ngày hẹn khám</label>
+                  <input type="date" name="patient_date" class="d-input" required>
+                </div>
+                <div class="d-group full">
+                  <label>Triệu chứng hoặc ghi chú bệnh lý</label>
+                  <textarea name="patient_note" class="d-textarea" rows="3" placeholder="Ví dụ: Răng đau nhức buốt khi uống nước lạnh, mất răng hàm dưới 2 năm..."></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-submit-appointment">Gửi Đăng Ký Khám Ngay</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast -->
+  <div class="toast-dental" id="toast-dental" role="status"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer-dental">
+    <div class="footer-wrap-dental">
+      <div class="footer-col-dental">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
+          <div class="brand-icon">✚</div>
+          <div class="brand-text">
+            <span class="brand-title" style="color:#fff;">ASPEN <span>DENTAL</span></span>
+            <span class="brand-subtitle" style="color:#7dd3fc;">Viện Nha Khoa Quốc Tế</span>
+          </div>
+        </a>
+        <p>Hệ thống nha khoa kỹ thuật số tiêu chuẩn quốc tế, tiên phong trong cấy ghép Implant không đau và thẩm mỹ nụ cười toàn diện.</p>
+        <p style="margin-top:1rem; font-size:0.8rem; color:#64748b;">* Giao diện mẫu demo #MS34 thuộc Thư Viện Theme RackerWeb.</p>
       </div>
 
-      <div>
-        <form id="site-contact-form">
-          <div class="form-group">
-            <label for="c-name">Họ và tên *</label>
-            <input type="text" id="c-name" required placeholder="Nguyễn Văn A">
-          </div>
-          <div class="form-group">
-            <label for="c-phone">Số điện thoại / Zalo *</label>
-            <input type="tel" id="c-phone" required placeholder="09xxxxxxxx">
-          </div>
-          <div class="form-group">
-            <label for="c-msg">Nhu cầu tư vấn *</label>
-            <textarea id="c-msg" rows="4" required placeholder="Nhu cầu chi tiết..."></textarea>
-          </div>
-          <button type="submit" class="btn-primary" style="width: 100%;">Gửi Yêu Cầu Tư Vấn</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Nha khoa Aspen - demo 34</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Y tế. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
-      </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Sản phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+      <div class="footer-col-dental">
+        <h4>Dịch Vụ Chuyên Sâu</h4>
+        <ul>
+          <li><a href="san-pham.html">Trồng răng Implant kỹ thuật số</a></li>
+          <li><a href="san-pham.html">Niềng răng trong suốt Invisalign</a></li>
+          <li><a href="san-pham.html">Dán sứ Veneer Emax siêu mỏng</a></li>
+          <li><a href="san-pham.html">Nhổ răng khôn sóng Piezotome</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col-dental">
+        <h4>Thông Tin Bệnh Nhân</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Đội ngũ Bác sĩ chuyên khoa</a></li>
+          <li><a href="gioi-thieu.html">Công nghệ chẩn đoán CT ConeBeam</a></li>
+          <li><a href="lien-he.html">Chính sách bảo hành & Trả góp 0%</a></li>
+          <li><a href="lien-he.html">Bảo lãnh viện phí bảo hiểm</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-dental">
+        <h4>Hệ Thống Phòng Khám</h4>
+        <p><strong>TP.HCM:</strong> 128 Nguyễn Huệ, Phường Bến Nghé, Quận 1</p>
+        <p style="margin-top:0.4rem;"><strong>Hà Nội:</strong> 88 Cầu Giấy, Phường Quan Hoa, Quận Cầu Giấy</p>
+        <p style="margin-top:0.4rem;"><strong>Hotline 24/7:</strong> <a href="https://zalo.me/0971183939" style="color:#38bdf8; font-weight:700;">0971 183 939</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Nha khoa Aspen - demo 34. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+
+    <div class="footer-bottom-dental">
+      <span>© 2026 Viện Nha Khoa Quốc Tế Aspen Dental — Giao diện mẫu #MS34. All rights reserved.</span>
+      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
   <script src="js/app.js"></script>
 </body>
 </html>

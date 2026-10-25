@@ -1,81 +1,255 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giới Thiệu | Food demo 07</title>
+  <title>Về Cool Organic — Trang Trại Hữu Cơ & Tiêu Chuẩn 5 Không (#MS07)</title>
+  <meta name="description" content="Khám phá hành trình canh tác thuận tự nhiên tại trang trại 10ha Đơn Dương, Lâm Đồng của Cool Organic. Tiêu chuẩn 5 Không nghiêm ngặt vì sức khỏe người tiêu dùng.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .about-farm-hero {
+      background: linear-gradient(135deg, #14532d 0%, #15803d 100%);
+      padding: 5.5rem 1.5rem 3.5rem;
+      text-align: center;
+      color: #fff;
+    }
+    .about-farm-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+    .farm-split-row {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+    .farm-split-row img {
+      border-radius: var(--radius);
+      border: 1px solid var(--border-farm);
+      box-shadow: var(--shadow-farm);
+    }
+    .standards-5no-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .no-card {
+      background: #ffffff;
+      border: 1px solid var(--border-farm);
+      border-radius: var(--radius);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-farm);
+      text-align: center;
+    }
+    .no-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .no-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--farm-green-dark);
+      margin-bottom: 0.5rem;
+    }
+    .no-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    @media (max-width: 900px) {
+      .farm-split-row {
+        grid-template-columns: 1fr;
+      }
+      .standards-5no-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Library return bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS07</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS07 · Thực Phẩm & Nông Sản Sạch</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Food demo 07 <span>MS07</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html"></a></li>
-          <li><a href="gioi-thieu.html" class="active">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">🌱</div>
+        <div>
+          <span class="brand-title">COOL <span>ORGANIC</span></span>
+          <span class="brand-subtitle">Farm-To-Table Clean Food</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Trang Chủ</a>
+        <a href="san-pham.html">Nông Sản Sạch</a>
+        <a href="index.html#hop-rau">Hộp Rau Định Kỳ</a>
+        <a href="gioi-thieu.html" class="active">Nông Trại Hữu Cơ</a>
+        <a href="lien-he.html">Cửa Hàng & Giao Hàng</a>
       </nav>
-      <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="header-cta-group">
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-hotline">
+          0971 183 939
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Về Chúng Tôi — Food demo 07</h1>
-    <p>Hành trình khẳng định uy tín và chất lượng dẫn đầu trong lĩnh vực Khac</p>
-  </div>
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html">Trang Chủ</a>
+    <a href="san-pham.html">Cửa Hàng Nông Sản</a>
+    <a href="index.html#hop-rau">Đăng Ký Hộp Rau Tuần</a>
+    <a href="gioi-thieu.html" class="active">Câu Chuyện Nông Trại</a>
+    <a href="lien-he.html">Địa Chỉ Cửa Hàng</a>
+  </aside>
 
-  <div class="subpage-content">
-    <p style="margin-bottom: 1.5rem; font-size: 1.05rem;"><strong>Food demo 07</strong> tự hào là đối tác tin cậy, mang đến cho quý khách hàng các sản phẩm và dịch vụ Khac đạt tiêu chuẩn cao nhất. Với triết lý lấy sự hài lòng của khách hàng làm trọng tâm, chúng tôi không ngừng đổi mới công nghệ và quy trình phục vụ.</p>
-    <div style="background: var(--surface); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
-      <h3 style="margin-bottom: 1rem; color: var(--primary);">Giá Trị Cốt Lõi</h3>
-      <ul style="padding-left: 1.25rem; line-height: 2;">
-        <li><strong>Chất Lượng Vượt Trội:</strong> Mọi chi tiết đều được hoàn thiện tỉ mỉ và kiểm định nghiêm ngặt.</li>
-        <li><strong>Tận Tâm & Minh Bạch:</strong> Tư vấn trung thực, báo giá rõ ràng, không phát sinh chi phí ẩn.</li>
-        <li><strong>Đồng Hành Dài Lâu:</strong> Hỗ trợ kỹ thuật và chăm sóc khách hàng 24/7 qua số Hotline Zalo 0971183939.</li>
-      </ul>
-    </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="lien-he.html" class="btn-primary">Liên Hệ Ngay Với Chúng Tôi</a>
-    </div>
-  </div>
-
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Food demo 07</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Khac. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <main>
+    <section class="about-farm-hero">
+      <div class="container">
+        <span class="badge-eco" style="background:rgba(255,255,255,0.15); color:#fff; border-color:rgba(255,255,255,0.3);">
+          Nông Nghiệp Tái Sinh
+        </span>
+        <h1>Vì Sức Khỏe Gia Đình Bạn & Trái Đất</h1>
+        <p style="color:#dcfce7; max-width:650px; margin:0 auto; font-size:1.05rem;">
+          Chúng tôi canh tác dựa trên việc nuôi dưỡng sự sống trong lòng đất, nơi vi sinh vật và giun đất tạo nên nguồn dinh dưỡng thuần khiết nhất cho cây trồng.
+        </p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html"></a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+    </section>
+
+    <section class="section-farm">
+      <div class="farm-split-row">
+        <div>
+          <span class="section-subtitle-farm">Nông Trại Đơn Dương</span>
+          <h2 style="font-family:var(--font-heading); font-size:2.2rem; font-weight:800; color:var(--farm-green-dark); margin-bottom:1.2rem; line-height:1.3;">
+            10 Hecta Đất Sạch Được Bao Bọc Bởi Rừng Thông Tự Nhiên
+          </h2>
+          <p style="color:var(--text-muted); font-size:1rem; line-height:1.75; margin-bottom:1.2rem;">
+            Trang trại Cool Organic tọa lạc tại thung lũng Đơn Dương, tỉnh Lâm Đồng, ở độ cao 1.000m so với mực nước biển. Vị trí biệt lập này tạo nên một vành đai sinh thái tự nhiên, cách ly hoàn toàn khỏi khói bụi công nghiệp và nguồn ô nhiễm từ các vùng chuyên canh thuốc hóa học.
+          </p>
+          <p style="color:var(--text-muted); font-size:1rem; line-height:1.75;">
+            Nguồn nước tưới được lấy từ mạch nước ngầm tinh khiết sâu 80m, được kiểm định định kỳ đạt chuẩn nước uống sinh hoạt trước khi đưa vào hệ thống tưới nhỏ giọt tự động Israel.
+          </p>
+        </div>
+        <div>
+          <img src="assets/banner.webp" alt="Nông trại Cool Organic Đơn Dương">
+        </div>
+      </div>
+
+      <!-- 5 NO Standards -->
+      <div class="section-header-farm" style="margin-top:2rem;">
+        <span class="section-subtitle-farm">Nguyên Tắc Bất Di Bất Dịch</span>
+        <h2 class="section-title-farm">Tiêu Chuẩn Canh Tác 5 Không</h2>
+        <p style="color:var(--text-muted); margin-top:0.6rem;">Cam kết y đức của những người nông dân tâm huyết với nền nông nghiệp sạch Việt Nam</p>
+      </div>
+
+      <div class="standards-5no-grid">
+        <div class="no-card">
+          <div class="no-icon">🚫🐛</div>
+          <h4>Không Thuốc Trừ Sâu Hóa Học</h4>
+          <p>Xua đuổi sâu bệnh bằng tỏi, ớt ngâm gừng và dung dịch thảo mộc tự nhiên, nuôi bọ rùa bắt rệp.</p>
+        </div>
+
+        <div class="no-card">
+          <div class="no-icon">🚫🧪</div>
+          <h4>Không Phân Bón Vô Cơ</h4>
+          <p>Chỉ sử dụng phân trùn quế và phân chuồng ủ hoai mục vi sinh suốt 6 tháng để nuôi dưỡng độ phì nhiêu của đất.</p>
+        </div>
+
+        <div class="no-card">
+          <div class="no-icon">🚫🧬</div>
+          <h4>Không Biến Đổi Gen (Non-GMO)</h4>
+          <p>100% hạt giống thuần chủng bản địa hoặc nhập khẩu từ các viện nông học uy tín có chứng nhận hữu cơ.</p>
+        </div>
+
+        <div class="no-card">
+          <div class="no-icon">🚫💉</div>
+          <h4>Không Kích Thích Tăng Trưởng</h4>
+          <p>Cây trồng lớn lên thuận theo thời vụ và chu kỳ sinh học tự nhiên, tích lũy trọn vẹn vị ngọt đậm và vi chất.</p>
+        </div>
+
+        <div class="no-card">
+          <div class="no-icon">🚫📦</div>
+          <h4>Không Chất Bảo Quản Sau Thu Hoạch</h4>
+          <p>Rau củ chỉ được làm sạch bằng nước ion và đóng thùng giữ lạnh để bảo quản độ giòn tươi nguyên bản.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section-farm" style="text-align:center; padding-top:0;">
+      <h3 style="font-family:var(--font-heading); font-size:2rem; font-weight:800; color:var(--farm-green-dark); margin-bottom:1rem;">Bắt Đầu Chế Độ Ăn Lành Mạnh Ngay Hôm Nay</h3>
+      <p style="color:var(--text-muted); max-width:600px; margin:0 auto 2.5rem;">Cùng Cool Organic chăm sóc sức khỏe đường ruột và hệ miễn dịch cho con trẻ bằng những bữa ăn xanh tươi mỗi ngày.</p>
+      <div style="display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap;">
+        <a href="san-pham.html" class="btn-primary-farm">Xem Danh Mục Nông Sản</a>
+        <a href="index.html#hop-rau" class="btn-outline-farm">Đăng Ký Hộp Rau Gia Đình</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer-farm">
+    <div class="footer-wrap-farm">
+      <div class="footer-col-farm">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
+          <div class="brand-icon" style="background:#fff; color:var(--farm-green);">🌱</div>
+          <div>
+            <span class="brand-title" style="color:#fff;">COOL <span>ORGANIC</span></span>
+            <span class="brand-subtitle" style="color:#a7f3d0;">Farm-To-Table Clean Food</span>
+          </div>
+        </a>
+        <p>Hệ thống cung ứng thực phẩm sạch hữu cơ thuận tự nhiên, kết nối nông sản sạch từ trang trại trực tiếp đến bàn ăn gia đình.</p>
+        <p style="margin-top:1rem; font-size:0.8rem; color:#6ee7b7;">* Giao diện mẫu demo #MS07 thuộc Thư Viện Theme RackerWeb.</p>
+      </div>
+
+      <div class="footer-col-farm">
+        <h4>Nông Sản Nổi Bật</h4>
+        <ul>
+          <li><a href="san-pham.html">Rau củ hữu cơ Đà Lạt</a></li>
+          <li><a href="san-pham.html">Trái cây nhiệt đới VietGAP</a></li>
+          <li><a href="san-pham.html">Hạt dinh dưỡng sấy mộc</a></li>
+          <li><a href="san-pham.html">Gói hộp rau tuần gia đình</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col-farm">
+        <h4>Về Nông Trại</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Nông trại hữu cơ 10ha Đơn Dương</a></li>
+          <li><a href="gioi-thieu.html">Tiêu chuẩn canh tác 5 Không</a></li>
+          <li><a href="lien-he.html">Chính sách giao hàng giữ lạnh</a></li>
+          <li><a href="lien-he.html">Cam kết hoàn tiền & Đổi trả</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-farm">
+        <h4>Cửa Hàng & Hotline</h4>
+        <p><strong>Cửa hàng:</strong> 48 Nguyễn Thị Minh Khai, Phường Đa Kao, Quận 1, TP.HCM</p>
+        <p style="margin-top:0.4rem;"><strong>Giờ mở cửa:</strong> 06:30 – 21:00 hàng ngày</p>
+        <p style="margin-top:0.4rem;"><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:#fff; font-weight:700;">0971 183 939</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Food demo 07. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+
+    <div class="footer-bottom-farm">
+      <span>© 2026 Cool Organic — Giao diện mẫu #MS07. All rights reserved.</span>
+      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
+  <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,97 +1,349 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liên Hệ & Tư Vấn | Nhà hàng quán ăn Halu - demo 28</title>
+  <title>Liên Hệ & Chỉ Đường — Nhà Hàng HALU | Giao diện mẫu #MS28</title>
+  <meta name="description" content="Liên hệ Nhà hàng Halu tại 42 Tràng Tiền, Hoàn Kiếm, Hà Nội. Hotline đặt bàn: 0971 183 939. Hướng dẫn đỗ xe, đặt tiệc riêng và sự kiện công ty.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-hero {
+      background: linear-gradient(180deg, rgba(18,16,14,0.75) 0%, #12100e 100%),
+                  url('assets/images/hero.jpg') center/cover no-repeat;
+      padding: 5.5rem 1.5rem 3.5rem;
+      text-align: center;
+    }
+    .contact-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      color: #fff;
+      margin-bottom: 0.8rem;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3.5rem;
+      margin-top: 3rem;
+    }
+    .info-card-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius);
+      padding: 2.2rem;
+      margin-bottom: 2rem;
+    }
+    .contact-row-item {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 1.6rem;
+      align-items: flex-start;
+    }
+    .contact-row-item:last-child {
+      margin-bottom: 0;
+    }
+    .contact-icon-bubble {
+      width: 44px;
+      height: 44px;
+      background: rgba(212, 163, 89, 0.15);
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .contact-text-meta h4 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+    .contact-text-meta p, .contact-text-meta a {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .contact-text-meta a:hover {
+      color: var(--gold);
+    }
+    .faq-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius);
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.2rem;
+    }
+    .faq-block h4 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .faq-block p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Library return bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS28</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS28 · Ẩm Thực & Nhà Hàng</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Nhà hàng quán ăn Halu - demo 28 <span>MS28</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Món ăn</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html" class="active">Liên Hệ</a></li>
-        </ul>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-title">HALU</span>
+        <span class="brand-subtitle">Vietnamese Cuisine</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Trang Chủ</a>
+        <a href="san-pham.html">Thực Đơn</a>
+        <a href="index.html#khong-gian">Không Gian</a>
+        <a href="gioi-thieu.html">Về Halu</a>
+        <a href="index.html#dat-ban">Đặt Bàn</a>
+        <a href="lien-he.html" class="active">Liên Hệ</a>
       </nav>
-      <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="header-cta-group">
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-hotline">
+          0971 183 939
+        </a>
+        <a href="index.html#dat-ban" class="btn-reserve-nav">Đặt Bàn Ngay</a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Liên Hệ Tư Vấn & Báo Giá</h1>
-    <p>Chúng tôi luôn sẵn sàng lắng nghe và giải đáp mọi yêu cầu của bạn</p>
-  </div>
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html">Trang Chủ</a>
+    <a href="san-pham.html">Thực Đơn</a>
+    <a href="index.html#khong-gian">Không Gian Nhà Hàng</a>
+    <a href="gioi-thieu.html">Câu Chuyện Halu</a>
+    <a href="index.html#dat-ban">Đặt Bàn Trước</a>
+    <a href="lien-he.html" class="active">Liên Hệ & Bản Đồ</a>
+  </aside>
 
-  <div class="subpage-content">
-    <div class="contact-grid">
-      <div>
-        <h3>Thông Tin Liên Hệ</h3>
-        <p style="color: #64748b; margin: 1rem 0;">Để nhận báo giá và tư vấn nhanh nhất, vui lòng kết nối trực tiếp qua Zalo hoặc để lại lời nhắn.</p>
-        <p><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p><strong>Thời gian làm việc:</strong> 8:00 - 22:00 hàng ngày</p>
-        <p><strong>Lĩnh vực:</strong> Ẩm thực - Nhà hàng</p>
+  <main>
+    <section class="contact-hero">
+      <div class="container">
+        <span class="section-subtitle">Chỉ Đường & Kết Nối</span>
+        <h1>Liên Hệ Với Nhà Hàng HALU</h1>
+        <p style="color:var(--text-muted); max-width:650px; margin:0 auto; font-size:1.05rem;">
+          Đội ngũ quản lý Halu luôn túc trực để hỗ trợ đặt bàn, tư vấn thực đơn tiệc gia đình, báo giá tiệc liên hoan công ty.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-dining">
+      <div class="contact-grid">
+        <!-- Contact Info Column -->
+        <div>
+          <div class="info-card-box">
+            <h3 style="font-family:var(--font-serif); font-size:1.5rem; color:var(--gold); margin-bottom:1.8rem;">Thông Tin Địa Điểm</h3>
+            
+            <div class="contact-row-item">
+              <div class="contact-icon-bubble">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-text-meta">
+                <h4>Địa chỉ nhà hàng</h4>
+                <p>42 Tràng Tiền, Phường Tràng Tiền, Quận Hoàn Kiếm, Hà Nội</p>
+                <p style="font-size:0.82rem; color:var(--gold); margin-top:0.2rem;">(Cách Nhà Hát Lớn 150m, có bãi đậu xe ô tô)</p>
+              </div>
+            </div>
+
+            <div class="contact-row-item">
+              <div class="contact-icon-bubble">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-text-meta">
+                <h4>Hotline / Đặt Bàn Zalo</h4>
+                <p><a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer"><strong>0971 183 939</strong> (Chat Zalo ngay)</a></p>
+                <p style="font-size:0.82rem;">Hỗ trợ tư vấn menu & giữ chỗ nhanh chóng</p>
+              </div>
+            </div>
+
+            <div class="contact-row-item">
+              <div class="contact-icon-bubble">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="contact-text-meta">
+                <h4>Thời gian đón khách</h4>
+                <p>Thứ Hai – Chủ Nhật: <strong>10:00 – 22:30</strong></p>
+                <p style="font-size:0.82rem;">Nhận order món cuối lúc 21:45</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card-box">
+            <h4 style="font-family:var(--font-serif); font-size:1.2rem; color:var(--gold); margin-bottom:0.8rem;">Dịch Vụ Đỗ Xe Tiện Lợi</h4>
+            <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.6;">
+              Nhà hàng có sân đỗ xe máy có bảo vệ trông coi miễn phí và bãi đỗ ô tô ngay cạnh nhà hàng với sự hỗ trợ hướng dẫn tận tình của đội ngũ an ninh.
+            </p>
+          </div>
+        </div>
+
+        <!-- Form Column -->
+        <div>
+          <div class="reservation-card" style="box-shadow:none;">
+            <h3>Gửi Tin Nhắn / Yêu Cầu Đặt Tiệc</h3>
+            <p class="card-sub">Dành cho khách hàng có nhu cầu tổ chức tiệc sinh nhật, họp mặt, hội nghị công ty</p>
+
+            <form id="contact-event-form" onsubmit="handleEventContact(event)">
+              <div class="res-form-grid">
+                <div class="res-form-group">
+                  <label for="event-name">Họ và tên *</label>
+                  <input type="text" id="event-name" class="res-input" placeholder="Nguyễn Văn A" required>
+                </div>
+                <div class="res-form-group">
+                  <label for="event-phone">Số điện thoại / Zalo *</label>
+                  <input type="tel" id="event-phone" class="res-input" placeholder="09xx xxx xxx" required>
+                </div>
+                <div class="res-form-group">
+                  <label for="event-type">Loại sự kiện</label>
+                  <select id="event-type" class="res-select">
+                    <option value="Tiệc sinh nhật gia đình">Tiệc sinh nhật / Thôi nôi</option>
+                    <option value="Liên hoan công ty">Liên hoan / Gặp mặt công ty</option>
+                    <option value="Tiếp đãi đối tác">Tiếp đãi đối tác ngoại giao</option>
+                    <option value="Báo hỷ / Đính hôn">Tiệc báo hỷ / Lễ đính hôn thân mật</option>
+                    <option value="Khác">Nhu cầu khác</option>
+                  </select>
+                </div>
+                <div class="res-form-group">
+                  <label for="event-guests">Dự kiến số lượng khách</label>
+                  <select id="event-guests" class="res-select">
+                    <option value="Dưới 10 khách">Dưới 10 khách</option>
+                    <option value="10 - 20 khách">10 – 20 khách</option>
+                    <option value="20 - 40 khách">20 – 40 khách</option>
+                    <option value="Trên 40 khách">Trên 40 khách (Bao trọn sảnh tiệc)</option>
+                  </select>
+                </div>
+                <div class="res-form-group full-width">
+                  <label for="event-budget">Ngân sách dự kiến trên mỗi khách (nếu có)</label>
+                  <select id="event-budget" class="res-select">
+                    <option value="250.000đ - 350.000đ/khách">250.000đ – 350.000đ / khách</option>
+                    <option value="350.000đ - 500.000đ/khách">350.000đ – 500.000đ / khách</option>
+                    <option value="Trên 500.000đ/khách">Trên 500.000đ / khách (Thực đơn cao cấp)</option>
+                  </select>
+                </div>
+                <div class="res-form-group full-width">
+                  <label for="event-note">Chi tiết yêu cầu bổ sung</label>
+                  <textarea id="event-note" class="res-textarea" rows="3" placeholder="Ví dụ: Cần máy chiếu, bánh kem, trang trí bong bóng hoặc món ăn chay..."></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-submit-res">Gửi Yêu Cầu Tư Vấn Yến Tiệc</button>
+            </form>
+          </div>
+        </div>
       </div>
 
-      <div>
-        <form id="site-contact-form">
-          <div class="form-group">
-            <label for="c-name">Họ và tên *</label>
-            <input type="text" id="c-name" required placeholder="Nguyễn Văn A">
-          </div>
-          <div class="form-group">
-            <label for="c-phone">Số điện thoại / Zalo *</label>
-            <input type="tel" id="c-phone" required placeholder="09xxxxxxxx">
-          </div>
-          <div class="form-group">
-            <label for="c-msg">Nhu cầu tư vấn *</label>
-            <textarea id="c-msg" rows="4" required placeholder="Nhu cầu chi tiết..."></textarea>
-          </div>
-          <button type="submit" class="btn-primary" style="width: 100%;">Gửi Yêu Cầu Tư Vấn</button>
-        </form>
-      </div>
-    </div>
-  </div>
+      <!-- FAQ Section -->
+      <div style="margin-top:5rem; max-width:850px; margin-left:auto; margin-right:auto;">
+        <div class="section-header" style="margin-bottom:2.5rem;">
+          <span class="section-subtitle">Giải Đáp Thắc Mắc</span>
+          <h2 class="section-title">Câu Hỏi Thường Gặp Của Khách Ăn</h2>
+        </div>
 
-  
-  <footer>
+        <div class="faq-block">
+          <h4>Nhà hàng có phụ thu phí mang rượu ngoài vào không?</h4>
+          <p>Halu có chính sách phí phục vụ đồ uống mang ngoài rất hợp lý (bao gồm ly pha lê cao cấp, đá tinh khiết và nhân viên rót rượu riêng). Quý khách vui lòng báo trước khi đặt bàn để nhận biểu phí chi tiết.</p>
+        </div>
+
+        <div class="faq-block">
+          <h4>Halu có hỗ trợ trang trí tiệc sinh nhật không?</h4>
+          <p>Nhà hàng miễn phí chuẩn bị bàn tiệc có nến thơm, thiệp chúc mừng thiết kế riêng cho khách đặt trước. Với nhu cầu hoa tươi, backdrop hoặc bóng bay sinh nhật, bộ phận sự kiện sẽ hỗ trợ kết nối đối tác uy tín với mức giá gốc.</p>
+        </div>
+
+        <div class="faq-block">
+          <h4>Nhà hàng chấp nhận những hình thức thanh toán nào?</h4>
+          <p>Halu hỗ trợ linh hoạt các phương thức: Tiền mặt, Thẻ tín dụng quốc tế (Visa, Mastercard, JCB), Thẻ ATM nội địa, chuyển khoản quét mã VietQR và ví điện tử.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast -->
+  <div class="toast-msg" id="toast-msg" role="status"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="footer-wrap">
-      <div>
-        <h3>Nhà hàng quán ăn Halu - demo 28</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Ẩm thực - Nhà hàng. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+      <div class="footer-col">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
+          <span class="brand-title">HALU</span>
+          <span class="brand-subtitle">Vietnamese Cuisine</span>
+        </a>
+        <p>Không gian ẩm thực Việt Nam tinh tế, nơi mỗi món ăn là một câu chuyện về văn hóa và lòng hiếu khách.</p>
+        <p style="margin-top:1rem; font-size:0.82rem; color:#706860;">* Website mẫu demo #MS28 thuộc Thư Viện Giao Diện RackerWeb.</p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Món ăn</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+
+      <div class="footer-col">
+        <h4>Thực Đơn</h4>
+        <ul>
+          <li><a href="san-pham.html">Đặc sản thố đá</a></li>
+          <li><a href="san-pham.html">Cơm niêu & Kho tộ</a></li>
+          <li><a href="san-pham.html">Bánh truyền thống</a></li>
+          <li><a href="san-pham.html">Set tiệc đoàn viên</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col">
+        <h4>Nhà Hàng</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Câu chuyện thương hiệu</a></li>
+          <li><a href="index.html#khong-gian">Hệ thống phòng VIP</a></li>
+          <li><a href="index.html#dat-ban">Đặt bàn tiệc công ty</a></li>
+          <li><a href="lien-he.html">Chỉ đường & Bãi đỗ xe</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Liên Hệ & Đón Khách</h4>
+        <p><strong>Địa chỉ:</strong> 42 Tràng Tiền, Quận Hoàn Kiếm, Hà Nội</p>
+        <p style="margin-top:0.4rem;"><strong>Giờ phục vụ:</strong> 10:00 – 22:30 (Thứ 2 – Chủ Nhật)</p>
+        <p style="margin-top:0.4rem;"><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--gold); font-weight:700;">0971 183 939</a></p>
       </div>
     </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Nhà hàng quán ăn Halu - demo 28. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <span>© 2026 Nhà Hàng Halu — Giao diện mẫu #MS28. All rights reserved.</span>
+      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
   <script src="js/app.js"></script>
+  <script>
+    function handleEventContact(e) {
+      e.preventDefault();
+      const name = document.getElementById('event-name').value;
+      const phone = document.getElementById('event-phone').value;
+      const type = document.getElementById('event-type').value;
+      const guests = document.getElementById('event-guests').value;
+      const toast = document.getElementById('toast-msg');
+      if (toast) {
+        toast.innerHTML = `<strong>Kính chào ${name}!</strong> Yêu cầu tư vấn <strong>${type} (${guests})</strong> đã được gửi tới Quản lý nhà hàng. Chúng tôi sẽ gọi tới số <strong>${phone}</strong> trong vòng 15 phút.`;
+        toast.classList.add('show');
+        setTimeout(() => { toast.classList.remove('show'); }, 6000);
+      }
+      e.target.reset();
+    }
+  </script>
 </body>
 </html>

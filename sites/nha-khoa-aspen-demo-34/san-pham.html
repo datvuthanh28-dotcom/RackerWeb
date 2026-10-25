@@ -1,98 +1,369 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Danh Mục Sản phẩm | Nha khoa Aspen - demo 34</title>
+  <title>Dịch Vụ Nha Khoa Chuyên Sâu — ASPEN DENTAL (#MS34)</title>
+  <meta name="description" content="Bảng giá dịch vụ cấy ghép Implant, niềng răng trong suốt, bọc răng sứ và nhổ răng khôn không đau tại Aspen Dental. Chụp CT ConeBeam 3D miễn phí, trả góp 0%.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .dental-menu-hero {
+      background: linear-gradient(135deg, #0f2744 0%, #0369a1 100%);
+      padding: 5.5rem 1.5rem 3.5rem;
+      text-align: center;
+      color: #fff;
+    }
+    .dental-menu-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+    .service-procedure-group {
+      margin-bottom: 4.5rem;
+    }
+    .procedure-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .procedure-header h2 {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      color: var(--med-navy);
+      white-space: nowrap;
+    }
+    .proc-line {
+      height: 1px;
+      background: var(--border-med);
+      width: 100%;
+    }
+    .procedure-grid-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem;
+    }
+    .proc-item-card {
+      background: #ffffff;
+      border: 1px solid var(--border-med);
+      border-radius: var(--radius);
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .proc-item-card:hover {
+      border-color: var(--med-blue);
+      transform: translateY(-3px);
+    }
+    .proc-item-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.6rem;
+    }
+    .proc-item-head h4 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--med-navy);
+    }
+    .proc-item-price {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--med-blue);
+      white-space: nowrap;
+    }
+    .proc-item-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+    .proc-item-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid #f1f5f9;
+    }
+    .proc-guarantee-badge {
+      font-size: 0.8rem;
+      color: var(--med-green);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    @media (max-width: 768px) {
+      .procedure-grid-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Library return bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS34</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS34 · Y Tế & Chăm Sóc Sức Khỏe</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Nha khoa Aspen - demo 34 <span>MS34</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html" class="active">Sản phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">✚</div>
+        <div class="brand-text">
+          <span class="brand-title">ASPEN <span>DENTAL</span></span>
+          <span class="brand-subtitle">Viện Nha Khoa Quốc Tế</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Trang Chủ</a>
+        <a href="san-pham.html" class="active">Dịch Vụ Chuyên Sâu</a>
+        <a href="gioi-thieu.html">Đội Ngũ Bác Sĩ</a>
+        <a href="index.html#cong-nghe">Công Nghệ 3D</a>
+        <a href="index.html#dat-lich-kham">Đặt Lịch Khám</a>
+        <a href="lien-he.html">Chi Nhánh</a>
       </nav>
-      <div class="header-actions">
-        <button type="button" class="cart-trigger">Giỏ Hàng (<span id="cart-count">0</span>)</button>
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="header-cta-group">
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-hotline">
+          0971 183 939
+        </a>
+        <a href="index.html#dat-lich-kham" class="btn-book-dental">
+          <span>Đặt Lịch Khám 3D</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Toàn Bộ Danh Mục Sản phẩm</h1>
-    <p>Khám phá đầy đủ các gói sản phẩm và giải pháp cao cấp từ Nha khoa Aspen - demo 34</p>
-  </div>
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html">Trang Chủ</a>
+    <a href="san-pham.html" class="active">Dịch Vụ Nha Khoa</a>
+    <a href="gioi-thieu.html">Đội Ngũ Bác Sĩ</a>
+    <a href="index.html#cong-nghe">Công Nghệ 3D</a>
+    <a href="index.html#dat-lich-kham">Đăng Ký Khám Miễn Phí</a>
+    <a href="lien-he.html">Hệ Thống Phòng Khám</a>
+  </aside>
 
-  <main class="section">
-    <div class="grid">
-        <div class="card">
-          <span class="card-badge">Chính hãng</span>
-          <h3>Viên Uống Bổ Sung Vitamin Tổng Hợp</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">350.000đ</div>
-          <button type="button" class="btn-buy" data-name="Viên Uống Bổ Sung Vitamin Tổng Hợp">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Bảo hành 2 năm</span>
-          <h3>Máy Đo Huyết Áp Điện Tử Bắp Tay</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">890.000đ</div>
-          <button type="button" class="btn-buy" data-name="Máy Đo Huyết Áp Điện Tử Bắp Tay">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Nhập khẩu</span>
-          <h3>Dầu Cá Omega-3 Tinh Khiết</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">420.000đ</div>
-          <button type="button" class="btn-buy" data-name="Dầu Cá Omega-3 Tinh Khiết">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Cần thiết</span>
-          <h3>Bộ Hộp Sơ Cứu Gia Đình Chuẩn Y Tế</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">260.000đ</div>
-          <button type="button" class="btn-buy" data-name="Bộ Hộp Sơ Cứu Gia Đình Chuẩn Y Tế">Thêm Giỏ Hàng</button>
+  <main>
+    <section class="dental-menu-hero">
+      <div class="container">
+        <span class="badge-certified" style="background:rgba(255,255,255,0.15); color:#fff; border-color:rgba(255,255,255,0.3);">
+          Minh Bạch Chi Phí & Bảo Hành
+        </span>
+        <h1>Bảng Giá Dịch Vụ Nha Khoa Kỹ Thuật Số</h1>
+        <p style="color:#e0f2fe; max-width:650px; margin:0 auto; font-size:1.05rem;">
+          Cam kết không phát sinh chi phí phụ ngoài hợp đồng điều trị. Chụp phim CT ConeBeam 3D và tư vấn phác đồ hoàn toàn miễn phí.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-dental">
+      <!-- Group 1: Implant -->
+      <div class="service-procedure-group">
+        <div class="procedure-header">
+          <h2>01. Cấy Ghép Implant & Phục Hình Răng Mất</h2>
+          <div class="proc-line"></div>
         </div>
-    </div>
+        <div class="procedure-grid-list">
+          <div class="proc-item-card">
+            <div>
+              <div class="proc-item-head">
+                <h4>Trụ Implant Dentium (Hàn Quốc)</h4>
+                <span class="proc-item-price">12.500.000đ / răng</span>
+              </div>
+              <p class="proc-item-desc">Dòng trụ phổ biến thế giới với liên kết SLA xử lý bề mặt nhám vi thể, tích hợp xương nhanh sau 2 – 3 tháng.</p>
+            </div>
+            <div class="proc-item-foot">
+              <span class="proc-guarantee-badge">✓ Bảo hành chính hãng 15 năm</span>
+              <button class="btn-select-specialty" onclick="selectDentalService('Implant Dentium Hàn Quốc')">Đặt lịch khám</button>
+            </div>
+          </div>
+
+          <div class="proc-item-card">
+            <div>
+              <div class="proc-item-head">
+                <h4>Trụ Implant Straumann SLA Active (Thụy Sĩ)</h4>
+                <span class="proc-item-price">28.000.000đ / răng</span>
+              </div>
+              <p class="proc-item-desc">Đỉnh cao công nghệ cấy ghép sinh học với hoạt chất kháng viêm, rút ngắn thời gian tích hợp xương chỉ còn 3 – 4 tuần.</p>
+            </div>
+            <div class="proc-item-foot">
+              <span class="proc-guarantee-badge">★ Bảo hành trọn đời toàn cầu</span>
+              <button class="btn-select-specialty" onclick="selectDentalService('Implant Straumann Thụy Sĩ')">Đặt lịch khám</button>
+            </div>
+          </div>
+
+          <div class="proc-item-card">
+            <div>
+              <div class="proc-item-head">
+                <h4>Trồng Răng Toàn Hàm All-on-4 / All-on-6</h4>
+                <span class="proc-item-price">Từ 110.000.000đ / hàm</span>
+              </div>
+              <p class="proc-item-desc">Giải pháp phục hình toàn hàm cho người mất răng lâu năm, tiêu xương hàm. Có răng tạm ăn nhai ngay trong ngày.</p>
+            </div>
+            <div class="proc-item-foot">
+              <span class="proc-guarantee-badge">✓ Trả góp 0% qua 25 ngân hàng</span>
+              <button class="btn-select-specialty" onclick="selectDentalService('Implant Toàn hàm All-on-4')">Đặt lịch khám</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 2: Niềng răng -->
+      <div class="service-procedure-group">
+        <div class="procedure-header">
+          <h2>02. Niềng Răng Chỉnh Nha Kỹ Thuật Số</h2>
+          <div class="proc-line"></div>
+        </div>
+        <div class="procedure-grid-list">
+          <div class="proc-item-card">
+            <div>
+              <div class="proc-item-head">
+                <h4>Niềng Răng Mắc Cài Kim Loại Tự Buộc</h4>
+                <span class="proc-item-price">32.000.000đ – 38.000.000đ</span>
+              </div>
+              <p class="proc-item-desc">Mắc cài thông minh lực kéo êm ái, hạn chế ma sát và đau nhức. Rút ngắn số lần tái khám định kỳ.</p>
+            </div>
+            <div class="proc-item-foot">
+              <span class="proc-guarantee-badge">✓ Trả góp chỉ từ 1.000.000đ/tháng</span>
+              <button class="btn-select-specialty" onclick="selectDentalService('Niềng răng mắc cài kim loại')">Đặt lịch khám</button>
+            </div>
+          </div>
+
+          <div class="proc-item-card">
+            <div>
+              <div class="proc-item-head">
+                <h4>Niềng Răng Khay Trong Suốt Invisalign (Mỹ)</h4>
+                <span class="proc-item-price">65.000.000đ – 110.000.000đ</span>
+              </div>
+              <p class="proc-item-desc">Khay niềng nhựa sinh học SmartTrack vô hình, tự do tháo lắp khi ăn uống và vệ sinh răng miệng tiện lợi.</p>
+            </div>
+            <div class="proc-item-foot">
+              <span class="proc-guarantee-badge">✓ Xem trước kết quả 3D ClinCheck</span>
+              <button class="btn-select-specialty" onclick="selectDentalService('Niềng răng Invisalign')">Đặt lịch khám</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 3: Răng sứ & Nhổ răng khôn -->
+      <div class="service-procedure-group">
+        <div class="procedure-header">
+          <h2>03. Răng Sứ Thẩm Mỹ & Tiểu Phẫu Nha Khoa</h2>
+          <div class="proc-line"></div>
+        </div>
+        <div class="procedure-grid-list">
+          <div class="proc-item-card">
+            <div>
+              <div class="proc-item-head">
+                <h4>Dán Sứ Veneer Emax Thụy Sĩ</h4>
+                <span class="proc-item-price">6.500.000đ / răng</span>
+              </div>
+              <p class="proc-item-desc">Mặt dán sứ siêu mỏng 0.2mm dán cố định bề mặt răng, không cần mài nhỏ răng, không ảnh hưởng tủy sống.</p>
+            </div>
+            <div class="proc-item-foot">
+              <span class="proc-guarantee-badge">✓ Bảo hành 10 năm chính hãng</span>
+              <button class="btn-select-specialty" onclick="selectDentalService('Dán sứ Veneer Emax')">Đặt lịch khám</button>
+            </div>
+          </div>
+
+          <div class="proc-item-card">
+            <div>
+              <div class="proc-item-head">
+                <h4>Nhổ Răng Khôn Sóng Siêu Âm Piezotome</h4>
+                <span class="proc-item-price">1.200.000đ – 3.000.000đ / răng</span>
+              </div>
+              <p class="proc-item-desc">Bước sóng siêu âm làm lung lay chân răng nhẹ nhàng, không tác động mô mềm lân cận, không sưng đau, lành thương nhanh.</p>
+            </div>
+            <div class="proc-item-foot">
+              <span class="proc-guarantee-badge">✓ Miễn phí chụp CT 3D kiểm tra chân răng</span>
+              <button class="btn-select-specialty" onclick="selectDentalService('Nhổ răng khôn Piezotome')">Đặt lịch khám</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation CTA Banner -->
+    <section class="section-dental" style="padding-top:0;">
+      <div style="background:#ffffff; border:1px solid var(--border-med); border-radius:var(--radius); padding:4rem 2rem; text-align:center; box-shadow:var(--shadow-card);">
+        <span class="badge-certified">Ưu Đãi Đặt Lịch Online</span>
+        <h3 style="font-family:var(--font-heading); font-size:2.2rem; font-weight:800; color:var(--med-navy); margin-bottom:1rem;">Chụp Phim CT ConeBeam 3D Miễn Phí (Trị Giá 800.000đ)</h3>
+        <p style="color:var(--text-muted); max-width:620px; margin:0 auto 2.5rem;">Khi đặt lịch trước qua website, bạn sẽ được miễn phí hoàn toàn chi phí chụp phim chẩn đoán cấu trúc xương hàm và thăm khám cùng Bác sĩ Trưởng khoa.</p>
+        <div style="display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap;">
+          <a href="index.html#dat-lich-kham" class="btn-primary-dental">Đăng Ký Khám Ưu Tiên</a>
+          <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-outline-dental">Nhắn Zalo Gửi Phim X-Quang Tư Vấn</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Nha khoa Aspen - demo 34</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Y tế. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <!-- Toast -->
+  <div class="toast-dental" id="toast-dental" role="status"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer-dental">
+    <div class="footer-wrap-dental">
+      <div class="footer-col-dental">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
+          <div class="brand-icon">✚</div>
+          <div class="brand-text">
+            <span class="brand-title" style="color:#fff;">ASPEN <span>DENTAL</span></span>
+            <span class="brand-subtitle" style="color:#7dd3fc;">Viện Nha Khoa Quốc Tế</span>
+          </div>
+        </a>
+        <p>Hệ thống nha khoa kỹ thuật số tiêu chuẩn quốc tế, tiên phong trong cấy ghép Implant không đau và thẩm mỹ nụ cười toàn diện.</p>
+        <p style="margin-top:1rem; font-size:0.8rem; color:#64748b;">* Giao diện mẫu demo #MS34 thuộc Thư Viện Theme RackerWeb.</p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Sản phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+
+      <div class="footer-col-dental">
+        <h4>Dịch Vụ Chuyên Sâu</h4>
+        <ul>
+          <li><a href="san-pham.html">Trồng răng Implant kỹ thuật số</a></li>
+          <li><a href="san-pham.html">Niềng răng trong suốt Invisalign</a></li>
+          <li><a href="san-pham.html">Dán sứ Veneer Emax siêu mỏng</a></li>
+          <li><a href="san-pham.html">Nhổ răng khôn sóng Piezotome</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col-dental">
+        <h4>Thông Tin Bệnh Nhân</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Đội ngũ Bác sĩ chuyên khoa</a></li>
+          <li><a href="gioi-thieu.html">Công nghệ chẩn đoán CT ConeBeam</a></li>
+          <li><a href="lien-he.html">Chính sách bảo hành & Trả góp 0%</a></li>
+          <li><a href="lien-he.html">Bảo lãnh viện phí bảo hiểm</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-dental">
+        <h4>Hệ Thống Phòng Khám</h4>
+        <p><strong>TP.HCM:</strong> 128 Nguyễn Huệ, Phường Bến Nghé, Quận 1</p>
+        <p style="margin-top:0.4rem;"><strong>Hà Nội:</strong> 88 Cầu Giấy, Phường Quan Hoa, Quận Cầu Giấy</p>
+        <p style="margin-top:0.4rem;"><strong>Hotline 24/7:</strong> <a href="https://zalo.me/0971183939" style="color:#38bdf8; font-weight:700;">0971 183 939</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Nha khoa Aspen - demo 34. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+
+    <div class="footer-bottom-dental">
+      <span>© 2026 Viện Nha Khoa Quốc Tế Aspen Dental — Giao diện mẫu #MS34. All rights reserved.</span>
+      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
   <script src="js/app.js"></script>
 </body>
 </html>

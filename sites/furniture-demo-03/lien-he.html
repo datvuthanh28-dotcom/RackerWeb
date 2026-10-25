@@ -1,97 +1,318 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liên Hệ & Tư Vấn | Furniture demo 03</title>
+  <title>Liên Hệ & Showroom — NORDIC LIVING (#MS03)</title>
+  <meta name="description" content="Trải nghiệm thực tế nội thất Bắc Âu tại Showroom Nordic Living 88 Song Hành, TP. Thủ Đức. Hotline / Zalo: 0971 183 939. Đăng ký đo đạc căn hộ tận nơi miễn phí.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-nordic-hero {
+      background: linear-gradient(180deg, rgba(20,20,20,0.8) 0%, rgba(20,20,20,0.95) 100%),
+                  url('assets/images/hero.jpg') center/cover no-repeat;
+      padding: 5.5rem 1.5rem 3.5rem;
+      text-align: center;
+      color: #fff;
+    }
+    .contact-nordic-hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+    .c-layout-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3.5rem;
+      margin-top: 3rem;
+    }
+    .showroom-card {
+      background: var(--nordic-bone-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 2.2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-soft);
+    }
+    .sr-row {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 1.6rem;
+      align-items: flex-start;
+    }
+    .sr-row:last-child {
+      margin-bottom: 0;
+    }
+    .sr-icon-box {
+      width: 44px;
+      height: 44px;
+      background: var(--nordic-bone);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--nordic-black);
+      flex-shrink: 0;
+    }
+    .sr-meta h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--nordic-black);
+      margin-bottom: 0.25rem;
+    }
+    .sr-meta p, .sr-meta a {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .sr-meta a:hover {
+      color: var(--oak-tan);
+    }
+    .policy-banner {
+      background: #eae5dc;
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+    .policy-banner h4 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--nordic-black);
+      margin-bottom: 0.6rem;
+    }
+    .policy-banner p {
+      font-size: 0.88rem;
+      color: #59554e;
+      line-height: 1.65;
+    }
+    @media (max-width: 900px) {
+      .c-layout-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Library return bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS03</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS03 · Nội Thất & Kiến Trúc</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Furniture demo 03 <span>MS03</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html"></a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html" class="active">Liên Hệ</a></li>
-        </ul>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-title">NORDIC LIVING</span>
+        <span class="brand-subtitle">Scandinavian Interior</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Trang Chủ</a>
+        <a href="san-pham.html">Bộ Sưu Tập</a>
+        <a href="index.html#may-do">May Đo Thiết Kế</a>
+        <a href="gioi-thieu.html">Về Chúng Tôi</a>
+        <a href="index.html#bao-gia">Báo Giá</a>
+        <a href="lien-he.html" class="active">Showroom</a>
       </nav>
-      <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="header-cta-group">
+        <button type="button" class="btn-cart-toggle" onclick="location.href='index.html#bao-gia'">
+          <span>Yêu Cầu Báo Giá</span>
+          (<span id="cart-count">0</span>)
+        </button>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-consult-nav">
+          Tư Vấn Zalo
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Liên Hệ Tư Vấn & Báo Giá</h1>
-    <p>Chúng tôi luôn sẵn sàng lắng nghe và giải đáp mọi yêu cầu của bạn</p>
-  </div>
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html">Trang Chủ</a>
+    <a href="san-pham.html">Bộ Sưu Tập Nội Thất</a>
+    <a href="index.html#may-do">Dịch Vụ May Đo Căn Hộ</a>
+    <a href="gioi-thieu.html">Câu Chuyện Nordic Living</a>
+    <a href="index.html#bao-gia">Nhận Báo Giá Dự Án</a>
+    <a href="lien-he.html" class="active">Hệ Thống Showroom</a>
+  </aside>
 
-  <div class="subpage-content">
-    <div class="contact-grid">
-      <div>
-        <h3>Thông Tin Liên Hệ</h3>
-        <p style="color: #64748b; margin: 1rem 0;">Để nhận báo giá và tư vấn nhanh nhất, vui lòng kết nối trực tiếp qua Zalo hoặc để lại lời nhắn.</p>
-        <p><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p><strong>Thời gian làm việc:</strong> 8:00 - 22:00 hàng ngày</p>
-        <p><strong>Lĩnh vực:</strong> Khac</p>
+  <main>
+    <section class="contact-nordic-hero">
+      <div class="container">
+        <span class="hero-tag" style="color:var(--oak-light);">Kết Nối Trực Tiếp</span>
+        <h1>Showroom & Tư Vấn Căn Hộ</h1>
+        <p style="color:#b8b4ad; max-width:650px; margin:0 auto; font-size:1.05rem;">
+          Đội ngũ kiến trúc sư nội thất luôn sẵn sàng tiếp đón và tư vấn trực quan phương án bố trí không gian căn hộ cho bạn.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-nordic">
+      <div class="c-layout-grid">
+        <!-- Showroom Info -->
+        <div>
+          <div class="showroom-card">
+            <h3 style="font-size:1.45rem; font-weight:800; color:var(--nordic-black); margin-bottom:1.6rem;">Không Gian Trưng Bày</h3>
+
+            <div class="sr-row">
+              <div class="sr-icon-box">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="sr-meta">
+                <h4>Showroom TP. Hồ Chí Minh</h4>
+                <p>Tòa nhà Design Hub, 88 Song Hành, Phường An Phú, TP. Thủ Đức, TP.HCM</p>
+                <p style="font-size:0.82rem; color:var(--oak-tan); margin-top:0.2rem;">(Có hầm đỗ xe ô tô và xe máy rộng rãi)</p>
+              </div>
+            </div>
+
+            <div class="sr-row">
+              <div class="sr-icon-box">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="sr-meta">
+                <h4>Hotline KTS & Zalo Hỗ Trợ</h4>
+                <p><a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer"><strong>0971 183 939</strong> (Chat Zalo gửi mặt bằng 24/7)</a></p>
+                <p style="font-size:0.82rem;">Hỗ trợ tư vấn sơ bộ kích thước & báo giá nhanh</p>
+              </div>
+            </div>
+
+            <div class="sr-row">
+              <div class="sr-icon-box">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="sr-meta">
+                <h4>Giờ Mở Cửa Trải Nghiệm</h4>
+                <p>Thứ Hai – Chủ Nhật: <strong>08:30 – 21:00</strong></p>
+                <p style="font-size:0.82rem;">Có KTS túc trực hỗ trợ chọn màu vải và chất liệu gỗ</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="policy-banner">
+            <h4>Cam Kết Dịch Vụ Vàng</h4>
+            <p>
+              • Miễn phí vận chuyển và lắp đặt hoàn thiện nội thành Hà Nội & TP.HCM.<br>
+              • Bảo hành kết cấu khung gỗ 5 năm, đệm mút 2 năm.<br>
+              • Hỗ trợ đổi trả miễn phí trong 7 ngày nếu sản phẩm sai lệch kích thước bản vẽ thỏa thuận.
+            </p>
+          </div>
+        </div>
+
+        <!-- Appointment / Consultation Form -->
+        <div>
+          <div class="quote-form-card" style="box-shadow:none; border:1px solid var(--border-subtle);">
+            <h4>Đăng Ký Khảo Sát Hiện Trạng Tận Nơi</h4>
+            <p>Kiến trúc sư sẽ mang mẫu gỗ, bảng màu vải thực tế qua căn hộ đo đạc miễn phí</p>
+
+            <form id="contact-survey-form" onsubmit="handleSurveySubmit(event)">
+              <div class="q-grid">
+                <div class="q-group">
+                  <label for="survey-name">Họ và tên *</label>
+                  <input type="text" id="survey-name" class="q-input" placeholder="Trần Đức Nam" required>
+                </div>
+                <div class="q-group">
+                  <label for="survey-phone">Số điện thoại / Zalo *</label>
+                  <input type="tel" id="survey-phone" class="q-input" placeholder="09xx xxx xxx" required>
+                </div>
+                <div class="q-group full">
+                  <label for="survey-address">Địa chỉ căn hộ / Tên dự án *</label>
+                  <input type="text" id="survey-address" class="q-input" placeholder="Ví dụ: Căn 1205 Tòa S2.03, Vinhomes Grand Park, Quận 9" required>
+                </div>
+                <div class="q-group">
+                  <label for="survey-date">Ngày thuận tiện khảo sát</label>
+                  <input type="date" id="survey-date" class="q-input">
+                </div>
+                <div class="q-group">
+                  <label for="survey-time">Khung giờ hẹn</label>
+                  <select id="survey-time" class="q-select">
+                    <option value="Sáng (09:00 - 11:30)">Buổi sáng (09:00 – 11:30)</option>
+                    <option value="Chiều (14:00 - 17:00)">Buổi chiều (14:00 – 17:00)</option>
+                    <option value="Tối (18:00 - 20:00)">Buổi tối (18:00 – 20:00)</option>
+                  </select>
+                </div>
+                <div class="q-group full">
+                  <label for="survey-note">Các hạng mục cần may đo</label>
+                  <textarea id="survey-note" class="q-textarea" rows="3" placeholder="Ví dụ: Đo diện tích phòng khách đặt sofa L, đo vách đầu giường phòng ngủ master..."></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-submit-quote">Xác Nhận Đặt Lịch Đo Đạc Miễn Phí</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast -->
+  <div class="toast-nordic" id="toast-nordic" role="status"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer-nordic">
+    <div class="footer-wrap-nordic">
+      <div class="footer-col-nordic">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
+          <span class="brand-title" style="color:#fff;">NORDIC LIVING</span>
+          <span class="brand-subtitle">Scandinavian Interior</span>
+        </a>
+        <p>Thương hiệu nội thất Bắc Âu tối giản, tiên phong trong giải pháp may đo chuẩn xác cho không gian sống hiện đại tại Việt Nam.</p>
+        <p style="margin-top:1rem; font-size:0.8rem; color:#736f68;">* Giao diện mẫu demo #MS03 thuộc Thư Viện Theme RackerWeb.</p>
       </div>
 
-      <div>
-        <form id="site-contact-form">
-          <div class="form-group">
-            <label for="c-name">Họ và tên *</label>
-            <input type="text" id="c-name" required placeholder="Nguyễn Văn A">
-          </div>
-          <div class="form-group">
-            <label for="c-phone">Số điện thoại / Zalo *</label>
-            <input type="tel" id="c-phone" required placeholder="09xxxxxxxx">
-          </div>
-          <div class="form-group">
-            <label for="c-msg">Nhu cầu tư vấn *</label>
-            <textarea id="c-msg" rows="4" required placeholder="Nhu cầu chi tiết..."></textarea>
-          </div>
-          <button type="submit" class="btn-primary" style="width: 100%;">Gửi Yêu Cầu Tư Vấn</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Furniture demo 03</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Khac. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
-      </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html"></a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+      <div class="footer-col-nordic">
+        <h4>Sản Phẩm</h4>
+        <ul>
+          <li><a href="san-pham.html">Sofa & Ghế thư giãn</a></li>
+          <li><a href="san-pham.html">Bàn ghế ăn gỗ sồi</a></li>
+          <li><a href="san-pham.html">Giường & Tủ phòng ngủ</a></li>
+          <li><a href="san-pham.html">Bàn làm việc thông minh</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col-nordic">
+        <h4>Về Chúng Tôi</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Triết lý thiết kế Hygge</a></li>
+          <li><a href="gioi-thieu.html">Quy trình sản xuất xưởng mộc</a></li>
+          <li><a href="lien-he.html">Hệ thống Showroom</a></li>
+          <li><a href="lien-he.html">Chính sách bảo hành 5 năm</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-nordic">
+        <h4>Showroom & Trực Tuyến</h4>
+        <p><strong>Showroom:</strong> Tòa nhà Design Hub, 88 Song Hành, An Phú, TP. Thủ Đức, TP.HCM</p>
+        <p style="margin-top:0.4rem;"><strong>Giờ mở cửa:</strong> 08:30 – 21:00 (Hàng ngày)</p>
+        <p style="margin-top:0.4rem;"><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--oak-light); font-weight:700;">0971 183 939</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Furniture demo 03. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+
+    <div class="footer-bottom-nordic">
+      <span>© 2026 Nordic Living — Giao diện mẫu #MS03. All rights reserved.</span>
+      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
   <script src="js/app.js"></script>
+  <script>
+    function handleSurveySubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('survey-name').value;
+      const phone = document.getElementById('survey-phone').value;
+      const addr = document.getElementById('survey-address').value;
+      const toast = document.getElementById('toast-nordic');
+      if (toast) {
+        toast.innerHTML = `<strong>Kính chào ${name}!</strong> Đề nghị khảo sát tại <strong>"${addr}"</strong> đã được chuyển tới KTS phụ trách. Chúng tôi sẽ gọi xác nhận qua số <strong>${phone}</strong> trong 15 phút.`;
+        toast.classList.add('show');
+        setTimeout(() => { toast.classList.remove('show'); }, 6000);
+      }
+      e.target.reset();
+    }
+  </script>
 </body>
 </html>

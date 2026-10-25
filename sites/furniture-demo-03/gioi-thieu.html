@@ -1,81 +1,233 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giới Thiệu | Furniture demo 03</title>
+  <title>Về Nordic Living — Triết Lý Thiết Kế & Xưởng Sản Xuất (#MS03)</title>
+  <meta name="description" content="Khám phá hành trình xây dựng không gian sống Hygge phong cách Bắc Âu tại Việt Nam của Nordic Living. Xưởng sản xuất 2.000m² đạt chuẩn xuất khẩu Châu Âu.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .about-nordic-hero {
+      background: linear-gradient(180deg, rgba(20,20,20,0.8) 0%, rgba(20,20,20,0.95) 100%),
+                  url('assets/images/hero.jpg') center/cover no-repeat;
+      padding: 5.5rem 1.5rem 3.5rem;
+      text-align: center;
+      color: #fff;
+    }
+    .about-nordic-hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+    .split-narrative {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+    .split-narrative img {
+      border-radius: var(--radius);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+    }
+    .craft-values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .craft-card {
+      background: var(--nordic-bone-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-soft);
+    }
+    .craft-card h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--nordic-black);
+      margin-bottom: 0.6rem;
+    }
+    .craft-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    @media (max-width: 900px) {
+      .split-narrative {
+        grid-template-columns: 1fr;
+      }
+      .craft-values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Library return bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS03</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS03 · Nội Thất & Kiến Trúc</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Furniture demo 03 <span>MS03</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html"></a></li>
-          <li><a href="gioi-thieu.html" class="active">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-title">NORDIC LIVING</span>
+        <span class="brand-subtitle">Scandinavian Interior</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Trang Chủ</a>
+        <a href="san-pham.html">Bộ Sưu Tập</a>
+        <a href="index.html#may-do">May Đo Thiết Kế</a>
+        <a href="gioi-thieu.html" class="active">Về Chúng Tôi</a>
+        <a href="index.html#bao-gia">Báo Giá</a>
+        <a href="lien-he.html">Showroom</a>
       </nav>
-      <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="header-cta-group">
+        <button type="button" class="btn-cart-toggle" onclick="location.href='index.html#bao-gia'">
+          <span>Yêu Cầu Báo Giá</span>
+          (<span id="cart-count">0</span>)
+        </button>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-consult-nav">
+          Tư Vấn Zalo
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Về Chúng Tôi — Furniture demo 03</h1>
-    <p>Hành trình khẳng định uy tín và chất lượng dẫn đầu trong lĩnh vực Khac</p>
-  </div>
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html">Trang Chủ</a>
+    <a href="san-pham.html">Bộ Sưu Tập Nội Thất</a>
+    <a href="index.html#may-do">Dịch Vụ May Đo Căn Hộ</a>
+    <a href="gioi-thieu.html" class="active">Câu Chuyện Nordic Living</a>
+    <a href="index.html#bao-gia">Nhận Báo Giá Dự Án</a>
+    <a href="lien-he.html">Hệ Thống Showroom</a>
+  </aside>
 
-  <div class="subpage-content">
-    <p style="margin-bottom: 1.5rem; font-size: 1.05rem;"><strong>Furniture demo 03</strong> tự hào là đối tác tin cậy, mang đến cho quý khách hàng các sản phẩm và dịch vụ Khac đạt tiêu chuẩn cao nhất. Với triết lý lấy sự hài lòng của khách hàng làm trọng tâm, chúng tôi không ngừng đổi mới công nghệ và quy trình phục vụ.</p>
-    <div style="background: var(--surface); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
-      <h3 style="margin-bottom: 1rem; color: var(--primary);">Giá Trị Cốt Lõi</h3>
-      <ul style="padding-left: 1.25rem; line-height: 2;">
-        <li><strong>Chất Lượng Vượt Trội:</strong> Mọi chi tiết đều được hoàn thiện tỉ mỉ và kiểm định nghiêm ngặt.</li>
-        <li><strong>Tận Tâm & Minh Bạch:</strong> Tư vấn trung thực, báo giá rõ ràng, không phát sinh chi phí ẩn.</li>
-        <li><strong>Đồng Hành Dài Lâu:</strong> Hỗ trợ kỹ thuật và chăm sóc khách hàng 24/7 qua số Hotline Zalo 0971183939.</li>
-      </ul>
-    </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="lien-he.html" class="btn-primary">Liên Hệ Ngay Với Chúng Tôi</a>
-    </div>
-  </div>
-
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Furniture demo 03</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Khac. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <main>
+    <section class="about-nordic-hero">
+      <div class="container">
+        <span class="hero-tag" style="color:var(--oak-light);">Triết Lý Thương Hiệu</span>
+        <h1>Nơi Tổ Ấm Tìm Về Sự Bình Yên</h1>
+        <p style="color:#b8b4ad; max-width:650px; margin:0 auto; font-size:1.05rem;">
+          Chúng tôi tin rằng một ngôi nhà đẹp không cần quá phô trương mà là không gian ngập tràn ánh sáng, chạm vào đâu cũng thấy sự mộc mạc ấm lòng của gỗ thật.
+        </p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html"></a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+    </section>
+
+    <section class="section-nordic">
+      <div class="split-narrative">
+        <div>
+          <span class="section-subtitle-nordic">Khởi Nguồn</span>
+          <h2 style="font-size:2.2rem; font-weight:800; color:var(--nordic-black); margin-bottom:1.2rem; line-height:1.3;">
+            Đem Tinh Thần "Hygge" Đan Mạch Về Căn Hộ Việt
+          </h2>
+          <p style="color:var(--text-muted); font-size:1rem; line-height:1.75; margin-bottom:1.2rem;">
+            Nordic Living được sáng lập bởi đội ngũ kiến trúc sư tốt nghiệp chuyên ngành thiết kế công nghiệp Châu Âu. Trở về Việt Nam, chúng tôi nhận thấy các gia đình trẻ luôn tìm kiếm những món đồ nội thất thanh thoát, ít góc nhọn nguy hiểm và tôn trọng màu gỗ tự nhiên thay vì nước sơn công nghiệp bóng bẩy.
+          </p>
+          <p style="color:var(--text-muted); font-size:1rem; line-height:1.75;">
+            "Hygge" trong tiếng Đan Mạch là cảm giác ấm cúng, dễ chịu khi ngồi đọc sách bên tách trà nóng, lắng nghe tiếng mưa rơi ngoài cửa sổ. Đó chính là cảm xúc mà mọi sản phẩm của Nordic Living luôn hướng tới.
+          </p>
+        </div>
+        <div>
+          <img src="assets/images/hero.jpg" alt="Xưởng sản xuất nội thất Nordic Living">
+        </div>
+      </div>
+
+      <!-- 3 Core Pillars -->
+      <div class="section-header-nordic" style="margin-top:2rem;">
+        <div>
+          <span class="section-subtitle-nordic">Năng Lực Sản Xuất</span>
+          <h2 class="section-title-nordic">Chất Lượng Đến Từ Kỷ Luật & Tay Nghề</h2>
+        </div>
+      </div>
+
+      <div class="craft-values-grid">
+        <div class="craft-card">
+          <h4>🌲 Gỗ Sồi Bắc Mỹ Chuẩn FSC</h4>
+          <p>100% phôi gỗ sồi tự nhiên được sấy khô đạt độ ẩm 10-12%, triệt tiêu hoàn toàn nguy cơ cong vênh, rạn nứt trước khí hậu nhiệt đới ẩm Việt Nam.</p>
+        </div>
+
+        <div class="craft-card">
+          <h4>⚙ Xưởng Mộc Hiện Đại 2.000m²</h4>
+          <p>Trang bị hệ thống máy cắt CNC tự động và máy dán cạnh tự động của Đức, đảm bảo độ chính xác tới từng milimet trước khi lắp ghép.</p>
+        </div>
+
+        <div class="craft-card">
+          <h4>🎨 Dầu Lau Thực Vật Thụy Sĩ</h4>
+          <p>Bề mặt gỗ được hoàn thiện bằng dầu lau Osmo chiết xuất từ dầu đậu nành và sáp carnauba, an toàn tuyệt đối ngay cả khi trẻ nhỏ chạm miệng.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section-nordic" style="text-align:center; padding-top:0;">
+      <h3 style="font-size:2rem; font-weight:800; color:var(--nordic-black); margin-bottom:1rem;">Khám Phá Trải Nghiệm Thực Tế Tại Showroom</h3>
+      <p style="color:var(--text-muted); max-width:600px; margin:0 auto 2.5rem;">Kính mời quý khách ghé thăm Showroom để trực tiếp chạm vào vân gỗ sồi và trải nghiệm độ êm ái của các mẫu sofa.</p>
+      <div style="display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap;">
+        <a href="lien-he.html" class="btn-primary-nordic" style="background:var(--nordic-black); color:#fff;">Xem Địa Chỉ Showroom</a>
+        <a href="san-pham.html" class="btn-outline-nordic" style="color:var(--nordic-black); border-color:var(--nordic-black);">Xem Danh Mục Sản Phẩm</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer-nordic">
+    <div class="footer-wrap-nordic">
+      <div class="footer-col-nordic">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
+          <span class="brand-title" style="color:#fff;">NORDIC LIVING</span>
+          <span class="brand-subtitle">Scandinavian Interior</span>
+        </a>
+        <p>Thương hiệu nội thất Bắc Âu tối giản, tiên phong trong giải pháp may đo chuẩn xác cho không gian sống hiện đại tại Việt Nam.</p>
+        <p style="margin-top:1rem; font-size:0.8rem; color:#736f68;">* Giao diện mẫu demo #MS03 thuộc Thư Viện Theme RackerWeb.</p>
+      </div>
+
+      <div class="footer-col-nordic">
+        <h4>Sản Phẩm</h4>
+        <ul>
+          <li><a href="san-pham.html">Sofa & Ghế thư giãn</a></li>
+          <li><a href="san-pham.html">Bàn ghế ăn gỗ sồi</a></li>
+          <li><a href="san-pham.html">Giường & Tủ phòng ngủ</a></li>
+          <li><a href="san-pham.html">Bàn làm việc thông minh</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col-nordic">
+        <h4>Về Chúng Tôi</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Triết lý thiết kế Hygge</a></li>
+          <li><a href="gioi-thieu.html">Quy trình sản xuất xưởng mộc</a></li>
+          <li><a href="lien-he.html">Hệ thống Showroom</a></li>
+          <li><a href="lien-he.html">Chính sách bảo hành 5 năm</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-nordic">
+        <h4>Showroom & Trực Tuyến</h4>
+        <p><strong>Showroom:</strong> Tòa nhà Design Hub, 88 Song Hành, An Phú, TP. Thủ Đức, TP.HCM</p>
+        <p style="margin-top:0.4rem;"><strong>Giờ mở cửa:</strong> 08:30 – 21:00 (Hàng ngày)</p>
+        <p style="margin-top:0.4rem;"><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--oak-light); font-weight:700;">0971 183 939</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Furniture demo 03. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+
+    <div class="footer-bottom-nordic">
+      <span>© 2026 Nordic Living — Giao diện mẫu #MS03. All rights reserved.</span>
+      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
+  <script src="js/app.js"></script>
 </body>
 </html>

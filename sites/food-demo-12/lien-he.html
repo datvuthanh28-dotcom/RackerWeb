@@ -1,97 +1,336 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liên Hệ & Tư Vấn | Food demo 12</title>
+  <title>Đặt Bàn & Liên Hệ | Vị Xưa Quán #MS12</title>
+  <meta name="description" content="Liên hệ đặt bàn trước, tư vấn thực đơn tiệc gia đình, hội nghị hoặc nhận chỉ đường tới Vị Xưa Quán.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Library Return Bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS12</strong>.</span>
+    <span>Giao diện mẫu <strong>#MS12</strong> thuộc Thư Viện Giao Diện Doanh Nghiệp RackerWeb.</span>
     <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
   </div>
 
+  <!-- Header -->
   <header>
+    <div class="header-top">
+      <div class="header-top-left">
+        <span class="header-top-tag">⭐ ĐẶC SẢN NIÊU ĐẤT BA MIỀN</span>
+        <span>Mở cửa: 10:00 - 22:30 hàng ngày</span>
+        <span>Địa chỉ: 128 Nguyễn Đình Chiểu, P. Đa Kao, Quận 1, TP.HCM</span>
+      </div>
+      <div>
+        <span>Hotline đặt tiệc: <strong>0971 183 939</strong></span>
+      </div>
+    </div>
+
     <div class="header-wrap">
-      <div class="logo">Food demo 12 <span>MS12</span></div>
+      <div class="logo">
+        <div class="logo-main">
+          Vị Xưa Quán
+          <span class="logo-badge">#MS12</span>
+        </div>
+        <span class="logo-tagline">Ẩm Thực Cố Đô & Đặc Sản Gia Truyền</span>
+      </div>
+
       <nav>
         <ul>
           <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Món ăn</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html" class="active">Liên Hệ</a></li>
+          <li><a href="san-pham.html">Thực Đơn Tinh Hoa</a></li>
+          <li><a href="gioi-thieu.html">Không Gian & Câu Chuyện</a></li>
+          <li><a href="lien-he.html" class="active">Đặt Bàn & Liên Hệ</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <button type="button" class="btn-cart-nav" title="Xem giỏ đặc sản mang về">
+          🍲 Đặc Sản Mang Về <span class="cart-badge">0</span>
+        </button>
+        <a href="#dat-ban" class="btn-reserve-nav">
+          📅 Đặt Bàn Ngay
+        </a>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Liên Hệ Tư Vấn & Báo Giá</h1>
-    <p>Chúng tôi luôn sẵn sàng lắng nghe và giải đáp mọi yêu cầu của bạn</p>
-  </div>
+  <!-- Subpage Banner -->
+  <section class="subpage-banner">
+    <h1>Liên Hệ & Đặt Bàn Tiệc</h1>
+    <p>Chúng tôi luôn sẵn lòng lắng nghe, hỗ trợ Quý khách sắp xếp những bàn ăn ấm cúng và chỉn chu nhất.</p>
+    <div class="breadcrumbs">
+      <a href="index.html">Trang Chủ</a>
+      <span>/</span>
+      <span>Đặt Bàn & Liên Hệ</span>
+    </div>
+  </section>
 
-  <div class="subpage-content">
-    <div class="contact-grid">
-      <div>
-        <h3>Thông Tin Liên Hệ</h3>
-        <p style="color: #64748b; margin: 1rem 0;">Để nhận báo giá và tư vấn nhanh nhất, vui lòng kết nối trực tiếp qua Zalo hoặc để lại lời nhắn.</p>
-        <p><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p><strong>Thời gian làm việc:</strong> 8:00 - 22:00 hàng ngày</p>
-        <p><strong>Lĩnh vực:</strong> Ẩm thực - Nhà hàng</p>
+  <!-- Contact Information Cards -->
+  <section class="section" style="max-width: 1240px; margin: 4rem auto 2rem; padding: 0 1.5rem;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+      <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2rem; box-shadow: var(--shadow-sm); text-align: center;">
+        <div style="width: 56px; height: 56px; background: var(--primary-light); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 1.25rem;">📍</div>
+        <h3 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--wood); margin-bottom: 0.5rem;">Địa Chỉ Quán</h3>
+        <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+          128 Nguyễn Đình Chiểu, Phường Đa Kao, Quận 1, TP. Hồ Chí Minh
+        </p>
+        <span style="font-size: 0.8rem; color: #059669; font-weight: 600; display: block; margin-top: 0.5rem;">Có bãi đậu ô tô & xe máy miễn phí</span>
       </div>
 
+      <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2rem; box-shadow: var(--shadow-sm); text-align: center;">
+        <div style="width: 56px; height: 56px; background: var(--gold-light); color: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 1.25rem;">📞</div>
+        <h3 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--wood); margin-bottom: 0.5rem;">Hotline & Zalo</h3>
+        <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+          Tư vấn đặt bàn: <strong>0971 183 939</strong><br>
+          Zalo hỗ trợ trực tuyến 24/7
+        </p>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" style="color: #0068ff; font-size: 0.82rem; font-weight: 700; display: inline-block; margin-top: 0.5rem;">Nhắn tin qua Zalo ngay &rarr;</a>
+      </div>
+
+      <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2rem; box-shadow: var(--shadow-sm); text-align: center;">
+        <div style="width: 56px; height: 56px; background: #ecfdf5; color: #059669; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 1.25rem;">⏰</div>
+        <h3 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--wood); margin-bottom: 0.5rem;">Giờ Mở Cửa</h3>
+        <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+          Trưa: 10:00 - 14:30<br>
+          Tối: 17:00 - 22:30 (Cả Thứ 7 & CN)
+        </p>
+        <span style="font-size: 0.8rem; color: var(--primary); font-weight: 600; display: block; margin-top: 0.5rem;">Phục vụ xuyên suốt các ngày lễ Tết</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation & Feedback Split -->
+  <section id="dat-ban" class="section-reservation" style="border: none;">
+    <div class="reservation-container">
       <div>
-        <form id="site-contact-form">
-          <div class="form-group">
-            <label for="c-name">Họ và tên *</label>
-            <input type="text" id="c-name" required placeholder="Nguyễn Văn A">
+        <span class="res-info-kicker">Đặt Giữ Chỗ Ưu Tiên</span>
+        <h2 class="res-info-title">Đăng Ký Đặt Bàn Trước</h2>
+        <p class="res-info-desc">
+          Nhập thông tin theo biểu mẫu bên dưới. Hệ thống sẽ tự động cấp mã đặt chỗ điện tử và nhân viên lễ tân sẽ liên lạc xác nhận trong 5 phút.
+        </p>
+
+        <div style="background: var(--surface); border-radius: var(--radius-md); border: 1px solid var(--border); padding: 1.5rem; margin-top: 1.5rem;">
+          <h4 style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--wood); margin-bottom: 0.5rem;">Chính Sách Phòng VIP & Tiệc Công Ty</h4>
+          <ul style="list-style: none; font-size: 0.85rem; color: var(--text-muted); line-height: 1.7;">
+            <li>• Miễn phí phòng VIP riêng có điều hòa cho đoàn từ 8 khách trở lên.</li>
+            <li>• Hỗ trợ trang trí bàn hoa tươi và in thực đơn tiệc miễn phí.</li>
+            <li>• Chiết khấu 10% cho tiệc sinh nhật hoặc khách hàng đặt trước từ 3 ngày.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Reservation Card Form -->
+      <div class="reservation-card">
+        <h3 class="res-card-title">Phiếu Đặt Bàn Điện Tử</h3>
+        <p class="res-card-subtitle">Không cần đặt cọc trước đối với bàn dưới 10 người</p>
+
+        <form id="tableBookingForm">
+          <div class="res-form-grid">
+            <div>
+              <label for="resName" class="form-label">Họ và tên của bạn *</label>
+              <input type="text" id="resName" class="form-input" placeholder="VD: Chị Mai Phương" required>
+            </div>
+
+            <div>
+              <label for="resPhone" class="form-label">Số điện thoại / Zalo *</label>
+              <input type="tel" id="resPhone" class="form-input" placeholder="VD: 0912xxxxxx" required>
+            </div>
+
+            <div>
+              <label for="resDate" class="form-label">Ngày dùng bữa *</label>
+              <input type="date" id="resDate" class="form-input" required>
+            </div>
+
+            <div>
+              <label for="resTime" class="form-label">Khung giờ đón khách *</label>
+              <select id="resTime" class="form-select" required>
+                <option value="11:30" selected>11:30 - Trưa</option>
+                <option value="12:00">12:00 - Trưa</option>
+                <option value="18:00">18:00 - Tối</option>
+                <option value="18:30">18:30 - Tối</option>
+                <option value="19:00">19:00 - Tối</option>
+                <option value="19:30">19:30 - Tối</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="resGuests" class="form-label">Số lượng thực khách *</label>
+              <select id="resGuests" class="form-select" required>
+                <option value="Bàn 2 người">2 Khách (Bàn cặp đôi ấm cúng)</option>
+                <option value="Bàn 4 người" selected>4 Khách (Bàn gia đình)</option>
+                <option value="Bàn 6-8 người">6 - 8 Khách (Bàn tròn sum vầy)</option>
+                <option value="Phòng VIP 10-15 người">10 - 15 Khách (Phòng VIP riêng)</option>
+                <option value="Tiệc công ty 20-40 người">20 - 40 Khách (Tiệc công ty)</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="resSpace" class="form-label">Khu vực mong muốn</label>
+              <select id="resSpace" class="form-select">
+                <option value="Khu vực gian nhà gỗ ấm cúng" selected>Gian nhà gỗ truyền thống</option>
+                <option value="Khu vực sân vườn lộng gió">Khu vực sân vườn hoa sen ngoài trời</option>
+                <option value="Phòng VIP máy lạnh riêng tư">Phòng VIP máy lạnh riêng tư</option>
+              </select>
+            </div>
+
+            <div class="form-group-full">
+              <label for="resNote" class="form-label">Ghi chú khẩu vị & yêu cầu đặc biệt</label>
+              <textarea id="resNote" class="form-textarea" placeholder="VD: Gia đình có trẻ nhỏ, chuẩn bị ghế ăn dặm, ăn ít cay..."></textarea>
+            </div>
+
+            <div class="form-group-full">
+              <button type="submit" class="btn-submit-res">
+                ✓ Hoàn Tất Đặt Bàn Ngay
+              </button>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="c-phone">Số điện thoại / Zalo *</label>
-            <input type="tel" id="c-phone" required placeholder="09xxxxxxxx">
-          </div>
-          <div class="form-group">
-            <label for="c-msg">Nhu cầu tư vấn *</label>
-            <textarea id="c-msg" rows="4" required placeholder="Nhu cầu chi tiết..."></textarea>
-          </div>
-          <button type="submit" class="btn-primary" style="width: 100%;">Gửi Yêu Cầu Tư Vấn</button>
         </form>
       </div>
     </div>
-  </div>
+  </section>
 
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Food demo 12</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Ẩm thực - Nhà hàng. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <!-- Map Mockup & Direction Guide -->
+  <section style="max-width: 1240px; margin: 4.5rem auto 5rem; padding: 0 1.5rem;">
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm);">
+      <div style="background: var(--wood); color: #fff; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap: 1rem;">
+        <div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: #fbbf24;">Hướng Dẫn Di Chuyển & Đỗ Xe</h3>
+          <p style="font-size: 0.85rem; color: #b8aba0; margin-top: 4px;">Ngay góc ngã tư Nguyễn Đình Chiểu và Mạc Đĩnh Chi, thuận tiện di chuyển từ Quận 1, Quận 3, Bình Thạnh.</p>
+        </div>
+        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" style="background: #d97706; color: #fff; padding: 0.6rem 1.25rem; border-radius: 4px; font-weight: 700; font-size: 0.85rem;">
+          Mở Google Maps &rarr;
+        </a>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Món ăn</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div style="padding: 2.5rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+        <div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--wood); margin-bottom: 0.75rem;">Thông Tin Đỗ Xe Thuận Tiện</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+            • <strong>Xe máy:</strong> Bãi giữ xe trong sân rợp bóng mát, có bảo vệ trông coi và dắt xe miễn phí cho Quý khách.
+          </p>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+            • <strong>Ô tô (4 - 7 chỗ & 16 chỗ):</strong> Có vị trí đỗ ngay mặt tiền đường và bãi đỗ rộng cách nhà hàng 30m, có nhân viên an ninh hướng dẫn tận tình.
+          </p>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+            • <strong>Hỗ trợ gọi xe:</strong> Lễ tân sẵn sàng hỗ trợ gọi taxi công nghệ hoặc tài xế đưa đón cho các buổi tiệc gia đình có dùng rượu bia.
+          </p>
+        </div>
+
+        <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border); height: 260px; background: #e2e8f0; position: relative;">
+          <img src="assets/images/khong-gian.jpg" alt="Bản đồ chỉ dẫn Vị Xưa Quán" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85;">
+          <div style="position: absolute; inset: 0; background: rgba(38, 22, 17, 0.45); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; text-align: center; padding: 1rem;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📍</div>
+            <strong style="font-size: 1.1rem; color: #fbbf24;">128 Nguyễn Đình Chiểu, Q.1</strong>
+            <span style="font-size: 0.85rem; margin-top: 4px;">Tọa độ đón tiếp thực khách Vị Xưa Quán</span>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- Reservation Confirmation Modal -->
+  <div class="modal-overlay" id="bookingConfirmationModal">
+    <div class="modal-content-box">
+      <div class="modal-icon-success">✓</div>
+      <h3>Đặt Bàn Thành Công!</h3>
+      <p style="font-size: 0.9rem; color: #6b5f58;">Quán đã tiếp nhận thông tin và đang giữ chỗ ưu tiên cho Quý khách.</p>
+      
+      <div>
+        <span class="modal-booking-code" id="bookingCodeDisplay">VX-9821</span>
+      </div>
+
+      <div id="bookingSummaryDisplay" style="text-align: left; background: #faf6f0; border-radius: 8px; padding: 1rem; font-size: 0.85rem; line-height: 1.6; color: #3c241c; margin-bottom: 1.25rem;"></div>
+
+      <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+        <button type="button" id="sendResZaloBtn" class="btn-floating-zalo" style="position: static; box-shadow: none; border: none; cursor: pointer;">
+          Gửi Xác Nhận Zalo Quán
+        </button>
+        <button type="button" class="btn-close-modal" id="bookingModalClose">
+          Đóng Cửa Sổ
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Takeaway Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>🍲 Đặc Sản & Món Mang Về</h3>
+      <button type="button" class="btn-close-cart" id="cartClose">&times;</button>
+    </div>
+    <div class="cart-drawer-body" id="cartItemsList"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal">
+        <span>Tổng cộng:</span>
+        <span id="cartSubtotal">0đ</span>
+      </div>
+      <button type="button" class="btn-checkout-cart" id="checkoutZaloBtn">
+        Xác Nhận Đơn Qua Zalo (0971 183 939)
+      </button>
+    </div>
+  </div>
+
+  <!-- Floating Actions -->
+  <div class="floating-actions">
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-floating-zalo" title="Tư vấn Zalo 0971183939">
+      Zalo 0971183939
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-col footer-col-brand">
+        <div class="logo-main">
+          Vị Xưa Quán
+          <span class="logo-badge">#MS12</span>
+        </div>
+        <p>
+          Thương hiệu ẩm thực cố đô & niêu đất gia truyền. Tôn vinh nét đẹp văn hóa ẩm thực truyền thống Việt Nam bằng tất cả sự chân thành và tinh tế trong từng món ăn.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Điều Hướng</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="san-pham.html">Thực Đơn Tinh Hoa</a></li>
+          <li><a href="gioi-thieu.html">Không Gian & Triết Lý</a></li>
+          <li><a href="lien-he.html">Đặt Bàn & Chỉ Đường</a></li>
+          <li><a href="../../index.html">Thư Viện Giao Diện #MS12</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Giờ Phục Vụ</h4>
+        <ul class="footer-hours">
+          <li><span>Thứ Hai - Thứ Sáu:</span> <strong>10:00 - 22:00</strong></li>
+          <li><span>Thứ Bảy - Chủ Nhật:</span> <strong>09:30 - 22:30</strong></li>
+          <li><span>Bếp đóng order:</span> <strong>21:45</strong></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Liên Hệ Trực Tiếp</h4>
+        <p style="font-size: 0.88rem; color: #b8aba0; margin-bottom: 0.75rem;">
+          📍 128 Nguyễn Đình Chiểu, P. Đa Kao, Quận 1, TP.HCM
+        </p>
+        <p style="font-size: 0.88rem; color: #b8aba0; margin-bottom: 0.75rem;">
+          📞 Hotline: 0971 183 939
+        </p>
+      </div>
+    </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Food demo 12. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <p>&copy; 2026 Vị Xưa Quán (#MS12). Tất cả quyền được bảo lưu.</p>
+      <p>Đặt Bàn & Hướng Dẫn Chỉ Đường</p>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
   <script src="js/app.js"></script>
 </body>
 </html>

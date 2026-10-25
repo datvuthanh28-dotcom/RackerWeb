@@ -1,118 +1,441 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cosmetic demo 01 | Mỹ phẩm Official Demo</title>
-  <meta name="description" content="Chăm sóc làn da tỏa sáng tự nhiên & Mỹ phẩm thuần chay">
+  <title>Lumière Beauty — Mỹ phẩm thuần chay cao cấp | Giao diện mẫu #MS01</title>
+  <meta name="description" content="Lumière Beauty — dòng mỹ phẩm thuần chay cao cấp dành cho làn da phụ nữ Việt. Serum, kem dưỡng và bộ chăm sóc da toàn diện từ thiên nhiên.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation back to theme library -->
+
+  <!-- Return bar to Theme Library -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS01</strong> thuộc Thư Viện Theme.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS01</strong> · Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">
-        Cosmetic demo 01
-        <span>MS01</span>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="index.html" class="brand" id="brand-logo">
+        <span class="brand-name">Lumière</span>
+        <span class="brand-sub">Beauty</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link active">Trang chủ</a>
+        <a href="san-pham.html" class="nav-link">Sản phẩm</a>
+        <a href="san-pham.html#routine" class="nav-link">Quy trình dưỡng da</a>
+        <a href="gioi-thieu.html" class="nav-link">Về chúng tôi</a>
+        <a href="lien-he.html" class="nav-link">Liên hệ</a>
       </nav>
+
       <div class="header-actions">
-        <button type="button" class="cart-trigger">Giỏ Hàng (<span id="cart-count">0</span>)</button>
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener" class="btn-zalo" id="header-zalo-btn" aria-label="Tư vấn Zalo">
+          <svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16 3C8.82 3 3 8.37 3 15c0 3.75 1.86 7.12 4.77 9.38l-1.42 5.14c-.16.58.37 1.11.95.95l5.58-1.54C13.93 29.23 14.95 29.4 16 29.4c7.18 0 13-5.37 13-12S23.18 3 16 3z"/></svg>
+          <span>Tư vấn Zalo</span>
+        </a>
+        <button class="cart-btn" id="cart-btn" aria-label="Giỏ hàng">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Chăm sóc làn da tỏa sáng tự nhiên & Mỹ phẩm thuần chay</h1>
-        <p>Trải nghiệm dịch vụ chuyên nghiệp, chuẩn mực thiết kế tối ưu và công nghệ tiên tiến nhất từ Cosmetic demo 01.</p>
-        <div class="hero-btns">
-          <a href="san-pham.html" class="btn-primary">Khám Phá Ngay</a>
-          <a href="lien-he.html" class="btn-outline">Nhận Tư Vấn</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="assets/banner.jpg" alt="Cosmetic demo 01 Preview Banner">
-      </div>
-    </section>
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html" class="mobile-nav-link active">Trang chủ</a>
+    <a href="san-pham.html" class="mobile-nav-link">Sản phẩm</a>
+    <a href="san-pham.html#routine" class="mobile-nav-link">Quy trình dưỡng da</a>
+    <a href="gioi-thieu.html" class="mobile-nav-link">Về chúng tôi</a>
+    <a href="lien-he.html" class="mobile-nav-link">Liên hệ</a>
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener" class="mobile-nav-zalo">Tư vấn Zalo: 0971183939</a>
+  </nav>
 
-    <section class="section">
-      <div class="section-title">
-        <h2>Sản Phẩm Dưỡng Da & Làm Đẹp</h2>
-        <p>Lựa chọn tiêu biểu được khách hàng tin tưởng và đánh giá cao nhất</p>
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Giỏ hàng</h3>
+      <button class="cart-close" id="cart-close" aria-label="Đóng giỏ hàng">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty" id="cart-empty">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c9b89a" stroke-width="1.2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <p>Giỏ hàng đang trống</p>
+        <a href="san-pham.html" class="btn-shop-now">Khám phá sản phẩm</a>
       </div>
-
-      <div class="grid">
-        <div class="card">
-          <span class="card-badge">Best Seller</span>
-          <h3>Serum Phục Hồi Bio-Peptide</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">480.000đ</div>
-          <button type="button" class="btn-buy" data-name="Serum Phục Hồi Bio-Peptide">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Khuyên dùng</span>
-          <h3>Kem Dưỡng Trắng Da Chiết Xuất Hoa Hồng</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">590.000đ</div>
-          <button type="button" class="btn-buy" data-name="Kem Dưỡng Trắng Da Chiết Xuất Hoa Hồng">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Organic</span>
-          <h3>Sữa Rửa Mặt Tạo Bọt Dịu Nhẹ</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">280.000đ</div>
-          <button type="button" class="btn-buy" data-name="Sữa Rửa Mặt Tạo Bọt Dịu Nhẹ">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Chống nắng</span>
-          <h3>Kem Chống Nắng Quang Phổ Rộng SPF50+</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">420.000đ</div>
-          <button type="button" class="btn-buy" data-name="Kem Chống Nắng Quang Phổ Rộng SPF50+">Thêm Giỏ Hàng</button>
-        </div>
+    </div>
+    <div class="cart-footer" id="cart-footer" style="display:none">
+      <div class="cart-total">
+        <span>Tạm tính</span>
+        <span id="cart-total-amount">0đ</span>
       </div>
-    </section>
-  </main>
-
-  <aside class="floating-zalo">
-    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Zalo 0971183939">Zalo</a>
+      <p class="cart-note">Giá chỉ mang tính minh họa — giao diện mẫu.</p>
+      <a href="lien-he.html" class="btn-checkout">Liên hệ đặt hàng qua Zalo</a>
+    </div>
   </aside>
 
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Cosmetic demo 01</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Mỹ phẩm. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Banner chính">
+      <div class="hero-media">
+        <img src="assets/images/hero.jpg" alt="Người phụ nữ với làn da rạng rỡ, cầm serum Lumière Beauty" width="900" height="600" fetchpriority="high">
+        <div class="hero-overlay"></div>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Mỹ phẩm thuần chay cao cấp</p>
+        <h1>Vẻ đẹp bắt đầu<br>từ sự thuần khiết</h1>
+        <p class="hero-desc">Dòng sản phẩm chăm sóc da từ thực vật, không paraben, không hương liệu nhân tạo — được bào chế cho làn da phụ nữ Việt Nam nhiệt đới.</p>
+        <div class="hero-actions">
+          <a href="san-pham.html" class="btn-primary" id="hero-cta-shop">Khám phá bộ sưu tập</a>
+          <a href="gioi-thieu.html" class="btn-ghost" id="hero-cta-about">Triết lý của chúng tôi</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <strong>100%</strong>
+            <span>Thuần chay</span>
+          </div>
+          <div class="trust-divider" aria-hidden="true"></div>
+          <div class="trust-item">
+            <strong>Không</strong>
+            <span>Paraben & Sulfate</span>
+          </div>
+          <div class="trust-divider" aria-hidden="true"></div>
+          <div class="trust-item">
+            <strong>5 năm</strong>
+            <span>Nghiên cứu & phát triển</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORY STRIP -->
+    <section class="category-strip">
+      <div class="container">
+        <div class="category-grid">
+          <a href="san-pham.html?cat=cleansing" class="cat-card" id="cat-cleansing">
+            <div class="cat-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/><path d="M12 8v4M12 16h.01"/></svg>
+            </div>
+            <h3>Làm sạch</h3>
+            <p>Sữa rửa mặt & tẩy trang</p>
+          </a>
+          <a href="san-pham.html?cat=treatment" class="cat-card" id="cat-treatment">
+            <div class="cat-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11M5 3v11"/><path d="M5 14h4m6 0h4M9 21h6"/></svg>
+            </div>
+            <h3>Điều trị</h3>
+            <p>Serum & tinh chất đặc trị</p>
+          </a>
+          <a href="san-pham.html?cat=moisturizing" class="cat-card" id="cat-moisturizing">
+            <div class="cat-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+            </div>
+            <h3>Dưỡng ẩm</h3>
+            <p>Kem dưỡng da & toner</p>
+          </a>
+          <a href="san-pham.html?cat=sun" class="cat-card" id="cat-sun">
+            <div class="cat-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </div>
+            <h3>Chống nắng</h3>
+            <p>Kem chống nắng SPF</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="products-section" id="san-pham-noi-bat">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">Bán chạy nhất</p>
+          <h2>Sản phẩm được yêu thích</h2>
+          <p class="section-desc">Tuyển chọn từ hơn 2.000 đánh giá của khách hàng</p>
+        </header>
+
+        <div class="products-grid" id="products-grid">
+          <!-- Product 1 -->
+          <article class="product-card" data-product-id="serum-bio-peptide">
+            <div class="product-media">
+              <img src="assets/images/product-serum.jpg" alt="Serum Phục Hồi Bio-Peptide Lumière" width="400" height="533" loading="lazy">
+              <div class="product-actions">
+                <button class="btn-wishlist" aria-label="Thêm vào danh sách yêu thích" data-id="serum-bio-peptide">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+                <button class="btn-quick-add" data-name="Serum Phục Hồi Bio-Peptide" data-price="480000" data-id="serum-bio-peptide">Thêm giỏ hàng</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-badge">Bán chạy</span>
+              <h3 class="product-name">Serum Phục Hồi Bio-Peptide</h3>
+              <p class="product-desc">Tinh chất peptide từ thực vật, phục hồi độ đàn hồi và cải thiện kết cấu da rõ rệt sau 4 tuần.</p>
+              <div class="product-footer">
+                <span class="product-price">480.000đ</span>
+                <span class="product-size">30ml</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product-card" data-product-id="kem-duong-hoa-hong">
+            <div class="product-media">
+              <img src="assets/images/product-cream.jpg" alt="Kem Dưỡng Ẩm Chiết Xuất Hoa Hồng" width="400" height="533" loading="lazy">
+              <div class="product-actions">
+                <button class="btn-wishlist" aria-label="Thêm vào danh sách yêu thích" data-id="kem-duong-hoa-hong">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+                <button class="btn-quick-add" data-name="Kem Dưỡng Ẩm Hoa Hồng" data-price="590000" data-id="kem-duong-hoa-hong">Thêm giỏ hàng</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Kem Dưỡng Ẩm Chiết Xuất Hoa Hồng</h3>
+              <p class="product-desc">Làm mềm và dưỡng ẩm sâu lên đến 72 giờ. Phù hợp da khô và nhạy cảm.</p>
+              <div class="product-footer">
+                <span class="product-price">590.000đ</span>
+                <span class="product-size">50ml</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product-card" data-product-id="toner-thao-moc">
+            <div class="product-media">
+              <img src="assets/images/product-toner.jpg" alt="Toner Thảo Mộc Botanical Elixir" width="400" height="533" loading="lazy">
+              <div class="product-actions">
+                <button class="btn-wishlist" aria-label="Thêm vào danh sách yêu thích" data-id="toner-thao-moc">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+                <button class="btn-quick-add" data-name="Toner Thảo Mộc Botanical" data-price="320000" data-id="toner-thao-moc">Thêm giỏ hàng</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-badge product-badge--new">Mới</span>
+              <h3 class="product-name">Toner Thảo Mộc Botanical Elixir</h3>
+              <p class="product-desc">Cân bằng độ pH và cấp ẩm tức thì. Chiết xuất hoa hồng và bạc hà tươi mát.</p>
+              <div class="product-footer">
+                <span class="product-price">320.000đ</span>
+                <span class="product-size">200ml</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="product-card" data-product-id="kem-chong-nang-spf50">
+            <div class="product-media">
+              <img src="assets/images/product-sunscreen.jpg" alt="Kem Chống Nắng SPF50+ Lumière" width="400" height="533" loading="lazy">
+              <div class="product-actions">
+                <button class="btn-wishlist" aria-label="Thêm vào danh sách yêu thích" data-id="kem-chong-nang-spf50">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+                <button class="btn-quick-add" data-name="Kem Chống Nắng SPF50+" data-price="420000" data-id="kem-chong-nang-spf50">Thêm giỏ hàng</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Kem Chống Nắng Quang Phổ Rộng SPF50+</h3>
+              <p class="product-desc">Bảo vệ toàn diện UVA/UVB. Kết cấu nhẹ, không bít tắc lỗ chân lông, phù hợp khí hậu Việt Nam.</p>
+              <div class="product-footer">
+                <span class="product-price">420.000đ</span>
+                <span class="product-size">60ml</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-cta">
+          <a href="san-pham.html" class="btn-outline-dark" id="view-all-products">Xem toàn bộ sản phẩm</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDITORIAL / BRAND STORY -->
+    <section class="brand-story" aria-label="Câu chuyện thương hiệu">
+      <div class="story-media">
+        <img src="assets/images/editorial.jpg" alt="Người phụ nữ với làn da khỏe mạnh — triết lý Lumière Beauty" width="800" height="500" loading="lazy">
+      </div>
+      <div class="story-content">
+        <p class="section-eyebrow">Triết lý của chúng tôi</p>
+        <h2>Vẻ đẹp không đánh đổi sức khỏe</h2>
+        <p>Chúng tôi tin rằng chăm sóc da tốt nhất là chăm sóc bằng những gì thiên nhiên ban tặng. Mỗi sản phẩm Lumière được nghiên cứu kỹ lưỡng để đảm bảo an toàn với làn da nhạy cảm nhất, đồng thời mang lại hiệu quả rõ rệt mà không cần đến những hóa chất gây hại.</p>
+        <p>Không có mùi hương nhân tạo. Không có paraben hay sulfate. Chỉ là thực vật, khoa học, và sự tận tâm.</p>
+        <div class="story-credentials">
+          <div class="credential">
+            <span class="credential-num">100%</span>
+            <span>Nguyên liệu thuần chay, không thử nghiệm trên động vật</span>
+          </div>
+          <div class="credential">
+            <span class="credential-num">2019</span>
+            <span>Thành lập tại Việt Nam, nghiên cứu cho da người Việt</span>
+          </div>
+        </div>
+        <a href="gioi-thieu.html" class="btn-primary" id="story-cta">Tìm hiểu thêm về chúng tôi</a>
+      </div>
+    </section>
+
+    <!-- SKINCARE ROUTINE -->
+    <section class="routine-section" id="quy-trinh" aria-label="Quy trình dưỡng da">
+      <div class="container">
+        <header class="section-header section-header--center">
+          <p class="section-eyebrow">Gợi ý sử dụng</p>
+          <h2>Quy trình dưỡng da buổi sáng</h2>
+          <p class="section-desc">4 bước đơn giản, hiệu quả lâu dài — được chuyên gia khuyến nghị</p>
+        </header>
+        <div class="routine-steps">
+          <div class="routine-step">
+            <div class="step-number" aria-hidden="true">01</div>
+            <div class="step-content">
+              <h3>Làm sạch</h3>
+              <p>Sữa rửa mặt tạo bọt dịu nhẹ, loại bỏ bụi bẩn và dầu thừa mà không làm khô da.</p>
+              <span class="step-product">Gentle Foam Cleanser</span>
+            </div>
+          </div>
+          <div class="routine-connector" aria-hidden="true"></div>
+          <div class="routine-step">
+            <div class="step-number" aria-hidden="true">02</div>
+            <div class="step-content">
+              <h3>Cân bằng</h3>
+              <p>Toner thảo mộc cân bằng pH và cấp ẩm tức thì cho da sẵn sàng hấp thụ các bước tiếp theo.</p>
+              <span class="step-product">Botanical Elixir Toner</span>
+            </div>
+          </div>
+          <div class="routine-connector" aria-hidden="true"></div>
+          <div class="routine-step">
+            <div class="step-number" aria-hidden="true">03</div>
+            <div class="step-content">
+              <h3>Điều trị</h3>
+              <p>Serum Bio-Peptide thẩm thấu sâu, cung cấp dưỡng chất thiết yếu và phục hồi tế bào da.</p>
+              <span class="step-product">Bio-Peptide Serum</span>
+            </div>
+          </div>
+          <div class="routine-connector" aria-hidden="true"></div>
+          <div class="routine-step">
+            <div class="step-number" aria-hidden="true">04</div>
+            <div class="step-content">
+              <h3>Bảo vệ</h3>
+              <p>Kem chống nắng SPF50+ hoàn thiện quy trình, bảo vệ da khỏi tia UV và ô nhiễm môi trường.</p>
+              <span class="step-product">Sunscreen SPF50+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values-section" aria-label="Cam kết của thương hiệu">
+      <div class="container">
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>An toàn được kiểm chứng</h3>
+            <p>Tất cả sản phẩm được kiểm tra độ an toàn tại phòng thí nghiệm đạt chuẩn CGMP trước khi ra thị trường.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3>Sản xuất tại Việt Nam</h3>
+            <p>Tự hào sản xuất trong nước, tạo công việc cho người Việt và kiểm soát toàn bộ chuỗi cung ứng.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h3>Tư vấn tận tâm 1:1</h3>
+            <p>Chuyên gia da liễu của chúng tôi sẵn sàng tư vấn miễn phí quy trình dưỡng da phù hợp với làn da bạn.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Đổi trả trong 30 ngày</h3>
+            <p>Không hài lòng? Chúng tôi hoàn trả 100% trong vòng 30 ngày kể từ ngày nhận hàng, không cần lý do.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner" aria-label="Nhận tư vấn miễn phí">
+      <div class="container cta-inner">
+        <div class="cta-text">
+          <h2>Chưa biết da bạn cần gì?</h2>
+          <p>Nhận tư vấn quy trình dưỡng da cá nhân hóa, miễn phí, từ chuyên gia của Lumière Beauty.</p>
+        </div>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener" class="btn-cta-zalo" id="cta-zalo-btn">
+          Tư vấn ngay qua Zalo
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Floating Zalo -->
+  <a href="https://zalo.me/0971183939" target="_blank" rel="noopener" class="floating-zalo" id="floating-zalo" title="Tư vấn Zalo 0971183939" aria-label="Liên hệ Zalo tư vấn">
+    <svg viewBox="0 0 32 32" fill="white" aria-hidden="true"><path d="M16 3C8.82 3 3 8.37 3 15c0 3.75 1.86 7.12 4.77 9.38l-1.42 5.14c-.16.58.37 1.11.95.95l5.58-1.54C13.93 29.23 14.95 29.4 16 29.4c7.18 0 13-5.37 13-12S23.18 3 16 3z"/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          <span>Lumière</span>
+          <span>Beauty</span>
+        </div>
+        <p>Mỹ phẩm thuần chay cao cấp, nghiên cứu cho làn da phụ nữ Việt Nam. Giao diện mẫu #MS01.</p>
+        <div class="footer-socials">
+          <a href="https://zalo.me/0971183939" target="_blank" rel="noopener" aria-label="Zalo">
+            <svg viewBox="0 0 32 32" width="20" height="20" fill="currentColor"><path d="M16 3C8.82 3 3 8.37 3 15c0 3.75 1.86 7.12 4.77 9.38l-1.42 5.14c-.16.58.37 1.11.95.95l5.58-1.54C13.93 29.23 14.95 29.4 16 29.4c7.18 0 13-5.37 13-12S23.18 3 16 3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links-col">
+        <h4>Sản phẩm</h4>
+        <ul>
+          <li><a href="san-pham.html">Tất cả sản phẩm</a></li>
+          <li><a href="san-pham.html?cat=cleansing">Làm sạch da</a></li>
+          <li><a href="san-pham.html?cat=treatment">Serum & Điều trị</a></li>
+          <li><a href="san-pham.html?cat=moisturizing">Dưỡng ẩm</a></li>
+          <li><a href="san-pham.html?cat=sun">Chống nắng</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+      <div class="footer-links-col">
+        <h4>Thông tin</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Về Lumière Beauty</a></li>
+          <li><a href="gioi-thieu.html#sustainability">Cam kết bền vững</a></li>
+          <li><a href="san-pham.html#routine">Quy trình dưỡng da</a></li>
+          <li><a href="lien-he.html">Câu hỏi thường gặp</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-col">
+        <h4>Liên hệ tư vấn</h4>
+        <p>Zalo: <a href="https://zalo.me/0971183939">0971183939</a></p>
+        <p>Hỗ trợ: 8:00 – 22:00 hàng ngày</p>
+        <p class="footer-demo-note">Đây là giao diện mẫu demo — không phải doanh nghiệp thực tế.</p>
       </div>
     </div>
     <div class="footer-bottom">
-      &copy; 2026 Cosmetic demo 01. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <span>© 2026 Lumière Beauty — Giao diện mẫu #MS01. Thuộc Thư Viện RackerWeb.</span>
+      <a href="../../index.html">← Quay lại thư viện</a>
     </div>
   </footer>
 

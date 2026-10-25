@@ -1,97 +1,401 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liên Hệ & Tư Vấn | Cosmetic demo 01</title>
+  <title>Liên hệ & Tư vấn — Lumière Beauty | Giao diện mẫu #MS01</title>
+  <meta name="description" content="Liên hệ chuyên gia chăm sóc da Lumière Beauty. Đặt lịch tư vấn phác đồ da miễn phí hoặc hỗ trợ đơn hàng nhanh chóng qua Zalo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/subpage.css">
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+    .contact-info-card {
+      background: #fff;
+      border: 1px solid var(--border, #eedecb);
+      border-radius: 12px;
+      padding: 2.2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+    .info-item {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+    .info-item:last-child {
+      margin-bottom: 0;
+    }
+    .info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--ivory, #fdfbf7);
+      border: 1px solid var(--gold, #d4a373);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary, #3a2e2b);
+      flex-shrink: 0;
+    }
+    .info-text h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary, #3a2e2b);
+      margin-bottom: 0.25rem;
+    }
+    .info-text p, .info-text a {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.5;
+      text-decoration: none;
+    }
+    .info-text a:hover {
+      color: var(--gold, #c27d38);
+    }
+    .form-box {
+      background: #fff;
+      border: 1px solid var(--border, #eedecb);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.04);
+    }
+    .form-group {
+      margin-bottom: 1.3rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--primary, #3a2e2b);
+      margin-bottom: 0.4rem;
+    }
+    .form-control {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      background: #fafafa;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--gold, #d4a373);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(212,163,115,0.15);
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    .btn-submit {
+      width: 100%;
+      background: var(--primary, #3a2e2b);
+      color: #fff;
+      padding: 0.95rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-submit:hover {
+      background: #1f1816;
+    }
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--border, #eedecb);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 1.2rem 1.5rem;
+      font-weight: 600;
+      font-size: 1.05rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .faq-answer {
+      padding: 0 1.5rem 1.2rem 1.5rem;
+      color: #666;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 900px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS01</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS01</strong> · Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Cosmetic demo 01 <span>MS01</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html" class="active">Liên Hệ</a></li>
-        </ul>
+  <header id="site-header">
+    <div class="header-inner">
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Mở menu"><span></span><span></span><span></span></button>
+      <a href="index.html" class="brand" id="brand-logo"><span class="brand-name">Lumière</span><span class="brand-sub">Beauty</span></a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="san-pham.html" class="nav-link">Sản phẩm</a>
+        <a href="san-pham.html#routine" class="nav-link">Quy trình dưỡng da</a>
+        <a href="gioi-thieu.html" class="nav-link">Về chúng tôi</a>
+        <a href="lien-he.html" class="nav-link active">Liên hệ</a>
       </nav>
       <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener" class="btn-zalo" id="header-zalo-btn" aria-label="Tư vấn Zalo">
+          <svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16 3C8.82 3 3 8.37 3 15c0 3.75 1.86 7.12 4.77 9.38l-1.42 5.14c-.16.58.37 1.11.95.95l5.58-1.54C13.93 29.23 14.95 29.4 16 29.4c7.18 0 13-5.37 13-12S23.18 3 16 3z"/></svg>
+          <span>Tư vấn Zalo</span>
+        </a>
+        <button class="cart-btn" id="cart-btn" aria-label="Giỏ hàng">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Liên Hệ Tư Vấn & Báo Giá</h1>
-    <p>Chúng tôi luôn sẵn sàng lắng nghe và giải đáp mọi yêu cầu của bạn</p>
-  </div>
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html" class="mobile-nav-link">Trang chủ</a>
+    <a href="san-pham.html" class="mobile-nav-link">Sản phẩm</a>
+    <a href="gioi-thieu.html" class="mobile-nav-link">Về chúng tôi</a>
+    <a href="lien-he.html" class="mobile-nav-link active">Liên hệ</a>
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener" class="mobile-nav-zalo">Tư vấn Zalo: 0971183939</a>
+  </nav>
 
-  <div class="subpage-content">
-    <div class="contact-grid">
-      <div>
-        <h3>Thông Tin Liên Hệ</h3>
-        <p style="color: #64748b; margin: 1rem 0;">Để nhận báo giá và tư vấn nhanh nhất, vui lòng kết nối trực tiếp qua Zalo hoặc để lại lời nhắn.</p>
-        <p><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p><strong>Thời gian làm việc:</strong> 8:00 - 22:00 hàng ngày</p>
-        <p><strong>Lĩnh vực:</strong> Mỹ phẩm</p>
-      </div>
-
-      <div>
-        <form id="site-contact-form">
-          <div class="form-group">
-            <label for="c-name">Họ và tên *</label>
-            <input type="text" id="c-name" required placeholder="Nguyễn Văn A">
-          </div>
-          <div class="form-group">
-            <label for="c-phone">Số điện thoại / Zalo *</label>
-            <input type="tel" id="c-phone" required placeholder="09xxxxxxxx">
-          </div>
-          <div class="form-group">
-            <label for="c-msg">Nhu cầu tư vấn *</label>
-            <textarea id="c-msg" rows="4" required placeholder="Nhu cầu chi tiết..."></textarea>
-          </div>
-          <button type="submit" class="btn-primary" style="width: 100%;">Gửi Yêu Cầu Tư Vấn</button>
-        </form>
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header"><h3>Giỏ hàng</h3><button class="cart-close" id="cart-close" aria-label="Đóng">✕</button></div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty" id="cart-empty">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c9b89a" stroke-width="1.2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <p>Chưa có sản phẩm nào trong giỏ hàng</p>
       </div>
     </div>
-  </div>
+    <div class="cart-footer" id="cart-footer" style="display:none;">
+      <div class="cart-total-row"><span>Tạm tính:</span><span id="cart-total-price">0đ</span></div>
+      <button class="checkout-btn" id="checkout-btn">Đặt hàng qua Zalo</button>
+    </div>
+  </aside>
 
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Cosmetic demo 01</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Mỹ phẩm. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <main>
+    <section class="sp-hero">
+      <div class="container">
+        <span class="sp-badge">Hỗ trợ & Chăm sóc</span>
+        <h1>Liên hệ với Lumière</h1>
+        <p>Đội ngũ chuyên viên luôn sẵn sàng giải đáp thắc mắc về tình trạng da và hỗ trợ chọn quy trình chăm sóc phù hợp nhất.</p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+    </section>
+
+    <section class="section" style="padding-top: 2rem;">
+      <div class="container">
+        <div class="contact-layout">
+          <div>
+            <div class="contact-info-card">
+              <h2 style="font-size:1.4rem; margin-bottom:1.5rem; font-family:'Playfair Display',serif;">Thông tin kết nối</h2>
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="info-text">
+                  <h4>Showroom trải nghiệm</h4>
+                  <p>128 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="info-text">
+                  <h4>Tư vấn Zalo / Hotline</h4>
+                  <p><a href="https://zalo.me/0971183939" target="_blank" rel="noopener"><strong>0971 183 939</strong> (Chat Zalo trực tiếp)</a></p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="info-text">
+                  <h4>Hòm thư điện tử</h4>
+                  <p><a href="mailto:support@lumierebeauty.vn">support@lumierebeauty.vn</a></p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="info-text">
+                  <h4>Giờ làm việc</h4>
+                  <p>Thứ 2 – Chủ Nhật: 08:30 – 21:30</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info-card" style="background:#fcf9f5;">
+              <h3 style="font-size:1.15rem; margin-bottom:0.75rem; color:var(--primary);">Hỗ trợ đối tác & Bán buôn</h3>
+              <p style="font-size:0.92rem; color:#666; line-height:1.6; margin-bottom:1rem;">Quý spa, thẩm mỹ viện hoặc nhà phân phối có nhu cầu hợp tác đại lý chính hãng, vui lòng liên hệ bộ phận phát triển thị trường.</p>
+              <a href="mailto:partner@lumierebeauty.vn" style="color:var(--gold,#c27d38); font-weight:600; text-decoration:none;">partner@lumierebeauty.vn →</a>
+            </div>
+          </div>
+
+          <div class="form-box">
+            <h2 style="font-size:1.5rem; margin-bottom:0.5rem; font-family:'Playfair Display',serif;">Gửi câu hỏi hoặc yêu cầu tư vấn</h2>
+            <p style="font-size:0.92rem; color:#777; margin-bottom:1.8rem;">Điền biểu mẫu dưới đây, chuyên viên Lumière sẽ phản hồi trong vòng 15-30 phút.</p>
+            
+            <form id="contact-form" onsubmit="handleContactSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Họ và tên *</label>
+                  <input type="text" id="contact-name" class="form-control" placeholder="Ví dụ: Nguyễn Thùy Linh" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-phone">Số điện thoại / Zalo *</label>
+                  <input type="tel" id="contact-phone" class="form-control" placeholder="09xx xxx xxx" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-skin-type">Loại da của bạn</label>
+                <select id="contact-skin-type" class="form-control">
+                  <option value="">-- Chọn tình trạng da của bạn --</option>
+                  <option value="da-dau">Da dầu, dễ nổi mụn</option>
+                  <option value="da-kho">Da khô, thiếu ẩm, bong tróc</option>
+                  <option value="da-hon-hop">Da hỗn hợp thiên dầu / thiên khô</option>
+                  <option value="da-nhay-cam">Da nhạy cảm, dễ kích ứng mẩn đỏ</option>
+                  <option value="da-lao-hoa">Da bắt đầu xuất hiện dấu hiệu lão hóa, nám sạm</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-topic">Chủ đề cần tư vấn</label>
+                <select id="contact-topic" class="form-control">
+                  <option value="tu-van-da">Tư vấn phác đồ chăm sóc cá nhân hóa</option>
+                  <option value="hoi-san-pham">Thông tin thành phần & công dụng sản phẩm</option>
+                  <option value="don-hang">Hỏi về tình trạng đơn hàng & giao hàng</option>
+                  <option value="khac">Yêu cầu khác</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Chi tiết tình trạng da hoặc câu hỏi</label>
+                <textarea id="contact-message" class="form-control" rows="4" placeholder="Mô tả các vấn đề bạn đang gặp phải hoặc sản phẩm bạn đang quan tâm..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit" id="btn-submit-contact">Gửi thông tin tư vấn</button>
+              <p style="font-size:0.8rem; color:#888; margin-top:0.8rem; text-align:center;">Cam kết bảo mật thông tin 100% — Không gửi tin nhắn quảng cáo rác.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section" style="background:#faf8f5;">
+      <div class="container" style="max-width:840px;">
+        <div class="section-title text-center" style="margin-bottom:2.5rem;">
+          <span class="sp-badge">Giải đáp nhanh</span>
+          <h2 style="font-family:'Playfair Display',serif; font-size:2rem; margin-top:0.5rem;">Câu hỏi thường gặp</h2>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Làm sao để biết sản phẩm có hợp với da tôi không? <span>+</span></div>
+          <div class="faq-answer">Các sản phẩm Lumière đều đạt chứng nhận kiểm nghiệm lâm sàng da liễu không gây kích ứng cho da nhạy cảm. Tuy nhiên, chúng tôi khuyến khích bạn nhắn tin qua Zalo 0971183939 để chuyên viên đánh giá da trước khi chọn sản phẩm.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Thời gian giao hàng mất bao lâu? <span>+</span></div>
+          <div class="faq-answer">Khu vực nội thành TP.HCM và Hà Nội: giao hàng hỏa tốc trong 2-4 giờ hoặc giao tiêu chuẩn trong 24 giờ. Các tỉnh thành khác: 2-3 ngày làm việc thông qua đơn vị vận chuyển uy tín.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Chính sách đổi trả sản phẩm như thế nào? <span>+</span></div>
+          <div class="faq-answer">Lumière hỗ trợ đổi trả miễn phí trong vòng 7 ngày nếu sản phẩm có lỗi từ nhà sản xuất hoặc trường hợp da bị kích ứng có xác nhận của bác sĩ/chuyên viên.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <a href="https://zalo.me/0971183939" target="_blank" rel="noopener" class="floating-zalo" id="floating-zalo" title="Tư vấn Zalo 0971183939" aria-label="Liên hệ Zalo">
+    <svg viewBox="0 0 32 32" fill="white" aria-hidden="true"><path d="M16 3C8.82 3 3 8.37 3 15c0 3.75 1.86 7.12 4.77 9.38l-1.42 5.14c-.16.58.37 1.11.95.95l5.58-1.54C13.93 29.23 14.95 29.4 16 29.4c7.18 0 13-5.37 13-12S23.18 3 16 3z"/></svg>
+  </a>
+
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand-col">
+        <div class="footer-logo"><span>Lumière</span><span>Beauty</span></div>
+        <p>Mỹ phẩm thuần chay cao cấp, nghiên cứu cho làn da phụ nữ Việt Nam. Giao diện mẫu #MS01.</p>
+      </div>
+      <div class="footer-links-col">
+        <h4>Sản phẩm</h4>
+        <ul>
+          <li><a href="san-pham.html">Tất cả sản phẩm</a></li>
+          <li><a href="san-pham.html?cat=cleansing">Làm sạch da</a></li>
+          <li><a href="san-pham.html?cat=treatment">Serum & Điều trị</a></li>
+          <li><a href="san-pham.html?cat=moisturizing">Dưỡng ẩm</a></li>
+          <li><a href="san-pham.html?cat=sun">Chống nắng</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+      <div class="footer-links-col">
+        <h4>Thông tin</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Về Lumière Beauty</a></li>
+          <li><a href="gioi-thieu.html#sustainability">Cam kết bền vững</a></li>
+          <li><a href="san-pham.html#routine">Quy trình dưỡng da</a></li>
+          <li><a href="lien-he.html">Liên hệ & Tư vấn</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-col">
+        <h4>Liên hệ tư vấn</h4>
+        <p>Zalo: <a href="https://zalo.me/0971183939">0971183939</a></p>
+        <p>Hỗ trợ: 8:00 – 22:00 hàng ngày</p>
+        <p class="footer-demo-note">Đây là giao diện mẫu demo — không phải doanh nghiệp thực tế.</p>
       </div>
     </div>
     <div class="footer-bottom">
-      &copy; 2026 Cosmetic demo 01. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <span>© 2026 Lumière Beauty — Giao diện mẫu #MS01. Thuộc Thư Viện RackerWeb.</span>
+      <a href="../../index.html">← Quay lại thư viện</a>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
-  <script src="js/app.js"></script>
+  <script src="js/app.js" defer></script>
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value;
+      const phone = document.getElementById('contact-phone').value;
+      const toast = document.getElementById('toast');
+      if (toast) {
+        toast.textContent = `Cảm ơn ${name}! Yêu cầu tư vấn của bạn đã được ghi nhận. Chuyên viên sẽ gọi/Zalo đến số ${phone} trong ít phút.`;
+        toast.className = 'toast show';
+        setTimeout(() => { toast.className = 'toast'; }, 5000);
+      }
+      e.target.reset();
+    }
+  </script>
 </body>
 </html>

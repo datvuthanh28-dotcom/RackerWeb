@@ -1,118 +1,561 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food demo 12 | Ẩm thực - Nhà hàng Official Demo</title>
-  <meta name="description" content="Hương vị ẩm thực tinh hoa & Không gian ẩm thực ấm cúng">
+  <title>Vị Xưa Quán | Ẩm Thực Cố Đô & Đặc Sản Gia Truyền #MS12</title>
+  <meta name="description" content="Trải nghiệm hương vị niêu cơm đất nung, món kho gia truyền và tinh hoa ẩm thực ba miền trong không gian thuần Việt ấm cúng tại Vị Xưa Quán.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation back to theme library -->
+
+  <!-- Library Return Bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS12</strong> thuộc Thư Viện Theme.</span>
+    <span>Giao diện mẫu <strong>#MS12</strong> thuộc Thư Viện Giao Diện Doanh Nghiệp RackerWeb.</span>
     <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
   </div>
 
+  <!-- Header -->
   <header>
+    <div class="header-top">
+      <div class="header-top-left">
+        <span class="header-top-tag">⭐ ĐẶC SẢN NIÊU ĐẤT BA MIỀN</span>
+        <span>Mở cửa: 10:00 - 22:30 hàng ngày</span>
+        <span>Địa chỉ: 128 Nguyễn Đình Chiểu, P. Đa Kao, Quận 1, TP.HCM</span>
+      </div>
+      <div>
+        <span>Hotline đặt tiệc: <strong>0971 183 939</strong></span>
+      </div>
+    </div>
+
     <div class="header-wrap">
       <div class="logo">
-        Food demo 12
-        <span>MS12</span>
+        <div class="logo-main">
+          Vị Xưa Quán
+          <span class="logo-badge">#MS12</span>
+        </div>
+        <span class="logo-tagline">Ẩm Thực Cố Đô & Đặc Sản Gia Truyền</span>
       </div>
+
       <nav>
         <ul>
           <li><a href="index.html" class="active">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Món ăn</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+          <li><a href="san-pham.html">Thực Đơn Tinh Hoa</a></li>
+          <li><a href="gioi-thieu.html">Không Gian & Câu Chuyện</a></li>
+          <li><a href="lien-he.html">Đặt Bàn & Liên Hệ</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
-        <button type="button" class="cart-trigger">Giỏ Hàng (<span id="cart-count">0</span>)</button>
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <button type="button" class="btn-cart-nav" title="Xem giỏ đặc sản mang về">
+          🍲 Đặc Sản Mang Về <span class="cart-badge">0</span>
+        </button>
+        <a href="#dat-ban" class="btn-reserve-nav btn-scroll-res">
+          📅 Đặt Bàn Ngay
+        </a>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
+  <!-- Hero Section -->
+  <section class="hero-culinary">
+    <div class="hero-wrap">
       <div class="hero-content">
-        <h1>Hương vị ẩm thực tinh hoa & Không gian ẩm thực ấm cúng</h1>
-        <p>Trải nghiệm dịch vụ chuyên nghiệp, chuẩn mực thiết kế tối ưu và công nghệ tiên tiến nhất từ Food demo 12.</p>
-        <div class="hero-btns">
-          <a href="san-pham.html" class="btn-primary">Khám Phá Ngay</a>
-          <a href="lien-he.html" class="btn-outline">Nhận Tư Vấn</a>
+        <span class="hero-kicker">Gia Truyền Lưu Giữ Qua 3 Thế Hệ</span>
+        <h1 class="hero-title">Hương Vị Niêu Cơm Đất & <em>Tinh Hoa Ẩm Thực</em> Cố Đô</h1>
+        <p class="hero-desc">
+          Từng niêu cá bống kho tiêu, canh cua đồng mồng tơi cà pháo cho đến món cuốn thanh tao đều được chắt chiu từ nguồn nông sản bản địa sạch, giữ trọn vẹn mỹ vị truyền thống và độ ấm nồng trong mỗi bữa cơm sum họp.
+        </p>
+        <div class="hero-actions">
+          <a href="#thuc-don" class="btn-primary-hero">Khám Phá Thực Đơn</a>
+          <a href="#dat-ban" class="btn-outline-hero btn-scroll-res">Đặt Bàn Tiệc Gia Đình</a>
+        </div>
+
+        <div class="hero-stats-row">
+          <div>
+            <div class="hero-stat-num">35+</div>
+            <div class="hero-stat-label">Món niêu & đặc sản vùng miền</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">18 Giờ</div>
+            <div class="hero-stat-label">Hầm thảo mộc lấy nước cốt ngọt thanh</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">100%</div>
+            <div class="hero-stat-label">Không mì chính phụ gia độc hại</div>
+          </div>
         </div>
       </div>
-      <div class="hero-image">
-        <img src="assets/banner.webp" alt="Food demo 12 Preview Banner">
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="section-title">
-        <h2>Thực Đơn Món Ăn Đặc Sắc</h2>
-        <p>Lựa chọn tiêu biểu được khách hàng tin tưởng và đánh giá cao nhất</p>
-      </div>
-
-      <div class="grid">
-        <div class="card">
-          <span class="card-badge">Đặc biệt</span>
-          <h3>Set Bánh Mì Men Tự Nhiên Artisan</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">120.000đ</div>
-          <button type="button" class="btn-buy" data-name="Set Bánh Mì Men Tự Nhiên Artisan">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Tráng miệng</span>
-          <h3>Bánh Mousse Trái Cây Tươi</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">85.000đ</div>
-          <button type="button" class="btn-buy" data-name="Bánh Mousse Trái Cây Tươi">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Yêu thích</span>
-          <h3>Combo Bữa Sáng Dinh Dưỡng</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">155.000đ</div>
-          <button type="button" class="btn-buy" data-name="Combo Bữa Sáng Dinh Dưỡng">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Thức uống</span>
-          <h3>Trà Hoa Cúc Mật Ong Thượng Hạng</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">65.000đ</div>
-          <button type="button" class="btn-buy" data-name="Trà Hoa Cúc Mật Ong Thượng Hạng">Thêm Giỏ Hàng</button>
+      <div class="hero-visual-card">
+        <img src="assets/banner.webp" alt="Không gian và món ăn Vị Xưa Quán" class="hero-main-img">
+        <div class="hero-floating-badge">
+          <div class="floating-badge-icon">🍲</div>
+          <div class="floating-badge-text">
+            <h4>Bếp Niêu Nung Đỏ Lửa</h4>
+            <p>Cơm cháy giòn rụm & kho quẹt thơm nức mũi</p>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <aside class="floating-zalo">
-    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Zalo 0971183939">Zalo</a>
-  </aside>
-
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Food demo 12</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Ẩm thực - Nhà hàng. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
-      </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Món ăn</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
       </div>
     </div>
+  </section>
+
+  <!-- Pillars Section -->
+  <section class="section-pillars">
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-icon">🌱</div>
+        <h3>Nông Sản Sạch Trong Ngày</h3>
+        <p>100% rau củ, thủy sản tươi sống được tuyển chọn từ các vùng nông trại hữu cơ Đà Lạt và miền Tây.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">🏺</div>
+        <h3>Niêu Đất Bát Tràng</h3>
+        <p>Kho cá, nấu cơm trong niêu đất thủ công giữ nhiệt lâu, làm mềm tơi từng thớ cá mà không nát.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">🌿</div>
+        <h3>Nước Dùng Thảo Mộc 18H</h3>
+        <p>Nước cốt hầm từ mía, củ sen, lê ngọt và xương ống hảo hạng, tuyệt đối không dùng chất điều vị công nghiệp.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">🏮</div>
+        <h3>Không Gian Ấm Cúng Cổ Điển</h3>
+        <p>Kiến trúc nhà rường gỗ lim, đèn lồng ấm áp, phòng VIP riêng tư sang trọng đón tiếp đối tác và gia đình.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Highlights Section -->
+  <section id="thuc-don" class="section">
+    <div class="section-header">
+      <span class="section-kicker">Mỹ Vị Truyền Thống</span>
+      <h2 class="section-title">Thực Đơn Món Ăn Tiêu Biểu</h2>
+      <p class="section-desc">Chắt lọc từ văn hóa ẩm thực Bắc - Trung - Nam, tái hiện trọn vẹn mâm cơm gia đình Việt đậm đà nghĩa tình.</p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filter-wrapper">
+      <button type="button" class="filter-btn active" data-filter="all">Tất Cả Món</button>
+      <button type="button" class="filter-btn" data-filter="khai-vi">Khai Vị & Cuốn Dân Dã</button>
+      <button type="button" class="filter-btn" data-filter="nieu-kho">Món Niêu & Kho Tộ</button>
+      <button type="button" class="filter-btn" data-filter="canh-lau">Canh & Lẩu Dân Gian</button>
+      <button type="button" class="filter-btn" data-filter="dac-san">Đặc Sản Mang Về</button>
+    </div>
+
+    <!-- Menu Grid -->
+    <div class="menu-grid-container">
+      <div class="menu-grid">
+        <!-- Item 1 -->
+        <div class="menu-item-card" data-category="khai-vi">
+          <div class="menu-item-thumb">
+            <img src="assets/images/mon-cuon.jpg" alt="Món bánh cuốn giòn dân dã">
+            <span class="menu-badge">Bán Chạy Nhất</span>
+            <span class="menu-flavor-tag">Thanh Đạm</span>
+          </div>
+          <div class="menu-item-body">
+            <h3 class="menu-item-title">Bánh Xèo Vỏ Giòn Tôm Nhảy & Thịt Ba Chỉ</h3>
+            <p class="menu-item-desc">Vỏ bánh tráng mỏng giòn rụm màu nghệ tươi, nhân tôm đất sông tươi sống, ăn kèm rổ rau rừng Tây Ninh 12 loại tươi non.</p>
+            <div class="menu-item-ingredients">
+              <span class="ing-tag">Tôm nhảy</span>
+              <span class="ing-tag">Rau rừng 12 loại</span>
+              <span class="ing-tag">Nước mắm tỏi ớt chua ngọt</span>
+            </div>
+            <div class="menu-item-footer">
+              <div class="menu-item-price">
+                <span class="price-label">Giá niêm yết</span>
+                <span class="price-value">135.000đ</span>
+              </div>
+              <button type="button" class="btn-add-takeaway" data-name="Bánh Xèo Vỏ Giòn Tôm Nhảy" data-price="135000">+ Đặt Món</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="menu-item-card" data-category="nieu-kho">
+          <div class="menu-item-thumb">
+            <img src="assets/banner.webp" alt="Cá bống thau kho tộ tiêu lốp">
+            <span class="menu-badge">Món Gia Truyền</span>
+            <span class="menu-flavor-tag">Đậm Đà Cố Đô</span>
+          </div>
+          <div class="menu-item-body">
+            <h3 class="menu-item-title">Cá Bống Thau Kho Tộ Niêu Đất Tiêu Lốp</h3>
+            <p class="menu-item-desc">Cá bống tươi sông Hương kho riu riu cùng thịt ba chỉ mỡ giòn trong niêu đất 4 tiếng, đượm vị thơm nồng cay dịu của tiêu rừng.</p>
+            <div class="menu-item-ingredients">
+              <span class="ing-tag">Cá bống tươi</span>
+              <span class="ing-tag">Tiêu lốp rừng</span>
+              <span class="ing-tag">Nước hàng đường mía</span>
+            </div>
+            <div class="menu-item-footer">
+              <div class="menu-item-price">
+                <span class="price-label">Giá niêm yết</span>
+                <span class="price-value">165.000đ</span>
+              </div>
+              <button type="button" class="btn-add-takeaway" data-name="Cá Bống Thau Kho Tộ Niêu Đất" data-price="165000">+ Đặt Món</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="menu-item-card" data-category="canh-lau">
+          <div class="menu-item-thumb">
+            <img src="assets/images/canh-nieu.jpg" alt="Canh Cua Đồng Mồng Tơi Cà Pháo">
+            <span class="menu-badge">Món Dân Dã</span>
+            <span class="menu-flavor-tag">Thanh Mát</span>
+          </div>
+          <div class="menu-item-body">
+            <h3 class="menu-item-title">Canh Cua Đồng Mồng Tơi Mướp Hương Cà Pháo</h3>
+            <p class="menu-item-desc">Riêu cua đồng giã tay đóng tảng dày thơm béo ngọt tự nhiên, mồng tơi hái sớm giòn ngọt kèm dĩa cà pháo giòn tan muối nén.</p>
+            <div class="menu-item-ingredients">
+              <span class="ing-tag">Cua đồng giã tay</span>
+              <span class="ing-tag">Mướp hương</span>
+              <span class="ing-tag">Cà pháo muối nén</span>
+            </div>
+            <div class="menu-item-footer">
+              <div class="menu-item-price">
+                <span class="price-label">Giá niêm yết</span>
+                <span class="price-value">110.000đ</span>
+              </div>
+              <button type="button" class="btn-add-takeaway" data-name="Canh Cua Đồng Mồng Tơi Cà Pháo" data-price="110000">+ Đặt Món</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="menu-item-card" data-category="nieu-kho">
+          <div class="menu-item-thumb">
+            <img src="assets/images/khong-gian.jpg" alt="Cơm Cháy Niêu Nung Kho Quẹt Tôm Khô">
+            <span class="menu-badge">Hương Vị Ký Ức</span>
+            <span class="menu-flavor-tag">Béo Ngậy</span>
+          </div>
+          <div class="menu-item-body">
+            <h3 class="menu-item-title">Cơm Cháy Niêu Đất Chấm Kho Quẹt Tôm Khô Rạch Giá</h3>
+            <p class="menu-item-desc">Lớp cơm cháy vàng giòn tan dưới đáy niêu quẹt cùng niêu kho quẹt mặn ngọt sóng sánh, tóp mỡ chiên phồng và tôm khô thơm nức.</p>
+            <div class="menu-item-ingredients">
+              <span class="ing-tag">Gạo tám thơm</span>
+              <span class="ing-tag">Tôm khô biển</span>
+              <span class="ing-tag">Tóp mỡ hoa</span>
+            </div>
+            <div class="menu-item-footer">
+              <div class="menu-item-price">
+                <span class="price-label">Giá niêm yết</span>
+                <span class="price-value">125.000đ</span>
+              </div>
+              <button type="button" class="btn-add-takeaway" data-name="Cơm Cháy Niêu Đất Kho Quẹt" data-price="125000">+ Đặt Món</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="menu-item-card" data-category="dac-san">
+          <div class="menu-item-thumb">
+            <img src="assets/banner.webp" alt="Chả Bò Gân Đà Nẵng Hút Chân Không">
+            <span class="menu-badge">Đặc Sản Đóng Gói</span>
+            <span class="menu-flavor-tag">Quà Biếu Cao Cấp</span>
+          </div>
+          <div class="menu-item-body">
+            <h3 class="menu-item-title">Chả Bò Gân Đặc Biệt Cố Đô (Đòn 1.0kg)</h3>
+            <p class="menu-item-desc">Làm từ 100% thịt bò thăn tươi kết hợp gân giòn sần sật, hạt tiêu sọ Phú Quốc cay nồng, gói lá chuối hấp cách thủy truyền thống.</p>
+            <div class="menu-item-ingredients">
+              <span class="ing-tag">Thịt bò đùi tươi</span>
+              <span class="ing-tag">Gân bò giòn</span>
+              <span class="ing-tag">Hút chân không</span>
+            </div>
+            <div class="menu-item-footer">
+              <div class="menu-item-price">
+                <span class="price-label">Giá đòn 1kg</span>
+                <span class="price-value">320.000đ</span>
+              </div>
+              <button type="button" class="btn-add-takeaway" data-name="Chả Bò Gân Đặc Biệt (1kg)" data-price="320000">+ Đặt Mang Về</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="menu-item-card" data-category="dac-san">
+          <div class="menu-item-thumb">
+            <img src="assets/images/canh-nieu.jpg" alt="Mắm Tép Chưng Thịt Ba Chỉ">
+            <span class="menu-badge">Đặc Sản Đóng Hũ</span>
+            <span class="menu-flavor-tag">Đưa Cơm</span>
+          </div>
+          <div class="menu-item-body">
+            <h3 class="menu-item-title">Mắm Tép Chưng Thịt Ba Chỉ Rút Sườn (Hũ 500g)</h3>
+            <p class="menu-item-desc">Mắm tép đỏ tươi ủ men tự nhiên kết hợp thịt ba chỉ xay xắt hạt lựu phi thơm ngào ngạt sả ớt, để ngoài được 60 ngày bảo quản kín.</p>
+            <div class="menu-item-ingredients">
+              <span class="ing-tag">Mắm tép truyền thống</span>
+              <span class="ing-tag">Thịt ba chỉ heo sạch</span>
+              <span class="ing-tag">Đóng hũ thủy tinh</span>
+            </div>
+            <div class="menu-item-footer">
+              <div class="menu-item-price">
+                <span class="price-label">Giá hũ 500g</span>
+                <span class="price-value">185.000đ</span>
+              </div>
+              <button type="button" class="btn-add-takeaway" data-name="Mắm Tép Chưng Thịt Ba Chỉ (500g)" data-price="185000">+ Đặt Mang Về</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Online Table Booking Section -->
+  <section id="dat-ban" class="section-reservation">
+    <div class="reservation-container">
+      <div class="res-info">
+        <span class="res-info-kicker">Trải Nghiệm Ẩm Thực Chu Đáo</span>
+        <h2 class="res-info-title">Đặt Trước Bàn Ăn & Phòng VIP Tiếp Khách</h2>
+        <p class="res-info-desc">
+          Để Vị Xưa Quán có thể chuẩn bị chu đáo nhất từng niêu cơm dẻo nóng và những món kho thấm vị, Quý khách vui lòng đặt bàn trước ít nhất 1 giờ.
+        </p>
+
+        <ul class="res-feature-list">
+          <li>
+            <span class="res-feature-bullet">✓</span>
+            <div>
+              <strong>Giữ chỗ ưu tiên trong 30 phút:</strong> Cam kết giữ đúng vị trí bàn mong muốn mà không phát sinh phụ phí đặt chỗ.
+            </div>
+          </li>
+          <li>
+            <span class="res-feature-bullet">✓</span>
+            <div>
+              <strong>Phòng VIP riêng tư miễn phí:</strong> Sức chứa 8 đến 24 khách, trang bị máy lạnh, dàn âm thanh nhẹ nhàng cho tiệc gia đình & tiếp đối tác.
+            </div>
+          </li>
+          <li>
+            <span class="res-feature-bullet">✓</span>
+            <div>
+              <strong>Tùy chỉnh khẩu vị riêng:</strong> Có thể yêu cầu giảm độ cay, nấu món chay thanh đạm hoặc kiêng dị ứng riêng theo từng thành viên.
+            </div>
+          </li>
+        </ul>
+
+        <div class="res-hotline-box">
+          <div>
+            <div class="hotline-label">Liên hệ Đặt Tiệc & Hội Nghị Nhanh:</div>
+            <div class="hotline-num">0971 183 939</div>
+          </div>
+          <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-floating-zalo" style="position: static; box-shadow: none;">
+            Zalo Tư Vấn
+          </a>
+        </div>
+      </div>
+
+      <!-- Booking Form Card -->
+      <div class="reservation-card">
+        <h3 class="res-card-title">Phiếu Đặt Bàn Trực Tuyến</h3>
+        <p class="res-card-subtitle">Nhận ngay mã xác nhận đặt chỗ điện tử tức thì</p>
+
+        <form id="tableBookingForm">
+          <div class="res-form-grid">
+            <div>
+              <label for="resName" class="form-label">Họ và tên của bạn *</label>
+              <input type="text" id="resName" class="form-input" placeholder="VD: Anh Minh Trí" required>
+            </div>
+
+            <div>
+              <label for="resPhone" class="form-label">Số điện thoại / Zalo *</label>
+              <input type="tel" id="resPhone" class="form-input" placeholder="VD: 0988xxxxxx" required>
+            </div>
+
+            <div>
+              <label for="resDate" class="form-label">Ngày dùng bữa *</label>
+              <input type="date" id="resDate" class="form-input" required>
+            </div>
+
+            <div>
+              <label for="resTime" class="form-label">Khung giờ đón khách *</label>
+              <select id="resTime" class="form-select" required>
+                <option value="11:00">11:00 - Trưa</option>
+                <option value="11:30" selected>11:30 - Trưa</option>
+                <option value="12:00">12:00 - Trưa</option>
+                <option value="18:00">18:00 - Tối</option>
+                <option value="18:30">18:30 - Tối</option>
+                <option value="19:00">19:00 - Tối</option>
+                <option value="19:30">19:30 - Tối</option>
+                <option value="20:00">20:00 - Tối</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="resGuests" class="form-label">Số lượng thực khách *</label>
+              <select id="resGuests" class="form-select" required>
+                <option value="Bàn 2 người">2 Khách (Bàn cặp đôi ấm cúng)</option>
+                <option value="Bàn 4 người" selected>4 Khách (Bàn gia đình)</option>
+                <option value="Bàn 6-8 người">6 - 8 Khách (Bàn tròn sum vầy)</option>
+                <option value="Phòng VIP 10-15 người">10 - 15 Khách (Phòng VIP tiệc)</option>
+                <option value="Tiệc công ty 20-40 người">20 - 40 Khách (Tiệc công ty lớn)</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="resSpace" class="form-label">Khu vực mong muốn</label>
+              <select id="resSpace" class="form-select">
+                <option value="Khu vực gian nhà gỗ ấm cúng" selected>Gian nhà gỗ truyền thống</option>
+                <option value="Khu vực sân vườn lộng gió">Khu vực sân vườn hoa sen ngoài trời</option>
+                <option value="Phòng VIP máy lạnh riêng tư">Phòng VIP máy lạnh riêng tư</option>
+              </select>
+            </div>
+
+            <div class="form-group-full">
+              <label for="resNote" class="form-label">Ghi chú khẩu vị & yêu cầu đặc biệt</label>
+              <textarea id="resNote" class="form-textarea" placeholder="VD: Bàn có người lớn tuổi cần ghế êm, chuẩn bị trước niêu cá bống ít cay, sinh nhật..."></textarea>
+            </div>
+
+            <div class="form-group-full">
+              <button type="submit" class="btn-submit-res">
+                ✓ Hoàn Tất Đặt Bàn Ngay
+              </button>
+              <span style="font-size: 0.72rem; color: #6b5f58; display: block; margin-top: 6px; text-align: center;">
+                * Phiếu đặt bàn mô phỏng demo — lễ tân sẽ gọi điện thoại hoặc gửi Zalo xác nhận bàn trống thực tế.
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Atmosphere Gallery -->
+  <section class="section-atmosphere">
+    <div class="section-header">
+      <span class="section-kicker">Không Gian Hoài Niệm</span>
+      <h2 class="section-title">Chốn Bình Yên Giữa Lòng Đô Thị</h2>
+      <p class="section-desc">Mỗi góc quán tại Vị Xưa đều được chăm chút tỉ mỉ với chất liệu gỗ mộc, gốm nung và bóng cây xanh rợp bóng mát.</p>
+    </div>
+
+    <div class="atmosphere-grid">
+      <div class="atmosphere-card-large">
+        <img src="assets/images/khong-gian.jpg" alt="Không gian phòng tiệc ấm cúng Vị Xưa Quán">
+        <div class="atmosphere-overlay">
+          <h4>Gian Nhà Gỗ Cổ & Đèn Lồng Ấm Cúng</h4>
+          <p>Nơi sum họp hoàn hảo của gia đình nhiều thế hệ mỗi dịp cuối tuần</p>
+        </div>
+      </div>
+      <div class="atmosphere-card-side">
+        <div class="atmosphere-subcard">
+          <img src="assets/banner.webp" alt="Phòng VIP riêng tư tiếp khách">
+          <div class="atmosphere-overlay">
+            <h4>Phòng VIP Tiếp Khách & Đối Tác</h4>
+            <p>Kín đáo, sang trọng và chuẩn mực phục vụ riêng biệt</p>
+          </div>
+        </div>
+        <div class="atmosphere-subcard">
+          <img src="assets/images/canh-nieu.jpg" alt="Bếp niêu lửa than hồng">
+          <div class="atmosphere-overlay">
+            <h4>Bếp Lửa Than Đỏ & Mâm Cơm Đất Nung</h4>
+            <p>Tròn vẹn hương vị khói thơm của ký ức quê nhà</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Takeaway Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>🍲 Đặc Sản & Món Mang Về</h3>
+      <button type="button" class="btn-close-cart" id="cartClose">&times;</button>
+    </div>
+    <div class="cart-drawer-body" id="cartItemsList">
+      <!-- Items dynamically injected -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal">
+        <span>Tổng cộng:</span>
+        <span id="cartSubtotal">0đ</span>
+      </div>
+      <button type="button" class="btn-checkout-cart" id="checkoutZaloBtn">
+        Xác Nhận Đơn Qua Zalo (0971 183 939)
+      </button>
+    </div>
+  </div>
+
+  <!-- Reservation Confirmation Modal -->
+  <div class="modal-overlay" id="bookingConfirmationModal">
+    <div class="modal-content-box">
+      <h3>Tiếp Nhận Đặt Bàn (Mô Phỏng Demo)</h3>
+      <p style="font-size: 0.88rem; color: #6b5f58;">Quán đã ghi nhận phiếu giữ chỗ demo. Nhân viên lễ tân sẽ liên hệ xác nhận bàn trống thực tế qua điện thoại/Zalo.</p>
+      
+      <div>
+        <span class="modal-booking-code" id="bookingCodeDisplay">VX-9821</span>
+      </div>
+
+      <div id="bookingSummaryDisplay" style="text-align: left; background: #faf6f0; border-radius: 8px; padding: 1rem; font-size: 0.85rem; line-height: 1.6; color: #3c241c; margin-bottom: 1.25rem;"></div>
+
+      <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+        <button type="button" id="sendResZaloBtn" class="btn-floating-zalo" style="position: static; box-shadow: none; border: none; cursor: pointer;">
+          Gửi Xác Nhận Zalo Quán
+        </button>
+        <button type="button" class="btn-close-modal" id="bookingModalClose">
+          Đóng Cửa Sổ
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Actions -->
+  <div class="floating-actions">
+    <button type="button" class="btn-floating-res btn-scroll-res">
+      📅 Đặt Bàn
+    </button>
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-floating-zalo" title="Tư vấn Zalo 0971183939">
+      Zalo 0971183939
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-col footer-col-brand">
+        <div class="logo-main">
+          Vị Xưa Quán
+          <span class="logo-badge">#MS12</span>
+        </div>
+        <p>
+          Thương hiệu ẩm thực cố đô & niêu đất gia truyền. Tôn vinh nét đẹp văn hóa ẩm thực truyền thống Việt Nam bằng tất cả sự chân thành và tinh tế trong từng món ăn.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Điều Hướng</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="san-pham.html">Thực Đơn Tinh Hoa</a></li>
+          <li><a href="gioi-thieu.html">Không Gian & Triết Lý</a></li>
+          <li><a href="lien-he.html">Đặt Bàn & Chỉ Đường</a></li>
+          <li><a href="../../index.html">Thư Viện Giao Diện #MS12</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Giờ Phục Vụ</h4>
+        <ul class="footer-hours">
+          <li><span>Thứ Hai - Thứ Sáu:</span> <strong>10:00 - 22:00</strong></li>
+          <li><span>Thứ Bảy - Chủ Nhật:</span> <strong>09:30 - 22:30</strong></li>
+          <li><span>Bếp đóng order:</span> <strong>21:45</strong></li>
+          <li><span>Giao mang về:</span> <strong>Hỏa tốc 45 phút</strong></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Liên Hệ Trực Tiếp</h4>
+        <p style="font-size: 0.88rem; color: #b8aba0; margin-bottom: 0.75rem;">
+          📍 128 Nguyễn Đình Chiểu, P. Đa Kao, Quận 1, TP.HCM
+        </p>
+        <p style="font-size: 0.88rem; color: #b8aba0; margin-bottom: 0.75rem;">
+          📞 Hotline: 0971 183 939
+        </p>
+        <p style="font-size: 0.88rem; color: #b8aba0;">
+          💬 Zalo đặt tiệc: zalo.me/0971183939
+        </p>
+      </div>
+    </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Food demo 12. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <p>&copy; 2026 Vị Xưa Quán (#MS12). Tất cả quyền được bảo lưu. Phát triển trên nền tảng RackerWeb Theme Library.</p>
+      <p>Thiết kế chuẩn Archetype 09: Culinary & Gastronomy Experience</p>
     </div>
   </footer>
 

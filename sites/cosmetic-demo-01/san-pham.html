@@ -1,98 +1,236 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Danh Mục Mỹ phẩm | Cosmetic demo 01</title>
+  <title>Sản phẩm — Lumière Beauty | Mỹ phẩm thuần chay cao cấp #MS01</title>
+  <meta name="description" content="Khám phá toàn bộ dòng sản phẩm Lumière Beauty: serum, kem dưỡng, toner và kem chống nắng thuần chay cho làn da Việt Nam.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .subpage-hero { background: var(--ivory-dark); padding: 4rem 0; text-align: center; border-bottom: 1px solid var(--border); }
+    .subpage-hero .section-eyebrow { margin-bottom: 0.75rem; }
+    .subpage-hero h1 { font-family: var(--serif); font-size: clamp(2rem,4vw,3rem); font-weight:400; color:var(--plum); }
+    .subpage-hero p { margin-top:0.75rem; color:var(--text-muted); font-size:0.95rem; max-width:50ch; margin-left:auto;margin-right:auto; }
+    .filter-bar { background:var(--surface); border-bottom:1px solid var(--border); padding:1rem 0; sticky; top:68px; z-index:100; position:sticky; }
+    .filter-wrap { max-width:var(--max-w); margin:0 auto; padding:0 2rem; display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center; }
+    .filter-btn { padding:0.45rem 1.25rem; border-radius:100px; border:1.5px solid var(--border); font-size:0.82rem; font-weight:500; color:var(--text-muted); background:var(--surface); cursor:pointer; transition:all 0.2s; }
+    .filter-btn:hover,.filter-btn.active { border-color:var(--plum); color:var(--plum); background:rgba(74,25,66,0.06); }
+    .products-page { padding:4rem 0; }
+    .page-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
+    .routine-id { padding:4.5rem 0; background:var(--ivory-dark); }
+    @media(max-width:900px){ .page-grid{grid-template-columns:repeat(2,1fr);} }
+    @media(max-width:480px){ .page-grid{grid-template-columns:1fr 1fr; gap:0.75rem;} .filter-wrap{gap:0.4rem;} }
+  </style>
 </head>
 <body>
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS01</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS01</strong> · Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại thư viện</a>
   </div>
-
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Cosmetic demo 01 <span>MS01</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html" class="active">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+  <header id="site-header">
+    <div class="header-inner">
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Mở menu"><span></span><span></span><span></span></button>
+      <a href="index.html" class="brand" id="brand-logo"><span class="brand-name">Lumière</span><span class="brand-sub">Beauty</span></a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="san-pham.html" class="nav-link active">Sản phẩm</a>
+        <a href="san-pham.html#routine" class="nav-link">Quy trình dưỡng da</a>
+        <a href="gioi-thieu.html" class="nav-link">Về chúng tôi</a>
+        <a href="lien-he.html" class="nav-link">Liên hệ</a>
       </nav>
       <div class="header-actions">
-        <button type="button" class="cart-trigger">Giỏ Hàng (<span id="cart-count">0</span>)</button>
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener" class="btn-zalo" id="header-zalo-btn" aria-label="Tư vấn Zalo">
+          <svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M16 3C8.82 3 3 8.37 3 15c0 3.75 1.86 7.12 4.77 9.38l-1.42 5.14c-.16.58.37 1.11.95.95l5.58-1.54C13.93 29.23 14.95 29.4 16 29.4c7.18 0 13-5.37 13-12S23.18 3 16 3z"/></svg>
+          <span>Tư vấn Zalo</span>
+        </a>
+        <button class="cart-btn" id="cart-btn" aria-label="Giỏ hàng">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Toàn Bộ Danh Mục Mỹ phẩm</h1>
-    <p>Khám phá đầy đủ các gói sản phẩm và giải pháp cao cấp từ Cosmetic demo 01</p>
-  </div>
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html" class="mobile-nav-link">Trang chủ</a>
+    <a href="san-pham.html" class="mobile-nav-link active">Sản phẩm</a>
+    <a href="gioi-thieu.html" class="mobile-nav-link">Về chúng tôi</a>
+    <a href="lien-he.html" class="mobile-nav-link">Liên hệ</a>
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener" class="mobile-nav-zalo">Tư vấn Zalo: 0971183939</a>
+  </nav>
 
-  <main class="section">
-    <div class="grid">
-        <div class="card">
-          <span class="card-badge">Best Seller</span>
-          <h3>Serum Phục Hồi Bio-Peptide</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">480.000đ</div>
-          <button type="button" class="btn-buy" data-name="Serum Phục Hồi Bio-Peptide">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Khuyên dùng</span>
-          <h3>Kem Dưỡng Trắng Da Chiết Xuất Hoa Hồng</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">590.000đ</div>
-          <button type="button" class="btn-buy" data-name="Kem Dưỡng Trắng Da Chiết Xuất Hoa Hồng">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Organic</span>
-          <h3>Sữa Rửa Mặt Tạo Bọt Dịu Nhẹ</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">280.000đ</div>
-          <button type="button" class="btn-buy" data-name="Sữa Rửa Mặt Tạo Bọt Dịu Nhẹ">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Chống nắng</span>
-          <h3>Kem Chống Nắng Quang Phổ Rộng SPF50+</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">420.000đ</div>
-          <button type="button" class="btn-buy" data-name="Kem Chống Nắng Quang Phổ Rộng SPF50+">Thêm Giỏ Hàng</button>
-        </div>
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header"><h3>Giỏ hàng</h3><button class="cart-close" id="cart-close" aria-label="Đóng">✕</button></div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty" id="cart-empty"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c9b89a" stroke-width="1.2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><p>Giỏ hàng đang trống</p><a href="#" class="btn-shop-now">Khám phá sản phẩm</a></div>
     </div>
+    <div class="cart-footer" id="cart-footer" style="display:none">
+      <div class="cart-total"><span>Tạm tính</span><span id="cart-total-amount">0đ</span></div>
+      <p class="cart-note">Giá chỉ mang tính minh họa.</p>
+      <a href="lien-he.html" class="btn-checkout">Liên hệ đặt hàng qua Zalo</a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="subpage-hero">
+      <div class="container">
+        <p class="section-eyebrow">Bộ sưu tập</p>
+        <h1>Tất cả sản phẩm</h1>
+        <p>Mỗi sản phẩm Lumière được kiểm nghiệm kỹ lưỡng về an toàn và hiệu quả cho làn da nhiệt đới Việt Nam.</p>
+      </div>
+    </section>
+
+    <div class="filter-bar" id="filter-bar">
+      <div class="filter-wrap">
+        <span style="font-size:0.78rem;font-weight:600;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;margin-right:0.5rem">Lọc:</span>
+        <button class="filter-btn active" data-filter="all" id="filter-all">Tất cả</button>
+        <button class="filter-btn" data-filter="cleansing" id="filter-cleansing">Làm sạch</button>
+        <button class="filter-btn" data-filter="treatment" id="filter-treatment">Điều trị</button>
+        <button class="filter-btn" data-filter="moisturizing" id="filter-moisturizing">Dưỡng ẩm</button>
+        <button class="filter-btn" data-filter="sun" id="filter-sun">Chống nắng</button>
+      </div>
+    </div>
+
+    <section class="products-page">
+      <div class="container">
+        <div class="page-grid" id="page-grid">
+          <!-- Products rendered by JS from data below -->
+        </div>
+      </div>
+    </section>
+
+    <section class="routine-id routine-section" id="routine" aria-label="Quy trình dưỡng da">
+      <div class="container">
+        <header class="section-header section-header--center">
+          <p class="section-eyebrow">Gợi ý sử dụng</p>
+          <h2>Quy trình dưỡng da toàn diện</h2>
+          <p class="section-desc">Kết hợp đúng sản phẩm đúng thứ tự để đạt hiệu quả tốt nhất</p>
+        </header>
+        <div class="routine-steps">
+          <div class="routine-step"><div class="step-number">01</div><div class="step-content"><h3>Làm sạch</h3><p>Dùng sữa rửa mặt tạo bọt dịu nhẹ, mát xa nhẹ nhàng trong 60 giây, rửa sạch bằng nước ấm.</p><span class="step-product">Gentle Foam Cleanser · 280.000đ</span></div></div>
+          <div class="routine-connector"></div>
+          <div class="routine-step"><div class="step-number">02</div><div class="step-content"><h3>Toner</h3><p>Thấm toner vào bông cotton hoặc vỗ nhẹ lên da bằng tay, để da hấp thụ hoàn toàn trước bước tiếp theo.</p><span class="step-product">Botanical Elixir Toner · 320.000đ</span></div></div>
+          <div class="routine-connector"></div>
+          <div class="routine-step"><div class="step-number">03</div><div class="step-content"><h3>Serum</h3><p>Lấy 3-4 giọt serum, thoa đều và ấn nhẹ lên da mặt và cổ. Đợi 1-2 phút để serum ngấm hoàn toàn.</p><span class="step-product">Bio-Peptide Serum · 480.000đ</span></div></div>
+          <div class="routine-connector"></div>
+          <div class="routine-step"><div class="step-number">04</div><div class="step-content"><h3>Kem dưỡng</h3><p>Lấy lượng bằng hạt đậu, thoa và massage nhẹ theo chiều hướng ra ngoài và lên trên.</p><span class="step-product">Rose Moisturizer · 590.000đ</span></div></div>
+          <div class="routine-connector"></div>
+          <div class="routine-step"><div class="step-number">05</div><div class="step-content"><h3>Chống nắng</h3><p>Bước cuối cùng buổi sáng: thoa kem chống nắng SPF50+ đều lên mặt, cổ và tai. Thoa lại sau 2 giờ ngoài trời.</p><span class="step-product">Sunscreen SPF50+ · 420.000đ</span></div></div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <a href="https://zalo.me/0971183939" target="_blank" rel="noopener" class="floating-zalo" id="floating-zalo" title="Tư vấn Zalo" aria-label="Liên hệ Zalo">
+    <svg viewBox="0 0 32 32" fill="white"><path d="M16 3C8.82 3 3 8.37 3 15c0 3.75 1.86 7.12 4.77 9.38l-1.42 5.14c-.16.58.37 1.11.95.95l5.58-1.54C13.93 29.23 14.95 29.4 16 29.4c7.18 0 13-5.37 13-12S23.18 3 16 3z"/></svg>
+  </a>
+
   <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Cosmetic demo 01</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Mỹ phẩm. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+    <div class="footer-main">
+      <div class="footer-brand-col">
+        <div class="footer-logo"><span>Lumière</span><span>Beauty</span></div>
+        <p>Mỹ phẩm thuần chay cao cấp, nghiên cứu cho làn da phụ nữ Việt Nam. Giao diện mẫu #MS01.</p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
-      </div>
+      <div class="footer-links-col"><h4>Sản phẩm</h4><ul><li><a href="san-pham.html">Tất cả sản phẩm</a></li><li><a href="san-pham.html?cat=cleansing">Làm sạch da</a></li><li><a href="san-pham.html?cat=treatment">Serum & Điều trị</a></li><li><a href="san-pham.html?cat=moisturizing">Dưỡng ẩm</a></li></ul></div>
+      <div class="footer-links-col"><h4>Thông tin</h4><ul><li><a href="gioi-thieu.html">Về Lumière Beauty</a></li><li><a href="san-pham.html#routine">Quy trình dưỡng da</a></li><li><a href="lien-he.html">Liên hệ & Tư vấn</a></li></ul></div>
+      <div class="footer-contact-col"><h4>Liên hệ tư vấn</h4><p>Zalo: <a href="https://zalo.me/0971183939">0971183939</a></p><p>Hỗ trợ: 8:00 – 22:00 hàng ngày</p><p class="footer-demo-note">Giao diện mẫu — không phải doanh nghiệp thực tế.</p></div>
     </div>
     <div class="footer-bottom">
-      &copy; 2026 Cosmetic demo 01. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <span>© 2026 Lumière Beauty — Giao diện mẫu #MS01. Thuộc Thư Viện RackerWeb.</span>
+      <a href="../../index.html">← Quay lại thư viện</a>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
   <script src="js/app.js"></script>
+  <script>
+  // Product data
+  const PRODUCTS = [
+    { id:'serum-bio-peptide', name:'Serum Phục Hồi Bio-Peptide', desc:'Tinh chất peptide từ thực vật, phục hồi độ đàn hồi sau 4 tuần.', price:480000, size:'30ml', badge:'Bán chạy', cat:'treatment', img:'assets/images/product-serum.jpg', alt:'Serum Bio-Peptide Lumière' },
+    { id:'kem-duong-hoa-hong', name:'Kem Dưỡng Ẩm Hoa Hồng', desc:'Làm mềm và dưỡng ẩm sâu lên đến 72 giờ. Da khô và nhạy cảm.', price:590000, size:'50ml', badge:'', cat:'moisturizing', img:'assets/images/product-cream.jpg', alt:'Kem Dưỡng Hoa Hồng' },
+    { id:'toner-thao-moc', name:'Toner Thảo Mộc Botanical Elixir', desc:'Cân bằng pH và cấp ẩm tức thì. Hoa hồng và bạc hà tươi mát.', price:320000, size:'200ml', badge:'Mới', cat:'moisturizing', img:'assets/images/product-toner.jpg', alt:'Toner Thảo Mộc' },
+    { id:'kem-chong-nang-spf50', name:'Kem Chống Nắng SPF50+', desc:'Bảo vệ toàn diện UVA/UVB, kết cấu nhẹ không bít tắc lỗ chân lông.', price:420000, size:'60ml', badge:'', cat:'sun', img:'assets/images/product-sunscreen.jpg', alt:'Kem Chống Nắng SPF50+' },
+    { id:'sua-rua-mat-bot', name:'Sữa Rửa Mặt Tạo Bọt Dịu Nhẹ', desc:'Làm sạch sâu không gây khô căng, pH cân bằng phù hợp mọi loại da.', price:280000, size:'150ml', badge:'', cat:'cleansing', img:'assets/images/hero.jpg', alt:'Sữa Rửa Mặt Dịu Nhẹ' },
+    { id:'tay-trang-dau-jojoba', name:'Dầu Tẩy Trang Jojoba', desc:'Tẩy trang hiệu quả kể cả mascara chống thấm nước, không cần chà mạnh.', price:360000, size:'100ml', badge:'', cat:'cleansing', img:'assets/images/editorial.jpg', alt:'Dầu Tẩy Trang Jojoba' },
+    { id:'mat-na-ngu', name:'Mặt Nạ Ngủ Phục Hồi Intensive', desc:'Bổ sung dưỡng chất qua đêm, thức dậy với làn da căng mịn và tươi sáng.', price:520000, size:'75ml', badge:'Mới', cat:'treatment', img:'assets/images/product-cream.jpg', alt:'Mặt Nạ Ngủ Intensive' },
+    { id:'xit-khoang', name:'Xịt Khoáng Cấp Ẩm Nhanh', desc:'Cung cấp độ ẩm tức thì và làm dịu da khi tiếp xúc ánh nắng. Mang theo hàng ngày.', price:195000, size:'100ml', badge:'', cat:'moisturizing', img:'assets/images/product-toner.jpg', alt:'Xịt Khoáng' },
+  ];
+
+  let currentFilter = 'all';
+
+  function formatPriceLocal(n) { return n.toLocaleString('vi-VN') + 'đ'; }
+
+  function renderProducts() {
+    const grid = document.getElementById('page-grid');
+    if (!grid) return;
+    const filtered = currentFilter === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === currentFilter);
+    grid.innerHTML = filtered.map(p => `
+      <article class="product-card" data-cat="${p.cat}">
+        <div class="product-media">
+          <img src="${p.img}" alt="${p.alt}" width="400" height="533" loading="lazy">
+          <div class="product-actions">
+            <button class="btn-wishlist" aria-label="Yêu thích" data-id="${p.id}">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="btn-quick-add" data-name="${p.name}" data-price="${p.price}" data-id="${p.id}">Thêm giỏ hàng</button>
+          </div>
+        </div>
+        <div class="product-info">
+          ${p.badge ? `<span class="product-badge${p.badge==='Mới'?' product-badge--new':''}">${p.badge}</span>` : ''}
+          <h3 class="product-name">${p.name}</h3>
+          <p class="product-desc">${p.desc}</p>
+          <div class="product-footer">
+            <span class="product-price">${formatPriceLocal(p.price)}</span>
+            <span class="product-size">${p.size}</span>
+          </div>
+        </div>
+      </article>`).join('');
+
+    // Rebind events
+    grid.querySelectorAll('.btn-quick-add').forEach(btn => {
+      btn.addEventListener('click', function() {
+        if (typeof addToCart === 'function') addToCart(this.dataset.id, this.dataset.name, parseInt(this.dataset.price));
+      });
+    });
+    grid.querySelectorAll('.btn-wishlist').forEach(btn => {
+      btn.addEventListener('click', function() {
+        if (typeof toggleWishlist === 'function') toggleWishlist(this, this.dataset.id);
+      });
+    });
+
+    // Re-apply wishlist state
+    const wl = JSON.parse(localStorage.getItem('lumiere_wishlist_ms01') || '[]');
+    grid.querySelectorAll('.btn-wishlist[data-id]').forEach(btn => {
+      if (wl.includes(btn.dataset.id)) btn.classList.add('wishlisted');
+    });
+  }
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      currentFilter = this.dataset.filter;
+      renderProducts();
+    });
+  });
+
+  // Apply filter from URL
+  const urlCat = new URLSearchParams(window.location.search).get('cat');
+  if (urlCat) {
+    currentFilter = urlCat;
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.filter === urlCat);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', renderProducts);
+  if (document.readyState === 'complete' || document.readyState === 'interactive') renderProducts();
+  </script>
 </body>
 </html>

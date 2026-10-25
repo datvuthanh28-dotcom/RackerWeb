@@ -1,81 +1,240 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giới Thiệu | Nha khoa Aspen - demo 34</title>
+  <title>Về Aspen Dental — Đội Ngũ Bác Sĩ & Công Nghệ Chuẩn Quốc Tế (#MS34)</title>
+  <meta name="description" content="Tìm hiểu về Viện Nha Khoa Aspen Dental: 15 năm uy tín y khoa, 100% bác sĩ chuyên khoa ĐH Y Dược, hệ thống phòng phẫu thuật vô trùng áp lực dương và máy CT 3D.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .dental-about-hero {
+      background: linear-gradient(135deg, #0f2744 0%, #0369a1 100%);
+      padding: 5.5rem 1.5rem 3.5rem;
+      text-align: center;
+      color: #fff;
+    }
+    .dental-about-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+    .split-facility {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+    .tech-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .tech-card {
+      background: #ffffff;
+      border: 1px solid var(--border-med);
+      border-radius: var(--radius);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-card);
+    }
+    .tech-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--med-navy);
+      margin-bottom: 0.5rem;
+    }
+    .tech-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    @media (max-width: 900px) {
+      .split-facility {
+        grid-template-columns: 1fr;
+      }
+      .tech-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Library return bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS34</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS34 · Y Tế & Chăm Sóc Sức Khỏe</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Nha khoa Aspen - demo 34 <span>MS34</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Sản phẩm</a></li>
-          <li><a href="gioi-thieu.html" class="active">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">✚</div>
+        <div class="brand-text">
+          <span class="brand-title">ASPEN <span>DENTAL</span></span>
+          <span class="brand-subtitle">Viện Nha Khoa Quốc Tế</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Trang Chủ</a>
+        <a href="san-pham.html">Dịch Vụ Chuyên Sâu</a>
+        <a href="gioi-thieu.html" class="active">Đội Ngũ Bác Sĩ</a>
+        <a href="index.html#cong-nghe">Công Nghệ 3D</a>
+        <a href="index.html#dat-lich-kham">Đặt Lịch Khám</a>
+        <a href="lien-he.html">Chi Nhánh</a>
       </nav>
-      <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="header-cta-group">
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-hotline">
+          0971 183 939
+        </a>
+        <a href="index.html#dat-lich-kham" class="btn-book-dental">
+          <span>Đặt Lịch Khám 3D</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Về Chúng Tôi — Nha khoa Aspen - demo 34</h1>
-    <p>Hành trình khẳng định uy tín và chất lượng dẫn đầu trong lĩnh vực Y tế</p>
-  </div>
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html">Trang Chủ</a>
+    <a href="san-pham.html">Dịch Vụ Nha Khoa</a>
+    <a href="gioi-thieu.html" class="active">Đội Ngũ Bác Sĩ</a>
+    <a href="index.html#cong-nghe">Công Nghệ 3D</a>
+    <a href="index.html#dat-lich-kham">Đăng Ký Khám Miễn Phí</a>
+    <a href="lien-he.html">Hệ Thống Phòng Khám</a>
+  </aside>
 
-  <div class="subpage-content">
-    <p style="margin-bottom: 1.5rem; font-size: 1.05rem;"><strong>Nha khoa Aspen - demo 34</strong> tự hào là đối tác tin cậy, mang đến cho quý khách hàng các sản phẩm và dịch vụ Y tế đạt tiêu chuẩn cao nhất. Với triết lý lấy sự hài lòng của khách hàng làm trọng tâm, chúng tôi không ngừng đổi mới công nghệ và quy trình phục vụ.</p>
-    <div style="background: var(--surface); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
-      <h3 style="margin-bottom: 1rem; color: var(--primary);">Giá Trị Cốt Lõi</h3>
-      <ul style="padding-left: 1.25rem; line-height: 2;">
-        <li><strong>Chất Lượng Vượt Trội:</strong> Mọi chi tiết đều được hoàn thiện tỉ mỉ và kiểm định nghiêm ngặt.</li>
-        <li><strong>Tận Tâm & Minh Bạch:</strong> Tư vấn trung thực, báo giá rõ ràng, không phát sinh chi phí ẩn.</li>
-        <li><strong>Đồng Hành Dài Lâu:</strong> Hỗ trợ kỹ thuật và chăm sóc khách hàng 24/7 qua số Hotline Zalo 0971183939.</li>
-      </ul>
-    </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="lien-he.html" class="btn-primary">Liên Hệ Ngay Với Chúng Tôi</a>
-    </div>
-  </div>
-
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Nha khoa Aspen - demo 34</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Y tế. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <main>
+    <section class="dental-about-hero">
+      <div class="container">
+        <span class="badge-certified" style="background:rgba(255,255,255,0.15); color:#fff; border-color:rgba(255,255,255,0.3);">
+          15 Năm Phụng Sự Nụ Cười Việt
+        </span>
+        <h1>Y Đức & Chuyên Môn Là Nền Tảng</h1>
+        <p style="color:#e0f2fe; max-width:650px; margin:0 auto; font-size:1.05rem;">
+          Aspen Dental hướng tới mục tiêu cung cấp dịch vụ điều trị nha khoa kỹ thuật số chất lượng quốc tế với chi phí hợp lý nhất cho mọi gia đình.
+        </p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Sản phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+    </section>
+
+    <section class="section-dental">
+      <div class="split-facility">
+        <div>
+          <span class="section-subtitle-dental">Triết Lý Điều Trị</span>
+          <h2 style="font-family:var(--font-heading); font-size:2.2rem; font-weight:800; color:var(--med-navy); margin-bottom:1.2rem; line-height:1.3;">
+            Bảo Tồn Răng Thật & Kiểm Soát Đau Tuyệt Đối
+          </h2>
+          <p style="color:var(--text-muted); font-size:1rem; line-height:1.75; margin-bottom:1.2rem;">
+            Tại Aspen Dental, nguyên tắc y khoa cao nhất là bảo tồn tối đa cấu trúc xương hàm và tủy răng thật của khách hàng. Chúng tôi tuyệt đối nói không với chỉ định nhổ răng hay mài răng không cần thiết.
+          </p>
+          <p style="color:var(--text-muted); font-size:1rem; line-height:1.75;">
+            100% bệnh nhân trước khi điều trị đều được chụp phim cắt lớp CT 3D, phân tích mật độ xương và giải thích cặn kẽ lộ trình cùng bác sĩ chuyên khoa phụ trách chính.
+          </p>
+        </div>
+        <div>
+          <div style="background:linear-gradient(135deg, #dbeafe 0%, #f0f9ff 100%); border-radius:var(--radius); border:1px solid var(--border-med); padding:3rem; text-align:center;">
+            <div style="font-size:3.5rem; margin-bottom:1rem;">🏥</div>
+            <h4 style="font-size:1.35rem; font-weight:800; color:var(--med-navy); margin-bottom:0.5rem;">Phòng Mổ Áp Lực Dương</h4>
+            <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.6;">
+              Hệ thống lọc không khí vô trùng chuẩn y tế giúp khử khuẩn 99.98%, loại bỏ hoàn toàn nguy cơ nhiễm trùng chéo trong quá trình phẫu thuật Implant.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technology Equipment -->
+      <div class="section-header-dental" style="margin-top:2rem;" id="cong-nghe">
+        <span class="section-subtitle-dental">Đầu Tư Đồng Bộ</span>
+        <h2 class="section-title-dental">Trang Thiết Bị Nhập Khẩu 100% Từ Châu Âu & Mỹ</h2>
+      </div>
+
+      <div class="tech-cards-grid">
+        <div class="tech-card">
+          <h4>📡 Máy Chụp CT ConeBeam 3D (Đức)</h4>
+          <p>Tái tạo hình ảnh không gian 3 chiều của xương hàm, dây thần kinh và xoang hàm chỉ trong 10 giây quét với lượng bức xạ cực thấp an toàn cho sức khỏe.</p>
+        </div>
+
+        <div class="tech-card">
+          <h4>🖥 Máy Scan Mẫu Hàm 3D iTero 5D</h4>
+          <p>Lấy dấu răng kỹ thuật số không cần dùng thạch cao khó chịu, mô phỏng ngay kết quả nụ cười sau khi niềng răng trong 60 giây.</p>
+        </div>
+
+        <div class="tech-card">
+          <h4>⚡ Máy Nhổ Răng Sóng Siêu Âm Piezotome</h4>
+          <p>Công nghệ bóc tách chân răng bằng sóng siêu âm cao tần nhẹ nhàng, giảm tối đa sưng đau và chảy máu sau phẫu thuật nhổ răng khôn.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section-dental" style="text-align:center; padding-top:0;">
+      <h3 style="font-family:var(--font-heading); font-size:2rem; font-weight:800; color:var(--med-navy); margin-bottom:1rem;">Hãy Để Các Chuyên Gia Lắng Nghe Nỗi Băn Khoăn Của Bạn</h3>
+      <p style="color:var(--text-muted); max-width:600px; margin:0 auto 2.5rem;">Đội ngũ y bác sĩ Aspen Dental luôn sẵn sàng khám và tư vấn trực tiếp 1:1 cho bạn.</p>
+      <div style="display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap;">
+        <a href="index.html#dat-lich-kham" class="btn-primary-dental">Đăng Ký Khám Ưu Tiên</a>
+        <a href="san-pham.html" class="btn-outline-dental">Xem Bảng Giá Dịch Vụ</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer-dental">
+    <div class="footer-wrap-dental">
+      <div class="footer-col-dental">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
+          <div class="brand-icon">✚</div>
+          <div class="brand-text">
+            <span class="brand-title" style="color:#fff;">ASPEN <span>DENTAL</span></span>
+            <span class="brand-subtitle" style="color:#7dd3fc;">Viện Nha Khoa Quốc Tế</span>
+          </div>
+        </a>
+        <p>Hệ thống nha khoa kỹ thuật số tiêu chuẩn quốc tế, tiên phong trong cấy ghép Implant không đau và thẩm mỹ nụ cười toàn diện.</p>
+        <p style="margin-top:1rem; font-size:0.8rem; color:#64748b;">* Giao diện mẫu demo #MS34 thuộc Thư Viện Theme RackerWeb.</p>
+      </div>
+
+      <div class="footer-col-dental">
+        <h4>Dịch Vụ Chuyên Sâu</h4>
+        <ul>
+          <li><a href="san-pham.html">Trồng răng Implant kỹ thuật số</a></li>
+          <li><a href="san-pham.html">Niềng răng trong suốt Invisalign</a></li>
+          <li><a href="san-pham.html">Dán sứ Veneer Emax siêu mỏng</a></li>
+          <li><a href="san-pham.html">Nhổ răng khôn sóng Piezotome</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col-dental">
+        <h4>Thông Tin Bệnh Nhân</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Đội ngũ Bác sĩ chuyên khoa</a></li>
+          <li><a href="gioi-thieu.html">Công nghệ chẩn đoán CT ConeBeam</a></li>
+          <li><a href="lien-he.html">Chính sách bảo hành & Trả góp 0%</a></li>
+          <li><a href="lien-he.html">Bảo lãnh viện phí bảo hiểm</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-dental">
+        <h4>Hệ Thống Phòng Khám</h4>
+        <p><strong>TP.HCM:</strong> 128 Nguyễn Huệ, Phường Bến Nghé, Quận 1</p>
+        <p style="margin-top:0.4rem;"><strong>Hà Nội:</strong> 88 Cầu Giấy, Phường Quan Hoa, Quận Cầu Giấy</p>
+        <p style="margin-top:0.4rem;"><strong>Hotline 24/7:</strong> <a href="https://zalo.me/0971183939" style="color:#38bdf8; font-weight:700;">0971 183 939</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Nha khoa Aspen - demo 34. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+
+    <div class="footer-bottom-dental">
+      <span>© 2026 Viện Nha Khoa Quốc Tế Aspen Dental — Giao diện mẫu #MS34. All rights reserved.</span>
+      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
+  <script src="js/app.js"></script>
 </body>
 </html>

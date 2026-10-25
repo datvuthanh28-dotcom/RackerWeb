@@ -1,94 +1,346 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food demo 07 | Khac Official Demo</title>
-  <meta name="description" content="">
+  <title>COOL ORGANIC — Nông Trại Hữu Cơ & Thực Phẩm Sạch (#MS07)</title>
+  <meta name="description" content="Cool Organic — Cửa hàng thực phẩm hữu cơ chuẩn USDA & VietGAP. Rau củ quả thu hoạch sớm mỗi ngày, hạt dinh dưỡng, thịt sạch và gói hộp rau gia đình định kỳ.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation back to theme library -->
+
+  <!-- Library Return Bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS07</strong> thuộc Thư Viện Theme.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS07 · Thực Phẩm & Nông Sản Sạch</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">
-        Food demo 07
-        <span>MS07</span>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">Trang Chủ</a></li>
-          <li><a href="san-pham.html"></a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">🌱</div>
+        <div>
+          <span class="brand-title">COOL <span>ORGANIC</span></span>
+          <span class="brand-subtitle">Farm-To-Table Clean Food</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="active">Trang Chủ</a>
+        <a href="san-pham.html">Nông Sản Sạch</a>
+        <a href="#hop-rau">Hộp Rau Định Kỳ</a>
+        <a href="gioi-thieu.html">Nông Trại Hữu Cơ</a>
+        <a href="lien-he.html">Cửa Hàng & Giao Hàng</a>
       </nav>
-      <div class="header-actions">
-        <button type="button" class="cart-trigger">Giỏ Hàng (<span id="cart-count">0</span>)</button>
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="header-cta-group">
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-hotline">
+          0971 183 939
+        </a>
+        <button type="button" class="btn-cart-trigger">
+          <span>Giỏ Hàng</span>
+          (<span class="cart-count-badge">0</span>)
+        </button>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
   </header>
 
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html" class="active">Trang Chủ</a>
+    <a href="san-pham.html">Cửa Hàng Nông Sản</a>
+    <a href="#hop-rau">Đăng Ký Hộp Rau Tuần</a>
+    <a href="gioi-thieu.html">Câu Chuyện Nông Trại</a>
+    <a href="lien-he.html">Địa Chỉ Cửa Hàng</a>
+    <div style="margin-top:auto; font-size:0.85rem; color:var(--text-muted);">
+      <p>Giao hỏa tốc 2 giờ: <strong style="color:var(--farm-green-dark);">0971 183 939</strong></p>
+      <p>Mở cửa: 06:30 – 21:00 hàng ngày</p>
+    </div>
+  </aside>
+
+  <!-- Cart Sidebar -->
+  <aside class="cart-sidebar-farm" id="cart-sidebar">
+    <div class="cart-head">
+      <h3>Giỏ Thực Phẩm Sạch</h3>
+      <button id="cart-close-btn" style="background:none; border:none; font-size:1.4rem; cursor:pointer;">✕</button>
+    </div>
+    <div class="cart-items-list" id="cart-items-list">
+      <div class="cart-empty-text">Giỏ thực phẩm của bạn đang trống.<br>Hãy chọn nông sản sạch tươi ngon nhé!</div>
+    </div>
+    <div class="cart-foot" id="cart-foot" style="display:none;">
+      <div class="cart-total-row">
+        <span>Tạm tính:</span>
+        <span id="cart-total-price">0đ</span>
+      </div>
+      <button class="btn-checkout-zalo" id="btn-checkout-zalo">Đặt Giao Hàng Qua Zalo</button>
+    </div>
+  </aside>
+
   <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1></h1>
-        <p>Trải nghiệm dịch vụ chuyên nghiệp, chuẩn mực thiết kế tối ưu và công nghệ tiên tiến nhất từ Food demo 07.</p>
+    <!-- Hero Section -->
+    <section class="hero-organic">
+      <div>
+        <span class="badge-eco">
+          <span>🌿</span> 100% Thuần Khiết Từ Nông Trại Đà Lạt
+        </span>
+        <h1 class="hero-title-organic">Nông Sản Tươi Lành, <span>Bữa Cơm An Tâm</span> Cho Cả Gia Đình</h1>
+        <p class="hero-desc-organic">
+          Rau củ hữu cơ được thu hoạch lúc 4 giờ sáng tại nông trại Đơn Dương, đóng thùng giữ lạnh và giao tận cửa bếp nhà bạn trong vòng 2 giờ.
+        </p>
         <div class="hero-btns">
-          <a href="san-pham.html" class="btn-primary">Khám Phá Ngay</a>
-          <a href="lien-he.html" class="btn-outline">Nhận Tư Vấn</a>
+          <a href="san-pham.html" class="btn-primary-farm">Mua Nông Sản Hôm Nay</a>
+          <a href="#hop-rau" class="btn-outline-farm">Đăng Ký Gói Hộp Rau Tuần</a>
         </div>
       </div>
-      <div class="hero-image">
-        <img src="assets/banner.webp" alt="Food demo 07 Preview Banner">
+
+      <div class="hero-banner-box">
+        <img src="assets/banner.webp" alt="Nông sản hữu cơ tươi ngon tại Cool Organic">
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-title">
-        <h2></h2>
-        <p>Lựa chọn tiêu biểu được khách hàng tin tưởng và đánh giá cao nhất</p>
+    <!-- Commitments Strip -->
+    <div class="commitments-strip">
+      <div class="commitments-grid">
+        <div class="com-item">
+          <div class="com-icon">🥬</div>
+          <div class="com-info">
+            <h4>Canh Tác Không Hóa Chất</h4>
+            <p>Tuyệt đối không phân bón vô cơ, không thuốc trừ sâu, sử dụng vi sinh hữu cơ</p>
+          </div>
+        </div>
+        <div class="com-item">
+          <div class="com-icon">🚚</div>
+          <div class="com-info">
+            <h4>Giao Hỏa Tốc Giữ Lạnh</h4>
+            <p>Bảo quản nhiệt độ 8-12°C suốt quá trình vận chuyển, giữ trọn độ tươi giòn</p>
+          </div>
+        </div>
+        <div class="com-item">
+          <div class="com-icon">📋</div>
+          <div class="com-info">
+            <h4>Nguồn Gốc Minh Bạch</h4>
+            <p>Mỗi túi rau đều có mã QR truy xuất nhật ký gieo trồng và ngày thu hoạch</p>
+          </div>
+        </div>
+        <div class="com-item">
+          <div class="com-icon">🔄</div>
+          <div class="com-info">
+            <h4>Đổi Trả Miễn Phí 100%</h4>
+            <p>Bồi hoàn ngay nếu nông sản bị dập nát hoặc không đạt độ tươi cam kết</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fresh Produce Showcase -->
+    <section class="section-farm">
+      <div class="section-header-farm">
+        <span class="section-subtitle-farm">Thu Hoạch Hôm Nay</span>
+        <h2 class="section-title-farm">Nông Sản Sạch Tươi Mới Vừa Về Kệ</h2>
+        <p style="color:var(--text-muted); margin-top:0.6rem;">Được kiểm định dư lượng nitrat và vi sinh đạt tiêu chuẩn an toàn sinh học</p>
       </div>
 
-      <div class="grid">
+      <!-- Filter Tabs -->
+      <div class="farm-tabs">
+        <button class="farm-tab-btn active" data-filter="all">Tất Cả Sản Phẩm</button>
+        <button class="farm-tab-btn" data-filter="rau-cu">Rau Củ Quả Đà Lạt</button>
+        <button class="farm-tab-btn" data-filter="trai-cay">Trái Cây Nhiệt Đới</button>
+        <button class="farm-tab-btn" data-filter="hat-dinh-duong">Hạt & Ngũ Cốc Dinh Dưỡng</button>
+      </div>
 
+      <!-- Produce Grid -->
+      <div class="produce-grid">
+        <!-- Item 1 -->
+        <div class="produce-card" data-category="rau-cu">
+          <div class="produce-img-box">
+            <span class="produce-tag">Thu hoạch sớm</span>
+            <img src="assets/banner.webp" alt="Xà lách thủy canh hữu cơ">
+          </div>
+          <div class="produce-body">
+            <h3 class="produce-name">Xà Lách Thủy Canh Mỡ Đà Lạt</h3>
+            <p class="produce-desc">Lá mềm mướt giòn ngọt, giàu chất xơ và vitamin A, thích hợp trộn salad dầu giấm hoặc cuốn thịt.</p>
+            <div class="produce-footer">
+              <span class="produce-price">35.000đ <span class="produce-unit">/ túi 500g</span></span>
+              <button class="btn-buy-produce" onclick="addProduceToCart('Xà Lách Thủy Canh Mỡ (500g)', '35.000đ')">+ Mua ngay</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="produce-card" data-category="rau-cu">
+          <div class="produce-img-box">
+            <span class="produce-tag">Hữu cơ chuẩn USDA</span>
+            <img src="assets/banner.webp" alt="Cà chua bi cherry giòn ngọt">
+          </div>
+          <div class="produce-body">
+            <h3 class="produce-name">Cà Chua Bi Cherry Đỏ Giòn Ngọt</h3>
+            <p class="produce-desc">Vỏ mỏng căng bóng, vị ngọt đậm đà xen lẫn chua thanh tự nhiên, giàu hoạt chất lycopene chống oxy hóa.</p>
+            <div class="produce-footer">
+              <span class="produce-price">48.000đ <span class="produce-unit">/ hộp 500g</span></span>
+              <button class="btn-buy-produce" onclick="addProduceToCart('Cà Chua Bi Cherry (500g)', '48.000đ')">+ Mua ngay</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="produce-card" data-category="trai-cay">
+          <div class="produce-img-box">
+            <span class="produce-tag">VietGAP loại 1</span>
+            <img src="assets/banner.webp" alt="Dưa lưới Nhật Bản ngọt thanh">
+          </div>
+          <div class="produce-body">
+            <h3 class="produce-name">Dưa Lưới Taka Nhật Bản (Ruột Cam)</h3>
+            <p class="produce-desc">Thịt dưa giòn rụm, độ ngọt brix 14-15 chuẩn Nhật, hương thơm thảo mộc đặc trưng mát lạnh.</p>
+            <div class="produce-footer">
+              <span class="produce-price">85.000đ <span class="produce-unit">/ kg (trái 1.4 - 1.8kg)</span></span>
+              <button class="btn-buy-produce" onclick="addProduceToCart('Dưa Lưới Taka Nhật Bản', '85.000đ')">+ Mua ngay</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="produce-card" data-category="hat-dinh-duong">
+          <div class="produce-img-box">
+            <span class="produce-tag">Sấy mộc không muối</span>
+            <img src="assets/banner.webp" alt="Quả óc chó nếp sấy mộc">
+          </div>
+          <div class="produce-body">
+            <h3 class="produce-name">Quả Óc Chó Nếp Sấy Mộc Tự Nhiên</h3>
+            <p class="produce-desc">Giàu Omega-3 và chất béo lành mạnh tốt cho não bộ và tim mạch, không tẩm ướp hương liệu phụ gia.</p>
+            <div class="produce-footer">
+              <span class="produce-price">145.000đ <span class="produce-unit">/ hũ 400g</span></span>
+              <button class="btn-buy-produce" onclick="addProduceToCart('Quả Óc Chó Sấy Mộc (400g)', '145.000đ')">+ Mua ngay</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weekly Veggie Subscription Box -->
+    <section class="section-farm" style="padding-top:0;" id="hop-rau">
+      <div class="veggie-box-section">
+        <div class="veggie-box-content">
+          <span style="font-size:0.8rem; letter-spacing:0.2em; text-transform:uppercase; color:#86efac; font-weight:700;">Dịch Vụ Đi Chợ Thông Minh</span>
+          <h3>Gói Hộp Rau Hữu Cơ Định Kỳ Giao Tận Bếp</h3>
+          <p>
+            Không còn phải lo lắng hôm nay ăn gì hay vất vả đi chợ sớm. Cool Organic chuẩn bị sẵn 5-8 loại rau củ hữu cơ tươi ngon theo mùa, sơ chế cơ bản và giao đều đặn mỗi Thứ 2 & Thứ 5 hàng tuần.
+          </p>
+          <ul style="list-style:none; margin-bottom:2rem;">
+            <li style="margin-bottom:0.6rem; color:#dcfce7;">✓ Đủ dinh dưỡng cho gia đình 3 – 5 người ăn trong 3 ngày</li>
+            <li style="margin-bottom:0.6rem; color:#dcfce7;">✓ Menu rau thay đổi theo từng tuần, không trùng lặp</li>
+            <li style="margin-bottom:0.6rem; color:#dcfce7;">✓ Miễn phí vận chuyển tận nhà và tặng kèm túi lá thơm pha trà</li>
+          </ul>
+          <p style="font-size:0.95rem; color:#fef08a; font-weight:700;">
+            Chỉ từ 199.000đ / hộp 4kg rau củ sạch tươi rói!
+          </p>
+        </div>
+
+        <div class="sub-form-card">
+          <h4>Đăng Ký Nhận Hộp Rau Dùng Thử</h4>
+          <p>Tận hưởng bữa ăn lành mạnh cùng ưu đãi giảm 20% cho hộp đầu tiên</p>
+
+          <form id="sub-box-form">
+            <div class="f-grid">
+              <div class="f-group">
+                <label for="sub-name">Họ và tên *</label>
+                <input type="text" id="sub-name" class="f-input" placeholder="Nguyễn Thu Hương" required>
+              </div>
+              <div class="f-group">
+                <label for="sub-phone">Số điện thoại / Zalo *</label>
+                <input type="tel" id="sub-phone" class="f-input" placeholder="09xx xxx xxx" required>
+              </div>
+              <div class="f-group">
+                <label for="sub-combo">Chọn gói hộp rau</label>
+                <select id="sub-combo" class="f-select">
+                  <option value="Hộp Gia Đình Nhỏ (3-4kg rau củ)">Hộp Gia Đình Nhỏ (3-4kg / 199.000đ)</option>
+                  <option value="Hộp Dinh Dưỡng Toàn Diện (5-6kg + trái cây)">Hộp Toàn Diện (5-6kg + Trái cây / 299.000đ)</option>
+                  <option value="Hộp Eat Clean & Salad (Tập trung rau xanh)">Hộp Eat Clean & Salad (250.000đ)</option>
+                </select>
+              </div>
+              <div class="f-group">
+                <label for="sub-freq">Tần suất giao hàng</label>
+                <select id="sub-freq" class="f-select">
+                  <option value="Giao 1 lần dùng thử">Giao 1 lần dùng thử</option>
+                  <option value="Giao định kỳ 1 lần / tuần">Giao định kỳ 1 lần / tuần (Thứ 2)</option>
+                  <option value="Giao định kỳ 2 lần / tuần">Giao định kỳ 2 lần / tuần (T2 & T5)</option>
+                </select>
+              </div>
+              <div class="f-group full">
+                <label for="sub-addr">Địa chỉ nhận hàng chi tiết *</label>
+                <input type="text" id="sub-addr" class="f-input" placeholder="Số nhà, tên đường, phường/quận..." required>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit-sub">Xác Nhận Đăng Ký Giao Hộp Rau</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
-  <aside class="floating-zalo">
-    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Zalo 0971183939">Zalo</a>
-  </aside>
+  <!-- Floating Actions -->
+  <div class="floating-actions-farm">
+    <div class="floating-cart-farm" title="Xem giỏ hàng">
+      <span>Giỏ Hàng (<span class="cart-count-badge">0</span>)</span>
+    </div>
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="floating-zalo-farm" title="Chat Zalo Nông Trại 0971183939">
+      <svg width="24" height="24" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.82 3 3 8.37 3 15c0 3.75 1.86 7.12 4.77 9.38l-1.42 5.14c-.16.58.37 1.11.95.95l5.58-1.54C13.93 29.23 14.95 29.4 16 29.4c7.18 0 13-5.37 13-12S23.18 3 16 3z"/></svg>
+    </a>
+  </div>
 
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Food demo 07</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Khac. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <!-- Toast -->
+  <div class="toast-farm" id="toast-farm" role="status"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer-farm">
+    <div class="footer-wrap-farm">
+      <div class="footer-col-farm">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
+          <div class="brand-icon" style="background:#fff; color:var(--farm-green);">🌱</div>
+          <div>
+            <span class="brand-title" style="color:#fff;">COOL <span>ORGANIC</span></span>
+            <span class="brand-subtitle" style="color:#a7f3d0;">Farm-To-Table Clean Food</span>
+          </div>
+        </a>
+        <p>Hệ thống cung ứng thực phẩm sạch hữu cơ thuận tự nhiên, kết nối nông sản sạch từ trang trại trực tiếp đến bàn ăn gia đình.</p>
+        <p style="margin-top:1rem; font-size:0.8rem; color:#6ee7b7;">* Giao diện mẫu demo #MS07 thuộc Thư Viện Theme RackerWeb.</p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html"></a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+
+      <div class="footer-col-farm">
+        <h4>Nông Sản Nổi Bật</h4>
+        <ul>
+          <li><a href="san-pham.html">Rau củ hữu cơ Đà Lạt</a></li>
+          <li><a href="san-pham.html">Trái cây nhiệt đới VietGAP</a></li>
+          <li><a href="san-pham.html">Hạt dinh dưỡng sấy mộc</a></li>
+          <li><a href="san-pham.html">Gói hộp rau tuần gia đình</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col-farm">
+        <h4>Về Nông Trại</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Nông trại hữu cơ 10ha Đơn Dương</a></li>
+          <li><a href="gioi-thieu.html">Tiêu chuẩn canh tác 5 Không</a></li>
+          <li><a href="lien-he.html">Chính sách giao hàng giữ lạnh</a></li>
+          <li><a href="lien-he.html">Cam kết hoàn tiền & Đổi trả</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-farm">
+        <h4>Cửa Hàng & Hotline</h4>
+        <p><strong>Cửa hàng:</strong> 48 Nguyễn Thị Minh Khai, Phường Đa Kao, Quận 1, TP.HCM</p>
+        <p style="margin-top:0.4rem;"><strong>Giờ mở cửa:</strong> 06:30 – 21:00 hàng ngày</p>
+        <p style="margin-top:0.4rem;"><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:#fff; font-weight:700;">0971 183 939</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Food demo 07. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+
+    <div class="footer-bottom-farm">
+      <span>© 2026 Cool Organic — Giao diện mẫu #MS07. All rights reserved.</span>
+      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 

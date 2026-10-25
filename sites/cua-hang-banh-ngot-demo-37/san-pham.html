@@ -1,74 +1,385 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Danh Mục  | Cửa hàng bánh ngọt - demo 37</title>
+  <title>Thực Đơn Bánh Tươi — THE FLOUR & STONE (#MS37)</title>
+  <meta name="description" content="Thực đơn đầy đủ các loại bánh nướng tươi mỗi ngày: Bánh mì Sourdough, Croissant bơ Pháp, Pain au Chocolat, Danish phô mai, Tart hoa quả và Cafe Specialty.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .bakery-menu-hero {
+      background: linear-gradient(180deg, rgba(41,24,17,0.7) 0%, rgba(41,24,17,0.92) 100%),
+                  url('assets/banner.jpg') center/cover no-repeat;
+      padding: 5.5rem 1.5rem 3.5rem;
+      text-align: center;
+      color: #fff;
+    }
+    .bakery-menu-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      margin-bottom: 0.8rem;
+    }
+    .b-cat-section {
+      margin-bottom: 4.5rem;
+    }
+    .b-cat-strip {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .b-cat-strip h2 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--bakery-espresso);
+      white-space: nowrap;
+    }
+    .b-cat-line {
+      height: 1px;
+      background: var(--border-cream);
+      width: 100%;
+    }
+    .menu-compact-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .b-item-card {
+      background: #fff;
+      border: 1px solid var(--border-cream);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.6rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1.2rem;
+      box-shadow: var(--shadow-warm);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .b-item-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--bakery-crust);
+    }
+    .b-item-detail h4 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--bakery-espresso);
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .b-item-detail p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+    .b-badge-mini {
+      font-size: 0.68rem;
+      background: rgba(196, 120, 60, 0.12);
+      color: var(--bakery-crust);
+      padding: 0.15rem 0.45rem;
+      border-radius: 3px;
+      font-family: var(--font-sans);
+      font-weight: 700;
+    }
+    .b-item-act {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .b-item-price {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--bakery-crust);
+    }
+    .btn-quick-order {
+      background: var(--bakery-cream);
+      border: 1px solid var(--border-cream);
+      color: var(--bakery-espresso);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.35rem 0.8rem;
+      border-radius: 99px;
+      cursor: pointer;
+      margin-top: 0.6rem;
+      transition: all 0.2s;
+    }
+    .btn-quick-order:hover {
+      background: var(--bakery-crust);
+      color: #fff;
+      border-color: var(--bakery-crust);
+    }
+    @media (max-width: 768px) {
+      .menu-compact-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Library return bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS37</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS37 · Bánh Ngọt & Đồ Ăn Nhẹ</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Cửa hàng bánh ngọt - demo 37 <span>MS37</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html" class="active"></a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-title">THE FLOUR & STONE</span>
+        <span class="brand-subtitle">Artisanal Bakery & Pastry</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Trang Chủ</a>
+        <a href="san-pham.html" class="active">Thực Đơn Bánh</a>
+        <a href="index.html#dat-banh">Đặt Bánh Tiệc</a>
+        <a href="gioi-thieu.html">Về Tiệm Bánh</a>
+        <a href="lien-he.html">Liên Hệ & Ghé Tiệm</a>
       </nav>
-      <div class="header-actions">
-        <button type="button" class="cart-trigger">Giỏ Hàng (<span id="cart-count">0</span>)</button>
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="header-cta-group">
+        <button type="button" class="btn-cart-bakery" onclick="location.href='san-pham.html'">
+          <span>Giỏ Bánh</span>
+          (<span id="cart-count">0</span>)
+        </button>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-order-nav">
+          Đặt Hàng Zalo
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Toàn Bộ Danh Mục </h1>
-    <p>Khám phá đầy đủ các gói sản phẩm và giải pháp cao cấp từ Cửa hàng bánh ngọt - demo 37</p>
-  </div>
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html">Trang Chủ</a>
+    <a href="san-pham.html" class="active">Thực Đơn Bánh Tươi</a>
+    <a href="index.html#dat-banh">Bánh Sinh Nhật Theo Yêu Cầu</a>
+    <a href="gioi-thieu.html">Câu Chuyện Bột & Đá</a>
+    <a href="lien-he.html">Địa Chỉ & Giờ Mở Cửa</a>
+  </aside>
 
-  <main class="section">
-    <div class="grid">
+  <main>
+    <section class="bakery-menu-hero">
+      <div class="container">
+        <span class="section-subtitle-bakery" style="color:var(--bakery-gold);">Thực Đơn Ra Lò Hôm Nay</span>
+        <h1>Bánh Tươi Nướng Trong Ngày</h1>
+        <p style="color:#d1c4bc; max-width:650px; margin:0 auto; font-size:1.05rem;">
+          Toàn bộ bánh được nướng từ bột mì hữu cơ không tẩy trắng, bơ Pháp Isigny AOP và trứng gà tươi đạt chuẩn VietGAP.
+        </p>
+      </div>
+    </section>
 
-    </div>
+    <section class="section-bakery">
+      <!-- Category 1: Sourdough -->
+      <div class="b-cat-section">
+        <div class="b-cat-strip">
+          <h2>01. Bánh Mì Men Tự Nhiên Sourdough</h2>
+          <div class="b-cat-line"></div>
+        </div>
+        <div class="menu-compact-list">
+          <div class="b-item-card">
+            <div class="b-item-detail">
+              <h4>Sourdough Nguyên Bản Rustic <span class="b-badge-mini">Bán chạy</span></h4>
+              <p>Ủ chậm 36 giờ, vỏ bánh cánh gián giòn rụm, vị chua thanh dịu từ men tự nhiên và ruột bánh dẻo bùi.</p>
+            </div>
+            <div class="b-item-act">
+              <span class="b-item-price">85.000đ</span>
+              <button class="btn-quick-order" onclick="addPastryToCart('Sourdough Rustic', '85.000đ')">+ Thêm</button>
+            </div>
+          </div>
+
+          <div class="b-item-card">
+            <div class="b-item-detail">
+              <h4>Sourdough Hạt Óc Chó & Nho Khô</h4>
+              <p>Bổ sung hạt óc chó béo bùi và nho đen sấy dẻo tự nhiên, thơm mùi lúa mì nguyên cám thích hợp ăn sáng.</p>
+            </div>
+            <div class="b-item-act">
+              <span class="b-item-price">110.000đ</span>
+              <button class="btn-quick-order" onclick="addPastryToCart('Sourdough Óc Chó', '110.000đ')">+ Thêm</button>
+            </div>
+          </div>
+
+          <div class="b-item-card">
+            <div class="b-item-detail">
+              <h4>Baguette Truyền Thống Pháp</h4>
+              <p>Thanh bánh mì dài chuẩn vị Paris, vỏ mỏng giòn tan phát ra tiếng rôm rốp khi bẻ, ruột tổ ong xốp nhẹ.</p>
+            </div>
+            <div class="b-item-act">
+              <span class="b-item-price">35.000đ</span>
+              <button class="btn-quick-order" onclick="addPastryToCart('Baguette Pháp', '35.000đ')">+ Thêm</button>
+            </div>
+          </div>
+
+          <div class="b-item-card">
+            <div class="b-item-detail">
+              <h4>Bánh Focaccia Hương Thảo & Cà Chua Bi</h4>
+              <p>Bánh mì dẹt kiểu Ý ngập tràn dầu olive nguyên chất, lá hương thảo vườn nhà và muối biển Maldon giòn tan.</p>
+            </div>
+            <div class="b-item-act">
+              <span class="b-item-price">75.000đ</span>
+              <button class="btn-quick-order" onclick="addPastryToCart('Focaccia Hương Thảo', '75.000đ')">+ Thêm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 2: Croissant & Pastry -->
+      <div class="b-cat-section">
+        <div class="b-cat-strip">
+          <h2>02. Croissant & Bánh Ngàn Lớp (Viennoiserie)</h2>
+          <div class="b-cat-line"></div>
+        </div>
+        <div class="menu-compact-list">
+          <div class="b-item-card">
+            <div class="b-item-detail">
+              <h4>Croissant Bơ Isigny Truyền Thống <span class="b-badge-mini">Biểu tượng</span></h4>
+              <p>Cán bơ 27 lớp giòn xốp rã rời trong miệng, thơm lừng hương bơ sữa tự nhiên mà không gây ngấy.</p>
+            </div>
+            <div class="b-item-act">
+              <span class="b-item-price">45.000đ</span>
+              <button class="btn-quick-order" onclick="addPastryToCart('Croissant Bơ Isigny', '45.000đ')">+ Thêm</button>
+            </div>
+          </div>
+
+          <div class="b-item-card">
+            <div class="b-item-detail">
+              <h4>Pain au Chocolat (Chocolate Bỉ)</h4>
+              <p>Hai thanh socola đen nguyên chất 65% Callebaut Bỉ bọc trong lớp vỏ ngàn lớp vàng óng.</p>
+            </div>
+            <div class="b-item-act">
+              <span class="b-item-price">52.000đ</span>
+              <button class="btn-quick-order" onclick="addPastryToCart('Pain au Chocolat', '52.000đ')">+ Thêm</button>
+            </div>
+          </div>
+
+          <div class="b-item-card">
+            <div class="b-item-detail">
+              <h4>Cinnamon Roll Cuộn Quế Men Nở</h4>
+              <p>Bánh mì ngọt cuộn bột quế thơm lừng, phủ lớp kem phô mai chảy chua ngọt béo ngậy khó cưỡng.</p>
+            </div>
+            <div class="b-item-act">
+              <span class="b-item-price">48.000đ</span>
+              <button class="btn-quick-order" onclick="addPastryToCart('Cinnamon Roll', '48.000đ')">+ Thêm</button>
+            </div>
+          </div>
+
+          <div class="b-item-card">
+            <div class="b-item-detail">
+              <h4>Croissant Trứng Muối Chà Bông Cay</h4>
+              <p>Sự kết hợp Đông - Tây với nhân sốt trứng muối chảy béo bùi, rắc chà bông heo sợi giòn và rong biển.</p>
+            </div>
+            <div class="b-item-act">
+              <span class="b-item-price">55.000đ</span>
+              <button class="btn-quick-order" onclick="addPastryToCart('Croissant Trứng Muối', '55.000đ')">+ Thêm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 3: Bánh Ngọt & Tart -->
+      <div class="b-cat-section">
+        <div class="b-cat-strip">
+          <h2>03. Bánh Ngọt, Tart & Tráng Miệng</h2>
+          <div class="b-cat-line"></div>
+        </div>
+        <div class="menu-compact-list">
+          <div class="b-item-card">
+            <div class="b-item-detail">
+              <h4>Tart Phô Mai Quả Mọng Mùa Hè <span class="b-badge-mini">Yêu thích</span></h4>
+              <p>Kem phô mai mềm mịn, đế bánh bơ giòn và quả mâm xôi, dâu tây, việt quất tươi mọng nước.</p>
+            </div>
+            <div class="b-item-act">
+              <span class="b-item-price">75.000đ</span>
+              <button class="btn-quick-order" onclick="addPastryToCart('Tart Quả Mọng', '75.000đ')">+ Thêm</button>
+            </div>
+          </div>
+
+          <div class="b-item-card">
+            <div class="b-item-detail">
+              <h4>New York Cheesecake Nướng Cháy</h4>
+              <p>Bánh phô mai nướng kiểu Basque vỏ ngoài xém thơm caramen nồng nàn, phần lõi tan chảy béo ngậy.</p>
+            </div>
+            <div class="b-item-act">
+              <span class="b-item-price">68.000đ</span>
+              <button class="btn-quick-order" onclick="addPastryToCart('Cheesecake Nướng Cháy', '68.000đ')">+ Thêm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Pre-order CTA -->
+    <section class="section-bakery" style="padding-top:0;">
+      <div style="background:#fff; border:1px solid var(--border-cream); border-radius:var(--radius); padding:4rem 2rem; text-align:center; box-shadow:var(--shadow-warm);">
+        <span class="section-subtitle-bakery">Giữ Bánh Trước Khi Hết Mẻ</span>
+        <h3 style="font-family:var(--font-serif); font-size:2.2rem; color:var(--bakery-espresso); margin-bottom:1rem;">Bánh Luôn Hết Sớm Vào Cuối Tuần</h3>
+        <p style="color:var(--text-muted); max-width:600px; margin:0 auto 2.5rem;">Bạn có thể nhắn tin Zalo giữ bánh trước để ghé tiệm lấy lúc tan tầm hoặc yêu cầu giao hỏa tốc tận nhà.</p>
+        <div style="display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap;">
+          <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-primary-bakery">Nhắn Zalo Giữ Bánh (0971183939)</a>
+          <a href="index.html#dat-banh" class="btn-secondary-bakery">Đặt Bánh Sinh Nhật Theo Yêu Cầu</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Cửa hàng bánh ngọt - demo 37</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Thực phẩm. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <!-- Toast -->
+  <div class="toast-bakery" id="toast-bakery" role="status"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer-bakery">
+    <div class="footer-wrap-bakery">
+      <div class="footer-col-bakery">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
+          <span class="brand-title" style="color:var(--bakery-gold);">THE FLOUR & STONE</span>
+          <span class="brand-subtitle">Artisanal Bakery & Pastry</span>
+        </a>
+        <p>Tiệm bánh thủ công tôn vinh kỹ thuật lên men tự nhiên chậm và nguồn nguyên liệu hữu cơ thuần khiết.</p>
+        <p style="margin-top:1rem; font-size:0.8rem; color:#7b6e66;">* Giao diện mẫu demo #MS37 thuộc Thư Viện Theme RackerWeb.</p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html"></a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+
+      <div class="footer-col-bakery">
+        <h4>Menu Bánh</h4>
+        <ul>
+          <li><a href="san-pham.html">Bánh mì Sourdough men sống</a></li>
+          <li><a href="san-pham.html">Croissant bơ Pháp ngàn lớp</a></li>
+          <li><a href="san-pham.html">Tart trái cây tươi mùa hè</a></li>
+          <li><a href="san-pham.html">Bánh sinh nhật kem tươi</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col-bakery">
+        <h4>Về Tiệm</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Hành trình nuôi men tự nhiên</a></li>
+          <li><a href="gioi-thieu.html">Cam kết nguyên liệu sạch</a></li>
+          <li><a href="lien-he.html">Chỉ đường ghé tiệm</a></li>
+          <li><a href="lien-he.html">Chính sách giao hàng bánh tươi</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-bakery">
+        <h4>Tiệm Bánh & Cà Phê</h4>
+        <p><strong>Địa chỉ:</strong> 101 Phố Lò Đúc, Quận Hai Bà Trưng, Hà Nội</p>
+        <p style="margin-top:0.4rem;"><strong>Giờ đón khách:</strong> 06:30 – 21:30 hàng ngày</p>
+        <p style="margin-top:0.4rem;"><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--bakery-gold); font-weight:700;">0971 183 939</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Cửa hàng bánh ngọt - demo 37. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+
+    <div class="footer-bottom-bakery">
+      <span>© 2026 The Flour & Stone — Giao diện mẫu #MS37. All rights reserved.</span>
+      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
   <script src="js/app.js"></script>
 </body>
 </html>

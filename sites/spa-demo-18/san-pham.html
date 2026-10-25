@@ -1,98 +1,372 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Danh Mục Mỹ phẩm | Spa demo 18</title>
+  <title>Bảng Giá & Gói Dịch Vụ — AN NHIÊN Spa & Wellness (#MS18)</title>
+  <meta name="description" content="Bảng giá các gói trị liệu toàn thân, chăm sóc da mặt chuyên sâu, gội đầu dưỡng sinh và liệu trình thải độc tại An Nhiên Spa. Đặt hẹn trực tuyến nhận ưu đãi 10%.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .spa-menu-hero {
+      background: linear-gradient(180deg, rgba(31,51,42,0.6) 0%, rgba(31,51,42,0.85) 100%),
+                  url('assets/images/hero.jpg') center/cover no-repeat;
+      padding: 5.5rem 1.5rem 3.5rem;
+      text-align: center;
+      color: #fff;
+    }
+    .spa-menu-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      margin-bottom: 0.8rem;
+    }
+    .spa-menu-hero p {
+      color: #d1ded7;
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+    .service-group-section {
+      margin-bottom: 4.5rem;
+    }
+    .group-header-line {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .group-header-line h2 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--sage-dark);
+      white-space: nowrap;
+    }
+    .group-divider {
+      height: 1px;
+      background: var(--border-color);
+      width: 100%;
+    }
+    .service-list-rows {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem;
+    }
+    .service-item-box {
+      background: var(--linen-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-soft);
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .service-item-box:hover {
+      border-color: var(--champagne);
+      transform: translateY(-3px);
+    }
+    .service-item-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.6rem;
+    }
+    .service-item-head h4 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--sage-dark);
+    }
+    .service-item-price {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--sage-primary);
+      white-space: nowrap;
+    }
+    .service-item-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+    .service-item-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0.8rem;
+      border-top: 1px solid #f2ede6;
+    }
+    .service-duration-badge {
+      font-size: 0.78rem;
+      color: var(--champagne);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    @media (max-width: 768px) {
+      .service-list-rows {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Library Return Bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS18</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS18 · Spa & Chăm Sóc Sức Khỏe</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Spa demo 18 <span>MS18</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html" class="active">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-title">AN NHIÊN</span>
+        <span class="brand-subtitle">Spa & Wellness Retreat</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Trang Chủ</a>
+        <a href="san-pham.html" class="active">Gói Dịch Vụ</a>
+        <a href="index.html#triet-ly">Triết Lý Trị Liệu</a>
+        <a href="gioi-thieu.html">Về An Nhiên</a>
+        <a href="index.html#dat-lich">Đặt Lịch Hẹn</a>
+        <a href="lien-he.html">Liên Hệ</a>
       </nav>
-      <div class="header-actions">
-        <button type="button" class="cart-trigger">Giỏ Hàng (<span id="cart-count">0</span>)</button>
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="header-cta-group">
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-hotline">
+          0971 183 939
+        </a>
+        <a href="index.html#dat-lich" class="btn-book-nav">Đặt Lịch Ngay</a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Toàn Bộ Danh Mục Mỹ phẩm</h1>
-    <p>Khám phá đầy đủ các gói sản phẩm và giải pháp cao cấp từ Spa demo 18</p>
-  </div>
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html">Trang Chủ</a>
+    <a href="san-pham.html" class="active">Gói Dịch Vụ & Liệu Trình</a>
+    <a href="index.html#triet-ly">Triết Lý Trị Liệu</a>
+    <a href="gioi-thieu.html">Về An Nhiên Retreat</a>
+    <a href="index.html#dat-lich">Đặt Lịch Hẹn</a>
+    <a href="lien-he.html">Địa Chỉ & Liên Hệ</a>
+  </aside>
 
-  <main class="section">
-    <div class="grid">
-        <div class="card">
-          <span class="card-badge">Best Seller</span>
-          <h3>Serum Phục Hồi Bio-Peptide</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">480.000đ</div>
-          <button type="button" class="btn-buy" data-name="Serum Phục Hồi Bio-Peptide">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Khuyên dùng</span>
-          <h3>Kem Dưỡng Trắng Da Chiết Xuất Hoa Hồng</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">590.000đ</div>
-          <button type="button" class="btn-buy" data-name="Kem Dưỡng Trắng Da Chiết Xuất Hoa Hồng">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Organic</span>
-          <h3>Sữa Rửa Mặt Tạo Bọt Dịu Nhẹ</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">280.000đ</div>
-          <button type="button" class="btn-buy" data-name="Sữa Rửa Mặt Tạo Bọt Dịu Nhẹ">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Chống nắng</span>
-          <h3>Kem Chống Nắng Quang Phổ Rộng SPF50+</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">420.000đ</div>
-          <button type="button" class="btn-buy" data-name="Kem Chống Nắng Quang Phổ Rộng SPF50+">Thêm Giỏ Hàng</button>
+  <main>
+    <section class="spa-menu-hero">
+      <div class="container">
+        <span class="section-subtitle-spa" style="color:var(--champagne-light);">Menu Trị Liệu Thư Thái</span>
+        <h1>Bảng Giá Dịch Vụ An Nhiên</h1>
+        <p>Tất cả liệu trình đều được thực hiện trong không gian khép kín riêng tư với quy trình khử khuẩn và thảo mộc tự nhiên 100%.</p>
+      </div>
+    </section>
+
+    <section class="section-spa">
+      <!-- Group 1: Trị Liệu Body & Thải Độc -->
+      <div class="service-group-section">
+        <div class="group-header-line">
+          <h2>01. Trị Liệu Toàn Thân & Thải Độc Kinh Lạc</h2>
+          <div class="group-divider"></div>
         </div>
-    </div>
+        <div class="service-list-rows">
+          <div class="service-item-box">
+            <div>
+              <div class="service-item-head">
+                <h4>Massage Đá Nóng Himalaya & Thảo Mộc</h4>
+                <span class="service-item-price">580.000đ</span>
+              </div>
+              <p class="service-item-desc">Đá muối khoáng tự nhiên làm ấm sâu cơ bắp, kết hợp ấn huyệt giải phóng đau mỏi thắt lưng và vai gáy kéo dài.</p>
+            </div>
+            <div class="service-item-foot">
+              <span class="service-duration-badge">⏱ 90 Phút</span>
+              <button class="btn-book-service" onclick="selectSpaService('Massage Đá Nóng Himalaya')">Đặt lịch</button>
+            </div>
+          </div>
+
+          <div class="service-item-box">
+            <div>
+              <div class="service-item-head">
+                <h4>Trị Liệu Cổ Vai Gáy Chuyên Sâu</h4>
+                <span class="service-item-price">390.000đ</span>
+              </div>
+              <p class="service-item-desc">Đặc trị hội chứng văn phòng, căng cứng đốt sống cổ. Đắp bùn khoáng nóng ngải cứu thảo dược lưu thông máu huyết.</p>
+            </div>
+            <div class="service-item-foot">
+              <span class="service-duration-badge">⏱ 60 Phút</span>
+              <button class="btn-book-service" onclick="selectSpaService('Trị Liệu Cổ Vai Gáy')">Đặt lịch</button>
+            </div>
+          </div>
+
+          <div class="service-item-box">
+            <div>
+              <div class="service-item-head">
+                <h4>Thải Độc Giác Hơi & Ngâm Bồn Gỗ Pơ-Mu</h4>
+                <span class="service-item-price">480.000đ</span>
+              </div>
+              <p class="service-item-desc">Ngâm bồn lá thảo dược người Dao đỏ vùng cao giúp giãn mao mạch, loại bỏ hàn khí và tái tạo năng lượng cho cơ thể.</p>
+            </div>
+            <div class="service-item-foot">
+              <span class="service-duration-badge">⏱ 75 Phút</span>
+              <button class="btn-book-service" onclick="selectSpaService('Thải Độc Giác Hơi')">Đặt lịch</button>
+            </div>
+          </div>
+
+          <div class="service-item-box">
+            <div>
+              <div class="service-item-head">
+                <h4>Massage Thụy Điển Tinh Dầu Oải Hương</h4>
+                <span class="service-item-price">520.000đ</span>
+              </div>
+              <p class="service-item-desc">Các đường vuốt dài êm dịu theo dòng chảy bạch huyết, thư giãn nhẹ nhàng, phù hợp cho người nhạy cảm với lực mạnh.</p>
+            </div>
+            <div class="service-item-foot">
+              <span class="service-duration-badge">⏱ 75 Phút</span>
+              <button class="btn-book-service" onclick="selectSpaService('Massage Thụy Điển')">Đặt lịch</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 2: Chăm Sóc Da Mặt Cao Cấp -->
+      <div class="service-group-section">
+        <div class="group-header-line">
+          <h2>02. Chăm Sóc & Phục Hồi Da Mặt Chuyên Sâu</h2>
+          <div class="group-divider"></div>
+        </div>
+        <div class="service-list-rows">
+          <div class="service-item-box">
+            <div>
+              <div class="service-item-head">
+                <h4>Chăm Sóc Da Tế Bào Tươi & Điện Di Collagen</h4>
+                <span class="service-item-price">490.000đ</span>
+              </div>
+              <p class="service-item-desc">Tẩy tế bào chết enzym đu đủ sinh học, điện di dưỡng chất cấp ẩm sâu tầng trung bì, phục hồi độ đàn hồi và sáng da.</p>
+            </div>
+            <div class="service-item-foot">
+              <span class="service-duration-badge">⏱ 60 Phút</span>
+              <button class="btn-book-service" onclick="selectSpaService('Chăm Sóc Da Tế Bào Tươi')">Đặt lịch</button>
+            </div>
+          </div>
+
+          <div class="service-item-box">
+            <div>
+              <div class="service-item-head">
+                <h4>Trẻ Hóa Nâng Cơ Thanh Lăn Thạch Anh</h4>
+                <span class="service-item-price">620.000đ</span>
+              </div>
+              <p class="service-item-desc">Massage mặt kỹ thuật Gua Sha ngọc bích tự nhiên giúp thon gọn viền hàm, giảm nọng cằm và kích thích sản sinh collagen.</p>
+            </div>
+            <div class="service-item-foot">
+              <span class="service-duration-badge">⏱ 75 Phút</span>
+              <button class="btn-book-service" onclick="selectSpaService('Trẻ Hóa Nâng Cơ Thạch Anh')">Đặt lịch</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 3: Dưỡng Sinh Đông Y & Gội Đầu -->
+      <div class="service-group-section">
+        <div class="group-header-line">
+          <h2>03. Gội Đầu Dưỡng Sinh & Thư Giãn Tinh Thần</h2>
+          <div class="group-divider"></div>
+        </div>
+        <div class="service-list-rows">
+          <div class="service-item-box">
+            <div>
+              <div class="service-item-head">
+                <h4>Gội Đầu Dưỡng Sinh Thảo Mộc Dao Đỏ</h4>
+                <span class="service-item-price">320.000đ</span>
+              </div>
+              <p class="service-item-desc">Nước gội thảo dược 100% tự nhiên không silicon, massage 14 huyệt đạo đầu mặt cổ và rửa tai bằng bọt lông vũ êm dịu.</p>
+            </div>
+            <div class="service-item-foot">
+              <span class="service-duration-badge">⏱ 70 Phút</span>
+              <button class="btn-book-service" onclick="selectSpaService('Gội Đầu Dưỡng Sinh')">Đặt lịch</button>
+            </div>
+          </div>
+
+          <div class="service-item-box">
+            <div>
+              <div class="service-item-head">
+                <h4>Combo Thư Giãn Toàn Diện An Nhiên</h4>
+                <span class="service-item-price">790.000đ</span>
+              </div>
+              <p class="service-item-desc">Gói trọn gói kết hợp massage body đá nóng 60 phút + gội đầu dưỡng sinh thảo mộc 60 phút. Tặng kèm ngâm chân nước gừng ấm.</p>
+            </div>
+            <div class="service-item-foot">
+              <span class="service-duration-badge">⏱ 120 Phút</span>
+              <button class="btn-book-service" onclick="selectSpaService('Combo Thư Giãn Toàn Diện')">Đặt lịch</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking CTA Banner -->
+    <section class="section-spa" style="background:#f4f0e8; border-radius:var(--radius); border:1px solid var(--champagne); text-align:center; padding:3.5rem 1.5rem; margin-bottom:5rem;">
+      <h3 style="font-family:var(--font-serif); font-size:2rem; color:var(--sage-dark); margin-bottom:0.8rem;">Bạn Cần Tư Vấn Gói Liệu Trình Riêng?</h3>
+      <p style="color:var(--text-muted); max-width:600px; margin:0 auto 2rem;">Chuyên viên chăm sóc An Nhiên sẵn sàng lắng nghe tình trạng mệt mỏi của bạn để gợi ý phác đồ phục hồi phù hợp nhất.</p>
+      <div style="display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap;">
+        <a href="index.html#dat-lich" class="btn-primary-spa">Đi Đến Phiếu Đặt Hẹn</a>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-secondary-spa" style="background:var(--sage-primary); color:#fff; border-color:var(--sage-primary);">Chat Zalo Tư Vấn Miễn Phí</a>
+      </div>
+    </section>
   </main>
 
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Spa demo 18</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Mỹ phẩm. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <!-- Toast -->
+  <div class="toast-spa" id="toast-spa" role="status"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer-spa">
+    <div class="footer-wrap-spa">
+      <div class="footer-col-spa">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
+          <span class="brand-title" style="color:var(--champagne-light);">AN NHIÊN</span>
+          <span class="brand-subtitle">Spa & Wellness Retreat</span>
+        </a>
+        <p>Ốc đảo thư giãn và nuôi dưỡng sự cân bằng tự nhiên cho cơ thể và tâm trí giữa nhịp sống bận rộn.</p>
+        <p style="margin-top:1rem; font-size:0.8rem; color:#6b8779;">* Giao diện mẫu demo #MS18 thuộc Thư Viện Theme RackerWeb.</p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+
+      <div class="footer-col-spa">
+        <h4>Dịch Vụ</h4>
+        <ul>
+          <li><a href="san-pham.html">Massage thảo dược đá nóng</a></li>
+          <li><a href="san-pham.html">Chăm sóc da mặt chuyên sâu</a></li>
+          <li><a href="san-pham.html">Gội đầu dưỡng sinh Đông y</a></li>
+          <li><a href="san-pham.html">Gói trị liệu thải độc toàn thân</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col-spa">
+        <h4>An Nhiên Spa</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Triết lý Thân - Tâm - Trí</a></li>
+          <li><a href="gioi-thieu.html">Đội ngũ kỹ thuật viên</a></li>
+          <li><a href="lien-he.html">Quy tắc ứng xử Spa (Etiquette)</a></li>
+          <li><a href="lien-he.html">Chỉ đường & Đỗ xe</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-spa">
+        <h4>Liên Hệ & Đón Khách</h4>
+        <p><strong>Địa chỉ:</strong> Biệt thự số 16, Đường Hoa Sứ, Quận Phú Nhuận, TP. Hồ Chí Minh</p>
+        <p style="margin-top:0.4rem;"><strong>Giờ phục vụ:</strong> 09:00 – 21:30 (Hàng ngày)</p>
+        <p style="margin-top:0.4rem;"><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--champagne-light); font-weight:600;">0971 183 939</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Spa demo 18. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+
+    <div class="footer-bottom-spa">
+      <span>© 2026 An Nhiên Spa & Wellness Retreat — Giao diện mẫu #MS18. All rights reserved.</span>
+      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
   <script src="js/app.js"></script>
 </body>
 </html>

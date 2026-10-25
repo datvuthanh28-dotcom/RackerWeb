@@ -1,81 +1,274 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giới Thiệu | Cosmetic demo 01</title>
+  <title>Về Lumière Beauty — Triết lý thương hiệu | Giao diện mẫu #MS01</title>
+  <meta name="description" content="Lumière Beauty — câu chuyện thương hiệu mỹ phẩm thuần chay cao cấp. Triết lý, sứ mệnh và cam kết về sự bền vững từ thiên nhiên.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/subpage.css">
 </head>
 <body>
+
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS01</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS01</strong> · Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Cosmetic demo 01 <span>MS01</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html" class="active">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+  <header id="site-header">
+    <div class="header-inner">
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Mở menu"><span></span><span></span><span></span></button>
+      <a href="index.html" class="brand" id="brand-logo"><span class="brand-name">Lumière</span><span class="brand-sub">Beauty</span></a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="san-pham.html" class="nav-link">Sản phẩm</a>
+        <a href="san-pham.html#routine" class="nav-link">Quy trình dưỡng da</a>
+        <a href="gioi-thieu.html" class="nav-link active">Về chúng tôi</a>
+        <a href="lien-he.html" class="nav-link">Liên hệ</a>
       </nav>
       <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener" class="btn-zalo" id="header-zalo-btn" aria-label="Tư vấn Zalo">
+          <svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16 3C8.82 3 3 8.37 3 15c0 3.75 1.86 7.12 4.77 9.38l-1.42 5.14c-.16.58.37 1.11.95.95l5.58-1.54C13.93 29.23 14.95 29.4 16 29.4c7.18 0 13-5.37 13-12S23.18 3 16 3z"/></svg>
+          <span>Tư vấn Zalo</span>
+        </a>
+        <button class="cart-btn" id="cart-btn" aria-label="Giỏ hàng">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Về Chúng Tôi — Cosmetic demo 01</h1>
-    <p>Hành trình khẳng định uy tín và chất lượng dẫn đầu trong lĩnh vực Mỹ phẩm</p>
-  </div>
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html" class="mobile-nav-link">Trang chủ</a>
+    <a href="san-pham.html" class="mobile-nav-link">Sản phẩm</a>
+    <a href="gioi-thieu.html" class="mobile-nav-link active">Về chúng tôi</a>
+    <a href="lien-he.html" class="mobile-nav-link">Liên hệ</a>
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener" class="mobile-nav-zalo">Tư vấn Zalo: 0971183939</a>
+  </nav>
 
-  <div class="subpage-content">
-    <p style="margin-bottom: 1.5rem; font-size: 1.05rem;"><strong>Cosmetic demo 01</strong> tự hào là đối tác tin cậy, mang đến cho quý khách hàng các sản phẩm và dịch vụ Mỹ phẩm đạt tiêu chuẩn cao nhất. Với triết lý lấy sự hài lòng của khách hàng làm trọng tâm, chúng tôi không ngừng đổi mới công nghệ và quy trình phục vụ.</p>
-    <div style="background: var(--surface); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
-      <h3 style="margin-bottom: 1rem; color: var(--primary);">Giá Trị Cốt Lõi</h3>
-      <ul style="padding-left: 1.25rem; line-height: 2;">
-        <li><strong>Chất Lượng Vượt Trội:</strong> Mọi chi tiết đều được hoàn thiện tỉ mỉ và kiểm định nghiêm ngặt.</li>
-        <li><strong>Tận Tâm & Minh Bạch:</strong> Tư vấn trung thực, báo giá rõ ràng, không phát sinh chi phí ẩn.</li>
-        <li><strong>Đồng Hành Dài Lâu:</strong> Hỗ trợ kỹ thuật và chăm sóc khách hàng 24/7 qua số Hotline Zalo 0971183939.</li>
-      </ul>
-    </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="lien-he.html" class="btn-primary">Liên Hệ Ngay Với Chúng Tôi</a>
-    </div>
-  </div>
-
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Cosmetic demo 01</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Mỹ phẩm. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header"><h3>Giỏ hàng</h3><button class="cart-close" id="cart-close" aria-label="Đóng">✕</button></div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty" id="cart-empty">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c9b89a" stroke-width="1.2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <p>Giỏ hàng đang trống</p>
+        <a href="san-pham.html" class="btn-shop-now">Khám phá sản phẩm</a>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+    </div>
+    <div class="cart-footer" id="cart-footer" style="display:none">
+      <div class="cart-total"><span>Tạm tính</span><span id="cart-total-amount">0đ</span></div>
+      <p class="cart-note">Giá chỉ mang tính minh họa.</p>
+      <a href="lien-he.html" class="btn-checkout">Liên hệ đặt hàng qua Zalo</a>
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="sp-hero">
+      <div class="container">
+        <p class="section-eyebrow">Câu chuyện thương hiệu</p>
+        <h1>Về Lumière Beauty</h1>
+        <p class="sp-hero-desc">Được thành lập năm 2019 bởi những người tin vào sức mạnh của thiên nhiên, chúng tôi đã và đang nghiên cứu để tạo ra những sản phẩm chăm sóc da thực sự phù hợp với làn da phụ nữ Việt Nam.</p>
+      </div>
+    </section>
+
+    <!-- STORY SECTION -->
+    <section class="about-story">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <img src="assets/images/editorial.jpg" alt="Lumière Beauty — câu chuyện thương hiệu" width="600" height="400" loading="lazy">
+          <div class="about-quote">
+            <blockquote>"Vẻ đẹp thực sự không đến từ che giấu, mà từ sự nuôi dưỡng chân thực."</blockquote>
+            <cite>— Nguyên tắc sáng lập Lumière Beauty</cite>
+          </div>
+        </div>
+        <div class="about-text">
+          <h2>Bắt đầu từ một câu hỏi</h2>
+          <p>Vào năm 2019, nhà sáng lập của Lumière nhận ra rằng hầu hết sản phẩm chăm sóc da phổ biến trên thị trường Việt Nam được thiết kế cho khí hậu ôn đới — không phù hợp với làn da sống trong điều kiện nhiệt đới nóng ẩm, thường xuyên tiếp xúc ánh nắng mặt trời cường độ cao.</p>
+          <p>Câu hỏi đặt ra là: <em>Liệu có thể tạo ra một dòng sản phẩm chăm sóc da thực sự được nghiên cứu và bào chế cho làn da người Việt?</em> Từ đó, hành trình 5 năm nghiên cứu, phát triển và hoàn thiện công thức của Lumière Beauty bắt đầu.</p>
+          <p>Mỗi sản phẩm trong danh mục của chúng tôi đều trải qua ít nhất 18 tháng thử nghiệm trên da người Việt trước khi chính thức ra mắt. Không phải vì quy định bắt buộc, mà vì chúng tôi tin rằng đó là điều đúng đắn cần làm.</p>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-num">2019</span><span>Năm thành lập</span></div>
+            <div class="stat"><span class="stat-num">18+</span><span>Tháng thử nghiệm mỗi sản phẩm</span></div>
+            <div class="stat"><span class="stat-num">100%</span><span>Nguyên liệu thuần chay</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="about-values">
+      <div class="container">
+        <header class="section-header section-header--center">
+          <p class="section-eyebrow">Triết lý của chúng tôi</p>
+          <h2>Ba nguyên tắc không thể nhân nhượng</h2>
+        </header>
+        <div class="principles-grid">
+          <div class="principle-card">
+            <div class="principle-num" aria-hidden="true">I</div>
+            <h3>Trung thực với thành phần</h3>
+            <p>Mọi thành phần trong sản phẩm Lumière đều được liệt kê đầy đủ, giải thích rõ ràng và có thể truy xuất nguồn gốc. Chúng tôi không sử dụng thuật ngữ marketing mơ hồ để che đậy thành phần không lành mạnh.</p>
+            <ul class="principle-list">
+              <li>Không paraben, không sulfate, không hương liệu nhân tạo</li>
+              <li>Không thử nghiệm trên động vật</li>
+              <li>Không dầu khoáng và silicone bịt tắc lỗ chân lông</li>
+            </ul>
+          </div>
+          <div class="principle-card">
+            <div class="principle-num" aria-hidden="true">II</div>
+            <h3>Hiệu quả được chứng minh</h3>
+            <p>Chúng tôi không đưa ra tuyên bố nào chưa được xác minh. Mỗi hiệu quả được ghi trên bao bì đều dựa trên kết quả thử nghiệm lâm sàng có kiểm soát hoặc nghiên cứu độc lập.</p>
+            <ul class="principle-list">
+              <li>Thử nghiệm trên người Việt trong điều kiện khí hậu thực tế</li>
+              <li>Kết quả được đo lường bằng thiết bị chuyên dụng</li>
+              <li>Không phóng đại hoặc bịa đặt kết quả</li>
+            </ul>
+          </div>
+          <div class="principle-card">
+            <div class="principle-num" aria-hidden="true">III</div>
+            <h3>Trách nhiệm với môi trường</h3>
+            <p>Từ việc lựa chọn nguyên liệu đến thiết kế bao bì, mỗi quyết định của chúng tôi đều cân nhắc đến tác động môi trường. Đây không phải marketing — đây là cách chúng tôi làm việc từ ngày đầu tiên.</p>
+            <ul class="principle-list">
+              <li>Bao bì từ vật liệu tái chế hoặc có thể tái chế</li>
+              <li>Nguyên liệu được thu hoạch bền vững</li>
+              <li>Sản xuất với lượng khí thải CO₂ được bù đắp</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="about-process">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">Quy trình</p>
+          <h2>Từ thiên nhiên đến làn da bạn</h2>
+          <p class="section-desc">Mỗi sản phẩm Lumière trải qua 6 giai đoạn nghiêm ngặt trước khi đến tay người dùng</p>
+        </header>
+        <div class="process-timeline">
+          <div class="process-step">
+            <div class="process-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="process-content">
+              <h4>1. Lựa chọn nguyên liệu</h4>
+              <p>Tìm kiếm và kiểm tra nguồn nguyên liệu thiên nhiên từ các nhà cung cấp được chứng nhận trồng trọt bền vững trong và ngoài nước.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m4 0h-4m0 0H5m4 0v7m0-7h10m-10 0v7m10-7v7"/></svg>
+            </div>
+            <div class="process-content">
+              <h4>2. Nghiên cứu công thức</h4>
+              <p>Đội ngũ nghiên cứu và phát triển của chúng tôi thử nghiệm hàng trăm công thức để tìm ra sự kết hợp tối ưu giữa hiệu quả và an toàn.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="process-content">
+              <h4>3. Kiểm tra an toàn</h4>
+              <p>Tất cả sản phẩm được kiểm tra độ kích ứng, dị ứng và an toàn lâm sàng tại phòng thí nghiệm được chứng nhận theo tiêu chuẩn quốc tế.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <div class="process-content">
+              <h4>4. Thử nghiệm người dùng</h4>
+              <p>Nhóm tình nguyện viên người Việt sử dụng sản phẩm trong 18 tuần, với kết quả được đo lường định kỳ bằng thiết bị phân tích da chuyên nghiệp.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <div class="process-content">
+              <h4>5. Sản xuất chuẩn GMP</h4>
+              <p>Sản xuất trong nhà máy đạt chứng nhận GMP (Good Manufacturing Practice), đảm bảo chất lượng đồng nhất từng lô hàng.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="process-content">
+              <h4>6. Kiểm soát chất lượng cuối</h4>
+              <p>Mỗi lô hàng được kiểm tra ngẫu nhiên trước khi xuất xưởng. Sản phẩm không đạt chuẩn sẽ không bao giờ đến tay khách hàng.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container cta-inner">
+        <div class="cta-text">
+          <h2>Bắt đầu hành trình chăm sóc da của bạn</h2>
+          <p>Nhận tư vấn miễn phí từ chuyên gia Lumière — chúng tôi sẽ giúp bạn tìm đúng sản phẩm cho loại da của mình.</p>
+        </div>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener" class="btn-cta-zalo" id="about-cta-zalo">Tư vấn qua Zalo ngay</a>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <a href="https://zalo.me/0971183939" target="_blank" rel="noopener" class="floating-zalo" id="floating-zalo" title="Tư vấn Zalo 0971183939" aria-label="Liên hệ Zalo">
+    <svg viewBox="0 0 32 32" fill="white" aria-hidden="true"><path d="M16 3C8.82 3 3 8.37 3 15c0 3.75 1.86 7.12 4.77 9.38l-1.42 5.14c-.16.58.37 1.11.95.95l5.58-1.54C13.93 29.23 14.95 29.4 16 29.4c7.18 0 13-5.37 13-12S23.18 3 16 3z"/></svg>
+  </a>
+
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand-col">
+        <div class="footer-logo"><span>Lumière</span><span>Beauty</span></div>
+        <p>Mỹ phẩm thuần chay cao cấp, nghiên cứu cho làn da phụ nữ Việt Nam. Giao diện mẫu #MS01.</p>
+      </div>
+      <div class="footer-links-col">
+        <h4>Sản phẩm</h4>
+        <ul>
+          <li><a href="san-pham.html">Tất cả sản phẩm</a></li>
+          <li><a href="san-pham.html?cat=cleansing">Làm sạch da</a></li>
+          <li><a href="san-pham.html?cat=treatment">Serum & Điều trị</a></li>
+          <li><a href="san-pham.html?cat=moisturizing">Dưỡng ẩm</a></li>
+          <li><a href="san-pham.html?cat=sun">Chống nắng</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+      <div class="footer-links-col">
+        <h4>Thông tin</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Về Lumière Beauty</a></li>
+          <li><a href="gioi-thieu.html#sustainability">Cam kết bền vững</a></li>
+          <li><a href="san-pham.html#routine">Quy trình dưỡng da</a></li>
+          <li><a href="lien-he.html">Liên hệ & Tư vấn</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-col">
+        <h4>Liên hệ tư vấn</h4>
+        <p>Zalo: <a href="https://zalo.me/0971183939">0971183939</a></p>
+        <p>Hỗ trợ: 8:00 – 22:00 hàng ngày</p>
+        <p class="footer-demo-note">Đây là giao diện mẫu demo — không phải doanh nghiệp thực tế.</p>
       </div>
     </div>
     <div class="footer-bottom">
-      &copy; 2026 Cosmetic demo 01. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <span>© 2026 Lumière Beauty — Giao diện mẫu #MS01. Thuộc Thư Viện RackerWeb.</span>
+      <a href="../../index.html">← Quay lại thư viện</a>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
+  <script src="js/app.js" defer></script>
 </body>
 </html>

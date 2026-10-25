@@ -1,98 +1,472 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Danh Mục Món ăn | Nhà hàng quán ăn Halu - demo 28</title>
+  <title>Thực Đơn Tinh Hoa — Nhà Hàng HALU | Giao diện mẫu #MS28</title>
+  <meta name="description" content="Khám phá thực đơn phong phú hơn 50 món ăn Việt Nam truyền thống tại Halu. Phở thố đá, bánh xèo miền Tây, cơm niêu cá kho tộ và các set tiệc gia đình.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .menu-page-hero {
+      background: linear-gradient(180deg, rgba(18,16,14,0.7) 0%, #12100e 100%),
+                  url('assets/images/hero.jpg') center/cover no-repeat;
+      padding: 5rem 1.5rem 3rem;
+      text-align: center;
+    }
+    .menu-page-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      color: #fff;
+      margin-bottom: 0.8rem;
+    }
+    .menu-page-hero p {
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+    .menu-section-category {
+      margin-bottom: 4.5rem;
+    }
+    .cat-heading-wrap {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .cat-heading-wrap h2 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+    .cat-line {
+      height: 1px;
+      background: var(--border-dark);
+      width: 100%;
+    }
+    .menu-list-compact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .menu-item-row {
+      background: var(--bg-card);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      transition: border-color 0.2s;
+    }
+    .menu-item-row:hover {
+      border-color: var(--gold);
+    }
+    .item-detail h4 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: #fff;
+      margin-bottom: 0.3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .item-detail p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .item-badge {
+      font-size: 0.68rem;
+      background: rgba(212, 163, 89, 0.2);
+      color: var(--gold);
+      padding: 0.15rem 0.45rem;
+      border-radius: 3px;
+      font-family: var(--font-sans);
+    }
+    .item-action {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .item-price {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .btn-quick-add {
+      background: none;
+      border: 1px solid var(--border-dark);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    .btn-quick-add:hover {
+      color: #fff;
+      border-color: var(--gold);
+    }
+    @media (max-width: 768px) {
+      .menu-list-compact {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Library return bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS28</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS28 · Ẩm Thực & Nhà Hàng</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Nhà hàng quán ăn Halu - demo 28 <span>MS28</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html" class="active">Món ăn</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-title">HALU</span>
+        <span class="brand-subtitle">Vietnamese Cuisine</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Trang Chủ</a>
+        <a href="san-pham.html" class="active">Thực Đơn</a>
+        <a href="index.html#khong-gian">Không Gian</a>
+        <a href="gioi-thieu.html">Về Halu</a>
+        <a href="index.html#dat-ban">Đặt Bàn</a>
+        <a href="lien-he.html">Liên Hệ</a>
       </nav>
-      <div class="header-actions">
-        <button type="button" class="cart-trigger">Giỏ Hàng (<span id="cart-count">0</span>)</button>
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="header-cta-group">
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-hotline">
+          0971 183 939
+        </a>
+        <a href="index.html#dat-ban" class="btn-reserve-nav">Đặt Bàn Ngay</a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Toàn Bộ Danh Mục Món ăn</h1>
-    <p>Khám phá đầy đủ các gói sản phẩm và giải pháp cao cấp từ Nhà hàng quán ăn Halu - demo 28</p>
-  </div>
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html">Trang Chủ</a>
+    <a href="san-pham.html" class="active">Thực Đơn Chi Tiết</a>
+    <a href="index.html#khong-gian">Không Gian Nhà Hàng</a>
+    <a href="gioi-thieu.html">Câu Chuyện Halu</a>
+    <a href="index.html#dat-ban">Đặt Bàn Trước</a>
+    <a href="lien-he.html">Liên Hệ & Bản Đồ</a>
+  </aside>
 
-  <main class="section">
-    <div class="grid">
-        <div class="card">
-          <span class="card-badge">Đặc biệt</span>
-          <h3>Set Bánh Mì Men Tự Nhiên Artisan</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">120.000đ</div>
-          <button type="button" class="btn-buy" data-name="Set Bánh Mì Men Tự Nhiên Artisan">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Tráng miệng</span>
-          <h3>Bánh Mousse Trái Cây Tươi</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">85.000đ</div>
-          <button type="button" class="btn-buy" data-name="Bánh Mousse Trái Cây Tươi">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Yêu thích</span>
-          <h3>Combo Bữa Sáng Dinh Dưỡng</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">155.000đ</div>
-          <button type="button" class="btn-buy" data-name="Combo Bữa Sáng Dinh Dưỡng">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Thức uống</span>
-          <h3>Trà Hoa Cúc Mật Ong Thượng Hạng</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">65.000đ</div>
-          <button type="button" class="btn-buy" data-name="Trà Hoa Cúc Mật Ong Thượng Hạng">Thêm Giỏ Hàng</button>
+  <main>
+    <section class="menu-page-hero">
+      <div class="container">
+        <span class="section-subtitle">Tinh Tuyển Ẩm Thực 3 Miền</span>
+        <h1>Thực Đơn Nhà Hàng Halu</h1>
+        <p>Mỗi món ăn là sự cân bằng tuyệt đối giữa hương - sắc - vị, chế biến từ các sản vật tươi lành khắp mọi miền đất nước.</p>
+      </div>
+    </section>
+
+    <!-- Visual Showcase of Top 3 Dishes -->
+    <section class="section-dining" style="padding-top: 1rem; padding-bottom: 3rem;">
+      <div class="menu-grid">
+        <div class="dish-card">
+          <div class="dish-image-box">
+            <span class="dish-tag">Món Chữ Ký</span>
+            <img src="assets/images/pho.jpg" alt="Phở bò thố đá">
+          </div>
+          <div class="dish-content">
+            <div class="dish-header">
+              <h3 class="dish-title">Phở Bò Thố Đá Halu</h3>
+              <span class="dish-price">185.000đ</span>
+            </div>
+            <p class="dish-desc">Thố đá tự nhiên giữ sôi 300°C. Thịt bò tơ thơm ngọt, nước dùng thanh ngọt tự nhiên không bột ngọt.</p>
+            <div class="dish-footer">
+              <span class="dish-meta">Ninh 24 giờ · Bò tươi</span>
+              <button class="btn-select-dish" onclick="selectDishToOrder('Phở Bò Thố Đá Halu')">+ Đặt trước món này</button>
+            </div>
+          </div>
         </div>
-    </div>
+
+        <div class="dish-card">
+          <div class="dish-image-box">
+            <span class="dish-tag">Món Ăn Dân Gian</span>
+            <img src="assets/images/banh-xeo.jpg" alt="Bánh xèo vàng giòn">
+          </div>
+          <div class="dish-content">
+            <div class="dish-header">
+              <h3 class="dish-title">Bánh Xèo Hoàng Kim</h3>
+              <span class="dish-price">145.000đ</span>
+            </div>
+            <p class="dish-desc">Bột gạo ngâm xay cối đá, đổ mỏng giòn rụm với tôm sông, thịt heo ba chỉ và rổ 15 loại rau rừng.</p>
+            <div class="dish-footer">
+              <span class="dish-meta">Kèm rau rừng Tây Ninh</span>
+              <button class="btn-select-dish" onclick="selectDishToOrder('Bánh Xèo Hoàng Kim')">+ Đặt trước món này</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card">
+          <div class="dish-image-box">
+            <span class="dish-tag">Cơm Niêu Đồng Quê</span>
+            <img src="assets/images/space-interior.jpg" alt="Cá bống kho tộ">
+          </div>
+          <div class="dish-content">
+            <div class="dish-header">
+              <h3 class="dish-title">Cơm Niêu Cá Bống Kho Tộ</h3>
+              <span class="dish-price">165.000đ</span>
+            </div>
+            <p class="dish-desc">Cá bống sông kho kẹo trong niêu đất, thịt cá săn chắc, ăn cùng lớp cơm cháy giòn tan đáy nồi.</p>
+            <div class="dish-footer">
+              <span class="dish-meta">Cơm cháy đáy nồi</span>
+              <button class="btn-select-dish" onclick="selectDishToOrder('Cơm Niêu Cá Bống Kho Tộ')">+ Đặt trước món này</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comprehensive Categorized Menu -->
+    <section class="section-dining" style="padding-top: 0;">
+      
+      <!-- Category 1: Khai Vị & Món Ăn Chơi -->
+      <div class="menu-section-category">
+        <div class="cat-heading-wrap">
+          <h2>01. Khai Vị & Món Ăn Chơi</h2>
+          <div class="cat-line"></div>
+        </div>
+        <div class="menu-list-compact">
+          <div class="menu-item-row">
+            <div class="item-detail">
+              <h4>Gỏi Củ Hũ Dừa Tôm Thịt <span class="item-badge">Bán chạy</span></h4>
+              <p>Củ hũ dừa Bến Tre giòn ngọt, tôm sú tươi, thịt luộc thái mỏng cùng hành phi thơm nức và bánh phồng tôm.</p>
+            </div>
+            <div class="item-action">
+              <span class="item-price">135.000đ</span>
+              <button class="btn-quick-add" onclick="selectDishToOrder('Gỏi Củ Hũ Dừa')">+ Thêm</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-detail">
+              <h4>Nem Cua Bể Hải Phòng <span class="item-badge">Đặc sản</span></h4>
+              <p>Vỏ bánh tráng giòn rụm, nhân thịt cua biển Cát Bà tươi rói, mộc nhĩ, nấm hương chấm nước mắm giấm tỏi ớt.</p>
+            </div>
+            <div class="item-action">
+              <span class="item-price">160.000đ</span>
+              <button class="btn-quick-add" onclick="selectDishToOrder('Nem Cua Bể Hải Phòng')">+ Thêm</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-detail">
+              <h4>Chả Cá Lã Vọng Thì Là</h4>
+              <p>Cá lăng sông nướng than hoa, xào nóng tại bàn cùng thì là, hành hoa, ăn kèm bún tươi, đậu phộng và mắm tôm.</p>
+            </div>
+            <div class="item-action">
+              <span class="item-price">195.000đ</span>
+              <button class="btn-quick-add" onclick="selectDishToOrder('Chả Cá Lã Vọng')">+ Thêm</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-detail">
+              <h4>Bánh Khọt Tôm Mực Nước Cốt Dừa</h4>
+              <p>Bánh đúc trong khuôn đất, ngoài giòn trong béo ngậy, tôm tươi nguyên con ăn cùng xà lách cải xanh.</p>
+            </div>
+            <div class="item-action">
+              <span class="item-price">120.000đ</span>
+              <button class="btn-quick-add" onclick="selectDishToOrder('Bánh Khọt Tôm Mực')">+ Thêm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 2: Món Chính & Hương Vị Cơm Nhà -->
+      <div class="menu-section-category">
+        <div class="cat-heading-wrap">
+          <h2>02. Món Chính & Hương Vị Cơm Nhà</h2>
+          <div class="cat-line"></div>
+        </div>
+        <div class="menu-list-compact">
+          <div class="menu-item-row">
+            <div class="item-detail">
+              <h4>Bò Tơ Củ Chi Cuốn Rau Rừng <span class="item-badge">Yêu thích</span></h4>
+              <p>Thịt bò tơ non mềm hấp gừng, cuốn bánh tráng Trảng Bàng, rau nhái, lá cóc non chấm mắm nêm đậm đà.</p>
+            </div>
+            <div class="item-action">
+              <span class="item-price">220.000đ</span>
+              <button class="btn-quick-add" onclick="selectDishToOrder('Bò Tơ Cuốn Rau Rừng')">+ Thêm</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-detail">
+              <h4>Sườn Heo Nướng Mật Ong Hoa Cà Phê</h4>
+              <p>Sườn non chặt giẻ, ướp mật ong rừng Tây Nguyên và thảo mộc, nướng vàng cánh gián thơm lừng.</p>
+            </div>
+            <div class="item-action">
+              <span class="item-price">190.000đ</span>
+              <button class="btn-quick-add" onclick="selectDishToOrder('Sườn Nướng Mật Ong')">+ Thêm</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-detail">
+              <h4>Gà Đồi Hấp Lá Chanh & Xôi Vò Hạt Sen</h4>
+              <p>Gà ri thả vườn chắc thịt da vàng giòn, hấp chín tới với muối hột và lá chanh bánh tẻ ăn kèm xôi vò dẻo bùi.</p>
+            </div>
+            <div class="item-action">
+              <span class="item-price">260.000đ</span>
+              <button class="btn-quick-add" onclick="selectDishToOrder('Gà Đồi Hấp Lá Chanh')">+ Thêm</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-detail">
+              <h4>Rau Rừng Xào Tỏi Mỡ Gà</h4>
+              <p>Đọt su su Mộc Châu và rau bò khai hái sớm, xào nhanh trên lửa lớn cùng tỏi cô đơn giòn ngọt tự nhiên.</p>
+            </div>
+            <div class="item-action">
+              <span class="item-price">95.000đ</span>
+              <button class="btn-quick-add" onclick="selectDishToOrder('Rau Rừng Xào Tỏi')">+ Thêm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 3: Nồi Lẩu & Canh Nấu Chậm -->
+      <div class="menu-section-category">
+        <div class="cat-heading-wrap">
+          <h2>03. Nồi Lẩu & Canh Nấu Chậm</h2>
+          <div class="cat-line"></div>
+        </div>
+        <div class="menu-list-compact">
+          <div class="menu-item-row">
+            <div class="item-detail">
+              <h4>Lẩu Riêu Cua Đồng Bắp Bò Sườn Sụn <span class="item-badge">Bếp trưởng khuyên dùng</span></h4>
+              <p>Gạch cua đồng giã tay nổi vàng óng, dấm bỗng nếp chua thanh, bắp bò hoa giòn sần sật và đĩa rau ghém hoa chuối.</p>
+            </div>
+            <div class="item-action">
+              <span class="item-price">395.000đ</span>
+              <button class="btn-quick-add" onclick="selectDishToOrder('Lẩu Riêu Cua Bắp Bò')">+ Thêm</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-detail">
+              <h4>Lẩu Gà Ta Tiềm Ớt Hiểm & Nấm Tươi</h4>
+              <p>Nước lẩu hầm nước dừa tươi ngọt thanh ấm bụng, ớt hiểm xanh the cay dịu nhẹ và 6 loại nấm tươi dinh dưỡng.</p>
+            </div>
+            <div class="item-action">
+              <span class="item-price">375.000đ</span>
+              <button class="btn-quick-add" onclick="selectDishToOrder('Lẩu Gà Ớt Hiểm')">+ Thêm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 4: Tráng Miệng & Thức Uống Bản Địa -->
+      <div class="menu-section-category">
+        <div class="cat-heading-wrap">
+          <h2>04. Tráng Miệng & Thức Uống Bản Địa</h2>
+          <div class="cat-line"></div>
+        </div>
+        <div class="menu-list-compact">
+          <div class="menu-item-row">
+            <div class="item-detail">
+              <h4>Chè Hạt Sen Long Nhãn Cốt Dừa</h4>
+              <p>Hạt sen Huế ninh bở bùi lồng cùi nhãn Hưng Yên giòn ngọt, nước đường phèn hoa bưởi thanh khiết.</p>
+            </div>
+            <div class="item-action">
+              <span class="item-price">55.000đ</span>
+              <button class="btn-quick-add" onclick="selectDishToOrder('Chè Hạt Sen Long Nhãn')">+ Thêm</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-detail">
+              <h4>Trà Thảo Mộc Hoa Vàng Mộc Châu</h4>
+              <p>Trà hoa vàng thượng hạng ủ mật ong bạc hà, uống nóng giải nhiệt, ấm vị và tốt cho tiêu hóa.</p>
+            </div>
+            <div class="item-action">
+              <span class="item-price">65.000đ</span>
+              <button class="btn-quick-add" onclick="selectDishToOrder('Trà Thảo Mộc Hoa Vàng')">+ Thêm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="section-dining" style="background:#181412; border-radius:var(--radius); border:1px solid var(--gold); text-align:center; padding:3.5rem 1.5rem; margin-bottom:5rem;">
+      <h3 style="font-family:var(--font-serif); font-size:2rem; color:var(--gold); margin-bottom:0.8rem;">Quý Khách Đã Chọn Được Món Ưa Thích?</h3>
+      <p style="color:var(--text-muted); max-width:600px; margin:0 auto 2rem;">Đặt bàn trước để nhà hàng chuẩn bị nguyên liệu tươi nhất và phục vụ nhanh chóng khi quý khách đến nơi.</p>
+      <div style="display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap;">
+        <a href="index.html#dat-ban" class="btn-primary-dining">Đi Đến Phiếu Đặt Bàn</a>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-secondary-dining">Nhận Tư Vấn Thực Đơn Tiệc (Zalo)</a>
+      </div>
+    </section>
   </main>
 
-  
-  <footer>
+  <!-- Toast -->
+  <div class="toast-msg" id="toast-msg" role="status"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="footer-wrap">
-      <div>
-        <h3>Nhà hàng quán ăn Halu - demo 28</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Ẩm thực - Nhà hàng. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+      <div class="footer-col">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
+          <span class="brand-title">HALU</span>
+          <span class="brand-subtitle">Vietnamese Cuisine</span>
+        </a>
+        <p>Không gian ẩm thực Việt Nam tinh tế, nơi mỗi món ăn là một câu chuyện về văn hóa và lòng hiếu khách.</p>
+        <p style="margin-top:1rem; font-size:0.82rem; color:#706860;">* Website mẫu demo #MS28 thuộc Thư Viện Giao Diện RackerWeb.</p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Món ăn</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+
+      <div class="footer-col">
+        <h4>Thực Đơn</h4>
+        <ul>
+          <li><a href="san-pham.html">Đặc sản thố đá</a></li>
+          <li><a href="san-pham.html">Cơm niêu & Kho tộ</a></li>
+          <li><a href="san-pham.html">Bánh truyền thống</a></li>
+          <li><a href="san-pham.html">Set tiệc đoàn viên</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col">
+        <h4>Nhà Hàng</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Câu chuyện thương hiệu</a></li>
+          <li><a href="index.html#khong-gian">Hệ thống phòng VIP</a></li>
+          <li><a href="index.html#dat-ban">Đặt bàn tiệc công ty</a></li>
+          <li><a href="lien-he.html">Chỉ đường & Bãi đỗ xe</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Liên Hệ & Đón Khách</h4>
+        <p><strong>Địa chỉ:</strong> 42 Tràng Tiền, Quận Hoàn Kiếm, Hà Nội</p>
+        <p style="margin-top:0.4rem;"><strong>Giờ phục vụ:</strong> 10:00 – 22:30 (Thứ 2 – Chủ Nhật)</p>
+        <p style="margin-top:0.4rem;"><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--gold); font-weight:700;">0971 183 939</a></p>
       </div>
     </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Nhà hàng quán ăn Halu - demo 28. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <span>© 2026 Nhà Hàng Halu — Giao diện mẫu #MS28. All rights reserved.</span>
+      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
   <script src="js/app.js"></script>
 </body>
 </html>

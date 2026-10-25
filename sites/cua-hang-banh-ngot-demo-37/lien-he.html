@@ -1,97 +1,319 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liên Hệ & Tư Vấn | Cửa hàng bánh ngọt - demo 37</title>
+  <title>Liên Hệ & Ghé Tiệm — THE FLOUR & STONE (#MS37)</title>
+  <meta name="description" content="Ghé thăm tiệm bánh The Flour & Stone tại 101 Lò Đúc, Hai Bà Trưng, Hà Nội. Hotline / Zalo: 0971 183 939. Đặt tiệc trà teabreak văn phòng và hướng dẫn hâm nóng bánh tại nhà.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-bakery-hero {
+      background: linear-gradient(180deg, rgba(41,24,17,0.7) 0%, rgba(41,24,17,0.92) 100%),
+                  url('assets/banner.jpg') center/cover no-repeat;
+      padding: 5.5rem 1.5rem 3.5rem;
+      text-align: center;
+      color: #fff;
+    }
+    .contact-bakery-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      margin-bottom: 0.8rem;
+    }
+    .c-bakery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3.5rem;
+      margin-top: 3rem;
+    }
+    .info-card-cream {
+      background: #fff;
+      border: 1px solid var(--border-cream);
+      border-radius: var(--radius);
+      padding: 2.2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-warm);
+    }
+    .b-info-item {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 1.6rem;
+      align-items: flex-start;
+    }
+    .b-info-item:last-child {
+      margin-bottom: 0;
+    }
+    .b-info-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--bakery-cream);
+      border: 1px solid var(--border-cream);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bakery-crust);
+      flex-shrink: 0;
+    }
+    .b-info-text h4 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--bakery-espresso);
+      margin-bottom: 0.25rem;
+    }
+    .b-info-text p, .b-info-text a {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .b-info-text a:hover {
+      color: var(--bakery-crust);
+    }
+    .tips-box {
+      background: #f7ede0;
+      border-radius: var(--radius);
+      padding: 1.8rem;
+    }
+    .tips-box h4 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--bakery-espresso);
+      margin-bottom: 0.6rem;
+    }
+    .tips-box p {
+      font-size: 0.88rem;
+      color: #614a3e;
+      line-height: 1.65;
+    }
+    @media (max-width: 900px) {
+      .c-bakery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Library return bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS37</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS37 · Bánh Ngọt & Đồ Ăn Nhẹ</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Cửa hàng bánh ngọt - demo 37 <span>MS37</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html"></a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html" class="active">Liên Hệ</a></li>
-        </ul>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-title">THE FLOUR & STONE</span>
+        <span class="brand-subtitle">Artisanal Bakery & Pastry</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Trang Chủ</a>
+        <a href="san-pham.html">Thực Đơn Bánh</a>
+        <a href="index.html#dat-banh">Đặt Bánh Tiệc</a>
+        <a href="gioi-thieu.html">Về Tiệm Bánh</a>
+        <a href="lien-he.html" class="active">Liên Hệ & Ghé Tiệm</a>
       </nav>
-      <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="header-cta-group">
+        <button type="button" class="btn-cart-bakery" onclick="location.href='san-pham.html'">
+          <span>Giỏ Bánh</span>
+          (<span id="cart-count">0</span>)
+        </button>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-order-nav">
+          Đặt Hàng Zalo
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Liên Hệ Tư Vấn & Báo Giá</h1>
-    <p>Chúng tôi luôn sẵn sàng lắng nghe và giải đáp mọi yêu cầu của bạn</p>
-  </div>
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html">Trang Chủ</a>
+    <a href="san-pham.html">Thực Đơn Bánh Tươi</a>
+    <a href="index.html#dat-banh">Bánh Sinh Nhật Theo Yêu Cầu</a>
+    <a href="gioi-thieu.html">Câu Chuyện Bột & Đá</a>
+    <a href="lien-he.html" class="active">Địa Chỉ & Giờ Mở Cửa</a>
+  </aside>
 
-  <div class="subpage-content">
-    <div class="contact-grid">
-      <div>
-        <h3>Thông Tin Liên Hệ</h3>
-        <p style="color: #64748b; margin: 1rem 0;">Để nhận báo giá và tư vấn nhanh nhất, vui lòng kết nối trực tiếp qua Zalo hoặc để lại lời nhắn.</p>
-        <p><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p><strong>Thời gian làm việc:</strong> 8:00 - 22:00 hàng ngày</p>
-        <p><strong>Lĩnh vực:</strong> Thực phẩm</p>
+  <main>
+    <section class="contact-bakery-hero">
+      <div class="container">
+        <span class="section-subtitle-bakery" style="color:var(--bakery-gold);">Ghé Thăm Tiệm Bánh</span>
+        <h1>Địa Chỉ & Đặt Tiệc Bánh</h1>
+        <p style="color:#d1c4bc; max-width:650px; margin:0 auto; font-size:1.05rem;">
+          Tiệm mở cửa từ 06:30 sáng đón chào bạn với những mẻ bánh nướng nóng hổi cùng ly cafe rang mộc thơm lừng.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-bakery">
+      <div class="c-bakery-grid">
+        <!-- Info Column -->
+        <div>
+          <div class="info-card-cream">
+            <h3 style="font-family:var(--font-serif); font-size:1.45rem; color:var(--bakery-espresso); margin-bottom:1.6rem;">Địa Điểm & Giờ Mở Cửa</h3>
+
+            <div class="b-info-item">
+              <div class="b-info-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="b-info-text">
+                <h4>Tiệm Bánh & Cà Phê</h4>
+                <p>101 Phố Lò Đúc, Phường Đống Mác, Quận Hai Bà Trưng, Hà Nội</p>
+                <p style="font-size:0.82rem; color:var(--bakery-crust); margin-top:0.2rem;">(Có chỗ để xe máy trước cửa và bãi gửi ô tô cách 50m)</p>
+              </div>
+            </div>
+
+            <div class="b-info-item">
+              <div class="b-info-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="b-info-text">
+                <h4>Hotline / Chat Zalo Giữ Bánh</h4>
+                <p><a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer"><strong>0971 183 939</strong> (Chat Zalo ngay)</a></p>
+                <p style="font-size:0.82rem;">Hỗ trợ giữ bánh nóng mẻ chiều & ship hỏa tốc</p>
+              </div>
+            </div>
+
+            <div class="b-info-item">
+              <div class="b-info-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="b-info-text">
+                <h4>Thời gian phục vụ</h4>
+                <p>Thứ Hai – Chủ Nhật: <strong>06:30 – 21:30</strong></p>
+                <p style="font-size:0.82rem;">Mẻ sáng ra lò lúc 06:30 · Mẻ chiều ra lò lúc 14:00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tips-box">
+            <h4>Bí Quyết Hâm Nóng Bánh Tại Nhà</h4>
+            <p>
+              • <strong>Sourdough:</strong> Xịt nhẹ chút nước lọc lên vỏ bánh, nướng lại ở 180°C trong 4-5 phút bằng nồi chiên không dầu để vỏ giòn tan như mới ra lò.<br>
+              • <strong>Croissant:</strong> Nướng ở 160°C trong 2-3 phút, để nguội 1 phút để lớp bơ se lại giòn rụm.
+            </p>
+          </div>
+        </div>
+
+        <!-- Teabreak & Event Inquiry Form -->
+        <div>
+          <div style="background:#fff; border:1px solid var(--border-cream); border-radius:var(--radius); padding:2.5rem; box-shadow:var(--shadow-warm);">
+            <h3 style="font-family:var(--font-serif); font-size:1.45rem; color:var(--bakery-espresso); margin-bottom:0.4rem;">Đặt Bánh Teabreak Sự Kiện & Hội Thảo</h3>
+            <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:1.8rem;">Cung cấp các set bánh mini mặn ngọt sang trọng cho công ty, tiệc họp mặt</p>
+
+            <form id="teabreak-form" onsubmit="handleTeabreakSubmit(event)">
+              <div class="cake-form-grid">
+                <div class="cake-group">
+                  <label for="tb-name">Họ và tên *</label>
+                  <input type="text" id="tb-name" class="cake-input" placeholder="Nguyễn Hoàng Yến" required>
+                </div>
+                <div class="cake-group">
+                  <label for="tb-phone">Số điện thoại / Zalo *</label>
+                  <input type="tel" id="tb-phone" class="cake-input" placeholder="09xx xxx xxx" required>
+                </div>
+                <div class="cake-group">
+                  <label for="tb-scale">Quy mô sự kiện</label>
+                  <select id="tb-scale" class="cake-select">
+                    <option value="Dưới 20 người">Dưới 20 người (Gia đình / Team nhỏ)</option>
+                    <option value="20 - 50 người">20 – 50 người (Hội thảo / Workshop)</option>
+                    <option value="Trên 50 người">Trên 50 người (Sự kiện công ty lớn)</option>
+                  </select>
+                </div>
+                <div class="cake-group">
+                  <label for="tb-date">Ngày giao bánh</label>
+                  <input type="date" id="tb-date" class="cake-input" required>
+                </div>
+                <div class="cake-group full">
+                  <label for="tb-type">Gu bánh mong muốn</label>
+                  <select id="tb-type" class="cake-select">
+                    <option value="Hỗn hợp 50% bánh mặn + 50% bánh ngọt">Hỗn hợp 50% bánh mặn + 50% bánh ngọt (Khuyên dùng)</option>
+                    <option value="Thiên về bánh ngọt & tart hoa quả">Thiên về bánh ngọt & tart hoa quả tươi</option>
+                    <option value="Thiên về bánh mặn croissant & focaccia">Thiên về bánh mặn croissant & focaccia kẹp thịt</option>
+                  </select>
+                </div>
+                <div class="cake-group full">
+                  <label for="tb-note">Ghi chú địa chỉ giao hàng & thời gian nhận</label>
+                  <textarea id="tb-note" class="cake-textarea" rows="3" placeholder="Tên tòa nhà văn phòng, giờ cần bày tiệc..."></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-submit-cake">Nhận Báo Giá Set Teabreak</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast -->
+  <div class="toast-bakery" id="toast-bakery" role="status"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer-bakery">
+    <div class="footer-wrap-bakery">
+      <div class="footer-col-bakery">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
+          <span class="brand-title" style="color:var(--bakery-gold);">THE FLOUR & STONE</span>
+          <span class="brand-subtitle">Artisanal Bakery & Pastry</span>
+        </a>
+        <p>Tiệm bánh thủ công tôn vinh kỹ thuật lên men tự nhiên chậm và nguồn nguyên liệu hữu cơ thuần khiết.</p>
+        <p style="margin-top:1rem; font-size:0.8rem; color:#7b6e66;">* Giao diện mẫu demo #MS37 thuộc Thư Viện Theme RackerWeb.</p>
       </div>
 
-      <div>
-        <form id="site-contact-form">
-          <div class="form-group">
-            <label for="c-name">Họ và tên *</label>
-            <input type="text" id="c-name" required placeholder="Nguyễn Văn A">
-          </div>
-          <div class="form-group">
-            <label for="c-phone">Số điện thoại / Zalo *</label>
-            <input type="tel" id="c-phone" required placeholder="09xxxxxxxx">
-          </div>
-          <div class="form-group">
-            <label for="c-msg">Nhu cầu tư vấn *</label>
-            <textarea id="c-msg" rows="4" required placeholder="Nhu cầu chi tiết..."></textarea>
-          </div>
-          <button type="submit" class="btn-primary" style="width: 100%;">Gửi Yêu Cầu Tư Vấn</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Cửa hàng bánh ngọt - demo 37</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Thực phẩm. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
-      </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html"></a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+      <div class="footer-col-bakery">
+        <h4>Menu Bánh</h4>
+        <ul>
+          <li><a href="san-pham.html">Bánh mì Sourdough men sống</a></li>
+          <li><a href="san-pham.html">Croissant bơ Pháp ngàn lớp</a></li>
+          <li><a href="san-pham.html">Tart trái cây tươi mùa hè</a></li>
+          <li><a href="san-pham.html">Bánh sinh nhật kem tươi</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col-bakery">
+        <h4>Về Tiệm</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Hành trình nuôi men tự nhiên</a></li>
+          <li><a href="gioi-thieu.html">Cam kết nguyên liệu sạch</a></li>
+          <li><a href="lien-he.html">Chỉ đường ghé tiệm</a></li>
+          <li><a href="lien-he.html">Chính sách giao hàng bánh tươi</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-bakery">
+        <h4>Tiệm Bánh & Cà Phê</h4>
+        <p><strong>Địa chỉ:</strong> 101 Phố Lò Đúc, Quận Hai Bà Trưng, Hà Nội</p>
+        <p style="margin-top:0.4rem;"><strong>Giờ đón khách:</strong> 06:30 – 21:30 hàng ngày</p>
+        <p style="margin-top:0.4rem;"><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--bakery-gold); font-weight:700;">0971 183 939</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Cửa hàng bánh ngọt - demo 37. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+
+    <div class="footer-bottom-bakery">
+      <span>© 2026 The Flour & Stone — Giao diện mẫu #MS37. All rights reserved.</span>
+      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
   <script src="js/app.js"></script>
+  <script>
+    function handleTeabreakSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('tb-name').value;
+      const phone = document.getElementById('tb-phone').value;
+      const scale = document.getElementById('tb-scale').value;
+      const toast = document.getElementById('toast-bakery');
+      if (toast) {
+        toast.innerHTML = `<strong>Kính chào ${name}!</strong> Yêu cầu báo giá set Teabreak (<strong>${scale}</strong>) đã được gửi tới quản lý tiệm. Chúng tôi sẽ gửi menu chi tiết tới số <strong>${phone}</strong> trong 15 phút.`;
+        toast.classList.add('show');
+        setTimeout(() => { toast.classList.remove('show'); }, 6000);
+      }
+      e.target.reset();
+    }
+  </script>
 </body>
 </html>

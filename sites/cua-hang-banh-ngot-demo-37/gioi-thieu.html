@@ -1,81 +1,237 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giới Thiệu | Cửa hàng bánh ngọt - demo 37</title>
+  <title>Về The Flour & Stone — Câu Chuyện Men Sống & Bột Mì Hữu Cơ (#MS37)</title>
+  <meta name="description" content="Tìm hiểu hành trình kiên nhẫn nuôi men tự nhiên và triết lý làm bánh thủ công chậm rãi tại The Flour & Stone. Không hóa chất, chỉ có bột, nước, muối và thời gian.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .about-bakery-hero {
+      background: linear-gradient(180deg, rgba(41,24,17,0.7) 0%, rgba(41,24,17,0.92) 100%),
+                  url('assets/banner.jpg') center/cover no-repeat;
+      padding: 5.5rem 1.5rem 3.5rem;
+      text-align: center;
+      color: #fff;
+    }
+    .about-bakery-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      margin-bottom: 0.8rem;
+    }
+    .story-grid-2col {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+    .story-grid-2col img {
+      border-radius: var(--radius);
+      border: 1px solid var(--border-cream);
+      box-shadow: var(--shadow-warm);
+    }
+    .values-cards-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .value-card-box {
+      background: #fff;
+      border: 1px solid var(--border-cream);
+      border-radius: var(--radius);
+      padding: 2.2rem;
+      text-align: center;
+      box-shadow: var(--shadow-warm);
+    }
+    .value-icon-circle {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    .value-card-box h4 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--bakery-espresso);
+      margin-bottom: 0.6rem;
+    }
+    .value-card-box p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    @media (max-width: 900px) {
+      .story-grid-2col {
+        grid-template-columns: 1fr;
+      }
+      .values-cards-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Library return bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS37</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS37 · Bánh Ngọt & Đồ Ăn Nhẹ</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Cửa hàng bánh ngọt - demo 37 <span>MS37</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html"></a></li>
-          <li><a href="gioi-thieu.html" class="active">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-title">THE FLOUR & STONE</span>
+        <span class="brand-subtitle">Artisanal Bakery & Pastry</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Trang Chủ</a>
+        <a href="san-pham.html">Thực Đơn Bánh</a>
+        <a href="index.html#dat-banh">Đặt Bánh Tiệc</a>
+        <a href="gioi-thieu.html" class="active">Về Tiệm Bánh</a>
+        <a href="lien-he.html">Liên Hệ & Ghé Tiệm</a>
       </nav>
-      <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="header-cta-group">
+        <button type="button" class="btn-cart-bakery" onclick="location.href='san-pham.html'">
+          <span>Giỏ Bánh</span>
+          (<span id="cart-count">0</span>)
+        </button>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-order-nav">
+          Đặt Hàng Zalo
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Về Chúng Tôi — Cửa hàng bánh ngọt - demo 37</h1>
-    <p>Hành trình khẳng định uy tín và chất lượng dẫn đầu trong lĩnh vực Thực phẩm</p>
-  </div>
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html">Trang Chủ</a>
+    <a href="san-pham.html">Thực Đơn Bánh Tươi</a>
+    <a href="index.html#dat-banh">Bánh Sinh Nhật Theo Yêu Cầu</a>
+    <a href="gioi-thieu.html" class="active">Câu Chuyện Bột & Đá</a>
+    <a href="lien-he.html">Địa Chỉ & Giờ Mở Cửa</a>
+  </aside>
 
-  <div class="subpage-content">
-    <p style="margin-bottom: 1.5rem; font-size: 1.05rem;"><strong>Cửa hàng bánh ngọt - demo 37</strong> tự hào là đối tác tin cậy, mang đến cho quý khách hàng các sản phẩm và dịch vụ Thực phẩm đạt tiêu chuẩn cao nhất. Với triết lý lấy sự hài lòng của khách hàng làm trọng tâm, chúng tôi không ngừng đổi mới công nghệ và quy trình phục vụ.</p>
-    <div style="background: var(--surface); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
-      <h3 style="margin-bottom: 1rem; color: var(--primary);">Giá Trị Cốt Lõi</h3>
-      <ul style="padding-left: 1.25rem; line-height: 2;">
-        <li><strong>Chất Lượng Vượt Trội:</strong> Mọi chi tiết đều được hoàn thiện tỉ mỉ và kiểm định nghiêm ngặt.</li>
-        <li><strong>Tận Tâm & Minh Bạch:</strong> Tư vấn trung thực, báo giá rõ ràng, không phát sinh chi phí ẩn.</li>
-        <li><strong>Đồng Hành Dài Lâu:</strong> Hỗ trợ kỹ thuật và chăm sóc khách hàng 24/7 qua số Hotline Zalo 0971183939.</li>
-      </ul>
-    </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="lien-he.html" class="btn-primary">Liên Hệ Ngay Với Chúng Tôi</a>
-    </div>
-  </div>
-
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Cửa hàng bánh ngọt - demo 37</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Thực phẩm. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <main>
+    <section class="about-bakery-hero">
+      <div class="container">
+        <span class="section-subtitle-bakery" style="color:var(--bakery-gold);">Khởi Nguồn Đam Mê</span>
+        <h1>Bột, Nước, Muối & Thời Gian</h1>
+        <p style="color:#d1c4bc; max-width:650px; margin:0 auto; font-size:1.05rem;">
+          Làm bánh men tự nhiên là một bài học về sự nhẫn nại. Khi ta tôn trọng thời gian của tự nhiên, ổ bánh sẽ đền đáp bằng hương vị sâu lắng nhất.
+        </p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html"></a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+    </section>
+
+    <section class="section-bakery">
+      <div class="story-grid-2col">
+        <div>
+          <span class="section-subtitle-bakery">Hành Trình Nuôi Men</span>
+          <h2 style="font-family:var(--font-serif); font-size:2.2rem; color:var(--bakery-espresso); margin-bottom:1.2rem; line-height:1.3;">
+            Con Men Mẹ "Levain" 5 Năm Tuổi
+          </h2>
+          <p style="color:var(--text-muted); font-size:1rem; line-height:1.75; margin-bottom:1.2rem;">
+            Trái tim của The Flour & Stone chính là hũ men tự nhiên được “cho ăn” đều đặn mỗi sáng suốt hơn 5 năm qua. Khác với men công nghiệp nở vội trong vài mươi phút, men hoang dã cần tới 36 giờ lên men chậm ở nhiệt độ mát để phá vỡ các phân tử gluten phức tạp, giúp người ăn không bị đầy bụng hay khó tiêu.
+          </p>
+          <p style="color:var(--text-muted); font-size:1rem; line-height:1.75;">
+            Khi mở nắp lò nướng ở nhiệt độ 250°C, mùi thơm nức của lớp vỏ caramen hóa hòa quyện cùng bơ sữa béo ngậy là khoảnh khắc kỳ diệu nhất mà mỗi người thợ bánh chúng tôi trân trọng mỗi ngày.
+          </p>
+        </div>
+        <div>
+          <img src="assets/banner.jpg" alt="Thợ bánh tại The Flour & Stone">
+        </div>
+      </div>
+
+      <!-- 3 Commitments -->
+      <div class="section-header-bakery" style="margin-top:2rem;">
+        <span class="section-subtitle-bakery">Cam Kết Cốt Lõi</span>
+        <h2 class="section-title-bakery">Nguyên Liệu Thuần Khiết</h2>
+      </div>
+
+      <div class="values-cards-row">
+        <div class="value-card-box">
+          <div class="value-icon-circle">🌾</div>
+          <h4>Bột Mì Hữu Cơ Không Tẩy</h4>
+          <p>Nhập khẩu trực tiếp từ các cánh đồng lúa mì bền vững của Pháp và Canada, giữ trọn cám mầm dinh dưỡng và mùi hương ngũ cốc ngọt thanh.</p>
+        </div>
+
+        <div class="value-card-box">
+          <div class="value-icon-circle">🧈</div>
+          <h4>Bơ Isigny Sainte-Mère AOP</h4>
+          <p>Dòng bơ thượng hạng vùng Normandy nước Pháp với hàm lượng chất béo 84%, tạo nên những lớp vỏ croissant mỏng tang giòn rụm màu hoàng kim.</p>
+        </div>
+
+        <div class="value-card-box">
+          <div class="value-icon-circle">🍓</div>
+          <h4>Hoa Quả Canh Tác Sạch</h4>
+          <p>Dâu tây, việt quất và quả mọng được thu hái tươi mỗi sớm từ nông trại Đà Lạt, tuyệt đối không dùng mứt hoa quả đóng hộp chứa chất bảo quản.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section-bakery" style="text-align:center; padding-top:0;">
+      <h3 style="font-family:var(--font-serif); font-size:2rem; color:var(--bakery-espresso); margin-bottom:1rem;">Ghé Tiệm Thưởng Thức Bánh Mì & Cà Phê Nóng</h3>
+      <p style="color:var(--text-muted); max-width:600px; margin:0 auto 2.5rem;">Không gian ấm áp phảng phất hương bơ nướng tại 101 Lò Đúc luôn sẵn sàng đón chào bạn mỗi buổi sáng.</p>
+      <div style="display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap;">
+        <a href="lien-he.html" class="btn-primary-bakery">Xem Địa Chỉ Ghé Tiệm</a>
+        <a href="san-pham.html" class="btn-secondary-bakery">Xem Thực Đơn Bánh Tươi</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer-bakery">
+    <div class="footer-wrap-bakery">
+      <div class="footer-col-bakery">
+        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
+          <span class="brand-title" style="color:var(--bakery-gold);">THE FLOUR & STONE</span>
+          <span class="brand-subtitle">Artisanal Bakery & Pastry</span>
+        </a>
+        <p>Tiệm bánh thủ công tôn vinh kỹ thuật lên men tự nhiên chậm và nguồn nguyên liệu hữu cơ thuần khiết.</p>
+        <p style="margin-top:1rem; font-size:0.8rem; color:#7b6e66;">* Giao diện mẫu demo #MS37 thuộc Thư Viện Theme RackerWeb.</p>
+      </div>
+
+      <div class="footer-col-bakery">
+        <h4>Menu Bánh</h4>
+        <ul>
+          <li><a href="san-pham.html">Bánh mì Sourdough men sống</a></li>
+          <li><a href="san-pham.html">Croissant bơ Pháp ngàn lớp</a></li>
+          <li><a href="san-pham.html">Tart trái cây tươi mùa hè</a></li>
+          <li><a href="san-pham.html">Bánh sinh nhật kem tươi</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col-bakery">
+        <h4>Về Tiệm</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Hành trình nuôi men tự nhiên</a></li>
+          <li><a href="gioi-thieu.html">Cam kết nguyên liệu sạch</a></li>
+          <li><a href="lien-he.html">Chỉ đường ghé tiệm</a></li>
+          <li><a href="lien-he.html">Chính sách giao hàng bánh tươi</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-bakery">
+        <h4>Tiệm Bánh & Cà Phê</h4>
+        <p><strong>Địa chỉ:</strong> 101 Phố Lò Đúc, Quận Hai Bà Trưng, Hà Nội</p>
+        <p style="margin-top:0.4rem;"><strong>Giờ đón khách:</strong> 06:30 – 21:30 hàng ngày</p>
+        <p style="margin-top:0.4rem;"><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--bakery-gold); font-weight:700;">0971 183 939</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Cửa hàng bánh ngọt - demo 37. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+
+    <div class="footer-bottom-bakery">
+      <span>© 2026 The Flour & Stone — Giao diện mẫu #MS37. All rights reserved.</span>
+      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
+  <script src="js/app.js"></script>
 </body>
 </html>
