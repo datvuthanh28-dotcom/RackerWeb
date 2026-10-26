@@ -1,98 +1,356 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Danh Mục Dự án | Website bất động sản - demo 96</title>
+  <title>Danh Mục Dự Án Độc Quyền | Premier Realty Vietnam #MS96</title>
+  <meta name="description" content="Danh mục dự án bất động sản hàng hiệu, dinh thự ven sông, sky penthouse và shophouse khối đế được tuyển chọn kỹ lưỡng bởi Premier Realty Vietnam.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS96</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
-  </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Website bất động sản - demo 96 <span>MS96</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html" class="active">Dự án</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+  <!-- Top Return Bar -->
+  <aside class="library-return-bar">
+    <span>Giao diện mẫu <strong>#MS96 · Bất Động Sản Thượng Lưu & Quản Lý Tài Sản</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">&larr; Quay lại danh mục thư viện</a>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-mark">
+        <div class="brand-icon">PR</div>
+        <div class="brand-text">
+          <h1>PREMIER REALTY</h1>
+          <p>Vietnam Private Wealth</p>
+        </div>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Trang Chủ</a>
+        <a href="san-pham.html" class="nav-link active">Dự Án Độc Quyền</a>
+        <a href="index.html#calculator" class="nav-link">Tính Khoản Vay</a>
+        <a href="gioi-thieu.html" class="nav-link">Về Chúng Tôi</a>
+        <a href="lien-he.html" class="nav-link">Liên Hệ</a>
       </nav>
-      <div class="header-actions">
-        <button type="button" class="cart-trigger">Giỏ Hàng (<span id="cart-count">0</span>)</button>
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="header-right">
+        <button type="button" class="saved-pill-btn" id="btn-open-portfolio">
+          <span>Quan Tâm</span>
+          <span class="saved-badge" id="saved-count">0</span>
+        </button>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-vip-consult">
+          Tư Vấn VIP
+        </a>
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Toàn Bộ Danh Mục Dự án</h1>
-    <p>Khám phá đầy đủ các gói sản phẩm và giải pháp cao cấp từ Website bất động sản - demo 96</p>
+  <!-- Mobile Navigation Panel -->
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <button type="button" id="mobile-nav-close" style="align-self:flex-end;font-size:1.8rem;color:var(--pearl);margin-bottom:1.5rem;">&times;</button>
+    <a href="index.html">Trang Chủ</a>
+    <a href="san-pham.html" class="active">Dự Án Độc Quyền</a>
+    <a href="index.html#calculator">Công Cụ Tính Vay</a>
+    <a href="gioi-thieu.html">Về Premier Realty</a>
+    <a href="lien-he.html">Liên Hệ & Đặt Hẹn</a>
   </div>
 
-  <main class="section">
-    <div class="grid">
-        <div class="card">
-          <span class="card-badge">View Đẹp</span>
-          <h3>Căn Hộ Panorama Ven Sông</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">3.8 Tỷ</div>
-          <button type="button" class="btn-buy" data-name="Căn Hộ Panorama Ven Sông">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Cao Cấp</span>
-          <h3>Biệt Thự Đơn Lập Nghỉ Dưỡng</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">15.5 Tỷ</div>
-          <button type="button" class="btn-buy" data-name="Biệt Thự Đơn Lập Nghỉ Dưỡng">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Đầu Tư</span>
-          <h3>Shophouse Mặt Tiền Đại Lộ</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">8.2 Tỷ</div>
-          <button type="button" class="btn-buy" data-name="Shophouse Mặt Tiền Đại Lộ">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">VIP</span>
-          <h3>Penthouse Triệu Đô Trung Tâm</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">28 Tỷ</div>
-          <button type="button" class="btn-buy" data-name="Penthouse Triệu Đô Trung Tâm">Thêm Giỏ Hàng</button>
-        </div>
+  <!-- Portfolio Drawer (Saved Projects) -->
+  <div class="portfolio-overlay" id="portfolio-overlay"></div>
+  <aside class="portfolio-drawer" id="portfolio-drawer">
+    <div class="drawer-head">
+      <h3>Dự Án Đang Quan Tâm</h3>
+      <button type="button" class="btn-close-drawer" id="btn-close-drawer">&times;</button>
     </div>
+    <div class="drawer-items" id="drawer-items"></div>
+    <div class="drawer-footer">
+      <button type="button" class="btn-send-zalo-dossier" id="btn-send-zalo-dossier">
+        Gửi Danh Mục Nhận Hồ Sơ Mật (Zalo)
+      </button>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Subpage Banner -->
+    <section style="background: radial-gradient(circle at 50% 30%, rgba(196,154,98,0.15), transparent 60%), linear-gradient(180deg, var(--navy-dark) 0%, var(--navy-slate) 100%); padding: 5rem 2rem 3.5rem; text-align: center; border-bottom: 1px solid var(--navy-border);">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div style="font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--bronze); font-weight: 600; margin-bottom: 0.75rem;">
+          Portfolio Tuyển Chọn Độc Quyền
+        </div>
+        <h1 style="font-family: var(--font-serif); font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--pearl); margin-bottom: 1rem; line-height: 1.2;">
+          Bộ Sưu Tập Bất Động Sản Thượng Lưu
+        </h1>
+        <p style="color: var(--pearl-muted); font-size: 1rem; line-height: 1.7;">
+          Tất cả các sản phẩm đều qua quy trình thẩm định pháp lý 5 bước nghiêm ngặt của đội ngũ luật sư và chuyên gia định giá độc lập trước khi giới thiệu đến Quý nhà đầu tư.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section style="background: var(--navy-slate); padding: 1.25rem 2rem; border-bottom: 1px solid var(--navy-border);">
+      <div style="max-width: 1320px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div class="project-tabs">
+          <button type="button" class="tab-btn active" data-category="all">Tất Cả Dự Án</button>
+          <button type="button" class="tab-btn" data-category="villa">Dinh Thự Ven Sông</button>
+          <button type="button" class="tab-btn" data-category="penthouse">Sky Penthouse</button>
+          <button type="button" class="tab-btn" data-category="shophouse">Shophouse Đại Lộ</button>
+          <button type="button" class="tab-btn" data-category="condo">Căn Hộ Hạng Sang</button>
+        </div>
+        <div style="font-size: 0.85rem; color: var(--bronze-light); font-weight: 600;">
+          Hiển thị 6 kiệt tác bất động sản mở bán đợt 1
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Catalog Grid -->
+    <section class="section-wrapper">
+      <div class="projects-grid" id="projects-grid">
+        <!-- 1. Villa Thao Dien -->
+        <article class="project-card" data-category="villa" data-location="thaodien">
+          <div class="project-thumb">
+            <img src="assets/villa-riverside.jpg" alt="The Riverfront Reserve Villa">
+            <span class="project-badge-loc">Thảo Điền, TP. Thủ Đức</span>
+            <span class="project-badge-illustrative">Phối cảnh ý tưởng minh họa</span>
+            <button type="button" class="btn-wishlist" data-name="The Riverfront Reserve Villa" data-price="48.5 Tỷ" data-loc="Thảo Điền" title="Lưu quan tâm">☆</button>
+          </div>
+          <div class="project-body">
+            <div class="project-developer">Masterise Homes • Bàn Giao Quý IV/2026</div>
+            <h3 class="project-name">The Riverfront Reserve Villa</h3>
+            <div class="project-specs">
+              <span>DT: <strong>480m²</strong></span>
+              <span>Khuôn viên: <strong>5 PN</strong></span>
+              <span>Hồ bơi riêng: <strong>Vô cực</strong></span>
+              <span>Pháp lý: <strong>Sổ hồng</strong></span>
+            </div>
+            <div class="project-financials">
+              <div>
+                <div class="price-tag">Giá bán đợt 1 từ</div>
+                <div class="price-val">48.5 Tỷ</div>
+              </div>
+              <div class="yield-badge">Yield 7.2% / Năm</div>
+            </div>
+            <div class="project-actions">
+              <a href="lien-he.html" class="btn-card-details">Tải Mặt Bằng PDF</a>
+              <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-card-tour">Đặt Xe Maybach</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Sky Penthouse Thu Thiem -->
+        <article class="project-card" data-category="penthouse" data-location="thuthiem">
+          <div class="project-thumb">
+            <img src="assets/sky-penthouse.jpg" alt="Grand Panorama Penthouse Thủ Thiêm">
+            <span class="project-badge-loc">Thủ Thiêm, TP. Thủ Đức</span>
+            <span class="project-badge-illustrative">Phối cảnh ý tưởng minh họa</span>
+            <button type="button" class="btn-wishlist" data-name="Grand Panorama Penthouse Thủ Thiêm" data-price="36.0 Tỷ" data-loc="Thủ Thiêm" title="Lưu quan tâm">☆</button>
+          </div>
+          <div class="project-body">
+            <div class="project-developer">CapitaLand • Sắp Bàn Giao 2026</div>
+            <h3 class="project-name">Grand Panorama Penthouse</h3>
+            <div class="project-specs">
+              <span>DT: <strong>325m²</strong></span>
+              <span>Trần cao: <strong>6.8m</strong></span>
+              <span>View: <strong>360° Sông Sài Gòn</strong></span>
+              <span>Thang máy: <strong>Riêng</strong></span>
+            </div>
+            <div class="project-financials">
+              <div>
+                <div class="price-tag">Giá bán đợt 1 từ</div>
+                <div class="price-val">36.0 Tỷ</div>
+              </div>
+              <div class="yield-badge">Yield 6.8% / Năm</div>
+            </div>
+            <div class="project-actions">
+              <a href="lien-he.html" class="btn-card-details">Tải Mặt Bằng PDF</a>
+              <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-card-tour">Đặt Xe Maybach</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Shophouse Phu My Hung -->
+        <article class="project-card" data-category="shophouse" data-location="phumyhung">
+          <div class="project-thumb">
+            <img src="assets/shophouse-avenue.jpg" alt="Avenue de L'Élégance Shophouse">
+            <span class="project-badge-loc">Phú Mỹ Hưng, Quận 7</span>
+            <span class="project-badge-illustrative">Phối cảnh ý tưởng minh họa</span>
+            <button type="button" class="btn-wishlist" data-name="Avenue de L'Élégance Shophouse" data-price="26.8 Tỷ" data-loc="Phú Mỹ Hưng" title="Lưu quan tâm">☆</button>
+          </div>
+          <div class="project-body">
+            <div class="project-developer">Gamuda Land • Đại Lộ Thương Mại 42m</div>
+            <h3 class="project-name">Avenue de L'Élégance Shophouse</h3>
+            <div class="project-specs">
+              <span>DTXD: <strong>410m²</strong></span>
+              <span>Kết cấu: <strong>1 Trệt 4 Lầu</strong></span>
+              <span>Mặt tiền: <strong>8.5m</strong></span>
+              <span>HĐ Thuê: <strong>Có sẵn</strong></span>
+            </div>
+            <div class="project-financials">
+              <div>
+                <div class="price-tag">Giá bán đợt 1 từ</div>
+                <div class="price-val">26.8 Tỷ</div>
+              </div>
+              <div class="yield-badge">Yield 8.5% / Năm</div>
+            </div>
+            <div class="project-actions">
+              <a href="lien-he.html" class="btn-card-details">Tải Mặt Bằng PDF</a>
+              <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-card-tour">Đặt Xe Maybach</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. The Horizon 3PN Thu Thiem -->
+        <article class="project-card" data-category="condo" data-location="thuthiem">
+          <div class="project-thumb">
+            <img src="assets/condo-horizon.jpg" alt="The Horizon Signature Tower">
+            <span class="project-badge-loc">Thủ Thiêm, TP. Thủ Đức</span>
+            <span class="project-badge-illustrative">Phối cảnh ý tưởng minh họa</span>
+            <button type="button" class="btn-wishlist" data-name="The Horizon Signature Tower" data-price="12.5 Tỷ" data-loc="Thủ Thiêm" title="Lưu quan tâm">☆</button>
+          </div>
+          <div class="project-body">
+            <div class="project-developer">Vinhomes • Căn Hộ Branded Residence</div>
+            <h3 class="project-name">The Horizon Signature 3PN</h3>
+            <div class="project-specs">
+              <span>DT: <strong>138m²</strong></span>
+              <span>Số PN: <strong>3 PN Master</strong></span>
+              <span>Nội thất: <strong>Poliform Ý</strong></span>
+              <span>Tầng cao: <strong>Tầng 38</strong></span>
+            </div>
+            <div class="project-financials">
+              <div>
+                <div class="price-tag">Giá bán đợt 1 từ</div>
+                <div class="price-val">12.5 Tỷ</div>
+              </div>
+              <div class="yield-badge">Yield 6.5% / Năm</div>
+            </div>
+            <div class="project-actions">
+              <a href="lien-he.html" class="btn-card-details">Tải Mặt Bằng PDF</a>
+              <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-card-tour">Đặt Xe Maybach</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Golf Residence Nam Rach Chiec -->
+        <article class="project-card" data-category="villa" data-location="rachchiec">
+          <div class="project-thumb">
+            <img src="assets/villa-golf.jpg" alt="Golf Residence Grand Villa">
+            <span class="project-badge-loc">Nam Rạch Chiếc, TP. Thủ Đức</span>
+            <span class="project-badge-illustrative">Phối cảnh ý tưởng minh họa</span>
+            <button type="button" class="btn-wishlist" data-name="Golf Residence Grand Villa" data-price="55.0 Tỷ" data-loc="Nam Rạch Chiếc" title="Lưu quan tâm">☆</button>
+          </div>
+          <div class="project-body">
+            <div class="project-developer">Masterise Homes • Trực Diện Sân Golf 18 Lỗ</div>
+            <h3 class="project-name">Golf Residence Grand Villa</h3>
+            <div class="project-specs">
+              <span>DT Đất: <strong>650m²</strong></span>
+              <span>Sân vườn: <strong>320m²</strong></span>
+              <span>View: <strong>Green Fairway</strong></span>
+              <span>An ninh: <strong>3 Lớp 24/7</strong></span>
+            </div>
+            <div class="project-financials">
+              <div>
+                <div class="price-tag">Giá bán đợt 1 từ</div>
+                <div class="price-val">55.0 Tỷ</div>
+              </div>
+              <div class="yield-badge">Yield 6.2% / Năm</div>
+            </div>
+            <div class="project-actions">
+              <a href="lien-he.html" class="btn-card-details">Tải Mặt Bằng PDF</a>
+              <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-card-tour">Đặt Xe Maybach</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Riverview Sky Duplex -->
+        <article class="project-card" data-category="penthouse" data-location="thaodien">
+          <div class="project-thumb">
+            <img src="assets/sky-duplex.jpg" alt="Riverview Sky Duplex Thảo Điền">
+            <span class="project-badge-loc">Thảo Điền, TP. Thủ Đức</span>
+            <span class="project-badge-illustrative">Phối cảnh ý tưởng minh họa</span>
+            <button type="button" class="btn-wishlist" data-name="Riverview Sky Duplex Thảo Điền" data-price="22.5 Tỷ" data-loc="Thảo Điền" title="Lưu quan tâm">☆</button>
+          </div>
+          <div class="project-body">
+            <div class="project-developer">SonKim Land • Thiết Kế Thông Tầng Độc Bản</div>
+            <h3 class="project-name">Riverview Sky Duplex</h3>
+            <div class="project-specs">
+              <span>DT: <strong>215m²</strong></span>
+              <span>Thiết kế: <strong>2 Tầng Thông</strong></span>
+              <span>Ban công: <strong>Vườn treo 35m²</strong></span>
+              <span>Sở hữu: <strong>Lâu dài</strong></span>
+            </div>
+            <div class="project-financials">
+              <div>
+                <div class="price-tag">Giá bán đợt 1 từ</div>
+                <div class="price-val">22.5 Tỷ</div>
+              </div>
+              <div class="yield-badge">Yield 7.0% / Năm</div>
+            </div>
+            <div class="project-actions">
+              <a href="lien-he.html" class="btn-card-details">Tải Mặt Bằng PDF</a>
+              <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-card-tour">Đặt Xe Maybach</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="projects-disclaimer" style="margin-top: 2rem; text-align: center; font-size: 0.78rem; color: var(--pearl-muted); line-height: 1.6; border-top: 1px dashed var(--navy-border); padding-top: 1.25rem;">
+        * <em>Ghi chú pháp lý & minh họa:</em> Toàn bộ hình ảnh, phối cảnh 3D và thông số diện tích/tài chính mang tính chất minh họa ý tưởng kiến trúc & định hướng đầu tư giả định. Premier Realty Vietnam không cam kết bảo lãnh pháp lý, tiến độ của bên thứ ba hay tỷ suất lợi nhuận cố định. Quý khách vui lòng liên hệ chuyên viên để nhận hồ sơ pháp lý thẩm định chính thức.
+      </div>
+    </section>
   </main>
 
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Website bất động sản - demo 96</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Bất động sản. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <!-- Floating Zalo Concierge -->
+  <aside class="floating-concierge">
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-float-zalo" title="Liên hệ chuyên viên Zalo 0971183939">
+      Zalo
+    </a>
+  </aside>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="brand-mark" style="margin-bottom: 1.25rem;">
+          <div class="brand-icon">PR</div>
+          <div class="brand-text">
+            <h3 style="font-family:var(--font-serif);font-size:1.2rem;color:var(--pearl);">PREMIER REALTY</h3>
+            <p style="font-size:0.65rem;color:var(--bronze);">Vietnam Private Wealth</p>
+          </div>
+        </div>
+        <p>Định chế môi giới và cố vấn đầu tư bất động sản triệu đô tại Việt Nam. Đồng hành cùng nhà đầu tư kiến tạo danh mục tài sản truyền đời an toàn và bền vững.</p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Dự án</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+
+      <div class="footer-col">
+        <h4>Phân Khúc Bất Động Sản</h4>
+        <a href="san-pham.html">Dinh Thự Ven Sông Thảo Điền</a>
+        <a href="san-pham.html">Penthouse & Sky Villa Thủ Thiêm</a>
+        <a href="san-pham.html">Shophouse Đại Lộ Thương Mại</a>
+        <a href="san-pham.html">Căn Hộ Hàng Hiệu Branded Residence</a>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col">
+        <h4>Dịch Vụ Cố Vấn</h4>
+        <a href="index.html#calculator">Thẩm Định & Định Giá BĐS</a>
+        <a href="index.html#calculator">Báo Cáo Dòng Tiền & Khoản Vay</a>
+        <a href="gioi-thieu.html">Cố Vấn Chuyển Nhượng Kín (Off-market)</a>
+        <a href="lien-he.html">Quản Lý & Vận Hành Khai Thác Thuê</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Private Client Lounge</h4>
+        <p>✦ Tầng 36, Landmark 81, Vinhomes Central Park, TP. HCM</p>
+        <p>✦ Hotline Tư Vấn: <strong style="color:var(--bronze-light);">0971 183 939</strong></p>
+        <p>✦ Giờ phục vụ: 08:30 – 21:00 (Hàng ngày)</p>
       </div>
     </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Website bất động sản - demo 96. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <div>&copy; 2026 Premier Realty Vietnam. Giao diện mẫu độc quyền #MS96 — Thư Viện Theme RackerWeb.</div>
+      <div>Pháp lý minh bạch • Bảo mật danh tính khách hàng VIP</div>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
   <script src="js/app.js"></script>
 </body>
 </html>

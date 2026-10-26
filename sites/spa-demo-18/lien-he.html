@@ -8,72 +8,80 @@
   <link rel="stylesheet" href="css/style.css">
   <style>
     .spa-contact-hero {
-      background: linear-gradient(180deg, rgba(31,51,42,0.65) 0%, rgba(31,51,42,0.85) 100%),
-                  url('assets/images/hero.jpg') center/cover no-repeat;
-      padding: 5.5rem 1.5rem 3.5rem;
+      background: linear-gradient(180deg, rgba(27,40,32,0.65) 0%, rgba(27,40,32,0.9) 100%),
+                  url('assets/images/hero-sanctuary.jpg') center/cover no-repeat;
+      padding: 6rem 2rem 4rem;
       text-align: center;
       color: #fff;
     }
+    .spa-contact-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      margin-bottom: 0.8rem;
+    }
     .contact-layout-box {
+      max-width: 1240px;
+      margin: 5rem auto 6rem;
+      padding: 0 1.5rem;
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 3.5rem;
-      margin-top: 3rem;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 4rem;
     }
     .contact-card-white {
-      background: var(--linen-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius);
-      padding: 2.2rem;
+      background: #fff;
+      border: 1px solid var(--zen-border);
+      border-radius: var(--radius-organic);
+      padding: 2.4rem;
       margin-bottom: 2rem;
-      box-shadow: var(--shadow-soft);
+      box-shadow: var(--shadow-zen);
     }
     .c-item-row {
       display: flex;
       gap: 1.2rem;
-      margin-bottom: 1.6rem;
+      margin-bottom: 1.8rem;
       align-items: flex-start;
     }
     .c-item-row:last-child {
       margin-bottom: 0;
     }
     .c-icon-cir {
-      width: 44px;
-      height: 44px;
-      background: var(--sage-subtle);
-      border: 1px solid var(--sage-light);
+      width: 46px;
+      height: 46px;
+      background: var(--zen-mist);
+      border: 1px solid var(--zen-border);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--sage-primary);
+      color: var(--zen-moss);
       flex-shrink: 0;
     }
     .c-text-val h4 {
       font-family: var(--font-serif);
-      font-size: 1.15rem;
-      color: var(--sage-dark);
+      font-size: 1.25rem;
+      color: var(--zen-dark);
       margin-bottom: 0.25rem;
     }
     .c-text-val p, .c-text-val a {
-      color: var(--text-muted);
+      color: var(--zen-muted);
       font-size: 0.92rem;
       line-height: 1.6;
     }
     .c-text-val a:hover {
-      color: var(--sage-primary);
+      color: var(--zen-moss);
     }
     .etiquette-box {
-      background: var(--sage-subtle);
-      border: 1px solid var(--sage-light);
-      border-radius: var(--radius);
-      padding: 1.8rem;
+      background: #fff;
+      border: 1px solid var(--zen-border);
+      border-radius: var(--radius-organic);
+      padding: 2rem;
+      box-shadow: var(--shadow-zen);
     }
     .etiquette-box h4 {
       font-family: var(--font-serif);
-      font-size: 1.2rem;
-      color: var(--sage-dark);
-      margin-bottom: 0.8rem;
+      font-size: 1.25rem;
+      color: var(--zen-dark);
+      margin-bottom: 0.9rem;
     }
     .etiquette-box ul {
       list-style: none;
@@ -83,53 +91,72 @@
       padding-left: 1.4rem;
       margin-bottom: 0.6rem;
       font-size: 0.88rem;
-      color: var(--text-muted);
+      color: var(--zen-muted);
+      line-height: 1.6;
     }
     .etiquette-box ul li::before {
       content: '•';
       position: absolute;
       left: 0;
-      color: var(--champagne);
+      color: var(--zen-bronze);
       font-size: 1.2rem;
       line-height: 1;
     }
     @media (max-width: 900px) {
       .contact-layout-box {
         grid-template-columns: 1fr;
+        gap: 3rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Library Return Bar -->
+  <!-- Library return bar -->
   <div class="library-return-bar">
     <span>Giao diện mẫu <strong>#MS18 · Spa & Chăm Sóc Sức Khỏe</strong> — Thư Viện Theme RackerWeb</span>
     <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
-  <!-- Header -->
-  <header id="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="brand-logo">
-        <span class="brand-title">AN NHIÊN</span>
-        <span class="brand-subtitle">Spa & Wellness Retreat</span>
-      </a>
+  <!-- Top Atmospheric Bar -->
+  <div class="zen-topbar">
+    <div class="zen-topbar-inner">
+      <div class="zen-topbar-tagline">
+        <span class="kanji-badge">安 然</span>
+        <span>Ốc Đảo Dưỡng Thân & Trị Liệu Thảo Mộc — 100% Nguyên Liệu Thuần Tự Nhiên</span>
+      </div>
+      <div class="zen-topbar-info">
+        <span>⏱ 09:00 – 21:30 hàng ngày</span>
+        <span>📞 Hotline tư vấn: <strong style="color:var(--zen-dark);">0971 183 939</strong></span>
+      </div>
+    </div>
+  </div>
 
-      <nav class="main-nav">
-        <a href="index.html">Trang Chủ</a>
-        <a href="san-pham.html">Gói Dịch Vụ</a>
+  <!-- Centered Logo Sanctuary Header -->
+  <header id="site-header">
+    <div class="header-sanctuary-wrap">
+      <nav class="header-wing-left">
         <a href="index.html#triet-ly">Triết Lý Trị Liệu</a>
-        <a href="gioi-thieu.html">Về An Nhiên</a>
-        <a href="index.html#dat-lich">Đặt Lịch Hẹn</a>
-        <a href="lien-he.html" class="active">Liên Hệ</a>
+        <a href="index.html#nghi-thuc">Nghi Thức 3 Bước</a>
+        <a href="san-pham.html">Gói Dịch Vụ</a>
       </nav>
 
-      <div class="header-cta-group">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-hotline">
-          0971 183 939
+      <a href="index.html" class="header-center-brand">
+        <div class="brand-seal-emblem">
+          <div class="brand-seal-circle">安</div>
+          <div class="brand-name-group">
+            <span class="brand-name-title">AN NHIÊN</span>
+            <span class="brand-name-sub">Wellness Retreat</span>
+          </div>
+        </div>
+      </a>
+
+      <div class="header-wing-right">
+        <a href="index.html#khong-gian" class="nav-link">Không Gian Yên Tĩnh</a>
+        <a href="gioi-thieu.html" class="nav-link">Về An Nhiên</a>
+        <a href="index.html#dat-lich" class="btn-sanctuary-reserve">
+          <span>🌿</span> Đặt Chỗ Yên Tĩnh
         </a>
-        <a href="index.html#dat-lich" class="btn-book-nav">Đặt Lịch Ngay</a>
         <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
@@ -139,165 +166,165 @@
   <div class="drawer-backdrop" id="drawer-backdrop"></div>
   <aside class="mobile-nav-drawer" id="mobile-drawer">
     <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
-    <a href="index.html">Trang Chủ</a>
-    <a href="san-pham.html">Gói Dịch Vụ & Liệu Trình</a>
-    <a href="index.html#triet-ly">Triết Lý Trị Liệu</a>
-    <a href="gioi-thieu.html">Về An Nhiên Retreat</a>
-    <a href="index.html#dat-lich">Đặt Lịch Hẹn</a>
-    <a href="lien-he.html" class="active">Địa Chỉ & Liên Hệ</a>
+    <a href="index.html">Trang Chủ An Nhiên</a>
+    <a href="san-pham.html">Bảng Giá Liệu Trình (20+ Gói)</a>
+    <a href="index.html#nghi-thuc">Nghi Thức Trị Liệu 3 Bước</a>
+    <a href="index.html#khong-gian">Không Gian Yên Tịnh</a>
+    <a href="gioi-thieu.html">Triết Lý Thân - Tâm - Trí</a>
+    <a href="index.html#dat-lich">Đặt Lịch Hẹn Yên Tĩnh</a>
+    <a href="lien-he.html" class="active">Địa Chỉ & Chỉ Đường</a>
   </aside>
 
   <main>
     <section class="spa-contact-hero">
-      <div class="container">
-        <span class="section-subtitle-spa" style="color:var(--champagne-light);">Kết Nối & Hướng Dẫn</span>
-        <h1>Liên Hệ An Nhiên Spa</h1>
-        <p style="color:#d1ded7; max-width:650px; margin:0 auto; font-size:1.05rem;">
-          Đội ngũ lễ tân An Nhiên sẵn sàng lắng nghe và tư vấn liệu trình phù hợp nhất với quỹ thời gian của bạn.
+      <div>
+        <span class="zen-eyebrow" style="color:var(--zen-bronze-light);">Kết Nối & Hướng Dẫn</span>
+        <h1>Liên Hệ An Nhiên Retreat</h1>
+        <p style="color:#ccdcd3; max-width:680px; margin:0 auto; font-size:1.05rem; line-height:1.8;">
+          Đội ngũ tiếp đón An Nhiên sẵn sàng lắng nghe và tư vấn liệu trình phù hợp nhất với thể trạng và quỹ thời gian của bạn.
         </p>
       </div>
     </section>
 
-    <section class="section-spa">
-      <div class="contact-layout-box">
-        <!-- Info Column -->
-        <div>
-          <div class="contact-card-white">
-            <h3 style="font-family:var(--font-serif); font-size:1.45rem; color:var(--sage-dark); margin-bottom:1.6rem;">Địa Điểm & Giờ Đón Khách</h3>
+    <div class="contact-layout-box">
+      <!-- Info Column -->
+      <div>
+        <div class="contact-card-white">
+          <h3 style="font-family:var(--font-serif); font-size:1.6rem; color:var(--zen-dark); margin-bottom:1.6rem;">Địa Điểm & Đón Tiếp</h3>
 
-            <div class="c-item-row">
-              <div class="c-icon-cir">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div class="c-text-val">
-                <h4>Biệt thự Retreat</h4>
-                <p>Biệt thự số 16, Đường Hoa Sứ, Phường 7, Quận Phú Nhuận, TP. Hồ Chí Minh</p>
-                <p style="font-size:0.82rem; color:var(--champagne); margin-top:0.2rem;">(Khu biệt thự yên tĩnh, có chỗ đỗ ô tô miễn phí)</p>
-              </div>
+          <div class="c-item-row">
+            <div class="c-icon-cir">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
-
-            <div class="c-item-row">
-              <div class="c-icon-cir">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
-              <div class="c-text-val">
-                <h4>Hotline / Chat Zalo</h4>
-                <p><a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer"><strong>0971 183 939</strong> (Chat Zalo trực tiếp)</a></p>
-                <p style="font-size:0.82rem;">Tư vấn liệu trình & kiểm tra tình trạng phòng trống</p>
-              </div>
-            </div>
-
-            <div class="c-item-row">
-              <div class="c-icon-cir">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </div>
-              <div class="c-text-val">
-                <h4>Khung giờ hoạt động</h4>
-                <p>Thứ Hai – Chủ Nhật: <strong>09:00 – 21:30</strong></p>
-                <p style="font-size:0.82rem;">Nhận suất trị liệu cuối cùng lúc 20:00</p>
-              </div>
+            <div class="c-text-val">
+              <h4>Biệt Thự Retreat</h4>
+              <p>Biệt thự số 16, Đường Hoa Sứ, Phường 7, Quận Phú Nhuận, TP. Hồ Chí Minh</p>
+              <p style="font-size:0.82rem; color:var(--zen-bronze); margin-top:0.2rem;">(Khu biệt thự rợp bóng tre, có bãi đỗ ô tô riêng biệt)</p>
             </div>
           </div>
 
-          <div class="etiquette-box">
-            <h4>Quy Tắc Thư Giãn (Spa Etiquette)</h4>
-            <ul>
-              <li>Vui lòng đến trước giờ hẹn 10-15 phút để thư thả thưởng thức trà thảo mộc ngâm chân.</li>
-              <li>Chuyển điện thoại sang chế độ im lặng nhằm giữ trọn vẹn sự tĩnh tịnh cho toàn bộ không gian.</li>
-              <li>Vui lòng thông báo cho kỹ thuật viên nếu bạn đang mang thai, có vết thương hở hoặc tiền sử cao huyết áp.</li>
-            </ul>
+          <div class="c-item-row">
+            <div class="c-icon-cir">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="c-text-val">
+              <h4>Hotline Tiếp Nhận & Zalo</h4>
+              <p><a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer"><strong>0971 183 939</strong> (Chat Zalo trực tiếp 24/7)</a></p>
+              <p style="font-size:0.82rem;">Tư vấn liệu trình & giữ phòng suite trống</p>
+            </div>
+          </div>
+
+          <div class="c-item-row">
+            <div class="c-icon-cir">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="c-text-val">
+              <h4>Khung Giờ Tĩnh Tọa</h4>
+              <p>Thứ Hai – Chủ Nhật: <strong>09:00 – 21:30</strong></p>
+              <p style="font-size:0.82rem;">Nhận suất trị liệu cuối cùng lúc 20:00 hàng ngày</p>
+            </div>
           </div>
         </div>
 
-        <!-- Consultation Request Form -->
-        <div>
-          <div class="booking-card-form" style="box-shadow:none; border:1px solid var(--border-color);">
-            <h3>Gửi Tin Nhắn / Yêu Cầu Tư Vấn</h3>
-            <p class="sub">Điền thông tin bên dưới để chuyên viên An Nhiên liên hệ tư vấn riêng</p>
-
-            <form id="spa-contact-form" onsubmit="handleSpaContact(event)">
-              <div class="spa-form-grid">
-                <div class="spa-form-group">
-                  <label for="contact-spa-name">Họ và tên *</label>
-                  <input type="text" id="contact-spa-name" class="spa-input" placeholder="Nguyễn Thu Trang" required>
-                </div>
-                <div class="spa-form-group">
-                  <label for="contact-spa-phone">Số điện thoại / Zalo *</label>
-                  <input type="tel" id="contact-spa-phone" class="spa-input" placeholder="09xx xxx xxx" required>
-                </div>
-                <div class="spa-form-group full">
-                  <label for="contact-spa-topic">Chủ đề quan tâm</label>
-                  <select id="contact-spa-topic" class="spa-select">
-                    <option value="Tư vấn liệu trình trị liệu cổ vai gáy">Tư vấn liệu trình trị liệu đau mỏi cổ vai gáy</option>
-                    <option value="Gói chăm sóc da mặt phục hồi chuyên sâu">Gói chăm sóc da mặt phục hồi chuyên sâu</option>
-                    <option value="Đặt phòng đôi VIP dành cho 2 người">Đặt phòng đôi VIP dành cho 2 người</option>
-                    <option value="Mua thẻ quà tặng / Voucher liệu trình">Mua thẻ quà tặng / Voucher trị liệu tặng người thân</option>
-                    <option value="Khác">Yêu cầu khác</option>
-                  </select>
-                </div>
-                <div class="spa-form-group full">
-                  <label for="contact-spa-message">Ghi chú tình trạng sức khỏe hoặc yêu cầu</label>
-                  <textarea id="contact-spa-message" class="spa-textarea" rows="3" placeholder="Chia sẻ các vấn đề bạn đang gặp phải (mất ngủ, đau cơ, da khô rát...)..."></textarea>
-                </div>
-              </div>
-
-              <button type="submit" class="btn-submit-spa">Gửi Yêu Cầu Tư Vấn</button>
-            </form>
-          </div>
+        <div class="etiquette-box">
+          <h4>Quy Chuẩn Spa Etiquette</h4>
+          <ul>
+            <li>Vui lòng đến trước giờ hẹn 10–15 phút để thư thả ngâm chân thảo mộc hoa sen và thưởng trà ấm.</li>
+            <li>Chuyển điện thoại sang chế độ im lặng nhằm giữ trọn sự tĩnh lặng cho toàn bộ ốc đảo.</li>
+            <li>Thông báo trước cho chuyên viên nếu bạn đang mang thai, có chấn thương cơ hoặc tiền sử huyết áp.</li>
+          </ul>
         </div>
       </div>
-    </section>
-  </main>
 
-  <!-- Toast -->
-  <div class="toast-spa" id="toast-spa" role="status"></div>
+      <!-- Consultation Request Form -->
+      <div>
+        <div class="booking-form-slate" style="box-shadow:var(--shadow-zen); border:1px solid var(--zen-border);">
+          <h3>Gửi Yêu Cầu Tư Vấn Riêng</h3>
+          <p class="slate-sub">Chuyên viên An Nhiên sẽ phản hồi nhanh chóng qua Zalo hoặc điện thoại</p>
 
-  <!-- Footer -->
-  <footer class="site-footer-spa">
-    <div class="footer-wrap-spa">
-      <div class="footer-col-spa">
-        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
-          <span class="brand-title" style="color:var(--champagne-light);">AN NHIÊN</span>
-          <span class="brand-subtitle">Spa & Wellness Retreat</span>
-        </a>
-        <p>Ốc đảo thư giãn và nuôi dưỡng sự cân bằng tự nhiên cho cơ thể và tâm trí giữa nhịp sống bận rộn.</p>
-        <p style="margin-top:1rem; font-size:0.8rem; color:#6b8779;">* Giao diện mẫu demo #MS18 thuộc Thư Viện Theme RackerWeb.</p>
-      </div>
+          <form id="spa-contact-form" onsubmit="handleSpaContact(event)">
+            <div class="slate-form-grid">
+              <div class="slate-form-group">
+                <label class="slate-label" for="contact-spa-name">Họ và tên *</label>
+                <input type="text" id="contact-spa-name" class="slate-input" placeholder="Nguyễn Thu Trang" required>
+              </div>
 
-      <div class="footer-col-spa">
-        <h4>Dịch Vụ</h4>
-        <ul>
-          <li><a href="san-pham.html">Massage thảo dược đá nóng</a></li>
-          <li><a href="san-pham.html">Chăm sóc da mặt chuyên sâu</a></li>
-          <li><a href="san-pham.html">Gội đầu dưỡng sinh Đông y</a></li>
-          <li><a href="san-pham.html">Gói trị liệu thải độc toàn thân</a></li>
-        </ul>
-      </div>
+              <div class="slate-form-group">
+                <label class="slate-label" for="contact-spa-phone">Số điện thoại / Zalo *</label>
+                <input type="tel" id="contact-spa-phone" class="slate-input" placeholder="09xx xxx xxx" required>
+              </div>
 
-      <div class="footer-col-spa">
-        <h4>An Nhiên Spa</h4>
-        <ul>
-          <li><a href="gioi-thieu.html">Triết lý Thân - Tâm - Trí</a></li>
-          <li><a href="gioi-thieu.html">Đội ngũ kỹ thuật viên</a></li>
-          <li><a href="lien-he.html">Quy tắc ứng xử Spa (Etiquette)</a></li>
-          <li><a href="lien-he.html">Chỉ đường & Đỗ xe</a></li>
-        </ul>
-      </div>
+              <div class="slate-form-group full">
+                <label class="slate-label" for="contact-spa-topic">Chủ đề cần tư vấn</label>
+                <select id="contact-spa-topic" class="slate-select">
+                  <option value="Tư vấn liệu trình trị liệu cổ vai gáy">Tư vấn liệu trình trị liệu đau mỏi cổ vai gáy</option>
+                  <option value="Gói chăm sóc da mặt phục hồi chuyên sâu">Gói chăm sóc da mặt phục hồi chuyên sâu</option>
+                  <option value="Đặt phòng đôi VIP Suite cho 2 người">Đặt phòng đôi VIP Suite cho 2 người</option>
+                  <option value="Mua thẻ quà tặng / Voucher trị liệu">Mua thẻ quà tặng / Voucher trị liệu</option>
+                  <option value="Yêu cầu khác">Yêu cầu khác</option>
+                </select>
+              </div>
 
-      <div class="footer-col-spa">
-        <h4>Liên Hệ & Đón Khách</h4>
-        <p><strong>Địa chỉ:</strong> Biệt thự số 16, Đường Hoa Sứ, Quận Phú Nhuận, TP. Hồ Chí Minh</p>
-        <p style="margin-top:0.4rem;"><strong>Giờ phục vụ:</strong> 09:00 – 21:30 (Hàng ngày)</p>
-        <p style="margin-top:0.4rem;"><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--champagne-light); font-weight:600;">0971 183 939</a></p>
+              <div class="slate-form-group full">
+                <label class="slate-label" for="contact-spa-message">Ghi chú tình trạng cơ thể hoặc câu hỏi</label>
+                <textarea id="contact-spa-message" class="slate-textarea" rows="4" placeholder="Chia sẻ các vấn đề bạn đang gặp phải (mất ngủ, đau cơ, da khô rát, căng thẳng...)..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit-sanctuary">Gửi Yêu Cầu Tư Vấn</button>
+          </form>
+        </div>
       </div>
     </div>
+  </main>
 
-    <div class="footer-bottom-spa">
-      <span>© 2026 An Nhiên Spa & Wellness Retreat — Giao diện mẫu #MS18. All rights reserved.</span>
-      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
+  <!-- Minimalist Zen Footer -->
+  <footer class="zen-minimal-footer">
+    <div class="footer-zen-inner">
+      <a href="index.html" class="footer-center-seal">
+        <div class="footer-seal-circle">安</div>
+        <h3>AN NHIÊN RETREAT</h3>
+        <span>ỐC ĐẢO DƯỠNG THÂN & TÂM</span>
+      </a>
+
+      <p class="footer-zen-quote">
+        "Để tâm tĩnh lặng như mặt hồ mùa thu, thân an nhiên cùng đất trời thảo mộc."
+      </p>
+
+      <div class="footer-zen-trio">
+        <div class="footer-trio-col">
+          <h4>Quy Chuẩn Spa Etiquette</h4>
+          <p>• Quý khách vui lòng chuyển điện thoại sang chế độ im lặng khi bước vào sảnh.</p>
+          <p>• Khuyến khích đến trước 15 phút để thưởng trà ngâm chân thảo mộc.</p>
+          <p>• Phục vụ tối đa 6 khách / khung giờ.</p>
+        </div>
+
+        <div class="footer-trio-col">
+          <h4>Hành Trình Dịch Vụ</h4>
+          <ul>
+            <li><a href="san-pham.html">Massage thảo dược đá nóng Himalaya</a></li>
+            <li><a href="san-pham.html">Chăm sóc da mặt khoáng đất sét tươi</a></li>
+            <li><a href="san-pham.html">Gội đầu dưỡng sinh thảo mộc Dao Đỏ</a></li>
+            <li><a href="san-pham.html">Gói chăm sóc cặp đôi VIP Suite</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-trio-col">
+          <h4>Không Gian & Tiếp Đón</h4>
+          <p><strong>Địa chỉ:</strong> Biệt thự số 16, Đường Hoa Sứ, Quận Phú Nhuận, TP. Hồ Chí Minh</p>
+          <p><strong>Thời gian đón khách:</strong> 09:00 – 21:30 hàng ngày</p>
+          <p><strong>Hotline & Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--zen-bronze-light); font-weight:700;">0971 183 939</a></p>
+        </div>
+      </div>
+
+      <div class="footer-zen-bottom">
+        <span>© 2026 An Nhiên Spa & Wellness Retreat — Giao diện mẫu độc bản #MS18. Thư Viện Theme RackerWeb.</span>
+        <a href="../../index.html">← Quay lại danh mục Theme Library RackerWeb</a>
+      </div>
     </div>
   </footer>
 
+  <div class="toast-zen" id="toast-spa"></div>
   <script src="js/app.js"></script>
   <script>
     function handleSpaContact(e) {
@@ -307,7 +334,7 @@
       const topic = document.getElementById('contact-spa-topic').value;
       const toast = document.getElementById('toast-spa');
       if (toast) {
-        toast.innerHTML = `<strong>Kính chào ${name}!</strong> Yêu cầu tư vấn <strong>"${topic}"</strong> đã được tiếp nhận. Chuyên viên An Nhiên sẽ gọi/Zalo tới <strong>${phone}</strong> trong 15 phút.`;
+        toast.innerHTML = `<strong>Kính chào ${name}!</strong> Yêu cầu tư vấn về <strong>"${topic}"</strong> đã được gửi tới chuyên viên An Nhiên. Chúng tôi sẽ liên hệ qua SĐT/Zalo <strong>${phone}</strong> trong 15 phút.`;
         toast.classList.add('show');
         setTimeout(() => { toast.classList.remove('show'); }, 6000);
       }

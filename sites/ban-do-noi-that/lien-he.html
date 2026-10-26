@@ -1,97 +1,306 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liên Hệ & Tư Vấn | Bán Đồ Nội thất</title>
+  <title>Liên Hệ & Đặt Lịch Khảo Sát | MỘC ĐIỀN ATELIER #MS101</title>
+  <meta name="description" content="Liên hệ xưởng Mộc Điền Atelier: Đặt lịch khảo sát hiện trạng tận nơi, mang mẫu gỗ tự nhiên và bảng màu dầu lau Osmo trực tiếp đến công trình của bạn.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Return Navigation Bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#SKD-000</strong>.</span>
+    <span>Giao diện kiến trúc mẫu <strong>#MS101</strong> — Mộc Điền Atelier (Thư Viện Theme).</span>
     <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
   </div>
 
+  <!-- Header -->
   <header>
     <div class="header-wrap">
-      <div class="logo">Bán Đồ Nội thất <span>SKD-000</span></div>
+      <a href="index.html" class="logo">
+        <span class="logo-title">MỘC ĐIỀN</span>
+        <span class="logo-sub">Atelier Woodcraft & Architecture</span>
+      </a>
+
       <nav>
         <ul>
           <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Nội thất</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html" class="active">Liên Hệ</a></li>
+          <li><a href="san-pham.html">Tác Phẩm Gỗ</a></li>
+          <li><a href="gioi-thieu.html">Xưởng & Triết Lý</a></li>
+          <li><a href="lien-he.html" class="active">Liên Hệ & Khảo Sát</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <button type="button" class="cart-trigger">
+          <span>Giỏ Tư Vấn</span> (<span id="cart-count">0</span>)
+        </button>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">
+          Zalo: 0971 183 939
+        </a>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Liên Hệ Tư Vấn & Báo Giá</h1>
-    <p>Chúng tôi luôn sẵn sàng lắng nghe và giải đáp mọi yêu cầu của bạn</p>
-  </div>
-
-  <div class="subpage-content">
-    <div class="contact-grid">
-      <div>
-        <h3>Thông Tin Liên Hệ</h3>
-        <p style="color: #64748b; margin: 1rem 0;">Để nhận báo giá và tư vấn nhanh nhất, vui lòng kết nối trực tiếp qua Zalo hoặc để lại lời nhắn.</p>
-        <p><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p><strong>Thời gian làm việc:</strong> 8:00 - 22:00 hàng ngày</p>
-        <p><strong>Lĩnh vực:</strong> Nội thất</p>
+  <main>
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="section-header">
+        <div class="section-kicker">Kết Nối Với Kiến Trúc Sư</div>
+        <h1 class="section-title">Đặt Lịch Khảo Sát &amp; Gửi Mẫu Gỗ Thực Tế</h1>
+        <p class="section-subtitle">
+          Để đảm bảo sự hòa hợp tuyệt đối giữa ánh sáng không gian và sắc độ vân gỗ, chúng tôi luôn khuyến khích quý khách trải nghiệm trực tiếp mẫu gỗ tại công trình thực tế.
+        </p>
       </div>
 
-      <div>
-        <form id="site-contact-form">
-          <div class="form-group">
-            <label for="c-name">Họ và tên *</label>
-            <input type="text" id="c-name" required placeholder="Nguyễn Văn A">
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 3.5rem; margin-bottom: 4rem;">
+        <!-- Form -->
+        <div style="background:var(--color-cream-warm); border:1px solid var(--color-border-warm); border-radius:var(--radius-lg); padding:2.5rem; box-shadow:var(--shadow-medium);">
+          <h2 style="font-family:var(--font-serif); font-size:1.6rem; color:var(--color-walnut-dark); margin-bottom:1.5rem;">
+            Đăng Ký Tư Vấn May Đo Tận Nơi
+          </h2>
+
+          <form id="contact-survey-form">
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem;">
+              <div>
+                <label for="contact-name" class="form-label">Họ và Tên *</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="Ví dụ: Anh Hoàng Nam" required>
+              </div>
+              <div>
+                <label for="contact-phone" class="form-label">Số Điện Thoại / Zalo *</label>
+                <input type="tel" id="contact-phone" class="form-input" placeholder="09xx xxx xxx" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-address" class="form-label">Địa Chỉ Công Trình / Dự Án</label>
+              <input type="text" id="contact-address" class="form-input" placeholder="Ví dụ: Biệt thự Chateau, Phú Mỹ Hưng, Q.7, TP.HCM">
+            </div>
+
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem;">
+              <div>
+                <label for="contact-type" class="form-label">Loại Hình Không Gian</label>
+                <select id="contact-type" class="form-select">
+                  <option value="Biệt thự / Villa">Biệt Thự Đơn Lập / Villa</option>
+                  <option value="Penthouse / Duplex">Penthouse / Sky Villa</option>
+                  <option value="Căn hộ cao cấp">Căn Hộ Chung Cư Cao Cấp</option>
+                  <option value="Nhà phố hiện đại">Nhà Phố Kiến Trúc Mới</option>
+                  <option value="Phòng trà thiền">Phòng Trà Thiền / Không Gian Tĩnh</option>
+                </select>
+              </div>
+              <div>
+                <label for="contact-wood" class="form-label">Dòng Gỗ Ưu Tiên</label>
+                <select id="contact-wood" class="form-select">
+                  <option value="Gỗ Óc Chó Bắc Mỹ">Gỗ Óc Chó Bắc Mỹ (FAS)</option>
+                  <option value="Gỗ Sồi Trắng Châu Âu">Gỗ Sồi Trắng Châu Âu</option>
+                  <option value="Gỗ Teak Tự Nhiên">Gỗ Teak Giả Tỵ Tự Nhiên</option>
+                  <option value="Gỗ Tần Bì Nu Vân">Gỗ Tần Bì Nu Nghệ Thuật</option>
+                  <option value="Cần tư vấn chọn gỗ">Cần Kiến Trúc Sư Tư Vấn Thêm</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-notes" class="form-label">Yêu Cầu Chi Tiết &amp; Kích Thước Mong Muốn</label>
+              <textarea id="contact-notes" rows="4" class="form-input" placeholder="Ghi chú về các hạng mục cần làm, tiến độ mong muốn nhận bàn giao..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width:100%; justify-content:center; padding:1rem; font-size:1rem; border:none; cursor:pointer;">
+              Xác Nhận Đặt Lịch Khảo Sát &amp; Gửi Mẫu Gỗ
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Direct Details -->
+        <div>
+          <div style="background:var(--color-walnut-dark); color:#fff; border-radius:var(--radius-lg); padding:2.5rem; margin-bottom:2rem; border:1px solid rgba(255,255,255,0.08);">
+            <h3 style="font-family:var(--font-serif); font-size:1.45rem; color:#eedcc9; margin-bottom:1.2rem;">
+              Trụ Sở &amp; Xưởng Chế Tác
+            </h3>
+
+            <div style="margin-bottom:1.4rem;">
+              <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-amber-clay); font-weight:700;">Gallery &amp; Showroom Trải Nghiệm</div>
+              <p style="font-size:0.92rem; color:#d8cec4; margin-top:0.3rem;">
+                Khu Đô Thị Sala, Số 10 Mai Chí Thọ, Phường An Lợi Đông, TP. Thủ Đức, TP.HCM
+              </p>
+            </div>
+
+            <div style="margin-bottom:1.4rem;">
+              <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-amber-clay); font-weight:700;">Xưởng Mộc Thủ Công &amp; Lò Sấy</div>
+              <p style="font-size:0.92rem; color:#d8cec4; margin-top:0.3rem;">
+                Cụm Làng Nghề Đồ Gỗ Mỹ Nghệ Thạch Thất, TP. Hà Nội
+              </p>
+            </div>
+
+            <div style="margin-bottom:1.4rem;">
+              <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-amber-clay); font-weight:700;">Đường Dây Nóng Kỹ Thuật</div>
+              <p style="font-size:1.15rem; color:#fff; font-weight:700; margin-top:0.3rem;">
+                0971 183 939 (Tư Vấn Miễn Phí 24/7)
+              </p>
+            </div>
+
+            <div>
+              <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-amber-clay); font-weight:700;">Giờ Mở Cửa Đón Tiếp</div>
+              <p style="font-size:0.92rem; color:#d8cec4; margin-top:0.3rem;">
+                08:00 – 18:30 (Tất cả các ngày trong tuần)
+              </p>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="c-phone">Số điện thoại / Zalo *</label>
-            <input type="tel" id="c-phone" required placeholder="09xxxxxxxx">
+
+          <!-- Direct Zalo Callout -->
+          <div style="background:var(--color-cream-sand); border:1px solid var(--color-border-warm); border-radius:var(--radius-md); padding:1.8rem; text-align:center;">
+            <h4 style="font-family:var(--font-serif); font-size:1.2rem; color:var(--color-walnut-dark); margin-bottom:0.5rem;">
+              Cần Tư Vấn Nhanh Qua Zalo?
+            </h4>
+            <p style="font-size:0.86rem; color:var(--color-charcoal-muted); margin-bottom:1.2rem;">
+              Gửi ngay ảnh hiện trạng hoặc bản vẽ thiết kế để nhận phản hồi từ KTS trong vòng 15 phút.
+            </p>
+            <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo" style="width:100%; justify-content:center; padding:0.85rem;">
+              Chat Trực Tiếp Với Kiến Trúc Sư: 0971 183 939
+            </a>
           </div>
-          <div class="form-group">
-            <label for="c-msg">Nhu cầu tư vấn *</label>
-            <textarea id="c-msg" rows="4" required placeholder="Nhu cầu chi tiết..."></textarea>
+        </div>
+      </div>
+
+      <!-- 5-Step Process -->
+      <div style="margin-top: 4rem;">
+        <div class="section-header">
+          <div class="section-kicker">Quy Trình Chuẩn Mực</div>
+          <h2 class="section-title">5 Bước Chế Tác May Đo Tại Mộc Điền</h2>
+        </div>
+
+        <div class="joinery-grid" style="grid-template-columns: repeat(5, 1fr);">
+          <div class="joinery-card" style="text-align:center;">
+            <div style="font-family:var(--font-serif); font-size:1.6rem; color:var(--color-amber-clay); font-weight:700; margin-bottom:0.4rem;">01</div>
+            <h4>Tiếp Nhận Nhu Cầu</h4>
+            <p>Trao đổi về phong cách, sở thích dòng gỗ và diện tích không gian sống.</p>
           </div>
-          <button type="submit" class="btn-primary" style="width: 100%;">Gửi Yêu Cầu Tư Vấn</button>
-        </form>
+
+          <div class="joinery-card" style="text-align:center;">
+            <div style="font-family:var(--font-serif); font-size:1.6rem; color:var(--color-amber-clay); font-weight:700; margin-bottom:0.4rem;">02</div>
+            <h4>Khảo Sát Tận Nhà</h4>
+            <p>Mang mẫu thớ gỗ thực tế, đo đạc ánh sáng và hiện trạng công trình.</p>
+          </div>
+
+          <div class="joinery-card" style="text-align:center;">
+            <div style="font-family:var(--font-serif); font-size:1.6rem; color:var(--color-amber-clay); font-weight:700; margin-bottom:0.4rem;">03</div>
+            <h4>Bản Vẽ Chi Tiết Mộng</h4>
+            <p>Phối cảnh 3D và bóc tách giải pháp khớp mộng cơ học chính xác.</p>
+          </div>
+
+          <div class="joinery-card" style="text-align:center;">
+            <div style="font-family:var(--font-serif); font-size:1.6rem; color:var(--color-amber-clay); font-weight:700; margin-bottom:0.4rem;">04</div>
+            <h4>Chế Tác Thủ Công</h4>
+            <p>Thợ cả trực tiếp đục mộng, mài lụa và lau 3 lớp dầu thực vật Osmo.</p>
+          </div>
+
+          <div class="joinery-card" style="text-align:center;">
+            <div style="font-family:var(--font-serif); font-size:1.6rem; color:var(--color-amber-clay); font-weight:700; margin-bottom:0.4rem;">05</div>
+            <h4>Bàn Giao &amp; Bảo Hành</h4>
+            <p>Lắp đặt hoàn thiện và trao sổ bảo hành chống biến dạng 10 năm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Zalo Button -->
+  <aside class="floating-zalo">
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn đồ gỗ Mộc Điền">
+      <span>💬</span> Tư Vấn Zalo 0971 183 939
+    </a>
+  </aside>
+
+  <!-- Cart Modal Overlay & Drawer -->
+  <div class="cart-modal-overlay" id="cart-modal">
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3>Danh Sách Tư Vấn</h3>
+        <button type="button" class="cart-close-btn" id="cart-close-btn">&times;</button>
+      </div>
+      <div class="cart-items-container" id="cart-items-container">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="cart-drawer-footer">
+        <div class="cart-total-line">
+          <span>Tổng Giá Trị Tạm Tính:</span>
+          <span id="cart-total-price">0đ</span>
+        </div>
+        <a href="#" class="btn-checkout-zalo" id="btn-checkout-zalo">
+          Gửi Danh Sách Cho Kiến Trúc Sư Qua Zalo
+        </a>
       </div>
     </div>
   </div>
 
-  
+  <!-- Footer -->
   <footer>
     <div class="footer-wrap">
-      <div>
-        <h3>Bán Đồ Nội thất</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Nội thất. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+      <div class="footer-brand">
+        <h3>MỘC ĐIỀN ATELIER</h3>
+        <p>
+          Xưởng chế tác đồ gỗ tự nhiên nguyên tấm chuẩn mộng truyền thống. Tôn vinh vẻ đẹp nguyên bản của thớ gỗ tự nhiên và tinh thần kiến trúc Wabi-Sabi.
+        </p>
+        <p style="margin-top: 1rem; color: #eedcc9; font-size: 0.84rem;">
+          Mã Giao Diện: <strong>#MS101</strong> (Hệ Thống Thư Viện RackerWeb)
+        </p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Nội thất</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+
+      <div class="footer-col">
+        <h4>Tác Phẩm Gỗ</h4>
+        <ul>
+          <li><a href="san-pham.html">Bàn Ăn Live-Edge Nguyên Tấm</a></li>
+          <li><a href="san-pham.html">Ghế Điêu Khắc Tựa Cong</a></li>
+          <li><a href="san-pham.html">Tủ Credenza Wabi-Sabi</a></li>
+          <li><a href="san-pham.html">Giường Bay Master Suite</a></li>
+          <li><a href="san-pham.html">Bàn Trà Thiền Khối Đặc</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col">
+        <h4>Về Chúng Tôi</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Triết Lý Mộng Truyền Thống</a></li>
+          <li><a href="gioi-thieu.html">Tiêu Chuẩn Gỗ Sấy &lt;10% MC</a></li>
+          <li><a href="gioi-thieu.html">Dầu Lau Thực Vật Osmo Đức</a></li>
+          <li><a href="lien-he.html">Quy Trình Khảo Sát Tận Nơi</a></li>
+          <li><a href="lien-he.html">Chính Sách Bảo Hành 10 Năm</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact-info">
+        <h4>Xưởng Chế Tác</h4>
+        <p>📍 Xưởng Thủ Công: Làng Nghề Gỗ Thạch Thất, Hà Nội</p>
+        <p>🏛️ Gallery Trưng Bày: Khu Đô Thị Sala, TP. Thủ Đức, TP.HCM</p>
+        <p>📞 Hotline Kỹ Thuật: 0971 183 939</p>
+        <p>💬 Tư Vấn Thiết Kế Zalo: 0971 183 939 (24/7)</p>
       </div>
     </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Bán Đồ Nội thất. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <div>&copy; 2026 MỘC ĐIỀN ATELIER. Bản quyền thuộc về Xưởng Thủ Công & Kiến Trúc Gỗ Tự Nhiên.</div>
+      <div>Designed for RackerWeb High-End Architecture & Interior Portfolio.</div>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
   <script src="js/app.js"></script>
+  <script>
+    // Form submit handler for contact page
+    const contactForm = document.getElementById('contact-survey-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('contact-name').value;
+        const phone = document.getElementById('contact-phone').value;
+        const address = document.getElementById('contact-address').value;
+        const type = document.getElementById('contact-type').value;
+        const wood = document.getElementById('contact-wood').value;
+        const notes = document.getElementById('contact-notes').value;
+
+        const msg = encodeURIComponent(`Kính gửi Mộc Điền Atelier!\nTôi muốn đăng ký lịch khảo sát & xem mẫu gỗ tận nơi:\n- Khách hàng: ${name}\n- SĐT/Zalo: ${phone}\n- Địa chỉ: ${address}\n- Không gian: ${type}\n- Dòng gỗ quan tâm: ${wood}\n- Ghi chú: ${notes}`);
+        window.open(`https://zalo.me/0971183939?text=${msg}`, '_blank');
+      });
+    }
+  </script>
 </body>
 </html>

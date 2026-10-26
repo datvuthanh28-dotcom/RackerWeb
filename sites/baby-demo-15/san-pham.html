@@ -1,98 +1,288 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Danh Mục Sản phẩm | Baby demo 15</title>
+  <title>Gói Tiêm Chủng & Khám Nhi Khoa | PETIT CARE</title>
+  <meta name="description" content="Danh mục gói khám tổng quát cho bé, gói tiêm chủng trọn gói 0-12 tháng, 0-24 tháng nhập khẩu Pháp/Bỉ/Mỹ và tư vấn dinh dưỡng chuyên sâu tại Petit Care.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Navigation back to theme library -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS15</strong>.</span>
+    <span>Giao diện y tế nhi khoa <strong>#MS15</strong> thuộc Thư Viện Theme RackerWeb.</span>
     <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
   </div>
 
+  <!-- Top Clinic Status Bar -->
+  <div class="top-clinic-bar">
+    <div class="clinic-status-left">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span class="clinic-pulse-dot"></span>
+        <span>Phòng Khám Đang Mở Cửa (07:30 - 20:00 Hàng Ngày)</span>
+      </div>
+      <div>🌱 Khu vui chơi vô trùng & Phòng cho mẹ bé riêng biệt</div>
+    </div>
+    <div class="clinic-contact-right">
+      <a href="tel:0971183939" class="clinic-hotline">🚨 Cấp cứu & Tư vấn Nhi khoa: 0971.18.3939</a>
+      <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" style="color: #0284c7; font-weight: 700;">Zalo Bác Sĩ Trực</a>
+    </div>
+  </div>
+
+  <!-- Main Header -->
   <header>
     <div class="header-wrap">
-      <div class="logo">Baby demo 15 <span>MS15</span></div>
+      <a href="index.html" class="logo-container">
+        <div class="logo-icon-emblem">🍼</div>
+        <div class="logo-brand-info">
+          <div class="logo-brand-title">PETIT <span>CARE</span></div>
+          <div class="logo-brand-sub">Pediatrics & Vaccination</div>
+        </div>
+      </a>
+
       <nav>
         <ul>
           <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html" class="active">Sản phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+          <li><a href="san-pham.html" class="active">Gói Tiêm Chủng & Khám</a></li>
+          <li><a href="gioi-thieu.html">Cơ Sở & Bác Sĩ</a></li>
+          <li><a href="lien-he.html">Đặt Lịch Hẹn</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
-        <button type="button" class="cart-trigger">Giỏ Hàng (<span id="cart-count">0</span>)</button>
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <button type="button" class="btn-booking-cart">
+          <span>Mũi Tiêm Đã Chọn</span>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+        <a href="lien-he.html" class="btn-appointment">
+          <span>📅 Đặt Lịch Khám Cho Bé</span>
+        </a>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Toàn Bộ Danh Mục Sản phẩm</h1>
-    <p>Khám phá đầy đủ các gói sản phẩm và giải pháp cao cấp từ Baby demo 15</p>
+  <!-- Subpage Banner -->
+  <div class="subpage-banner">
+    <h1>Bảng Giá Gói Tiêm Chủng & Dịch Vụ Khám Nhi</h1>
+    <p>Giải pháp chăm sóc toàn diện cho bé yêu với phác đồ chuẩn y khoa quốc tế, cam kết giữ trọn vẹn mũi tiêm không tăng giá trong suốt liệu trình.</p>
   </div>
 
-  <main class="section">
-    <div class="grid">
-        <div class="card">
-          <span class="card-badge">Chính hãng</span>
-          <h3>Viên Uống Bổ Sung Vitamin Tổng Hợp</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">350.000đ</div>
-          <button type="button" class="btn-buy" data-name="Viên Uống Bổ Sung Vitamin Tổng Hợp">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Bảo hành 2 năm</span>
-          <h3>Máy Đo Huyết Áp Điện Tử Bắp Tay</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">890.000đ</div>
-          <button type="button" class="btn-buy" data-name="Máy Đo Huyết Áp Điện Tử Bắp Tay">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Nhập khẩu</span>
-          <h3>Dầu Cá Omega-3 Tinh Khiết</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">420.000đ</div>
-          <button type="button" class="btn-buy" data-name="Dầu Cá Omega-3 Tinh Khiết">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Cần thiết</span>
-          <h3>Bộ Hộp Sơ Cứu Gia Đình Chuẩn Y Tế</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">260.000đ</div>
-          <button type="button" class="btn-buy" data-name="Bộ Hộp Sơ Cứu Gia Đình Chuẩn Y Tế">Thêm Giỏ Hàng</button>
+  <main class="departments-section" style="margin-top: 3.5rem;">
+    <!-- Package Cards Grid -->
+    <div class="dept-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <!-- Package 1: Full First Year Vaccine -->
+      <div class="dept-card">
+        <div class="dept-media">
+          <img src="assets/images/service-vaccination.jpg" alt="Gói tiêm chủng năm đầu đời">
         </div>
+        <div class="dept-body">
+          <span class="vaccine-badge">Gói Trọng Điểm</span>
+          <h3 class="dept-title">Gói Tiêm Chủng Trọn Gói Năm Đầu (0 - 12 Tháng)</h3>
+          <p class="dept-desc">
+            Bao gồm đầy đủ 12 mũi tiêm thiết yếu: 6 trong 1 (Pháp), Phế cầu 13 chủng (Mỹ), Uống Rota (Bỉ), Cúm mùa và Sởi đơn. Giữ đầy đủ vắc-xin không lo khan hiếm.
+          </p>
+          <ul style="list-style: none; font-size: 0.82rem; color: #475569; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.35rem;">
+            <li>✓ Khám sàng lọc trước tiêm miễn phí trọn đời</li>
+            <li>✓ Tự động nhắn tin nhắc lịch tiêm qua Zalo/SMS</li>
+            <li>✓ Tặng gói khám dinh dưỡng cùng chuyên gia</li>
+          </ul>
+          <div class="vaccine-card-foot" style="margin-top: auto;">
+            <div class="vaccine-price">12.500.000đ</div>
+            <button type="button" class="btn-reserve-vaccine" data-name="Gói Tiêm Chủng 0-12 Tháng" data-price="12.500.000đ">
+              + Đặt Gói Này
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 2: Comprehensive Newborn Screening -->
+      <div class="dept-card">
+        <div class="dept-media">
+          <img src="assets/images/service-general-pediatrics.jpg" alt="Khám sàng lọc sơ sinh toàn diện">
+        </div>
+        <div class="dept-body">
+          <span class="vaccine-badge">Sơ Sinh & Nhũ Nhi</span>
+          <h3 class="dept-title">Gói Khám Đánh Giá Sức Khỏe Toàn Diện Sơ Sinh</h3>
+          <p class="dept-desc">
+            Kiểm tra thóp đầu, tầm soát tim bẩm sinh, đo thính lực sơ sinh OAE, kiểm tra dính thắng lưỡi, tật trật khớp háng bẩm sinh và tư vấn sữa mẹ cùng Bác sĩ Chuyên khoa II.
+          </p>
+          <ul style="list-style: none; font-size: 0.82rem; color: #475569; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.35rem;">
+            <li>✓ Siêu âm thóp và ổ bụng không gây đau</li>
+            <li>✓ Đánh giá phản xạ thần kinh sơ sinh chuẩn Amiel-Tison</li>
+            <li>✓ Hướng dẫn tắm bé và massage kích hoạt giác quan</li>
+          </ul>
+          <div class="vaccine-card-foot" style="margin-top: auto;">
+            <div class="vaccine-price">1.200.000đ</div>
+            <button type="button" class="btn-reserve-vaccine" data-name="Gói Khám Sơ Sinh Toàn Diện" data-price="1.200.000đ">
+              + Đặt Gói Này
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 3: Nutrition & Picky Eater Program -->
+      <div class="dept-card">
+        <div class="dept-media">
+          <img src="assets/images/service-nutrition.jpg" alt="Chương trình can thiệp biếng ăn">
+        </div>
+        <div class="dept-body">
+          <span class="vaccine-badge">Dinh Dưỡng & Tăng Trưởng</span>
+          <h3 class="dept-title">Chương Trình Can Thiệp Biếng Ăn & Chậm Tăng Cân</h3>
+          <p class="dept-desc">
+            Xét nghiệm vi chất (Kẽm, Sắt, Canxi, Vitamin D3), phân tích thành phần cơ thể và thiết kế thực đơn ăn dặm 30 ngày cá thể hóa giúp bé ăn ngon miệng tự nhiên.
+          </p>
+          <ul style="list-style: none; font-size: 0.82rem; color: #475569; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.35rem;">
+            <li>✓ Đánh giá khả năng nhai nuốt và hệ vi sinh đường ruột</li>
+            <li>✓ Thực đơn khoa học dễ nấu từ nguyên liệu tươi Việt Nam</li>
+            <li>✓ Chuyên viên theo dõi tiến độ cân nặng mỗi tuần</li>
+          </ul>
+          <div class="vaccine-card-foot" style="margin-top: auto;">
+            <div class="vaccine-price">1.850.000đ</div>
+            <button type="button" class="btn-reserve-vaccine" data-name="Gói Can Thiệp Biếng Ăn" data-price="1.850.000đ">
+              + Đặt Gói Này
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 4: 0 - 24 Months Extended Vaccine -->
+      <div class="dept-card">
+        <div class="dept-media">
+          <img src="assets/images/hero-pediatric.jpg" alt="Gói vắc xin toàn diện 0 - 2 tuổi">
+        </div>
+        <div class="dept-body">
+          <span class="vaccine-badge">Tiết Kiệm 15%</span>
+          <h3 class="dept-title">Gói Vắc-xin Toàn Diện Cho Bé 0 - 24 Tháng Tuổi</h3>
+          <p class="dept-desc">
+            Bảo vệ trọn vẹn 2 năm đầu đời với 18 mũi tiêm phòng chống 16 bệnh truyền nhiễm nguy hiểm nhất. Đảm bảo kháng thể vững chắc trước khi bé đến trường mẫu giáo.
+          </p>
+          <ul style="list-style: none; font-size: 0.82rem; color: #475569; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.35rem;">
+            <li>✓ Đầy đủ vắc-xin Thủy đậu, Viêm não Nhật Bản, Viêm gan A</li>
+            <li>✓ Cam kết không phát sinh bất kỳ chi phí mũi tiêm nhắc</li>
+            <li>✓ Miễn phí khám và tư vấn trực tiếp cùng Trưởng khoa</li>
+          </ul>
+          <div class="vaccine-card-foot" style="margin-top: auto;">
+            <div class="vaccine-price">19.800.000đ</div>
+            <button type="button" class="btn-reserve-vaccine" data-name="Gói Vắc-xin 0-24 Tháng" data-price="19.800.000đ">
+              + Đặt Gói Này
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 5: Early Speech & Motor Milestone -->
+      <div class="dept-card">
+        <div class="dept-media">
+          <img src="assets/images/service-development.jpg" alt="Đánh giá mốc phát triển tâm vận động">
+        </div>
+        <div class="dept-body">
+          <span class="vaccine-badge">Can Thiệp Sớm</span>
+          <h3 class="dept-title">Đánh Giá Mốc Phát Triển & Sàng Lọc Chậm Nói</h3>
+          <p class="dept-desc">
+            Sử dụng thang đo phát triển Denver II và M-CHAT chuẩn Hoa Kỳ. Đánh giá vận động thô, vận động tinh, khả năng giao tiếp ánh mắt và tương tác xã hội của trẻ.
+          </p>
+          <ul style="list-style: none; font-size: 0.82rem; color: #475569; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.35rem;">
+            <li>✓ Bác sĩ tâm lý nhi và ngôn ngữ trị liệu đồng thăm khám</li>
+            <li>✓ Bài tập kích hoạt ngôn ngữ tại nhà theo giờ vàng</li>
+            <li>✓ Lộ trình can thiệp cá nhân hóa rõ ràng, nhân văn</li>
+          </ul>
+          <div class="vaccine-card-foot" style="margin-top: auto;">
+            <div class="vaccine-price">1.500.000đ</div>
+            <button type="button" class="btn-reserve-vaccine" data-name="Đánh Giá Tâm Vận Động & Chậm Nói" data-price="1.500.000đ">
+              + Đặt Gói Này
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 6: General Respiratory & ENT -->
+      <div class="dept-card">
+        <div class="dept-media">
+          <img src="assets/images/happy-toddler.jpg" alt="Gói khám tai mũi họng hô hấp">
+        </div>
+        <div class="dept-body">
+          <span class="vaccine-badge">Hô Hấp & Dị Ứng</span>
+          <h3 class="dept-title">Gói Khám Hô Hấp, Tai Mũi Họng & Khí Dung Chuẩn</h3>
+          <p class="dept-desc">
+            Nội soi tai mũi họng ống mềm không đau cho bé. Điều trị dứt điểm viêm phế quản, hen suyễn, viêm xoang dị ứng thời tiết và vệ sinh hút mũi êm ái bằng máy hút áp lực âm.
+          </p>
+          <ul style="list-style: none; font-size: 0.82rem; color: #475569; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.35rem;">
+            <li>✓ Hạn chế tối đa việc lạm dụng kháng sinh</li>
+            <li>✓ Phòng khí dung siêu âm hạt mịn êm dịu cho bé</li>
+            <li>✓ Hướng dẫn mẹ cách vỗ rung long đờm an toàn tại nhà</li>
+          </ul>
+          <div class="vaccine-card-foot" style="margin-top: auto;">
+            <div class="vaccine-price">650.000đ</div>
+            <button type="button" class="btn-reserve-vaccine" data-name="Gói Khám Hô Hấp Tai Mũi Họng" data-price="650.000đ">
+              + Đặt Gói Này
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
-  
+  <!-- Comforting Clinic Footer -->
   <footer>
     <div class="footer-wrap">
-      <div>
-        <h3>Baby demo 15</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Y tế. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+      <div class="footer-brand">
+        <h4>PETIT CARE PEDIATRICS CLINIC</h4>
+        <p>
+          Hệ thống phòng khám chuyên khoa Nhi & Trung tâm Tiêm chủng Quốc tế. Cam kết đồng hành cùng ba mẹ trên hành trình chăm sóc những thiên thần nhỏ lớn khôn khỏe mạnh và tràn đầy hạnh phúc.
+        </p>
+        <div style="font-size: 0.82rem; color: #64748b;">
+          Giấy phép hoạt động khám chữa bệnh số: 08425/HCM-GPHĐ cấp bởi Sở Y Tế TP.HCM.
+        </div>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Sản phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+
+      <div class="footer-col">
+        <h5>Chuyên Khoa Nhi</h5>
+        <ul>
+          <li><a href="san-pham.html">Khám Sơ Sinh & Nhũ Nhi</a></li>
+          <li><a href="san-pham.html">Gói Tiêm Chủng 0 - 2 Tuổi</a></li>
+          <li><a href="san-pham.html">Khám Hô Hấp & Dị Ứng</a></li>
+          <li><a href="san-pham.html">Tư Vấn Dinh Dưỡng</a></li>
+          <li><a href="san-pham.html">Đo Chỉ Số Tăng Trưởng</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col">
+        <h5>Về Phòng Khám</h5>
+        <ul>
+          <li><a href="gioi-thieu.html">Cơ Sở Vật Chất</a></li>
+          <li><a href="gioi-thieu.html">Quy Trình Tiêm Chủng</a></li>
+          <li><a href="gioi-thieu.html">Đội Ngũ Bác Sĩ</a></li>
+          <li><a href="lien-he.html">Bảng Giá Dịch Vụ</a></li>
+          <li><a href="lien-he.html">Chính Sách Hoàn Mũi Tiêm</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Thông Tin Liên Hệ</h5>
+        <ul>
+          <li>📍 45 Phổ Quang, Phường 2, Tân Bình, TP.HCM</li>
+          <li>📞 Tổng đài đặt lịch: 0971.18.3939</li>
+          <li>🚨 Hotline khẩn cấp 24/7: 0971.18.3939</li>
+          <li>⏰ Giờ làm việc: 07:30 - 20:00 (Cả Thứ Bảy & Chủ Nhật)</li>
+        </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Baby demo 15. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <div>
+        &copy; 2026 PETIT CARE CLINIC & PEDIATRICS. Bản quyền thiết kế y tế độc quyền thuộc Thư Viện Theme RackerWeb.
+      </div>
+      <div>
+        Kiến trúc Frontend tĩnh GitHub Pages • Tải nhanh & Bảo mật cao
+      </div>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
+  <!-- Floating Zalo -->
+  <aside class="floating-zalo">
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Bác sĩ Nhi Zalo 0971183939">Zalo</a>
+  </aside>
+
   <script src="js/app.js"></script>
 </body>
 </html>

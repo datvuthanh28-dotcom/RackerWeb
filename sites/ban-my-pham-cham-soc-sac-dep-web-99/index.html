@@ -1,118 +1,549 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bán mỹ phẩm chăm sóc sắc đẹp - web 99 | Mỹ phẩm Official Demo</title>
-  <meta name="description" content="Chăm sóc làn da tỏa sáng tự nhiên & Mỹ phẩm thuần chay">
+  <title>BOTANICA DERMA LAB | Dược Mỹ Phẩm Thực Vật & Khoa Học Phục Hồi Da Liễu #MS99</title>
+  <meta name="description" content="Botanica Derma Lab: Dược mỹ phẩm thực vật chuẩn y khoa phục hồi hàng rào bảo vệ da. Chiết xuất rau má Centella 10%, Niacinamide Thụy Sĩ, Ceramide sinh học, 100% EWG Green.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation back to theme library -->
+
+  <!-- Return Navigation Bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS99</strong> thuộc Thư Viện Theme.</span>
+    <span>Giao diện dược mỹ phẩm lâm sàng <strong>#MS99</strong> — Botanica Derma Lab (Thư Viện Theme).</span>
     <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
   </div>
 
+  <!-- Header -->
   <header>
     <div class="header-wrap">
-      <div class="logo">
-        Bán mỹ phẩm chăm sóc sắc đẹp - web 99
-        <span>MS99</span>
-      </div>
+      <a href="index.html" class="logo">
+        <span class="logo-title">BOTANICA DERMA LAB</span>
+        <span class="logo-sub">Clinical Botanical Dermatology</span>
+      </a>
+
       <nav>
         <ul>
           <li><a href="index.html" class="active">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+          <li><a href="san-pham.html">Dược Mỹ Phẩm</a></li>
+          <li><a href="gioi-thieu.html">Viện Nghiên Cứu</a></li>
+          <li><a href="lien-he.html">Tư Vấn Da Liễu</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
-        <button type="button" class="cart-trigger">Giỏ Hàng (<span id="cart-count">0</span>)</button>
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <button type="button" class="cart-trigger">
+          <span>Phác Đồ</span> (<span id="cart-count">0</span>)
+        </button>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">
+          Zalo Dược Sĩ: 0971 183 939
+        </a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Chăm sóc làn da tỏa sáng tự nhiên & Mỹ phẩm thuần chay</h1>
-        <p>Trải nghiệm dịch vụ chuyên nghiệp, chuẩn mực thiết kế tối ưu và công nghệ tiên tiến nhất từ Bán mỹ phẩm chăm sóc sắc đẹp - web 99.</p>
-        <div class="hero-btns">
-          <a href="san-pham.html" class="btn-primary">Khám Phá Ngay</a>
-          <a href="lien-he.html" class="btn-outline">Nhận Tư Vấn</a>
+    <!-- Hero Section -->
+    <section class="hero-derma">
+      <div class="hero-container">
+        <div class="hero-copy-col">
+          <div class="hero-badge-pill">
+            <span>🌿</span> 100% Thuần Chay • Chuẩn EWG Green • Thử Nghiệm Lâm Sàng
+          </div>
+          <h1 class="hero-headline">
+            Khoa Học Dược Mỹ Phẩm Thực Vật <em>Phục Hồi Hàng Rào Da</em> Chuẩn Y Khoa
+          </h1>
+          <p class="hero-desc">
+            Botanica Derma Lab kết hợp dược tính tinh khiết của thảo mộc hữu cơ và hoạt chất sinh học tiên tiến. Tái thiết lập màng lipid tự nhiên, dập tắt phản ứng viêm và chữa lành những làn da nhạy cảm nhất.
+          </p>
+          <div class="hero-ctas">
+            <a href="san-pham.html" class="btn-primary">Danh Mục Dược Mỹ Phẩm</a>
+            <a href="#diagnostic-matrix" class="btn-secondary">Chẩn Đoán Hàng Rào Da</a>
+          </div>
         </div>
-      </div>
-      <div class="hero-image">
-        <img src="assets/banner.webp" alt="Bán mỹ phẩm chăm sóc sắc đẹp - web 99 Preview Banner">
+
+        <div class="hero-visual-frame">
+          <img src="assets/images/hero-derma.jpg" alt="Dược mỹ phẩm thực vật phục hồi da Botanica Derma Lab" class="hero-main-img">
+          <div class="hero-floating-card">
+            <div class="floating-icon-wrap">🔬</div>
+            <div class="floating-text">
+              <h4>Cam Kết 0% Độc Hại</h4>
+              <p>Không cồn khô, không hương liệu nhân tạo, không paraben, an toàn cho cả mẹ bầu.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-title">
-        <h2>Sản Phẩm Dưỡng Da & Làm Đẹp</h2>
-        <p>Lựa chọn tiêu biểu được khách hàng tin tưởng và đánh giá cao nhất</p>
+    <!-- Stats Ribbon -->
+    <section class="stats-ribbon">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p>Thành Phần Đạt EWG Green</p>
+        </div>
+        <div class="stat-item">
+          <h3>15 Phút</h3>
+          <p>Hạ Nhiệt &amp; Dịu Đỏ Kích Ứng</p>
+        </div>
+        <div class="stat-item">
+          <h3>48 Giờ</h3>
+          <p>Tái Tạo Màng Lipid Hàng Rào</p>
+        </div>
+        <div class="stat-item">
+          <h3>0% Phụ Gia</h3>
+          <p>Paraben, Cồn &amp; Hương Liệu</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Skin Barrier Diagnostic Matrix -->
+    <section class="section" id="diagnostic-matrix">
+      <div class="section-header">
+        <div class="section-kicker">Phác Đồ Điều Trị Lâm Sàng</div>
+        <h2 class="section-title">Ma Trận Chẩn Đoán &amp; Phục Hồi Hàng Rào Bảo Vệ Da</h2>
+        <p class="section-subtitle">
+          Lựa chọn tình trạng da hiện tại của bạn để nhận phác đồ can thiệp tầng sâu được tối ưu hóa bởi các chuyên gia da liễu Botanica.
+        </p>
       </div>
 
-      <div class="grid">
-        <div class="card">
-          <span class="card-badge">Best Seller</span>
-          <h3>Serum Phục Hồi Bio-Peptide</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">480.000đ</div>
-          <button type="button" class="btn-buy" data-name="Serum Phục Hồi Bio-Peptide">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Khuyên dùng</span>
-          <h3>Kem Dưỡng Trắng Da Chiết Xuất Hoa Hồng</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">590.000đ</div>
-          <button type="button" class="btn-buy" data-name="Kem Dưỡng Trắng Da Chiết Xuất Hoa Hồng">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Organic</span>
-          <h3>Sữa Rửa Mặt Tạo Bọt Dịu Nhẹ</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">280.000đ</div>
-          <button type="button" class="btn-buy" data-name="Sữa Rửa Mặt Tạo Bọt Dịu Nhẹ">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Chống nắng</span>
-          <h3>Kem Chống Nắng Quang Phổ Rộng SPF50+</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">420.000đ</div>
-          <button type="button" class="btn-buy" data-name="Kem Chống Nắng Quang Phổ Rộng SPF50+">Thêm Giỏ Hàng</button>
+      <div class="matrix-card">
+        <div class="matrix-tabs">
+          <button type="button" class="matrix-tab-btn active" data-condition="treatment">Hậu Treatment Bong Tróc</button>
+          <button type="button" class="matrix-tab-btn" data-condition="acne">Dầu Mụn &amp; Bít Tắc Nang Lông</button>
+          <button type="button" class="matrix-tab-btn" data-condition="rosacea">Mẩn Đỏ &amp; Giãn Mao Mạch</button>
+          <button type="button" class="matrix-tab-btn" data-condition="aging">Lão Hóa &amp; Thiếu Nước Sâu</button>
+        </div>
+
+        <div class="matrix-display-grid">
+          <div class="matrix-info-col">
+            <h3 id="matrix-title">Phục Hồi Hàng Rào Da Hậu Treatment &amp; Bong Tróc</h3>
+            <div class="matrix-target-pill" id="matrix-target">Target: Cấp Cứu Màng Lipid • Tăng Sinh Tế Bào • Giảm Đỏ 85%</div>
+            <p class="matrix-desc" id="matrix-desc">
+              Làn da sau laser, peel nông hoặc sử dụng retinoid nồng độ cao thường bị tổn thương lớp sừng biểu bì (Stratum Corneum), gây châm chích và mất nước qua da (TEWL). Phác đồ tập trung vào phức hợp Ceramide 3-6-9 sinh học và Centella Asiatica 10% giúp làm dịu tức thì và tái tạo màng bảo vệ trong 48 giờ.
+            </p>
+
+            <div class="routine-step-box" id="matrix-routine-steps">
+              <div class="routine-step-item">
+                <div class="step-num-badge">01</div>
+                <div>
+                  <div class="step-title">Làm Sạch Dịu Nhẹ pH 5.5</div>
+                  <div class="step-product-name">Gel Rửa Mặt Thảo Dược Amino Acid (280.000đ)</div>
+                </div>
+              </div>
+              <div class="routine-step-item">
+                <div class="step-num-badge">02</div>
+                <div>
+                  <div class="step-title">Cấp Cứu Làm Dịu Khẩn Cấp</div>
+                  <div class="step-product-name">Tinh Chất Rau Má Centella 10% Soothing Ampoule (450.000đ)</div>
+                </div>
+              </div>
+              <div class="routine-step-item">
+                <div class="step-num-badge">03</div>
+                <div>
+                  <div class="step-title">Khóa Ẩm Tái Tạo Lipid</div>
+                  <div class="step-product-name">Kem Phục Hồi Ceramide Bio-Barrier Cream (520.000đ)</div>
+                </div>
+              </div>
+              <div class="routine-step-item">
+                <div class="step-num-badge">04</div>
+                <div>
+                  <div class="step-title">Bảo Vệ Vật Lý Tuyệt Đối</div>
+                  <div class="step-product-name">Kem Chống Nắng Khoáng Kẽm Zinc Pure Mineral SPF 50+ (390.000đ)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="matrix-visual-col">
+            <img src="assets/images/model-cream-apply.jpg" alt="Mô phỏng phục hồi hàng rào biểu bì da" id="matrix-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Featured Clinical Formulations -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-kicker">Công Thức Độc Quyền</div>
+        <h2 class="section-title">Dược Mỹ Phẩm Phục Hồi Chuyên Sâu</h2>
+        <p class="section-subtitle">
+          Công thức minh bạch 100% nồng độ hoạt chất, độ tinh khiết chuẩn phòng kiểm nghiệm và chứng minh lâm sàng không gây bít tắc lỗ chân lông.
+        </p>
+      </div>
+
+      <div class="catalog-grid">
+        <!-- Item 1 -->
+        <article class="product-derma-card">
+          <div class="product-img-wrap">
+            <span class="product-tag">Centella Asiatica 10%</span>
+            <img src="assets/images/product-serum.jpg" alt="Tinh Chất Rau Má Cấp Cứu Centella 10%">
+          </div>
+          <div class="product-info-wrap">
+            <h3 class="product-title">Centella 10% Soothing Ampoule</h3>
+            <div class="product-active-pill">Rau Má Đảo Jeju • Madecassoside • Panthenol B5 5%</div>
+            <p class="product-desc">
+              Ampoule cấp cứu làn da nhạy cảm kích ứng. Làm dịu ngay hiện tượng ửng đỏ sau 15 phút, kích hoạt tăng sinh tế bào hạt biểu bì và củng cố hàng rào phòng ngự.
+            </p>
+            <div class="product-meta-row">
+              <div class="product-price">450.000đ</div>
+              <button type="button" class="btn-add-cart" data-name="Centella 10% Soothing Ampoule" data-price="450000">
+                Thêm Phác Đồ
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 2 -->
+        <article class="product-derma-card">
+          <div class="product-img-wrap">
+            <span class="product-tag">pH 5.5 Chuẩn Sinh Lý</span>
+            <img src="assets/images/product-cleanser.jpg" alt="Gel Rửa Mặt Thảo Mộc Amino Acid">
+          </div>
+          <div class="product-info-wrap">
+            <h3 class="product-title">Amino Acid Gentle Cleansing Gel</h3>
+            <div class="product-active-pill">Gốc Rửa Táo &amp; Dừa • Trà Xanh Hữu Cơ • Allantoin</div>
+            <p class="product-desc">
+              Làm sạch bụi mịn PM2.5 và dầu thừa mà không làm tổn thương màng acid mantle tự nhiên. 100% không xà phòng, không làm căng rát da mặt sau khi rửa.
+            </p>
+            <div class="product-meta-row">
+              <div class="product-price">280.000đ</div>
+              <button type="button" class="btn-add-cart" data-name="Amino Acid Gentle Cleansing Gel" data-price="280000">
+                Thêm Phác Đồ
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 3 -->
+        <article class="product-derma-card">
+          <div class="product-img-wrap">
+            <span class="product-tag">Ceramide 3-6-9 Sinh Học</span>
+            <img src="assets/images/product-cream.jpg" alt="Kem Phục Hồi Ceramide Bio-Barrier Cream">
+          </div>
+          <div class="product-info-wrap">
+            <h3 class="product-title">Ceramide Bio-Barrier Restoring Cream</h3>
+            <div class="product-active-pill">Ceramide NP/AP/EOP • Phytosphingosine • Squalane</div>
+            <p class="product-desc">
+              Tái cấu trúc tỷ lệ vàng lipid mô phỏng lớp sừng tự nhiên (50% Ceramide, 25% Cholesterol, 15% Axit béo). Khóa ẩm 72h và dứt điểm tình trạng da bong tróc vảy nến.
+            </p>
+            <div class="product-meta-row">
+              <div class="product-price">520.000đ</div>
+              <button type="button" class="btn-add-cart" data-name="Ceramide Bio-Barrier Restoring Cream" data-price="520000">
+                Thêm Phác Đồ
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 4 -->
+        <article class="product-derma-card">
+          <div class="product-img-wrap">
+            <span class="product-tag">Khoáng Kẽm Không Nano</span>
+            <img src="assets/images/product-sunscreen.jpg" alt="Kem Chống Nắng Khoáng Kẽm Zinc Pure Mineral">
+          </div>
+          <div class="product-info-wrap">
+            <h3 class="product-title">Zinc Pure Mineral Sunscreen SPF 50+</h3>
+            <div class="product-active-pill">Zinc Oxide 18.5% • Chiết Xuất Tảo Đỏ • Ectoin 1%</div>
+            <p class="product-desc">
+              Kem chống nắng thuần vật lý phản xạ 98% tia UVA/UVB và ánh sáng xanh HEV. Kết cấu mỏng nhẹ kháng nước, kiềm dầu tự nhiên không gây bệt trắng hay vón cục.
+            </p>
+            <div class="product-meta-row">
+              <div class="product-price">390.000đ</div>
+              <button type="button" class="btn-add-cart" data-name="Zinc Pure Mineral Sunscreen SPF 50+" data-price="390000">
+                Thêm Phác Đồ
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 5 -->
+        <article class="product-derma-card">
+          <div class="product-img-wrap">
+            <span class="product-tag">HA 8 Tầng Phân Tử</span>
+            <img src="assets/images/dropper-liquid.jpg" alt="Tinh Chất Cấp Nước Đa Tầng Hyaluronic Multi-Weight">
+          </div>
+          <div class="product-info-wrap">
+            <h3 class="product-title">Hyaluronic 8D Multi-Weight Infusion</h3>
+            <div class="product-active-pill">Axit Hyaluronic 8 Trọng Lượng • Niacinamide 5% • B5</div>
+            <p class="product-desc">
+              Phân tử HA siêu vi thẩm thấu tới tận trung bì nuôi dưỡng nguyên bào sợi, phân tử HA lớn tạo màng chắn ngậm nước trên bề mặt cho da căng bóng sương mai.
+            </p>
+            <div class="product-meta-row">
+              <div class="product-price">480.000đ</div>
+              <button type="button" class="btn-add-cart" data-name="Hyaluronic 8D Multi-Weight Infusion" data-price="480000">
+                Thêm Phác Đồ
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 6: Set Clinical Rescue -->
+        <article class="product-derma-card" style="border-color:var(--color-emerald-accent); background:var(--color-mint-soft);">
+          <div class="product-img-wrap">
+            <span class="product-tag" style="background:var(--color-emerald-deep); color:#fff;">Combo Tiết Kiệm 25%</span>
+            <img src="assets/images/hero-derma.jpg" alt="Trọn Bộ Phục Hồi Hàng Rào Da Chuyên Sâu">
+          </div>
+          <div class="product-info-wrap">
+            <h3 class="product-title">Combo 4 Bước Phục Hồi Hàng Rào Da</h3>
+            <div class="product-active-pill">Cleanser + Ampoule Centella + Barrier Cream + KCN</div>
+            <p class="product-desc">
+              Phác đồ toàn diện 28 ngày tái sinh làn da thương tổn do nhiễm corticoid, da lạm dụng rượu thuốc hoặc peel quá đà. Kèm theo phác đồ hướng dẫn chi tiết từ Dược sĩ.
+            </p>
+            <div class="product-meta-row">
+              <div>
+                <span style="font-size:0.85rem; text-decoration:line-through; color:var(--color-slate-muted);">1.640.000đ</span>
+                <div class="product-price" style="color:var(--color-emerald-deep);">1.230.000đ</div>
+              </div>
+              <button type="button" class="btn-add-cart" data-name="Combo 4 Bước Phục Hồi Hàng Rào Da" data-price="1230000" style="background:var(--color-emerald-accent);">
+                Thêm Phác Đồ
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section: EWG Clean Ingredients Transparency -->
+    <section class="ingredients-section">
+      <div class="ingredients-wrap">
+        <div class="section-header">
+          <div class="section-kicker">Minh Bạch Hoạt Chất</div>
+          <h2 class="section-title">Tiêu Chuẩn Hoạt Chất Xanh EWG Green</h2>
+          <p class="section-subtitle">
+            Chúng tôi tuân thủ nghiêm ngặt bảng thành phần sạch chuẩn châu Âu. Mọi hoạt chất đều được kiểm chứng lâm sàng về độ an toàn tế bào và khả năng dung nạp da.
+          </p>
+        </div>
+
+        <div class="ingredients-grid">
+          <div class="ingredient-card">
+            <span class="ewg-badge">EWG Grade: 1 (Safe)</span>
+            <h4>Centella Asiatica Tươi</h4>
+            <div class="concentration">Nồng độ tối ưu: 10.0%</div>
+            <p>
+              Chiết xuất rau má organic đảo Jeju giàu Asiaticoside và Madecassic Acid. Dập tắt phản ứng viêm da tức thì và đẩy nhanh tốc độ đóng màng biểu mô.
+            </p>
+          </div>
+
+          <div class="ingredient-card">
+            <span class="ewg-badge">EWG Grade: 1 (Safe)</span>
+            <h4>Niacinamide Thụy Sĩ</h4>
+            <div class="concentration">Nồng độ tinh khiết: 5.0%</div>
+            <p>
+              Vitamin B3 chuẩn dược phẩm tinh khiết 99.8% không lẫn tạp chất nicotinic acid gây nóng đỏ. Điều tiết bã nhờn, củng cố cầu liên bào và làm sáng vết thâm.
+            </p>
+          </div>
+
+          <div class="ingredient-card">
+            <span class="ewg-badge">EWG Grade: 1 (Safe)</span>
+            <h4>Ectoin Tự Nhiên</h4>
+            <div class="concentration">Nồng độ màng chắn: 2.0%</div>
+            <p>
+              Phân tử cực đoan sinh học chiết xuất từ vi sinh vật sa mạc. Tạo lớp vỏ ngậm nước bọc quanh màng tế bào, chống lại bức xạ mặt trời và stress oxy hóa.
+            </p>
+          </div>
+
+          <div class="ingredient-card">
+            <span class="ewg-badge">EWG Grade: 1 (Safe)</span>
+            <h4>Ceramide NP Sinh Học</h4>
+            <div class="concentration">Phức hợp sinh học: 3.0%</div>
+            <p>
+              Ceramide lên men từ nấm men có cấu trúc tương thích 100% với lipid biểu bì người. Hàn gắn các vết nứt vi mô trên màng tế bào, giữ ẩm sâu suốt 72 giờ.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: AM/PM Routine Customizer -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-kicker">Cá Nhân Hóa Liệu Trình</div>
+        <h2 class="section-title">Bộ Thiết Lập Phác Đồ Skincare Sáng &amp; Tối</h2>
+        <p class="section-subtitle">
+          Tùy chỉnh các bước chăm sóc dựa trên quỹ thời gian và mục tiêu điều trị cụ thể của bạn để nhận báo giá và hướng dẫn phối hợp hoạt chất tương thích.
+        </p>
+      </div>
+
+      <div class="routine-builder-box">
+        <div class="builder-form-col">
+          <div class="form-group">
+            <label for="routine-skin-type" class="form-label">1. Tình Trạng Da Hiện Tại</label>
+            <select id="routine-skin-type" class="form-select">
+              <option value="sensitive" selected>Da Nhạy Cảm / Tổn Thương Hàng Rào</option>
+              <option value="oily-acne">Da Dầu / Mụn Viêm &amp; Bít Tắc Lỗ Chân Lông</option>
+              <option value="dry-aging">Da Khô Ráp / Nếp Nhăn Khô Lão Hóa Sớm</option>
+              <option value="dull-uneven">Da Xỉn Màu / Thâm Nám Sau Mụn</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="routine-goal" class="form-label">2. Mục Tiêu Trọng Tâm</label>
+            <select id="routine-goal" class="form-select">
+              <option value="heal-barrier" selected>Hồi Phục Màng Bảo Vệ Da (Ưu Tiên Số 1)</option>
+              <option value="clear-acne">Gom Cồi Mụn &amp; Kiềm Dầu Sạch Sâu</option>
+              <option value="brighten-glow">Căng Bóng Trắng Sáng Sương Mai</option>
+              <option value="anti-wrinkle">Xóa Mờ Nếp Nhăn &amp; Săn Chắc Tế Bào</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">3. Chọn Các Bước Skincare Tham Khảo</label>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.8rem; margin-top:0.6rem;">
+              <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.88rem; cursor:pointer;">
+                <input type="checkbox" class="routine-checkbox" checked data-price="280000"> Bước 1: Gel Rửa Mặt pH 5.5
+              </label>
+              <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.88rem; cursor:pointer;">
+                <input type="checkbox" class="routine-checkbox" checked data-price="450000"> Bước 2: Serum Centella 10%
+              </label>
+              <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.88rem; cursor:pointer;">
+                <input type="checkbox" class="routine-checkbox" checked data-price="520000"> Bước 3: Kem Phục Hồi Ceramide
+              </label>
+              <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.88rem; cursor:pointer;">
+                <input type="checkbox" class="routine-checkbox" checked data-price="390000"> Bước 4: Chống Nắng Khoáng Kẽm
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="routine-summary-box">
+          <div>
+            <h3>Tổng Quan Phác Đồ</h3>
+            <div class="calc-row">
+              <span>Độ tương thích hoạt chất:</span>
+              <strong id="routine-safety-val">100% EWG Green</strong>
+            </div>
+            <div class="calc-row">
+              <span>Quy trình điều trị:</span>
+              <strong id="routine-count-val">4 bước chuẩn y khoa</strong>
+            </div>
+            <div class="calc-row">
+              <span>Thời gian cải thiện rõ:</span>
+              <strong style="color:#74c69d;">14 - 28 ngày tế bào mới</strong>
+            </div>
+
+            <div class="calc-row total-row">
+              <span>Ngân Sách Phác Đồ:</span>
+              <div class="calc-total-val" id="routine-total-val">1.640.000đ</div>
+            </div>
+
+            <p class="routine-note">
+              * Miễn phí giao hàng toàn quốc và kèm theo sổ theo dõi biến chuyển làn da 4 tuần có Dược sĩ đồng hành 1:1 qua Zalo.
+            </p>
+          </div>
+
+          <button type="button" class="btn-request-routine" id="btn-request-routine">
+            Gửi Phác Đồ Cho Dược Sĩ Thẩm Định Qua Zalo
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: R&D Laboratory Monograph -->
+    <section class="section" style="border-top:1px solid var(--color-border-clean);">
+      <div style="display:grid; grid-template-columns:1fr 1.2fr; gap:3.5rem; align-items:center;">
+        <div style="position:relative;">
+          <img src="assets/images/scientist-microscope.jpg" alt="Chuyên gia phòng thí nghiệm Botanica Derma Lab" style="width:100%; height:450px; object-fit:cover; border-radius:var(--radius-lg); box-shadow:var(--shadow-medium); border:1px solid var(--color-border-clean);">
+          <div style="position:absolute; bottom:-20px; right:-15px; background:var(--color-botanical-dark); color:#fff; padding:1rem 1.4rem; border-radius:var(--radius-md); box-shadow:var(--shadow-heavy);">
+            <div style="font-size:0.92rem; font-weight:700; color:#d8f3dc;">Phòng Lab Nghiên Cứu Độc Lập</div>
+            <div style="font-size:0.76rem; color:#95d5b2;">Tiêu Chuẩn Thực Hành Tốt Sản Xuất CGMP</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-kicker">Khoa Học Chữa Lành</div>
+          <h2 class="section-title">"Chúng Tôi Không Bán Phép Màu, Chúng Tôi Mang Lại Khoa Học Chính Xác Cho Làn Da."</h2>
+          <p style="font-size:0.98rem; color:var(--color-slate-text); line-height:1.75; margin-bottom:1.5rem;">
+            Tại Botanica Derma Lab, mọi công thức trước khi đến tay người tiêu dùng đều phải vượt qua 3 vòng kiểm nghiệm nghiêm ngặt: Kiểm tra độc tính tế bào in-vitro, thử nghiệm kích ứng cảm quan trên 100 tình nguyện viên có da mẫn cảm và đánh giá phục hồi màng ẩm TEWL bằng máy đo da liễu Corneometer của Đức.
+          </p>
+          <p style="font-size:0.98rem; color:var(--color-slate-text); line-height:1.75;">
+            Chúng tôi tin rằng sự bền vững của làn da bắt đầu từ việc tôn trọng cơ chế tự phục hồi tự nhiên của tế bào, chứ không phải bào mòn da bằng những chất lột tẩy cấp tốc.
+          </p>
+          <div style="margin-top:2rem;">
+            <a href="gioi-thieu.html" class="btn-primary">Tìm Hiểu Tiêu Chuẩn CGMP</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Floating Zalo Button -->
   <aside class="floating-zalo">
-    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Zalo 0971183939">Zalo</a>
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn da liễu Botanica">
+      <span>💬</span> Tư Vấn Dược Sĩ Zalo 0971 183 939
+    </a>
   </aside>
 
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Bán mỹ phẩm chăm sóc sắc đẹp - web 99</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Mỹ phẩm. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <!-- Cart Modal Overlay & Drawer -->
+  <div class="cart-modal-overlay" id="cart-modal">
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3>Phác Đồ Đang Chọn</h3>
+        <button type="button" class="cart-close-btn" id="cart-close-btn">&times;</button>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+      <div class="cart-items-container" id="cart-items-container">
+        <!-- Rendered dynamically -->
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+      <div class="cart-drawer-footer">
+        <div class="cart-total-line">
+          <span>Tổng Giá Trị Phác Đồ:</span>
+          <span id="cart-total-price">0đ</span>
+        </div>
+        <a href="#" class="btn-checkout-zalo" id="btn-checkout-zalo">
+          Gửi Phác Đồ Cho Dược Sĩ Thẩm Định Qua Zalo
+        </a>
       </div>
     </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <h3>BOTANICA DERMA LAB</h3>
+        <p>
+          Dược mỹ phẩm thực vật chuẩn y khoa phục hồi hàng rào bảo vệ da. Tôn vinh vẻ đẹp khỏe mạnh nguyên bản bằng khoa học hoạt chất tinh khiết chuẩn EWG Green.
+        </p>
+        <p style="margin-top: 1rem; color: #74c69d; font-size: 0.84rem; font-family: var(--font-mono);">
+          Mã Giao Diện: <strong>#MS99</strong> (Thư Viện RackerWeb)
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Dược Mỹ Phẩm</h4>
+        <ul>
+          <li><a href="san-pham.html">Tinh Chất Cấp Cứu Centella 10%</a></li>
+          <li><a href="san-pham.html">Gel Rửa Mặt Amino Acid pH 5.5</a></li>
+          <li><a href="san-pham.html">Kem Phục Hồi Ceramide Bio-Barrier</a></li>
+          <li><a href="san-pham.html">Chống Nắng Khoáng Kẽm Zinc SPF 50+</a></li>
+          <li><a href="san-pham.html">Serum Cấp Nước HA 8 Trọng Lượng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Về Viện Nghiên Cứu</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Tiêu Chuẩn Sản Xuất CGMP</a></li>
+          <li><a href="gioi-thieu.html">Cam Kết EWG Green 100%</a></li>
+          <li><a href="gioi-thieu.html">Quy Trình Kiểm Nghiệm Lâm Sàng</a></li>
+          <li><a href="lien-he.html">Đội Ngũ Dược Sĩ Da Liễu</a></li>
+          <li><a href="lien-he.html">Chính Sách Đổi Trả Dị Ứng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact-info">
+        <h4>Trung Tâm R&amp;D &amp; Trưng Bày</h4>
+        <p>📍 Viện Nghiên Cứu: Khu Công Nghệ Cao Hòa Lạc, Hà Nội</p>
+        <p>🏛️ Trung Tâm Soi Da: 128 Nguyễn Du, Quận 1, TP.HCM</p>
+        <p>📞 Tổng Đài Y Khoa: 0971 183 939</p>
+        <p>💬 Dược Sĩ Đồng Hành: 0971 183 939 (Zalo 24/7)</p>
+      </div>
+    </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Bán mỹ phẩm chăm sóc sắc đẹp - web 99. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <div>&copy; 2026 BOTANICA DERMA LAB. Bản quyền thuộc về Viện Nghiên Cứu Dược Mỹ Phẩm Thực Vật Lâm Sàng.</div>
+      <div>Designed for RackerWeb High-End Medical & Clinical Skincare Portfolio.</div>
     </div>
   </footer>
 

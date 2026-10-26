@@ -1,81 +1,232 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giới Thiệu | Bán mỹ phẩm chăm sóc sắc đẹp - web 99</title>
+  <title>Viện Nghiên Cứu & Triết Lý Y Khoa | BOTANICA DERMA LAB #MS99</title>
+  <meta name="description" content="Khám phá phòng thí nghiệm chuẩn CGMP và triết lý bào chế dược mỹ phẩm thực vật sạch EWG Green tại Botanica Derma Lab. Khoa học chính xác vì sức khỏe làn da.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Return Navigation Bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS99</strong>.</span>
+    <span>Giao diện dược mỹ phẩm lâm sàng <strong>#MS99</strong> — Botanica Derma Lab (Thư Viện Theme).</span>
     <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
   </div>
 
+  <!-- Header -->
   <header>
     <div class="header-wrap">
-      <div class="logo">Bán mỹ phẩm chăm sóc sắc đẹp - web 99 <span>MS99</span></div>
+      <a href="index.html" class="logo">
+        <span class="logo-title">BOTANICA DERMA LAB</span>
+        <span class="logo-sub">Clinical Botanical Dermatology</span>
+      </a>
+
       <nav>
         <ul>
           <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html" class="active">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+          <li><a href="san-pham.html">Dược Mỹ Phẩm</a></li>
+          <li><a href="gioi-thieu.html" class="active">Viện Nghiên Cứu</a></li>
+          <li><a href="lien-he.html">Tư Vấn Da Liễu</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <button type="button" class="cart-trigger">
+          <span>Phác Đồ</span> (<span id="cart-count">0</span>)
+        </button>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">
+          Zalo Dược Sĩ: 0971 183 939
+        </a>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Về Chúng Tôi — Bán mỹ phẩm chăm sóc sắc đẹp - web 99</h1>
-    <p>Hành trình khẳng định uy tín và chất lượng dẫn đầu trong lĩnh vực Mỹ phẩm</p>
+  <main>
+    <!-- About Hero -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="section-header">
+        <div class="section-kicker">Triết Lý Bào Chế Y Khoa</div>
+        <h1 class="section-title">Khoa Học Thực Vật &amp; Tiêu Chuẩn Phòng Kiểm Nghiệm</h1>
+        <p class="section-subtitle">
+          Chúng tôi được sinh ra từ niềm trăn trở trước thực trạng hàng triệu làn da Việt Nam bị hủy hoại bởi mỹ phẩm kém chất lượng, kem trộn corticoid và các chất lột tẩy độc hại.
+        </p>
+      </div>
+
+      <!-- Story Duo Grid -->
+      <div style="display:grid; grid-template-columns:1fr 1.2fr; gap:3.5rem; align-items:center; margin-bottom:4.5rem;">
+        <div style="position:relative;">
+          <img src="assets/images/scientist-sample.jpg" alt="ThS. Dược sĩ Botanica đang pha chế công thức hoạt chất" style="width:100%; height:460px; object-fit:cover; border-radius:var(--radius-lg); box-shadow:var(--shadow-medium); border:1px solid var(--color-border-clean);">
+          <div style="position:absolute; bottom:-20px; right:-15px; background:var(--color-botanical-dark); color:#fff; padding:1rem 1.4rem; border-radius:var(--radius-md); box-shadow:var(--shadow-heavy);">
+            <div style="font-size:0.92rem; font-weight:700; color:#d8f3dc;">ThS. DS. Trần Quốc Dũng</div>
+            <div style="font-size:0.76rem; color:#95d5b2;">Trưởng Nhóm Nghiên Cứu &amp; Phát Triển Công Thức</div>
+          </div>
+        </div>
+
+        <div>
+          <h2 style="font-family:var(--font-display); font-size:2rem; color:var(--color-botanical-dark); margin-bottom:1rem; line-height:1.3;">
+            Tái Thiết Lập Sinh Khí Tế Bào Bằng Dược Tính Tinh Khiết
+          </h2>
+          <p style="font-size:0.96rem; color:var(--color-slate-text); line-height:1.75; margin-bottom:1.2rem;">
+            Một công thức mỹ phẩm an toàn không đơn thuần là loại bỏ paraben hay hương liệu. Điều cốt lõi là từng nồng độ hoạt chất đưa vào phải có căn cứ khoa học rõ ràng (Evidence-Based Dermatology), nồng độ đủ để phát huy tác dụng sinh học nhưng không vượt quá ngưỡng kích ứng của tế bào sừng.
+          </p>
+          <p style="font-size:0.96rem; color:var(--color-slate-text); line-height:1.75;">
+            Tại Botanica Derma Lab, chúng tôi ứng dụng công nghệ chiết xuất siêu tới hạn CO2 lỏng ở nhiệt độ thấp, giữ nguyên 99.4% hoạt chất tươi nguyên bản từ rau má hữu cơ, tràm trà và tảo biển mà không sử dụng dung môi hóa học độc hại.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 Pillars Bento -->
+      <div style="margin-top:2rem;">
+        <div class="section-header">
+          <div class="section-kicker">Cam Kết Tiêu Chuẩn</div>
+          <h2 class="section-title">4 Trụ Cột Chất Lượng Của Botanica Derma Lab</h2>
+        </div>
+
+        <div class="ingredients-grid">
+          <div class="ingredient-card">
+            <span class="ewg-badge">CGMP Certified</span>
+            <h4>Nhà Máy Chuẩn Y Tế</h4>
+            <div class="concentration">Độ sạch Class 10.000</div>
+            <p>
+              Hệ thống phòng sạch lọc khí HEPA áp suất dương, loại bỏ 99.99% vi khuẩn và nấm mốc trong suốt quá trình chiết rót đóng gói vô trùng.
+            </p>
+          </div>
+
+          <div class="ingredient-card">
+            <span class="ewg-badge">EWG Green 100%</span>
+            <h4>Minh Bạch Hoạt Chất</h4>
+            <div class="concentration">0% Thành phần nhóm 3-10</div>
+            <p>
+              Tất cả 100% nguyên liệu đều nằm trong thang điểm an toàn cao nhất của tổ chức phi lợi nhuận Environmental Working Group (Hoa Kỳ).
+            </p>
+          </div>
+
+          <div class="ingredient-card">
+            <span class="ewg-badge">In-Vitro Tested</span>
+            <h4>Kiểm Nghiệm Độc Tính</h4>
+            <div class="concentration">0% Độc tính tế bào da</div>
+            <p>
+              Thử nghiệm trên mô da nhân tạo 3D (Reconstructed Human Epidermis) nhằm đo lường khả năng dung nạp trước khi đưa vào thử nghiệm trên người.
+            </p>
+          </div>
+
+          <div class="ingredient-card">
+            <span class="ewg-badge">Eco-Conscious</span>
+            <h4>Bảo Vệ Môi Trường</h4>
+            <div class="concentration">Bao bì thủy tinh &amp; PCR</div>
+            <p>
+              100% chai lọ làm từ thủy tinh hổ phách chắn tia cực tím và nhựa tái chế thân thiện với môi trường, mực in gốc đậu nành tự phân hủy sinh học.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clinical Diagnostic Lab Center Banner -->
+      <div style="margin-top:5rem; background:#fff; padding:3.5rem; border-radius:var(--radius-lg); border:1px solid var(--color-border-clean); box-shadow:var(--shadow-medium);">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
+          <div>
+            <span style="color:var(--color-emerald-accent); font-weight:700; text-transform:uppercase; font-size:0.82rem; font-family:var(--font-mono); letter-spacing:0.1em;">Trung Tâm Trực Tiếp</span>
+            <h3 style="font-family:var(--font-display); font-size:2rem; color:var(--color-botanical-dark); margin:0.6rem 0 1rem;">
+              Trải Nghiệm Máy Soi Da Đa Tầng Visia Tại Showroom
+            </h3>
+            <p style="color:var(--color-slate-text); line-height:1.75; font-size:0.95rem; margin-bottom:1.5rem;">
+              Quý khách có thể ghé thăm Trung tâm Soi da Lâm sàng Botanica tại TP.HCM để được phân tích độ dày tầng sừng, mật độ sắc tố melanin ẩn dưới da và tình trạng mất nước tế bào hoàn toàn miễn phí.
+            </p>
+            <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+              <a href="lien-he.html" class="btn-primary">Đặt Lịch Soi Da</a>
+              <a href="san-pham.html" class="btn-secondary">Xem Dược Mỹ Phẩm</a>
+            </div>
+          </div>
+
+          <div>
+            <img src="assets/images/scientist-microscope.jpg" alt="Trải nghiệm soi da tại Botanica Lab" style="width:100%; height:360px; object-fit:cover; border-radius:var(--radius-md); box-shadow:var(--shadow-medium); border:1px solid var(--color-border-clean);">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Zalo Button -->
+  <aside class="floating-zalo">
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn da liễu Botanica">
+      <span>💬</span> Tư Vấn Dược Sĩ Zalo 0971 183 939
+    </a>
+  </aside>
+
+  <!-- Cart Modal Overlay & Drawer -->
+  <div class="cart-modal-overlay" id="cart-modal">
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3>Phác Đồ Đang Chọn</h3>
+        <button type="button" class="cart-close-btn" id="cart-close-btn">&times;</button>
+      </div>
+      <div class="cart-items-container" id="cart-items-container">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="cart-drawer-footer">
+        <div class="cart-total-line">
+          <span>Tổng Giá Trị Phác Đồ:</span>
+          <span id="cart-total-price">0đ</span>
+        </div>
+        <a href="#" class="btn-checkout-zalo" id="btn-checkout-zalo">
+          Gửi Phác Đồ Cho Dược Sĩ Thẩm Định Qua Zalo
+        </a>
+      </div>
+    </div>
   </div>
 
-  <div class="subpage-content">
-    <p style="margin-bottom: 1.5rem; font-size: 1.05rem;"><strong>Bán mỹ phẩm chăm sóc sắc đẹp - web 99</strong> tự hào là đối tác tin cậy, mang đến cho quý khách hàng các sản phẩm và dịch vụ Mỹ phẩm đạt tiêu chuẩn cao nhất. Với triết lý lấy sự hài lòng của khách hàng làm trọng tâm, chúng tôi không ngừng đổi mới công nghệ và quy trình phục vụ.</p>
-    <div style="background: var(--surface); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
-      <h3 style="margin-bottom: 1rem; color: var(--primary);">Giá Trị Cốt Lõi</h3>
-      <ul style="padding-left: 1.25rem; line-height: 2;">
-        <li><strong>Chất Lượng Vượt Trội:</strong> Mọi chi tiết đều được hoàn thiện tỉ mỉ và kiểm định nghiêm ngặt.</li>
-        <li><strong>Tận Tâm & Minh Bạch:</strong> Tư vấn trung thực, báo giá rõ ràng, không phát sinh chi phí ẩn.</li>
-        <li><strong>Đồng Hành Dài Lâu:</strong> Hỗ trợ kỹ thuật và chăm sóc khách hàng 24/7 qua số Hotline Zalo 0971183939.</li>
-      </ul>
-    </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="lien-he.html" class="btn-primary">Liên Hệ Ngay Với Chúng Tôi</a>
-    </div>
-  </div>
-
-  
+  <!-- Footer -->
   <footer>
     <div class="footer-wrap">
-      <div>
-        <h3>Bán mỹ phẩm chăm sóc sắc đẹp - web 99</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Mỹ phẩm. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+      <div class="footer-brand">
+        <h3>BOTANICA DERMA LAB</h3>
+        <p>
+          Dược mỹ phẩm thực vật chuẩn y khoa phục hồi hàng rào bảo vệ da. Tôn vinh vẻ đẹp khỏe mạnh nguyên bản bằng khoa học hoạt chất tinh khiết chuẩn EWG Green.
+        </p>
+        <p style="margin-top: 1rem; color: #74c69d; font-size: 0.84rem; font-family: var(--font-mono);">
+          Mã Giao Diện: <strong>#MS99</strong> (Thư Viện RackerWeb)
+        </p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+
+      <div class="footer-col">
+        <h4>Dược Mỹ Phẩm</h4>
+        <ul>
+          <li><a href="san-pham.html">Tinh Chất Cấp Cứu Centella 10%</a></li>
+          <li><a href="san-pham.html">Gel Rửa Mặt Amino Acid pH 5.5</a></li>
+          <li><a href="san-pham.html">Kem Phục Hồi Ceramide Bio-Barrier</a></li>
+          <li><a href="san-pham.html">Chống Nắng Khoáng Kẽm Zinc SPF 50+</a></li>
+          <li><a href="san-pham.html">Serum Cấp Nước HA 8 Trọng Lượng</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col">
+        <h4>Về Viện Nghiên Cứu</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Tiêu Chuẩn Sản Xuất CGMP</a></li>
+          <li><a href="gioi-thieu.html">Cam Kết EWG Green 100%</a></li>
+          <li><a href="gioi-thieu.html">Quy Trình Kiểm Nghiệm Lâm Sàng</a></li>
+          <li><a href="lien-he.html">Đội Ngũ Dược Sĩ Da Liễu</a></li>
+          <li><a href="lien-he.html">Chính Sách Đổi Trả Dị Ứng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact-info">
+        <h4>Trung Tâm R&amp;D &amp; Trưng Bày</h4>
+        <p>📍 Viện Nghiên Cứu: Khu Công Nghệ Cao Hòa Lạc, Hà Nội</p>
+        <p>🏛️ Trung Tâm Soi Da: 128 Nguyễn Du, Quận 1, TP.HCM</p>
+        <p>📞 Tổng Đài Y Khoa: 0971 183 939</p>
+        <p>💬 Dược Sĩ Đồng Hành: 0971 183 939 (Zalo 24/7)</p>
       </div>
     </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Bán mỹ phẩm chăm sóc sắc đẹp - web 99. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <div>&copy; 2026 BOTANICA DERMA LAB. Bản quyền thuộc về Viện Nghiên Cứu Dược Mỹ Phẩm Thực Vật Lâm Sàng.</div>
+      <div>Designed for RackerWeb High-End Medical & Clinical Skincare Portfolio.</div>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
+  <script src="js/app.js"></script>
 </body>
 </html>

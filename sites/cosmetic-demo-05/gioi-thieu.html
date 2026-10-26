@@ -1,81 +1,172 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giới Thiệu | Cosmetic demo 05</title>
+  <title>Nghệ Nhân & Atelier | Maison Éclat Haute Parfumerie #MS05</title>
+  <meta name="description" content="Câu chuyện nghệ nhân điều hương Maison Éclat — truyền thống Grasse, nguyên liệu thiên nhiên quý hiếm, và hành trình sáng tạo nước hoa nghệ thuật.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS05</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS05</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">&larr; Quay lại danh mục thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Cosmetic demo 05 <span>MS05</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html" class="active">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <nav class="nav-left">
+        <a href="index.html" class="nav-link">Trang Chủ</a>
+        <a href="san-pham.html" class="nav-link">Bộ Sưu Tập</a>
+        <a href="index.html#kham-pha" class="nav-link">Khám Phá Hương</a>
       </nav>
-      <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+      <div class="brand-center">
+        <a href="index.html">
+          <div class="brand-name">Maison Éclat</div>
+          <div class="brand-tagline">Haute Parfumerie</div>
+        </a>
       </div>
+      <nav class="nav-right">
+        <a href="gioi-thieu.html" class="nav-link active">Nghệ Nhân</a>
+        <a href="lien-he.html" class="nav-link">Liên Hệ</a>
+        <button class="header-action-btn" id="cart-toggle-btn">
+          Bộ Sưu Tập (<span id="cart-count">0</span>)
+        </button>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Về Chúng Tôi — Cosmetic demo 05</h1>
-    <p>Hành trình khẳng định uy tín và chất lượng dẫn đầu trong lĩnh vực Mỹ phẩm</p>
-  </div>
-
-  <div class="subpage-content">
-    <p style="margin-bottom: 1.5rem; font-size: 1.05rem;"><strong>Cosmetic demo 05</strong> tự hào là đối tác tin cậy, mang đến cho quý khách hàng các sản phẩm và dịch vụ Mỹ phẩm đạt tiêu chuẩn cao nhất. Với triết lý lấy sự hài lòng của khách hàng làm trọng tâm, chúng tôi không ngừng đổi mới công nghệ và quy trình phục vụ.</p>
-    <div style="background: var(--surface); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
-      <h3 style="margin-bottom: 1rem; color: var(--primary);">Giá Trị Cốt Lõi</h3>
-      <ul style="padding-left: 1.25rem; line-height: 2;">
-        <li><strong>Chất Lượng Vượt Trội:</strong> Mọi chi tiết đều được hoàn thiện tỉ mỉ và kiểm định nghiêm ngặt.</li>
-        <li><strong>Tận Tâm & Minh Bạch:</strong> Tư vấn trung thực, báo giá rõ ràng, không phát sinh chi phí ẩn.</li>
-        <li><strong>Đồng Hành Dài Lâu:</strong> Hỗ trợ kỹ thuật và chăm sóc khách hàng 24/7 qua số Hotline Zalo 0971183939.</li>
-      </ul>
-    </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="lien-he.html" class="btn-primary">Liên Hệ Ngay Với Chúng Tôi</a>
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Đóng menu">&times;</button>
+    <a href="index.html">Trang Chủ</a>
+    <a href="san-pham.html">Bộ Sưu Tập</a>
+    <a href="gioi-thieu.html" class="active">Nghệ Nhân & Atelier</a>
+    <a href="lien-he.html">Liên Hệ & Tư Vấn</a>
+    <div class="mobile-nav-footer">
+      <p>Tư vấn: <strong>0971 183 939</strong></p>
     </div>
   </div>
 
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Cosmetic demo 05</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Mỹ phẩm. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Bộ Sưu Tập Của Bạn</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Đóng">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty" id="cart-empty"><p>Bộ sưu tập đang trống</p></div>
+    </div>
+    <div class="cart-drawer-footer" id="cart-footer" style="display:none;">
+      <div class="cart-total">
+        <span>Tổng cộng</span>
+        <span id="cart-total-price">0đ</span>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+      <button class="btn-checkout" id="btn-checkout">Đặt Hàng Qua Zalo</button>
+    </div>
+  </aside>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="banner-eyebrow">Notre Maison</div>
+    <h1>Nghệ Nhân & Atelier</h1>
+    <p class="banner-desc">Truyền thống điều hương Grasse, nguyên liệu quý hiếm và hành trình sáng tạo kéo dài hàng thập kỷ.</p>
+  </section>
+
+  <!-- About Content -->
+  <div class="about-content">
+    <p>
+      <strong>Maison Éclat</strong> ra đời từ niềm đam mê thuần khiết dành cho nghệ thuật điều hương — một nghề thủ công tinh tế đòi hỏi kiến thức sâu rộng về hàng ngàn nguyên liệu thiên nhiên, sự nhạy cảm nghệ thuật hiếm có, và lòng kiên nhẫn của nhiều năm tháng.
+    </p>
+    <p>
+      Được thành lập tại Việt Nam vào năm 2018, Maison Éclat mang theo truyền thống điều hương từ Grasse — thủ phủ nước hoa thế giới tại miền nam nước Pháp. Mỗi mùi hương trong bộ sưu tập của chúng tôi đều được sáng tạo theo phương pháp thủ công truyền thống, không sử dụng hương tổng hợp rẻ tiền hay quy trình sản xuất công nghiệp đại trà.
+    </p>
+
+    <div class="about-image-full">
+      <img src="assets/images/atelier-workshop.jpg" alt="Xưởng điều hương Maison Éclat — Nơi mùi hương được sáng tạo">
+    </div>
+
+    <h3>Nguyên Liệu & Nguồn Gốc</h3>
+    <p>
+      Chúng tôi tuyển chọn trực tiếp từ những vùng nguyên liệu danh tiếng nhất thế giới. Hoa hồng Centifolia được hái bằng tay tại Grasse mỗi sáng sớm tháng Năm, khi hàm lượng tinh dầu đạt đỉnh. Trầm hương cổ thụ từ rừng Khánh Hòa được ủ tối thiểu 20 năm. Đàn hương Mysore thu hoạch có kiểm soát theo tiêu chuẩn bảo tồn quốc tế. Bơ iris Florence được chiết xuất từ rễ cây iris được phơi khô và ủ trong 3 năm.
+    </p>
+    <p>
+      Mỗi mẻ nguyên liệu đều được kiểm định chất lượng và xác nhận nguồn gốc trước khi đưa vào xưởng điều hương. Chúng tôi cam kết 100% nguyên liệu thiên nhiên, không pha trộn tổng hợp, và minh bạch về thành phần trong mỗi chai nước hoa.
+    </p>
+
+    <h3>Quy Trình Sáng Tạo</h3>
+    <p>
+      Một mùi hương Maison Éclat trải qua hành trình sáng tạo kéo dài 12 đến 18 tháng. Bắt đầu từ ý tưởng cảm xúc — một khoảnh khắc, một vùng đất, một ký ức — nghệ nhân điều hương thực hiện hơn 300 lần thử nghiệm hòa trộn trước khi chốt công thức cuối cùng.
+    </p>
+    <p>
+      Sau đó, nước hoa được ủ trong tối thiểu 6 tuần trong điều kiện kiểm soát nhiệt độ và ánh sáng, cho phép các phân tử hương hòa quyện hoàn hảo và phát triển chiều sâu.
+    </p>
+
+    <div class="about-values">
+      <div class="about-value">
+        <h4>100% Thiên Nhiên</h4>
+        <p>Nguyên liệu thuần tự nhiên từ những vùng trồng danh tiếng nhất thế giới. Không hương tổng hợp.</p>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+      <div class="about-value">
+        <h4>Thủ Công Nghệ Thuật</h4>
+        <p>Mỗi chai nước hoa được sáng tạo và đóng gói thủ công tại xưởng, với sự chăm chút từng chi tiết nhỏ nhất.</p>
+      </div>
+      <div class="about-value">
+        <h4>Minh Bạch & Bền Vững</h4>
+        <p>Thành phần công khai, nguồn gốc truy xuất được, bao bì tái chế và cam kết bảo tồn thiên nhiên.</p>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Cosmetic demo 05. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+
+    <div style="text-align:center;margin-top:3rem;">
+      <a href="san-pham.html" class="btn-gold" style="display:inline-block;">Khám Phá Bộ Sưu Tập</a>
+    </div>
+  </div>
+
+  <aside class="floating-zalo">
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Zalo">Zalo</a>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Maison Éclat</div>
+        <div class="footer-brand-sub">Haute Parfumerie · Depuis 2018</div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Bộ Sưu Tập</h4>
+          <a href="san-pham.html">Les Signatures</a>
+          <a href="index.html#discovery">Discovery Sets</a>
+        </div>
+        <div class="footer-col">
+          <h4>Maison Éclat</h4>
+          <a href="gioi-thieu.html">Nghệ Nhân Điều Hương</a>
+          <a href="gioi-thieu.html">Nguyên Liệu & Nguồn Gốc</a>
+        </div>
+        <div class="footer-col">
+          <h4>Dịch Vụ</h4>
+          <a href="lien-he.html">Tư Vấn Hương Riêng</a>
+          <a href="lien-he.html">Khắc Tên Chai</a>
+        </div>
+        <div class="footer-col">
+          <h4>Liên Hệ</h4>
+          <p>Zalo: <a href="https://zalo.me/0971183939" style="color:var(--champagne);">0971 183 939</a></p>
+          <p>Giờ tư vấn: 09:00 – 21:00</p>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        &copy; 2026 Maison Éclat Haute Parfumerie. Giao diện mẫu #MS05 — RackerWeb.
+      </div>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
+  <script src="js/app.js"></script>
 </body>
 </html>

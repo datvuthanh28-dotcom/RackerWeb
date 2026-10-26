@@ -3,52 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Về Nordic Living — Triết Lý Thiết Kế & Xưởng Sản Xuất (#MS03)</title>
-  <meta name="description" content="Khám phá hành trình xây dựng không gian sống Hygge phong cách Bắc Âu tại Việt Nam của Nordic Living. Xưởng sản xuất 2.000m² đạt chuẩn xuất khẩu Châu Âu.">
+  <title>Triết Lý Thiết Kế & Xưởng Mộc — NORDIC LIVING (#MS03)</title>
+  <meta name="description" content="Khám phá triết lý sống Hygge Đan Mạch và năng lực xưởng mộc 2.000m² tại Thủ Đức. Tôn trọng vẻ đẹp mộc mạc của gỗ sồi tự nhiên đạt chuẩn FSC.">
   <link rel="stylesheet" href="css/style.css">
   <style>
     .about-nordic-hero {
-      background: linear-gradient(180deg, rgba(20,20,20,0.8) 0%, rgba(20,20,20,0.95) 100%),
+      background: linear-gradient(180deg, rgba(18,18,18,0.88) 0%, rgba(18,18,18,0.96) 100%),
                   url('assets/images/hero.jpg') center/cover no-repeat;
-      padding: 5.5rem 1.5rem 3.5rem;
+      padding: 5.5rem 1.5rem 4rem;
       text-align: center;
       color: #fff;
     }
     .about-nordic-hero h1 {
-      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
       font-weight: 800;
       margin-bottom: 0.8rem;
     }
+    .about-nordic-hero p {
+      color: #dfc8af;
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
     .split-narrative {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 3.5rem;
       align-items: center;
       margin-bottom: 5rem;
     }
-    .split-narrative img {
+    .narrative-image-frame {
       border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-hover);
       border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-soft);
+    }
+    .narrative-image-frame img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
     }
     .craft-values-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
-      margin-top: 3rem;
+      margin-top: 2.5rem;
     }
     .craft-card {
-      background: var(--nordic-bone-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius);
+      background: #ffffff;
       padding: 2.2rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-subtle);
+      border-top: 3px solid var(--oak-tan);
       box-shadow: var(--shadow-soft);
     }
     .craft-card h4 {
-      font-size: 1.3rem;
-      font-weight: 700;
+      font-size: 1.15rem;
+      font-weight: 800;
       color: var(--nordic-black);
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.65rem;
     }
     .craft-card p {
       font-size: 0.9rem;
@@ -73,30 +87,43 @@
     <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
+  <!-- Top Architectural Coordinate Strip -->
+  <div class="header-top-coord">
+    <div class="header-top-coord-inner">
+      <span>NORDIC LIVING ATELIER · KHÔNG GIAN BẮC ÂU THUẦN KHIẾT · XƯỞNG MAY ĐO THỦ ĐỨC 2.000M²</span>
+      <div>
+        <span>Hotline KTS: <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer">0971 183 939</a> · Mở cửa: 08:30 – 21:00</span>
+      </div>
+    </div>
+  </div>
+
   <!-- Header -->
   <header id="site-header">
     <div class="header-inner">
-      <a href="index.html" class="brand-logo">
-        <span class="brand-title">NORDIC LIVING</span>
-        <span class="brand-subtitle">Scandinavian Interior</span>
-      </a>
+      <div class="brand-group">
+        <a href="index.html" class="brand-monogram" title="Nordic Living Atelier">NL</a>
+        <a href="index.html" class="brand-titles">
+          <span class="brand-title">NORDIC LIVING</span>
+          <span class="brand-subtitle">Scandinavian Atelier & Craft</span>
+        </a>
+      </div>
 
       <nav class="main-nav">
-        <a href="index.html">Trang Chủ</a>
-        <a href="san-pham.html">Bộ Sưu Tập</a>
-        <a href="index.html#may-do">May Đo Thiết Kế</a>
-        <a href="gioi-thieu.html" class="active">Về Chúng Tôi</a>
-        <a href="index.html#bao-gia">Báo Giá</a>
+        <a href="index.html"><span class="nav-num">←</span> Trang Chủ</a>
+        <a href="san-pham.html"><span class="nav-num">01/</span> Bộ Sưu Tập</a>
+        <a href="index.html#xuong-moc"><span class="nav-num">02/</span> Xưởng Mộc</a>
+        <a href="index.html#may-do"><span class="nav-num">03/</span> May Đo Căn Hộ</a>
+        <a href="gioi-thieu.html" class="active">Triết Lý Hygge</a>
         <a href="lien-he.html">Showroom</a>
       </nav>
 
       <div class="header-cta-group">
-        <button type="button" class="btn-cart-toggle" onclick="location.href='index.html#bao-gia'">
-          <span>Yêu Cầu Báo Giá</span>
-          (<span id="cart-count">0</span>)
+        <button type="button" class="btn-quote-basket" onclick="location.href='index.html#may-do'" title="Bảng dự toán nội thất">
+          <span>📋 Dự Toán</span>
+          <span class="basket-count" id="cart-count">0</span>
         </button>
         <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-consult-nav">
-          Tư Vấn Zalo
+          <span>Chat KTS Trưởng</span>
         </a>
         <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
@@ -107,124 +134,189 @@
   <div class="drawer-backdrop" id="drawer-backdrop"></div>
   <aside class="mobile-nav-drawer" id="mobile-drawer">
     <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
-    <a href="index.html">Trang Chủ</a>
+    <a href="index.html">Trang Chủ Atelier</a>
     <a href="san-pham.html">Bộ Sưu Tập Nội Thất</a>
-    <a href="index.html#may-do">Dịch Vụ May Đo Căn Hộ</a>
-    <a href="gioi-thieu.html" class="active">Câu Chuyện Nordic Living</a>
-    <a href="index.html#bao-gia">Nhận Báo Giá Dự Án</a>
-    <a href="lien-he.html">Hệ Thống Showroom</a>
+    <a href="index.html#khong-gian">Các Không Gian Sống</a>
+    <a href="index.html#xuong-moc">Xưởng Mộc 2.000m²</a>
+    <a href="index.html#may-do">Công Cụ May Đo & Dự Toán Căn Hộ</a>
+    <a href="gioi-thieu.html" class="active">Triết Lý Thiết Kế Hygge</a>
+    <a href="lien-he.html">Hệ Thống Showroom & Đặt Lịch Đo</a>
+    <div style="margin-top:auto; font-size:0.85rem; color:var(--text-muted); border-top:1px solid var(--border-subtle); padding-top:1rem;">
+      <p>KTS Trưởng: <strong style="color:var(--nordic-black);">0971 183 939</strong></p>
+      <p>Showroom: 88 Song Hành, An Phú, Thủ Đức</p>
+    </div>
   </aside>
 
   <main>
     <section class="about-nordic-hero">
-      <div class="container">
-        <span class="hero-tag" style="color:var(--oak-light);">Triết Lý Thương Hiệu</span>
+      <div style="max-width:1360px; margin:0 auto;">
+        <span class="hero-editorial-tag" style="background:rgba(255,255,255,0.1); color:#fff; border-color:var(--oak-gold);">Triết Lý Thương Hiệu & Xưởng Mộc</span>
         <h1>Nơi Tổ Ấm Tìm Về Sự Bình Yên</h1>
-        <p style="color:#b8b4ad; max-width:650px; margin:0 auto; font-size:1.05rem;">
-          Chúng tôi tin rằng một ngôi nhà đẹp không cần quá phô trương mà là không gian ngập tràn ánh sáng, chạm vào đâu cũng thấy sự mộc mạc ấm lòng của gỗ thật.
-        </p>
+        <p>Chúng tôi tin rằng một ngôi nhà đẹp không cần quá phô trương cầu kỳ, mà là không gian ngập tràn ánh sáng tự nhiên, chạm vào đâu cũng cảm nhận được sự ấm áp, mộc mạc của gỗ thật.</p>
       </div>
     </section>
 
     <section class="section-nordic">
+      <!-- Story 1: Hygge & Craftsmanship -->
       <div class="split-narrative">
         <div>
-          <span class="section-subtitle-nordic">Khởi Nguồn</span>
-          <h2 style="font-size:2.2rem; font-weight:800; color:var(--nordic-black); margin-bottom:1.2rem; line-height:1.3;">
-            Đem Tinh Thần "Hygge" Đan Mạch Về Căn Hộ Việt
+          <span class="section-subtitle-nordic">Khởi Nguồn Thiết Kế</span>
+          <h2 style="font-size:2.2rem; font-weight:800; color:var(--nordic-black); margin-bottom:1.2rem; line-height:1.25;">
+            Đem Tinh Thần "Hygge" Đan Mạch Về Với Căn Hộ Việt
           </h2>
-          <p style="color:var(--text-muted); font-size:1rem; line-height:1.75; margin-bottom:1.2rem;">
-            Nordic Living được sáng lập bởi đội ngũ kiến trúc sư tốt nghiệp chuyên ngành thiết kế công nghiệp Châu Âu. Trở về Việt Nam, chúng tôi nhận thấy các gia đình trẻ luôn tìm kiếm những món đồ nội thất thanh thoát, ít góc nhọn nguy hiểm và tôn trọng màu gỗ tự nhiên thay vì nước sơn công nghiệp bóng bẩy.
+          <p style="color:var(--text-muted); font-size:0.98rem; line-height:1.75; margin-bottom:1.2rem;">
+            Nordic Living được sáng lập bởi đội ngũ kiến trúc sư nội thất tốt nghiệp tại Châu Âu. Trở về Việt Nam, chúng tôi nhận thấy các gia đình trẻ luôn khao khát những món đồ nội thất thanh thoát, ít góc nhọn nguy hiểm, tôn trọng thớ gỗ tự nhiên thay vì những lớp sơn công nghiệp bóng bẩy nặng nề.
           </p>
-          <p style="color:var(--text-muted); font-size:1rem; line-height:1.75;">
-            "Hygge" trong tiếng Đan Mạch là cảm giác ấm cúng, dễ chịu khi ngồi đọc sách bên tách trà nóng, lắng nghe tiếng mưa rơi ngoài cửa sổ. Đó chính là cảm xúc mà mọi sản phẩm của Nordic Living luôn hướng tới.
+          <p style="color:var(--text-muted); font-size:0.98rem; line-height:1.75; margin-bottom:1.5rem;">
+            "Hygge" trong tiếng Đan Mạch là cảm giác ấm cúng, thư thái khi ngồi đọc sách bên tách trà nóng, lắng nghe tiếng mưa rơi ngoài hiên cửa sổ. Đó chính là rung động mà mọi chi tiết nội thất may đo của Nordic Living luôn hướng tới.
           </p>
+          <div style="border-left:3px solid var(--oak-tan); padding-left:1.2rem;">
+            <p style="font-style:italic; color:var(--nordic-black); font-weight:600; font-family:var(--font-serif); font-size:1.05rem;">
+              "Chúng tôi không sản xuất hàng loạt theo mẫu mã rập khuôn. Mỗi món đồ ra đời đều có kích thước riêng để vừa khít căn nhà của bạn."
+            </p>
+          </div>
+        </div>
+        <div class="narrative-image-frame">
+          <!-- Authentic Craft Photo replacing the living room screenshot -->
+          <img src="assets/images/workshop-craft.jpg" alt="Nghệ nhân mộc gọt đẽo chân ghế gỗ sồi thủ công">
+        </div>
+      </div>
+
+      <!-- Story 2: Workshop & Production Discipline -->
+      <div class="split-narrative" style="margin-bottom:4rem;">
+        <div class="narrative-image-frame">
+          <!-- Authentic Planer & Workshop Photo -->
+          <img src="assets/images/workshop-carpentry.jpg" alt="Quy trình bào sấy và gia công phôi gỗ sồi tại xưởng Thủ Đức">
         </div>
         <div>
-          <img src="assets/images/hero.jpg" alt="Xưởng sản xuất nội thất Nordic Living">
+          <span class="section-subtitle-nordic">Quy Trình Xưởng Mộc</span>
+          <h2 style="font-size:2.2rem; font-weight:800; color:var(--nordic-black); margin-bottom:1.2rem; line-height:1.25;">
+            Xưởng Sản Xuất 2.000m² Tại Thủ Đức
+          </h2>
+          <p style="color:var(--text-muted); font-size:0.98rem; line-height:1.75; margin-bottom:1.2rem;">
+            Để kiểm soát chất lượng từ phôi gỗ đến khi hoàn thiện, xưởng mộc Nordic Living tại Thủ Đức được đầu tư hệ thống máy cưa bàn trượt và máy chà nhám trục đứng chính xác của Đức, kết hợp với tay nghề điêu luyện của thợ cả trên 15 năm kinh nghiệm mộc gỗ tự nhiên.
+          </p>
+          <p style="color:var(--text-muted); font-size:0.98rem; line-height:1.75;">
+            Mỗi khối gỗ sồi trước khi ráp mộng đều phải kiểm tra độ ẩm nghiêm ngặt dưới 12%. Điều này triệt tiêu hoàn toàn hiện tượng nứt toác, co ngót khi thời tiết giao mùa tại Việt Nam.
+          </p>
         </div>
       </div>
 
       <!-- 3 Core Pillars -->
       <div class="section-header-nordic" style="margin-top:2rem;">
         <div>
-          <span class="section-subtitle-nordic">Năng Lực Sản Xuất</span>
-          <h2 class="section-title-nordic">Chất Lượng Đến Từ Kỷ Luật & Tay Nghề</h2>
+          <span class="section-subtitle-nordic">Cam Kết Chất Lượng</span>
+          <h2 class="section-title-nordic">3 Trụ Cột Vàng Cho Một Món Đồ Bền Vững</h2>
         </div>
       </div>
 
       <div class="craft-values-grid">
         <div class="craft-card">
-          <h4>🌲 Gỗ Sồi Bắc Mỹ Chuẩn FSC</h4>
-          <p>100% phôi gỗ sồi tự nhiên được sấy khô đạt độ ẩm 10-12%, triệt tiêu hoàn toàn nguy cơ cong vênh, rạn nứt trước khí hậu nhiệt đới ẩm Việt Nam.</p>
+          <h4>🌲 100% Gỗ Sồi Bắc Mỹ Chuẩn FSC</h4>
+          <p>Khai thác từ các cánh rừng có quy hoạch bền vững tại Bắc Mỹ. Gỗ sồi trắng có giác gỗ màu nhạt, tâm gỗ từ nâu nhạt đến nâu đậm với khả năng kháng sâu mọt tự nhiên tuyệt hảo.</p>
         </div>
 
         <div class="craft-card">
-          <h4>⚙ Xưởng Mộc Hiện Đại 2.000m²</h4>
-          <p>Trang bị hệ thống máy cắt CNC tự động và máy dán cạnh tự động của Đức, đảm bảo độ chính xác tới từng milimet trước khi lắp ghép.</p>
+          <h4>⚙ Mộng Gỗ Chắc Chắn & Giảm Chấn Blum</h4>
+          <p>Khung sườn bàn ghế được liên kết bằng mộng chốt gỗ âm dương truyền thống. Toàn bộ bản lề, ray ngăn kéo đều sử dụng phụ kiện Blum (Áo) hoặc Hafele (Đức) trượt êm ái trọn đời.</p>
         </div>
 
         <div class="craft-card">
-          <h4>🎨 Dầu Lau Thực Vật Thụy Sĩ</h4>
-          <p>Bề mặt gỗ được hoàn thiện bằng dầu lau Osmo chiết xuất từ dầu đậu nành và sáp carnauba, an toàn tuyệt đối ngay cả khi trẻ nhỏ chạm miệng.</p>
+          <h4>🎨 Dầu Lau Thực Vật Osmo Thụy Sĩ</h4>
+          <p>Tuyệt đối không sử dụng sơn bóng PU chứa chì hay dung môi độc hại. Dầu lau Osmo thẩm thấu sâu nuôi dưỡng thớ gỗ, an toàn 100% khi trẻ nhỏ tiếp xúc hoặc ngậm đồ chơi.</p>
         </div>
       </div>
     </section>
 
     <!-- Bottom CTA -->
     <section class="section-nordic" style="text-align:center; padding-top:0;">
-      <h3 style="font-size:2rem; font-weight:800; color:var(--nordic-black); margin-bottom:1rem;">Khám Phá Trải Nghiệm Thực Tế Tại Showroom</h3>
-      <p style="color:var(--text-muted); max-width:600px; margin:0 auto 2.5rem;">Kính mời quý khách ghé thăm Showroom để trực tiếp chạm vào vân gỗ sồi và trải nghiệm độ êm ái của các mẫu sofa.</p>
-      <div style="display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap;">
-        <a href="lien-he.html" class="btn-primary-nordic" style="background:var(--nordic-black); color:#fff;">Xem Địa Chỉ Showroom</a>
-        <a href="san-pham.html" class="btn-outline-nordic" style="color:var(--nordic-black); border-color:var(--nordic-black);">Xem Danh Mục Sản Phẩm</a>
+      <div style="background:#fff; border:1px solid var(--border-subtle); padding:3.5rem 2rem; border-radius:var(--radius); box-shadow:var(--shadow-soft);">
+        <h3 style="font-size:2rem; font-weight:800; color:var(--nordic-black); margin-bottom:1rem;">Trải Nghiệm Thực Tế Tại Showroom Nordic Living</h3>
+        <p style="color:var(--text-muted); max-width:620px; margin:0 auto 2.5rem; font-size:0.95rem;">
+          Kính mời quý khách ghé thăm không gian trưng bày tại An Phú, TP. Thủ Đức để trực tiếp chạm vào vân gỗ sồi mộc mạc và cảm nhận độ êm ái của các mẫu sofa bọc vải lanh.
+        </p>
+        <div style="display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap;">
+          <a href="lien-he.html" class="btn-primary-atelier">Xem Địa Chỉ Showroom & Bản Đồ</a>
+          <a href="san-pham.html" class="btn-outline-atelier">Khám Phá Toàn Bộ Catalog</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Floating Actions -->
+  <div class="floating-actions-nordic">
+    <a href="index.html#may-do" class="floating-quote-nordic" title="Nhận báo giá nhanh">
+      <span>📐 Báo Giá Nhanh</span>
+    </a>
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="floating-zalo-nordic" title="Chat Zalo KTS 0971183939">
+      <svg width="24" height="24" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.82 3 3 8.37 3 15c0 3.75 1.86 7.12 4.77 9.38l-1.42 5.14c-.16.58.37 1.11.95.95l5.58-1.54C13.93 29.23 14.95 29.4 16 29.4c7.18 0 13-5.37 13-12S23.18 3 16 3z"/></svg>
+    </a>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-nordic" id="toast-nordic" role="status"></div>
+
+  <!-- ARCHITECTURAL MONOGRAPH FOOTER -->
   <footer class="site-footer-nordic">
     <div class="footer-wrap-nordic">
-      <div class="footer-col-nordic">
-        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
-          <span class="brand-title" style="color:#fff;">NORDIC LIVING</span>
-          <span class="brand-subtitle">Scandinavian Interior</span>
-        </a>
-        <p>Thương hiệu nội thất Bắc Âu tối giản, tiên phong trong giải pháp may đo chuẩn xác cho không gian sống hiện đại tại Việt Nam.</p>
-        <p style="margin-top:1rem; font-size:0.8rem; color:#736f68;">* Giao diện mẫu demo #MS03 thuộc Thư Viện Theme RackerWeb.</p>
+      <div class="footer-brand-statement">
+        <div class="footer-brand-slogan">
+          Timeless Scandinavian Forms.<br>
+          <span>Honest Timber, Handcrafted in Vietnam.</span>
+        </div>
+        <div style="font-size:0.75rem; letter-spacing:0.18em; text-transform:uppercase; color:#888;">
+          GPS: 10°48'05.4"N 106°44'38.9"E · ATELIER THỦ ĐỨC
+        </div>
       </div>
 
-      <div class="footer-col-nordic">
-        <h4>Sản Phẩm</h4>
-        <ul>
-          <li><a href="san-pham.html">Sofa & Ghế thư giãn</a></li>
-          <li><a href="san-pham.html">Bàn ghế ăn gỗ sồi</a></li>
-          <li><a href="san-pham.html">Giường & Tủ phòng ngủ</a></li>
-          <li><a href="san-pham.html">Bàn làm việc thông minh</a></li>
-        </ul>
+      <div class="footer-cols-grid">
+        <div class="footer-col-nordic">
+          <div class="brand-group" style="margin-bottom:1.2rem;">
+            <div class="brand-monogram">NL</div>
+            <div class="brand-titles">
+              <span class="brand-title" style="color:#fff;">NORDIC LIVING</span>
+              <span class="brand-subtitle">Scandinavian Atelier</span>
+            </div>
+          </div>
+          <p>Xưởng thiết kế và sản xuất nội thất Bắc Âu chuẩn mực, tiên phong trong giải pháp may đo chuẩn xác cho không gian sống căn hộ đương đại.</p>
+          <p style="font-size:0.78rem; color:#777; margin-top:1rem;">* Giao diện mẫu demo #MS03 thuộc Thư Viện Theme RackerWeb.</p>
+        </div>
+
+        <div class="footer-col-nordic">
+          <h4>Không Gian & Sản Phẩm</h4>
+          <ul>
+            <li><a href="san-pham.html">Sofa & Ghế Thư Giãn Bouclé</a></li>
+            <li><a href="san-pham.html">Bàn Ăn Ray Trượt Thông Minh</a></li>
+            <li><a href="san-pham.html">Giường Ngủ Khung Gỗ Platform</a></li>
+            <li><a href="san-pham.html">Bàn Làm Việc Công Thái Học</a></li>
+            <li><a href="san-pham.html">Kệ Console & Tủ Âm Tường</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-nordic">
+          <h4>Xưởng & Tiêu Chuẩn Mộc</h4>
+          <ul>
+            <li><a href="gioi-thieu.html">Triết Lý Sống Hygge Đan Mạch</a></li>
+            <li><a href="gioi-thieu.html">Quy Trình Sấy Gỗ Khô 10-12%</a></li>
+            <li><a href="gioi-thieu.html">Chứng Nhận Rừng Bền Vững FSC</a></li>
+            <li><a href="gioi-thieu.html">Dầu Lau Thực Vật An Toàn Osmo</a></li>
+            <li><a href="lien-he.html">Chính Sách Bảo Hành Khung 5 Năm</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-nordic">
+          <h4>Showroom & Xưởng Mộc</h4>
+          <p><strong>Showroom Trưng Bày:</strong> Tòa nhà Design Hub, 88 Song Hành, Phường An Phú, TP. Thủ Đức, TP.HCM</p>
+          <p><strong>Xưởng Mộc Thủ Công:</strong> Lô B3 Cụm Làng Nghề Gỗ, Đường Đỗ Xuân Hợp, TP. Thủ Đức (2.000m²)</p>
+          <p><strong>Hotline KTS / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--oak-gold); font-weight:700;">0971 183 939</a></p>
+          <p style="font-size:0.8rem; color:#7a766e;">Giờ mở cửa đón khách: 08:30 – 21:00 hàng ngày</p>
+        </div>
       </div>
 
-      <div class="footer-col-nordic">
-        <h4>Về Chúng Tôi</h4>
-        <ul>
-          <li><a href="gioi-thieu.html">Triết lý thiết kế Hygge</a></li>
-          <li><a href="gioi-thieu.html">Quy trình sản xuất xưởng mộc</a></li>
-          <li><a href="lien-he.html">Hệ thống Showroom</a></li>
-          <li><a href="lien-he.html">Chính sách bảo hành 5 năm</a></li>
-        </ul>
+      <div class="footer-bottom-nordic">
+        <span>© 2026 Nordic Living Atelier — Giao diện mẫu kiến trúc #MS03. All rights reserved.</span>
+        <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
       </div>
-
-      <div class="footer-col-nordic">
-        <h4>Showroom & Trực Tuyến</h4>
-        <p><strong>Showroom:</strong> Tòa nhà Design Hub, 88 Song Hành, An Phú, TP. Thủ Đức, TP.HCM</p>
-        <p style="margin-top:0.4rem;"><strong>Giờ mở cửa:</strong> 08:30 – 21:00 (Hàng ngày)</p>
-        <p style="margin-top:0.4rem;"><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--oak-light); font-weight:700;">0971 183 939</a></p>
-      </div>
-    </div>
-
-    <div class="footer-bottom-nordic">
-      <span>© 2026 Nordic Living — Giao diện mẫu #MS03. All rights reserved.</span>
-      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 

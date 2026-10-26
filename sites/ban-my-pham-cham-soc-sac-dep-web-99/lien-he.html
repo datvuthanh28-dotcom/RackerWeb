@@ -1,97 +1,297 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liên Hệ & Tư Vấn | Bán mỹ phẩm chăm sóc sắc đẹp - web 99</title>
+  <title>Tư Vấn Da Liễu & Đặt Lịch Soi Da | BOTANICA DERMA LAB #MS99</title>
+  <meta name="description" content="Đăng ký tư vấn trực tuyến cùng dược sĩ da liễu Botanica Derma Lab hoặc đặt lịch soi da đa tầng miễn phí tại phòng lab TP.HCM và Hà Nội.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Return Navigation Bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS99</strong>.</span>
+    <span>Giao diện dược mỹ phẩm lâm sàng <strong>#MS99</strong> — Botanica Derma Lab (Thư Viện Theme).</span>
     <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
   </div>
 
+  <!-- Header -->
   <header>
     <div class="header-wrap">
-      <div class="logo">Bán mỹ phẩm chăm sóc sắc đẹp - web 99 <span>MS99</span></div>
+      <a href="index.html" class="logo">
+        <span class="logo-title">BOTANICA DERMA LAB</span>
+        <span class="logo-sub">Clinical Botanical Dermatology</span>
+      </a>
+
       <nav>
         <ul>
           <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html" class="active">Liên Hệ</a></li>
+          <li><a href="san-pham.html">Dược Mỹ Phẩm</a></li>
+          <li><a href="gioi-thieu.html">Viện Nghiên Cứu</a></li>
+          <li><a href="lien-he.html" class="active">Tư Vấn Da Liễu</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <button type="button" class="cart-trigger">
+          <span>Phác Đồ</span> (<span id="cart-count">0</span>)
+        </button>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">
+          Zalo Dược Sĩ: 0971 183 939
+        </a>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Liên Hệ Tư Vấn & Báo Giá</h1>
-    <p>Chúng tôi luôn sẵn sàng lắng nghe và giải đáp mọi yêu cầu của bạn</p>
-  </div>
-
-  <div class="subpage-content">
-    <div class="contact-grid">
-      <div>
-        <h3>Thông Tin Liên Hệ</h3>
-        <p style="color: #64748b; margin: 1rem 0;">Để nhận báo giá và tư vấn nhanh nhất, vui lòng kết nối trực tiếp qua Zalo hoặc để lại lời nhắn.</p>
-        <p><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p><strong>Thời gian làm việc:</strong> 8:00 - 22:00 hàng ngày</p>
-        <p><strong>Lĩnh vực:</strong> Mỹ phẩm</p>
+  <main>
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="section-header">
+        <div class="section-kicker">Đồng Hành Y Khoa 1:1</div>
+        <h1 class="section-title">Đăng Ký Tư Vấn &amp; Đặt Lịch Soi Da Miễn Phí</h1>
+        <p class="section-subtitle">
+          Mỗi làn da là một hệ sinh thái độc nhất. Hãy kết nối trực tiếp với đội ngũ Dược sĩ Da liễu để được phân tích hiện trạng và nhận phác đồ phục hồi chính xác.
+        </p>
       </div>
 
-      <div>
-        <form id="site-contact-form">
-          <div class="form-group">
-            <label for="c-name">Họ và tên *</label>
-            <input type="text" id="c-name" required placeholder="Nguyễn Văn A">
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 3.5rem; margin-bottom: 4rem;">
+        <!-- Form -->
+        <div style="background:#fff; border:1px solid var(--color-border-clean); border-radius:var(--radius-lg); padding:2.5rem; box-shadow:var(--shadow-medium);">
+          <h2 style="font-family:var(--font-display); font-size:1.6rem; color:var(--color-botanical-dark); margin-bottom:1.5rem;">
+            Đăng Ký Khám Da &amp; Nhận Phác Đồ
+          </h2>
+
+          <form id="contact-derma-form">
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem;">
+              <div>
+                <label for="contact-name" class="form-label">Họ và Tên *</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="Ví dụ: Chị Mai Phương" required>
+              </div>
+              <div>
+                <label for="contact-phone" class="form-label">Số Điện Thoại / Zalo *</label>
+                <input type="tel" id="contact-phone" class="form-input" placeholder="09xx xxx xxx" required>
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem;">
+              <div>
+                <label for="contact-skin-condition" class="form-label">Tình Trạng Da Hiện Tại</label>
+                <select id="contact-skin-condition" class="form-select">
+                  <option value="Da hậu treatment bong tróc">Da Hậu Treatment Laser / Peel Bong Tróc</option>
+                  <option value="Da nhiễm corticoid / kem trộn">Da Nhiễm Corticoid / Nghi Lạm Dụng Kem Trộn</option>
+                  <option value="Da dầu mụn viêm bít tắc">Da Dầu Mụn Viêm &amp; Bít Tắc Lỗ Chân Lông</option>
+                  <option value="Da mẩn đỏ giãn mao mạch">Da Mẩn Đỏ Nóng Rát &amp; Giãn Mao Mạch</option>
+                  <option value="Da lão hóa khô ráp">Da Lão Hóa Khô Ráp Thiếu Nước Sâu</option>
+                </select>
+              </div>
+              <div>
+                <label for="contact-consult-type" class="form-label">Hình Thức Tư Vấn Mong Muốn</label>
+                <select id="contact-consult-type" class="form-select">
+                  <option value="Tư vấn online qua Zalo">Tư Vấn Trực Tuyến 1:1 Qua Zalo (Nhanh Nhất)</option>
+                  <option value="Soi da tại Showroom Sala HCM">Đặt Lịch Soi Da Máy Visia Tại TP.HCM</option>
+                  <option value="Soi da tại Lab Hà Nội">Đặt Lịch Soi Da Tại Lab Hòa Lạc Hà Nội</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-history" class="form-label">Các Sản Phẩm / Thuốc Đang Dùng Gần Đây</label>
+              <textarea id="contact-history" rows="3" class="form-input" placeholder="Ví dụ: Đang dùng Retinol 0.5%, serum B5, kem chống nắng... cảm giác châm chích khi thoa"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width:100%; justify-content:center; padding:1rem; font-size:1rem; border:none; cursor:pointer;">
+              Gửi Thông Tin Cho Dược Sĩ Thẩm Định
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Direct Details -->
+        <div>
+          <div style="background:var(--color-botanical-dark); color:#fff; border-radius:var(--radius-lg); padding:2.5rem; margin-bottom:2rem; border:1px solid rgba(255,255,255,0.08);">
+            <h3 style="font-family:var(--font-display); font-size:1.45rem; color:#d8f3dc; margin-bottom:1.2rem;">
+              Viện Nghiên Cứu &amp; Showroom
+            </h3>
+
+            <div style="margin-bottom:1.4rem;">
+              <div style="font-size:0.76rem; text-transform:uppercase; letter-spacing:0.1em; color:#74c69d; font-family:var(--font-mono); font-weight:700;">Trung Tâm Soi Da &amp; Trưng Bày TP.HCM</div>
+              <p style="font-size:0.92rem; color:#cce3de; margin-top:0.3rem;">
+                128 Nguyễn Du, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh
+              </p>
+            </div>
+
+            <div style="margin-bottom:1.4rem;">
+              <div style="font-size:0.76rem; text-transform:uppercase; letter-spacing:0.1em; color:#74c69d; font-family:var(--font-mono); font-weight:700;">Viện Nghiên Cứu &amp; Nhà Máy CGMP Hà Nội</div>
+              <p style="font-size:0.92rem; color:#cce3de; margin-top:0.3rem;">
+                Khu Nghiên Cứu Y Dược, Khu Công Nghệ Cao Hòa Lạc, TP. Hà Nội
+              </p>
+            </div>
+
+            <div style="margin-bottom:1.4rem;">
+              <div style="font-size:0.76rem; text-transform:uppercase; letter-spacing:0.1em; color:#74c69d; font-family:var(--font-mono); font-weight:700;">Tổng Đài Tư Vấn Da Liễu</div>
+              <p style="font-size:1.15rem; color:#fff; font-weight:700; margin-top:0.3rem;">
+                0971 183 939 (Tư Vấn Miễn Phí 24/7)
+              </p>
+            </div>
+
+            <div>
+              <div style="font-size:0.76rem; text-transform:uppercase; letter-spacing:0.1em; color:#74c69d; font-family:var(--font-mono); font-weight:700;">Giờ Khám &amp; Soi Da</div>
+              <p style="font-size:0.92rem; color:#cce3de; margin-top:0.3rem;">
+                08:30 – 20:00 (Thứ Hai đến Chủ Nhật)
+              </p>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="c-phone">Số điện thoại / Zalo *</label>
-            <input type="tel" id="c-phone" required placeholder="09xxxxxxxx">
+
+          <!-- Direct Zalo Callout -->
+          <div style="background:var(--color-mint-soft); border:1px solid var(--color-border-emerald); border-radius:var(--radius-md); padding:1.8rem; text-align:center;">
+            <h4 style="font-family:var(--font-display); font-size:1.2rem; color:var(--color-botanical-dark); margin-bottom:0.5rem;">
+              Cần Giải Đáp Khẩn Cấp Về Kích Ứng Da?
+            </h4>
+            <p style="font-size:0.86rem; color:var(--color-slate-text); margin-bottom:1.2rem;">
+              Chụp ảnh vùng da tổn thương và gửi qua Zalo để nhận phản hồi từ Dược sĩ chuyên trách trong vòng 10 phút.
+            </p>
+            <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo" style="width:100%; justify-content:center; padding:0.85rem;">
+              Chat Trực Tiếp Với Dược Sĩ: 0971 183 939
+            </a>
           </div>
-          <div class="form-group">
-            <label for="c-msg">Nhu cầu tư vấn *</label>
-            <textarea id="c-msg" rows="4" required placeholder="Nhu cầu chi tiết..."></textarea>
+        </div>
+      </div>
+
+      <!-- 5-Step Clinical Protocol -->
+      <div style="margin-top: 4rem;">
+        <div class="section-header">
+          <div class="section-kicker">Phác Đồ Khoa Học</div>
+          <h2 class="section-title">5 Bước Chữa Lành Làn Da Cùng Botanica</h2>
+        </div>
+
+        <div class="ingredients-grid" style="grid-template-columns: repeat(5, 1fr);">
+          <div class="ingredient-card" style="text-align:center;">
+            <div style="font-family:var(--font-display); font-size:1.6rem; color:var(--color-emerald-accent); font-weight:800; margin-bottom:0.4rem;">01</div>
+            <h4>Gửi Ảnh &amp; Bệnh Sử</h4>
+            <p>Chia sẻ các triệu chứng và các sản phẩm đã sử dụng trước đây.</p>
           </div>
-          <button type="submit" class="btn-primary" style="width: 100%;">Gửi Yêu Cầu Tư Vấn</button>
-        </form>
+
+          <div class="ingredient-card" style="text-align:center;">
+            <div style="font-family:var(--font-display); font-size:1.6rem; color:var(--color-emerald-accent); font-weight:800; margin-bottom:0.4rem;">02</div>
+            <h4>Soi Da &amp; Phân Tích</h4>
+            <p>Đo lường chỉ số mất nước qua biểu bì TEWL và mức độ tổn thương màng lipid.</p>
+          </div>
+
+          <div class="ingredient-card" style="text-align:center;">
+            <div style="font-family:var(--font-display); font-size:1.6rem; color:var(--color-emerald-accent); font-weight:800; margin-bottom:0.4rem;">03</div>
+            <h4>Thiết Lập Phác Đồ</h4>
+            <p>Lên quy trình phối hợp hoạt chất EWG Green tương thích tối đa.</p>
+          </div>
+
+          <div class="ingredient-card" style="text-align:center;">
+            <div style="font-family:var(--font-display); font-size:1.6rem; color:var(--color-emerald-accent); font-weight:800; margin-bottom:0.4rem;">04</div>
+            <h4>Giao Hàng &amp; Hướng Dẫn</h4>
+            <p>Nhận dược mỹ phẩm kèm sổ phác đồ chi tiết sáng tối từng ngày.</p>
+          </div>
+
+          <div class="ingredient-card" style="text-align:center;">
+            <div style="font-family:var(--font-display); font-size:1.6rem; color:var(--color-emerald-accent); font-weight:800; margin-bottom:0.4rem;">05</div>
+            <h4>Theo Dõi Hàng Tuần</h4>
+            <p>Dược sĩ trực tiếp kiểm tra tiến độ phục hồi qua Zalo 1:1.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Zalo Button -->
+  <aside class="floating-zalo">
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn da liễu Botanica">
+      <span>💬</span> Tư Vấn Dược Sĩ Zalo 0971 183 939
+    </a>
+  </aside>
+
+  <!-- Cart Modal Overlay & Drawer -->
+  <div class="cart-modal-overlay" id="cart-modal">
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3>Phác Đồ Đang Chọn</h3>
+        <button type="button" class="cart-close-btn" id="cart-close-btn">&times;</button>
+      </div>
+      <div class="cart-items-container" id="cart-items-container">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="cart-drawer-footer">
+        <div class="cart-total-line">
+          <span>Tổng Giá Trị Phác Đồ:</span>
+          <span id="cart-total-price">0đ</span>
+        </div>
+        <a href="#" class="btn-checkout-zalo" id="btn-checkout-zalo">
+          Gửi Phác Đồ Cho Dược Sĩ Thẩm Định Qua Zalo
+        </a>
       </div>
     </div>
   </div>
 
-  
+  <!-- Footer -->
   <footer>
     <div class="footer-wrap">
-      <div>
-        <h3>Bán mỹ phẩm chăm sóc sắc đẹp - web 99</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Mỹ phẩm. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+      <div class="footer-brand">
+        <h3>BOTANICA DERMA LAB</h3>
+        <p>
+          Dược mỹ phẩm thực vật chuẩn y khoa phục hồi hàng rào bảo vệ da. Tôn vinh vẻ đẹp khỏe mạnh nguyên bản bằng khoa học hoạt chất tinh khiết chuẩn EWG Green.
+        </p>
+        <p style="margin-top: 1rem; color: #74c69d; font-size: 0.84rem; font-family: var(--font-mono);">
+          Mã Giao Diện: <strong>#MS99</strong> (Thư Viện RackerWeb)
+        </p>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+
+      <div class="footer-col">
+        <h4>Dược Mỹ Phẩm</h4>
+        <ul>
+          <li><a href="san-pham.html">Tinh Chất Cấp Cứu Centella 10%</a></li>
+          <li><a href="san-pham.html">Gel Rửa Mặt Amino Acid pH 5.5</a></li>
+          <li><a href="san-pham.html">Kem Phục Hồi Ceramide Bio-Barrier</a></li>
+          <li><a href="san-pham.html">Chống Nắng Khoáng Kẽm Zinc SPF 50+</a></li>
+          <li><a href="san-pham.html">Serum Cấp Nước HA 8 Trọng Lượng</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col">
+        <h4>Về Viện Nghiên Cứu</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Tiêu Chuẩn Sản Xuất CGMP</a></li>
+          <li><a href="gioi-thieu.html">Cam Kết EWG Green 100%</a></li>
+          <li><a href="gioi-thieu.html">Quy Trình Kiểm Nghiệm Lâm Sàng</a></li>
+          <li><a href="lien-he.html">Đội Ngũ Dược Sĩ Da Liễu</a></li>
+          <li><a href="lien-he.html">Chính Sách Đổi Trả Dị Ứng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact-info">
+        <h4>Trung Tâm R&amp;D &amp; Trưng Bày</h4>
+        <p>📍 Viện Nghiên Cứu: Khu Công Nghệ Cao Hòa Lạc, Hà Nội</p>
+        <p>🏛️ Trung Tâm Soi Da: 128 Nguyễn Du, Quận 1, TP.HCM</p>
+        <p>📞 Tổng Đài Y Khoa: 0971 183 939</p>
+        <p>💬 Dược Sĩ Đồng Hành: 0971 183 939 (Zalo 24/7)</p>
       </div>
     </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Bán mỹ phẩm chăm sóc sắc đẹp - web 99. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <div>&copy; 2026 BOTANICA DERMA LAB. Bản quyền thuộc về Viện Nghiên Cứu Dược Mỹ Phẩm Thực Vật Lâm Sàng.</div>
+      <div>Designed for RackerWeb High-End Medical & Clinical Skincare Portfolio.</div>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
   <script src="js/app.js"></script>
+  <script>
+    const contactForm = document.getElementById('contact-derma-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('contact-name').value;
+        const phone = document.getElementById('contact-phone').value;
+        const condition = document.getElementById('contact-skin-condition').value;
+        const type = document.getElementById('contact-consult-type').value;
+        const history = document.getElementById('contact-history').value;
+
+        const msg = encodeURIComponent(`Kính gửi Dược Sĩ Botanica Derma Lab!\nTôi muốn đăng ký tư vấn/khám da liễu:\n- Khách hàng: ${name}\n- SĐT/Zalo: ${phone}\n- Tình trạng da: ${condition}\n- Hình thức mong muốn: ${type}\n- Lịch sử sản phẩm đang dùng: ${history}`);
+        window.open(`https://zalo.me/0971183939?text=${msg}`, '_blank');
+      });
+    }
+  </script>
 </body>
 </html>

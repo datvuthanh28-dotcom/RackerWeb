@@ -8,78 +8,99 @@
   <link rel="stylesheet" href="css/style.css">
   <style>
     .spa-about-hero {
-      background: linear-gradient(180deg, rgba(31,51,42,0.65) 0%, rgba(31,51,42,0.85) 100%),
-                  url('assets/images/hero.jpg') center/cover no-repeat;
-      padding: 5.5rem 1.5rem 3.5rem;
+      background: linear-gradient(180deg, rgba(27,40,32,0.65) 0%, rgba(27,40,32,0.9) 100%),
+                  url('assets/images/hero-sanctuary.jpg') center/cover no-repeat;
+      padding: 6rem 2rem 4rem;
       text-align: center;
       color: #fff;
     }
     .spa-about-hero h1 {
       font-family: var(--font-serif);
-      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
       margin-bottom: 0.8rem;
     }
     .about-split-layout {
+      max-width: 1240px;
+      margin: 5rem auto;
+      padding: 0 1.5rem;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 4rem;
+      grid-template-columns: 1.15fr 0.95fr;
+      gap: 4.5rem;
       align-items: center;
-      margin-bottom: 5rem;
     }
-    .about-split-layout img {
-      border-radius: var(--radius);
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-soft);
+    .about-media-box {
+      border-radius: var(--radius-organic);
+      overflow: hidden;
+      box-shadow: var(--shadow-lift);
+      border: 6px solid #fff;
+    }
+    .about-media-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .therapist-section-wrap {
+      max-width: 1240px;
+      margin: 0 auto 6rem;
+      padding: 0 1.5rem;
     }
     .therapist-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
+      gap: 2.2rem;
+      margin-top: 3.5rem;
     }
     .therapist-card {
-      background: var(--linen-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius);
-      padding: 2.2rem;
+      background: #fff;
+      border: 1px solid var(--zen-border);
+      border-radius: var(--radius-organic);
+      padding: 2.4rem 2rem;
       text-align: center;
-      box-shadow: var(--shadow-soft);
+      box-shadow: var(--shadow-zen);
+      transition: all 0.3s ease;
+    }
+    .therapist-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--zen-bronze);
+      box-shadow: var(--shadow-lift);
     }
     .therapist-icon {
-      width: 70px;
-      height: 70px;
-      margin: 0 auto 1.2rem;
-      background: var(--sage-subtle);
-      border: 1px solid var(--sage-light);
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 1.4rem;
+      background: var(--zen-mist);
+      border: 1px solid var(--zen-border);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.8rem;
-      color: var(--sage-primary);
+      font-size: 2rem;
+      color: var(--zen-moss);
     }
     .therapist-card h4 {
       font-family: var(--font-serif);
-      font-size: 1.3rem;
-      color: var(--sage-dark);
+      font-size: 1.35rem;
+      color: var(--zen-dark);
       margin-bottom: 0.3rem;
     }
     .therapist-card .role {
       font-size: 0.8rem;
-      color: var(--champagne);
+      color: var(--zen-bronze);
       font-weight: 600;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-bottom: 0.8rem;
+      margin-bottom: 1rem;
+      display: block;
     }
     .therapist-card p {
       font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.6;
+      color: var(--zen-muted);
+      line-height: 1.65;
     }
     @media (max-width: 900px) {
       .about-split-layout {
         grid-template-columns: 1fr;
+        gap: 3rem;
       }
       .therapist-grid {
         grid-template-columns: 1fr;
@@ -89,34 +110,51 @@
 </head>
 <body>
 
-  <!-- Library Return Bar -->
+  <!-- Library return bar -->
   <div class="library-return-bar">
     <span>Giao diện mẫu <strong>#MS18 · Spa & Chăm Sóc Sức Khỏe</strong> — Thư Viện Theme RackerWeb</span>
     <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
-  <!-- Header -->
-  <header id="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="brand-logo">
-        <span class="brand-title">AN NHIÊN</span>
-        <span class="brand-subtitle">Spa & Wellness Retreat</span>
-      </a>
+  <!-- Top Atmospheric Bar -->
+  <div class="zen-topbar">
+    <div class="zen-topbar-inner">
+      <div class="zen-topbar-tagline">
+        <span class="kanji-badge">安 然</span>
+        <span>Ốc Đảo Dưỡng Thân & Trị Liệu Thảo Mộc — 100% Nguyên Liệu Thuần Tự Nhiên</span>
+      </div>
+      <div class="zen-topbar-info">
+        <span>⏱ 09:00 – 21:30 hàng ngày</span>
+        <span>📞 Hotline tư vấn: <strong style="color:var(--zen-dark);">0971 183 939</strong></span>
+      </div>
+    </div>
+  </div>
 
-      <nav class="main-nav">
-        <a href="index.html">Trang Chủ</a>
-        <a href="san-pham.html">Gói Dịch Vụ</a>
+  <!-- Centered Logo Sanctuary Header -->
+  <header id="site-header">
+    <div class="header-sanctuary-wrap">
+      <nav class="header-wing-left">
         <a href="index.html#triet-ly">Triết Lý Trị Liệu</a>
-        <a href="gioi-thieu.html" class="active">Về An Nhiên</a>
-        <a href="index.html#dat-lich">Đặt Lịch Hẹn</a>
-        <a href="lien-he.html">Liên Hệ</a>
+        <a href="index.html#nghi-thuc">Nghi Thức 3 Bước</a>
+        <a href="san-pham.html">Gói Dịch Vụ</a>
       </nav>
 
-      <div class="header-cta-group">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-hotline">
-          0971 183 939
+      <a href="index.html" class="header-center-brand">
+        <div class="brand-seal-emblem">
+          <div class="brand-seal-circle">安</div>
+          <div class="brand-name-group">
+            <span class="brand-name-title">AN NHIÊN</span>
+            <span class="brand-name-sub">Wellness Retreat</span>
+          </div>
+        </div>
+      </a>
+
+      <div class="header-wing-right">
+        <a href="index.html#khong-gian" class="nav-link">Không Gian Yên Tĩnh</a>
+        <a href="gioi-thieu.html" class="nav-link active">Về An Nhiên</a>
+        <a href="index.html#dat-lich" class="btn-sanctuary-reserve">
+          <span>🌿</span> Đặt Chỗ Yên Tĩnh
         </a>
-        <a href="index.html#dat-lich" class="btn-book-nav">Đặt Lịch Ngay</a>
         <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
@@ -126,49 +164,52 @@
   <div class="drawer-backdrop" id="drawer-backdrop"></div>
   <aside class="mobile-nav-drawer" id="mobile-drawer">
     <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
-    <a href="index.html">Trang Chủ</a>
-    <a href="san-pham.html">Gói Dịch Vụ & Liệu Trình</a>
-    <a href="index.html#triet-ly">Triết Lý Trị Liệu</a>
-    <a href="gioi-thieu.html" class="active">Về An Nhiên Retreat</a>
-    <a href="index.html#dat-lich">Đặt Lịch Hẹn</a>
-    <a href="lien-he.html">Địa Chỉ & Liên Hệ</a>
+    <a href="index.html">Trang Chủ An Nhiên</a>
+    <a href="san-pham.html">Bảng Giá Liệu Trình (20+ Gói)</a>
+    <a href="index.html#nghi-thuc">Nghi Thức Trị Liệu 3 Bước</a>
+    <a href="index.html#khong-gian">Không Gian Yên Tịnh</a>
+    <a href="gioi-thieu.html" class="active">Triết Lý Thân - Tâm - Trí</a>
+    <a href="index.html#dat-lich">Đặt Lịch Hẹn Yên Tĩnh</a>
+    <a href="lien-he.html">Địa Chỉ & Chỉ Đường</a>
   </aside>
 
   <main>
     <section class="spa-about-hero">
-      <div class="container">
-        <span class="section-subtitle-spa" style="color:var(--champagne-light);">Hành Trình Tĩnh Lặng</span>
+      <div>
+        <span class="zen-eyebrow" style="color:var(--zen-bronze-light);">Hành Trình Tĩnh Lặng</span>
         <h1>Câu Chuyện An Nhiên Retreat</h1>
-        <p style="color:#d1ded7; max-width:650px; margin:0 auto; font-size:1.05rem;">
-          Chúng tôi tạo ra một khoảng trời tĩnh tại nơi bạn có thể cởi bỏ mọi ưu phiền thường nhật, lắng nghe nhịp thở và nuôi dưỡng nguồn sinh lực tự nhiên.
+        <p style="color:#ccdcd3; max-width:680px; margin:0 auto; font-size:1.05rem; line-height:1.8;">
+          Chúng tôi kiến tạo một ốc đảo yên bình tách biệt phố thị, nơi bạn lắng đọng tâm trí, tái tạo nguồn năng lượng sống từ ngọn cỏ lá cây thuần khiết.
         </p>
       </div>
     </section>
 
-    <section class="section-spa">
-      <div class="about-split-layout">
-        <div>
-          <span class="section-subtitle-spa">Sứ Mệnh Chữa Lành</span>
-          <h2 style="font-family:var(--font-serif); font-size:2.2rem; color:var(--sage-dark); margin-bottom:1.2rem; line-height:1.3;">
-            Tôn Trọng Sự Chữa Lành Thuận Theo Tự Nhiên
-          </h2>
-          <p style="color:var(--text-muted); font-size:1rem; line-height:1.75; margin-bottom:1.2rem;">
-            An Nhiên được thành lập từ sự trăn trở trước áp lực nặng nề của nhịp sống hiện đại: mất ngủ, căng thẳng cơ xương khớp và sự kiệt quệ tinh thần. Thay vì những phương pháp can thiệp xâm lấn, chúng tôi tin rằng cơ thể con người có khả năng tự phục hồi kỳ diệu nếu được đặt vào đúng môi trường thanh tịnh.
-          </p>
-          <p style="color:var(--text-muted); font-size:1rem; line-height:1.75;">
-            Từng giọt tinh dầu xông, từng chiếc khăn bông mềm mại và dòng nước thảo dược ấm áp đều được chúng tôi chuẩn bị bằng tất cả sự kính trọng đối với sức khỏe của quý khách.
-          </p>
-        </div>
-        <div>
-          <img src="assets/images/hero.jpg" alt="Phòng trị liệu An Nhiên Spa">
-        </div>
+    <div class="about-split-layout">
+      <div>
+        <span class="zen-eyebrow">Sứ Mệnh Chữa Lành</span>
+        <h2 style="font-family:var(--font-serif); font-size:2.4rem; color:var(--zen-dark); margin-bottom:1.2rem; line-height:1.25;">
+          Tôn Trọng Sự Chữa Lành Thuận Theo Tự Nhiên
+        </h2>
+        <p style="color:var(--zen-muted); font-size:1rem; line-height:1.8; margin-bottom:1.2rem;">
+          An Nhiên ra đời từ niềm thấu cảm sâu sắc trước những áp lực nặng nề của nhịp sống hiện đại: cơn đau mỏi vai gáy kinh niên, chứng mất ngủ kéo dài và cảm giác cạn kiệt năng lượng. Thay vì những liệu pháp công nghiệp vội vã, chúng tôi tin rằng cơ thể con người có khả năng tự phục hồi kỳ diệu nếu được đặt vào đúng môi trường tĩnh lặng và được nuôi dưỡng bằng thảo dược bản địa.
+        </p>
+        <p style="color:var(--zen-muted); font-size:1rem; line-height:1.8;">
+          Từng giọt tinh dầu rừng ép lạnh, chiếc khăn lanh dệt thủ công tiệt trùng và ấm trà hoa cúc nghi ngút khói đều được chuẩn bị bằng trọn vẹn lòng kính trọng dành cho sức khỏe và sự an yên của quý khách.
+        </p>
       </div>
+      <div class="about-media-box">
+        <img src="assets/images/spa-ambiance.jpg" alt="Không gian tĩnh lặng tại An Nhiên Retreat">
+      </div>
+    </div>
 
-      <!-- Standards of Care -->
-      <div class="section-header-spa" style="margin-top:2rem;">
-        <span class="section-subtitle-spa">Đội Ngũ Chuyên Gia</span>
-        <h2 class="section-title-spa">Những Nghệ Nhân Tận Tâm</h2>
-        <p class="section-intro-spa">Mỗi kỹ thuật viên tại An Nhiên đều trải qua hơn 500 giờ đào tạo chuyên sâu về huyệt vị và nghệ thuật chăm sóc khách hàng</p>
+    <!-- Healers Section -->
+    <section class="therapist-section-wrap">
+      <div class="section-intro-center">
+        <span class="zen-eyebrow">Đội Ngũ Chuyên Gia</span>
+        <h2 class="zen-section-title">Những Nghệ Nhân Tận Tâm</h2>
+        <p class="zen-section-desc">
+          Mỗi chuyên viên trị liệu tại An Nhiên đều trải qua hơn 500 giờ đào tạo chuyên sâu về huyệt đạo, giải phẫu học cơ bắp và nghệ thuật phục vụ chuẩn mực.
+        </p>
       </div>
 
       <div class="therapist-grid">
@@ -176,79 +217,79 @@
           <div class="therapist-icon">🎋</div>
           <h4>Lương y Mai Lan Phương</h4>
           <span class="role">Cố Vấn Y Học Cổ Truyền</span>
-          <p>Hơn 18 năm kinh nghiệm nghiên cứu bài thuốc xông ngâm thảo mộc và ứng dụng bấm huyệt đả thông kinh lạc trong y học trị liệu.</p>
+          <p>Hơn 18 năm nghiên cứu các bài thuốc lá xông ngâm thảo mộc của người Dao Đỏ và phương pháp bấm huyệt đả thông kinh lạc.</p>
         </div>
 
         <div class="therapist-card">
           <div class="therapist-icon">🌸</div>
           <h4>Master Therapist Thu Hoài</h4>
-          <span class="role">Trưởng Bộ Phận Trị Liệu Body</span>
-          <p>Được đào tạo chứng chỉ massage Thụy Điển & Shiatsu Nhật Bản, chuyên sâu phục hồi cơ xương khớp cho nhân viên văn phòng.</p>
+          <span class="role">Trưởng Bộ Phận Trị Liệu Thân</span>
+          <p>Chứng chỉ xoa bóp Thụy Điển & Shiatsu Nhật Bản, chuyên sâu phục hồi cơ xương khớp cho giới văn phòng và người làm việc áp lực cao.</p>
         </div>
 
         <div class="therapist-card">
           <div class="therapist-icon">🌿</div>
           <h4>Chuyên gia Thanh Hằng</h4>
           <span class="role">Chăm Sóc Da Liễu Hữu Cơ</span>
-          <p>Tận tụy nghiên cứu các phác đồ phục hồi hàng rào ẩm tự nhiên cho làn da nhạy cảm với liệu pháp thiên nhiên không xâm lấn.</p>
+          <p>Tận tâm nghiên cứu phác đồ nuôi dưỡng hàng rào sinh học cho làn da nhạy cảm bằng tinh chất hoa hồng hữu cơ và khoáng đất sét tươi.</p>
         </div>
       </div>
     </section>
 
-    <!-- Bottom CTA -->
-    <section class="section-spa" style="text-align:center; padding-top:0;">
-      <h3 style="font-family:var(--font-serif); font-size:2rem; color:var(--sage-dark); margin-bottom:1rem;">Hãy Dành Cho Mình Một Buổi Chiều Bình Yên</h3>
-      <p style="color:var(--text-muted); max-width:600px; margin:0 auto 2.5rem;">Đội ngũ An Nhiên luôn sẵn sàng đón chào quý khách tại không gian tĩnh lặng số 16 Đường Hoa Sứ.</p>
-      <div style="display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap;">
-        <a href="index.html#dat-lich" class="btn-primary-spa">Đặt Lịch Hẹn Ngay</a>
-        <a href="san-pham.html" class="btn-secondary-spa" style="background:var(--sage-primary); color:#fff; border-color:var(--sage-primary);">Xem Bảng Giá Liệu Trình</a>
-      </div>
-    </section>
+    <!-- Call to Action -->
+    <div style="text-align:center; padding: 0 1.5rem 6rem;">
+      <h3 style="font-family:var(--font-serif); font-size:2.2rem; color:var(--zen-dark); margin-bottom:1rem;">Dành Cho Bản Thân Một Buổi Chiều Tĩnh Lặng</h3>
+      <p style="color:var(--zen-muted); max-width:600px; margin:0 auto 2.5rem; font-size:1.02rem;">Ốc đảo An Nhiên luôn sẵn sàng đón chào bạn tại Biệt thự số 16 Đường Hoa Sứ, Quận Phú Nhuận.</p>
+      <a href="index.html#dat-lich" class="btn-zen-primary" style="display:inline-flex;">
+        <span>Đặt Lịch Yên Tĩnh Ngay</span>
+        <span>→</span>
+      </a>
+    </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer-spa">
-    <div class="footer-wrap-spa">
-      <div class="footer-col-spa">
-        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
-          <span class="brand-title" style="color:var(--champagne-light);">AN NHIÊN</span>
-          <span class="brand-subtitle">Spa & Wellness Retreat</span>
-        </a>
-        <p>Ốc đảo thư giãn và nuôi dưỡng sự cân bằng tự nhiên cho cơ thể và tâm trí giữa nhịp sống bận rộn.</p>
-        <p style="margin-top:1rem; font-size:0.8rem; color:#6b8779;">* Giao diện mẫu demo #MS18 thuộc Thư Viện Theme RackerWeb.</p>
+  <!-- Minimalist Zen Footer -->
+  <footer class="zen-minimal-footer">
+    <div class="footer-zen-inner">
+      <a href="index.html" class="footer-center-seal">
+        <div class="footer-seal-circle">安</div>
+        <h3>AN NHIÊN RETREAT</h3>
+        <span>ỐC ĐẢO DƯỠNG THÂN & TÂM</span>
+      </a>
+
+      <p class="footer-zen-quote">
+        "Để tâm tĩnh lặng như mặt hồ mùa thu, thân an nhiên cùng đất trời thảo mộc."
+      </p>
+
+      <div class="footer-zen-trio">
+        <div class="footer-trio-col">
+          <h4>Quy Chuẩn Spa Etiquette</h4>
+          <p>• Quý khách vui lòng chuyển điện thoại sang chế độ im lặng khi bước vào sảnh.</p>
+          <p>• Khuyến khích đến trước 15 phút để thưởng trà ngâm chân thảo mộc.</p>
+          <p>• Phục vụ tối đa 6 khách / khung giờ.</p>
+        </div>
+
+        <div class="footer-trio-col">
+          <h4>Hành Trình Dịch Vụ</h4>
+          <ul>
+            <li><a href="san-pham.html">Massage thảo dược đá nóng Himalaya</a></li>
+            <li><a href="san-pham.html">Chăm sóc da mặt khoáng đất sét tươi</a></li>
+            <li><a href="san-pham.html">Gội đầu dưỡng sinh thảo mộc Dao Đỏ</a></li>
+            <li><a href="san-pham.html">Gói chăm sóc cặp đôi VIP Suite</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-trio-col">
+          <h4>Không Gian & Tiếp Đón</h4>
+          <p><strong>Địa chỉ:</strong> Biệt thự số 16, Đường Hoa Sứ, Quận Phú Nhuận, TP. Hồ Chí Minh</p>
+          <p><strong>Thời gian đón khách:</strong> 09:00 – 21:30 hàng ngày</p>
+          <p><strong>Hotline & Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--zen-bronze-light); font-weight:700;">0971 183 939</a></p>
+        </div>
       </div>
 
-      <div class="footer-col-spa">
-        <h4>Dịch Vụ</h4>
-        <ul>
-          <li><a href="san-pham.html">Massage thảo dược đá nóng</a></li>
-          <li><a href="san-pham.html">Chăm sóc da mặt chuyên sâu</a></li>
-          <li><a href="san-pham.html">Gội đầu dưỡng sinh Đông y</a></li>
-          <li><a href="san-pham.html">Gói trị liệu thải độc toàn thân</a></li>
-        </ul>
+      <div class="footer-zen-bottom">
+        <span>© 2026 An Nhiên Spa & Wellness Retreat — Giao diện mẫu độc bản #MS18. Thư Viện Theme RackerWeb.</span>
+        <a href="../../index.html">← Quay lại danh mục Theme Library RackerWeb</a>
       </div>
-
-      <div class="footer-col-spa">
-        <h4>An Nhiên Spa</h4>
-        <ul>
-          <li><a href="gioi-thieu.html">Triết lý Thân - Tâm - Trí</a></li>
-          <li><a href="gioi-thieu.html">Đội ngũ kỹ thuật viên</a></li>
-          <li><a href="lien-he.html">Quy tắc ứng xử Spa (Etiquette)</a></li>
-          <li><a href="lien-he.html">Chỉ đường & Đỗ xe</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col-spa">
-        <h4>Liên Hệ & Đón Khách</h4>
-        <p><strong>Địa chỉ:</strong> Biệt thự số 16, Đường Hoa Sứ, Quận Phú Nhuận, TP. Hồ Chí Minh</p>
-        <p style="margin-top:0.4rem;"><strong>Giờ phục vụ:</strong> 09:00 – 21:30 (Hàng ngày)</p>
-        <p style="margin-top:0.4rem;"><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--champagne-light); font-weight:600;">0971 183 939</a></p>
-      </div>
-    </div>
-
-    <div class="footer-bottom-spa">
-      <span>© 2026 An Nhiên Spa & Wellness Retreat — Giao diện mẫu #MS18. All rights reserved.</span>
-      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 

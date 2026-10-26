@@ -1,98 +1,343 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Danh Mục Dòng xe | Website Garage ô tô - web 98</title>
+  <title>Dịch Vụ & Nâng Cấp Kỹ Thuật | APEX MOTORS</title>
+  <meta name="description" content="Danh mục dịch vụ kỹ thuật toàn diện cho xe châu Âu: Bảo dưỡng chuyên sâu, căn chỉnh thước lái Hunter 3D, cùm phanh Brembo chính hãng, ECU Remap và phủ Ceramic Gyeon 9H.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Navigation back to theme library -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#SKD-000</strong>.</span>
+    <span>Giao diện kỹ thuật độc quyền <strong>#MS98</strong> thuộc Thư Viện Theme RackerWeb.</span>
     <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
   </div>
 
+  <!-- Top Live Status Bar -->
+  <div class="top-status-bar">
+    <div class="status-indicators">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span>Xưởng Kỹ Thuật Đang Mở Cửa (07:30 - 19:30)</span>
+      </div>
+      <div class="status-pill" style="color: var(--accent-amber);">
+        <span>⚡ Cầu nâng trực tuyến: 5/6 Đang phục vụ • 1 Cầu nâng sẵn sàng tiếp nhận</span>
+      </div>
+    </div>
+    <div class="top-contact">
+      <a href="tel:0971183939" class="rescue-hotline">🚨 Cứu hộ khẩn cấp 24/7: 0971.18.3939</a>
+      <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer">Zalo Kỹ Sư Trưởng</a>
+    </div>
+  </div>
+
+  <!-- Main Header -->
   <header>
     <div class="header-wrap">
-      <div class="logo">Website Garage ô tô - web 98 <span>SKD-000</span></div>
+      <a href="index.html" class="logo-box">
+        <div class="logo-emblem">A</div>
+        <div class="logo-text">
+          <div class="logo-title">APEX <span>MOTORS</span></div>
+          <div class="logo-sub">Engineering & Detailing</div>
+        </div>
+      </a>
+
       <nav>
         <ul>
           <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html" class="active">Dòng xe</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+          <li><a href="san-pham.html" class="active">Dịch Vụ & Nâng Cấp</a></li>
+          <li><a href="gioi-thieu.html">Cơ Sở & Thiết Bị</a></li>
+          <li><a href="lien-he.html">Đặt Lịch Hẹn</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
-        <button type="button" class="cart-trigger">Giỏ Hàng (<span id="cart-count">0</span>)</button>
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <button type="button" class="btn-cart-trigger">
+          <span>Gói Đã Chọn</span>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+        <a href="lien-he.html" class="btn-booking">
+          <span>📅 Đặt Lịch Cầu Nâng</span>
+        </a>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Toàn Bộ Danh Mục Dòng xe</h1>
-    <p>Khám phá đầy đủ các gói sản phẩm và giải pháp cao cấp từ Website Garage ô tô - web 98</p>
+  <!-- Subpage Hero Banner -->
+  <div class="subpage-hero">
+    <h1>Bảng Danh Mục Dịch Vụ & Gói Nâng Cấp</h1>
+    <p>Giải pháp kỹ thuật chuyên nghiệp, minh bạch định mức vật tư và cam kết chất lượng theo tiêu chuẩn khắt khe nhất của các hãng xe châu Âu.</p>
   </div>
 
-  <main class="section">
-    <div class="grid">
-        <div class="card">
-          <span class="card-badge">Mới 2026</span>
-          <h3>Sedan Thể Thao Điện Hạng Sang</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">1.250.000.000đ</div>
-          <button type="button" class="btn-buy" data-name="Sedan Thể Thao Điện Hạng Sang">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Gia đình</span>
-          <h3>SUV Đa Dụng 7 Chỗ Địa Hình</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">1.680.000.000đ</div>
-          <button type="button" class="btn-buy" data-name="SUV Đa Dụng 7 Chỗ Địa Hình">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Chính hãng</span>
-          <h3>Gói Bảo Dưỡng Định Kỳ Toàn Diện</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">3.500.000đ</div>
-          <button type="button" class="btn-buy" data-name="Gói Bảo Dưỡng Định Kỳ Toàn Diện">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Custom</span>
-          <h3>Độ Phụ Kiện & Nâng Cấp Nội Thất</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">Liên hệ</div>
-          <button type="button" class="btn-buy" data-name="Độ Phụ Kiện & Nâng Cấp Nội Thất">Thêm Giỏ Hàng</button>
+  <!-- Category Filter Bar -->
+  <div class="catalog-filter-bar">
+    <button type="button" class="filter-btn active" data-filter="all">Tất Cả Hạng Mục</button>
+    <button type="button" class="filter-btn" data-filter="maintenance">Bảo Dưỡng Chuyên Sâu</button>
+    <button type="button" class="filter-btn" data-filter="chassis">Khung Gầm & Phanh</button>
+    <button type="button" class="filter-btn" data-filter="performance">Hiệu Năng & Tuning</button>
+    <button type="button" class="filter-btn" data-filter="detailing">Studio Detailing</button>
+  </div>
+
+  <main class="services-section">
+    <div class="services-catalog-grid">
+      <!-- Item 1: Engine Maintenance -->
+      <div class="service-eng-card" data-category="maintenance">
+        <div class="card-media-wrap">
+          <img src="assets/images/service-engine.jpg" alt="Bảo dưỡng động cơ toàn diện">
+          <span class="card-category-badge">Bảo Dưỡng Chuyên Sâu</span>
         </div>
+        <div class="card-body-content">
+          <h3 class="service-eng-title">Gói Bảo Dưỡng Cấp Lớn 40k - 80k km</h3>
+          <p class="service-eng-desc">
+            Quy trình kiểm tra 75 hạng mục chuẩn xe châu Âu. Thay nhớt động cơ Motul 300V / Liqui Moly, thay lọc gió động cơ K&N, vệ sinh họng hút, thay nước làm mát hữu cơ OAT và kiểm tra nội soi buồng đốt.
+          </p>
+          <ul class="service-features-list">
+            <li>Nội soi kiểm tra đóng cặn su-páp nạp bằng camera</li>
+            <li>Đọc & lưu trữ log thông số áp suất nén buồng đốt</li>
+            <li>Bảo hành toàn diện 12 tháng hoặc 20.000km</li>
+          </ul>
+          <div class="card-footer-action">
+            <div class="service-cost-tag">
+              <span class="cost-from">Giá trọn gói từ</span>
+              <span class="cost-amount">3.800.000đ</span>
+            </div>
+            <button type="button" class="btn-add-service">Thêm Đặt Hẹn</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2: Brembo Brakes -->
+      <div class="service-eng-card" data-category="chassis">
+        <div class="card-media-wrap">
+          <img src="assets/images/service-brake.jpg" alt="Bộ cùm phanh Brembo Carbon Ceramic">
+          <span class="card-category-badge">Khung Gầm & Phanh</span>
+        </div>
+        <div class="card-body-content">
+          <h3 class="service-eng-title">Nâng Cấp Cụm Phanh Brembo GT 6-Piston</h3>
+          <p class="service-eng-desc">
+            Cung cấp cùm phanh đúc nguyên khối monobloc Brembo GT Series kèm đĩa phanh 2 mảnh đục lỗ tản nhiệt 380mm - 405mm, má phanh gốm ít bụi và dây dầu bọc thép Hel Performance chịu áp lực 3000 PSI.
+          </p>
+          <ul class="service-features-list">
+            <li>Dĩa phanh nổi (Floating Disc) chống giật và giãn nở nhiệt</li>
+            <li>Dầu phanh chuyên dụng Endless RF-650 Racing</li>
+            <li>Căn chỉnh tâm moay-ơ và cân bằng động bằng đồng hồ so</li>
+          </ul>
+          <div class="card-footer-action">
+            <div class="service-cost-tag">
+              <span class="cost-from">Bộ phanh từ</span>
+              <span class="cost-amount">24.500.000đ</span>
+            </div>
+            <button type="button" class="btn-add-service">Thêm Đặt Hẹn</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3: Hunter 3D Alignment -->
+      <div class="service-eng-card" data-category="chassis">
+        <div class="card-media-wrap">
+          <img src="assets/images/service-alignment.jpg" alt="Căn chỉnh thước lái 3D Hunter">
+          <span class="card-category-badge">Khung Gầm & Phanh</span>
+        </div>
+        <div class="card-body-content">
+          <h3 class="service-eng-title">Căn Chỉnh Thước Lái Hunter HawkEye Elite</h3>
+          <p class="service-eng-desc">
+            Công nghệ đo quang học 4 camera độ nét cao với kẹp mâm QuickGrip cao su không chạm vành đúc. Căn chỉnh góc Camber, Caster, Toe theo thông số gốc xuất xưởng cho từng dòng Porsche, BMW, Mercedes.
+          </p>
+          <ul class="service-features-list">
+            <li>Triệt tiêu hiện tượng nhao lái, xe chạy lệch tâm làn</li>
+            <li>Cân bằng động bánh xe chống rung vô lăng dải 80 - 120km/h</li>
+            <li>In phiếu báo cáo kết quả chi tiết từng góc đo trước và sau</li>
+          </ul>
+          <div class="card-footer-action">
+            <div class="service-cost-tag">
+              <span class="cost-from">Gói cân chỉnh</span>
+              <span class="cost-amount">800.000đ</span>
+            </div>
+            <button type="button" class="btn-add-service">Thêm Đặt Hẹn</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4: Diagnostics & Coding -->
+      <div class="service-eng-card" data-category="maintenance">
+        <div class="card-media-wrap">
+          <img src="assets/images/service-diagnostics.jpg" alt="Chẩn đoán chuyên sâu ECU">
+          <span class="card-category-badge">Bảo Dưỡng Chuyên Sâu</span>
+        </div>
+        <div class="card-body-content">
+          <h3 class="service-eng-title">Chẩn Đoán Số Hóa & Lập Trình Coding ECU</h3>
+          <p class="service-eng-desc">
+            Sử dụng thiết bị chẩn đoán cao cấp Autel Ultra & phần mềm chuyên hãng PIWIS / ISTA. Xử lý triệt để các mã lỗi phức tạp về hệ thống mạng CAN-Bus, phuộc hơi khí nén Airmatic và hệ thống hỗ trợ lái ADAS.
+          </p>
+          <ul class="service-features-list">
+            <li>Kích hoạt tính năng ẩn (Apple CarPlay không dây, đèn Matrix)</li>
+            <li>Hiệu chuẩn camera 360 độ và radar hành trình thích ứng</li>
+            <li>Miễn phí tiền công quét lỗi nếu khách hàng sửa chữa tại xưởng</li>
+          </ul>
+          <div class="card-footer-action">
+            <div class="service-cost-tag">
+              <span class="cost-from">Chi phí từ</span>
+              <span class="cost-amount">600.000đ</span>
+            </div>
+            <button type="button" class="btn-add-service">Thêm Đặt Hẹn</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5: Detailing Ceramic -->
+      <div class="service-eng-card" data-category="detailing">
+        <div class="card-media-wrap">
+          <img src="assets/images/service-detailing.jpg" alt="Phủ Ceramic cao cấp">
+          <span class="card-category-badge">Studio Detailing</span>
+        </div>
+        <div class="card-body-content">
+          <h3 class="service-eng-title">Gói Phủ Ceramic Gyeon Q² Pure EVO 9H</h3>
+          <p class="service-eng-desc">
+            Đánh bóng hiệu chỉnh loại bỏ 95% vết xước mạng nhện với máy Rupes BigFoot và xi mạ Koch-Chemie. Phủ 2 lớp Ceramic thạch anh độ dày 0.5 micron tạo hiệu ứng lá sen siêu trượt nước và bóng gương sâu.
+          </p>
+          <ul class="service-features-list">
+            <li>Độ bền màng phủ bảo vệ từ 3 - 5 năm</li>
+            <li>Bao gồm phủ kính chống bám nước và phủ bảo vệ mâm xe</li>
+            <li>Bảo dưỡng định kỳ và rửa dưỡng miễn phí mỗi 6 tháng</li>
+          </ul>
+          <div class="card-footer-action">
+            <div class="service-cost-tag">
+              <span class="cost-from">Gói phủ từ</span>
+              <span class="cost-amount">7.500.000đ</span>
+            </div>
+            <button type="button" class="btn-add-service">Thêm Đặt Hẹn</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6: ECU Remap & Exhaust -->
+      <div class="service-eng-card" data-category="performance">
+        <div class="card-media-wrap">
+          <img src="assets/images/service-tuning.jpg" alt="ECU Remap Tuning Stage 2">
+          <span class="card-category-badge">Hiệu Năng & Tuning</span>
+        </div>
+        <div class="card-body-content">
+          <h3 class="service-eng-title">ECU Remap Stage 1/2 & Độ Pô Thể Thao</h3>
+          <p class="service-eng-desc">
+            Cân chỉnh phần mềm quản lý động cơ tăng từ 30hp - 80hp mà không can thiệp phần cứng. Nâng cấp ống xả thể thao Titanium nguyên cây van On/Off điện tử cho âm thanh uy lực phấn khích trên từng dải tua.
+          </p>
+          <ul class="service-features-list">
+            <li>Đo kiểm công suất thực tế trên bàn Dyno trước và sau khi map</li>
+            <li>Tối ưu độ nhạy chân ga, xóa bỏ hoàn toàn hiện tượng trễ Turbo</li>
+            <li>Lưu trữ file MAP gốc, bảo đảm khôi phục nguyên bản bất kỳ lúc nào</li>
+          </ul>
+          <div class="card-footer-action">
+            <div class="service-cost-tag">
+              <span class="cost-from">Gói remap từ</span>
+              <span class="cost-amount">14.000.000đ</span>
+            </div>
+            <button type="button" class="btn-add-service">Thêm Đặt Hẹn</button>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Website Garage ô tô - web 98</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Ô tô - Xe máy. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <!-- Showcase Featured Vehicles -->
+  <section class="section" style="max-width: 1320px; margin: 0 auto 5rem; padding: 0 1.5rem;">
+    <div class="section-head">
+      <span class="section-tag">Project Gallery</span>
+      <h2 class="section-title">Các Dự Án Kỹ Thuật Tiêu Biểu Tại Apex Motors</h2>
+      <p class="section-sub">
+        Những cỗ máy tốc độ sau khi được hoàn thiện quy trình bảo dưỡng, cân chỉnh và làm đẹp tại xưởng.
+      </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+      <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border); background: var(--bg-card);">
+        <img src="assets/images/customer-car-bmw.jpg" alt="BMW M4 Competition tại xưởng" style="width: 100%; height: 260px; object-fit: cover;">
+        <div style="padding: 1.25rem;">
+          <h4 style="font-family: var(--font-heading); color: #fff; margin-bottom: 0.35rem;">BMW M4 Competition</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Gói nâng cấp: Remap Stage 2 (530hp) + Căn chỉnh góc đặt bánh xe Hunter 3D + Phủ Ceramic Gyeon.</p>
+        </div>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Dòng xe</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+
+      <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border); background: var(--bg-card);">
+        <img src="assets/images/detail-after.jpg" alt="Mercedes-AMG GT R PRO phủ Ceramic" style="width: 100%; height: 260px; object-fit: cover;">
+        <div style="padding: 1.25rem;">
+          <h4 style="font-family: var(--font-heading); color: #fff; margin-bottom: 0.35rem;">Mercedes-AMG GT R PRO</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Gói nâng cấp: Hiệu chỉnh sơn gương 98 GU + Cùm phanh Brembo gốm Carbon + Lập trình ống xả thể thao.</p>
+        </div>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border); background: var(--bg-card);">
+        <img src="assets/images/customer-car-vw.jpg" alt="Volkswagen hatchback bảo dưỡng" style="width: 100%; height: 260px; object-fit: cover;">
+        <div style="padding: 1.25rem;">
+          <h4 style="font-family: var(--font-heading); color: #fff; margin-bottom: 0.35rem;">Volkswagen TSI Hatchback</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Gói dịch vụ: Đại tu định kỳ 60.000km + Thay dầu hộp số ly hợp kép DSG + Vệ sinh kim phun trực tiếp FSI.</p>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- Heavy Industrial Monograph Footer -->
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <h4>APEX MOTORS WORKSHOP</h4>
+        <p>
+          Trung tâm dịch vụ kỹ thuật ô tô chuẩn châu Âu và Studio chăm sóc xe cao cấp. Chúng tôi hoạt động với triết lý chính xác cơ khí tuyệt đối, minh bạch trong quy trình và bảo toàn giá trị cho từng chiếc xe.
+        </p>
+        <div class="footer-badges">
+          <span class="footer-tech-tag">Brembo Official Partner</span>
+          <span class="footer-tech-tag">Hunter Engineering US</span>
+          <span class="footer-tech-tag">Gyeon Certified</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Dịch Vụ Chính</h5>
+        <ul>
+          <li><a href="san-pham.html">Bảo Dưỡng Xe Châu Âu</a></li>
+          <li><a href="san-pham.html">Cân Chỉnh Thước Lái 3D</a></li>
+          <li><a href="san-pham.html">Nâng Cấp Phanh Brembo</a></li>
+          <li><a href="san-pham.html">ECU Remap & Tuning</a></li>
+          <li><a href="san-pham.html">Phủ Ceramic & Dán PPF</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Về Xưởng</h5>
+        <ul>
+          <li><a href="gioi-thieu.html">Cơ Sở Vật Chất</a></li>
+          <li><a href="gioi-thieu.html">Thiết Bị Kiểm Định</a></li>
+          <li><a href="gioi-thieu.html">Đội Ngũ Kỹ Sư</a></li>
+          <li><a href="lien-he.html">Bảng Giá Kỹ Thuật</a></li>
+          <li><a href="lien-he.html">Quy Trình Tiếp Nhận</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Thông Tin Liên Hệ</h5>
+        <ul>
+          <li style="color: #cbd5e1;">📍 128 Đường Số 9, Khu Công Nghệ Kỹ Thuật, TP.HCM</li>
+          <li style="color: #cbd5e1;">📞 Xưởng dịch vụ: 0971.18.3939</li>
+          <li style="color: var(--accent-red); font-weight: 700;">🚨 Hotline cứu hộ 24/7: 0971.18.3939</li>
+          <li style="color: #cbd5e1;">⏰ Giờ mở cửa: 07:30 - 19:30 (Thứ 2 - Chủ Nhật)</li>
+        </ul>
+      </div>
+    </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Website Garage ô tô - web 98. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <div>
+        &copy; 2026 APEX MOTORS WORKSHOP & DETAILING. Bản quyền thiết kế kỹ thuật độc quyền thuộc Thư Viện Theme RackerWeb.
+      </div>
+      <div>
+        Kiến trúc Frontend tĩnh GitHub Pages • Zero Dependency • Tải nhanh 0.4s
+      </div>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
+  <!-- Floating Zalo Contact -->
+  <aside class="floating-zalo">
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Kỹ sư Trưởng Zalo 0971183939">Zalo</a>
+  </aside>
+
   <script src="js/app.js"></script>
 </body>
 </html>

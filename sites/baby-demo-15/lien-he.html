@@ -1,97 +1,275 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liên Hệ & Tư Vấn | Baby demo 15</title>
+  <title>Đặt Lịch Khám Bé & Tư Vấn Bác Sĩ Nhi | PETIT CARE</title>
+  <meta name="description" content="Đăng ký lịch khám và tiêm chủng cho bé tại Phòng khám Petit Care: Giữ phòng khám ưu tiên, miễn phí khám sàng lọc trước tiêm và tư vấn cùng bác sĩ chuyên khoa Nhi.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Navigation back to theme library -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS15</strong>.</span>
+    <span>Giao diện y tế nhi khoa <strong>#MS15</strong> thuộc Thư Viện Theme RackerWeb.</span>
     <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
   </div>
 
+  <!-- Top Clinic Status Bar -->
+  <div class="top-clinic-bar">
+    <div class="clinic-status-left">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span class="clinic-pulse-dot"></span>
+        <span>Phòng Khám Đang Mở Cửa (07:30 - 20:00 Hàng Ngày)</span>
+      </div>
+      <div>🌱 Khu vui chơi vô trùng & Phòng cho mẹ bé riêng biệt</div>
+    </div>
+    <div class="clinic-contact-right">
+      <a href="tel:0971183939" class="clinic-hotline">🚨 Cấp cứu & Tư vấn Nhi khoa: 0971.18.3939</a>
+      <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" style="color: #0284c7; font-weight: 700;">Zalo Bác Sĩ Trực</a>
+    </div>
+  </div>
+
+  <!-- Main Header -->
   <header>
     <div class="header-wrap">
-      <div class="logo">Baby demo 15 <span>MS15</span></div>
+      <a href="index.html" class="logo-container">
+        <div class="logo-icon-emblem">🍼</div>
+        <div class="logo-brand-info">
+          <div class="logo-brand-title">PETIT <span>CARE</span></div>
+          <div class="logo-brand-sub">Pediatrics & Vaccination</div>
+        </div>
+      </a>
+
       <nav>
         <ul>
           <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Sản phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html" class="active">Liên Hệ</a></li>
+          <li><a href="san-pham.html">Gói Tiêm Chủng & Khám</a></li>
+          <li><a href="gioi-thieu.html">Cơ Sở & Bác Sĩ</a></li>
+          <li><a href="lien-he.html" class="active">Đặt Lịch Hẹn</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <button type="button" class="btn-booking-cart">
+          <span>Mũi Tiêm Đã Chọn</span>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+        <a href="lien-he.html" class="btn-appointment">
+          <span>📅 Đặt Lịch Khám Cho Bé</span>
+        </a>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Liên Hệ Tư Vấn & Báo Giá</h1>
-    <p>Chúng tôi luôn sẵn sàng lắng nghe và giải đáp mọi yêu cầu của bạn</p>
+  <!-- Subpage Banner -->
+  <div class="subpage-banner">
+    <h1>Đặt Lịch Khám & Hẹn Tiêm Chủng Cho Bé</h1>
+    <p>Đặt hẹn trước giúp phòng khám chuẩn bị sẵn phòng khám ưu tiên, hồ sơ sức khỏe điện tử và vắc-xin bảo quản đạt chuẩn cho bé mà không cần xếp hàng chờ đợi.</p>
   </div>
 
-  <div class="subpage-content">
-    <div class="contact-grid">
-      <div>
-        <h3>Thông Tin Liên Hệ</h3>
-        <p style="color: #64748b; margin: 1rem 0;">Để nhận báo giá và tư vấn nhanh nhất, vui lòng kết nối trực tiếp qua Zalo hoặc để lại lời nhắn.</p>
-        <p><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p><strong>Thời gian làm việc:</strong> 8:00 - 22:00 hàng ngày</p>
-        <p><strong>Lĩnh vực:</strong> Y tế</p>
+  <main>
+    <div style="max-width: 1300px; margin: 3.5rem auto 5rem; padding: 0 1.5rem; display: grid; grid-template-columns: 1fr 1.15fr; gap: 3.5rem;">
+      <!-- Contact Info Card -->
+      <div style="background: #ffffff; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); padding: 2.5rem; box-shadow: var(--shadow-soft); display: flex; flex-direction: column;">
+        <span class="section-tag">Thông Tin Phòng Khám</span>
+        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--text-main); margin-bottom: 1rem;">
+          Trung Tâm Nhi Khoa Petit Care
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+          Tọa lạc tại khu vực giao thông thuận tiện với bãi đỗ xe ô tô rộng rãi, không gian thoáng đãng và đội ngũ điều dưỡng hỗ trợ bế bé tận tình ngay từ sảnh đón.
+        </p>
+
+        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--primary-light); color: var(--primary-blue); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">📍</div>
+          <div>
+            <h5 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase;">Địa Chỉ Cơ Sở</h5>
+            <p style="font-weight: 700; color: var(--text-main);">45 Phổ Quang, Phường 2, Quận Tân Bình, TP.HCM</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--accent-coral-light); color: var(--accent-coral); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">📞</div>
+          <div>
+            <h5 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase;">Tổng Đài Tiếp Nhận Hẹn</h5>
+            <p><a href="tel:0971183939" style="font-weight: 800; color: var(--accent-coral); font-size: 1.1rem;">0971.18.3939</a> (Hỗ trợ 24/7)</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: #e0f2fe; color: #0284c7; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">💬</div>
+          <div>
+            <h5 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase;">Tư Vấn Zalo Bác Sĩ</h5>
+            <p><a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #0284c7;">Zalo: 0971183939</a></p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: #ecfdf5; color: #10b981; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">⏰</div>
+          <div>
+            <h5 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase;">Thời Gian Phục Vụ</h5>
+            <p style="font-weight: 700; color: var(--text-main);">07:30 - 20:00 (Từ Thứ Hai đến Chủ Nhật)</p>
+          </div>
+        </div>
+
+        <div style="margin-top: auto; padding: 1.25rem; background: #f8fafc; border-radius: 12px; border: 1px solid var(--border-subtle);">
+          <div style="font-weight: 800; color: var(--primary-blue); font-size: 0.88rem; margin-bottom: 0.35rem;">✨ Hướng Dẫn Chuẩn Bị Cho Bé:</div>
+          <ul style="list-style: none; font-size: 0.82rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.35rem;">
+            <li>• Mang theo sổ tiêm chủng hoặc hồ sơ y tế trước đây của bé</li>
+            <li>• Không nên cho bé ăn quá no trước khi tiêm vắc-xin 30 phút</li>
+            <li>• Mặc trang phục thoáng mát, dễ mở để bác sĩ thăm khám nhẹ nhàng</li>
+          </ul>
+        </div>
       </div>
 
-      <div>
-        <form id="site-contact-form">
-          <div class="form-group">
-            <label for="c-name">Họ và tên *</label>
-            <input type="text" id="c-name" required placeholder="Nguyễn Văn A">
+      <!-- Booking Form -->
+      <div style="background: #ffffff; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); padding: 2.5rem; box-shadow: var(--shadow-soft);">
+        <span class="section-tag">Phiếu Hẹn Trực Tuyến</span>
+        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">
+          Đăng Ký Khám Cho Bé
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 2rem;">
+          Ba mẹ vui lòng điền thông tin để nhân viên y tế chuẩn bị phòng và gọi điện xác nhận trong 10 phút.
+        </p>
+
+        <form id="petit-booking-form">
+          <div class="form-input-grid">
+            <div>
+              <label class="input-label" for="parent-name">Họ và tên Ba/Mẹ *</label>
+              <input type="text" id="parent-name" class="input-field" placeholder="Nguyễn Thị Mai" required>
+            </div>
+            <div>
+              <label class="input-label" for="parent-phone">Số điện thoại / Zalo *</label>
+              <input type="tel" id="parent-phone" class="input-field" placeholder="0912 345 678" required>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="c-phone">Số điện thoại / Zalo *</label>
-            <input type="tel" id="c-phone" required placeholder="09xxxxxxxx">
+
+          <div class="form-input-grid">
+            <div>
+              <label class="input-label" for="baby-name">Họ và tên của bé *</label>
+              <input type="text" id="baby-name" class="input-field" placeholder="Bé Nguyễn Minh Khang" required>
+            </div>
+            <div>
+              <label class="input-label" for="baby-age">Tháng tuổi / Ngày sinh của bé *</label>
+              <input type="text" id="baby-age" class="input-field" placeholder="VD: 4 tháng hoặc 15/05/2026" required>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="c-msg">Nhu cầu tư vấn *</label>
-            <textarea id="c-msg" rows="4" required placeholder="Nhu cầu chi tiết..."></textarea>
+
+          <div style="margin-bottom: 1.25rem;">
+            <label class="input-label" for="book-service">Gói dịch vụ hoặc Mũi tiêm cần thực hiện *</label>
+            <select id="book-service" class="input-field" required>
+              <option value="">-- Vui lòng chọn gói khám / mũi tiêm --</option>
+              <option value="Khám Nhi Tổng Quát">Khám Nhi tổng quát (Hô hấp, Tiêu hóa, Tai mũi họng)</option>
+              <option value="Gói Khám Sơ Sinh Toàn Diện">Gói khám đánh giá sức khỏe toàn diện sơ sinh</option>
+              <option value="Tiêm vắc-xin 6 trong 1">Tiêm vắc-xin 6 trong 1 (Hexaxim / Infanrix)</option>
+              <option value="Tiêm vắc-xin Phế Cầu">Tiêm vắc-xin Phế cầu khuẩn (Synflorix / Prevenar 13)</option>
+              <option value="Uống vắc-xin Rota Virus">Uống vắc-xin phòng tiêu chảy cấp Rota virus</option>
+              <option value="Gói Tiêm Chủng Trọn Gói 0-12 Tháng">Gói tiêm chủng trọn gói năm đầu đời (0 - 12 tháng)</option>
+              <option value="Gói Tiêm Chủng Trọn Gói 0-24 Tháng">Gói tiêm chủng trọn gói toàn diện (0 - 24 tháng)</option>
+              <option value="Tư Vấn Dinh Dưỡng & Biếng Ăn">Khám & Tư vấn dinh dưỡng, biếng ăn, còi xương</option>
+              <option value="Đánh Giá Tâm Vận Động & Chậm Nói">Đánh giá mốc phát triển tâm vận động & Chậm nói</option>
+              <option value="Khác">Yêu cầu thăm khám hoặc mũi tiêm khác</option>
+            </select>
           </div>
-          <button type="submit" class="btn-primary" style="width: 100%;">Gửi Yêu Cầu Tư Vấn</button>
+
+          <div style="margin-bottom: 1.25rem;">
+            <label class="input-label" for="book-doctor">Bác sĩ Nhi phụ trách (Không bắt buộc)</label>
+            <select id="book-doctor" class="input-field">
+              <option value="any">Bác sĩ trực ca tiếp nhận sớm nhất</option>
+              <option value="HoangYen">TS. BS. Trần Hoàng Yến (Sơ sinh & Dị ứng Miễn dịch)</option>
+              <option value="MinhQuan">ThS. BS. Lê Minh Quân (Hô hấp & Tiêm chủng)</option>
+            </select>
+          </div>
+
+          <div class="form-input-grid">
+            <div>
+              <label class="input-label" for="book-date">Ngày mong muốn đến khám *</label>
+              <input type="date" id="book-date" class="input-field" required>
+            </div>
+            <div>
+              <label class="input-label" for="book-time">Khung giờ thuận tiện</label>
+              <select id="book-time" class="input-field">
+                <option value="08:00 - 09:30">08:00 - 09:30 (Buổi sáng sớm)</option>
+                <option value="09:30 - 11:30">09:30 - 11:30 (Giữa buổi sáng)</option>
+                <option value="14:00 - 16:30">14:00 - 16:30 (Đầu giờ chiều)</option>
+                <option value="16:30 - 19:30">16:30 - 19:30 (Chiều tối sau giờ làm)</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <label class="input-label" for="baby-notes">Triệu chứng của bé hiện tại (nếu có)</label>
+            <textarea id="baby-notes" class="input-field" rows="3" placeholder="VD: Bé sốt nhẹ 38 độ từ tối qua, bú kém, hay quấy khóc khi nằm..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-hero-primary" style="width: 100%; justify-content: center; border: none; cursor: pointer; padding: 0.95rem;">
+            <span>💖 Xác Nhận Đăng Ký Lịch Khám Cho Bé</span>
+          </button>
         </form>
       </div>
     </div>
-  </div>
+  </main>
 
-  
+  <!-- Comforting Clinic Footer -->
   <footer>
     <div class="footer-wrap">
-      <div>
-        <h3>Baby demo 15</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Y tế. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+      <div class="footer-brand">
+        <h4>PETIT CARE PEDIATRICS CLINIC</h4>
+        <p>
+          Hệ thống phòng khám chuyên khoa Nhi & Trung tâm Tiêm chủng Quốc tế. Cam kết đồng hành cùng ba mẹ trên hành trình chăm sóc những thiên thần nhỏ lớn khôn khỏe mạnh và tràn đầy hạnh phúc.
+        </p>
+        <div style="font-size: 0.82rem; color: #64748b;">
+          Giấy phép hoạt động khám chữa bệnh số: 08425/HCM-GPHĐ cấp bởi Sở Y Tế TP.HCM.
+        </div>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Sản phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+
+      <div class="footer-col">
+        <h5>Chuyên Khoa Nhi</h5>
+        <ul>
+          <li><a href="san-pham.html">Khám Sơ Sinh & Nhũ Nhi</a></li>
+          <li><a href="san-pham.html">Gói Tiêm Chủng 0 - 2 Tuổi</a></li>
+          <li><a href="san-pham.html">Khám Hô Hấp & Dị Ứng</a></li>
+          <li><a href="san-pham.html">Tư Vấn Dinh Dưỡng</a></li>
+          <li><a href="san-pham.html">Đo Chỉ Số Tăng Trưởng</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col">
+        <h5>Về Phòng Khám</h5>
+        <ul>
+          <li><a href="gioi-thieu.html">Cơ Sở Vật Chất</a></li>
+          <li><a href="gioi-thieu.html">Quy Trình Tiêm Chủng</a></li>
+          <li><a href="gioi-thieu.html">Đội Ngũ Bác Sĩ</a></li>
+          <li><a href="lien-he.html">Bảng Giá Dịch Vụ</a></li>
+          <li><a href="lien-he.html">Chính Sách Hoàn Mũi Tiêm</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Thông Tin Liên Hệ</h5>
+        <ul>
+          <li>📍 45 Phổ Quang, Phường 2, Tân Bình, TP.HCM</li>
+          <li>📞 Tổng đài đặt lịch: 0971.18.3939</li>
+          <li>🚨 Hotline khẩn cấp 24/7: 0971.18.3939</li>
+          <li>⏰ Giờ làm việc: 07:30 - 20:00 (Cả Thứ Bảy & Chủ Nhật)</li>
+        </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Baby demo 15. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <div>
+        &copy; 2026 PETIT CARE CLINIC & PEDIATRICS. Bản quyền thiết kế y tế độc quyền thuộc Thư Viện Theme RackerWeb.
+      </div>
+      <div>
+        Kiến trúc Frontend tĩnh GitHub Pages • Tải nhanh & Bảo mật cao
+      </div>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
+  <!-- Floating Zalo -->
+  <aside class="floating-zalo">
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Bác sĩ Nhi Zalo 0971183939">Zalo</a>
+  </aside>
+
   <script src="js/app.js"></script>
 </body>
 </html>

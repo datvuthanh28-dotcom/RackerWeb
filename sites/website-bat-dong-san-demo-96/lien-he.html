@@ -1,97 +1,261 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liên Hệ & Tư Vấn | Website bất động sản - demo 96</title>
+  <title>Liên Hệ & Đặt Hẹn Private Client | Premier Realty Vietnam #MS96</title>
+  <meta name="description" content="Liên hệ đặt lịch hẹn tư vấn kín cùng Giám đốc Khối Khách hàng Thượng lưu tại Premier Realty Vietnam. Trực tiếp trao đổi cơ hội đầu tư và nhận báo cáo tài chính bảo mật.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS96</strong>.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
-  </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">Website bất động sản - demo 96 <span>MS96</span></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Dự án</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html" class="active">Liên Hệ</a></li>
-        </ul>
+  <!-- Top Return Bar -->
+  <aside class="library-return-bar">
+    <span>Giao diện mẫu <strong>#MS96 · Bất Động Sản Thượng Lưu & Quản Lý Tài Sản</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">&larr; Quay lại danh mục thư viện</a>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-mark">
+        <div class="brand-icon">PR</div>
+        <div class="brand-text">
+          <h1>PREMIER REALTY</h1>
+          <p>Vietnam Private Wealth</p>
+        </div>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Trang Chủ</a>
+        <a href="san-pham.html" class="nav-link">Dự Án Độc Quyền</a>
+        <a href="index.html#calculator" class="nav-link">Tính Khoản Vay</a>
+        <a href="gioi-thieu.html" class="nav-link">Về Chúng Tôi</a>
+        <a href="lien-he.html" class="nav-link active">Liên Hệ</a>
       </nav>
-      <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="header-right">
+        <button type="button" class="saved-pill-btn" id="btn-open-portfolio">
+          <span>Quan Tâm</span>
+          <span class="saved-badge" id="saved-count">0</span>
+        </button>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-vip-consult">
+          Tư Vấn VIP
+        </a>
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Liên Hệ Tư Vấn & Báo Giá</h1>
-    <p>Chúng tôi luôn sẵn sàng lắng nghe và giải đáp mọi yêu cầu của bạn</p>
+  <!-- Mobile Navigation Panel -->
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <button type="button" id="mobile-nav-close" style="align-self:flex-end;font-size:1.8rem;color:var(--pearl);margin-bottom:1.5rem;">&times;</button>
+    <a href="index.html">Trang Chủ</a>
+    <a href="san-pham.html">Dự Án Độc Quyền</a>
+    <a href="index.html#calculator">Công Cụ Tính Vay</a>
+    <a href="gioi-thieu.html">Về Premier Realty</a>
+    <a href="lien-he.html" class="active">Liên Hệ & Đặt Hẹn</a>
   </div>
 
-  <div class="subpage-content">
-    <div class="contact-grid">
-      <div>
-        <h3>Thông Tin Liên Hệ</h3>
-        <p style="color: #64748b; margin: 1rem 0;">Để nhận báo giá và tư vấn nhanh nhất, vui lòng kết nối trực tiếp qua Zalo hoặc để lại lời nhắn.</p>
-        <p><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p><strong>Thời gian làm việc:</strong> 8:00 - 22:00 hàng ngày</p>
-        <p><strong>Lĩnh vực:</strong> Bất động sản</p>
+  <!-- Portfolio Drawer -->
+  <div class="portfolio-overlay" id="portfolio-overlay"></div>
+  <aside class="portfolio-drawer" id="portfolio-drawer">
+    <div class="drawer-head">
+      <h3>Dự Án Đang Quan Tâm</h3>
+      <button type="button" class="btn-close-drawer" id="btn-close-drawer">&times;</button>
+    </div>
+    <div class="drawer-items" id="drawer-items"></div>
+    <div class="drawer-footer">
+      <button type="button" class="btn-send-zalo-dossier" id="btn-send-zalo-dossier">
+        Gửi Danh Mục Nhận Hồ Sơ Mật (Zalo)
+      </button>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Banner -->
+    <section style="background: radial-gradient(circle at 50% 30%, rgba(196,154,98,0.15), transparent 60%), linear-gradient(180deg, var(--navy-dark) 0%, var(--navy-slate) 100%); padding: 5.5rem 2rem 4rem; text-align: center; border-bottom: 1px solid var(--navy-border);">
+      <div style="max-width: 860px; margin: 0 auto;">
+        <div style="font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--bronze); font-weight: 600; margin-bottom: 0.75rem;">
+          Private Client Services
+        </div>
+        <h1 style="font-family: var(--font-serif); font-size: clamp(2.2rem, 4.5vw, 3.4rem); color: var(--pearl); margin-bottom: 1.25rem; line-height: 1.2;">
+          Liên Hệ & Tiếp Đón Riêng Tư
+        </h1>
+        <p style="color: var(--pearl-muted); font-size: 1.05rem; line-height: 1.8;">
+          Các cuộc gặp gỡ tư vấn chiến lược danh mục đầu tư đều được tổ chức tại Private Client Lounge sang trọng hoặc không gian bảo mật do Quý khách chỉ định.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact & Consultation Layout -->
+    <section class="section-wrapper" style="padding-top: 4.5rem;">
+      <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem;">
+        <!-- Left: Info -->
+        <div>
+          <div class="section-eyebrow">Địa Điểm Tiếp Đón</div>
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--pearl); margin-bottom: 1.5rem; line-height: 1.3;">
+            Private Wealth Lounge
+          </h2>
+          <p style="color: var(--pearl-muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 2rem;">
+            Không gian đàm phán biệt lập trên tầng cao nhất của tòa tháp biểu tượng, trang bị sa bàn quy hoạch 3D tương tác và hệ thống phòng họp chuẩn hội đồng quản trị quốc tế.
+          </p>
+
+          <div style="display:flex;flex-direction:column;gap:1.5rem;font-size:0.92rem;">
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <div style="color:var(--bronze-light);font-size:1.2rem;line-height:1;">📍</div>
+              <div>
+                <strong style="color:var(--pearl);display:block;margin-bottom:0.25rem;">Trụ Sở Private Lounge:</strong>
+                <span style="color:var(--pearl-muted);">Tầng 36, Tòa nhà Landmark 81, Vinhomes Central Park, 720A Điện Biên Phủ, TP. Hồ Chí Minh</span>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <div style="color:var(--bronze-light);font-size:1.2rem;line-height:1;">📞</div>
+              <div>
+                <strong style="color:var(--pearl);display:block;margin-bottom:0.25rem;">Hotline Tư Vấn Cấp Cao (24/7):</strong>
+                <span style="color:var(--bronze-light);font-weight:700;font-size:1.1rem;">0971 183 939</span>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <div style="color:var(--bronze-light);font-size:1.2rem;line-height:1;">💬</div>
+              <div>
+                <strong style="color:var(--pearl);display:block;margin-bottom:0.25rem;">Kênh Trực Tuyến Zalo Official:</strong>
+                <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" style="color:var(--bronze);font-weight:600;">zalo.me/0971183939</a>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <div style="color:var(--bronze-light);font-size:1.2rem;line-height:1;">🕒</div>
+              <div>
+                <strong style="color:var(--pearl);display:block;margin-bottom:0.25rem;">Thời Gian Phục Vụ:</strong>
+                <span style="color:var(--pearl-muted);">08:30 – 21:00 (Từ Thứ Hai đến Chủ Nhật. Ngoài giờ theo lịch hẹn VIP riêng)</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:var(--navy-card);border:1px solid var(--navy-border);border-radius:8px;padding:1.5rem;margin-top:2.5rem;">
+            <h4 style="font-size:0.9rem;color:var(--bronze-light);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.06em;">
+              Cam Kết Bảo Mật Thông Tin (NDA)
+            </h4>
+            <p style="font-size:0.82rem;color:var(--pearl-muted);line-height:1.7;">
+              Mọi dữ liệu cá nhân, kế hoạch tài chính và nhu cầu mua sắm bất động sản của Quý khách được bảo vệ theo thỏa thuận bảo mật nghiêm ngặt và không bao giờ chia sẻ cho bất kỳ bên thứ ba nào.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div style="background: var(--navy-card); border: 1px solid var(--navy-border); border-radius: 12px; padding: 3rem 2.5rem; box-shadow: var(--shadow-lux);">
+          <div style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bronze); font-weight: 600; margin-bottom: 0.5rem;">
+            Bảo Mật • Chuyên Sâu • Độc Quyền
+          </div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--pearl); margin-bottom: 1.5rem;">
+            Yêu Cầu Cuộc Hẹn Tư Vấn Riêng
+          </h3>
+
+          <form id="contact-vip-form">
+            <div class="form-row-2">
+              <div class="form-field">
+                <label for="contact-name">Họ & Tên Quý Khách</label>
+                <input type="text" id="contact-name" placeholder="Nguyễn Văn A" required>
+              </div>
+              <div class="form-field">
+                <label for="contact-phone">Số Điện Thoại / Zalo</label>
+                <input type="tel" id="contact-phone" placeholder="0908 xxx xxx" required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-field">
+                <label for="contact-segment">Phân Khúc Quan Tâm</label>
+                <select id="contact-segment">
+                  <option value="Dinh thự ven sông">Dinh thự ven sông (Từ 45 Tỷ)</option>
+                  <option value="Sky Penthouse & Duplex">Sky Penthouse & Duplex (Từ 25 Tỷ)</option>
+                  <option value="Shophouse đại lộ thương mại">Shophouse thương mại (Từ 20 Tỷ)</option>
+                  <option value="Căn hộ hàng hiệu 3PN">Căn hộ hàng hiệu 3PN (Từ 10 Tỷ)</option>
+                  <option value="Quỹ đầu tư BĐS">Quỹ ủy thác BĐS & Cố vấn dòng tiền</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="contact-location">Địa Điểm Gặp Gỡ Ưu Tiên</label>
+                <select id="contact-location">
+                  <option value="Landmark 81 Private Lounge">Tại Landmark 81 Private Lounge</option>
+                  <option value="Văn phòng riêng của Quý khách">Tại văn phòng riêng của Quý khách</option>
+                  <option value="Khách sạn 5 sao trung tâm">Tại khách sạn 5 sao (Park Hyatt/Caravelle)</option>
+                  <option value="Trực tiếp tại dự án (xe Maybach đưa đón)">Trực tiếp tại dự án (xe Maybach đón)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-notes">Nhu Cầu Chi Tiết Hoặc Yêu Cầu Bảo Mật</label>
+              <textarea id="contact-notes" rows="3" placeholder="Ví dụ: Cần tìm dinh thự ven sông hướng Đông Nam, ngân sách 50-70 tỷ, có thể ký thỏa thuận NDA trước khi trao đổi..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-tour" style="margin-top: 1rem;">
+              Gửi Yêu Cầu Tiếp Đón Kín Đáo
+            </button>
+            <p style="text-align: center; font-size: 0.75rem; color: var(--pearl-muted); margin-top: 1rem;">
+              Giám đốc Khối Khách hàng Thượng lưu sẽ liên hệ xác nhận trực tiếp trong vòng 15 phút.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Zalo Concierge -->
+  <aside class="floating-concierge">
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-float-zalo" title="Liên hệ chuyên viên Zalo 0971183939">
+      Zalo
+    </a>
+  </aside>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="brand-mark" style="margin-bottom: 1.25rem;">
+          <div class="brand-icon">PR</div>
+          <div class="brand-text">
+            <h3 style="font-family:var(--font-serif);font-size:1.2rem;color:var(--pearl);">PREMIER REALTY</h3>
+            <p style="font-size:0.65rem;color:var(--bronze);">Vietnam Private Wealth</p>
+          </div>
+        </div>
+        <p>Định chế môi giới và cố vấn đầu tư bất động sản triệu đô tại Việt Nam. Đồng hành cùng nhà đầu tư kiến tạo danh mục tài sản truyền đời an toàn và bền vững.</p>
       </div>
 
-      <div>
-        <form id="site-contact-form">
-          <div class="form-group">
-            <label for="c-name">Họ và tên *</label>
-            <input type="text" id="c-name" required placeholder="Nguyễn Văn A">
-          </div>
-          <div class="form-group">
-            <label for="c-phone">Số điện thoại / Zalo *</label>
-            <input type="tel" id="c-phone" required placeholder="09xxxxxxxx">
-          </div>
-          <div class="form-group">
-            <label for="c-msg">Nhu cầu tư vấn *</label>
-            <textarea id="c-msg" rows="4" required placeholder="Nhu cầu chi tiết..."></textarea>
-          </div>
-          <button type="submit" class="btn-primary" style="width: 100%;">Gửi Yêu Cầu Tư Vấn</button>
-        </form>
+      <div class="footer-col">
+        <h4>Phân Khúc Bất Động Sản</h4>
+        <a href="san-pham.html">Dinh Thự Ven Sông Thảo Điền</a>
+        <a href="san-pham.html">Penthouse & Sky Villa Thủ Thiêm</a>
+        <a href="san-pham.html">Shophouse Đại Lộ Thương Mại</a>
+        <a href="san-pham.html">Căn Hộ Hàng Hiệu Branded Residence</a>
       </div>
-    </div>
-  </div>
 
-  
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Website bất động sản - demo 96</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Bất động sản. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+      <div class="footer-col">
+        <h4>Dịch Vụ Cố Vấn</h4>
+        <a href="index.html#calculator">Thẩm Định & Định Giá BĐS</a>
+        <a href="index.html#calculator">Báo Cáo Dòng Tiền & Khoản Vay</a>
+        <a href="gioi-thieu.html">Cố Vấn Chuyển Nhượng Kín (Off-market)</a>
+        <a href="lien-he.html">Quản Lý & Vận Hành Khai Thác Thuê</a>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Dự án</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col">
+        <h4>Private Client Lounge</h4>
+        <p>✦ Tầng 36, Landmark 81, Vinhomes Central Park, TP. HCM</p>
+        <p>✦ Hotline Tư Vấn: <strong style="color:var(--bronze-light);">0971 183 939</strong></p>
+        <p>✦ Giờ phục vụ: 08:30 – 21:00 (Hàng ngày)</p>
       </div>
     </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Website bất động sản - demo 96. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <div>&copy; 2026 Premier Realty Vietnam. Giao diện mẫu độc quyền #MS96 — Thư Viện Theme RackerWeb.</div>
+      <div>Pháp lý minh bạch • Bảo mật danh tính khách hàng VIP</div>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
   <script src="js/app.js"></script>
 </body>
 </html>

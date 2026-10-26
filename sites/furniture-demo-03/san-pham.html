@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bộ Sưu Tập Nội Thất — NORDIC LIVING (#MS03)</title>
-  <meta name="description" content="Danh mục đầy đủ nội thất Scandinavian: Sofa bọc vải lanh, bàn ăn gỗ sồi tự nhiên, giường ngủ tối giản và bàn làm việc thông minh. Nhận may đo kích thước riêng.">
+  <title>Bộ Sưu Tập Nội Thất May Đo — NORDIC LIVING (#MS03)</title>
+  <meta name="description" content="Danh mục đầy đủ nội thất Bắc Âu Scandinavian: Sofa bọc vải lanh Astrid, bàn ăn mở rộng Oslo, giường ngủ platform gỗ sồi và bàn làm việc nâng hạ thông minh.">
   <link rel="stylesheet" href="css/style.css">
   <style>
     .catalog-hero {
-      background: linear-gradient(180deg, rgba(20,20,20,0.8) 0%, rgba(20,20,20,0.95) 100%),
+      background: linear-gradient(180deg, rgba(18,18,18,0.85) 0%, rgba(18,18,18,0.96) 100%),
                   url('assets/images/hero.jpg') center/cover no-repeat;
-      padding: 5.5rem 1.5rem 3.5rem;
+      padding: 5.5rem 1.5rem 4rem;
       text-align: center;
       color: #fff;
     }
@@ -18,12 +18,14 @@
       font-size: clamp(2.2rem, 4.5vw, 3.5rem);
       font-weight: 800;
       margin-bottom: 0.8rem;
+      letter-spacing: -0.01em;
     }
     .catalog-hero p {
-      color: #b8b4ad;
+      color: #dfc8af;
       max-width: 650px;
       margin: 0 auto;
       font-size: 1.05rem;
+      line-height: 1.7;
     }
     .catalog-section-group {
       margin-bottom: 4.5rem;
@@ -55,30 +57,43 @@
     <a href="../../index.html">← Quay lại danh mục thư viện</a>
   </div>
 
+  <!-- Top Architectural Coordinate Strip -->
+  <div class="header-top-coord">
+    <div class="header-top-coord-inner">
+      <span>NORDIC LIVING ATELIER · KHÔNG GIAN BẮC ÂU THUẦN KHIẾT · XƯỞNG MAY ĐO THỦ ĐỨC 2.000M²</span>
+      <div>
+        <span>Hotline KTS: <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer">0971 183 939</a> · Mở cửa: 08:30 – 21:00</span>
+      </div>
+    </div>
+  </div>
+
   <!-- Header -->
   <header id="site-header">
     <div class="header-inner">
-      <a href="index.html" class="brand-logo">
-        <span class="brand-title">NORDIC LIVING</span>
-        <span class="brand-subtitle">Scandinavian Interior</span>
-      </a>
+      <div class="brand-group">
+        <a href="index.html" class="brand-monogram" title="Nordic Living Atelier">NL</a>
+        <a href="index.html" class="brand-titles">
+          <span class="brand-title">NORDIC LIVING</span>
+          <span class="brand-subtitle">Scandinavian Atelier & Craft</span>
+        </a>
+      </div>
 
       <nav class="main-nav">
-        <a href="index.html">Trang Chủ</a>
-        <a href="san-pham.html" class="active">Bộ Sưu Tập</a>
-        <a href="index.html#may-do">May Đo Thiết Kế</a>
-        <a href="gioi-thieu.html">Về Chúng Tôi</a>
-        <a href="index.html#bao-gia">Báo Giá</a>
+        <a href="index.html"><span class="nav-num">←</span> Trang Chủ</a>
+        <a href="san-pham.html" class="active"><span class="nav-num">01/</span> Bộ Sưu Tập</a>
+        <a href="index.html#xuong-moc"><span class="nav-num">02/</span> Xưởng Mộc</a>
+        <a href="index.html#may-do"><span class="nav-num">03/</span> May Đo Căn Hộ</a>
+        <a href="gioi-thieu.html">Triết Lý Hygge</a>
         <a href="lien-he.html">Showroom</a>
       </nav>
 
       <div class="header-cta-group">
-        <button type="button" class="btn-cart-toggle" onclick="location.href='index.html#bao-gia'">
-          <span>Yêu Cầu Báo Giá</span>
-          (<span id="cart-count">0</span>)
+        <button type="button" class="btn-quote-basket" onclick="location.href='index.html#may-do'" title="Bảng dự toán nội thất">
+          <span>📋 Dự Toán</span>
+          <span class="basket-count" id="cart-count">0</span>
         </button>
         <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-consult-nav">
-          Tư Vấn Zalo
+          <span>Chat KTS Trưởng</span>
         </a>
         <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Mở menu">&#9776;</button>
       </div>
@@ -89,20 +104,25 @@
   <div class="drawer-backdrop" id="drawer-backdrop"></div>
   <aside class="mobile-nav-drawer" id="mobile-drawer">
     <button class="mobile-nav-close" id="mobile-close" aria-label="Đóng menu">✕</button>
-    <a href="index.html">Trang Chủ</a>
-    <a href="san-pham.html" class="active">Bộ Sưu Tập Nội Thất</a>
-    <a href="index.html#may-do">Dịch Vụ May Đo Căn Hộ</a>
-    <a href="gioi-thieu.html">Câu Chuyện Nordic Living</a>
-    <a href="index.html#bao-gia">Nhận Báo Giá Dự Án</a>
-    <a href="lien-he.html">Hệ Thống Showroom</a>
+    <a href="index.html">Trang Chủ Atelier</a>
+    <a href="san-pham.html" class="active">Bộ Sưu Tập Nội Thất (Full Catalog)</a>
+    <a href="index.html#khong-gian">Không Gian Phòng Khách</a>
+    <a href="index.html#xuong-moc">Xưởng Mộc Thủ Đức 2.000m²</a>
+    <a href="index.html#may-do">Công Cụ May Đo & Dự Toán Căn Hộ</a>
+    <a href="gioi-thieu.html">Triết Lý Thiết Kế Hygge</a>
+    <a href="lien-he.html">Hệ Thống Showroom & Đặt Lịch Đo</a>
+    <div style="margin-top:auto; font-size:0.85rem; color:var(--text-muted); border-top:1px solid var(--border-subtle); padding-top:1rem;">
+      <p>KTS Trưởng: <strong style="color:var(--nordic-black);">0971 183 939</strong></p>
+      <p>Showroom: 88 Song Hành, An Phú, Thủ Đức</p>
+    </div>
   </aside>
 
   <main>
     <section class="catalog-hero">
-      <div class="container">
-        <span class="hero-tag" style="color:var(--oak-light);">Full Catalog 2026</span>
-        <h1>Bộ Sưu Tập Nội Thất Tối Giản</h1>
-        <p>Tất cả sản phẩm đều được hoàn thiện từ gỗ tự nhiên nhập khẩu có chứng nhận nguồn gốc bền vững FSC và da bò/vải lanh hữu cơ.</p>
+      <div style="max-width:1360px; margin:0 auto;">
+        <span class="hero-editorial-tag" style="background:rgba(255,255,255,0.1); color:#fff; border-color:var(--oak-gold);">Full Atelier Catalog 2026</span>
+        <h1>Bộ Sưu Tập Nội Thất Bắc Âu May Đo</h1>
+        <p>100% gỗ tự nhiên nhập khẩu có chứng nhận nguồn gốc bền vững FSC, sơn dầu lau thực vật Osmo an toàn sức khỏe và tùy biến kích thước chuẩn xác theo từng bản vẽ căn hộ.</p>
       </div>
     </section>
 
@@ -110,187 +130,265 @@
       <!-- Group 1: Phòng Khách -->
       <div class="catalog-section-group">
         <div class="group-title-strip">
-          <h2>01. Không Gian Phòng Khách</h2>
+          <h2>01. Không Gian Phòng Khách (Living Room)</h2>
           <div class="group-line"></div>
         </div>
         <div class="furniture-grid">
           <div class="furniture-card">
             <div class="furniture-image-box">
               <span class="furniture-badge">Sản phẩm cốt lõi</span>
-              <img src="assets/images/hero.jpg" alt="Sofa góc Astrid">
+              <img src="assets/images/sofa-astrid.jpg" alt="Sofa Góc L Astrid">
             </div>
             <div class="furniture-body">
               <span class="furniture-category">Sofa Phòng Khách</span>
-              <h3 class="furniture-name">Sofa Góc L Vải Lanh Thô Astrid</h3>
+              <h3 class="furniture-name">Sofa Băng Thẳng Vải Velvet Astrid</h3>
               <div class="furniture-specs">
-                <span class="spec-pill">260 x 165 x 85 cm</span>
+                <span class="spec-pill">220 x 95 x 82 cm</span>
                 <span class="spec-pill">Gỗ sồi trắng tự nhiên</span>
-                <span class="spec-pill">Vải lanh nhập khẩu Bỉ</span>
+                <span class="spec-pill">Đệm D40 đàn hồi cao</span>
               </div>
-              <p class="furniture-desc">Khung gỗ sồi đã qua tẩm sấy chống mối mọt. Nệm mút nguyên khối đàn hồi cao kèm gối tựa nhồi lông vũ êm dịu.</p>
+              <p class="furniture-desc">Khung gỗ sồi đã qua tẩm sấy chống cong vênh. Đệm mút nguyên khối đàn hồi cao kèm gối tựa tròn nhồi lông vũ êm dịu, bảo hành khung 5 năm.</p>
               <div class="furniture-footer">
                 <span class="furniture-price">18.500.000đ</span>
-                <button class="btn-add-quote" onclick="addToQuoteCart('Sofa Astrid Góc L', '18.500.000đ')">+ Báo giá</button>
+                <button type="button" class="btn-add-quote" onclick="addToQuoteCart('Sofa Vải Astrid', '18.500.000đ')">+ Báo Giá</button>
               </div>
             </div>
           </div>
 
           <div class="furniture-card">
             <div class="furniture-image-box">
-              <span class="furniture-badge">Thiết kế độc bản</span>
-              <img src="assets/images/hero.jpg" alt="Bàn trà Noguchi Style">
+              <span class="furniture-badge">Iconic Design</span>
+              <img src="assets/images/chair-bergen.jpg" alt="Ghế Thư Giãn Bergen">
+            </div>
+            <div class="furniture-body">
+              <span class="furniture-category">Ghế Thư Giãn</span>
+              <h3 class="furniture-name">Ghế Đơn Thư Giãn Accent Bergen</h3>
+              <div class="furniture-specs">
+                <span class="spec-pill">Góc nghiêng 105° chuẩn công thái học</span>
+                <span class="spec-pill">Chân gỗ sồi thon tròn</span>
+                <span class="spec-pill">Vải dệt thô cao cấp</span>
+              </div>
+              <p class="furniture-desc">Nâng đỡ hoàn hảo cột sống và cổ vai gáy khi thư giãn đọc sách. Gam màu vàng mù tạt tạo điểm nhấn ấm áp, bừng sáng không gian phòng khách.</p>
+              <div class="furniture-footer">
+                <span class="furniture-price">7.900.000đ</span>
+                <button type="button" class="btn-add-quote" onclick="addToQuoteCart('Ghế Bergen Accent', '7.900.000đ')">+ Báo Giá</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="furniture-card">
+            <div class="furniture-image-box">
+              <span class="furniture-badge">Mặt Đá Tự Nhiên</span>
+              <img src="assets/images/table-oslo.jpg" alt="Bàn Trà Freja">
             </div>
             <div class="furniture-body">
               <span class="furniture-category">Bàn Trà Sofa</span>
-              <h3 class="furniture-name">Bàn Trà Đôi Mặt Đá Terrazzo Freja</h3>
+              <h3 class="furniture-name">Bàn Trà Bầu Dục Mặt Đá Terrazzo Freja</h3>
               <div class="furniture-specs">
-                <span class="spec-pill">Đường kính D70 + D50 cm</span>
-                <span class="spec-pill">Mặt đá thạch anh tự nhiên</span>
-                <span class="spec-pill">Chân gỗ sồi tiện tròn</span>
+                <span class="spec-pill">120 x 70 x 42 cm</span>
+                <span class="spec-pill">Đá thạch anh cẩm thạch</span>
+                <span class="spec-pill">Khung gỗ sồi bo tròn</span>
               </div>
-              <p class="furniture-desc">Thiết kế bàn lồng thông minh tiết kiệm diện tích. Mặt đá Terrazzo chịu lực và chống ố nước chè hay cà phê hiệu quả.</p>
+              <p class="furniture-desc">Đường cong vát mép an toàn tuyệt đối cho trẻ nhỏ. Mặt đá tự nhiên có khả năng chống thấm nước trà, cà phê và chịu nhiệt cực tốt.</p>
               <div class="furniture-footer">
                 <span class="furniture-price">5.600.000đ</span>
-                <button class="btn-add-quote" onclick="addToQuoteCart('Bàn Trà Đôi Freja', '5.600.000đ')">+ Báo giá</button>
+                <button type="button" class="btn-add-quote" onclick="addToQuoteCart('Bàn Trà Freja', '5.600.000đ')">+ Báo Giá</button>
               </div>
             </div>
           </div>
 
           <div class="furniture-card">
             <div class="furniture-image-box">
-              <span class="furniture-badge">Best Seller</span>
-              <img src="assets/images/hero.jpg" alt="Kệ TV treo tường">
+              <span class="furniture-badge">Treo Tường Tinh Gọn</span>
+              <img src="assets/images/sideboard-oak.jpg" alt="Kệ TV Copenhagen">
             </div>
             <div class="furniture-body">
-              <span class="furniture-category">Kệ TV & Lưu Trữ</span>
-              <h3 class="furniture-name">Kệ TV Gỗ Sồi Nan Hở Copenhagen</h3>
+              <span class="furniture-category">Kệ TV & Console</span>
+              <h3 class="furniture-name">Kệ Console Treo Tường Copenhagen</h3>
               <div class="furniture-specs">
-                <span class="spec-pill">Dài 200 x Sâu 40 x Cao 45 cm</span>
-                <span class="spec-pill">Nan gỗ thoáng tín hiệu remote</span>
-                <span class="spec-pill">Bản lề giảm chấn Blum</span>
+                <span class="spec-pill">180 - 220 cm (Tùy biến)</span>
+                <span class="spec-pill">Ray âm giảm chấn Blum</span>
+                <span class="spec-pill">Gỗ sồi nguyên khối</span>
               </div>
-              <p class="furniture-desc">Mặt trước xẻ nan dọc tinh xảo tạo cảm giác nhẹ nhàng, thông thoáng. Ngăn kéo chia ô rộng rãi cho dàn âm thanh và máy chơi game.</p>
+              <p class="furniture-desc">Hệ console treo tường giấu dây điện thông minh, mặt phẳng gỗ sồi tự nhiên với đường vân sắc sảo, tạo cảm giác rộng rãi cho sàn căn hộ.</p>
               <div class="furniture-footer">
                 <span class="furniture-price">9.200.000đ</span>
-                <button class="btn-add-quote" onclick="addToQuoteCart('Kệ TV Copenhagen', '9.200.000đ')">+ Báo giá</button>
+                <button type="button" class="btn-add-quote" onclick="addToQuoteCart('Kệ TV Copenhagen', '9.200.000đ')">+ Báo Giá</button>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Group 2: Phòng Bếp & Bàn Ăn -->
+      <!-- Group 2: Bếp & Bàn Ăn -->
       <div class="catalog-section-group">
         <div class="group-title-strip">
-          <h2>02. Không Gian Bếp & Bàn Ăn</h2>
+          <h2>02. Không Gian Bếp & Bàn Ăn (Dining Atelier)</h2>
           <div class="group-line"></div>
         </div>
         <div class="furniture-grid">
           <div class="furniture-card">
             <div class="furniture-image-box">
-              <span class="furniture-badge">Mở rộng linh hoạt</span>
-              <img src="assets/images/hero.jpg" alt="Bàn ăn mở rộng Oslo">
+              <span class="furniture-badge">Mở Rộng 4 - 8 Chỗ</span>
+              <img src="assets/images/dining-table.jpg" alt="Bàn Ăn Mở Rộng Oslo">
             </div>
             <div class="furniture-body">
               <span class="furniture-category">Bàn Ăn Thông Minh</span>
               <h3 class="furniture-name">Bàn Ăn Kéo Dài Gỗ Sồi Tự Nhiên Oslo</h3>
               <div class="furniture-specs">
-                <span class="spec-pill">Dài 140 – 180 x Rộng 80 cm</span>
+                <span class="spec-pill">Dài 140 – 190 x Rộng 85 cm</span>
                 <span class="spec-pill">Ray trượt âm của Đức</span>
                 <span class="spec-pill">Chứa 4 – 8 người</span>
               </div>
-              <p class="furniture-desc">Lý tưởng cho các buổi tiệc cuối tuần cùng bạn bè. Thao tác kéo mở nhẹ nhàng bởi một người chỉ trong 10 giây.</p>
+              <p class="furniture-desc">Lý tưởng cho các buổi tiệc cuối tuần cùng người thân, bạn bè. Thao tác kéo mở nhẹ nhàng bởi một người chỉ trong 10 giây mà không cần dụng cụ.</p>
               <div class="furniture-footer">
                 <span class="furniture-price">12.800.000đ</span>
-                <button class="btn-add-quote" onclick="addToQuoteCart('Bàn Ăn Mở Rộng Oslo', '12.800.000đ')">+ Báo giá</button>
+                <button type="button" class="btn-add-quote" onclick="addToQuoteCart('Bàn Ăn Mở Rộng Oslo', '12.800.000đ')">+ Báo Giá</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 3: Phòng Ngủ Master & Góc Làm Việc -->
+      <div class="catalog-section-group">
+        <div class="group-title-strip">
+          <h2>03. Phòng Ngủ Master & Không Gian Làm Việc (Sanctuary & Studio)</h2>
+          <div class="group-line"></div>
+        </div>
+        <div class="furniture-grid">
+          <div class="furniture-card">
+            <div class="furniture-image-box">
+              <span class="furniture-badge">Gỗ Khối Chân Vát</span>
+              <img src="assets/images/bed-sanctuary.jpg" alt="Giường Ngủ Astrid Platform">
+            </div>
+            <div class="furniture-body">
+              <span class="furniture-category">Phòng Ngủ Master</span>
+              <h3 class="furniture-name">Giường Ngủ Gỗ Sồi Platform Astrid</h3>
+              <div class="furniture-specs">
+                <span class="spec-pill">Kích thước đệm: 1m8 x 2m0</span>
+                <span class="spec-pill">Dát giường nan cong trợ lực</span>
+                <span class="spec-pill">Tựa đầu giường vát 15°</span>
+              </div>
+              <p class="furniture-desc">Thiết kế gầm cao 16cm thoáng đãng, đầu giường gỗ sồi tự nhiên nguyên tấm tạo cảm giác vững chãi và an yên cho giấc ngủ ngon mỗi đêm.</p>
+              <div class="furniture-footer">
+                <span class="furniture-price">16.200.000đ</span>
+                <button type="button" class="btn-add-quote" onclick="addToQuoteCart('Giường Gỗ Sồi Astrid', '16.200.000đ')">+ Báo Giá</button>
               </div>
             </div>
           </div>
 
           <div class="furniture-card">
             <div class="furniture-image-box">
-              <span class="furniture-badge">Công thái học</span>
-              <img src="assets/images/hero.jpg" alt="Ghế ăn gỗ sồi">
+              <span class="furniture-badge">Công Thái Học</span>
+              <img src="assets/images/desk-nordic.jpg" alt="Bàn Làm Việc Nâng Hạ Solid Oak Desk">
             </div>
             <div class="furniture-body">
-              <span class="furniture-category">Ghế Ăn</span>
-              <h3 class="furniture-name">Ghế Ăn Tựa Uốn Cong Stockholm</h3>
+              <span class="furniture-category">Góc Làm Việc Studio</span>
+              <h3 class="furniture-name">Bàn Làm Việc Nâng Hạ Solid Oak Desk</h3>
               <div class="furniture-specs">
-                <span class="spec-pill">Gỗ sồi Bắc Mỹ uốn nhiệt</span>
-                <span class="spec-pill">Đệm ngồi bọc da bò Microfiber</span>
-                <span class="spec-pill">Xếp chồng tiện lợi</span>
+                <span class="spec-pill">Mặt gỗ sồi dầy 32mm vát cạnh</span>
+                <span class="spec-pill">Động cơ đôi nâng êm <45dB</span>
+                <span class="spec-pill">Bộ nhớ 4 nấc chiều cao</span>
               </div>
-              <p class="furniture-desc">Lưng tựa bán nguyệt ôm trọn phần thắt lưng, giúp ngồi lâu không mỏi. Mặt đệm chống thấm nước và dễ lau chùi thức ăn rơi vãi.</p>
+              <p class="furniture-desc">Công nghệ nâng hạ thông minh kết hợp mặt gỗ sồi mộc mạc, bảo vệ cột sống và tăng 40% hiệu suất tập trung trong không gian làm việc tại nhà.</p>
               <div class="furniture-footer">
-                <span class="furniture-price">1.950.000đ</span>
-                <button class="btn-add-quote" onclick="addToQuoteCart('Ghế Ăn Stockholm', '1.950.000đ')">+ Báo giá</button>
+                <span class="furniture-price">11.500.000đ</span>
+                <button type="button" class="btn-add-quote" onclick="addToQuoteCart('Bàn Làm Việc Nâng Hạ', '11.500.000đ')">+ Báo Giá</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Custom Size Banner CTA -->
-    <section class="section-nordic" style="padding-top:0;">
-      <div style="background:var(--nordic-bone-card); border:1px solid var(--border-subtle); border-radius:var(--radius); padding:4rem 2rem; text-align:center;">
-        <span class="hero-tag">Custom Order</span>
-        <h3 style="font-size:2.2rem; font-weight:800; color:var(--nordic-black); margin-bottom:1rem;">Không Tìm Thấy Kích Thước Bạn Cần?</h3>
-        <p style="color:var(--text-muted); max-width:600px; margin:0 auto 2.5rem;">Nordic Living sẵn sàng may đo bất kỳ mẫu nào theo đúng thông số kích thước và bản vẽ căn hộ của bạn.</p>
+      <!-- Action Banner -->
+      <div style="text-align:center; background:#fff; border:1px solid var(--border-subtle); padding:3.5rem 2rem; border-radius:var(--radius); box-shadow:var(--shadow-soft);">
+        <h3 style="font-size:1.8rem; font-weight:800; color:var(--nordic-black); margin-bottom:0.8rem;">Cần May Đo Kích Thước Riêng Theo Mặt Bằng Căn Hộ?</h3>
+        <p style="color:var(--text-muted); max-width:600px; margin:0 auto 2rem; font-size:0.95rem;">
+          Kiến trúc sư trưởng của Nordic Living sẽ đến tận nơi khảo sát, đo đạc dầm cột và lên bản vẽ bố trí 3D hoàn toàn miễn phí.
+        </p>
         <div style="display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap;">
-          <a href="index.html#bao-gia" class="btn-primary-nordic" style="background:var(--nordic-black); color:#fff;">Gửi Kích Thước Nhận Báo Giá</a>
-          <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-outline-nordic" style="color:var(--nordic-black); border-color:var(--nordic-black);">Gửi Mặt Bằng Căn Hộ Qua Zalo</a>
+          <a href="index.html#may-do" class="btn-primary-atelier">Dự Toán May Đo Căn Hộ</a>
+          <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-outline-atelier">Chat Zalo Gửi Mặt Bằng (0971183939)</a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Floating Actions -->
+  <div class="floating-actions-nordic">
+    <a href="index.html#may-do" class="floating-quote-nordic" title="Nhận báo giá nhanh">
+      <span>📐 Báo Giá Nhanh</span>
+    </a>
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="floating-zalo-nordic" title="Chat Zalo KTS 0971183939">
+      <svg width="24" height="24" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.82 3 3 8.37 3 15c0 3.75 1.86 7.12 4.77 9.38l-1.42 5.14c-.16.58.37 1.11.95.95l5.58-1.54C13.93 29.23 14.95 29.4 16 29.4c7.18 0 13-5.37 13-12S23.18 3 16 3z"/></svg>
+    </a>
+  </div>
+
   <!-- Toast -->
   <div class="toast-nordic" id="toast-nordic" role="status"></div>
 
-  <!-- Footer -->
+  <!-- ARCHITECTURAL MONOGRAPH FOOTER -->
   <footer class="site-footer-nordic">
     <div class="footer-wrap-nordic">
-      <div class="footer-col-nordic">
-        <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
-          <span class="brand-title" style="color:#fff;">NORDIC LIVING</span>
-          <span class="brand-subtitle">Scandinavian Interior</span>
-        </a>
-        <p>Thương hiệu nội thất Bắc Âu tối giản, tiên phong trong giải pháp may đo chuẩn xác cho không gian sống hiện đại tại Việt Nam.</p>
-        <p style="margin-top:1rem; font-size:0.8rem; color:#736f68;">* Giao diện mẫu demo #MS03 thuộc Thư Viện Theme RackerWeb.</p>
+      <div class="footer-brand-statement">
+        <div class="footer-brand-slogan">
+          Timeless Scandinavian Forms.<br>
+          <span>Honest Timber, Handcrafted in Vietnam.</span>
+        </div>
+        <div style="font-size:0.75rem; letter-spacing:0.18em; text-transform:uppercase; color:#888;">
+          GPS: 10°48'05.4"N 106°44'38.9"E · ATELIER THỦ ĐỨC
+        </div>
       </div>
 
-      <div class="footer-col-nordic">
-        <h4>Sản Phẩm</h4>
-        <ul>
-          <li><a href="san-pham.html">Sofa & Ghế thư giãn</a></li>
-          <li><a href="san-pham.html">Bàn ghế ăn gỗ sồi</a></li>
-          <li><a href="san-pham.html">Giường & Tủ phòng ngủ</a></li>
-          <li><a href="san-pham.html">Bàn làm việc thông minh</a></li>
-        </ul>
+      <div class="footer-cols-grid">
+        <div class="footer-col-nordic">
+          <div class="brand-group" style="margin-bottom:1.2rem;">
+            <div class="brand-monogram">NL</div>
+            <div class="brand-titles">
+              <span class="brand-title" style="color:#fff;">NORDIC LIVING</span>
+              <span class="brand-subtitle">Scandinavian Atelier</span>
+            </div>
+          </div>
+          <p>Xưởng thiết kế và sản xuất nội thất Bắc Âu chuẩn mực, tiên phong trong giải pháp may đo chuẩn xác cho không gian sống căn hộ đương đại.</p>
+          <p style="font-size:0.78rem; color:#777; margin-top:1rem;">* Giao diện mẫu demo #MS03 thuộc Thư Viện Theme RackerWeb.</p>
+        </div>
+
+        <div class="footer-col-nordic">
+          <h4>Không Gian & Sản Phẩm</h4>
+          <ul>
+            <li><a href="san-pham.html">Sofa & Ghế Thư Giãn Bouclé</a></li>
+            <li><a href="san-pham.html">Bàn Ăn Ray Trượt Thông Minh</a></li>
+            <li><a href="san-pham.html">Giường Ngủ Khung Gỗ Platform</a></li>
+            <li><a href="san-pham.html">Bàn Làm Việc Công Thái Học</a></li>
+            <li><a href="san-pham.html">Kệ Console & Tủ Âm Tường</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-nordic">
+          <h4>Xưởng & Tiêu Chuẩn Mộc</h4>
+          <ul>
+            <li><a href="gioi-thieu.html">Triết Lý Sống Hygge Đan Mạch</a></li>
+            <li><a href="gioi-thieu.html">Quy Trình Sấy Gỗ Khô 10-12%</a></li>
+            <li><a href="gioi-thieu.html">Chứng Nhận Rừng Bền Vững FSC</a></li>
+            <li><a href="gioi-thieu.html">Dầu Lau Thực Vật An Toàn Osmo</a></li>
+            <li><a href="lien-he.html">Chính Sách Bảo Hành Khung 5 Năm</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-nordic">
+          <h4>Showroom & Xưởng Mộc</h4>
+          <p><strong>Showroom Trưng Bày:</strong> Tòa nhà Design Hub, 88 Song Hành, Phường An Phú, TP. Thủ Đức, TP.HCM</p>
+          <p><strong>Xưởng Mộc Thủ Công:</strong> Lô B3 Cụm Làng Nghề Gỗ, Đường Đỗ Xuân Hợp, TP. Thủ Đức (2.000m²)</p>
+          <p><strong>Hotline KTS / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--oak-gold); font-weight:700;">0971 183 939</a></p>
+          <p style="font-size:0.8rem; color:#7a766e;">Giờ mở cửa đón khách: 08:30 – 21:00 hàng ngày</p>
+        </div>
       </div>
 
-      <div class="footer-col-nordic">
-        <h4>Về Chúng Tôi</h4>
-        <ul>
-          <li><a href="gioi-thieu.html">Triết lý thiết kế Hygge</a></li>
-          <li><a href="gioi-thieu.html">Quy trình sản xuất xưởng mộc</a></li>
-          <li><a href="lien-he.html">Hệ thống Showroom</a></li>
-          <li><a href="lien-he.html">Chính sách bảo hành 5 năm</a></li>
-        </ul>
+      <div class="footer-bottom-nordic">
+        <span>© 2026 Nordic Living Atelier — Giao diện mẫu kiến trúc #MS03. All rights reserved.</span>
+        <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
       </div>
-
-      <div class="footer-col-nordic">
-        <h4>Showroom & Trực Tuyến</h4>
-        <p><strong>Showroom:</strong> Tòa nhà Design Hub, 88 Song Hành, An Phú, TP. Thủ Đức, TP.HCM</p>
-        <p style="margin-top:0.4rem;"><strong>Giờ mở cửa:</strong> 08:30 – 21:00 (Hàng ngày)</p>
-        <p style="margin-top:0.4rem;"><strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0971183939" style="color:var(--oak-light); font-weight:700;">0971 183 939</a></p>
-      </div>
-    </div>
-
-    <div class="footer-bottom-nordic">
-      <span>© 2026 Nordic Living — Giao diện mẫu #MS03. All rights reserved.</span>
-      <a href="../../index.html">← Quay lại danh mục Theme RackerWeb</a>
     </div>
   </footer>
 

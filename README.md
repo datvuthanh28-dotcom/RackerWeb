@@ -119,6 +119,50 @@ Truy cập: `http://localhost:8080`
 
 ---
 
+## 🎨 TỔNG KẾT CHUẨN HÓA CHẤT LƯỢNG HÌNH ẢNH & ĐA DẠNG HÓA THIẾT KẾ (DESIGN REMEDIATION LOG)
+
+Toàn bộ portfolio đang được rà soát, tái cấu trúc và nghiệm thu theo tiêu chuẩn **Zero-Screenshot Policy**, **Unique Layouts** và **Dedicated Authentic Photography**.
+
+### 📊 BẢNG TỔNG HỢP HẠNG MỤC ĐÃ THỰC HIỆN
+
+| Phân Loại | Chi Tiết Hạng Mục Đã Xử Lý | Mục Tiêu & Kết Quả Đạt Được |
+|---|---|---|
+| 🗑️ **ĐÃ XÓA (Removed)** | • **100% ảnh chụp màn hình website ngoài** (`assets/banner.webp` chụp web bách hóa ở `food-demo-12`, chụp web sofa nội thất ở `tra-sua-demo-41`).<br/>• **13 điểm lặp ảnh dùng chung** banner ở `food-demo-07` (Cool Organic).<br/>• **4 điểm lặp ảnh dùng chung** banner ở `cua-hang-banh-ngot-demo-37` (The Flour & Stone).<br/>• **Ảnh trùng lặp** giữa biệt thự ven sông và biệt thự sân golf; giữa penthouse và duplex tại `website-bat-dong-san-demo-96`.<br/>• **Các cụm thống kê 3 ô vô hồn rập khuôn** sao chép giữa các site. | Triệt tiêu hoàn toàn tình trạng "ảnh rác", ảnh chụp màn hình web khác và hình ảnh trùng lặp trong menu/danh mục. |
+| ➕ **ĐÃ THÊM (Added)** | • **48+ tệp ảnh chụp thật chuẩn studio/nông trại/bếp ăn** (100% Authentic Photography, tối ưu bicubic 70–250KB, 100% đã kiểm duyệt trực quan qua `view_file`).<br/>• **Hero Indochine Culinary Editorial** (`food-demo-12`): Con dấu mộc truyền thống `[印]`, quầy món ăn chữ ký trong ngày (`.hero-specials-shelf` với Cơm Niêu Đất, Cá Bống Kho Tộ, Canh Cua Đồng), khung mỹ vị đôi `.culinary-dual-window` kèm tem chứng nhận thủ công.<br/>• **Hero Gen Z Boba Lounge** (`tra-sua-demo-41`): Spotlight ly trà sữa trân châu đường đen đa tầng (`.boba-spotlight-frame`), tag cấu hình ly tương tác ("Size L • 50% Đường • 70% Đá • Trân Châu Tươi"), quầy gọi nhanh đồ uống (`.boba-reorder-shelf`).<br/>• **Ảnh nông sản thực tế** (`food-demo-07`): Xà lách thủy canh, cà chua bi, dưa lưới Taka, nho đen, bông cải baby, hạt óc chó, hạt dẻ cười, nhà màng công nghệ cao.<br/>• **Ảnh bánh thủ công** (`cua-hang-banh-ngot-demo-37`): Sourdough men tự nhiên, Croissant bơ Pháp ngàn lớp, Berry Tart quả mọng, thợ bánh thủ công.<br/>• **Ảnh kiến trúc & pháp lý** (`website-bat-dong-san-demo-96`): Ảnh villa ven sông, villa sân golf, sky duplex, sky penthouse độc lập kèm nhãn phối cảnh minh họa.<br/>• **Bộ kỹ năng chuyên sâu**: `.agents/skills/design-taste-frontend` và `.agents/skills/imagegen-frontend-web`. | Mang lại bản sắc thương hiệu độc bản, hình ảnh đúng ngành nghề và tăng độ tin cậy thực tế. |
+| 🛠️ **ĐÃ SỬA (Modified)** | • **Tái cấu trúc HTML/CSS Hero & Grid**: Bẻ gãy cấu trúc wireframe rập khuôn của `#MS12`, `#MS41`, `#MS37`, `#MS07`, `#MS96`.<br/>• **Đồng bộ hóa 4 trang con**: Cập nhật đường dẫn ảnh và nội dung tương ứng trên `index.html`, `san-pham.html`, `gioi-thieu.html`, `lien-he.html`.<br/>• **Dữ liệu danh mục**: Đồng bộ hóa `data/themes.json` và `js/themes-data.js` bảo đảm ảnh preview và thẻ thông tin ăn khớp 100%.<br/>• **Báo cáo kiểm kê**: Cập nhật `implementation-tracker.md` và `reports/design-diversity-audit.md` phản ánh trung thực trạng thái nghiệm thu. | Toàn bộ các trang con hiển thị mượt mà, không vỡ layout, đạt chuẩn HTTP 200 OK trên mọi asset. |
+
+---
+
+### 🏆 DANH SÁCH WEBSITE ĐÃ NGHIỆM THU HOÀN TOÀN (VERIFIED SITES)
+
+1. **`food-demo-12` (Vị Xưa Quán - #MS12):**
+   - *Giao diện:* Indochine Culinary Editorial sang trọng, mộc triện truyền thống, quầy món ăn chữ ký.
+   - *Kho ảnh:* `hero-claypot.jpg`, `ca-kho-to.jpg`, `thit-kho-tau.jpg`, `cha-bo.jpg`, `banh-xeo.jpg`, `mon-cuon.jpg`, `ban-an-viet.jpg`, `bua-com-viet.jpg`.
+2. **`tra-sua-demo-41` (Mộc Trà Boba Lounge - #MS41):**
+   - *Giao diện:* Gen Z Boba Lounge hiện đại, Beverage Spotlight, Quick Reorder Shelf, Drink Configurator Tag.
+   - *Kho ảnh:* `hero-boba.jpg`, `tra-sua-nuong.jpg`, `lai-sua-hat-de.jpg`, `tra-dao-cam-sa.jpg`, `tra-sua-khoai-mon.jpg`, `matcha-macchiato.jpg`, `tra-xoai-macchiato.jpg`, `boba-lounge-interior.jpg`, `set-topping.jpg`, `tra-dau-tam.jpg`.
+3. **`cua-hang-banh-ngot-demo-37` (The Flour & Stone - #MS37):**
+   - *Giao diện:* European Artisanal Bakery ấm áp, lịch ra lò bánh nóng mỗi ngày.
+   - *Kho ảnh:* `sourdough.jpg`, `croissant.jpg`, `berry-tart.jpg`, `baker-craft.jpg`, `banner.jpg`.
+4. **`food-demo-07` (Cool Organic - #MS07):**
+   - *Giao diện:* Farm-to-Table Organic Fresh, nhãn chứng nhận VietGAP/GlobalGAP.
+   - *Kho ảnh:* `organic-hero.jpg`, `hydroponic-lettuce.jpg`, `cherry-tomatoes.jpg`, `cantaloupe-melon.jpg`, `grapes.jpg`, `cauliflower.jpg`, `walnuts.jpg`, `pistachios.jpg`, `nong-trai.jpg`.
+5. **`website-bat-dong-san-demo-96` (Premier Realty Vietnam - #MS96):**
+   - *Giao diện:* Institutional Wealth Advisory, bộ lọc bất động sản đa tham số, Maybach VIP Site Tour.
+   - *Kho ảnh:* 6 tệp kiến trúc riêng biệt cho từng hạng mục villa/penthouse + nhãn minh họa phối cảnh pháp lý.
+6. **`cosmetic-demo-05` (Maison Éclat - #MS05):**
+   - *Giao diện:* French Haute Parfumerie, tháp nốt hương (Top/Heart/Base notes), Velvet Discovery Cart.
+   - *Kho ảnh:* 7 chai nước hoa niche riêng biệt chuẩn studio cao cấp.
+7. **`website-ban-xe-hoi-demo-113` (AutoPlex Motors - #MS113):**
+   - *Giao diện:* High-Performance Dealership, cam kết kiểm định 176 hạng mục kỹ thuật.
+   - *Kho ảnh:* 6 tệp xe hơi thể thao và sang trọng riêng biệt (BMW, Porsche, Sedan, SUV, Coupe, Showroom).
+
+Tài liệu chi tiết lưu trữ tại:
+- [Báo cáo Đa dạng hóa Thiết kế & Khảo sát Hình ảnh](reports/design-diversity-audit.md)
+- [Bảng Theo dõi Tiến độ Triển khai](implementation-tracker.md)
+
+---
+
 ## 📞 HỖ TRỢ VÀ TƯ VẤN THIẾT KẾ WEBSITE
 
 - **Đơn vị vận hành:** Theme Library Hub

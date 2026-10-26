@@ -1,118 +1,464 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cosmetic demo 05 | Mỹ phẩm Official Demo</title>
-  <meta name="description" content="Chăm sóc làn da tỏa sáng tự nhiên & Mỹ phẩm thuần chay">
+  <title>Maison Éclat — Haute Parfumerie | Nước Hoa Nghệ Thuật Pháp #MS05</title>
+  <meta name="description" content="Maison Éclat Haute Parfumerie — Atelier nước hoa nghệ thuật lấy cảm hứng từ truyền thống điều hương Grasse. Bộ sưu tập Eau de Parfum niche, nguyên liệu thiên nhiên quý hiếm.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation back to theme library -->
+
+  <!-- Library Return Bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS05</strong> thuộc Thư Viện Theme.</span>
-    <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
+    <span>Giao diện mẫu <strong>#MS05 · Mỹ Phẩm & Nước Hoa</strong> — Thư Viện Theme RackerWeb</span>
+    <a href="../../index.html">&larr; Quay lại danh mục thư viện</a>
   </div>
 
-  <header>
-    <div class="header-wrap">
-      <div class="logo">
-        Cosmetic demo 05
-        <span>MS05</span>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+  <!-- Header — Centered Brand with Split Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <nav class="nav-left">
+        <a href="index.html" class="nav-link active">Trang Chủ</a>
+        <a href="san-pham.html" class="nav-link">Bộ Sưu Tập</a>
+        <a href="#kham-pha" class="nav-link">Khám Phá Hương</a>
       </nav>
-      <div class="header-actions">
-        <button type="button" class="cart-trigger">Giỏ Hàng (<span id="cart-count">0</span>)</button>
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+
+      <div class="brand-center">
+        <a href="index.html">
+          <div class="brand-name">Maison Éclat</div>
+          <div class="brand-tagline">Haute Parfumerie</div>
+        </a>
       </div>
+
+      <nav class="nav-right">
+        <a href="gioi-thieu.html" class="nav-link">Nghệ Nhân</a>
+        <a href="lien-he.html" class="nav-link">Liên Hệ</a>
+        <button class="header-action-btn" id="cart-toggle-btn">
+          Bộ Sưu Tập (<span id="cart-count">0</span>)
+        </button>
+      </nav>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Chăm sóc làn da tỏa sáng tự nhiên & Mỹ phẩm thuần chay</h1>
-        <p>Trải nghiệm dịch vụ chuyên nghiệp, chuẩn mực thiết kế tối ưu và công nghệ tiên tiến nhất từ Cosmetic demo 05.</p>
-        <div class="hero-btns">
-          <a href="san-pham.html" class="btn-primary">Khám Phá Ngay</a>
-          <a href="lien-he.html" class="btn-outline">Nhận Tư Vấn</a>
-        </div>
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Đóng menu">&times;</button>
+    <a href="index.html" class="active">Trang Chủ</a>
+    <a href="san-pham.html">Bộ Sưu Tập</a>
+    <a href="#kham-pha">Khám Phá Hương</a>
+    <a href="gioi-thieu.html">Nghệ Nhân & Atelier</a>
+    <a href="lien-he.html">Liên Hệ & Tư Vấn</a>
+    <div class="mobile-nav-footer">
+      <p>Tư vấn riêng: <strong>0971 183 939</strong></p>
+      <p>Giờ phục vụ: 09:00 – 21:00</p>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Bộ Sưu Tập Của Bạn</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Đóng">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty" id="cart-empty">
+        <p>Bộ sưu tập đang trống</p>
+        <p style="margin-top:0.5rem;font-size:0.8rem;">Khám phá các mùi hương để thêm vào bộ sưu tập riêng của bạn.</p>
       </div>
-      <div class="hero-image">
-        <img src="assets/banner.webp" alt="Cosmetic demo 05 Preview Banner">
+    </div>
+    <div class="cart-drawer-footer" id="cart-footer" style="display:none;">
+      <div class="cart-total">
+        <span>Tổng cộng</span>
+        <span id="cart-total-price">0đ</span>
+      </div>
+      <button class="btn-checkout" id="btn-checkout">Đặt Hàng Qua Zalo</button>
+      <p style="text-align:center;font-size:0.7rem;color:var(--text-secondary);margin-top:0.75rem;letter-spacing:0.05em;">
+        Chuyên viên sẽ liên hệ xác nhận đơn hàng
+      </p>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Hero — Full-Bleed Cinematic -->
+    <section class="hero-cinematic">
+      <div class="hero-bg">
+        <img src="assets/images/hero-collection.jpg" alt="Bộ sưu tập nước hoa nghệ thuật Maison Éclat trên đá cẩm thạch đen">
+      </div>
+      <div class="hero-gradient"></div>
+      <div class="hero-content">
+        <div class="hero-overline">Depuis 2018 · Grasse Heritage</div>
+        <h1 class="hero-title">Nghệ Thuật Điều Hương, <em>Tôn Vinh Bản Ngã</em></h1>
+        <p class="hero-desc">Mỗi mùi hương là một tác phẩm nghệ thuật được sáng tạo thủ công từ những nguyên liệu thiên nhiên quý hiếm nhất thế giới, theo truyền thống điều hương Grasse.</p>
+        <div class="hero-actions">
+          <a href="san-pham.html" class="btn-gold">Khám Phá Bộ Sưu Tập</a>
+          <a href="#discovery" class="btn-outline-gold">Tạo Discovery Set</a>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-title">
-        <h2>Sản Phẩm Dưỡng Da & Làm Đẹp</h2>
-        <p>Lựa chọn tiêu biểu được khách hàng tin tưởng và đánh giá cao nhất</p>
+    <!-- Editorial Intro -->
+    <section class="editorial-intro">
+      <div>
+        <div class="editorial-eyebrow">Triết Lý Điều Hương</div>
+        <h2 class="editorial-heading">Nơi Thiên Nhiên Gặp Gỡ Nghệ Thuật Trong Từng Giọt Tinh Dầu</h2>
+        <p class="editorial-text">
+          Maison Éclat không đi theo xu hướng. Chúng tôi kiến tạo những mùi hương mang tính biểu tượng, nơi mỗi thành phần nguyên liệu được tuyển chọn trực tiếp từ những cánh đồng hoa tại Grasse, rừng gỗ đàn hương tại Mysore hay vùng trầm hương cổ thụ Khánh Hòa.
+        </p>
+        <p class="editorial-text" style="margin-top:1rem;">
+          Mỗi chai nước hoa trải qua hành trình sáng tạo kéo dài 12 đến 18 tháng dưới bàn tay của nghệ nhân điều hương, với hơn 300 lần thử nghiệm hòa trộn trước khi đạt đến phiên bản hoàn hảo.
+        </p>
       </div>
+      <div class="editorial-image">
+        <img src="assets/images/atelier-workshop.jpg" alt="Atelier điều hương Maison Éclat — Nghệ nhân tại bàn phối hương">
+        <div class="editorial-image-caption">Atelier Maison Éclat — Nghệ Thuật Điều Hương Thủ Công</div>
+      </div>
+    </section>
 
-      <div class="grid">
-        <div class="card">
-          <span class="card-badge">Best Seller</span>
-          <h3>Serum Phục Hồi Bio-Peptide</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">480.000đ</div>
-          <button type="button" class="btn-buy" data-name="Serum Phục Hồi Bio-Peptide">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Khuyên dùng</span>
-          <h3>Kem Dưỡng Trắng Da Chiết Xuất Hoa Hồng</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">590.000đ</div>
-          <button type="button" class="btn-buy" data-name="Kem Dưỡng Trắng Da Chiết Xuất Hoa Hồng">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Organic</span>
-          <h3>Sữa Rửa Mặt Tạo Bọt Dịu Nhẹ</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">280.000đ</div>
-          <button type="button" class="btn-buy" data-name="Sữa Rửa Mặt Tạo Bọt Dịu Nhẹ">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Chống nắng</span>
-          <h3>Kem Chống Nắng Quang Phổ Rộng SPF50+</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">420.000đ</div>
-          <button type="button" class="btn-buy" data-name="Kem Chống Nắng Quang Phổ Rộng SPF50+">Thêm Giỏ Hàng</button>
+    <!-- Signature Collection -->
+    <section class="collection-section" id="kham-pha">
+      <div class="section-inner">
+        <div class="section-header-center">
+          <div class="section-eyebrow">Bộ Sưu Tập Biểu Tượng</div>
+          <h2>Les Signatures</h2>
+        </div>
+
+        <div class="collection-grid">
+          <!-- Oud Royal -->
+          <div class="perfume-card">
+            <div class="perfume-card-image">
+              <img src="assets/images/oud-royal.jpg" alt="Nước hoa Oud Royal — Trầm hương hoàng gia">
+              <span class="perfume-card-family">Hương Gỗ Phương Đông</span>
+            </div>
+            <div class="perfume-card-body">
+              <h3 class="perfume-card-name">Oud Royal</h3>
+              <p class="perfume-card-notes">Trầm hương Khánh Hòa, hoa hồng Damascus, hoắc hương già và xạ hương trắng.</p>
+              <div class="perfume-card-footer">
+                <div>
+                  <div class="perfume-card-price">3.850.000đ</div>
+                  <div class="perfume-card-size">Eau de Parfum · 50ml</div>
+                </div>
+                <button class="btn-add-collection" data-name="Oud Royal" data-price="3850000">Thêm</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rose Absolue -->
+          <div class="perfume-card">
+            <div class="perfume-card-image">
+              <img src="assets/images/rose-absolue.jpg" alt="Nước hoa Rose Absolue — Hoa hồng tuyệt đối">
+              <span class="perfume-card-family">Hương Hoa Cổ Điển</span>
+            </div>
+            <div class="perfume-card-body">
+              <h3 class="perfume-card-name">Rose Absolue</h3>
+              <p class="perfume-card-notes">Hồng Centifolia Grasse, mẫu đơn trắng, gỗ guaiac và vani Madagascar.</p>
+              <div class="perfume-card-footer">
+                <div>
+                  <div class="perfume-card-price">2.950.000đ</div>
+                  <div class="perfume-card-size">Eau de Parfum · 50ml</div>
+                </div>
+                <button class="btn-add-collection" data-name="Rose Absolue" data-price="2950000">Thêm</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vétiver Noir -->
+          <div class="perfume-card">
+            <div class="perfume-card-image">
+              <img src="assets/images/vetiver-noir.jpg" alt="Nước hoa Vétiver Noir — Hương rễ cỏ tối">
+              <span class="perfume-card-family">Hương Gỗ Xanh</span>
+            </div>
+            <div class="perfume-card-body">
+              <h3 class="perfume-card-name">Vétiver Noir</h3>
+              <p class="perfume-card-notes">Rễ hương Haitian vétiver, gỗ tuyết tùng Atlas, tiêu đen Kampot và labdanum.</p>
+              <div class="perfume-card-footer">
+                <div>
+                  <div class="perfume-card-price">3.250.000đ</div>
+                  <div class="perfume-card-size">Eau de Parfum · 50ml</div>
+                </div>
+                <button class="btn-add-collection" data-name="Vétiver Noir" data-price="3250000">Thêm</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Iris Soyeux -->
+          <div class="perfume-card">
+            <div class="perfume-card-image">
+              <img src="assets/images/iris-soyeux.jpg" alt="Nước hoa Iris Soyeux — Diên vĩ lụa mềm">
+              <span class="perfume-card-family">Hương Phấn Thanh Lịch</span>
+            </div>
+            <div class="perfume-card-body">
+              <h3 class="perfume-card-name">Iris Soyeux</h3>
+              <p class="perfume-card-notes">Bơ iris Florence, hoa violet lá, suede trắng và ambroxan.</p>
+              <div class="perfume-card-footer">
+                <div>
+                  <div class="perfume-card-price">4.150.000đ</div>
+                  <div class="perfume-card-size">Eau de Parfum · 50ml</div>
+                </div>
+                <button class="btn-add-collection" data-name="Iris Soyeux" data-price="4150000">Thêm</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Néroli Doré -->
+          <div class="perfume-card">
+            <div class="perfume-card-image">
+              <img src="assets/images/neroli-dore.jpg" alt="Nước hoa Néroli Doré — Hoa cam vàng rực">
+              <span class="perfume-card-family">Hương Cam Chanh Quý Tộc</span>
+            </div>
+            <div class="perfume-card-body">
+              <h3 class="perfume-card-name">Néroli Doré</h3>
+              <p class="perfume-card-notes">Tinh dầu neroli Tunisia, bergamot Calabria, hoa nhài sambac và mật ong.</p>
+              <div class="perfume-card-footer">
+                <div>
+                  <div class="perfume-card-price">2.750.000đ</div>
+                  <div class="perfume-card-size">Eau de Parfum · 50ml</div>
+                </div>
+                <button class="btn-add-collection" data-name="Néroli Doré" data-price="2750000">Thêm</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Santal Sacré -->
+          <div class="perfume-card">
+            <div class="perfume-card-image">
+              <img src="assets/images/santal-sacre.jpg" alt="Nước hoa Santal Sacré — Đàn hương linh thiêng">
+              <span class="perfume-card-family">Hương Gỗ Ấm</span>
+            </div>
+            <div class="perfume-card-body">
+              <h3 class="perfume-card-name">Santal Sacré</h3>
+              <p class="perfume-card-notes">Đàn hương Mysore, sữa hạnh nhân, nhục đậu khấu và nhựa olibanum.</p>
+              <div class="perfume-card-footer">
+                <div>
+                  <div class="perfume-card-price">3.450.000đ</div>
+                  <div class="perfume-card-size">Eau de Parfum · 50ml</div>
+                </div>
+                <button class="btn-add-collection" data-name="Santal Sacré" data-price="3450000">Thêm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Olfactory Pyramid Section -->
+    <section class="pyramid-section" id="olfactory">
+      <div class="section-inner">
+        <div class="section-header-center">
+          <div class="section-eyebrow" style="color:var(--champagne-dim);">Kim Tự Tháp Hương</div>
+          <h2 style="color:var(--text-body-dark);">Cấu Trúc Mùi Hương</h2>
+        </div>
+
+        <div class="pyramid-tabs" id="pyramid-tabs">
+          <button class="pyramid-tab active" data-target="pyramid-oud">Oud Royal</button>
+          <button class="pyramid-tab" data-target="pyramid-rose">Rose Absolue</button>
+          <button class="pyramid-tab" data-target="pyramid-vetiver">Vétiver Noir</button>
+          <button class="pyramid-tab" data-target="pyramid-iris">Iris Soyeux</button>
+        </div>
+
+        <div class="pyramid-panel active" id="pyramid-oud">
+          <div class="pyramid-content">
+            <div class="pyramid-visual">
+              <div class="pyramid-tier">
+                <div class="pyramid-tier-label">Hương Đầu · 15 phút đầu tiên</div>
+                <div class="pyramid-tier-notes">Nghệ tây Taliouine, quả lê Williams</div>
+              </div>
+              <div class="pyramid-tier">
+                <div class="pyramid-tier-label">Hương Giữa · Tim mùi hương</div>
+                <div class="pyramid-tier-notes">Hoa hồng Damascus, nhựa elemi, quế Ceylon</div>
+              </div>
+              <div class="pyramid-tier">
+                <div class="pyramid-tier-label">Hương Cuối · Dấu ấn lưu lại</div>
+                <div class="pyramid-tier-notes">Trầm hương Khánh Hòa, hoắc hương già, xạ hương trắng</div>
+              </div>
+            </div>
+            <div class="pyramid-desc">
+              <p>Oud Royal mở đầu bằng sự ấm áp quyến rũ của nghệ tây từ vùng Taliouine, Maroc — một trong những loại gia vị đắt đỏ nhất thế giới. Hương giữa bung nở với hoa hồng Damascus hái lúc bình minh, hòa quyện cùng nhựa elemi tươi mát và quế Ceylon cay nồng. Hương cuối là bản giao hưởng sâu lắng của trầm hương cổ thụ Khánh Hòa được ủ tối thiểu 20 năm, cùng hoắc hương già và xạ hương trắng.</p>
+              <p style="margin-top:1rem;">Thời gian lưu hương: 10–14 giờ trên da. Tỏa hương vừa phải, phù hợp với những dịp trang trọng và buổi tối.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pyramid-panel" id="pyramid-rose">
+          <div class="pyramid-content">
+            <div class="pyramid-visual">
+              <div class="pyramid-tier">
+                <div class="pyramid-tier-label">Hương Đầu</div>
+                <div class="pyramid-tier-notes">Tinh dầu bergamot, quả lý chua đen</div>
+              </div>
+              <div class="pyramid-tier">
+                <div class="pyramid-tier-label">Hương Giữa</div>
+                <div class="pyramid-tier-notes">Hồng Centifolia Grasse, mẫu đơn trắng, hoa nhài</div>
+              </div>
+              <div class="pyramid-tier">
+                <div class="pyramid-tier-label">Hương Cuối</div>
+                <div class="pyramid-tier-notes">Gỗ guaiac, vani Madagascar, xạ hương</div>
+              </div>
+            </div>
+            <div class="pyramid-desc">
+              <p>Rose Absolue tái hiện vẻ đẹp cổ điển của hoa hồng Centifolia được hái bằng tay tại Grasse mỗi sáng sớm tháng Năm. Hương đầu tươi mát với bergamot Ý và quả lý chua đen, dẫn dắt sang trái tim thuần khiết của cánh hồng tươi. Hương cuối ấm áp, gợi cảm với gỗ guaiac và vani tự nhiên.</p>
+              <p style="margin-top:1rem;">Thời gian lưu hương: 8–12 giờ. Tỏa hương nhẹ nhàng, phù hợp mọi dịp.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pyramid-panel" id="pyramid-vetiver">
+          <div class="pyramid-content">
+            <div class="pyramid-visual">
+              <div class="pyramid-tier">
+                <div class="pyramid-tier-label">Hương Đầu</div>
+                <div class="pyramid-tier-notes">Tiêu đen Kampot, chanh vàng Amalfi</div>
+              </div>
+              <div class="pyramid-tier">
+                <div class="pyramid-tier-label">Hương Giữa</div>
+                <div class="pyramid-tier-notes">Rễ vétiver Haiti, violet lá, geranium</div>
+              </div>
+              <div class="pyramid-tier">
+                <div class="pyramid-tier-label">Hương Cuối</div>
+                <div class="pyramid-tier-notes">Gỗ tuyết tùng Atlas, labdanum, benzoin</div>
+              </div>
+            </div>
+            <div class="pyramid-desc">
+              <p>Vétiver Noir là mùi hương dành cho những tâm hồn mạnh mẽ và tự do. Rễ vétiver Haiti được chưng cất chậm trong 36 giờ tạo nên lõi hương đất đậm đà, phủ lên bởi tiêu đen Kampot cay nồng và gỗ tuyết tùng Atlas khô ráp.</p>
+              <p style="margin-top:1rem;">Thời gian lưu hương: 12–16 giờ. Tỏa hương vừa đến mạnh.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pyramid-panel" id="pyramid-iris">
+          <div class="pyramid-content">
+            <div class="pyramid-visual">
+              <div class="pyramid-tier">
+                <div class="pyramid-tier-label">Hương Đầu</div>
+                <div class="pyramid-tier-notes">Quả thanh yên, tinh dầu pink pepper</div>
+              </div>
+              <div class="pyramid-tier">
+                <div class="pyramid-tier-label">Hương Giữa</div>
+                <div class="pyramid-tier-notes">Bơ iris Florence 3 năm tuổi, hoa violet lá</div>
+              </div>
+              <div class="pyramid-tier">
+                <div class="pyramid-tier-label">Hương Cuối</div>
+                <div class="pyramid-tier-notes">Suede trắng, ambroxan, vani Tahiti</div>
+              </div>
+            </div>
+            <div class="pyramid-desc">
+              <p>Iris Soyeux sử dụng bơ iris được ủ tối thiểu 3 năm tại Florence — nguyên liệu đắt đỏ nhất trong ngành nước hoa. Mùi hương phấn-gỗ thanh lịch kết hợp với suede trắng mềm mại tạo nên một tác phẩm tinh tế và quý phái.</p>
+              <p style="margin-top:1rem;">Thời gian lưu hương: 8–10 giờ. Tỏa hương gần, riêng tư và thanh lịch.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discovery Set Builder -->
+    <section class="discovery-section" id="discovery">
+      <div class="section-inner">
+        <div class="section-header-center">
+          <div class="section-eyebrow">Trải Nghiệm Cá Nhân Hóa</div>
+          <h2>Tạo Discovery Set Riêng Của Bạn</h2>
+          <p style="color:var(--text-secondary);font-size:0.88rem;margin-top:0.75rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;">
+            Chọn 3 mùi hương yêu thích để nhận bộ Discovery Set 10ml với giá ưu đãi. Trải nghiệm trước khi quyết định chai chính thức.
+          </p>
+        </div>
+
+        <div class="discovery-builder">
+          <div class="discovery-options" id="discovery-options">
+            <div class="discovery-option" data-fragrance="Oud Royal" data-price="580000">
+              <img src="assets/images/oud-royal.jpg" alt="Oud Royal discovery">
+              <div class="discovery-option-name">Oud Royal</div>
+              <div class="discovery-option-family">Gỗ phương đông</div>
+            </div>
+            <div class="discovery-option" data-fragrance="Rose Absolue" data-price="480000">
+              <img src="assets/images/rose-absolue.jpg" alt="Rose Absolue discovery">
+              <div class="discovery-option-name">Rose Absolue</div>
+              <div class="discovery-option-family">Hoa cổ điển</div>
+            </div>
+            <div class="discovery-option" data-fragrance="Vétiver Noir" data-price="520000">
+              <img src="assets/images/vetiver-noir.jpg" alt="Vétiver Noir discovery">
+              <div class="discovery-option-name">Vétiver Noir</div>
+              <div class="discovery-option-family">Gỗ xanh</div>
+            </div>
+            <div class="discovery-option" data-fragrance="Iris Soyeux" data-price="620000">
+              <img src="assets/images/iris-soyeux.jpg" alt="Iris Soyeux discovery">
+              <div class="discovery-option-name">Iris Soyeux</div>
+              <div class="discovery-option-family">Phấn thanh lịch</div>
+            </div>
+            <div class="discovery-option" data-fragrance="Néroli Doré" data-price="450000">
+              <img src="assets/images/neroli-dore.jpg" alt="Néroli Doré discovery">
+              <div class="discovery-option-name">Néroli Doré</div>
+              <div class="discovery-option-family">Cam chanh quý tộc</div>
+            </div>
+            <div class="discovery-option" data-fragrance="Santal Sacré" data-price="540000">
+              <img src="assets/images/santal-sacre.jpg" alt="Santal Sacré discovery">
+              <div class="discovery-option-name">Santal Sacré</div>
+              <div class="discovery-option-family">Gỗ ấm</div>
+            </div>
+          </div>
+
+          <div class="discovery-summary">
+            <h3>Discovery Set Của Bạn</h3>
+            <p style="font-size:0.78rem;color:var(--text-secondary);margin-bottom:1.5rem;">Chọn 3 mùi hương · 10ml mỗi chai</p>
+            <div class="discovery-selected-list" id="discovery-selected-list">
+              <p style="font-size:0.85rem;color:var(--text-secondary);text-align:center;padding:1rem 0;">Chưa chọn mùi hương nào</p>
+            </div>
+            <div class="discovery-total">
+              <span>Tổng Discovery Set</span>
+              <span id="discovery-total-price">0đ</span>
+            </div>
+            <button class="btn-discovery-order" id="btn-discovery-order" disabled>Đặt Discovery Set</button>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Floating Zalo -->
   <aside class="floating-zalo">
-    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Zalo 0971183939">Zalo</a>
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Zalo 0971 183 939">Zalo</a>
   </aside>
 
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Cosmetic demo 05</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Mỹ phẩm. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Maison Éclat</div>
+        <div class="footer-brand-sub">Haute Parfumerie · Depuis 2018</div>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Mỹ phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Bộ Sưu Tập</h4>
+          <a href="san-pham.html">Les Signatures</a>
+          <a href="san-pham.html">Les Exclusifs</a>
+          <a href="#discovery">Discovery Sets</a>
+        </div>
+        <div class="footer-col">
+          <h4>Maison Éclat</h4>
+          <a href="gioi-thieu.html">Nghệ Nhân Điều Hương</a>
+          <a href="gioi-thieu.html">Atelier & Truyền Thống</a>
+          <a href="gioi-thieu.html">Nguyên Liệu & Nguồn Gốc</a>
+        </div>
+        <div class="footer-col">
+          <h4>Dịch Vụ</h4>
+          <a href="lien-he.html">Tư Vấn Hương Riêng</a>
+          <a href="lien-he.html">Khắc Tên Chai</a>
+          <a href="lien-he.html">Gói Quà Tặng Thượng Hạng</a>
+        </div>
+        <div class="footer-col">
+          <h4>Liên Hệ</h4>
+          <p>Zalo: <a href="https://zalo.me/0971183939" style="color:var(--champagne);">0971 183 939</a></p>
+          <p>Tư vấn: 09:00 – 21:00</p>
+          <p>Giao hàng toàn quốc</p>
+        </div>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+      <div class="footer-bottom-bar">
+        &copy; 2026 Maison Éclat Haute Parfumerie. Giao diện mẫu #MS05 — Thư Viện Theme RackerWeb.
       </div>
-    </div>
-    <div class="footer-bottom">
-      &copy; 2026 Cosmetic demo 05. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
     </div>
   </footer>
 

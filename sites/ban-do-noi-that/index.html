@@ -1,118 +1,541 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bán Đồ Nội thất | Nội thất Official Demo</title>
-  <meta name="description" content="Nội thất tinh tế phong cách Bắc Âu & Tối giản không gian">
+  <title>MỘC ĐIỀN ATELIER | Xưởng Thủ Công & Kiến Trúc Gỗ Tự Nhiên #MS101</title>
+  <meta name="description" content="Mộc Điền Atelier: Xưởng chế tác đồ gỗ tự nhiên nguyên tấm chuẩn mộng truyền thống. Gỗ óc chó Bắc Mỹ, sồi trắng, teak nguyên bản, sơn dầu lau thực vật Osmo Đức.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation back to theme library -->
+
+  <!-- Return Navigation Bar -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#SKD-000</strong> thuộc Thư Viện Theme.</span>
+    <span>Giao diện kiến trúc mẫu <strong>#MS101</strong> — Mộc Điền Atelier (Thư Viện Theme).</span>
     <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
   </div>
 
+  <!-- Header -->
   <header>
     <div class="header-wrap">
-      <div class="logo">
-        Bán Đồ Nội thất
-        <span>SKD-000</span>
-      </div>
+      <a href="index.html" class="logo">
+        <span class="logo-title">MỘC ĐIỀN</span>
+        <span class="logo-sub">Atelier Woodcraft & Architecture</span>
+      </a>
+
       <nav>
         <ul>
           <li><a href="index.html" class="active">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Nội thất</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+          <li><a href="san-pham.html">Tác Phẩm Gỗ</a></li>
+          <li><a href="gioi-thieu.html">Xưởng & Triết Lý</a></li>
+          <li><a href="lien-he.html">Liên Hệ & Khảo Sát</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
-        <button type="button" class="cart-trigger">Giỏ Hàng (<span id="cart-count">0</span>)</button>
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <button type="button" class="cart-trigger">
+          <span>Giỏ Tư Vấn</span> (<span id="cart-count">0</span>)
+        </button>
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">
+          Zalo: 0971 183 939
+        </a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Nội thất tinh tế phong cách Bắc Âu & Tối giản không gian</h1>
-        <p>Trải nghiệm dịch vụ chuyên nghiệp, chuẩn mực thiết kế tối ưu và công nghệ tiên tiến nhất từ Bán Đồ Nội thất.</p>
-        <div class="hero-btns">
-          <a href="san-pham.html" class="btn-primary">Khám Phá Ngay</a>
-          <a href="lien-he.html" class="btn-outline">Nhận Tư Vấn</a>
+    <!-- Hero Section -->
+    <section class="hero-atelier">
+      <div class="hero-container">
+        <div class="hero-copy-col">
+          <div class="hero-badge-pill">
+            <span>◆</span> Mộng Gỗ Thủ Công & Gỗ Tự Nhiên Tuyển Chọn FAS
+          </div>
+          <h1 class="hero-headline">
+            Kiến Tạo Không Gian <em>Ngưng Đọng Thời Gian</em> Bằng Gỗ Tự Nhiên Thuần Khiết
+          </h1>
+          <p class="hero-desc">
+            Mộc Điền Atelier tôn vinh vẻ đẹp vĩnh cửu của những thớ gỗ tự nhiên hàng trăm năm tuổi. Tuyệt đối không dùng đinh ốc kim loại, mỗi tác phẩm là sự kết tinh giữa mộng gỗ truyền thống và tinh thần kiến trúc Wabi-Sabi đương đại.
+          </p>
+          <div class="hero-ctas">
+            <a href="san-pham.html" class="btn-primary">Bộ Sưu Tập Tác Phẩm</a>
+            <a href="#estimator-section" class="btn-secondary">Dự Toán May Đo Không Gian</a>
+          </div>
         </div>
-      </div>
-      <div class="hero-image">
-        <img src="assets/banner.webp" alt="Bán Đồ Nội thất Preview Banner">
+
+        <div class="hero-visual-frame">
+          <img src="assets/images/hero-atelier.jpg" alt="Không gian phòng ăn kiến trúc gỗ tự nhiên Mộc Điền Atelier" class="hero-main-img">
+          <div class="hero-floating-card">
+            <div class="floating-icon-wrap">🪵</div>
+            <div class="floating-text">
+              <h4>Bảo Hành 10 Năm</h4>
+              <p>Cam kết gỗ sấy kiln-dry <10% MC, hoàn thiện dầu lau Osmo nhập khẩu Đức.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Stats Ribbon -->
+    <section class="stats-ribbon">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p>Gỗ Tự Nhiên FAS Nhập Khẩu</p>
+        </div>
+        <div class="stat-item">
+          <h3>0 Đinh Vít</h3>
+          <p>Khớp Mộng Gỗ Truyền Thống</p>
+        </div>
+        <div class="stat-item">
+          <h3>&lt; 10% MC</h3>
+          <p>Độ Ẩm Sấy Chân Không Chống Nứt</p>
+        </div>
+        <div class="stat-item">
+          <h3>25 Năm</h3>
+          <p>Tuổi Thọ Kết Cấu Tác Phẩm</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Interactive Wood & Grain Studio -->
     <section class="section">
-      <div class="section-title">
-        <h2>Bộ Sưu Tập Nội Thất Sang Trọng</h2>
-        <p>Lựa chọn tiêu biểu được khách hàng tin tưởng và đánh giá cao nhất</p>
+      <div class="section-header">
+        <div class="section-kicker">Chất Liệu Nguyên Bản</div>
+        <h2 class="section-title">Bảng Trải Nghiệm Thớ Gỗ & Dầu Lau Tự Nhiên</h2>
+        <p class="section-subtitle">
+          Khám phá đặc tính cơ lý tính, hệ vân và phương pháp hoàn thiện bề mặt của các dòng gỗ thượng hạng được Mộc Điền tuyển chọn kỹ lưỡng.
+        </p>
       </div>
 
-      <div class="grid">
-        <div class="card">
-          <span class="card-badge">Bắc Âu</span>
-          <h3>Sofa Gỗ Sồi Bọc Nỉ Cao Cấp</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">14.500.000đ</div>
-          <button type="button" class="btn-buy" data-name="Sofa Gỗ Sồi Bọc Nỉ Cao Cấp">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Ấm Cúng</span>
-          <h3>Bàn Ăn 6 Ghế Gỗ Tự Nhiên</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">9.800.000đ</div>
-          <button type="button" class="btn-buy" data-name="Bàn Ăn 6 Ghế Gỗ Tự Nhiên">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Tối Giản</span>
-          <h3>Tủ Kệ Tivi Tối Giản Scandinavian</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">5.200.000đ</div>
-          <button type="button" class="btn-buy" data-name="Tủ Kệ Tivi Tối Giản Scandinavian">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Decor</span>
-          <h3>Đèn Thả Trần Nghệ Thuật Decor</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">1.850.000đ</div>
-          <button type="button" class="btn-buy" data-name="Đèn Thả Trần Nghệ Thuật Decor">Thêm Giỏ Hàng</button>
+      <div class="wood-studio-card">
+        <div class="wood-nav-tabs">
+          <button type="button" class="wood-tab-btn active" data-wood="walnut">Gỗ Óc Chó Bắc Mỹ (Walnut)</button>
+          <button type="button" class="wood-tab-btn" data-wood="oak">Gỗ Sồi Trắng Châu Âu (White Oak)</button>
+          <button type="button" class="wood-tab-btn" data-wood="teak">Gỗ Teak Giả Tỵ (Golden Teak)</button>
+          <button type="button" class="wood-tab-btn" data-wood="spalted">Gỗ Tần Bì Nu Vân (Spalted Ash)</button>
+        </div>
+
+        <div class="wood-display-grid">
+          <div class="wood-sample-box">
+            <span class="wood-sample-badge" id="wood-sample-badge">Gỗ Quý Nhập Khẩu</span>
+            <img src="assets/images/wood-grain-walnut.jpg" alt="Vân gỗ tự nhiên tuyển chọn" class="wood-sample-img" id="wood-sample-img">
+          </div>
+
+          <div class="wood-specs-details">
+            <h3 id="wood-title">Gỗ Óc Chó Bắc Mỹ (American Walnut)</h3>
+            <div class="wood-latin-name" id="wood-latin">Juglans nigra — FAS Grade 1 Cực Phẩm</div>
+            <p class="wood-lead-desc" id="wood-desc">
+              Được tuyển chọn từ những thân cây cổ thụ vùng Bắc Mỹ, gỗ óc chó sở hữu sắc nâu socola trầm ấm cùng những đường vân cuộn sóng ánh đồng độc bản. Sau khi sấy chân không đạt độ ẩm tiêu chuẩn &lt;10% MC, gỗ được hoàn thiện bằng 3 lớp dầu lau thực vật Osmo (CHLB Đức) giữ trọn vẹn từng thớ gỗ tự nhiên.
+            </p>
+
+            <div class="wood-param-row">
+              <span class="wood-param-label">Độ Cứng (Janka):</span>
+              <div>
+                <span id="wood-hardness-val" style="font-weight:700; color:var(--color-walnut-dark);">1.010 lbf</span>
+                <div class="wood-meter-bar" style="margin-top:4px;">
+                  <div class="wood-meter-fill" id="wood-hardness-bar" style="width: 75%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wood-param-row">
+              <span class="wood-param-label">Tính Ổn Định:</span>
+              <div>
+                <span id="wood-stability-val" style="font-weight:700; color:var(--color-walnut-dark);">Tối ưu (Chống cong vênh 99%)</span>
+                <div class="wood-meter-bar" style="margin-top:4px;">
+                  <div class="wood-meter-fill" id="wood-stability-bar" style="width: 95%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wood-param-row" style="margin-top:1.2rem;">
+              <span class="wood-param-label">Lớp Phủ Bề Mặt:</span>
+              <span id="wood-finish-val" style="color:var(--color-charcoal-muted);">Dầu lau thực vật Osmo Polyx-Oil Đức</span>
+            </div>
+
+            <div class="wood-param-row">
+              <span class="wood-param-label">Ứng Dụng Lý Tưởng:</span>
+              <span id="wood-app-val" style="color:var(--color-charcoal-muted);">Bàn ăn nguyên tấm, Tủ kệ phòng khách, Giường ngủ Master</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Featured Masterpieces -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-kicker">Tuyển Tập Tác Phẩm</div>
+        <h2 class="section-title">Kiến Trúc Đồ Gỗ Thủ Công Tiêu Biểu</h2>
+        <p class="section-subtitle">
+          Mỗi sản phẩm đều mang mã định danh riêng, được chạm khắc dấu mộc chứng nhận từ xưởng chế tác Mộc Điền.
+        </p>
+      </div>
+
+      <div class="catalog-grid">
+        <!-- Item 1 -->
+        <article class="product-wood-card">
+          <div class="product-img-wrap">
+            <span class="product-tag">Nguyên Tấm Live-Edge</span>
+            <img src="assets/images/product-table.jpg" alt="Bàn Ăn Gỗ Tự Nhiên Live-Edge">
+          </div>
+          <div class="product-info-wrap">
+            <h3 class="product-title">Bàn Ăn Trestle Gỗ Óc Chó Khớp Mộng</h3>
+            <div class="product-material-pill">Gỗ Óc Chó FAS • Kích thước 240 x 95 x 75 cm</div>
+            <p class="product-desc">
+              Mặt bàn ghép từ 2 phiến gỗ tuyển vân đối xứng với chốt khóa cánh bướm bằng gỗ mun. Chân chữ Trestle chịu lực trên 500kg kết nối mộng nêm xuyên suốt.
+            </p>
+            <div class="product-meta-row">
+              <div class="product-price">38.500.000đ</div>
+              <button type="button" class="btn-add-cart" data-name="Bàn Ăn Trestle Gỗ Óc Chó Khớp Mộng" data-price="38500000">
+                Thêm Tư Vấn
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 2 -->
+        <article class="product-wood-card">
+          <div class="product-img-wrap">
+            <span class="product-tag">Điêu Khắc Công Thái Học</span>
+            <img src="assets/images/product-chair.jpg" alt="Ghế Ăn Tựa Cong Gỗ Tự Nhiên">
+          </div>
+          <div class="product-info-wrap">
+            <h3 class="product-title">Ghế Điêu Khắc Tựa Cong Tự Nhiên</h3>
+            <div class="product-material-pill">Gỗ Sồi Trắng / Óc Chó • Đệm Da Bò Ý</div>
+            <p class="product-desc">
+              Phần tựa lưng uốn cong mềm mại theo độ nghiêng cột sống người Việt. Khớp ghép mộng giấu tinh xảo, đệm bọc da bò tự nhiên êm ái thoáng khí.
+            </p>
+            <div class="product-meta-row">
+              <div class="product-price">6.200.000đ</div>
+              <button type="button" class="btn-add-cart" data-name="Ghế Điêu Khắc Tựa Cong Tự Nhiên" data-price="6200000">
+                Thêm Tư Vấn
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 3 -->
+        <article class="product-wood-card">
+          <div class="product-img-wrap">
+            <span class="product-tag">Wabi-Sabi Tối Giản</span>
+            <img src="assets/images/product-sideboard.jpg" alt="Tủ Credenza Gỗ Sồi Nan Trượt">
+          </div>
+          <div class="product-info-wrap">
+            <h3 class="product-title">Tủ Credenza Nan Trượt Gỗ Sồi Wabi-Sabi</h3>
+            <div class="product-material-pill">Gỗ Sồi Trắng Đức • 180 x 45 x 80 cm</div>
+            <p class="product-desc">
+              Cánh tủ trượt mượt mà trên rãnh gỗ tự nhiên không ray kim loại. Các khoang lưu trữ chia ngăn linh hoạt cho sách nghệ thuật và bộ đồ gốm.
+            </p>
+            <div class="product-meta-row">
+              <div class="product-price">24.800.000đ</div>
+              <button type="button" class="btn-add-cart" data-name="Tủ Credenza Nan Trượt Gỗ Sồi Wabi-Sabi" data-price="24800000">
+                Thêm Tư Vấn
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 4 -->
+        <article class="product-wood-card">
+          <div class="product-img-wrap">
+            <span class="product-tag">Không Gian Master</span>
+            <img src="assets/images/product-bed.jpg" alt="Giường Ngủ Bay Gỗ Tự Nhiên">
+          </div>
+          <div class="product-info-wrap">
+            <h3 class="product-title">Giường Bay Gỗ Tự Nhiên Headboard Da</h3>
+            <div class="product-material-pill">Gỗ Teak / Óc Chó • 200 x 220 cm</div>
+            <p class="product-desc">
+              Thiết kế giấu chân tạo hiệu ứng lơ lửng thư thái. Tựa đầu giường kết hợp gỗ phay rãnh nghệ thuật và đệm bọc êm ái, tích hợp bàn tab nổi hai bên.
+            </p>
+            <div class="product-meta-row">
+              <div class="product-price">42.000.000đ</div>
+              <button type="button" class="btn-add-cart" data-name="Giường Bay Gỗ Tự Nhiên Headboard Da" data-price="42000000">
+                Thêm Tư Vấn
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 5 -->
+        <article class="product-wood-card">
+          <div class="product-img-wrap">
+            <span class="product-tag">Thủ Công Khối Đặc</span>
+            <img src="assets/images/product-stool.jpg" alt="Ghế Đôn Bar Gỗ Nguyên Khối">
+          </div>
+          <div class="product-info-wrap">
+            <h3 class="product-title">Ghế Đôn Bar Gỗ Nguyên Khối Mộng Âm Dương</h3>
+            <div class="product-material-pill">Gỗ Tần Bì / Sồi Trắng • Cao 72 cm</div>
+            <p class="product-desc">
+              Mặt ghế phay rãnh tay cầm xách tiện dụng, các thanh giằng chân ghép mộng ngậm chặt chịu lực tuyệt hảo, phù hợp quầy bar gia đình và đảo bếp.
+            </p>
+            <div class="product-meta-row">
+              <div class="product-price">4.500.000đ</div>
+              <button type="button" class="btn-add-cart" data-name="Ghế Đôn Bar Gỗ Nguyên Khối Mộng Âm Dương" data-price="4500000">
+                Thêm Tư Vấn
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 6: Craftsmanship Card -->
+        <article class="product-wood-card" style="background:var(--color-walnut-dark); color:#fff; border-color:var(--color-amber-clay);">
+          <div class="product-img-wrap" style="height:280px;">
+            <img src="assets/images/craft-carpenter.jpg" alt="Thợ Cả Mộc Điền Đang Bào Gỗ">
+          </div>
+          <div class="product-info-wrap" style="color:#d8cec4;">
+            <h3 class="product-title" style="color:#fff;">Dịch Vụ Đo Đạc & Thiết Kế May Đo Độc Bản</h3>
+            <div class="product-material-pill" style="color:var(--color-amber-clay);">Khảo sát hiện trạng tận nơi • Bản vẽ 3D chi tiết</div>
+            <p class="product-desc" style="color:#a89d91;">
+              Bạn có kích thước phòng riêng biệt? Kiến trúc sư Mộc Điền sẽ mang mẫu gỗ thực tế tới tận công trình, đo ni đóng giày từng centimet không gian sống.
+            </p>
+            <div class="product-meta-row" style="border-color:rgba(255,255,255,0.12);">
+              <div class="product-price" style="color:#eedcc9; font-size:1.1rem;">Miễn Phí Thiết Kế</div>
+              <a href="lien-he.html" class="btn-add-cart" style="background:var(--color-amber-clay); text-decoration:none;">
+                Đặt Lịch Khảo Sát
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section: Joinery Anatomy -->
+    <section class="joinery-section">
+      <div class="joinery-wrap">
+        <div class="section-header">
+          <div class="section-kicker">Di Sản Nghề Mộc</div>
+          <h2 class="section-title">Nghệ Thuật Khớp Mộng Gỗ Không Dùng Đinh</h2>
+          <p class="section-subtitle">
+            Khác với đồ gỗ công nghiệp bắt vít nhanh chóng xuống cấp theo thời gian, mộng gỗ tự nhiên có khả năng tự co ngót và khóa chặt bền bỉ cùng tuổi thọ ngôi nhà.
+          </p>
+        </div>
+
+        <div class="joinery-grid">
+          <div class="joinery-card">
+            <div class="joinery-icon-box">🪚</div>
+            <h4>Mộng Đuôi Én (Dovetail)</h4>
+            <p>
+              Cấu trúc răng nêm khóa chặt hai chiều ngang dọc, triệt tiêu nguy cơ bung góc tủ ngăn kéo dù chứa trọng tải lớn sau hàng chục năm sử dụng.
+            </p>
+          </div>
+
+          <div class="joinery-card">
+            <div class="joinery-icon-box">📐</div>
+            <h4>Mộng Nêm Dương (Through Tenon)</h4>
+            <p>
+              Thân mộng xuyên thẳng qua chân bàn và được chêm bằng then gỗ cứng tương phản, tạo điểm nhấn cơ học độc đáo và chịu lực nén hơn 500kg.
+            </p>
+          </div>
+
+          <div class="joinery-card">
+            <div class="joinery-icon-box">🦋</div>
+            <h4>Mộng Cánh Bướm (Bowtie Key)</h4>
+            <p>
+              Khóa bướm bằng gỗ mun hoặc đồng nguyên khối có tác dụng ổn định thớ gỗ tự nhiên, biến những vết nứt nguyên sinh thành tác phẩm nghệ thuật Wabi-sabi.
+            </p>
+          </div>
+
+          <div class="joinery-card">
+            <div class="joinery-icon-box">🪵</div>
+            <h4>Mộng Âm Dương (Mortise & Tenon)</h4>
+            <p>
+              Khớp nối chuẩn mực của kiến trúc Á Đông. Hai thớ gỗ lồng ghép khít khao đến từng milimet, giúp khung bàn ghế vững chãi như một khối điêu khắc liền lạc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Estimator Studio -->
+    <section class="section" id="estimator-section">
+      <div class="section-header">
+        <div class="section-kicker">Minh Bạch Dự Toán</div>
+        <h2 class="section-title">Công Cụ Dự Toán May Đo Không Gian Gỗ Tự Nhiên</h2>
+        <p class="section-subtitle">
+          Chọn không gian và hạng mục mong muốn để tính toán nhanh ngân sách thi công với cam kết sấy chân không & hoàn thiện sơn dầu lau cao cấp.
+        </p>
+      </div>
+
+      <div class="estimator-container">
+        <div class="estimate-form-col">
+          <div class="form-group">
+            <label for="est-space" class="form-label">1. Chọn Không Gian Kiến Trúc</label>
+            <select id="est-space" class="form-select">
+              <option value="dining" selected>Không Gian Phòng Ăn (Bàn ăn & Ghế)</option>
+              <option value="living">Không Gian Phòng Khách (Sofa, Kệ TV, Bàn trà)</option>
+              <option value="bedroom">Không Gian Phòng Ngủ Master (Giường bay, Tab, Tủ áo)</option>
+              <option value="tearoom">Không Gian Phòng Trà Thiền Wabi-Sabi</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="est-wood" class="form-label">2. Tuyển Chọn Dòng Gỗ Tự Nhiên</label>
+            <select id="est-wood" class="form-select">
+              <option value="walnut" selected>Gỗ Óc Chó Bắc Mỹ (FAS Grade — Tông Socola)</option>
+              <option value="oak">Gỗ Sồi Trắng Châu Âu (Tông Vàng Sáng Thanh Lịch)</option>
+              <option value="teak">Gỗ Teak Giả Tỵ Tự Nhiên (Kháng Ẩm Tuyệt Đối)</option>
+              <option value="spalted">Gỗ Tần Bì Nu Vân (Nghệ Thuật Độc Bản)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">3. Các Hạng Mục Chế Tác Mong Muốn</label>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-top:0.6rem;">
+              <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.88rem; cursor:pointer;">
+                <input type="checkbox" class="est-item-checkbox" checked data-price="22000000"> Bàn ăn / Bàn trà chính
+              </label>
+              <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.88rem; cursor:pointer;">
+                <input type="checkbox" class="est-item-checkbox" checked data-price="12000000"> Bộ 6 ghế ăn nghệ thuật
+              </label>
+              <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.88rem; cursor:pointer;">
+                <input type="checkbox" class="est-item-checkbox" data-price="18000000"> Tủ Credenza / Kệ thấp
+              </label>
+              <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.88rem; cursor:pointer;">
+                <input type="checkbox" class="est-item-checkbox" data-price="8500000"> Ghế băng bench nguyên tấm
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="estimate-summary-box">
+          <div>
+            <h3>Dự Toán Dự Kiến</h3>
+            <div class="calc-row">
+              <span>Chất liệu gỗ:</span>
+              <strong id="est-wood-summary">Gỗ Óc Chó Bắc Mỹ</strong>
+            </div>
+            <div class="calc-row">
+              <span>Thời gian hoàn thiện:</span>
+              <strong id="est-duration-val">25 - 35 ngày chế tác</strong>
+            </div>
+            <div class="calc-row">
+              <span>Tiêu chuẩn độ ẩm:</span>
+              <strong style="color:#10b981;">&lt; 10% MC (Kiln Dry)</strong>
+            </div>
+
+            <div class="calc-row total-row">
+              <span>Tổng Ngân Sách Dự Kiến:</span>
+              <div class="calc-total-val" id="est-total-val">48.600.000đ</div>
+            </div>
+
+            <p class="estimate-guarantee-note">
+              * Dự toán đã bao gồm công thợ cả đục mộng, 3 lớp dầu lau Osmo Đức, chi phí vận chuyển và lắp đặt hoàn thiện tại nội thành TP.HCM & Hà Nội.
+            </p>
+          </div>
+
+          <button type="button" class="btn-request-calc" id="btn-request-estimate">
+            Gửi Yêu Cầu Khảo Sát & Tư Vấn Qua Zalo
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Master Artisan Story -->
+    <section class="section" style="border-top: 1px solid var(--color-border-warm);">
+      <div class="artisan-story-grid">
+        <div class="artisan-portrait-frame">
+          <img src="assets/images/architect-portrait.jpg" alt="KTS. Vũ Hoàng Minh - Sáng Lập Mộc Điền Atelier" class="artisan-portrait-img">
+          <div class="artisan-caption-pill">
+            <h5>KTS. Vũ Hoàng Minh</h5>
+            <p>Sáng Lập &amp; Giám Đốc Nghệ Thuật Mộc Điền</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-kicker">Triết Lý Nghề</div>
+          <h2 class="section-title">"Cây Đã Mất Hàng Trăm Năm Để Lớn Lên, Chúng Ta Không Thể Làm Ẩu."</h2>
+          <p class="hero-desc" style="margin-bottom:1.5rem;">
+            Tại Mộc Điền Atelier, chúng tôi tin rằng gỗ không chỉ là vật liệu nội thất, mà là một cơ thể sống mang hơi thở của rừng già. Mỗi vân mắt, mỗi đường nứt tự nhiên đều là một câu chuyện riêng biệt cần được tôn trọng thay vì bào nhẵn che giấu.
+          </p>
+          <p class="hero-desc">
+            Chúng tôi kiên định gìn giữ kỹ thuật ghép mộng mộc truyền thống không dùng đinh kim loại, bởi chúng tôi mong muốn mỗi chiếc bàn, chiếc ghế khi bàn giao sẽ ở lại cùng ngôi nhà qua nhiều thế hệ gia chủ.
+          </p>
+          <div style="margin-top:2rem;">
+            <a href="gioi-thieu.html" class="btn-primary">Tìm Hiểu Quy Trình Chế Tác</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Floating Zalo Button -->
   <aside class="floating-zalo">
-    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Zalo 0971183939">Zalo</a>
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn đồ gỗ Mộc Điền">
+      <span>💬</span> Tư Vấn Zalo 0971 183 939
+    </a>
   </aside>
 
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h3>Bán Đồ Nội thất</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Nội thất. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+  <!-- Cart Modal Overlay & Drawer -->
+  <div class="cart-modal-overlay" id="cart-modal">
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3>Danh Sách Tư Vấn</h3>
+        <button type="button" class="cart-close-btn" id="cart-close-btn">&times;</button>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Nội thất</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
-        </ul>
+      <div class="cart-items-container" id="cart-items-container">
+        <!-- Rendered dynamically -->
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+      <div class="cart-drawer-footer">
+        <div class="cart-total-line">
+          <span>Tổng Giá Trị Tạm Tính:</span>
+          <span id="cart-total-price">0đ</span>
+        </div>
+        <a href="#" class="btn-checkout-zalo" id="btn-checkout-zalo">
+          Gửi Danh Sách Cho Kiến Trúc Sư Qua Zalo
+        </a>
       </div>
     </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <h3>MỘC ĐIỀN ATELIER</h3>
+        <p>
+          Xưởng chế tác đồ gỗ tự nhiên nguyên tấm chuẩn mộng truyền thống. Tôn vinh vẻ đẹp nguyên bản của thớ gỗ tự nhiên và tinh thần kiến trúc Wabi-Sabi.
+        </p>
+        <p style="margin-top: 1rem; color: #eedcc9; font-size: 0.84rem;">
+          Mã Giao Diện: <strong>#MS101</strong> (Hệ Thống Thư Viện RackerWeb)
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tác Phẩm Gỗ</h4>
+        <ul>
+          <li><a href="san-pham.html">Bàn Ăn Live-Edge Nguyên Tấm</a></li>
+          <li><a href="san-pham.html">Ghế Điêu Khắc Tựa Cong</a></li>
+          <li><a href="san-pham.html">Tủ Credenza Wabi-Sabi</a></li>
+          <li><a href="san-pham.html">Giường Bay Master Suite</a></li>
+          <li><a href="san-pham.html">Bàn Trà Thiền Khối Đặc</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Về Chúng Tôi</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Triết Lý Mộng Truyền Thống</a></li>
+          <li><a href="gioi-thieu.html">Tiêu Chuẩn Gỗ Sấy &lt;10% MC</a></li>
+          <li><a href="gioi-thieu.html">Dầu Lau Thực Vật Osmo Đức</a></li>
+          <li><a href="lien-he.html">Quy Trình Khảo Sát Tận Nơi</a></li>
+          <li><a href="lien-he.html">Chính Sách Bảo Hành 10 Năm</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact-info">
+        <h4>Xưởng Chế Tác</h4>
+        <p>📍 Xưởng Thủ Công: Làng Nghề Gỗ Thạch Thất, Hà Nội</p>
+        <p>🏛️ Gallery Trưng Bày: Khu Đô Thị Sala, TP. Thủ Đức, TP.HCM</p>
+        <p>📞 Hotline Kỹ Thuật: 0971 183 939</p>
+        <p>💬 Tư Vấn Thiết Kế Zalo: 0971 183 939 (24/7)</p>
+      </div>
+    </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Bán Đồ Nội thất. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <div>&copy; 2026 MỘC ĐIỀN ATELIER. Bản quyền thuộc về Xưởng Thủ Công & Kiến Trúc Gỗ Tự Nhiên.</div>
+      <div>Designed for RackerWeb High-End Architecture & Interior Portfolio.</div>
     </div>
   </footer>
 

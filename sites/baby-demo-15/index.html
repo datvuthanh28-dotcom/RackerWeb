@@ -1,120 +1,399 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baby demo 15 | Y tế Official Demo</title>
-  <meta name="description" content="Tận tâm chăm sóc sức khỏe cộng đồng & Dược phẩm chính hãng">
+  <title>PETIT CARE | Trung Tâm Nhi Khoa & Tiêm Chủng Tiêu Chuẩn Quốc Tế</title>
+  <meta name="description" content="Phòng khám Nhi Khoa Petit Care: Khám sức khỏe tổng quát trẻ sơ sinh, trung tâm tiêm chủng vắc-xin nhập khẩu Pháp/Bỉ, tư vấn dinh dưỡng và theo dõi tăng trưởng chuẩn WHO.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- Navigation back to theme library -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS15</strong> thuộc Thư Viện Theme.</span>
+    <span>Giao diện y tế nhi khoa <strong>#MS15</strong> thuộc Thư Viện Theme RackerWeb.</span>
     <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
   </div>
 
+  <!-- Top Clinic Status Bar -->
+  <div class="top-clinic-bar">
+    <div class="clinic-status-left">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span class="clinic-pulse-dot"></span>
+        <span>Phòng Khám Đang Mở Cửa (07:30 - 20:00 Hàng Ngày)</span>
+      </div>
+      <div>🌱 Khu vui chơi vô trùng & Phòng cho mẹ bé riêng biệt</div>
+    </div>
+    <div class="clinic-contact-right">
+      <a href="tel:0971183939" class="clinic-hotline">🚨 Cấp cứu & Tư vấn Nhi khoa: 0971.18.3939</a>
+      <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" style="color: #0284c7; font-weight: 700;">Zalo Bác Sĩ Trực</a>
+    </div>
+  </div>
+
+  <!-- Main Header -->
   <header>
     <div class="header-wrap">
-      <div class="logo">
-        Baby demo 15
-        <span>MS15</span>
-      </div>
+      <a href="index.html" class="logo-container">
+        <div class="logo-icon-emblem">🍼</div>
+        <div class="logo-brand-info">
+          <div class="logo-brand-title">PETIT <span>CARE</span></div>
+          <div class="logo-brand-sub">Pediatrics & Vaccination</div>
+        </div>
+      </a>
+
       <nav>
         <ul>
           <li><a href="index.html" class="active">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Sản phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+          <li><a href="san-pham.html">Gói Tiêm Chủng & Khám</a></li>
+          <li><a href="gioi-thieu.html">Cơ Sở & Bác Sĩ</a></li>
+          <li><a href="lien-he.html">Đặt Lịch Hẹn</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
-        <button type="button" class="cart-trigger">Giỏ Hàng (<span id="cart-count">0</span>)</button>
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <button type="button" class="btn-booking-cart">
+          <span>Mũi Tiêm Đã Chọn</span>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+        <a href="lien-he.html" class="btn-appointment">
+          <span>📅 Đặt Lịch Khám Cho Bé</span>
+        </a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Tận tâm chăm sóc sức khỏe cộng đồng & Dược phẩm chính hãng</h1>
-        <p>Trải nghiệm dịch vụ chuyên nghiệp, chuẩn mực thiết kế tối ưu và công nghệ tiên tiến nhất từ Baby demo 15.</p>
-        <div class="hero-btns">
-          <a href="san-pham.html" class="btn-primary">Khám Phá Ngay</a>
-          <a href="lien-he.html" class="btn-outline">Nhận Tư Vấn</a>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-tag">
+            <span>✨ Chăm Sóc Toàn Diện Cho Bé Yêu • Tiêu Chuẩn Quốc Tế</span>
+          </div>
+          <h1 class="hero-title">
+            Nơi Yêu Thương Đồng Hành Cùng <br>
+            <span class="highlight-blue">Sự Phát Triển Khỏe Mạnh</span> Của Bé
+          </h1>
+          <p class="hero-desc">
+            PETIT CARE mang đến không gian phòng khám thân thiện không mùi thuốc, vắc-xin bảo quản dây chuyền lạnh chuẩn GSP và đội ngũ bác sĩ chuyên khoa Nhi đầu ngành giàu thấu cảm, giúp ba mẹ hoàn toàn an tâm trong từng cột mốc khôn lớn của con.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="lien-he.html" class="btn-hero-primary">
+              <span>📅 Đặt Lịch Hẹn Khám Nhanh</span>
+            </a>
+            <a href="san-pham.html" class="btn-hero-outline">
+              <span>💉 Tra Cứu Gói Tiêm Trọn Gói</span>
+            </a>
+          </div>
+
+          <div class="hero-stats-bar">
+            <div class="stat-box">
+              <div class="stat-num">100<span>%</span></div>
+              <div class="stat-text">Vắc-xin Nhập Khẩu Pháp, Bỉ, Mỹ</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">15<span>+</span></div>
+              <div class="stat-text">Bác Sĩ CKI, CKII Nhi Đồng</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">50.000<span>+</span></div>
+              <div class="stat-text">Gia Đình Tin Chọn Mỗi Năm</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="hero-image">
-        <img src="assets/banner.webp" alt="Baby demo 15 Preview Banner">
+
+        <div class="hero-image-wrap">
+          <div class="hero-image-frame">
+            <img src="assets/images/hero-pediatric.jpg" alt="Bác sĩ nhi khoa kiểm tra sức khỏe bé sơ sinh">
+          </div>
+          <div class="hero-floating-card">
+            <div class="card-icon-badge">🧸</div>
+            <div class="card-badge-info">
+              <h5>Không Gian Thân Thiện Trẻ Em</h5>
+              <p>Phòng khám đầy ắp đồ chơi, bé không sợ tiêm!</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-title">
-        <h2>Thuốc Kê Đơn & Sản Phẩm Sức Khỏe</h2>
-        <p>Lựa chọn tiêu biểu được khách hàng tin tưởng và đánh giá cao nhất</p>
+    <!-- INTERACTIVE CHILD IMMUNIZATION SCHEDULE ENGINE -->
+    <section class="immunization-section">
+      <div class="section-header">
+        <span class="section-tag">Interactive Schedule</span>
+        <h2 class="section-title">Lịch Tiêm Chủng Tự Động Theo Tháng Tuổi</h2>
+        <p class="section-sub">
+          Chọn độ tuổi của bé để xem phác đồ mũi tiêm cần thiết, xuất xứ vắc-xin và giá niêm yết minh bạch.
+        </p>
       </div>
 
-      <div class="grid">
-        <div class="card">
-          <span class="card-badge">Chính hãng</span>
-          <h3>Viên Uống Bổ Sung Vitamin Tổng Hợp</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">350.000đ</div>
-          <button type="button" class="btn-buy" data-name="Viên Uống Bổ Sung Vitamin Tổng Hợp">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Bảo hành 2 năm</span>
-          <h3>Máy Đo Huyết Áp Điện Tử Bắp Tay</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">890.000đ</div>
-          <button type="button" class="btn-buy" data-name="Máy Đo Huyết Áp Điện Tử Bắp Tay">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Nhập khẩu</span>
-          <h3>Dầu Cá Omega-3 Tinh Khiết</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">420.000đ</div>
-          <button type="button" class="btn-buy" data-name="Dầu Cá Omega-3 Tinh Khiết">Thêm Giỏ Hàng</button>
-        </div>        <div class="card">
-          <span class="card-badge">Cần thiết</span>
-          <h3>Bộ Hộp Sơ Cứu Gia Đình Chuẩn Y Tế</h3>
-          <p style="color: #64748b; font-size: 0.85rem;">Sản phẩm chính hãng, bảo hành toàn diện và giao hàng nhanh chóng.</p>
-          <div class="card-price">260.000đ</div>
-          <button type="button" class="btn-buy" data-name="Bộ Hộp Sơ Cứu Gia Đình Chuẩn Y Tế">Thêm Giỏ Hàng</button>
+      <div class="vaccine-tool-wrap">
+        <div class="age-milestone-tabs">
+          <button type="button" class="age-tab-btn" data-age="0m">Sơ sinh (0 tháng)</button>
+          <button type="button" class="age-tab-btn active" data-age="2m">2 Tháng tuổi</button>
+          <button type="button" class="age-tab-btn" data-age="3m">3 Tháng tuổi</button>
+          <button type="button" class="age-tab-btn" data-age="4m">4 Tháng tuổi</button>
+          <button type="button" class="age-tab-btn" data-age="6m">6 Tháng tuổi</button>
+          <button type="button" class="age-tab-btn" data-age="9m">9 Tháng tuổi</button>
+          <button type="button" class="age-tab-btn" data-age="12m">12 Tháng tuổi</button>
+          <button type="button" class="age-tab-btn" data-age="18m">18 - 24 Tháng</button>
         </div>
+
+        <div class="vaccine-card-grid" id="vaccine-cards-container">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO CHILD GROWTH PERCENTILE CHECKER -->
+    <section class="growth-checker-section">
+      <div class="growth-checker-card">
+        <div class="growth-text-col">
+          <span class="section-tag">WHO Growth Calculator</span>
+          <h3>Kiểm Tra Chiều Cao & Cân Nặng Chuẩn WHO</h3>
+          <p>
+            Nhập chỉ số của bé để so sánh với đường cong phát triển tiêu chuẩn của Tổ chức Y tế Thế giới (WHO). Bác sĩ Petit Care sẽ đưa ra lời khuyên dinh dưỡng ngay lập tức!
+          </p>
+
+          <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem;">
+            <div style="background: #ffffff; padding: 0.75rem 1.25rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+              <span style="font-weight: 800; color: var(--primary-blue);">100% Khách quan</span>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">Số liệu thống kê WHO</div>
+            </div>
+            <div style="background: #ffffff; padding: 0.75rem 1.25rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+              <span style="font-weight: 800; color: var(--accent-mint);">Tư vấn 1 - 1</span>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">Với Chuyên gia Dinh dưỡng</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="growth-input-form">
+          <form id="growth-calc-form">
+            <div class="form-input-grid">
+              <div>
+                <label class="input-label" for="growth-gender">Giới tính của bé</label>
+                <select id="growth-gender" class="input-field">
+                  <option value="boy">Bé Trai</option>
+                  <option value="girl">Bé Gái</option>
+                </select>
+              </div>
+              <div>
+                <label class="input-label" for="growth-age">Tuổi của bé (Tháng)</label>
+                <input type="number" id="growth-age" class="input-field" placeholder="VD: 6" min="1" max="60" required>
+              </div>
+            </div>
+
+            <div class="form-input-grid">
+              <div>
+                <label class="input-label" for="growth-weight">Cân nặng hiện tại (kg)</label>
+                <input type="number" step="0.1" id="growth-weight" class="input-field" placeholder="VD: 7.9" required>
+              </div>
+              <div>
+                <label class="input-label" for="growth-height">Chiều dài / Chiều cao (cm)</label>
+                <input type="number" step="0.5" id="growth-height" class="input-field" placeholder="VD: 67.5" required>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-calc-growth">
+              🔍 Đánh Giá Chỉ Số Ngay
+            </button>
+          </form>
+
+          <div class="growth-result-box" id="growth-result"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIALIST CLINICAL DEPARTMENTS -->
+    <section class="departments-section">
+      <div class="section-header">
+        <span class="section-tag">Clinical Services</span>
+        <h2 class="section-title">Các Chuyên Khoa Mũi Nhọn Tại Petit Care</h2>
+        <p class="section-sub">
+          Đồng hành cùng bé từ giai đoạn sơ sinh nhũ nhi cho đến tuổi học đường với hệ sinh thái y tế toàn diện.
+        </p>
+      </div>
+
+      <div class="dept-grid">
+        <!-- Dept 1 -->
+        <div class="dept-card">
+          <div class="dept-media">
+            <img src="assets/images/service-general-pediatrics.jpg" alt="Khám tổng quát và chăm sóc sơ sinh">
+          </div>
+          <div class="dept-body">
+            <h3 class="dept-title">Khám Sơ Sinh & Nhi Tổng Quát</h3>
+            <p class="dept-desc">
+              Khám và điều trị các bệnh lý hô hấp, tiêu hóa, tai mũi họng, sốt phát ban và sàng lọc dị tật bẩm sinh sơ sinh với quy trình nhẹ nhàng, không gây đau.
+            </p>
+            <a href="san-pham.html" class="dept-link">Xem chi tiết gói khám &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Dept 2 -->
+        <div class="dept-card">
+          <div class="dept-media">
+            <img src="assets/images/service-vaccination.jpg" alt="Tiêm chủng vắc xin trẻ em">
+          </div>
+          <div class="dept-body">
+            <h3 class="dept-title">Trung Tâm Tiêm Chủng Quốc Tế</h3>
+            <p class="dept-desc">
+              Hệ thống bảo quản vắc-xin âm sâu đạt chuẩn GSP. Khám sàng lọc trước tiêm kỹ càng, kỹ thuật tiêm êm giảm đau tối đa và theo dõi phản ứng sau tiêm 30 phút.
+            </p>
+            <a href="san-pham.html" class="dept-link">Xem bảng giá vắc-xin &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Dept 3 -->
+        <div class="dept-card">
+          <div class="dept-media">
+            <img src="assets/images/service-nutrition.jpg" alt="Tư vấn dinh dưỡng và biếng ăn">
+          </div>
+          <div class="dept-body">
+            <h3 class="dept-title">Tư Vấn Dinh Dưỡng & Biếng Ăn</h3>
+            <p class="dept-desc">
+              Phác đồ dinh dưỡng cá thể hóa cho trẻ biếng ăn, chậm tăng cân, còi xương hoặc béo phì. Hướng dẫn thực đơn ăn dặm khoa học cho mẹ theo từng giai đoạn.
+            </p>
+            <a href="san-pham.html" class="dept-link">Xem gói dinh dưỡng &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Dept 4 -->
+        <div class="dept-card">
+          <div class="dept-media">
+            <img src="assets/images/service-development.jpg" alt="Theo dõi phát triển tâm vận động">
+          </div>
+          <div class="dept-body">
+            <h3 class="dept-title">Tâm Vận Động & Ngôn Ngữ Sớm</h3>
+            <p class="dept-desc">
+              Đánh giá các mốc phát triển lẫy, ngồi, bò, đi và giao tiếp ngôn ngữ. Phát hiện sớm và can thiệp kịp thời các dấu hiệu chậm nói hoặc rối loạn phổ tự kỷ.
+            </p>
+            <a href="san-pham.html" class="dept-link">Xem can thiệp sớm &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCTORS DIRECTORY -->
+    <section class="doctors-section">
+      <div class="section-header">
+        <span class="section-tag">Our Pediatricians</span>
+        <h2 class="section-title">Đội Ngũ Bác Sĩ Nhi Khoa Giàu Kinh Nghiệm</h2>
+        <p class="section-sub">
+          Những người thầy thuốc tận tâm, giàu tình yêu thương trẻ thơ và luôn sẵn sàng lắng nghe mọi băn khoăn của cha mẹ.
+        </p>
+      </div>
+
+      <div class="doctors-grid">
+        <div class="doctor-profile-card">
+          <div class="doctor-avatar">
+            <img src="assets/images/doctor-pediatrician-1.jpg" alt="TS. BS. Trần Hoàng Yến">
+          </div>
+          <div class="doctor-bio">
+            <h4>TS. BS. Trần Hoàng Yến</h4>
+            <div class="doctor-role">Trưởng Khoa Sơ Sinh & Miễn Dịch Dị Ứng Nhi</div>
+            <p class="doctor-desc">
+              Hơn 16 năm kinh nghiệm điều trị tại Bệnh viện Nhi Đồng 1. Tu nghiệp chuyên sâu về Hồi sức cấp cứu sơ sinh và Dị ứng thức ăn tại Đại học Y khoa Paris Descartes (Pháp).
+            </p>
+            <button type="button" class="btn-book-doctor" onclick="window.location.href='lien-he.html?doctor=HoangYen'">
+              📅 Đặt Lịch Khám Cùng Bác Sĩ Yến
+            </button>
+          </div>
+        </div>
+
+        <div class="doctor-profile-card">
+          <div class="doctor-avatar">
+            <img src="assets/images/doctor-pediatrician-2.jpg" alt="ThS. BS. Lê Minh Quân">
+          </div>
+          <div class="doctor-bio">
+            <h4>ThS. BS. Lê Minh Quân</h4>
+            <div class="doctor-role">Chuyên Gia Hô Hấp Nhi & Tiêm Chủng</div>
+            <p class="doctor-desc">
+              Nguyên Bác sĩ điều trị Khoa Hô hấp Bệnh viện Nhi Đồng TP.HCM. Bác sĩ được hàng ngàn ba mẹ yêu mến nhờ phong cách khám nhẹ nhàng, không lạm dụng kháng sinh.
+            </p>
+            <button type="button" class="btn-book-doctor" onclick="window.location.href='lien-he.html?doctor=MinhQuan'">
+              📅 Đặt Lịch Khám Cùng Bác Sĩ Quân
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 24/7 EMERGENCY & ADVICE BANNER -->
+    <section class="emergency-banner-section">
+      <div class="emergency-box">
+        <div class="emergency-text">
+          <h3>Bé Bị Sốt Cao, Co Giật Hoặc Khó Thở Nửa Đêm?</h3>
+          <p>
+            Đường dây nóng bác sĩ Nhi khoa Petit Care trực 24/7 để hướng dẫn sơ cứu khẩn cấp từ xa và chuẩn bị phòng tiếp đón ưu tiên tại cơ sở gần nhất.
+          </p>
+        </div>
+        <a href="tel:0971183939" class="btn-call-emergency">
+          <span>🚨 Gọi Bác Sĩ Cấp Cứu: 0971.18.3939</span>
+        </a>
       </div>
     </section>
   </main>
 
-  <aside class="floating-zalo">
-    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Zalo 0971183939">Zalo</a>
-  </aside>
-
+  <!-- Comforting Clinic Footer -->
   <footer>
     <div class="footer-wrap">
-      <div>
-        <h3>Baby demo 15</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Y tế. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+      <div class="footer-brand">
+        <h4>PETIT CARE PEDIATRICS CLINIC</h4>
+        <p>
+          Hệ thống phòng khám chuyên khoa Nhi & Trung tâm Tiêm chủng Quốc tế. Cam kết đồng hành cùng ba mẹ trên hành trình chăm sóc những thiên thần nhỏ lớn khôn khỏe mạnh và tràn đầy hạnh phúc.
+        </p>
+        <div style="font-size: 0.82rem; color: #64748b;">
+          Giấy phép hoạt động khám chữa bệnh số: 08425/HCM-GPHĐ cấp bởi Sở Y Tế TP.HCM.
+        </div>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Sản phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+
+      <div class="footer-col">
+        <h5>Chuyên Khoa Nhi</h5>
+        <ul>
+          <li><a href="san-pham.html">Khám Sơ Sinh & Nhũ Nhi</a></li>
+          <li><a href="san-pham.html">Gói Tiêm Chủng 0 - 2 Tuổi</a></li>
+          <li><a href="san-pham.html">Khám Hô Hấp & Dị Ứng</a></li>
+          <li><a href="san-pham.html">Tư Vấn Dinh Dưỡng</a></li>
+          <li><a href="san-pham.html">Đo Chỉ Số Tăng Trưởng</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col">
+        <h5>Về Phòng Khám</h5>
+        <ul>
+          <li><a href="gioi-thieu.html">Cơ Sở Vật Chất</a></li>
+          <li><a href="gioi-thieu.html">Quy Trình Tiêm Chủng</a></li>
+          <li><a href="gioi-thieu.html">Đội Ngũ Bác Sĩ</a></li>
+          <li><a href="lien-he.html">Bảng Giá Dịch Vụ</a></li>
+          <li><a href="lien-he.html">Chính Sách Hoàn Mũi Tiêm</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Thông Tin Liên Hệ</h5>
+        <ul>
+          <li>📍 45 Phổ Quang, Phường 2, Tân Bình, TP.HCM</li>
+          <li>📞 Tổng đài đặt lịch: 0971.18.3939</li>
+          <li>🚨 Hotline khẩn cấp 24/7: 0971.18.3939</li>
+          <li>⏰ Giờ làm việc: 07:30 - 20:00 (Cả Thứ Bảy & Chủ Nhật)</li>
+        </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Baby demo 15. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <div>
+        &copy; 2026 PETIT CARE CLINIC & PEDIATRICS. Bản quyền thiết kế y tế độc quyền thuộc Thư Viện Theme RackerWeb.
+      </div>
+      <div>
+        Kiến trúc Frontend tĩnh GitHub Pages • Tải nhanh & Bảo mật cao
+      </div>
     </div>
   </footer>
+
+  <!-- Floating Zalo -->
+  <aside class="floating-zalo">
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Bác sĩ Nhi Zalo 0971183939">Zalo</a>
+  </aside>
 
   <script src="js/app.js"></script>
 </body>

@@ -1,81 +1,264 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giới Thiệu | Baby demo 15</title>
+  <title>Cơ Sở Vật Chất & Đội Ngũ Bác Sĩ Nhi | PETIT CARE</title>
+  <meta name="description" content="Tìm hiểu không gian khám vô trùng thân thiện, hệ thống bảo quản vắc-xin GSP âm sâu và đội ngũ bác sĩ chuyên khoa Nhi đầu ngành tại Phòng khám Petit Care.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Navigation back to theme library -->
   <div class="library-return-bar">
-    <span>Giao diện mẫu <strong>#MS15</strong>.</span>
+    <span>Giao diện y tế nhi khoa <strong>#MS15</strong> thuộc Thư Viện Theme RackerWeb.</span>
     <a href="../../index.html">&larr; Quay lại Thư Viện Theme Library</a>
   </div>
 
+  <!-- Top Clinic Status Bar -->
+  <div class="top-clinic-bar">
+    <div class="clinic-status-left">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span class="clinic-pulse-dot"></span>
+        <span>Phòng Khám Đang Mở Cửa (07:30 - 20:00 Hàng Ngày)</span>
+      </div>
+      <div>🌱 Khu vui chơi vô trùng & Phòng cho mẹ bé riêng biệt</div>
+    </div>
+    <div class="clinic-contact-right">
+      <a href="tel:0971183939" class="clinic-hotline">🚨 Cấp cứu & Tư vấn Nhi khoa: 0971.18.3939</a>
+      <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" style="color: #0284c7; font-weight: 700;">Zalo Bác Sĩ Trực</a>
+    </div>
+  </div>
+
+  <!-- Main Header -->
   <header>
     <div class="header-wrap">
-      <div class="logo">Baby demo 15 <span>MS15</span></div>
+      <a href="index.html" class="logo-container">
+        <div class="logo-icon-emblem">🍼</div>
+        <div class="logo-brand-info">
+          <div class="logo-brand-title">PETIT <span>CARE</span></div>
+          <div class="logo-brand-sub">Pediatrics & Vaccination</div>
+        </div>
+      </a>
+
       <nav>
         <ul>
           <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Sản phẩm</a></li>
-          <li><a href="gioi-thieu.html" class="active">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+          <li><a href="san-pham.html">Gói Tiêm Chủng & Khám</a></li>
+          <li><a href="gioi-thieu.html" class="active">Cơ Sở & Bác Sĩ</a></li>
+          <li><a href="lien-he.html">Đặt Lịch Hẹn</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
-        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-zalo">Zalo: 0971183939</a>
+        <button type="button" class="btn-booking-cart">
+          <span>Mũi Tiêm Đã Chọn</span>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+        <a href="lien-he.html" class="btn-appointment">
+          <span>📅 Đặt Lịch Khám Cho Bé</span>
+        </a>
       </div>
     </div>
   </header>
 
-  <div class="subpage-header">
-    <h1>Về Chúng Tôi — Baby demo 15</h1>
-    <p>Hành trình khẳng định uy tín và chất lượng dẫn đầu trong lĩnh vực Y tế</p>
+  <!-- Subpage Banner -->
+  <div class="subpage-banner">
+    <h1>Cơ Sở Y Tế Thân Thiện & Đội Ngũ Bác Sĩ Tận Tâm</h1>
+    <p>Khám phá môi trường y tế không mùi thuốc, nơi mỗi đứa trẻ được chăm sóc với sự ân cần, tôn trọng và tình yêu thương vô điều kiện.</p>
   </div>
 
-  <div class="subpage-content">
-    <p style="margin-bottom: 1.5rem; font-size: 1.05rem;"><strong>Baby demo 15</strong> tự hào là đối tác tin cậy, mang đến cho quý khách hàng các sản phẩm và dịch vụ Y tế đạt tiêu chuẩn cao nhất. Với triết lý lấy sự hài lòng của khách hàng làm trọng tâm, chúng tôi không ngừng đổi mới công nghệ và quy trình phục vụ.</p>
-    <div style="background: var(--surface); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
-      <h3 style="margin-bottom: 1rem; color: var(--primary);">Giá Trị Cốt Lõi</h3>
-      <ul style="padding-left: 1.25rem; line-height: 2;">
-        <li><strong>Chất Lượng Vượt Trội:</strong> Mọi chi tiết đều được hoàn thiện tỉ mỉ và kiểm định nghiêm ngặt.</li>
-        <li><strong>Tận Tâm & Minh Bạch:</strong> Tư vấn trung thực, báo giá rõ ràng, không phát sinh chi phí ẩn.</li>
-        <li><strong>Đồng Hành Dài Lâu:</strong> Hỗ trợ kỹ thuật và chăm sóc khách hàng 24/7 qua số Hotline Zalo 0971183939.</li>
-      </ul>
-    </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="lien-he.html" class="btn-primary">Liên Hệ Ngay Với Chúng Tôi</a>
-    </div>
-  </div>
+  <main style="max-width: 1300px; margin: 3.5rem auto 5rem; padding: 0 1.5rem;">
+    <!-- Story & Philosophy -->
+    <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3.5rem; align-items: center; margin-bottom: 5rem;">
+      <div>
+        <span class="section-tag">Triết Lý Chăm Sóc</span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: var(--text-main); margin-bottom: 1.25rem; line-height: 1.25;">
+          "Khám Bệnh Nhẹ Nhàng — Bé Không Sợ Tiêm, Mẹ Thêm Yên Lòng"
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1.25rem;">
+          Được sáng lập bởi các bác sĩ từng nhiều năm công tác tại Bệnh viện Nhi Đồng, PETIT CARE thấu hiểu sâu sắc nỗi âu lo của cha mẹ mỗi khi con ốm và sự sợ hãi của trẻ thơ khi nhìn thấy áo blouse trắng.
+        </p>
+        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 2rem;">
+          Chính vì vậy, chúng tôi tái định nghĩa hoàn toàn trải nghiệm đi khám: từ thiết kế phòng khám ngập tràn ánh sáng tự nhiên, đồ chơi phát triển trí tuệ được khử khuẩn tia cực tím liên tục, cho đến kỹ thuật tiêm êm giảm đau độc quyền và nguyên tắc hạn chế tối đa việc lạm dụng kháng sinh.
+        </p>
 
-  
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+          <div style="background: #ffffff; padding: 1.25rem; border-radius: 16px; border: 1px solid var(--border-subtle); border-left: 4px solid var(--primary-blue);">
+            <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--primary-blue);">2-8°C</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">Hệ thống tủ lạnh GSP bảo quản vắc-xin tự động</div>
+          </div>
+          <div style="background: #ffffff; padding: 1.25rem; border-radius: 16px; border: 1px solid var(--border-subtle); border-left: 4px solid var(--accent-coral);">
+            <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--accent-coral);">99.2%</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">Tỷ lệ trẻ không quấy khóc trong lúc tiêm chủng</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft); border: 4px solid #ffffff;">
+        <img src="assets/images/service-general-pediatrics.jpg" alt="Bác sĩ kiểm tra bé tại phòng khám" style="width: 100%; height: 420px; object-fit: cover;">
+      </div>
+    </div>
+
+    <!-- 4 Pillars of Standard -->
+    <div class="section-header">
+      <span class="section-tag">Safety Standards</span>
+      <h2 class="section-title">4 Tiêu Chuẩn Vàng Vận Hành Tại Petit Care</h2>
+      <p class="section-sub">Mỗi chi tiết nhỏ đều được tính toán kỹ lưỡng vì sức khỏe và sự an toàn tuyệt đối của trẻ sơ sinh và trẻ nhỏ.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 5rem;">
+      <div style="background: #ffffff; border-radius: 16px; padding: 1.75rem; border: 1px solid var(--border-subtle); box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+        <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">❄️</div>
+        <h4 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">Dây Chuyền Lạnh GSP</h4>
+        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+          Tủ bảo quản vắc-xin Haier Biomedical chuyên dụng có pin lưu điện 72 giờ và cảm biến nhiệt độ cảnh báo tin nhắn tức thời nếu dao động vượt ngưỡng 2-8°C.
+        </p>
+      </div>
+
+      <div style="background: #ffffff; border-radius: 16px; padding: 1.75rem; border: 1px solid var(--border-subtle); box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+        <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">🧸</div>
+        <h4 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">Khu Chơi Vô Trùng</h4>
+        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+          Toàn bộ sàn xốp kháng khuẩn, sách truyện và đồ chơi giáo dục được xông khử khuẩn bằng tia UV-C định kỳ 2 giờ/lần để ngăn chặn hoàn toàn nguy cơ lây nhiễm chéo.
+        </p>
+      </div>
+
+      <div style="background: #ffffff; border-radius: 16px; padding: 1.75rem; border: 1px solid var(--border-subtle); box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+        <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">💉</div>
+        <h4 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">Kỹ Thuật Tiêm Giảm Đau</h4>
+        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+          Điều dưỡng được đào tạo kỹ năng đánh lạc hướng tâm lý, dùng kim siêu mảnh nhập khẩu và xịt tê làm mát bề mặt da, giúp bé chỉ cảm thấy như một vết kiến cắn nhẹ.
+        </p>
+      </div>
+
+      <div style="background: #ffffff; border-radius: 16px; padding: 1.75rem; border: 1px solid var(--border-subtle); box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+        <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">🛡️</div>
+        <h4 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">Cấp Cứu Phản Vệ Chuẩn</h4>
+        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+          Phòng theo dõi sau tiêm 30 phút đầy đủ tiện nghi với bình oxy, máy hút đờm nhớt và phác đồ cấp cứu sốc phản vệ theo chuẩn Thông tư 51 của Bộ Y Tế.
+        </p>
+      </div>
+    </div>
+
+    <!-- Doctors Full Roster -->
+    <div class="section-header">
+      <span class="section-tag">Medical Team</span>
+      <h2 class="section-title">Hội Đồng Cố Vấn & Bác Sĩ Chuyên Khoa</h2>
+      <p class="section-sub">Đội ngũ bác sĩ phụ trách chuyên môn trực tiếp tại phòng khám.</p>
+    </div>
+
+    <div class="doctors-grid" style="margin-bottom: 5rem;">
+      <div class="doctor-profile-card">
+        <div class="doctor-avatar">
+          <img src="assets/images/doctor-pediatrician-1.jpg" alt="TS. BS. Trần Hoàng Yến">
+        </div>
+        <div class="doctor-bio">
+          <h4>TS. BS. Trần Hoàng Yến</h4>
+          <div class="doctor-role">Trưởng Khoa Sơ Sinh & Miễn Dịch Dị Ứng Nhi</div>
+          <p class="doctor-desc">
+            Tiến sĩ Y khoa Đại học Y Dược TP.HCM. Hơn 16 năm công tác tại Bệnh viện Nhi Đồng 1. Tác giả nhiều công trình nghiên cứu về sàng lọc bất dung nạp lactose và dị ứng đạm sữa bò ở trẻ sơ sinh.
+          </p>
+          <div style="font-size: 0.82rem; color: var(--primary-blue); font-weight: 700;">Lịch khám: Thứ 2, 4, 6, Sáng Chủ Nhật</div>
+        </div>
+      </div>
+
+      <div class="doctor-profile-card">
+        <div class="doctor-avatar">
+          <img src="assets/images/doctor-pediatrician-2.jpg" alt="ThS. BS. Lê Minh Quân">
+        </div>
+        <div class="doctor-bio">
+          <h4>ThS. BS. Lê Minh Quân</h4>
+          <div class="doctor-role">Chuyên Gia Hô Hấp Nhi & Tiêm Chủng Quốc Tế</div>
+          <p class="doctor-desc">
+            Thạc sĩ Nhi khoa Bệnh viện Nhi Đồng TP.HCM. Chuyên gia tư vấn phòng ngừa hen phế quản, viêm tiểu phế quản và xây dựng phác đồ tiêm chủng cá nhân hóa cho trẻ sinh non nhẹ cân.
+          </p>
+          <div style="font-size: 0.82rem; color: var(--primary-blue); font-weight: 700;">Lịch khám: Thứ 3, 5, 7, Chiều Chủ Nhật</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Playroom and Child Comfort Environment -->
+    <div style="background: #ffffff; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); padding: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+      <div>
+        <span class="section-tag">Child-Friendly Zone</span>
+        <h3 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--text-main); margin-bottom: 1rem;">
+          Không Gian Khám Như Ngôi Nhà Thứ Hai Của Bé
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem;">
+          Chúng tôi trang bị phòng thay tã ấm áp với máy sưởi khăn ướt, phòng cho bé bú riêng tư có ghế tựa êm ái cho mẹ, và góc vui chơi sáng tạo với các khối lego lớn giúp bé quên đi căng thẳng khi chờ đến lượt khám.
+        </p>
+        <a href="lien-he.html" class="btn-hero-primary">
+          <span>📅 Đặt Lịch Hẹn Trực Tuyến Ngay</span>
+        </a>
+      </div>
+
+      <div style="border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-soft);">
+        <img src="assets/images/clinic-playroom.jpg" alt="Góc đồ chơi trẻ em sáng tạo tại phòng khám" style="width: 100%; height: 320px; object-fit: cover;">
+      </div>
+    </div>
+  </main>
+
+  <!-- Comforting Clinic Footer -->
   <footer>
     <div class="footer-wrap">
-      <div>
-        <h3>Baby demo 15</h3>
-        <p style="color: #64748b; margin-top: 0.5rem;">Thương hiệu hàng đầu ngành Y tế. Cam kết uy tín, chất lượng và dịch vụ tận tâm.</p>
+      <div class="footer-brand">
+        <h4>PETIT CARE PEDIATRICS CLINIC</h4>
+        <p>
+          Hệ thống phòng khám chuyên khoa Nhi & Trung tâm Tiêm chủng Quốc tế. Cam kết đồng hành cùng ba mẹ trên hành trình chăm sóc những thiên thần nhỏ lớn khôn khỏe mạnh và tràn đầy hạnh phúc.
+        </p>
+        <div style="font-size: 0.82rem; color: #64748b;">
+          Giấy phép hoạt động khám chữa bệnh số: 08425/HCM-GPHĐ cấp bởi Sở Y Tế TP.HCM.
+        </div>
       </div>
-      <div>
-        <h4>Liên Kết</h4>
-        <ul style="list-style: none; margin-top: 0.5rem; line-height: 1.8;">
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="san-pham.html">Sản phẩm</a></li>
-          <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-          <li><a href="lien-he.html">Liên Hệ</a></li>
+
+      <div class="footer-col">
+        <h5>Chuyên Khoa Nhi</h5>
+        <ul>
+          <li><a href="san-pham.html">Khám Sơ Sinh & Nhũ Nhi</a></li>
+          <li><a href="san-pham.html">Gói Tiêm Chủng 0 - 2 Tuổi</a></li>
+          <li><a href="san-pham.html">Khám Hô Hấp & Dị Ứng</a></li>
+          <li><a href="san-pham.html">Tư Vấn Dinh Dưỡng</a></li>
+          <li><a href="san-pham.html">Đo Chỉ Số Tăng Trưởng</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Hotline Hỗ Trợ</h4>
-        <p style="margin-top: 0.5rem;">Zalo: <a href="https://zalo.me/0971183939" style="color: #0068ff; font-weight: 700;">0971183939</a></p>
-        <p>Hỗ trợ 24/7 trên toàn quốc.</p>
+
+      <div class="footer-col">
+        <h5>Về Phòng Khám</h5>
+        <ul>
+          <li><a href="gioi-thieu.html">Cơ Sở Vật Chất</a></li>
+          <li><a href="gioi-thieu.html">Quy Trình Tiêm Chủng</a></li>
+          <li><a href="gioi-thieu.html">Đội Ngũ Bác Sĩ</a></li>
+          <li><a href="lien-he.html">Bảng Giá Dịch Vụ</a></li>
+          <li><a href="lien-he.html">Chính Sách Hoàn Mũi Tiêm</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Thông Tin Liên Hệ</h5>
+        <ul>
+          <li>📍 45 Phổ Quang, Phường 2, Tân Bình, TP.HCM</li>
+          <li>📞 Tổng đài đặt lịch: 0971.18.3939</li>
+          <li>🚨 Hotline khẩn cấp 24/7: 0971.18.3939</li>
+          <li>⏰ Giờ làm việc: 07:30 - 20:00 (Cả Thứ Bảy & Chủ Nhật)</li>
+        </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
-      &copy; 2026 Baby demo 15. Bản quyền giao diện được thiết kế độc lập cho Theme Library.
+      <div>
+        &copy; 2026 PETIT CARE CLINIC & PEDIATRICS. Bản quyền thiết kế y tế độc quyền thuộc Thư Viện Theme RackerWeb.
+      </div>
+      <div>
+        Kiến trúc Frontend tĩnh GitHub Pages • Tải nhanh & Bảo mật cao
+      </div>
     </div>
   </footer>
 
-  <aside class="floating-zalo"><a href="https://zalo.me/0971183939" target="_blank">Zalo</a></aside>
+  <!-- Floating Zalo -->
+  <aside class="floating-zalo">
+    <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" title="Tư vấn Bác sĩ Nhi Zalo 0971183939">Zalo</a>
+  </aside>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
