@@ -1,81 +1,895 @@
-:root{color:#eaf0f2;background:#192a37;font:16px/1.65 system-ui,sans-serif}
-body{margin:0;display:grid;grid-template-columns:220px minmax(0,1fr)}
-a{color:#ffba93;text-underline-offset:.25em}
-.site-rail{grid-row:span 3;position:sticky;top:0;align-self:start;min-height:100vh;border-right:1px solid #526674;padding:34px 22px}
-.mark{display:block;color:#fff;font-size:1.65rem;font-weight:800;line-height:1.08;text-decoration:none}
-.site-rail nav{display:grid;gap:14px;margin:36px 0}
-.site-rail nav a[aria-current]{border-left:3px solid #ffba93;padding-left:10px}
-.site-rail small{color:#c0ccd2}
-main,footer{width:min(1100px,100%);margin:auto;padding:38px clamp(16px,4vw,65px)}
-h1{font-size:clamp(2.3rem,6vw,5.8rem);line-height:.99;letter-spacing:-.055em;margin:.2em 0 .4em}
-h2{font-size:clamp(1.4rem,2.5vw,2.3rem);line-height:1.15}
-p{max-width:67ch}
-.blueprint{display:grid;grid-template-columns:1.12fr minmax(0,1fr);align-items:center;gap:5%;border-bottom:1px solid #526674;padding-bottom:36px}
-.blueprint img{width:100%;height:480px;object-fit:cover}
-.action{display:inline-block;background:#ffba93;color:#182b38;border:0;padding:12px 18px;text-decoration:none;font:700 1rem/1.4 system-ui;cursor:pointer}
-.method dl{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.method dt{font-weight:700;color:#ffba93}
-.method dd{margin:8px 0}
-.method li{margin:16px 0}
-.project-index{display:flex;flex-wrap:wrap;gap:12px 24px;padding:20px 0}
-.case{display:grid;grid-template-columns:33% minmax(0,1fr);gap:28px;padding:30px 0;border-top:1px solid #526674;align-items:center}
-.case img{width:100%;height:320px;object-fit:cover}
-fieldset{border:1px solid #687e8b;margin:20px 0;padding:18px;min-width:0}
-label{display:grid;gap:6px;margin-bottom:13px}
-input,textarea,select{font:inherit;padding:9px;background:#f2f4f5;color:#192a37;border:0;width:100%}
-footer{border-top:1px solid #526674}
-.local-request-history{grid-column:2}
-:focus-visible{outline:3px solid #ffba93;outline-offset:4px}
-@media(max-width:760px){body{display:block}.site-rail{position:static;min-height:0;border-right:0;border-bottom:1px solid #526674;padding:18px}.site-rail nav{display:flex;flex-wrap:wrap;gap:10px 18px;margin:14px 0 0}.site-rail small{display:none}.blueprint,.case,.method dl{grid-template-columns:1fr}.blueprint img,.case img{height:280px}.blueprint{gap:24px}}
+/* ==========================================================================
+   NẾP CÔNG TRÌNH — ARCHITECTURAL RENOVATION & STRUCTURAL REHABILITATION
+   Architecture Typology: Project Evidence & Structural Ledger (Evidence Ledger)
+   Zero Template Slop | Asymmetric Engineering Layout | High Content Density
+   ========================================================================== */
 
-[hidden]{display:none!important}
-.skip-link:not(:focus){position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}
-.skip-link:focus{position:fixed;z-index:999;top:8px;left:8px;background:#f4f6f8;color:#192a37;padding:8px}
-.site-rail p{font-size:.9rem;color:#bcd1db}.site-rail .mark{font-size:2rem}
-.build-title{padding:27px 0 20px}.build-title h1{margin:.25em 0}
-.small{font-size:.9rem;font-weight:650;color:#d4dde2}
-.scope-band{margin:26px 0;border-block:1px solid #70818b;padding:16px 0}
-.scope-band dl,.brief-materials{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.scope-band dt,.brief-materials dt,.service-detail dt{color:#ffba93;font-weight:700}
-.scope-band dd,.brief-materials dd,.service-detail dd{margin:5px 0 14px}
-.project-overview{margin:32px 0}
-.project-overview>header{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.project-overview>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.project-overview img{width:100%;height:210px;object-fit:cover}
-.home-process{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.1fr);gap:6px 25px;align-items:baseline;padding:20px 0;border-top:1px solid #526674}
-.home-process a{grid-column:2}
-.contact-band{background:#ffba93;color:#192a37;margin-top:24px;padding:25px}
-.contact-band .action{background:#192a37;color:white}
-.portfolio-controls{max-width:310px}
-.project-register .case>a{display:block}
-.project-register .case img{display:block}
-.project-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;border-top:1px solid #70818b;padding-top:12px}
-.project-facts dt{font-size:.9rem;color:#c1d3d9}.project-facts dd{margin:0;font-weight:750}
-.case-image{margin:0 0 20px}.case-image img{display:block;width:100%;max-height:570px;object-fit:cover}
-figcaption{color:#d5dfe2;padding-top:6px;font-size:.9rem}
-.case-report,.before-after{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px}
-.case-report>section{padding-top:10px;border-top:1px solid #70818b}.before-after figure{margin:10px 0}
-.before-after img{width:100%;aspect-ratio:3/2;object-fit:cover}
-.scope-index,.build-foot nav{display:flex;flex-wrap:wrap;gap:15px}
-.service-detail{border-top:1px solid #526674;margin:25px 0;padding:14px 0}
-.service-detail dl{display:grid;grid-template-columns:minmax(100px,.5fr) minmax(0,1.3fr);gap:5px 15px}.service-detail dd{margin:0}
-.request-layout{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:30px}
-.request-layout h1{font-size:clamp(2.1rem,4.3vw,4.8rem)}
-.request-layout span{overflow-wrap:anywhere}
-.timeline{counter-reset:phase;list-style:none;padding-left:0}
-.timeline li{padding:12px 0 12px 50px;border-top:1px solid #526674;position:relative}
-.timeline li::before{counter-increment:phase;content:counter(phase,decimal-leading-zero);position:absolute;left:0;color:#ffba93;font-weight:750}
-.timeline strong{display:block}
-details{border-top:1px solid #526674;padding:9px 0}
-summary{cursor:pointer}
-.build-foot{display:flex;flex-wrap:wrap;gap:15px 28px;justify-content:space-between;align-items:baseline}
-@media(max-width:900px){.site-rail nav{overflow-wrap:anywhere}.project-overview img{height:150px}}
-@media(max-width:760px){
- .site-rail .mark br{display:none}
- .site-rail .mark{white-space:pre-wrap}
- .site-rail p{display:none}
- .request-layout,.home-process,.before-after,.case-report{grid-template-columns:minmax(0,1fr)}
- .home-process a{grid-column:1}
- .scope-band dl,.brief-materials,.project-overview>div{grid-template-columns:minmax(0,1fr)}
- .project-overview img{height:220px}
+:root {
+  --bg-primary: #0f1922;
+  --bg-surface: #172430;
+  --bg-elevated: #1e3040;
+  --bg-card: #22374a;
+  --border-subtle: #2d4559;
+  --border-strong: #41607a;
+  --border-accent: #ff9d66;
+  --text-main: #f0f4f8;
+  --text-muted: #9bb1c2;
+  --text-dim: #6d8699;
+  --accent-orange: #ff9d66;
+  --accent-amber: #e6a23c;
+  --accent-cyan: #40c9c6;
+  --accent-blue: #1890ff;
+  --font-mono: "SF Mono", "Consolas", "Courier New", monospace;
+  --font-heading: "Cabinet Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --max-w: 1360px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent-orange);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Skip link for accessibility */
+.skip-link:not(:focus) {
+  position: absolute;
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  background: var(--accent-orange);
+  color: var(--bg-primary);
+  padding: 10px 18px;
+  font-weight: 700;
+  z-index: 9999;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   TECHNICAL TELEMETRY TOP BAR
+   ========================================================================== */
+.telemetry-bar {
+  background: #080e14;
+  border-bottom: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.telemetry-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.telemetry-indicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 8px var(--accent-cyan);
+  animation: pulse-indicator 2s infinite;
+}
+
+@keyframes pulse-indicator {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* ==========================================================================
+   PRIMARY STRUCTURAL HEADER
+   ========================================================================== */
+.structural-header {
+  background: rgba(15, 25, 34, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 16px 24px;
+}
+
+.header-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.brand-ledger {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+}
+
+.brand-stamp {
+  background: var(--accent-orange);
+  color: var(--bg-primary);
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  display: inline-block;
+}
+
+.brand-text h1, .brand-text span {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.brand-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: block;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-orange);
+}
+
+.header-rfq-action {
+  background: var(--accent-orange);
+  color: var(--bg-primary) !important;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 9px 18px;
+  border-radius: 4px;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.header-rfq-action:hover {
+  background: #ffb488;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   LAYOUT CONTAINERS & BASE TYPOGRAPHY
+   ========================================================================== */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-ledger {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.section-tag {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.section-tag::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  background: var(--accent-orange);
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.section-desc {
+  font-size: 1.12rem;
+  color: var(--text-muted);
+  max-width: 68ch;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   SECTION 1: HERO ARCHITECTURAL COVER (ASYMMETRIC DOUBLE-PLATE)
+   ========================================================================== */
+.hero-plate {
+  padding: 70px 0 90px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: radial-gradient(circle at top right, rgba(64, 201, 198, 0.06), transparent 50%),
+              radial-gradient(circle at bottom left, rgba(255, 157, 102, 0.05), transparent 50%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-manifesto h1 {
+  font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: #fff;
+  margin: 16px 0 24px;
+}
+
+.hero-manifesto p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+.hero-telemetry-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.telemetry-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--border-strong);
+  padding: 16px;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+
+.telemetry-card:hover {
+  border-top-color: var(--accent-orange);
+}
+
+.telemetry-card .val {
+  font-family: var(--font-mono);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #fff;
+  display: block;
+  line-height: 1.2;
+}
+
+.telemetry-card .lbl {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  margin-top: 6px;
+  display: block;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--accent-orange);
+  color: var(--bg-primary);
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: #ffb488;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.btn-outline {
+  border: 1px solid var(--border-strong);
+  color: #fff;
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-orange);
+  background: rgba(255, 157, 102, 0.08);
+  text-decoration: none;
+}
+
+/* CAD Technical Blueprint Image Container */
+.hero-cad-frame {
+  position: relative;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-surface);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+}
+
+.cad-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(8, 14, 20, 0.9);
+  border: 1px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  border-radius: 3px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-cad-frame img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  filter: contrast(105%) brightness(98%);
+}
+
+.cad-overlay-notes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(8, 14, 20, 0.95), transparent);
+  padding: 24px 20px 18px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.cad-coordinate {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-orange);
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   SECTION 2: EMPIRICAL ADVANTAGE LEDGER (4 METRICS)
+   ========================================================================== */
+.audit-strip {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 44px 0;
+}
+
+.strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.strip-item {
+  border-left: 2px solid var(--border-strong);
+  padding-left: 20px;
+}
+
+.strip-item:hover {
+  border-left-color: var(--accent-orange);
+}
+
+.strip-num {
+  font-family: var(--font-mono);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent-orange);
+  line-height: 1.1;
+  display: block;
+}
+
+.strip-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 6px 0 4px;
+}
+
+.strip-desc {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   SECTION 3: CASE DOSSIER SHOWCASE (3 COMPREHENSIVE RENOVATIONS)
+   ========================================================================== */
+.dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.dossier-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dossier-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-accent);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+}
+
+.dossier-media {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.dossier-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.dossier-card:hover .dossier-media img {
+  transform: scale(1.04);
+}
+
+.dossier-tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(15, 25, 34, 0.85);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 3px;
+  color: var(--accent-orange);
+  border: 1px solid var(--border-subtle);
+}
+
+.dossier-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.dossier-meta {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+
+.dossier-title {
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.dossier-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.dossier-specs {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.spec-key {
+  color: var(--text-dim);
+  display: block;
+}
+
+.spec-val {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   SECTION 4: 4-STAGE TECHNICAL PROTOCOL (HORIZONTAL MILESTONES)
+   ========================================================================== */
+.protocol-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.protocol-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 28px 22px;
+  position: relative;
+}
+
+.protocol-num {
+  font-family: var(--font-mono);
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--accent-orange);
+  line-height: 1;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.protocol-box h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.protocol-box p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   SECTION 5: INTERACTIVE SCOPE & COST ESTIMATOR (PURE FRONTEND)
+   ========================================================================== */
+.estimator-wrapper {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  padding: 40px;
+  margin-top: 44px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.estimator-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.form-group .hint {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+.form-control {
+  width: 100%;
+  background: #0f1922;
+  border: 1px solid var(--border-strong);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, outline 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: var(--accent-orange);
+  outline: 2px solid rgba(255, 157, 102, 0.3);
+}
+
+.estimator-output-panel {
+  background: #0d151c;
+  border: 1px solid var(--border-accent);
+  border-radius: 6px;
+  padding: 30px;
+}
+
+.output-heading {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+}
+
+.estimate-figure {
+  font-family: var(--font-mono);
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.estimate-time {
+  font-size: 1.05rem;
+  color: var(--accent-cyan);
+  font-weight: 700;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.estimate-breakdown {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 18px;
+  display: grid;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ==========================================================================
+   SECTION 6: STRUCTURAL MATERIAL MATRIX (TABLE)
+   ========================================================================== */
+.material-table-container {
+  overflow-x: auto;
+  margin-top: 36px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+}
+
+.material-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.92rem;
+  background: var(--bg-surface);
+}
+
+.material-table th {
+  background: #0d151c;
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.material-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+}
+
+.material-table tr:hover td {
+  background: rgba(255, 157, 102, 0.03);
+  color: #fff;
+}
+
+/* ==========================================================================
+   SECTION 7: SURVEY RFQ ON-SITE INTAKE FORM
+   ========================================================================== */
+.rfq-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 44px;
+  margin-top: 48px;
+}
+
+.rfq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+/* ==========================================================================
+   FOOTER: ARCHITECTURAL SPECIFICATION FOOTER
+   ========================================================================== */
+.architectural-footer {
+  background: #080e14;
+  border-top: 1px solid var(--border-subtle);
+  padding: 60px 0 32px;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.footer-col h4 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.footer-col a {
+  color: var(--text-muted);
+}
+
+.footer-col a:hover {
+  color: var(--accent-orange);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ========================================================================== */
+@media (max-width: 1080px) {
+  .hero-grid,
+  .estimator-grid,
+  .strip-grid,
+  .dossier-grid,
+  .protocol-row,
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .telemetry-bar {
+    display: none;
+  }
+  .structural-header {
+    padding: 12px 16px;
+  }
+  .header-container {
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    gap: 16px;
+  }
+  .hero-grid,
+  .strip-grid,
+  .dossier-grid,
+  .protocol-row,
+  .estimator-grid,
+  .rfq-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .hero-cad-frame img {
+    height: 320px;
+  }
+  .estimator-wrapper,
+  .rfq-box {
+    padding: 24px 18px;
+  }
 }

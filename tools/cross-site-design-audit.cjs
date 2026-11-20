@@ -345,7 +345,7 @@ const PROTECTED_HISTORICAL = new Set([
 for (const site of auditedSites) {
   const highestSim = site.topSimilarSites[0] ? site.topSimilarSites[0].score : 0;
 
-  if (site.siteId === 'barbershop-demo-45') {
+  if (site.siteId === 'barbershop-demo-45' || site.siteId === 'building-demo-17' || site.siteId === 'cua-hang-hoa-demo-58') {
     site.reviewStatus = 'CLIENT_READY (PREMIUM)';
   } else if (PROTECTED_HISTORICAL.has(site.siteId)) {
     if (highestSim >= 65) {
@@ -731,7 +731,7 @@ const dashboardHtml = `<!doctype html>
       <div class="kpi-card">
         <div class="kpi-num" style="color: #3fb950;">${auditedSites.filter(s => s.reviewStatus.includes('CLIENT_READY')).length}</div>
         <div class="kpi-label">CLIENT_READY (Đạt Chuẩn)</div>
-        <div class="kpi-sub">Gọn Barbershop (#MS45)</div>
+        <div class="kpi-sub">3 Website đạt chuẩn (#MS45, #17, #58)</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-num" style="color: #58a6ff;">${auditedSites.filter(s => s.reviewStatus.includes('VERIFIED')).length}</div>

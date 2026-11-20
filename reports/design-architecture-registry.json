@@ -1,16 +1,16 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-20T06:11:18.577Z",
+    "generatedAt": "2026-11-20T06:39:47.714Z",
     "totalSites": 113,
     "totalHtmlPages": 481,
     "totalComparedPairs": 6328,
     "suspiciousDuplicatePairsCount": 3486,
     "statusBreakdown": {
-      "clientReady": 1,
+      "clientReady": 3,
       "verifiedLegacy": 17,
       "protectedLegacy": 5,
       "needsRedesignDuplicate": 84,
-      "needsRedesignSparse": 6,
+      "needsRedesignSparse": 4,
       "needsRedesignGeneric": 0
     }
   },
@@ -1723,14 +1723,14 @@
           "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
         },
         {
-          "targetId": "cua-hang-hoa-demo-58",
-          "targetName": "Thiết kế hoa cưới",
-          "targetCode": "#o-58",
-          "score": 20,
+          "targetId": "cua-hang-hoa-tuoi-demo-85",
+          "targetName": "Chăm hoa định kỳ",
+          "targetCode": "#o-85",
+          "score": 15,
           "classOverlap": 0,
-          "totalClasses": 23,
-          "sharedHero": true,
-          "sharedNav": false,
+          "totalClasses": 22,
+          "sharedHero": false,
+          "sharedNav": true,
           "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
         }
       ]
@@ -1738,8 +1738,8 @@
     {
       "siteId": "building-demo-17",
       "code": "#o-17",
-      "name": "Cải tạo công trình",
-      "fullTitle": "Cải tạo công trình · Nếp Công Trình",
+      "name": "Nếp Công Trình",
+      "fullTitle": "Nếp Công Trình · Xưởng Cải Tạo Kiến Trúc & Phục Hồi Kết Cấu",
       "category": "Xây dựng & Công trình",
       "pageCount": 11,
       "pages": [
@@ -1758,8 +1758,8 @@
       "subpages": [
         {
           "file": "dich-vu.html",
-          "sections": 4,
-          "words": 550
+          "sections": 1,
+          "words": 387
         },
         {
           "file": "du-an-bep.html",
@@ -1793,100 +1793,158 @@
         },
         {
           "file": "gioi-thieu.html",
-          "sections": 4,
-          "words": 455
+          "sections": 2,
+          "words": 443
         },
         {
           "file": "index.html",
-          "sections": 6,
-          "words": 386
+          "sections": 7,
+          "words": 1416
         },
         {
           "file": "lien-he.html",
           "sections": 1,
-          "words": 302
+          "words": 260
         },
         {
           "file": "san-pham.html",
-          "sections": 0,
-          "words": 275
+          "sections": 1,
+          "words": 368
         }
       ],
       "assetCount": 8,
-      "navModel": "Vertical Rail Navigation",
-      "heroComposition": "Architectural Blueprint Split",
-      "sectionCount": 6,
+      "navModel": "Standard Header",
+      "heroComposition": "Split 2-Column (Text Left / Image Right)",
+      "sectionCount": 7,
       "sectionClasses": [
-        "blueprint",
-        "scope-band",
-        "project-overview",
-        "method",
-        "home-process",
-        "contact-band"
+        "hero-plate",
+        "audit-strip",
+        "section-ledger",
+        "section-ledger",
+        "section-ledger",
+        "section-ledger",
+        "section-ledger"
       ],
       "gridPatterns": [
         "Basic Single Column / Cards"
       ],
       "widgets": [],
       "metrics": {
-        "wordCount": 386,
-        "charCount": 1697,
-        "headings": 9,
+        "wordCount": 1416,
+        "charCount": 6399,
+        "headings": 16,
         "imgTagCount": 4,
         "uniqueImgCount": 4,
         "brokenAssets": 0
       },
       "fingerprintClasses": [
         "skip-link",
-        "site-rail",
-        "mark",
-        "blueprint",
-        "small",
-        "action",
-        "scope-band",
-        "project-overview",
-        "method",
-        "home-process",
-        "contact-band",
-        "build-foot"
+        "telemetry-bar",
+        "telemetry-item",
+        "telemetry-indicator",
+        "structural-header",
+        "header-container",
+        "brand-ledger",
+        "brand-stamp",
+        "brand-text",
+        "brand-sub",
+        "nav-links",
+        "header-rfq-action",
+        "hero-plate",
+        "hero-grid",
+        "hero-manifesto",
+        "section-tag",
+        "hero-telemetry-cards",
+        "telemetry-card",
+        "val",
+        "lbl",
+        "hero-actions",
+        "btn-primary",
+        "btn-outline",
+        "hero-cad-frame",
+        "cad-badge",
+        "cad-overlay-notes",
+        "cad-coordinate",
+        "audit-strip",
+        "strip-grid",
+        "strip-item",
+        "strip-num",
+        "strip-title",
+        "strip-desc",
+        "section-ledger",
+        "section-title",
+        "section-desc",
+        "dossier-grid",
+        "dossier-card",
+        "dossier-media",
+        "dossier-tag",
+        "dossier-body",
+        "dossier-meta",
+        "dossier-title",
+        "dossier-desc",
+        "dossier-specs",
+        "spec-key",
+        "spec-val",
+        "protocol-row",
+        "protocol-box",
+        "protocol-num",
+        "estimator-wrapper",
+        "estimator-grid",
+        "estimator-inputs",
+        "form-group",
+        "form-control",
+        "hint",
+        "estimator-output-panel",
+        "output-heading",
+        "estimate-figure",
+        "estimate-time",
+        "estimate-breakdown",
+        "breakdown-row",
+        "material-table-container",
+        "material-table",
+        "rfq-box",
+        "local-request-form",
+        "rfq-grid",
+        "architectural-footer",
+        "footer-grid",
+        "footer-col",
+        "footer-bottom"
       ],
-      "issues": [
-        "Nội dung quá ngắn (<400 từ)"
-      ],
-      "reviewStatus": "NEEDS_REDESIGN_SPARSE",
+      "issues": [],
+      "reviewStatus": "CLIENT_READY (PREMIUM)",
       "topSimilarSites": [
         {
-          "targetId": "blog-tin-tuc-demo-84",
-          "targetName": "Trang nhất",
-          "targetCode": "#o-84",
-          "score": 8,
+          "targetId": "cua-hang-hoa-demo-58",
+          "targetName": "Vòm Hoa",
+          "targetCode": "#MS8",
+          "score": 30,
           "classOverlap": 3,
-          "totalClasses": 24,
-          "sharedHero": false,
-          "sharedNav": false,
+          "totalClasses": 125,
+          "sharedHero": true,
+          "sharedNav": true,
           "evidence": "Trùng 3 class cấu trúc, nhịp section tương đồng 0%"
         },
         {
-          "targetId": "baby-demo-15",
-          "targetName": "PETIT CARE",
-          "targetCode": "#MS15",
-          "score": 5,
+          "targetId": "cua-hang-hoa-tuoi-demo-85",
+          "targetName": "Chăm hoa định kỳ",
+          "targetCode": "#o-85",
+          "score": 27,
           "classOverlap": 0,
-          "totalClasses": 89,
-          "sharedHero": false,
-          "sharedNav": false,
+          "totalClasses": 78,
+          "sharedHero": true,
+          "sharedNav": true,
           "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
         },
         {
-          "targetId": "fashion-demo-01",
-          "targetName": "ATELIER",
-          "targetCode": "#MS01",
-          "score": 5,
-          "classOverlap": 0,
-          "totalClasses": 55,
-          "sharedHero": false,
+          "targetId": "cua-hang-hoa-demo-64",
+          "targetName": "Flora Art",
+          "targetCode": "#MS64",
+          "score": 22,
+          "classOverlap": 6,
+          "totalClasses": 127,
+          "sharedHero": true,
           "sharedNav": false,
-          "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
+          "evidence": "Trùng 6 class cấu trúc, nhịp section tương đồng 0%"
         }
       ]
     },
@@ -3563,9 +3621,9 @@
     },
     {
       "siteId": "cua-hang-hoa-demo-58",
-      "code": "#o-58",
-      "name": "Thiết kế hoa cưới",
-      "fullTitle": "Thiết kế hoa cưới · Vòm Hoa",
+      "code": "#MS8",
+      "name": "Vòm Hoa",
+      "fullTitle": "Vòm Hoa · Studio Thiết Kế Hoa Cưới &amp; Lắp Đặt Nghệ Thuật Không Gian",
       "category": "Hoa tươi & Quà tặng",
       "pageCount": 4,
       "pages": [
@@ -3577,94 +3635,143 @@
       "subpages": [
         {
           "file": "gioi-thieu.html",
-          "sections": 2,
-          "words": 275
+          "sections": 1,
+          "words": 261
         },
         {
           "file": "index.html",
-          "sections": 3,
-          "words": 123
+          "sections": 6,
+          "words": 1067
         },
         {
           "file": "lien-he.html",
-          "sections": 0,
-          "words": 153
+          "sections": 1,
+          "words": 188
         },
         {
           "file": "san-pham.html",
-          "sections": 0,
-          "words": 305
+          "sections": 1,
+          "words": 272
         }
       ],
       "assetCount": 4,
-      "navModel": "Minimalist Topbar",
-      "heroComposition": "None / Text Only",
-      "sectionCount": 3,
+      "navModel": "Standard Header",
+      "heroComposition": "Split 2-Column (Text Left / Image Right)",
+      "sectionCount": 6,
       "sectionClasses": [
-        "wedding-cover",
-        "wedding-intro",
-        "wedding-pair"
+        "hero-cover",
+        "section-ceremony",
+        "section-ceremony",
+        "section-ceremony",
+        "section-ceremony",
+        "section-ceremony"
       ],
       "gridPatterns": [
         "Basic Single Column / Cards"
       ],
       "widgets": [],
       "metrics": {
-        "wordCount": 123,
-        "charCount": 553,
-        "headings": 4,
-        "imgTagCount": 3,
+        "wordCount": 1067,
+        "charCount": 5053,
+        "headings": 18,
+        "imgTagCount": 4,
         "uniqueImgCount": 3,
         "brokenAssets": 0
       },
       "fingerprintClasses": [
-        "wedding-head",
-        "wedding-mark",
-        "contact-link",
-        "wedding-cover",
-        "wedding-cta",
-        "wedding-intro",
-        "wedding-pair",
-        "wedding-foot"
+        "skip-link",
+        "ceremonial-header",
+        "header-inner",
+        "nav-left",
+        "studio-brand",
+        "brand-title",
+        "brand-tagline",
+        "nav-right",
+        "btn-moodboard-nav",
+        "hero-cover",
+        "hero-cover-bg",
+        "hero-cover-gradient",
+        "hero-cover-content",
+        "eyebrow-gold",
+        "desc-soft",
+        "hero-badge-strip",
+        "hero-badge-item",
+        "dot",
+        "section-ceremony",
+        "philosophy-grid",
+        "title-serif",
+        "philosophy-columns",
+        "philo-box",
+        "philosophy-image-frame",
+        "concept-grid",
+        "concept-card",
+        "concept-num",
+        "concept-palette-strip",
+        "palette-swatch",
+        "moodboard-builder",
+        "builder-layout",
+        "builder-controls",
+        "builder-step",
+        "builder-options",
+        "option-btn",
+        "moodboard-preview-card",
+        "preview-tag",
+        "preview-title",
+        "preview-desc",
+        "preview-flowers",
+        "btn-gold",
+        "dossier-pair",
+        "dossier-photo-frame",
+        "dossier-info",
+        "dossier-specs-list",
+        "spec-title",
+        "spec-content",
+        "dossier-pair-reverse",
+        "brief-form-box",
+        "local-request-form",
+        "form-grid-2",
+        "form-control-serif",
+        "local-request-history",
+        "ceremonial-footer",
+        "footer-top",
+        "footer-col",
+        "footer-legal"
       ],
-      "issues": [
-        "Nội dung quá ngắn (<400 từ)",
-        "Bố cục quá ít section (<4 section)"
-      ],
-      "reviewStatus": "NEEDS_REDESIGN_SPARSE",
+      "issues": [],
+      "reviewStatus": "CLIENT_READY (PREMIUM)",
       "topSimilarSites": [
         {
-          "targetId": "blog-tin-tuc-demo-84",
-          "targetName": "Trang nhất",
-          "targetCode": "#o-84",
-          "score": 20,
-          "classOverlap": 0,
-          "totalClasses": 23,
+          "targetId": "building-demo-17",
+          "targetName": "Nếp Công Trình",
+          "targetCode": "#o-17",
+          "score": 30,
+          "classOverlap": 3,
+          "totalClasses": 125,
           "sharedHero": true,
-          "sharedNav": false,
+          "sharedNav": true,
+          "evidence": "Trùng 3 class cấu trúc, nhịp section tương đồng 0%"
+        },
+        {
+          "targetId": "cua-hang-hoa-tuoi-demo-85",
+          "targetName": "Chăm hoa định kỳ",
+          "targetCode": "#o-85",
+          "score": 28,
+          "classOverlap": 0,
+          "totalClasses": 64,
+          "sharedHero": true,
+          "sharedNav": true,
           "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
         },
         {
-          "targetId": "flower-demo-14",
-          "targetName": "Hoa cành theo mùa",
-          "targetCode": "#o-14",
-          "score": 20,
-          "classOverlap": 0,
-          "totalClasses": 15,
+          "targetId": "cosmetic-demo-05",
+          "targetName": "Maison Éclat",
+          "targetCode": "#MS05",
+          "score": 21,
+          "classOverlap": 6,
+          "totalClasses": 134,
           "sharedHero": true,
           "sharedNav": false,
-          "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
-        },
-        {
-          "targetId": "website-ban-hoa-tuoi-demo-117",
-          "targetName": "Hoa quà tặng",
-          "targetCode": "#-117",
-          "score": 19,
-          "classOverlap": 0,
-          "totalClasses": 17,
-          "sharedHero": true,
-          "sharedNav": false,
-          "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
+          "evidence": "Trùng 6 class cấu trúc, nhịp section tương đồng 0%"
         }
       ]
     },
@@ -3902,34 +4009,34 @@
       "reviewStatus": "NEEDS_REDESIGN_SPARSE",
       "topSimilarSites": [
         {
+          "targetId": "cua-hang-hoa-demo-58",
+          "targetName": "Vòm Hoa",
+          "targetCode": "#MS8",
+          "score": 28,
+          "classOverlap": 0,
+          "totalClasses": 64,
+          "sharedHero": true,
+          "sharedNav": true,
+          "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
+        },
+        {
+          "targetId": "building-demo-17",
+          "targetName": "Nếp Công Trình",
+          "targetCode": "#o-17",
+          "score": 27,
+          "classOverlap": 0,
+          "totalClasses": 78,
+          "sharedHero": true,
+          "sharedNav": true,
+          "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
+        },
+        {
           "targetId": "food-demo-07",
           "targetName": "COOL ORGANIC",
           "targetCode": "#MS07",
           "score": 20,
           "classOverlap": 0,
           "totalClasses": 75,
-          "sharedHero": true,
-          "sharedNav": false,
-          "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
-        },
-        {
-          "targetId": "cat-toc-phong-cach-nam-nu-web-102",
-          "targetName": "Cắt tóc phong cách nam nữ",
-          "targetCode": "#MS102",
-          "score": 19,
-          "classOverlap": 0,
-          "totalClasses": 28,
-          "sharedHero": true,
-          "sharedNav": false,
-          "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
-        },
-        {
-          "targetId": "cho-thue-trang-phuc-demo-78",
-          "targetName": "Cho thuê trang phục",
-          "targetCode": "#MS78",
-          "score": 19,
-          "classOverlap": 0,
-          "totalClasses": 28,
           "sharedHero": true,
           "sharedNav": false,
           "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
@@ -5838,14 +5945,14 @@
           "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
         },
         {
-          "targetId": "cua-hang-hoa-demo-58",
-          "targetName": "Thiết kế hoa cưới",
-          "targetCode": "#o-58",
-          "score": 20,
+          "targetId": "cua-hang-hoa-tuoi-demo-85",
+          "targetName": "Chăm hoa định kỳ",
+          "targetCode": "#o-85",
+          "score": 15,
           "classOverlap": 0,
-          "totalClasses": 15,
-          "sharedHero": true,
-          "sharedNav": false,
+          "totalClasses": 14,
+          "sharedHero": false,
+          "sharedNav": true,
           "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
         }
       ]
@@ -12588,14 +12695,14 @@
           "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
         },
         {
-          "targetId": "cua-hang-hoa-demo-58",
-          "targetName": "Thiết kế hoa cưới",
-          "targetCode": "#o-58",
-          "score": 19,
+          "targetId": "cua-hang-hoa-tuoi-demo-85",
+          "targetName": "Chăm hoa định kỳ",
+          "targetCode": "#o-85",
+          "score": 14,
           "classOverlap": 0,
-          "totalClasses": 17,
-          "sharedHero": true,
-          "sharedNav": false,
+          "totalClasses": 16,
+          "sharedHero": false,
+          "sharedNav": true,
           "evidence": "Trùng 0 class cấu trúc, nhịp section tương đồng 0%"
         }
       ]

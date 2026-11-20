@@ -1,20 +1,397 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="rackerweb-custom-design" content="hand-authored">
-<title>Thiết kế hoa cưới · Vòm Hoa</title>
-<link rel="stylesheet" href="css/frontend-local.css">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/app.js" defer></script>
-<script src="js/frontend-local.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="rackerweb-custom-design" content="hand-authored">
+  <title>Vòm Hoa · Studio Thiết Kế Hoa Cưới &amp; Lắp Đặt Nghệ Thuật Không Gian</title>
+  <link rel="stylesheet" href="css/frontend-local.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/frontend-local.js" defer></script>
+  <script src="js/app.js" defer></script>
 </head>
 <body>
-<header class="wedding-head"><nav aria-label="Bộ sưu tập"><a href="san-pham.html">Hồ sơ tiệc</a><a href="gioi-thieu.html">Xưởng</a></nav><a class="wedding-mark" href="index.html"><span aria-hidden="true"></span>Vòm Hoa</a><a class="contact-link" href="lien-he.html">Lập brief</a></header>
+<a class="skip-link" href="#main">Đi tới nội dung chính</a>
+
+<!-- CEREMONIAL HEADER -->
+<header class="ceremonial-header">
+  <div class="header-inner">
+    <nav class="nav-left" aria-label="Bộ sưu tập hoa cưới">
+      <a href="index.html" aria-current="page">Tổng quan</a>
+      <a href="san-pham.html">Hồ sơ tiệc cưới</a>
+      <a href="gioi-thieu.html">Xưởng sáng tạo</a>
+    </nav>
+
+    <a class="studio-brand" href="index.html">
+      <span class="brand-title">VÒM HOA</span>
+      <span class="brand-tagline">Botanical Wedding Studio</span>
+    </a>
+
+    <nav class="nav-right" aria-label="Thao tác đặt lịch">
+      <a href="#moodboard" class="btn-moodboard-nav">Xây Moodboard</a>
+      <a href="lien-he.html">Gửi Wedding Brief</a>
+    </nav>
+  </div>
+</header>
+
 <main id="main">
-<section class="wedding-cover"><img src="assets/vom-tiec.webp" alt="Vòm hoa trắng thấp cạnh lối đi trong vườn lúc chạng vạng" fetchpriority="high"><div><p>Thiết kế hoa cưới</p><h1>Hoa theo<br>nhịp lễ.</h1><a class="wedding-cta" href="san-pham.html">Xem hồ sơ tiệc</a></div></section><section class="wedding-intro wrap"><h2>Đọc không gian trước khi chọn hoa.</h2><p>Lối dẫn, ánh sáng và cách khách ngồi quyết định nơi hoa cần xuất hiện. Vòm Hoa dựng bảng màu từ ảnh địa điểm và chuẩn bị một phương án cho mỗi mốc của buổi lễ. Hoa ở tầm mắt khi chụp hình, thấp hơn khi khách ngồi ăn.</p></section><section class="wedding-pair wrap"><a href="san-pham.html#ban-dai"><img src="assets/ban-dai.webp" alt="Bàn tiệc dài với hoa kem, khăn trắng và ánh nến" loading="lazy"><h2>Bàn tiệc dưới vòm đá</h2></a><a href="san-pham.html#gia-tien"><img src="assets/le-thanh-hon.webp" alt="Hai trụ lan tím nhạt trong không gian lễ gia tiên" loading="lazy"><h2>Lễ gia tiên tông mận</h2></a></section>
+
+  <!-- SECTION 1: HERO COVER (CINEMATIC PANORAMA) -->
+  <section class="hero-cover" aria-labelledby="hero-title">
+    <div class="hero-cover-bg">
+      <img src="assets/vom-tiec.webp" alt="Vòm hoa cưới nghệ thuật tông trắng ngà lộng lẫy trong không gian sân vườn hoàng hôn" fetchpriority="high">
+    </div>
+    <div class="hero-cover-gradient" aria-hidden="true"></div>
+    <div class="container hero-cover-content">
+      <span class="eyebrow-gold">Botanical Space Architecture</span>
+      <h1 id="hero-title">Hoa theo nhịp lễ.<br>Biến đổi không gian bằng nghệ thuật thực vật.</h1>
+      <p class="desc-soft">
+        Chúng tôi không chỉ cắm hoa trang trí bàn tiệc; chúng tôi kiến tạo các cấu trúc hoa vòm, dải hoa treo trần và lối dẫn nghi thức được tính toán theo chuyển động ánh sáng và tầm mắt của quan khách trong suốt buổi lễ.
+      </p>
+
+      <div class="hero-badge-strip">
+        <div class="hero-badge-item">
+          <span class="dot"></span>
+          <span>TIÊU CHUẨN HOA TƯƠI 100% CẤP ĐỘ A+</span>
+        </div>
+        <div class="hero-badge-item">
+          <span class="dot"></span>
+          <span>THI CÔNG HIỆN TRƯỜNG TRƯỚC GIỜ G 8 TIẾNG</span>
+        </div>
+        <div class="hero-badge-item">
+          <span class="dot"></span>
+          <span>CHỈ NHẬN TỐI ĐA 2 TIỆC / CUỐI TUẦN</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: BOTANICAL PHILOSOPHY (SPATIAL READING) -->
+  <section class="section-ceremony" aria-labelledby="philo-heading">
+    <div class="container philosophy-grid">
+      <div>
+        <span class="eyebrow-gold">Triết lý thiết kế</span>
+        <h2 class="title-serif" id="philo-heading">Đọc không gian trước khi chạm vào cánh hoa</h2>
+        <p class="desc-soft">
+          Một vòm hoa đẹp không thể đứng tách rời khỏi kiến trúc nơi tổ chức. Độ cao trần, hướng gió trời, màu thảm và góc hắt sáng của đèn follow quyết định mật độ cành hoa, độ xòe và sắc độ cánh hoa cần chọn.
+        </p>
+
+        <div class="philosophy-columns">
+          <div class="philo-box">
+            <h4>Tỷ Lệ Chiều Cao</h4>
+            <p>Trần sảnh khách sạn 7m cần cấu trúc vòm bay bổng để không bị chìm; sân vườn mở cần dải hoa bám đất đón gió.</p>
+          </div>
+          <div class="philo-box">
+            <h4>Tầm Mắt Bàn Tiệc</h4>
+            <p>Hoa bàn tiệc được hạ dưới 35cm hoặc nâng trên 65cm để khách hai bên bàn trò chuyện tự nhiên mà không bị chắn tầm nhìn.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="philosophy-image-frame">
+        <img src="assets/ban-dai.webp" alt="Chi tiết bàn tiệc dài với dải hoa kem, khăn trải lụa và ánh nến lung linh" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: 4 SIGNATURE FLORAL CONCEPTS -->
+  <section class="section-ceremony" aria-labelledby="concept-heading">
+    <div class="container">
+      <span class="eyebrow-gold">Bộ sưu tập chủ đạo</span>
+      <h2 class="title-serif" id="concept-heading">4 Ngôn ngữ hoa lễ cưới độc bản</h2>
+      <p class="desc-soft">
+        Mỗi cặp đôi mang một câu chuyện tình yêu và gu thẩm mỹ riêng. Dưới đây là bốn trường phái thực vật được xưởng Vòm Hoa hoàn thiện thành quy chuẩn thiết kế.
+      </p>
+
+      <div class="concept-grid">
+        <!-- 1 -->
+        <article class="concept-card">
+          <span class="concept-num">01</span>
+          <h3>Bạch Kim Cổ Điển (Imperial Alabaster)</h3>
+          <p>Thuần khiết với sắc trắng ngà của Lan Hồ Điệp, Hồng O'Hara và Cẩm Tú Cầu. Mang lại vẻ sang trọng hoàng gia trường tồn cùng thời gian.</p>
+          <div class="concept-palette-strip">
+            <span class="palette-swatch" style="background:#ffffff;" title="Trắng tinh khôi"></span>
+            <span class="palette-swatch" style="background:#f4ece1;" title="Trắng ngà"></span>
+            <span class="palette-swatch" style="background:#8a9a86;" title="Xanh bạc lá khuynh diệp"></span>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="concept-card">
+          <span class="concept-num">02</span>
+          <h3>Vườn Địa Đàng Tự Nhiên (Wildflower Meadow)</h3>
+          <p>Lối cắm hữu cơ mô phỏng thảm hoa dại đung đưa trong gió với hoa nhài sao, cúc Tana, phi yến và thảo mộc thơm mát.</p>
+          <div class="concept-palette-strip">
+            <span class="palette-swatch" style="background:#f7d794;" title="Vàng mơ"></span>
+            <span class="palette-swatch" style="background:#f8a5c2;" title="Hồng phấn"></span>
+            <span class="palette-swatch" style="background:#78e08f;" title="Xanh cỏ tươi"></span>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="concept-card">
+          <span class="concept-num">03</span>
+          <h3>Mận Nhung &amp; Hổ Phách (Crimson Velvet)</h3>
+          <p>Quyến rũ và ấm áp tuyệt đối cho tiệc cưới mùa đông với tông hoa mận chín, hồng nhung Ecuador, thạch thảo tím và quả mọng rừng.</p>
+          <div class="concept-palette-strip">
+            <span class="palette-swatch" style="background:#5c1021;" title="Mận nhung"></span>
+            <span class="palette-swatch" style="background:#b33939;" title="Đỏ rượu vang"></span>
+            <span class="palette-swatch" style="background:#d4a359;" title="Hổ phách"></span>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="concept-card">
+          <span class="concept-num">04</span>
+          <h3>Sen Trắng Di Sản (Heritage Lotus &amp; Bamboo)</h3>
+          <p>Thanh cao cho lễ gia tiên và nghi thức truyền thống với hoa sen bách diệp, cành trúc chỉ thanh mảnh và bình gốm mộc vuốt tay.</p>
+          <div class="concept-palette-strip">
+            <span class="palette-swatch" style="background:#ebf2ea;" title="Sen bách diệp"></span>
+            <span class="palette-swatch" style="background:#4b6584;" title="Gốm mộc xám"></span>
+            <span class="palette-swatch" style="background:#6ab04c;" title="Xanh lá sen"></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: INTERACTIVE WEDDING MOODBOARD BUILDER (FRONTEND) -->
+  <section class="section-ceremony" id="moodboard" aria-labelledby="mb-heading">
+    <div class="container">
+      <span class="eyebrow-gold">Công cụ tương tác độc quyền</span>
+      <h2 class="title-serif" id="mb-heading">Khởi tạo Moodboard hoa cưới theo không gian</h2>
+      <p class="desc-soft">
+        Chọn địa điểm tổ chức, bảng màu ước muốn và quy mô khách mời để xưởng Vòm Hoa lập ngay đề xuất loài hoa và cấu trúc lắp đặt phù hợp nhất.
+      </p>
+
+      <div class="moodboard-builder" id="wedding-moodboard-builder">
+        <div class="builder-layout">
+          <div class="builder-controls">
+            <!-- Step 1 -->
+            <div class="builder-step">
+              <label>1. Chọn không gian tổ chức của bạn:</label>
+              <div class="builder-options">
+                <button type="button" class="option-btn active" data-step="venue" data-value="khach-san">Sảnh tiệc khách sạn 5 sao</button>
+                <button type="button" class="option-btn" data-step="venue" data-value="san-vuon">Biệt thự sân vườn ngoài trời</button>
+                <button type="button" class="option-btn" data-step="venue" data-value="nha-tho">Thánh đường / Nhà thờ cổ</button>
+                <button type="button" class="option-btn" data-step="venue" data-value="bai-bien">Bãi biển hoàng hôn nhiệt đới</button>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="builder-step">
+              <label>2. Tông màu chủ đạo bạn mong muốn:</label>
+              <div class="builder-options">
+                <button type="button" class="option-btn active" data-step="palette" data-value="trang-kem">Trắng kem &amp; Xanh lá bạc</button>
+                <button type="button" class="option-btn" data-step="palette" data-value="hong-pastel">Hồng phấn &amp; Đào ấm</button>
+                <button type="button" class="option-btn" data-step="palette" data-value="do-man">Mận chín &amp; Rượu vang</button>
+                <button type="button" class="option-btn" data-step="palette" data-value="ho-phach">Vàng hổ phách &amp; Đồng cổ</button>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="builder-step">
+              <label>3. Quy mô số lượng khách:</label>
+              <div class="builder-options">
+                <button type="button" class="option-btn" data-step="scale" data-value="50-khach">Tiệc thân mật (&lt; 80 khách)</button>
+                <button type="button" class="option-btn active" data-step="scale" data-value="150-khach">Tiệc tiêu chuẩn (100 - 250 khách)</button>
+                <button type="button" class="option-btn" data-step="scale" data-value="350-khach">Đại tiệc lộng lẫy (300+ khách)</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preview Card -->
+          <div class="moodboard-preview-card">
+            <span class="preview-tag">BẢN THIẾT KẾ ĐỀ XUẤT</span>
+            <h3 class="preview-title" id="mb-preview-title">Sảnh Đại Tiệc Khách Sạn 5 Sao</h3>
+            <p class="preview-desc" id="mb-preview-desc">
+              Không gian trần cao từ 6-8 mét với ánh sáng vàng ấm và đèn chùm pha lê. Cần kết cấu vòm hoa chịu lực cao, tán hoa bay bổng để cân bằng tỷ lệ kiến trúc trần.
+            </p>
+
+            <div class="preview-flowers">
+              <h5>DANH MỤC THỰC VẬT ĐỀ NGHỊ:</h5>
+              <ul id="mb-preview-flowers">
+                <li>Hồng O'Hara Ecuador thơm ngát</li>
+                <li>Hồ Điệp trắng cánh bướm rủ mềm</li>
+                <li>Phi Yến (Delphinium) xanh thẫm tạo chiều cao</li>
+                <li>Lá Khuynh Diệp (Eucalyptus) phủ nền xanh bạc</li>
+              </ul>
+            </div>
+
+            <div style="font-size:0.8rem; color:var(--accent-gold); margin-bottom:18px;" id="mb-preview-tone">
+              TINH THẦN KHÔNG GIAN: Trọng thể, lộng lẫy và tràn đầy ánh sáng hoàng gia
+            </div>
+
+            <a class="btn-gold" href="#brief">
+              Lưu Moodboard &amp; Đặt Lịch Tư Vấn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: CELEBRATION DOSSIER ARCHIVES -->
+  <section class="section-ceremony" aria-labelledby="dossier-heading">
+    <div class="container">
+      <span class="eyebrow-gold">Dấu ấn kỷ niệm</span>
+      <h2 class="title-serif" id="dossier-heading">Hai câu chuyện không gian thực tế</h2>
+
+      <!-- Case 1 -->
+      <article class="dossier-pair">
+        <div class="dossier-photo-frame">
+          <img src="assets/ban-dai.webp" alt="Bàn tiệc dài dưới vòm đá trang trí hoa tươi tự nhiên" loading="lazy">
+        </div>
+        <div class="dossier-info">
+          <span class="eyebrow-gold">HỒ SƠ TIỆC CƯỚI: VH-2026-BD</span>
+          <h3>Bàn Tiệc Dưới Vòm Đá</h3>
+          <p class="desc-soft">
+            Mặt bằng vòm đá tự nhiên với gió lộng. Chúng tôi kết hợp hoa hồng kem, dải nến cao thấp so le và khăn trải lụa tơ tằm thô để giữ trọn vẹn nét mộc mạc mà sang trọng của thiên nhiên.
+          </p>
+          <div class="dossier-specs-list">
+            <div>
+              <span class="spec-title">ĐỊA ĐIỂM</span>
+              <span class="spec-content">Villa Đá An Lâm, Ninh Bình</span>
+            </div>
+            <div>
+              <span class="spec-title">THỜI GIAN THI CÔNG</span>
+              <span class="spec-content">6 tiếng trước giờ đón khách</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 2 -->
+      <article class="dossier-pair dossier-pair-reverse">
+        <div class="dossier-info">
+          <span class="eyebrow-gold">HỒ SƠ LỄ TRUYỀN THỐNG: VH-2026-GT</span>
+          <h3>Lễ Gia Tiên Tông Mận Chín</h3>
+          <p class="desc-soft">
+            Hai trụ hoa lan tím khói kết hợp cành lựu cảnh và hoa hồng nhung tạo chiều sâu ấm áp cho gian thờ truyền thống, tôn vinh đạo hiếu và sự sum vầy hai họ.
+          </p>
+          <div class="dossier-specs-list">
+            <div>
+              <span class="spec-title">ĐỊA ĐIỂM</span>
+              <span class="spec-content">Nhà cổ Phố Phái, Hà Nội</span>
+            </div>
+            <div>
+              <span class="spec-title">LOẠI HOA</span>
+              <span class="spec-content">Lan Mokara tím, Sen quan âm, Cành quả</span>
+            </div>
+          </div>
+        </div>
+        <div class="dossier-photo-frame">
+          <img src="assets/le-thanh-hon.webp" alt="Hai trụ lan tím trong lễ gia tiên truyền thống trang nghiêm" loading="lazy">
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECTION 6: WEDDING BRIEF RFQ INTAKE FORM -->
+  <section class="section-ceremony" id="brief" aria-labelledby="form-heading">
+    <div class="container">
+      <span class="eyebrow-gold">Liên hệ xưởng</span>
+      <h2 class="title-serif" id="form-heading">Gửi Wedding Brief &amp; Đặt lịch thử hoa</h2>
+      <p class="desc-soft">
+        Để buổi trao đổi đạt hiệu quả cao nhất, xin vui lòng chia sẻ ngày dự kiến và địa điểm tổ chức. Chúng tôi sẽ chuẩn bị mẫu cành thực tế trước khi bạn tới xưởng.
+      </p>
+
+      <div class="brief-form-box">
+        <form class="local-request-form" data-request-type="Wedding Brief hoa cưới" data-storage-key="vom-hoa-wedding-brief" action="lien-he.html" method="get">
+          <div class="form-grid-2">
+            <div>
+              <div style="margin-bottom: 20px;">
+                <label for="client-name" style="color:#fff; display:block; margin-bottom:8px;">Họ tên Cô dâu &amp; Chú rể: *</label>
+                <input type="text" id="client-name" name="name" class="form-control-serif" placeholder="Ví dụ: Hoàng Anh &amp; Thu Thảo" required>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label for="client-phone" style="color:#fff; display:block; margin-bottom:8px;">Số điện thoại liên hệ: *</label>
+                <input type="tel" id="client-phone" name="phone" class="form-control-serif" placeholder="Ví dụ: 0918 888 999" required>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label for="wedding-date" style="color:#fff; display:block; margin-bottom:8px;">Ngày cưới dự kiến: *</label>
+                <input type="date" id="wedding-date" name="date" class="form-control-serif" required>
+              </div>
+            </div>
+
+            <div>
+              <div style="margin-bottom: 20px;">
+                <label for="wedding-venue" style="color:#fff; display:block; margin-bottom:8px;">Địa điểm / Khách sạn tổ chức:</label>
+                <input type="text" id="wedding-venue" name="venue" class="form-control-serif" placeholder="Ví dụ: Khách sạn Park Hyatt Sài Gòn">
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label for="wedding-plan" style="color:#fff; display:block; margin-bottom:8px;">Hạng mục cần xưởng đảm nhận:</label>
+                <select id="wedding-plan" name="plan" class="form-control-serif">
+                  <option value="tron-goi">Thiết kế trọn gói (Vòm cưới, Sảnh đón, Bàn tiệc &amp; Hoa cầm tay)</option>
+                  <option value="vom-chinh">Chỉ làm vòm cưới lễ chính &amp; Lối đi sân khấu</option>
+                  <option value="gia-tien">Trang trí hoa tươi lễ gia tiên truyền thống</option>
+                  <option value="ngoai-canh">Tiệc cưới ngoài trời / Destination Wedding</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom: 24px;">
+                <label for="client-wishes" style="color:#fff; display:block; margin-bottom:8px;">Mong muốn đặc biệt hoặc phong cách ưa thích:</label>
+                <textarea id="client-wishes" name="wishes" class="form-control-serif" rows="3" placeholder="Ví dụ: Thích nhiều cành lá rủ, không dùng hoa nhuộm màu hóa học..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-gold" style="width: 100%; padding: 16px;">
+                Gửi Wedding Brief tới Xưởng Vòm Hoa
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div class="local-request-history" data-storage-key="vom-hoa-wedding-brief" style="margin-top: 36px;"></div>
+      </div>
+    </div>
+  </section>
+
 </main>
-<footer class="wedding-foot"><div><a class="wedding-mark" href="index.html">Vòm Hoa</a><p>Thiết kế hoa theo không gian và nghi thức.</p></div><div><a href="san-pham.html">Hồ sơ tiệc</a><a href="lien-he.html">Lập brief</a><a href="../../index.html">Thư viện RackerWeb</a><small>Website mẫu · Thương hiệu, giá và tình huống minh họa.</small></div></footer>
+
+<!-- CEREMONIAL FOOTER -->
+<footer class="ceremonial-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-col">
+        <a class="studio-brand" href="index.html" style="text-align: left; display: block; margin-bottom: 16px;">
+          <span class="brand-title">VÒM HOA</span>
+          <span class="brand-tagline">Ceremonial Botanical Studio</span>
+        </a>
+        <p style="font-size: 0.9rem; color: var(--text-soft); line-height: 1.7; max-width: 40ch;">
+          Xưởng thực vật chuyên biệt cho các nghi thức cưới hỏi và sự kiện nghệ thuật. Tôn vinh vẻ đẹp nguyên bản của cỏ cây trong từng khoảnh khắc trang trọng.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>XƯỞNG &amp; VƯỜN ƯƠM</h4>
+        <ul>
+          <li><strong>Studio:</strong> 18 Ngõ Hàng Chuối, Hai Bà Trưng, Hà Nội</li>
+          <li><strong>Vườn Ươm:</strong> Đập Cam Ly, Phường 5, TP. Đà Lạt</li>
+          <li><strong>Hotline:</strong> 0936 248 119</li>
+          <li><strong>Email:</strong> xonxang@vomhoa.vn</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>ĐIỀU HƯỚNG NHANH</h4>
+        <ul>
+          <li><a href="san-pham.html">Toàn bộ hồ sơ tiệc cưới</a></li>
+          <li><a href="gioi-thieu.html">Quy trình thử hoa tại xưởng</a></li>
+          <li><a href="lien-he.html">Đăng ký lịch hẹn tư vấn</a></li>
+          <li><a href="../../index.html">Thư viện RackerWeb</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div>© 2026 VÒM HOA BOTANICAL WEDDING STUDIO. BẢO LƯU MỌI BẢN QUYỀN NGHỆ THUẬT.</div>
+      <div>KIẾN TRÚC: CEREMONIAL BOTANICAL INSTALLATION ARCHITECTURE · HOÀN TOÀN KHÔNG DÙNG TEMPLATE RETAIL</div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

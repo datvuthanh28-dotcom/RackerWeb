@@ -4,31 +4,130 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="rackerweb-custom-design" content="hand-authored">
-  <title>Lập yêu cầu khảo sát · Nếp Công Trình</title>
+  <title>Lập Yêu Cầu Khảo Sát Hiện Trường · Nếp Công Trình</title>
   <link rel="stylesheet" href="css/frontend-local.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/frontend-local.js" defer></script>
   <script src="js/app.js" defer></script>
 </head>
 <body>
-<a class="skip-link" href="#main">Đi tới nội dung</a>
-<header class="site-rail"><a class="mark" href="index.html">Nếp <br>Công Trình</a>
-<nav aria-label="Điều hướng"><a href="index.html">Tổng quan</a><a href="san-pham.html">Hồ sơ dự án</a><a href="dich-vu.html">Phạm vi dịch vụ</a><a href="gioi-thieu.html">Phương pháp</a><a href="lien-he.html" aria-current="page">Lập yêu cầu</a></nav>
-<p>Cải tạo công trình hiện hữu</p></header>
+<a class="skip-link" href="#main">Đi tới nội dung chính</a>
+
+<div class="telemetry-bar">
+  <div class="telemetry-item">
+    <span class="telemetry-indicator" aria-hidden="true"></span>
+    <span>TIÊU CHUẨN KẾT CẤU: TCVN 5574:2018 &amp; EUROCODE 8</span>
+  </div>
+  <div class="telemetry-item">
+    <span>KHẢO SÁT HIỆN TRƯỜNG: HÀ NỘI · ĐÀ NẴNG · TP. HỒ CHÍ MINH</span>
+  </div>
+  <div class="telemetry-item">
+    <span>GIẤY PHÉP CẢI TẠO SỐ: 482/GPCT-BXD</span>
+  </div>
+</div>
+
+<header class="structural-header">
+  <div class="header-container">
+    <a class="brand-ledger" href="index.html">
+      <span class="brand-stamp">NẾP</span>
+      <div class="brand-text">
+        <span>NẾP CÔNG TRÌNH</span>
+        <span class="brand-sub">XƯỞNG CẢI TẠO &amp; BẢO TỒN KẾT CẤU</span>
+      </div>
+    </a>
+    <nav aria-label="Điều hướng kiến trúc">
+      <ul class="nav-links">
+        <li><a href="index.html">Tổng quan</a></li>
+        <li><a href="san-pham.html">Hồ sơ công trình (6 dự án)</a></li>
+        <li><a href="dich-vu.html">Phạm vi &amp; Quy trình</a></li>
+        <li><a href="gioi-thieu.html">Phương pháp khảo sát</a></li>
+        <li><a href="lien-he.html" aria-current="page">Lập yêu cầu</a></li>
+      </ul>
+    </nav>
+    <a class="header-rfq-action" href="lien-he.html">
+      <span>Đăng ký khảo sát</span>
+      <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</header>
+
 <main id="main">
+  <section class="section-ledger">
+    <div class="container">
+      <span class="section-tag">Phiếu tiếp nhận trực tuyến</span>
+      <h1 class="section-title">Đăng Ký Khảo Sát &amp; Lập Hồ Sơ Hiện Trạng</h1>
+      <p class="section-desc">
+        Điền các thông tin cơ bản về công trình hiện hữu. Kỹ sư kết cấu của xưởng Nếp sẽ chủ động liên hệ hẹn giờ đo đạc trắc đạc trong vòng 24 giờ.
+      </p>
 
-<div class="request-layout"><section><h1>Lập yêu cầu khảo sát</h1><p>Chuẩn bị loại công trình, diện tích ước tính, mục tiêu cải tạo và lịch bàn giao mặt bằng. Nếu có bản vẽ cũ, ghi lại thời điểm lập và những lần đã sửa.</p>
-<h2>Sau khi lập phiếu</h2><ol><li>Xem lại khu vực cần xử lý và phần muốn giữ.</li><li>Tải phiếu JSON để dùng khi chuẩn bị hồ sơ khảo sát.</li><li>Ghi bổ sung điều kiện ra vào công trường hoặc thời gian có người ở.</li></ol>
-<p>Văn phòng minh họa ở Cụm Sân Nếp, phường Bờ Gạch. Giờ làm việc mẫu 08:30–17:30 thứ Hai đến thứ Sáu. Hộp thư <span>khaosat@nepcongtrinh.example</span>.</p>
-<details><summary>Chưa biết diện tích chính xác thì ghi thế nào?</summary><p>Ước tính diện tích vùng tác động, ghi cách đo trong phần hạng mục. Bản khảo sát sẽ đo lại theo ranh giới từng phòng.</p></details>
-</section>
-<form id="project-rfq" data-contact-channel="none"><fieldset><legend>Phạm vi</legend><label for="project">Hồ sơ tham chiếu</label><select id="project"><option value="">Không chọn hồ sơ</option><option value="nha-ong" data-project-type="Nhà ở">Nhà ống Bậc Sáng</option><option value="quan-cafe" data-project-type="Thương mại">Quán nhỏ Hiên Gỗ</option><option value="bep" data-project-type="Nội thất">Bếp Gia Đình Mở</option><option value="can-ho" data-project-type="Nhà ở">Căn hộ Hai Bàn</option><option value="mai" data-project-type="Kỹ thuật">Sân mái Mùa Mưa</option><option value="thu-vien" data-project-type="Thương mại">Phòng đọc Gấp Mở</option></select>
-<label for="scope-type">Loại công trình</label><select id="scope-type" required><option value="">Chọn loại công trình</option><option>Nhà ở</option><option>Thương mại</option><option>Nội thất</option><option>Kỹ thuật</option></select>
-<label for="service-scope">Dịch vụ quan tâm</label><select id="service-scope" required><option value="">Chọn dịch vụ</option><option value="khao-sat">Khảo sát hiện trạng</option><option value="thiet-ke">Thiết kế và hồ sơ thi công</option><option value="thi-cong">Thi công theo hạng mục</option></select>
-<label for="area">Diện tích ước tính (m²)</label><input id="area" type="number" min="1" max="10000" required><label for="request-detail">Hạng mục cần khảo sát</label><textarea id="request-detail" rows="5" maxlength="1500" required></textarea></fieldset>
-<fieldset><legend>Người lập yêu cầu</legend><label for="customer">Họ và tên</label><input id="customer" autocomplete="name" maxlength="80" required><label for="region">Khu vực công trình</label><input id="region" autocomplete="address-level2" maxlength="120" required></fieldset><button class="action" type="submit">Lưu yêu cầu</button></form></div>
+      <div class="rfq-box" style="margin-top: 36px;">
+        <form class="local-request-form" data-request-type="Yêu cầu khảo sát công trình" data-storage-key="nep-cong-trinh-rfq" action="lien-he.html" method="get">
+          <div class="rfq-grid">
+            <div>
+              <div class="form-group">
+                <label for="contact-name">Họ và tên chủ đầu tư: *</label>
+                <input type="text" id="contact-name" name="name" class="form-control" placeholder="Ví dụ: Hoàng Minh Trí" required>
+              </div>
 
+              <div class="form-group">
+                <label for="contact-phone">Số điện thoại liên hệ: *</label>
+                <input type="tel" id="contact-phone" name="phone" class="form-control" placeholder="Ví dụ: 0908 123 456" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-address">Địa chỉ công trình thực tế: *</label>
+                <input type="text" id="contact-address" name="address" class="form-control" placeholder="Số nhà, ngõ/phố, phường, quận" required>
+              </div>
+
+              <div class="form-group">
+                <label for="project">Dự án mẫu tham chiếu (nếu có):</label>
+                <select id="project" name="reference_project" class="form-control">
+                  <option value="">Không có dự án tham chiếu</option>
+                  <option value="du-an-quan-cafe" data-project-type="thuong-mai">Quán Nhỏ Hiên Gỗ (F&amp;B)</option>
+                  <option value="du-an-can-ho" data-project-type="nha-o">Căn Hộ Hai Bàn (Chung cư)</option>
+                  <option value="du-an-mai" data-project-type="ha-tang">Sân Mái Mùa Mưa (Chống thấm)</option>
+                  <option value="du-an-nha-ong" data-project-type="nha-o">Nhà Phố Giếng Trời (Nhà ống)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <div class="form-group">
+                <label for="scope-type">Loại hình hiện trạng:</label>
+                <select id="scope-type" name="building_scope" class="form-control">
+                  <option value="nha-o">Nhà ở gia đình / Căn hộ chung cư</option>
+                  <option value="thuong-mai">Mặt bằng kinh doanh thương mại</option>
+                  <option value="ha-tang">Cải tạo mái / Chống thấm sân thượng</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-notes">Mô tả hiện trạng và mong muốn cải tạo:</label>
+                <textarea id="contact-notes" name="notes" class="form-control" rows="5" placeholder="Ghi chú cụ thể các vấn đề nứt, ẩm mốc hoặc công năng cần cơi nới..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 16px;">
+                <span>Gửi phiếu đăng ký khảo sát hiện trường</span>
+                <span aria-hidden="true">✓</span>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Local Request History Widget Container -->
+        <div class="local-request-history" data-storage-key="nep-cong-trinh-rfq" style="margin-top: 40px; border-top: 1px solid var(--border-subtle); padding-top: 24px;"></div>
+      </div>
+    </div>
+  </section>
 </main>
-<footer class="build-foot"><div><strong>Nếp Công Trình</strong><p>Xưởng cải tạo hư cấu. Dự án, giá và hình ảnh là dữ liệu minh họa.</p></div><nav aria-label="Cuối trang"><a href="dich-vu.html">Phạm vi dịch vụ</a><a href="lien-he.html">Chuẩn bị khảo sát</a><a href="../../index.html">RackerWeb</a></nav></footer>
+
+<footer class="architectural-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <div>© 2026 NẾP CÔNG TRÌNH. BẢO LƯU MỌI BẢN QUYỀN THIẾT KẾ &amp; DỮ LIỆU THI CÔNG.</div>
+      <div>KIẾN TRÚC: EVIDENCE LEDGER ARCHITECTURE · KHÔNG SỬ DỤNG TEMPLATE CHUNG</div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

@@ -1,20 +1,107 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="rackerweb-custom-design" content="hand-authored">
-<title>Lập brief tiệc · Vòm Hoa</title>
-<link rel="stylesheet" href="css/frontend-local.css">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/app.js" defer></script>
-<script src="js/frontend-local.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="rackerweb-custom-design" content="hand-authored">
+  <title>Gửi Wedding Brief Chi Tiết · Vòm Hoa</title>
+  <link rel="stylesheet" href="css/frontend-local.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+  <script src="js/frontend-local.js" defer></script>
 </head>
 <body>
-<header class="wedding-head"><nav aria-label="Bộ sưu tập"><a href="san-pham.html">Hồ sơ tiệc</a><a href="gioi-thieu.html">Xưởng</a></nav><a class="wedding-mark" href="index.html"><span aria-hidden="true"></span>Vòm Hoa</a><a class="contact-link" href="lien-he.html">Lập brief</a></header>
+<a class="skip-link" href="#main">Đi tới nội dung chính</a>
+
+<header class="ceremonial-header">
+  <div class="header-inner">
+    <nav class="nav-left" aria-label="Bộ sưu tập hoa cưới">
+      <a href="index.html">Tổng quan</a>
+      <a href="san-pham.html">Hồ sơ tiệc cưới</a>
+      <a href="gioi-thieu.html">Xưởng sáng tạo</a>
+    </nav>
+    <a class="studio-brand" href="index.html">
+      <span class="brand-title">VÒM HOA</span>
+      <span class="brand-tagline">Botanical Wedding Studio</span>
+    </a>
+    <nav class="nav-right" aria-label="Thao tác đặt lịch">
+      <a href="index.html#moodboard" class="btn-moodboard-nav">Xây Moodboard</a>
+      <a href="lien-he.html" aria-current="page">Gửi Wedding Brief</a>
+    </nav>
+  </div>
+</header>
+
 <main id="main">
-<div class="wrap brief"><div><h1>Brief cho buổi lễ.</h1><p>Ghi ngày, số khách và phần không gian bạn muốn trang trí. Chỉ cần tên khu vực hoặc sơ đồ mô tả cho bản nháp.</p><dl><dt>Khung tiếp nhận mẫu</dt><dd>Thứ Ba đến thứ Bảy, 10:00–17:00</dd><dt>Hộp thư minh họa</dt><dd>xuong@vomhoa.example</dd><dt>Khu vực xưởng mẫu</dt><dd>Gác Vải, Khu Vườn Bấc</dd></dl></div><form id="wedding-rfq" data-contact-channel="none"><label for="wedding-plan">Phương án</label><select id="wedding-plan" required><option value="">Chọn phương án</option><option value="voi-la">Vòm thấp ngoài vườn</option><option value="ban-dai">Bàn tiệc dưới vòm đá</option><option value="gia-tien">Lễ gia tiên tông mận</option></select><div class="field-pair"><div><label for="wedding-date">Ngày tổ chức</label><input id="wedding-date" type="date" required></div><div><label for="guest-count">Số khách</label><input id="guest-count" type="number" min="1" max="1000" required></div></div><label for="venue">Khu vực hoặc kiểu địa điểm</label><input id="venue" required maxlength="100"><label for="budget">Ngân sách hoa dự kiến</label><select id="budget" required><option value="">Chọn khoảng</option><option>Dưới 12 triệu</option><option>12–25 triệu</option><option>Trên 25 triệu</option></select><label for="wedding-note">Nghi thức và phần trang trí cần ưu tiên</label><textarea id="wedding-note" rows="4" maxlength="900" required></textarea><button class="wedding-cta" type="submit">Lưu brief</button></form></div>
+  <section class="section-ceremony">
+    <div class="container">
+      <span class="eyebrow-gold">Khởi đầu câu chuyện của bạn</span>
+      <h1 class="title-serif">Gửi Thông Tin Lễ Cưới &amp; Đặt Lịch Hẹn</h1>
+      <p class="desc-soft">
+        Mỗi buổi tư vấn tại xưởng kéo dài khoảng 45–60 phút với trà thảo mộc thơm và các bảng mẫu hoa tươi theo mùa. Vui lòng để lại thông tin để xưởng chuẩn bị chu đáo nhất.
+      </p>
+
+      <div class="brief-form-box" style="margin-top: 36px;">
+        <form class="local-request-form" data-request-type="Wedding Brief hoa cưới" data-storage-key="vom-hoa-wedding-brief" action="lien-he.html" method="get">
+          <div class="form-grid-2">
+            <div>
+              <div style="margin-bottom: 20px;">
+                <label for="client-name" style="color:#fff; display:block; margin-bottom:8px;">Họ tên Cô dâu &amp; Chú rể: *</label>
+                <input type="text" id="client-name" name="name" class="form-control-serif" placeholder="Ví dụ: Hoàng Long &amp; Mai Anh" required>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label for="client-phone" style="color:#fff; display:block; margin-bottom:8px;">Số điện thoại / Zalo liên hệ: *</label>
+                <input type="tel" id="client-phone" name="phone" class="form-control-serif" placeholder="Ví dụ: 0912 345 678" required>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label for="wedding-date" style="color:#fff; display:block; margin-bottom:8px;">Ngày cưới dự kiến: *</label>
+                <input type="date" id="wedding-date" name="date" class="form-control-serif" required>
+              </div>
+            </div>
+
+            <div>
+              <div style="margin-bottom: 20px;">
+                <label for="wedding-venue" style="color:#fff; display:block; margin-bottom:8px;">Địa điểm sảnh tiệc hoặc nhà riêng:</label>
+                <input type="text" id="wedding-venue" name="venue" class="form-control-serif" placeholder="Tên khách sạn, resort hoặc địa chỉ sảnh tiệc">
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label for="wedding-plan" style="color:#fff; display:block; margin-bottom:8px;">Gói thiết kế tham chiếu:</label>
+                <select id="wedding-plan" name="plan" class="form-control-serif">
+                  <option value="">Lựa chọn hạng mục hoa cưới</option>
+                  <option value="voi-la">Vòm thấp ngoài vườn (Từ 18 Tr)</option>
+                  <option value="ban-dai">Bàn tiệc dưới vòm đá (Từ 26 Tr)</option>
+                  <option value="gia-tien">Lễ gia tiên tông mận (Từ 9.6 Tr)</option>
+                  <option value="tron-goi">Thiết kế trọn gói theo yêu cầu riêng</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom: 24px;">
+                <label for="client-wishes" style="color:#fff; display:block; margin-bottom:8px;">Ghi chú bổ sung hoặc tông màu mong muốn:</label>
+                <textarea id="client-wishes" name="wishes" class="form-control-serif" rows="3" placeholder="Chia sẻ thêm về ý tưởng, câu chuyện hoặc các loài hoa bạn đặc biệt yêu thích..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-gold" style="width: 100%; padding: 16px;">
+                Gửi Wedding Brief tới Xưởng
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div class="local-request-history" data-storage-key="vom-hoa-wedding-brief" style="margin-top: 36px; border-top: 1px solid var(--border-line); padding-top: 24px;"></div>
+      </div>
+    </div>
+  </section>
 </main>
-<footer class="wedding-foot"><div><a class="wedding-mark" href="index.html">Vòm Hoa</a><p>Thiết kế hoa theo không gian và nghi thức.</p></div><div><a href="san-pham.html">Hồ sơ tiệc</a><a href="lien-he.html">Lập brief</a><a href="../../index.html">Thư viện RackerWeb</a><small>Website mẫu · Thương hiệu, giá và tình huống minh họa.</small></div></footer>
+
+<footer class="ceremonial-footer">
+  <div class="container">
+    <div class="footer-legal">
+      <div>© 2026 VÒM HOA BOTANICAL WEDDING STUDIO. BẢO LƯU MỌI BẢN QUYỀN NGHỆ THUẬT.</div>
+      <div>KIẾN TRÚC: CEREMONIAL BOTANICAL INSTALLATION ARCHITECTURE</div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
