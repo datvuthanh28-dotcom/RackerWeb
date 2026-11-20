@@ -5,11 +5,19 @@ const root = path.resolve(__dirname, '..');
 const issues = [];
 let pageCount = 0;
 let references = 0;
-const sites = fs.readdirSync(path.join(root,'sites'));
+const sites = fs.readdirSync(path.join(root,'sites'),{withFileTypes:true}).filter(entry=>entry.isDirectory()).map(entry=>entry.name);
 const catalogue = JSON.parse(fs.readFileSync(path.join(root,'data/themes.json'),'utf8').replace(/^\uFEFF/,''));
+const pageRegistry = {window:{}};
+vm.runInNewContext(fs.readFileSync(path.join(root,'content-writer','catalog.js'),'utf8'),pageRegistry);
+const expectedPages = pageRegistry.window.WRITER_PAGES;
 for (const site of sites) {
   const dir = path.join(root,'sites',site);
-  for (const page of fs.readdirSync(dir).filter(file => file.endsWith('.html'))) {
+  const sitePages = fs.readdirSync(dir).filter(file => file.endsWith('.html')).sort();
+  if (JSON.stringify(sitePages) !== JSON.stringify(expectedPages[site])) issues.push(`${site}: Content Writer page registry is out of sync`);
+  for (const requiredPage of ['index.html','san-pham.html','gioi-thieu.html','lien-he.html']) {
+    if (!sitePages.includes(requiredPage)) issues.push(`${site}: missing ${requiredPage}`);
+  }
+  for (const page of sitePages) {
     pageCount++;
     const html = fs.readFileSync(path.join(dir,page),'utf8');
     for (const match of html.matchAll(/<(?:script|link|img|a|source)\b[^>]*?\b(?:src|href)=["']([^"']+)["']/gi)) {
@@ -26,7 +34,8 @@ for (const site of sites) {
     catch (error) { issues.push(`${site}/js/${script}: ${error.message}`); }
   }
 }
-for (const file of ['studio.js','catalog.js']) new vm.Script(fs.readFileSync(path.join(root,'content-writer',file),'utf8'));
+new vm.Script(fs.readFileSync(path.join(root,'content-writer','studio.js'),'utf8'));
 for (const item of catalogue) if (!fs.existsSync(path.join(root,item.localUrl))) issues.push(`Missing entry ${item.id}`);
+if (JSON.stringify(catalogue.map(item=>item.id).sort()) !== JSON.stringify(sites.sort())) issues.push('Theme catalog does not match site directories');
 console.log(JSON.stringify({sites:sites.length,pages:pageCount,localReferences:references,issues},null,2));
-if (sites.length !== 113 || pageCount !== 461 || issues.length) process.exitCode = 1;
+if (sites.length !== 113 || issues.length) process.exitCode = 1;

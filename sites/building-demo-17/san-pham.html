@@ -1,19 +1,32 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hồ sơ dự án | Nếp Công Trình</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/frontend-local.css">
-<script src="js/frontend-local.js" defer></script>
-<script src="js/app.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="rackerweb-custom-design" content="hand-authored">
+  <title>Hồ sơ dự án · Nếp Công Trình</title>
+  <link rel="stylesheet" href="css/frontend-local.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/frontend-local.js" defer></script>
+  <script src="js/app.js" defer></script>
 </head>
 <body>
-<header class="site-rail"><a class="mark" href="index.html">Nếp Công Trình</a><nav aria-label="Điều hướng"><a href="index.html">Tổng quan</a><a href="san-pham.html" aria-current="page">Hồ sơ dự án</a><a href="gioi-thieu.html">Phương pháp</a><a href="lien-he.html">Lập yêu cầu</a></nav><small>Cải tạo công trình hiện hữu</small></header>
+<a class="skip-link" href="#main">Đi tới nội dung</a>
+<header class="site-rail"><a class="mark" href="index.html">Nếp <br>Công Trình</a>
+<nav aria-label="Điều hướng"><a href="index.html">Tổng quan</a><a href="san-pham.html" aria-current="page">Hồ sơ dự án</a><a href="dich-vu.html">Phạm vi dịch vụ</a><a href="gioi-thieu.html">Phương pháp</a><a href="lien-he.html">Lập yêu cầu</a></nav>
+<p>Cải tạo công trình hiện hữu</p></header>
 <main id="main">
-<h1>Hồ sơ dự án</h1><p>Ba tình huống cải tạo minh họa với các quyết định có thể trao đổi trong buổi khảo sát.</p><div class="project-index"><a href="#nha-ong">Nhà ống Bậc Sáng</a><a href="#quan-cafe">Quán nhỏ Hiên Gỗ</a><a href="#bep">Bếp Gia Đình Mở</a></div><article id="nha-ong" class="case"><img src="assets/nha-ong.webp" alt="Nhà ống có lam đất nung cạnh cầu thang" width="512" height="1024" loading="lazy"><div><p>Cải tạo nhà ở</p><h2>Nhà ống Bậc Sáng</h2><p>Hồ sơ mẫu cho nhà ngang 4 m. Ô lấy sáng cạnh thang đưa ánh sáng xuống tầng giữa, lam đất nung giảm tầm nhìn trực diện từ phố. Bản vẽ dự toán cần tách dỡ bỏ, gia cố và hoàn thiện để chủ nhà biết phần nào thay đổi theo khảo sát.</p><a href="lien-he.html?du-an=nha-ong">Lập yêu cầu theo hồ sơ này</a></div></article><article id="quan-cafe" class="case"><img src="assets/quan-cafe.webp" alt="Quầy cà phê ốp gỗ trong không gian nhỏ" width="512" height="1024" loading="lazy"><div><p>Thi công thương mại</p><h2>Quán nhỏ Hiên Gỗ</h2><p>Quầy dài đặt dọc theo tường để giữ lối đi giữa cửa và khu ngồi. Ống cấp, thoát nước gom về cuối quầy, phần ốp gỗ làm dạng mô-đun để thay riêng khi cần bảo trì. Tiến độ mẫu chia thành phần thô, lắp thiết bị và thử vận hành.</p><a href="lien-he.html?du-an=quan-cafe">Lập yêu cầu theo hồ sơ này</a></div></article><article id="bep" class="case"><img src="assets/bep.webp" alt="Bếp gia đình dùng gỗ sáng và xi măng mờ" width="512" height="1024" loading="lazy"><div><p>Cải tạo nội thất</p><h2>Bếp Gia Đình Mở</h2><p>Bề mặt bếp chạy liền từ chậu rửa đến bàn chuẩn bị. Cánh tủ dưới ưu tiên ngăn kéo để nhìn và lấy đồ nhanh, vật liệu cạnh chậu cần chịu ẩm. Phương án khảo sát đo lại đầu cấp nước, cửa mở và khoảng thông gió trước khi đặt tủ.</p><a href="lien-he.html?du-an=bep">Lập yêu cầu theo hồ sơ này</a></div></article>
+
+<header class="build-title"><h1>Hồ sơ dự án</h1><p>Sáu tình huống minh họa cho nhà ở, mặt bằng kinh doanh, nội thất và sửa chữa kỹ thuật. Mỗi hồ sơ có phạm vi, quyết định thiết kế và tài liệu bàn giao.</p></header>
+<div class="portfolio-controls"><label for="project-type">Loại công trình</label><select id="project-type"><option value="">Tất cả</option><option>Nhà ở</option><option>Thương mại</option><option>Nội thất</option><option>Kỹ thuật</option></select><p id="project-count" role="status"></p></div>
+<div class="project-register"><article class="case" id="nha-ong" data-type="Nhà ở"><a href="du-an-nha-ong.html"><img src="assets/nha-ong.webp" alt="Nhà phố với cầu thang và lam đất nung" loading="lazy"></a><div><p class="small">Nhà ở · 84 m²</p><h2><a href="du-an-nha-ong.html">Nhà ống Bậc Sáng</a></h2><p>Đưa ánh sáng xuống tầng giữa của căn nhà ngang bốn mét.</p><a href="lien-he.html?du-an=nha-ong">Dùng làm ví dụ trong yêu cầu</a></div></article>
+<article class="case" id="quan-cafe" data-type="Thương mại"><a href="du-an-quan-cafe.html"><img src="assets/quan-cafe.webp" alt="Quầy cà phê ốp gỗ trong một mặt bằng hẹp" loading="lazy"></a><div><p class="small">Thương mại · 56 m²</p><h2><a href="du-an-quan-cafe.html">Quán nhỏ Hiên Gỗ</a></h2><p>Tổ chức quầy để khách chờ không chắn lối vào.</p><a href="lien-he.html?du-an=quan-cafe">Dùng làm ví dụ trong yêu cầu</a></div></article>
+<article class="case" id="bep" data-type="Nội thất"><a href="du-an-bep.html"><img src="assets/bep.webp" alt="Bếp gỗ sáng với mặt bàn dài và tường xi măng mờ" loading="lazy"></a><div><p class="small">Nội thất · 27 m²</p><h2><a href="du-an-bep.html">Bếp Gia Đình Mở</a></h2><p>Giữ khu chậu rửa và mở thêm đoạn bàn chuẩn bị.</p><a href="lien-he.html?du-an=bep">Dùng làm ví dụ trong yêu cầu</a></div></article>
+<article class="case" id="can-ho" data-type="Nhà ở"><a href="du-an-can-ho.html"><img src="assets/can-ho-hai-ban.webp" alt="Căn hộ nhỏ có bàn làm việc và vách kính trượt" loading="lazy"></a><div><p class="small">Nhà ở · 65 m²</p><h2><a href="du-an-can-ho.html">Căn hộ Hai Bàn</a></h2><p>Tạo hai điểm làm việc trong phòng khách đang sử dụng.</p><a href="lien-he.html?du-an=can-ho">Dùng làm ví dụ trong yêu cầu</a></div></article>
+<article class="case" id="mai" data-type="Kỹ thuật"><a href="du-an-mai.html"><img src="assets/mai-sau.webp" alt="Sân mái lát gạch xám với rãnh thoát và giàn che nhẹ" loading="lazy"></a><div><p class="small">Kỹ thuật · 32 m²</p><h2><a href="du-an-mai.html">Sân mái Mùa Mưa</a></h2><p>Xử lý vùng đọng nước ở sân phơi nhỏ.</p><a href="lien-he.html?du-an=mai">Dùng làm ví dụ trong yêu cầu</a></div></article>
+<article class="case" id="thu-vien" data-type="Thương mại"><a href="du-an-thu-vien.html"><img src="assets/thu-vien-gap.webp" alt="Phòng đọc nhỏ có giá sách thấp và bàn dùng chung" loading="lazy"></a><div><p class="small">Thương mại · 71 m²</p><h2><a href="du-an-thu-vien.html">Phòng đọc Gấp Mở</a></h2><p>Đổi một gian trống thành phòng đọc kiêm lớp cuối tuần.</p><a href="lien-he.html?du-an=thu-vien">Dùng làm ví dụ trong yêu cầu</a></div></article></div>
+
 </main>
-<footer><p>Nếp Công Trình · Nhà thầu hư cấu. Hồ sơ và ảnh minh họa.</p><a href="../../index.html">RackerWeb</a></footer>
+<footer class="build-foot"><div><strong>Nếp Công Trình</strong><p>Xưởng cải tạo hư cấu. Dự án, giá và hình ảnh là dữ liệu minh họa.</p></div><nav aria-label="Cuối trang"><a href="dich-vu.html">Phạm vi dịch vụ</a><a href="lien-he.html">Chuẩn bị khảo sát</a><a href="../../index.html">RackerWeb</a></nav></footer>
 </body>
 </html>

@@ -1060,3 +1060,7 @@ footer {
     text-align: center;
   }
 }
+
+@media (max-width: 600px) {
+  main div[style*="grid-template-columns"],.estimator-container{grid-template-columns:minmax(0,1fr)!important;gap:1rem!important}
+}

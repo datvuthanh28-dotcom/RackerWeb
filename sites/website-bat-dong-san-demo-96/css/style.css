@@ -1169,3 +1169,9 @@ img {
   .metric-item { border-right: none; }
   .portfolio-drawer { width: 100%; right: -100%; }
 }
+
+@media (max-width: 600px) {
+  .portfolio-drawer{max-width:100%}
+  .portfolio-drawer:not(.open){visibility:hidden}
+  main div[style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr)!important;gap:1rem!important}
+}

@@ -1,19 +1,30 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chuẩn bị lịch | Gọn</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/frontend-local.css">
-<script src="js/frontend-local.js" defer></script>
-<script src="js/app.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="rackerweb-custom-design" content="hand-authored">
+  <title>Chuẩn bị lịch · Gọn Barbershop</title>
+  <link rel="stylesheet" href="css/frontend-local.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/frontend-local.js" defer></script>
+  <script src="js/app.js" defer></script>
 </head>
 <body>
-<header class="front-desk"><nav aria-label="Điều hướng"><a href="index.html">Trang tiệm</a><a href="san-pham.html">Bảng dịch vụ</a><a href="gioi-thieu.html">Cách cắt</a><a href="lien-he.html" aria-current="page">Chuẩn bị lịch</a></nav><a class="mark" href="index.html">Gọn</a></header>
+<a class="skip-link" href="#main">Đi tới nội dung</a>
+<header class="front-desk"><a class="mark" href="index.html">Gọn</a><nav aria-label="Điều hướng">
+<a href="san-pham.html">Bảng dịch vụ</a><a href="kieu-toc.html">Kiểu tóc</a><a href="gioi-thieu.html">Đội thợ</a><a href="lien-he.html" aria-current="page">Chuẩn bị lịch</a></nav></header>
 <main id="main">
-<div class="ticket"><h1>Chuẩn bị lịch cắt</h1><form id="barber-booking" data-contact-channel="none"><label>Dịch vụ<select required id="service"><option value="">Chọn dịch vụ</option><option value="crop">Crop có kết cấu · 35 phút · 180.000 ₫</option><option value="taper">Taper ở mai và gáy · 45 phút · 230.000 ₫</option><option value="rau">Chỉnh râu ngắn · 20 phút · 100.000 ₫</option></select></label><div class="slot"><label>Ngày mong muốn<input type="date" id="visit-day" required></label><label>Giờ mong muốn<select required><option value="">Chọn giờ</option><option>09:00</option><option>10:30</option><option>14:00</option><option>16:30</option><option>18:00</option></select></label></div><label>Tên khách<input autocomplete="name" required></label><label>Ghi chú về tóc<textarea rows="3"></textarea></label><button type="submit" class="action">Lưu lịch mong muốn</button></form></div>
+
+<div class="booking-layout"><section><h1>Chuẩn bị lịch cắt.</h1><p>Chọn dịch vụ, ngày giờ mong muốn và thợ nếu đã có lựa chọn. Bản nháp giúp bạn lưu lại giá minh họa và thời lượng trên thiết bị.</p><h2>Trước khi đến</h2><ul><li>Chuẩn bị ảnh nghiêng nếu muốn thay đường mai hoặc gáy.</li><li>Cho biết bạn đội mũ bảo hiểm thường xuyên hay sấy tóc mỗi sáng.</li><li>Chọn giờ bắt đầu đủ để kết thúc trước 19:30.</li></ul><p>Tiệm mẫu mở 10:00–19:30, thứ Ba đến Chủ nhật. Địa điểm minh họa Hẻm Thước Mộc, khu Bàn Gương. Hộp thư ghecat@gon.example.</p>
+<details><summary>Giờ được chọn có phải giờ trống của tiệm không?</summary><p>Các giờ là khung minh họa để chuẩn bị yêu cầu. Sau khi lưu, trạng thái của bản nháp vẫn là Chưa gửi.</p></details></section>
+<form class="ticket" id="barber-booking" data-contact-channel="none"><label for="service">Dịch vụ</label><select required id="service"><option value="">Chọn dịch vụ</option><optgroup label="Cắt tóc"><option value="crop" data-minutes="35" data-price="180000">Crop có kết cấu · 35 phút · 180.000 ₫</option><option value="taper" data-minutes="45" data-price="230000">Taper ở mai và gáy · 45 phút · 230.000 ₫</option><option value="side-part" data-minutes="50" data-price="270000">Chải lệch bằng kéo · 50 phút · 270.000 ₫</option><option value="xoan" data-minutes="55" data-price="290000">Cắt cho tóc xoăn tự nhiên · 55 phút · 290.000 ₫</option><option value="buzz" data-minutes="25" data-price="140000">Buzz đều đầu · 25 phút · 140.000 ₫</option></optgroup><optgroup label="Duy trì"><option value="ghe-gon" data-minutes="15" data-price="80000">Gọn viền giữa hai lần cắt · 15 phút · 80.000 ₫</option><option value="goi-say" data-minutes="20" data-price="90000">Gội và sấy theo nếp · 20 phút · 90.000 ₫</option><option value="mau-thu" data-minutes="20" data-price="70000">Tư vấn đổi dáng · 20 phút · 70.000 ₫</option></optgroup><optgroup label="Râu"><option value="rau" data-minutes="20" data-price="100000">Chỉnh râu ngắn · 20 phút · 100.000 ₫</option><option value="ria-mep" data-minutes="15" data-price="75000">Tạo viền ria mép · 15 phút · 75.000 ₫</option></optgroup><optgroup label="Gói kết hợp"><option value="cap-gon" data-minutes="65" data-price="315000">Taper và chỉnh râu · 65 phút · 315.000 ₫</option><option value="combo-mem" data-minutes="55" data-price="250000">Crop và hướng dẫn sấy · 55 phút · 250.000 ₫</option></optgroup></select>
+<div class="slot"><div><label for="visit-day">Ngày mong muốn</label><input type="date" id="visit-day" required></div><div><label for="visit-time">Giờ mong muốn</label><select id="visit-time" required><option value="">Chọn giờ</option><option>10:00</option><option>11:30</option><option>14:00</option><option>16:00</option><option>17:45</option><option>19:00</option></select></div></div>
+<label for="barber-choice">Thợ mong muốn</label><select id="barber-choice"><option>Bất kỳ</option><option>Quân Kéo</option><option>Vũ Mai</option></select><label for="visit-name">Tên khách</label><input id="visit-name" autocomplete="name" required maxlength="80">
+<label for="hair-note">Ghi chú về tóc</label><textarea id="hair-note" rows="3" maxlength="600"></textarea><label for="service-summary">Dịch vụ, thời lượng và giá mẫu</label><input id="service-summary" readonly>
+<button type="submit" class="action">Lưu lịch mong muốn</button></form></div>
+
 </main>
-<footer><p>Gọn · Barbershop hư cấu. Dịch vụ và giá minh họa.</p><a href="../../index.html">RackerWeb</a></footer>
+<footer class="barber-foot"><div><a class="mark" href="index.html">Gọn</a><p>Barbershop hư cấu. Giá, hồ sơ thợ và lịch là dữ liệu minh họa.</p></div><div><p>10:00–19:30 · Thứ Ba–Chủ nhật<br>Hẻm Thước Mộc, khu Bàn Gương</p><a href="../../index.html">RackerWeb</a></div></footer>
 </body>
 </html>

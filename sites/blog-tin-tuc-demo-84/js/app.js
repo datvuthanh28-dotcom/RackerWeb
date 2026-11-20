@@ -3,7 +3,12 @@ const topic = document.getElementById('topic');
 if (query && topic) {
   const results = document.getElementById('results');
   const articles = [...document.querySelectorAll('article[data-topic]')];
-  const fold = value => value.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '').replace(/đ/g, 'd');
+  const fold = value => value.toLocaleLowerCase('vi-VN').normalize('NFD').replace(/\p{Diacritic}/gu, '').replace(/đ/g, 'd');
+  const params = new URLSearchParams(location.search);
+  const selected = params.get('muc');
+  if ([...topic.options].some(option => option.value === selected)) topic.value = selected;
+  query.value = params.get('q') || '';
+
   function filter() {
     const term = fold(query.value.trim());
     let matching = 0;
@@ -13,13 +18,8 @@ if (query && topic) {
     }
     results.textContent = matching ? matching + ' bài viết' : 'Không có bài viết phù hợp.';
   }
+
   query.addEventListener('input', filter);
   topic.addEventListener('change', filter);
-  window.addEventListener('hashchange', () => {
-    query.value = '';
-    topic.value = '';
-    filter();
-    document.getElementById(location.hash.slice(1))?.scrollIntoView();
-  });
   filter();
 }

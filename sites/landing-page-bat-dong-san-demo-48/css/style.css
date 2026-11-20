@@ -1245,3 +1245,9 @@ footer.arch-footer {
     text-align: center;
   }
 }
+
+@media (max-width: 600px) {
+  .footer-monograph-grid{grid-template-columns:minmax(0,1fr)}
+  .footer-brand-monograph .arch-brand-title{flex-wrap:wrap}
+  .container div[style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr)!important;gap:1rem!important}
+}

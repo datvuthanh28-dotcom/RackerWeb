@@ -1254,3 +1254,9 @@ header#site-header {
     grid-column: span 1;
   }
 }
+
+@media (max-width: 600px) {
+  .group-title-strip{min-width:0}
+  .group-title-strip h2{white-space:normal}
+  .group-line{min-width:0}
+}

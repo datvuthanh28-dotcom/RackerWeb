@@ -1363,3 +1363,7 @@ footer.zen-minimal-footer {
     text-align: center;
   }
 }
+
+@media (max-width: 600px) {
+  .mobile-nav-drawer:not(.open){visibility:hidden}
+}

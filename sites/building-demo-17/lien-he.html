@@ -1,19 +1,34 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lập yêu cầu khảo sát | Nếp Công Trình</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/frontend-local.css">
-<script src="js/frontend-local.js" defer></script>
-<script src="js/app.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="rackerweb-custom-design" content="hand-authored">
+  <title>Lập yêu cầu khảo sát · Nếp Công Trình</title>
+  <link rel="stylesheet" href="css/frontend-local.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/frontend-local.js" defer></script>
+  <script src="js/app.js" defer></script>
 </head>
 <body>
-<header class="site-rail"><a class="mark" href="index.html">Nếp Công Trình</a><nav aria-label="Điều hướng"><a href="index.html">Tổng quan</a><a href="san-pham.html">Hồ sơ dự án</a><a href="gioi-thieu.html">Phương pháp</a><a href="lien-he.html" aria-current="page">Lập yêu cầu</a></nav><small>Cải tạo công trình hiện hữu</small></header>
+<a class="skip-link" href="#main">Đi tới nội dung</a>
+<header class="site-rail"><a class="mark" href="index.html">Nếp <br>Công Trình</a>
+<nav aria-label="Điều hướng"><a href="index.html">Tổng quan</a><a href="san-pham.html">Hồ sơ dự án</a><a href="dich-vu.html">Phạm vi dịch vụ</a><a href="gioi-thieu.html">Phương pháp</a><a href="lien-he.html" aria-current="page">Lập yêu cầu</a></nav>
+<p>Cải tạo công trình hiện hữu</p></header>
 <main id="main">
-<h1>Lập yêu cầu khảo sát</h1><p>Chuẩn bị diện tích ước tính, loại công trình và tình trạng cần xử lý. Bản yêu cầu lưu trên thiết bị có thể tải xuống để đối chiếu.</p><form id="project-rfq" data-contact-channel="none"><fieldset><legend>Phạm vi</legend><label>Loại công trình<select id="project" required><option value="">Chọn công trình</option><option value="nha-ong">Nhà phố</option><option value="quan-cafe">Mặt bằng kinh doanh</option><option value="bep">Bếp hoặc nội thất</option></select></label><label>Diện tích ước tính (m²)<input type="number" min="1" max="10000" required></label><label>Hạng mục cần khảo sát<textarea rows="4" required></textarea></label></fieldset><fieldset><legend>Người lập yêu cầu</legend><label>Họ và tên<input autocomplete="name" required></label><label>Khu vực công trình<input autocomplete="address-level2" required></label></fieldset><button class="action" type="submit">Lưu yêu cầu</button></form>
+
+<div class="request-layout"><section><h1>Lập yêu cầu khảo sát</h1><p>Chuẩn bị loại công trình, diện tích ước tính, mục tiêu cải tạo và lịch bàn giao mặt bằng. Nếu có bản vẽ cũ, ghi lại thời điểm lập và những lần đã sửa.</p>
+<h2>Sau khi lập phiếu</h2><ol><li>Xem lại khu vực cần xử lý và phần muốn giữ.</li><li>Tải phiếu JSON để dùng khi chuẩn bị hồ sơ khảo sát.</li><li>Ghi bổ sung điều kiện ra vào công trường hoặc thời gian có người ở.</li></ol>
+<p>Văn phòng minh họa ở Cụm Sân Nếp, phường Bờ Gạch. Giờ làm việc mẫu 08:30–17:30 thứ Hai đến thứ Sáu. Hộp thư <span>khaosat@nepcongtrinh.example</span>.</p>
+<details><summary>Chưa biết diện tích chính xác thì ghi thế nào?</summary><p>Ước tính diện tích vùng tác động, ghi cách đo trong phần hạng mục. Bản khảo sát sẽ đo lại theo ranh giới từng phòng.</p></details>
+</section>
+<form id="project-rfq" data-contact-channel="none"><fieldset><legend>Phạm vi</legend><label for="project">Hồ sơ tham chiếu</label><select id="project"><option value="">Không chọn hồ sơ</option><option value="nha-ong" data-project-type="Nhà ở">Nhà ống Bậc Sáng</option><option value="quan-cafe" data-project-type="Thương mại">Quán nhỏ Hiên Gỗ</option><option value="bep" data-project-type="Nội thất">Bếp Gia Đình Mở</option><option value="can-ho" data-project-type="Nhà ở">Căn hộ Hai Bàn</option><option value="mai" data-project-type="Kỹ thuật">Sân mái Mùa Mưa</option><option value="thu-vien" data-project-type="Thương mại">Phòng đọc Gấp Mở</option></select>
+<label for="scope-type">Loại công trình</label><select id="scope-type" required><option value="">Chọn loại công trình</option><option>Nhà ở</option><option>Thương mại</option><option>Nội thất</option><option>Kỹ thuật</option></select>
+<label for="service-scope">Dịch vụ quan tâm</label><select id="service-scope" required><option value="">Chọn dịch vụ</option><option value="khao-sat">Khảo sát hiện trạng</option><option value="thiet-ke">Thiết kế và hồ sơ thi công</option><option value="thi-cong">Thi công theo hạng mục</option></select>
+<label for="area">Diện tích ước tính (m²)</label><input id="area" type="number" min="1" max="10000" required><label for="request-detail">Hạng mục cần khảo sát</label><textarea id="request-detail" rows="5" maxlength="1500" required></textarea></fieldset>
+<fieldset><legend>Người lập yêu cầu</legend><label for="customer">Họ và tên</label><input id="customer" autocomplete="name" maxlength="80" required><label for="region">Khu vực công trình</label><input id="region" autocomplete="address-level2" maxlength="120" required></fieldset><button class="action" type="submit">Lưu yêu cầu</button></form></div>
+
 </main>
-<footer><p>Nếp Công Trình · Nhà thầu hư cấu. Hồ sơ và ảnh minh họa.</p><a href="../../index.html">RackerWeb</a></footer>
+<footer class="build-foot"><div><strong>Nếp Công Trình</strong><p>Xưởng cải tạo hư cấu. Dự án, giá và hình ảnh là dữ liệu minh họa.</p></div><nav aria-label="Cuối trang"><a href="dich-vu.html">Phạm vi dịch vụ</a><a href="lien-he.html">Chuẩn bị khảo sát</a><a href="../../index.html">RackerWeb</a></nav></footer>
 </body>
 </html>

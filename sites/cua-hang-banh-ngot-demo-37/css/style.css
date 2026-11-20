@@ -734,3 +734,9 @@ footer.site-footer-bakery {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .b-cat-strip{min-width:0}
+  .b-cat-strip h2{white-space:normal}
+  .b-cat-line{min-width:0}
+}

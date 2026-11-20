@@ -27,3 +27,55 @@ footer{border-top:1px solid #526674}
 .local-request-history{grid-column:2}
 :focus-visible{outline:3px solid #ffba93;outline-offset:4px}
 @media(max-width:760px){body{display:block}.site-rail{position:static;min-height:0;border-right:0;border-bottom:1px solid #526674;padding:18px}.site-rail nav{display:flex;flex-wrap:wrap;gap:10px 18px;margin:14px 0 0}.site-rail small{display:none}.blueprint,.case,.method dl{grid-template-columns:1fr}.blueprint img,.case img{height:280px}.blueprint{gap:24px}}
+
+[hidden]{display:none!important}
+.skip-link:not(:focus){position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:fixed;z-index:999;top:8px;left:8px;background:#f4f6f8;color:#192a37;padding:8px}
+.site-rail p{font-size:.9rem;color:#bcd1db}.site-rail .mark{font-size:2rem}
+.build-title{padding:27px 0 20px}.build-title h1{margin:.25em 0}
+.small{font-size:.9rem;font-weight:650;color:#d4dde2}
+.scope-band{margin:26px 0;border-block:1px solid #70818b;padding:16px 0}
+.scope-band dl,.brief-materials{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.scope-band dt,.brief-materials dt,.service-detail dt{color:#ffba93;font-weight:700}
+.scope-band dd,.brief-materials dd,.service-detail dd{margin:5px 0 14px}
+.project-overview{margin:32px 0}
+.project-overview>header{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.project-overview>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.project-overview img{width:100%;height:210px;object-fit:cover}
+.home-process{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.1fr);gap:6px 25px;align-items:baseline;padding:20px 0;border-top:1px solid #526674}
+.home-process a{grid-column:2}
+.contact-band{background:#ffba93;color:#192a37;margin-top:24px;padding:25px}
+.contact-band .action{background:#192a37;color:white}
+.portfolio-controls{max-width:310px}
+.project-register .case>a{display:block}
+.project-register .case img{display:block}
+.project-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;border-top:1px solid #70818b;padding-top:12px}
+.project-facts dt{font-size:.9rem;color:#c1d3d9}.project-facts dd{margin:0;font-weight:750}
+.case-image{margin:0 0 20px}.case-image img{display:block;width:100%;max-height:570px;object-fit:cover}
+figcaption{color:#d5dfe2;padding-top:6px;font-size:.9rem}
+.case-report,.before-after{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px}
+.case-report>section{padding-top:10px;border-top:1px solid #70818b}.before-after figure{margin:10px 0}
+.before-after img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.scope-index,.build-foot nav{display:flex;flex-wrap:wrap;gap:15px}
+.service-detail{border-top:1px solid #526674;margin:25px 0;padding:14px 0}
+.service-detail dl{display:grid;grid-template-columns:minmax(100px,.5fr) minmax(0,1.3fr);gap:5px 15px}.service-detail dd{margin:0}
+.request-layout{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:30px}
+.request-layout h1{font-size:clamp(2.1rem,4.3vw,4.8rem)}
+.request-layout span{overflow-wrap:anywhere}
+.timeline{counter-reset:phase;list-style:none;padding-left:0}
+.timeline li{padding:12px 0 12px 50px;border-top:1px solid #526674;position:relative}
+.timeline li::before{counter-increment:phase;content:counter(phase,decimal-leading-zero);position:absolute;left:0;color:#ffba93;font-weight:750}
+.timeline strong{display:block}
+details{border-top:1px solid #526674;padding:9px 0}
+summary{cursor:pointer}
+.build-foot{display:flex;flex-wrap:wrap;gap:15px 28px;justify-content:space-between;align-items:baseline}
+@media(max-width:900px){.site-rail nav{overflow-wrap:anywhere}.project-overview img{height:150px}}
+@media(max-width:760px){
+ .site-rail .mark br{display:none}
+ .site-rail .mark{white-space:pre-wrap}
+ .site-rail p{display:none}
+ .request-layout,.home-process,.before-after,.case-report{grid-template-columns:minmax(0,1fr)}
+ .home-process a{grid-column:1}
+ .scope-band dl,.brief-materials,.project-overview>div{grid-template-columns:minmax(0,1fr)}
+ .project-overview img{height:220px}
+}

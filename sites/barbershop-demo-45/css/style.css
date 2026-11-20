@@ -29,3 +29,43 @@ input,textarea,select{max-width:100%;width:100%;font:inherit;padding:9px;backgro
 footer{border-top:2px solid;padding:22px 0 36px}
 :focus-visible{outline:3px solid #ad472e;outline-offset:3px}
 @media(max-width:580px){.front-desk{align-items:start}.front-desk nav{display:grid;grid-template-columns:1fr 1fr}.poster{display:flex;flex-direction:column;min-height:0}.poster>img{position:static;height:300px}.poster>div{margin:0;width:100%;padding:20px}.price-sheet details>div{flex-direction:column}.slot{grid-template-columns:1fr}}
+
+[hidden]{display:none!important}
+.skip-link:not(:focus){position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:fixed;z-index:999;top:8px;left:8px;background:#faf5e9;color:#152326;padding:8px}
+.front-desk .mark{display:block}.front-desk [aria-current]{font-weight:750}
+.barber-heading{padding:20px 0 24px}.barber-heading p,.bench p{max-width:63ch}
+.window-strip{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:14px 22px;padding:22px 0;border-bottom:2px solid}
+.window-strip h2,.bench h2{font-size:clamp(1.55rem,3.7vw,2.9rem);margin:0 0 8px;letter-spacing:-.04em}
+.window-strip ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 22px;list-style:none;margin:0;padding:0}
+.window-strip li{border-bottom:1px solid #968873;padding:5px 0}
+.style-duet,.barber-team{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.2fr);gap:18px 28px;align-items:center;padding:24px 0}
+.style-duet h2{font-size:clamp(1.7rem,5vw,4rem);margin:0;letter-spacing:-.055em}
+.style-duet img,.barber-team img{width:100%;height:330px;object-fit:cover}
+.bench{padding:20px;border:1px solid #968873;margin:20px 0 10px;background:#faf5e9}
+.bench nav{display:flex;gap:12px 24px;flex-wrap:wrap}
+.bench details{border-top:1px solid #968873;padding:10px 0}
+.bench summary{font-weight:700;cursor:pointer}
+.service-toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.service-toolbar label{margin:0}.service-toolbar select{width:auto}
+.menu-group{margin-bottom:18px}
+.menu-group h2{font-size:1.55rem;margin:0;padding:12px 0}
+.price-sheet details .menu-detail{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.62fr);gap:5px 20px;margin:0 0 16px;padding:0 0 10px}
+.menu-detail p{margin:0}.menu-detail dl{margin:0}.menu-detail dt{font-weight:700}.menu-detail dd{margin:0 0 8px}.menu-detail a{grid-column:1/-1}
+.price-sheet summary{grid-template-columns:minmax(0,1.65fr) minmax(60px,.55fr) minmax(80px,.65fr)}
+.style-book{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}
+.style-book figure{margin:0}.style-book img{width:100%;height:310px;object-fit:cover}.style-book figcaption{font-size:.9rem}
+.style-book article{border-bottom:1px solid #968873;padding-bottom:16px}
+.style-book h2{margin:13px 0 6px}
+.booking-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:22px}
+.booking-layout h1{font-size:clamp(2.6rem,5vw,4.5rem)}.booking-layout ul{padding-left:19px}
+.booking-layout .ticket{max-width:none;margin:0;align-self:start;min-width:0}
+.booking-layout .ticket label{margin-bottom:4px;margin-top:12px}
+.booking-layout .ticket button[type=submit]{margin-top:15px}
+.barber-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:13px 25px}
+@media(max-width:680px){
+ .front-desk nav{display:flex;gap:8px 12px}
+ .window-strip,.style-duet,.barber-team,.booking-layout,.style-book,.price-sheet details .menu-detail{grid-template-columns:minmax(0,1fr)}
+ .style-duet img,.barber-team img,.style-book img{height:245px}
+ .price-sheet summary{grid-template-columns:minmax(0,1.25fr) minmax(50px,.55fr) minmax(68px,.6fr);gap:7px;font-size:.94rem}
+}

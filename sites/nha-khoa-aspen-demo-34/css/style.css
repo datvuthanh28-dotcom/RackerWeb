@@ -866,3 +866,7 @@ footer.site-footer-dental {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .mobile-nav-drawer:not(.open){visibility:hidden}
+}
