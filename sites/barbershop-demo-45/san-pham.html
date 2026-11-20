@@ -3,40 +3,426 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="rackerweb-custom-design" content="hand-authored">
-  <title>Bảng dịch vụ · Gọn Barbershop</title>
+  <meta name="rackerweb-custom-design" content="hand-authored-premium">
+  <title>Bảng Dịch Vụ &amp; Báo Giá Chi Tiết · Gọn Barbershop #MS45</title>
+  <meta name="description" content="Bảng báo giá 12 dịch vụ cắt kéo, tỉa fade, cạo mặt khăn nóng và combo toàn diện tại Gọn Barbershop. Minh bạch giá cả, thời lượng và quy trình từng bước.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/frontend-local.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/frontend-local.js" defer></script>
   <script src="js/app.js" defer></script>
 </head>
 <body>
-<a class="skip-link" href="#main">Đi tới nội dung</a>
-<header class="front-desk"><a class="mark" href="index.html">Gọn</a><nav aria-label="Điều hướng">
-<a href="san-pham.html" aria-current="page">Bảng dịch vụ</a><a href="kieu-toc.html">Kiểu tóc</a><a href="gioi-thieu.html">Đội thợ</a><a href="lien-he.html">Chuẩn bị lịch</a></nav></header>
-<main id="main">
+  <a class="skip-link" href="#main">Đi tới nội dung chính</a>
 
-<header class="barber-heading"><h1>Bảng dịch vụ</h1><p>Mức giá minh họa tính cho một lượt. Mở từng dòng để xem phần thực hiện, dáng tóc phù hợp và cách chăm sau buổi cắt.</p></header>
-<div class="service-toolbar"><label for="service-filter">Nhóm dịch vụ</label><select id="service-filter"><option value="">Tất cả</option><option>Cắt tóc</option><option>Duy trì</option><option>Râu</option><option>Gói kết hợp</option></select><span id="service-count" role="status"></span></div>
-<div class="price-sheet"><section class="menu-group" data-service-group="Cắt tóc"><h2>Cắt tóc</h2>
-<details id="crop"><summary><span>Crop có kết cấu</span><span>35 phút</span><strong>180.000 ₫</strong></summary><div class="menu-detail"><p>Tóc trên để đủ độ dài cho nếp tự nhiên, tạo những lớp ngắn có chỗ tách. Hai bên ôm đầu, viền mềm để tóc mọc ra ít lộ ranh.</p><dl><dt>Hợp với</dt><dd>Tóc thẳng hoặc có xoáy trước trán, thích sấy nhanh.</dd><dt>Ở nhà</dt><dd>Sấy theo chiều tóc rơi, tán sáp nhẹ ở phần ngọn.</dd></dl><a href="lien-he.html?dich-vu=crop">Chọn Crop có kết cấu</a></div></details>
-<details id="taper"><summary><span>Taper ở mai và gáy</span><span>45 phút</span><strong>230.000 ₫</strong></summary><div class="menu-detail"><p>Giữ bề rộng hai bên và hạ độ dài quanh tai, mai và gáy. Thợ duyệt độ sát từ đầu rồi kiểm đường chuyển khi khách ngồi thẳng.</p><dl><dt>Hợp với</dt><dd>Người muốn gọn quanh tai nhưng giữ dáng chải lệch.</dd><dt>Ở nhà</dt><dd>Sấy từ xoáy ra trước, chải dọc thái dương khi tóc còn hơi ẩm.</dd></dl><a href="lien-he.html?dich-vu=taper">Chọn Taper ở mai và gáy</a></div></details>
-<details id="side-part"><summary><span>Chải lệch bằng kéo</span><span>50 phút</span><strong>270.000 ₫</strong></summary><div class="menu-detail"><p>Giữ phần trên dài đủ để đổi hướng chải, gọn đường mai bằng kéo thay vì lấy sát một dải. Thử rẽ ngôi ở hai vị trí trước khi cắt mái.</p><dl><dt>Hợp với</dt><dd>Tóc có độ rơi sang bên, cần kiểu đi làm dễ điều chỉnh.</dd><dt>Ở nhà</dt><dd>Sấy ở chân tóc theo đường ngôi, dùng kem nhẹ để giữ độ rơi.</dd></dl><a href="lien-he.html?dich-vu=side-part">Chọn Chải lệch bằng kéo</a></div></details>
-<details id="xoan"><summary><span>Cắt cho tóc xoăn tự nhiên</span><span>55 phút</span><strong>290.000 ₫</strong></summary><div class="menu-detail"><p>Kiểm dáng tóc khi khô để xem độ co, cắt từng cụm theo nếp và chừa độ dài ở vùng dễ bật quanh tai. Thợ duyệt đường viền lúc tóc đã trở lại trạng thái tự nhiên.</p><dl><dt>Hợp với</dt><dd>Tóc gợn hoặc xoăn muốn giữ hình, không ép thẳng.</dd><dt>Ở nhà</dt><dd>Thấm bằng khăn mềm, bóp nhẹ từng cụm rồi để ráo hoặc sấy gió thấp.</dd></dl><a href="lien-he.html?dich-vu=xoan">Chọn Cắt cho tóc xoăn tự nhiên</a></div></details>
-<details id="buzz"><summary><span>Buzz đều đầu</span><span>25 phút</span><strong>140.000 ₫</strong></summary><div class="menu-detail"><p>Chọn một độ dài chủ đạo và điều chỉnh nhẹ quanh đường viền. Thợ quan sát mật độ ở đỉnh đầu trước để độ ngắn bộc lộ vừa ý.</p><dl><dt>Hợp với</dt><dd>Muốn thao tác gội sấy nhanh và chấp nhận lộ rõ dáng đầu.</dd><dt>Ở nhà</dt><dd>Lau nhẹ sau gội và sắp lịch chỉnh theo tốc độ tóc mọc.</dd></dl><a href="lien-he.html?dich-vu=buzz">Chọn Buzz đều đầu</a></div></details></section>
-<section class="menu-group" data-service-group="Duy trì"><h2>Duy trì</h2>
-<details id="ghe-gon"><summary><span>Gọn viền giữa hai lần cắt</span><span>15 phút</span><strong>80.000 ₫</strong></summary><div class="menu-detail"><p>Chỉnh đường mai, mép tai và chân gáy. Phần trên và độ dài chính giữ như cũ, phù hợp để duy trì dáng trước một dịp cần chỉnh tề.</p><dl><dt>Hợp với</dt><dd>Tóc vừa cắt và chỉ mất nét quanh viền.</dd><dt>Ở nhà</dt><dd>Để tóc khô trước khi vuốt sát đường chân tóc.</dd></dl><a href="lien-he.html?dich-vu=ghe-gon">Chọn Gọn viền giữa hai lần cắt</a></div></details>
-<details id="goi-say"><summary><span>Gội và sấy theo nếp</span><span>20 phút</span><strong>90.000 ₫</strong></summary><div class="menu-detail"><p>Gội, lau thấm và sấy theo dáng hiện có. Thợ chỉ cách hướng gió và đưa lượng sản phẩm vừa đủ cho nếp mà khách có thể lặp lại ở nhà.</p><dl><dt>Hợp với</dt><dd>Muốn học cách đưa tóc về dáng trước buổi gặp hoặc chụp hình.</dd><dt>Ở nhà</dt><dd>Nhớ hướng sấy và lượng sản phẩm bằng một ảnh sau khi hoàn thiện.</dd></dl><a href="lien-he.html?dich-vu=goi-say">Chọn Gội và sấy theo nếp</a></div></details>
-<details id="mau-thu"><summary><span>Tư vấn đổi dáng</span><span>20 phút</span><strong>70.000 ₫</strong></summary><div class="menu-detail"><p>Xem ảnh sở thích, theo dõi đường xoáy và trao đổi về thời gian chuẩn bị mỗi sáng. Kết thúc với hai phương án, kèm độ dài cần nuôi của mỗi phương án.</p><dl><dt>Hợp với</dt><dd>Đang nuôi tóc hoặc phân vân trước khi cắt ngắn.</dd><dt>Ở nhà</dt><dd>Giữ ảnh hướng dẫn và chụp tóc khi không dùng sản phẩm để đối chiếu.</dd></dl><a href="lien-he.html?dich-vu=mau-thu">Chọn Tư vấn đổi dáng</a></div></details></section>
-<section class="menu-group" data-service-group="Râu"><h2>Râu</h2>
-<details id="rau"><summary><span>Chỉnh râu ngắn</span><span>20 phút</span><strong>100.000 ₫</strong></summary><div class="menu-detail"><p>Cân đường má, cổ và độ dài quanh cằm. Thợ kiểm tra hướng mọc, rồi chỉnh viền khi khách ngồi thẳng để nhìn cân hai bên.</p><dl><dt>Hợp với</dt><dd>Râu ngắn cần đường viền hay độ dài đồng đều.</dd><dt>Ở nhà</dt><dd>Rửa nhẹ, lau khô và chải theo chiều mọc nếu dùng dầu râu.</dd></dl><a href="lien-he.html?dich-vu=rau">Chọn Chỉnh râu ngắn</a></div></details>
-<details id="ria-mep"><summary><span>Tạo viền ria mép</span><span>15 phút</span><strong>75.000 ₫</strong></summary><div class="menu-detail"><p>Tỉa ria khỏi môi, giảm dày ở hai đầu và chỉnh đối xứng theo nét mặt. Thợ chải ria trước khi đo chiều dài, giúp tránh cắt quá sát.</p><dl><dt>Hợp với</dt><dd>Muốn giữ ria và làm rõ đường nét khi nói hoặc cười.</dd><dt>Ở nhà</dt><dd>Chải khô trước khi tỉa lại, tránh kéo căng khi đo độ dài.</dd></dl><a href="lien-he.html?dich-vu=ria-mep">Chọn Tạo viền ria mép</a></div></details></section>
-<section class="menu-group" data-service-group="Gói kết hợp"><h2>Gói kết hợp</h2>
-<details id="cap-gon"><summary><span>Taper và chỉnh râu</span><span>65 phút</span><strong>315.000 ₫</strong></summary><div class="menu-detail"><p>Taper giữ bề rộng hai bên rồi chỉnh vị trí nối giữa mai và râu. Gói có bản thử đường nối trước khi cắt ngắn để hai phần chuyển đều.</p><dl><dt>Hợp với</dt><dd>Muốn làm tóc và râu trong cùng lượt, cần viền liền ở thái dương.</dd><dt>Ở nhà</dt><dd>Sấy tóc trước, chải râu xuống sau để không làm dạt phần viền.</dd></dl><a href="lien-he.html?dich-vu=cap-gon">Chọn Taper và chỉnh râu</a></div></details>
-<details id="combo-mem"><summary><span>Crop và hướng dẫn sấy</span><span>55 phút</span><strong>250.000 ₫</strong></summary><div class="menu-detail"><p>Cắt crop, gội và dành phần cuối buổi để khách tự thử sấy dưới hướng dẫn. Chọn lượng sáp theo mật độ và để lại ảnh tham chiếu ở góc nhìn từ trên.</p><dl><dt>Hợp với</dt><dd>Lần đầu chọn crop hoặc muốn rút ngắn thời gian tự tạo kiểu.</dd><dt>Ở nhà</dt><dd>Lặp lại thứ tự lau, sấy chân tóc rồi tán sáp. Dùng ảnh tham chiếu khi đặt lượt sau.</dd></dl><a href="lien-he.html?dich-vu=combo-mem">Chọn Crop và hướng dẫn sấy</a></div></details></section></div>
-<section class="bench"><h2>Thời lượng tính thế nào?</h2><p>Thời lượng bao gồm đoạn tư vấn nhanh, cắt hoặc chỉnh theo dịch vụ và kiểm tra dáng cuối. Nếu tóc dài hơn nhiều so với kiểu muốn chọn, ghi điều đó trong yêu cầu để xếp thêm thời gian.</p></section>
+  <!-- Utility Return & Top Strip -->
+  <div class="library-return-bar">
+    <span>Giao diện mẫu <strong>#MS45</strong> thuộc Thư Viện Theme RackerWeb.</span>
+    <a href="../../index.html">&larr; Quay lại Thư Viện RackerWeb Catalog</a>
+  </div>
 
-</main>
-<footer class="barber-foot"><div><a class="mark" href="index.html">Gọn</a><p>Barbershop hư cấu. Giá, hồ sơ thợ và lịch là dữ liệu minh họa.</p></div><div><p>10:00–19:30 · Thứ Ba–Chủ nhật<br>Hẻm Thước Mộc, khu Bàn Gương</p><a href="../../index.html">RackerWeb</a></div></footer>
+  <div class="top-utility-strip">
+    <div class="top-utility-wrap">
+      <div class="top-utility-left">
+        <span class="utility-item">📍 Hẻm Thước Mộc, P. Bến Nghé, Quận 1, TP.HCM</span>
+        <span class="utility-item">⏰ <strong>09:30 – 20:00</strong> (Thứ Ba – Chủ Nhật, Nghỉ Thứ Hai)</span>
+      </div>
+      <div class="top-utility-right">
+        <span class="utility-item">✂️ <strong>100% Khăn Nóng &amp; Dao Cạo Tiệt Trùng Riêng Biệt</strong></span>
+        <span class="utility-item">📞 Hotline / Zalo: <strong>0971 183 939</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-mark-group" aria-label="Gọn Barbershop Trang Chủ">
+        <div class="brand-crest">G</div>
+        <div class="brand-titles">
+          <span class="brand-name">GỌN BARBERSHOP</span>
+          <span class="brand-sub">Artisan Grooming Atelier • MS45</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Điều hướng chính">
+        <a href="index.html">Trang Chủ</a>
+        <a href="san-pham.html" class="active" aria-current="page">Bảng Dịch Vụ</a>
+        <a href="kieu-toc.html">Kiểu Tóc Lookbook</a>
+        <a href="gioi-thieu.html">Đội Thợ &amp; Triết Lý</a>
+        <a href="lien-he.html">Đặt Lịch Ghế Cắt</a>
+      </nav>
+
+      <div class="header-cta-group">
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-header-zalo" title="Tư vấn trực tiếp qua Zalo">
+          <span>💬</span> Zalo Tư Vấn
+        </a>
+        <a href="lien-he.html" class="btn-header-booking">
+          <span>📅</span> Đặt Lịch Hẹn
+        </a>
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu di động">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Inner Hero -->
+    <section class="inner-hero">
+      <div class="inner-hero-container">
+        <h1>Thực Đơn Dịch Vụ &amp; Báo Giá Minh Bạch</h1>
+        <p>Mỗi dịch vụ tại Gọn được may đo tỉ mỉ theo cấu trúc hộp sọ và thói quen sinh hoạt. Bấm vào từng dịch vụ để xem các bước thao tác, phom tóc phù hợp và cách tự sấy tại nhà.</p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+      <div class="container">
+        <!-- Filter Toolbar -->
+        <div class="service-filter-bar">
+          <div class="filter-tabs">
+            <button type="button" class="filter-tab-btn active" data-filter="">Tất Cả 12 Dịch Vụ</button>
+            <button type="button" class="filter-tab-btn" data-filter="Cắt tóc">Cắt Tạo Kiểu</button>
+            <button type="button" class="filter-tab-btn" data-filter="Duy trì">Duy Trì &amp; Viền</button>
+            <button type="button" class="filter-tab-btn" data-filter="Râu">Chăm Sóc Râu</button>
+            <button type="button" class="filter-tab-btn" data-filter="Gói kết hợp">Combo Toàn Diện</button>
+          </div>
+          <div style="font-size: 0.88rem; color: var(--text-light-muted); font-weight: 600;">
+            Hiển thị: <span id="service-count" style="color: var(--accent-rust);">12 dịch vụ</span>
+          </div>
+        </div>
+
+        <div class="price-sheet-container">
+          <!-- Group 1: Cắt Tóc -->
+          <div class="menu-group-wrap" data-service-group="Cắt tóc">
+            <div class="menu-group-header">
+              <h3>✂️ Nhóm Dịch Vụ Cắt Tóc Tạo Dáng</h3>
+            </div>
+
+            <!-- Item 1 -->
+            <details class="service-details-item" id="crop" open>
+              <summary class="service-summary-bar">
+                <span class="item-name">Textured French Crop Tỉa Mai Ép Nếp</span>
+                <span class="item-duration">⏱ 45 phút</span>
+                <span class="item-price">180.000 ₫</span>
+              </summary>
+              <div class="service-expanded-content">
+                <div class="expanded-left">
+                  <p>Phần tóc trên đỉnh được cắt tỉa phân tầng tạo texture tự nhiên, giữ độ dài mái vừa đủ chạm trán. Hai bên mai ôm sát tạo góc cạnh nam tính, đường viền mềm mại để tóc mọc ra 3–4 tuần vẫn vào nếp êm ru.</p>
+                  <p><strong>Bao gồm:</strong> Tư vấn phom đầu, cắt kéo tỉa so le, cạo sạch chân tóc mai gáy, gội thảo mộc và sấy tạo phom.</p>
+                </div>
+                <div class="expanded-right">
+                  <dl>
+                    <dt>Phù hợp nhất với:</dt>
+                    <dd>Khuôn mặt tròn, mặt kim cương, người hay chơi thể thao hoặc đội mũ bảo hiểm.</dd>
+                    <dt>Chăm sóc ở nhà:</dt>
+                    <dd>Sấy xuôi từ xoáy ra trước, xoa đều 1 lượng Matte Clay nhỏ để định hình texture.</dd>
+                  </dl>
+                  <a href="lien-he.html?dich-vu=crop" class="btn-book-service-direct">Đặt Hẹn Kiểu Tóc Này &rarr;</a>
+                </div>
+              </div>
+            </details>
+
+            <!-- Item 2 -->
+            <details class="service-details-item" id="taper">
+              <summary class="service-summary-bar">
+                <span class="item-name">Classic Taper Fade Mai &amp; Chân Gáy Kéo Dày</span>
+                <span class="item-duration">⏱ 50 phút</span>
+                <span class="item-price">230.000 ₫</span>
+              </summary>
+              <div class="service-expanded-content">
+                <div class="expanded-left">
+                  <p>Giữ trọn độ dày của phần đỉnh và thái dương để vuốt side-part hoặc chải ngược, trong khi chân mai và viền gáy được xử lý fade mờ dần tinh xảo. Thợ căn chỉnh góc ngồi thẳng để độ đối xứng đạt mức tuyệt đối.</p>
+                </div>
+                <div class="expanded-right">
+                  <dl>
+                    <dt>Phù hợp nhất với:</dt>
+                    <dd>Khuôn mặt vuông chữ điền, doanh nhân, môi trường công sở cần sự lịch lãm chỉn chu.</dd>
+                    <dt>Chăm sóc ở nhà:</dt>
+                    <dd>Sấy nâng chân tóc theo chiều rẽ ngôi, dùng pomade gốc nước bóng mờ cổ điển.</dd>
+                  </dl>
+                  <a href="lien-he.html?dich-vu=taper" class="btn-book-service-direct">Đặt Hẹn Kiểu Tóc Này &rarr;</a>
+                </div>
+              </div>
+            </details>
+
+            <!-- Item 3 -->
+            <details class="service-details-item" id="side-part">
+              <summary class="service-summary-bar">
+                <span class="item-name">Side-Part Thủ Công Kéo Cắt Hoàn Toàn</span>
+                <span class="item-duration">⏱ 50 phút</span>
+                <span class="item-price">270.000 ₫</span>
+              </summary>
+              <div class="service-expanded-content">
+                <div class="expanded-left">
+                  <p>Không dùng tông đơ bạt trắng da đầu. Người thợ dùng 100% kéo cắt tay để từng lớp tóc rơi tự nhiên theo trọng lực, che giấu các khuyết điểm gồ ghề của hộp sọ một cách êm ái.</p>
+                </div>
+                <div class="expanded-right">
+                  <dl>
+                    <dt>Phù hợp nhất với:</dt>
+                    <dd>Người có da đầu nhạy cảm, tóc tơ mảnh hoặc yêu chuộng phong cách quý ông cổ điển.</dd>
+                    <dt>Chăm sóc ở nhà:</dt>
+                    <dd>Dùng lược thưa chải nhẹ khi tóc còn ẩm, để khô tự nhiên hoặc sấy gió mát.</dd>
+                  </dl>
+                  <a href="lien-he.html?dich-vu=side-part" class="btn-book-service-direct">Đặt Hẹn Kiểu Tóc Này &rarr;</a>
+                </div>
+              </div>
+            </details>
+
+            <!-- Item 4 -->
+            <details class="service-details-item" id="xoan">
+              <summary class="service-summary-bar">
+                <span class="item-name">Cắt Giữ Nếp Cho Tóc Xoăn Tự Nhiên &amp; Uốn Nếp</span>
+                <span class="item-duration">⏱ 55 phút</span>
+                <span class="item-price">290.000 ₫</span>
+              </summary>
+              <div class="service-expanded-content">
+                <div class="expanded-left">
+                  <p>Kiểm tra độ co của lọn xoăn khi khô trước khi chạm kéo. Giảm tải sức nặng ở vùng chân tóc để các lọn xoăn bung phồng tự nhiên mà không tạo cảm giác xù bông luộm thuộm.</p>
+                </div>
+                <div class="expanded-right">
+                  <dl>
+                    <dt>Phù hợp nhất với:</dt>
+                    <dd>Tóc có độ gợn sóng tự nhiên hoặc nam giới thích phong cách nghệ sĩ lãng tử.</dd>
+                    <dt>Chăm sóc ở nhà:</dt>
+                    <dd>Thấm ráo nước bằng khăn sợi bông, thoa tinh dầu dưỡng Argan và sấy bằng loa sấy.</dd>
+                  </dl>
+                  <a href="lien-he.html?dich-vu=xoan" class="btn-book-service-direct">Đặt Hẹn Kiểu Tóc Này &rarr;</a>
+                </div>
+              </div>
+            </details>
+
+            <!-- Item 5 -->
+            <details class="service-details-item" id="buzz">
+              <summary class="service-summary-bar">
+                <span class="item-name">Buzz Cut Chuẩn Phom Đầu Kèm Căn Chỉnh Viền</span>
+                <span class="item-duration">⏱ 30 phút</span>
+                <span class="item-price">140.000 ₫</span>
+              </summary>
+              <div class="service-expanded-content">
+                <div class="expanded-left">
+                  <p>Định hình độ ngắn đồng đều theo mật độ tóc từng vùng đầu, vát viền chân tóc sắc nét bằng dao lam tiệt trùng. Rất mát mẻ, gọn gàng và không tốn một giây sấy tóc.</p>
+                </div>
+                <div class="expanded-right">
+                  <dl>
+                    <dt>Phù hợp nhất với:</dt>
+                    <dd>Người có hộp sọ tròn đều, yêu thích sự tối giản và tiện lợi tuyệt đối.</dd>
+                    <dt>Chăm sóc ở nhà:</dt>
+                    <dd>Gội sạch hằng ngày, xoa nhẹ lotion dưỡng ẩm da đầu.</dd>
+                  </dl>
+                  <a href="lien-he.html?dich-vu=buzz" class="btn-book-service-direct">Đặt Hẹn Kiểu Tóc Này &rarr;</a>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <!-- Group 2: Duy Trì -->
+          <div class="menu-group-wrap" data-service-group="Duy trì">
+            <div class="menu-group-header">
+              <h3>⚡ Nhóm Dịch Vụ Duy Trì &amp; Chăm Sóc Nhanh</h3>
+            </div>
+
+            <!-- Item 6 -->
+            <details class="service-details-item" id="ghe-gon">
+              <summary class="service-summary-bar">
+                <span class="item-name">Chỉnh Viền Mai &amp; Chân Gáy (Clean-up Touch)</span>
+                <span class="item-duration">⏱ 20 phút</span>
+                <span class="item-price">80.000 ₫</span>
+              </summary>
+              <div class="service-expanded-content">
+                <div class="expanded-left">
+                  <p>Dành riêng cho khách hàng giữa hai kỳ cắt tóc chính. Làm sạch các sợi tóc con mọc thừa quanh vành tai, mép cổ và chân gáy để bạn luôn xuất hiện chỉn chu trước sự kiện quan trọng.</p>
+                </div>
+                <div class="expanded-right">
+                  <dl>
+                    <dt>Lưu ý:</dt>
+                    <dd>Miễn phí 100% nếu trong thời hạn 7 ngày bảo hành sau lượt cắt chính.</dd>
+                  </dl>
+                  <a href="lien-he.html?dich-vu=ghe-gon" class="btn-book-service-direct">Giữ Lịch Nhanh &rarr;</a>
+                </div>
+              </div>
+            </details>
+
+            <!-- Item 7 -->
+            <details class="service-details-item" id="goi-say">
+              <summary class="service-summary-bar">
+                <span class="item-name">Gội Dưỡng Sinh Đầu Thảo Mộc &amp; Sấy Vào Nếp</span>
+                <span class="item-duration">⏱ 25 phút</span>
+                <span class="item-price">90.000 ₫</span>
+              </summary>
+              <div class="service-expanded-content">
+                <div class="expanded-left">
+                  <p>Gội 2 nước sạch bọt gàu với dầu gội vỏ bưởi bồ kết hữu cơ, ấn huyệt thái dương và cổ vai gáy giải tỏa áp lực, sau đó sấy tạo kiểu chuẩn bị đi tiệc.</p>
+                </div>
+                <div class="expanded-right">
+                  <a href="lien-he.html?dich-vu=goi-say" class="btn-book-service-direct">Giữ Lịch Nhanh &rarr;</a>
+                </div>
+              </div>
+            </details>
+
+            <!-- Item 8 -->
+            <details class="service-details-item" id="mau-thu">
+              <summary class="service-summary-bar">
+                <span class="item-name">Tư Vấn Đổi Dáng &amp; Đo Đạc Xoáy Tóc Chuyên Sâu</span>
+                <span class="item-duration">⏱ 20 phút</span>
+                <span class="item-price">70.000 ₫</span>
+              </summary>
+              <div class="service-expanded-content">
+                <div class="expanded-left">
+                  <p>Dành cho bạn đang băn khoăn muốn thay đổi phong cách nhưng sợ không hợp mặt. Thợ cả sẽ phác thảo 2 phương án kiểu tóc và lộ trình nuôi tóc khả thi.</p>
+                </div>
+                <div class="expanded-right">
+                  <a href="lien-he.html?dich-vu=mau-thu" class="btn-book-service-direct">Đặt Lịch Tư Vấn &rarr;</a>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <!-- Group 3: Râu -->
+          <div class="menu-group-wrap" data-service-group="Râu">
+            <div class="menu-group-header">
+              <h3>🪒 Nghệ Thuật Cạo Râu Khăn Nóng</h3>
+            </div>
+
+            <!-- Item 9 -->
+            <details class="service-details-item" id="rau">
+              <summary class="service-summary-bar">
+                <span class="item-name">Cạo Râu Khăn Nóng Hoàng Gia Tinh Dầu Đàn Hương</span>
+                <span class="item-duration">⏱ 35 phút</span>
+                <span class="item-price">120.000 ₫</span>
+              </summary>
+              <div class="service-expanded-content">
+                <div class="expanded-left">
+                  <p>Ủ khăn hấp nhiệt 70°C làm mềm gốc nang lông, xoa kem cạo tạo bọt thủ công bằng chổi lông tự nhiên, cạo lưỡi lam mới tiệt trùng và chườm lạnh khóa lỗ chân lông.</p>
+                </div>
+                <div class="expanded-right">
+                  <dl>
+                    <dt>Cảm giác sau cạo:</dt>
+                    <dd>Làn da mịn màng, thanh mát, hoàn toàn không châm chích hay đỏ rát.</dd>
+                  </dl>
+                  <a href="lien-he.html?dich-vu=rau" class="btn-book-service-direct">Đặt Lịch Cạo Khăn Nóng &rarr;</a>
+                </div>
+              </div>
+            </details>
+
+            <!-- Item 10 -->
+            <details class="service-details-item" id="ria-mep">
+              <summary class="service-summary-bar">
+                <span class="item-name">Tạo Viền Râu Quai Nón &amp; Tỉa Ria Mép Cổ Điển</span>
+                <span class="item-duration">⏱ 25 phút</span>
+                <span class="item-price">85.000 ₫</span>
+              </summary>
+              <div class="service-expanded-content">
+                <div class="expanded-left">
+                  <p>Căn chỉnh đường viền râu má và viền cổ đối xứng hoàn hảo theo cấu trúc xương hàm, tỉa mỏng bớt phần rậm rạp giúp gương mặt nam tính và gọn gàng.</p>
+                </div>
+                <div class="expanded-right">
+                  <a href="lien-he.html?dich-vu=ria-mep" class="btn-book-service-direct">Đặt Lịch Tỉa Râu &rarr;</a>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <!-- Group 4: Combo -->
+          <div class="menu-group-wrap" data-service-group="Gói kết hợp">
+            <div class="menu-group-header">
+              <h3>👑 Gói Combo Chữ Ký Toàn Diện</h3>
+            </div>
+
+            <!-- Item 11 -->
+            <details class="service-details-item" id="cap-gon" open>
+              <summary class="service-summary-bar">
+                <span class="item-name">The Full Master Ritual: Cắt Kéo + Cạo Khăn Nóng + Gội Thảo Mộc</span>
+                <span class="item-duration">⏱ 75 phút</span>
+                <span class="item-price">315.000 ₫</span>
+              </summary>
+              <div class="service-expanded-content">
+                <div class="expanded-left">
+                  <p>Gói phục hồi toàn diện được yêu thích nhất. Một tiếng mười lăm phút thư giãn trên ghế cạo êm ái: từ cắt tóc tạo phom, cạo râu khăn nóng thơm hương đàn hương, đến gội đầu mát xa ấn huyệt phục hồi năng lượng.</p>
+                </div>
+                <div class="expanded-right">
+                  <dl>
+                    <dt>Tiết kiệm:</dt>
+                    <dd>Tiết kiệm 75.000₫ so với sử dụng các dịch vụ đơn lẻ.</dd>
+                    <dt>Đặc quyền:</dt>
+                    <dd>Tặng kèm nước giải khát thảo mộc và hộp sáp dùng thử mini.</dd>
+                  </dl>
+                  <a href="lien-he.html?dich-vu=cap-gon" class="btn-book-service-direct">Đặt Hẹn Gói Chữ Ký &rarr;</a>
+                </div>
+              </div>
+            </details>
+
+            <!-- Item 12 -->
+            <details class="service-details-item" id="combo-mem">
+              <summary class="service-summary-bar">
+                <span class="item-name">Combo Cắt Crop Tự Nhiên &amp; Khóa Huấn Luyện Sấy 3 Phút Tại Quầy</span>
+                <span class="item-duration">⏱ 65 phút</span>
+                <span class="item-price">250.000 ₫</span>
+              </summary>
+              <div class="service-expanded-content">
+                <div class="expanded-left">
+                  <p>Dành riêng cho những ai luôn than thở rằng "tóc ở tiệm thì đẹp, về nhà sấy lại xấu". Người thợ sẽ hướng dẫn bạn cầm máy sấy và vuốt sáp thực tế ngay tại quầy gương tiệm cho đến khi bạn thuần thục.</p>
+                </div>
+                <div class="expanded-right">
+                  <a href="lien-he.html?dich-vu=combo-mem" class="btn-book-service-direct">Đặt Hẹn Gói Huấn Luyện &rarr;</a>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Master Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="brand-mark-group" style="margin-bottom: 16px;">
+          <div class="brand-crest">G</div>
+          <div class="brand-titles">
+            <span class="brand-name">GỌN BARBERSHOP</span>
+            <span class="brand-sub">Artisan Grooming Atelier</span>
+          </div>
+        </div>
+        <p>Không gian cắt kéo thủ công và cạo mặt khăn nóng dành cho nam giới tìm kiếm sự chỉn chu tự nhiên và thói quen chăm sóc tóc tối giản.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Hệ Thống Dịch Vụ</h4>
+        <ul class="footer-links">
+          <li><a href="san-pham.html?nhom=C%E1%BA%AFt%20t%C3%B3c">Cắt Kéo Thủ Công Phân Lớp</a></li>
+          <li><a href="san-pham.html?nhom=Duy%20tr%C3%AC">Chỉnh Viền Taper Fade Mai Gáy</a></li>
+          <li><a href="san-pham.html?nhom=R%C3%A2u">Cạo Râu Khăn Nóng 70°C</a></li>
+          <li><a href="san-pham.html?nhom=G%C3%B3i%20k%E1%BA%BFt%20h%E1%BB%A3p">Combo Tóc &amp; Râu Toàn Diện</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Về Gọn Barbershop</h4>
+        <ul class="footer-links">
+          <li><a href="gioi-thieu.html">Triết Lý Đọc Tóc Khi Còn Khô</a></li>
+          <li><a href="gioi-thieu.html#doi-tho">Hồ Sơ Đội Ngũ Thợ Cạo</a></li>
+          <li><a href="kieu-toc.html">Bộ Sưu Tập Kiểu Tóc Lookbook</a></li>
+          <li><a href="lien-he.html">Chính Sách Chỉnh Viền 7 Ngày</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Thông Tin Ghế Cắt</h4>
+        <p>
+          📍 Hẻm Thước Mộc, P. Bến Nghé, Quận 1, TP. Hồ Chí Minh.<br>
+          📞 Hotline: <strong>0971 183 939</strong><br>
+          ⏰ Giờ hoạt động: 09:30 – 20:00 (Thứ Ba – Chủ Nhật).
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-wrap">
+        <div>&copy; 2026 Gọn Barbershop Atelier &bull; Thiết kế mẫu chuẩn doanh nghiệp #MS45.</div>
+        <div><a href="../../index.html" style="color: var(--accent-brass-light); font-weight: 600;">&larr; RackerWeb Theme Portfolio Index</a></div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

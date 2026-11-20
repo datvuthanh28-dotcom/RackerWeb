@@ -3,25 +3,838 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="rackerweb-custom-design" content="hand-authored">
-  <title>Trang tiệm · Gọn Barbershop</title>
+  <meta name="rackerweb-custom-design" content="hand-authored-premium">
+  <title>GỌN BARBERSHOP &amp; GROOMING ATELIER — Cắt Kéo Thủ Công &amp; Cạo Mặt Khăn Nóng #MS45</title>
+  <meta name="description" content="Gọn Barbershop - Tiệm cạo mặt khăn nóng và cắt kéo thủ công tại Quận 1. Đọc hướng mọc của xoáy đầu, thiết kế dáng tóc dễ sấy lại chỉ 3 phút mỗi sáng. Bảo hành chỉnh viền miễn phí 7 ngày.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/frontend-local.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/frontend-local.js" defer></script>
   <script src="js/app.js" defer></script>
 </head>
 <body>
-<a class="skip-link" href="#main">Đi tới nội dung</a>
-<header class="front-desk"><a class="mark" href="index.html">Gọn</a><nav aria-label="Điều hướng">
-<a href="san-pham.html">Bảng dịch vụ</a><a href="kieu-toc.html">Kiểu tóc</a><a href="gioi-thieu.html">Đội thợ</a><a href="lien-he.html">Chuẩn bị lịch</a></nav></header>
-<main id="main">
+  <a class="skip-link" href="#main">Đi tới nội dung chính</a>
 
-<section class="poster"><img src="assets/crop.webp" alt="Tóc crop ngắn nhìn từ góc ba phần tư" fetchpriority="high"><div><h1>Gọn đầu.<br>Nhẹ việc.</h1><p>Kiểu tóc bạn có thể tự sấy lại vào sáng hôm sau. Tiệm cắt theo đường xoáy, mật độ và thời gian bạn muốn dành cho tóc.</p><a class="action" href="san-pham.html">Xem bảng dịch vụ</a></div></section>
-<section class="window-strip"><div><h2>Chọn theo việc cần làm</h2><p>Đổi dáng, chỉnh viền, hay làm tóc và râu trong cùng lượt?</p></div><ul><li><a href="san-pham.html?nhom=C%E1%BA%AFt%20t%C3%B3c">Cắt tóc</a></li><li><a href="san-pham.html?nhom=Duy%20tr%C3%AC">Duy trì</a></li><li><a href="san-pham.html?nhom=R%C3%A2u">Râu</a></li><li><a href="san-pham.html?nhom=G%C3%B3i%20k%E1%BA%BFt%20h%E1%BB%A3p">Gói kết hợp</a></li></ul></section>
-<section class="style-duet"><div><h2>Nhìn từ bên cạnh.</h2><p>Mang ảnh nhìn nghiêng nếu bạn quan tâm đường mai, độ sát quanh tai hay dáng tóc dưới mũ bảo hiểm.</p><a href="kieu-toc.html">Xem bốn kiểu tóc</a></div><img src="assets/chai-lech.webp" alt="Dáng tóc chải lệch với phần trên dài hơn" loading="lazy"></section>
-<section class="bench"><h2>Mỗi ghế có một nhịp.</h2><p>Thợ xem tóc ở trạng thái khô, xác nhận mức ngắn và mới chuyển sang cắt. Trước khi rời ghế, khách có thể thử tự sấy một đoạn.</p><nav aria-label="Xem thêm"><a href="gioi-thieu.html">Gặp đội thợ</a><a href="lien-he.html">Chọn khung giờ</a></nav></section>
+  <!-- 0. Utility Return & Top Strip -->
+  <div class="library-return-bar">
+    <span>Giao diện mẫu <strong>#MS45</strong> thuộc Thư Viện Theme RackerWeb.</span>
+    <a href="../../index.html">&larr; Quay lại Thư Viện RackerWeb Catalog</a>
+  </div>
 
-</main>
-<footer class="barber-foot"><div><a class="mark" href="index.html">Gọn</a><p>Barbershop hư cấu. Giá, hồ sơ thợ và lịch là dữ liệu minh họa.</p></div><div><p>10:00–19:30 · Thứ Ba–Chủ nhật<br>Hẻm Thước Mộc, khu Bàn Gương</p><a href="../../index.html">RackerWeb</a></div></footer>
+  <div class="top-utility-strip">
+    <div class="top-utility-wrap">
+      <div class="top-utility-left">
+        <span class="utility-item">📍 Hẻm Thước Mộc, P. Bến Nghé, Quận 1, TP.HCM</span>
+        <span class="utility-item">⏰ <strong>09:30 – 20:00</strong> (Thứ Ba – Chủ Nhật, Nghỉ Thứ Hai)</span>
+      </div>
+      <div class="top-utility-right">
+        <span class="utility-item">✂️ <strong>100% Khăn Nóng &amp; Dao Cạo Tiệt Trùng Riêng Biệt</strong></span>
+        <span class="utility-item">📞 Hotline / Zalo: <strong>0971 183 939</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. Header Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-mark-group" aria-label="Gọn Barbershop Trang Chủ">
+        <div class="brand-crest">G</div>
+        <div class="brand-titles">
+          <span class="brand-name">GỌN BARBERSHOP</span>
+          <span class="brand-sub">Artisan Grooming Atelier • MS45</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Điều hướng chính">
+        <a href="index.html" class="active" aria-current="page">Trang Chủ</a>
+        <a href="san-pham.html">Bảng Dịch Vụ</a>
+        <a href="kieu-toc.html">Kiểu Tóc Lookbook</a>
+        <a href="gioi-thieu.html">Đội Thợ &amp; Triết Lý</a>
+        <a href="lien-he.html">Đặt Lịch Ghế Cắt</a>
+      </nav>
+
+      <div class="header-cta-group">
+        <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" class="btn-header-zalo" title="Tư vấn trực tiếp qua Zalo">
+          <span>💬</span> Zalo Tư Vấn
+        </a>
+        <a href="lien-he.html" class="btn-header-booking">
+          <span>📅</span> Đặt Lịch Hẹn
+        </a>
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu di động">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 2. Hero Section: Cinematic Split Atelier -->
+    <section class="hero-atelier">
+      <div class="hero-container">
+        <div class="hero-text-col">
+          <div class="hero-eyebrow">
+            <span>💈</span> Atelier Cắt Kéo Thủ Công &amp; Cạo Mặt Khăn Nóng
+          </div>
+          <h1 class="hero-title">
+            Cắt theo đường xoáy đầu.<br>
+            <em>Giữ nếp tóc nhẹ việc mỗi sớm mai.</em>
+          </h1>
+          <p class="hero-desc">
+            Không áp đặt một công thức rập khuôn. Người thợ tại Gọn quan sát chất tóc khi còn khô, phân tích hướng mọc tự nhiên và may đo từng đường kéo để bạn có thể tự sấy lại vào nếp chỉ trong 3 phút mỗi sáng.
+          </p>
+          <div class="hero-actions">
+            <a href="san-pham.html" class="btn-primary">
+              <span>📋</span> Khám Phá Bảng Dịch Vụ
+            </a>
+            <a href="lien-he.html" class="btn-secondary">
+              <span>💺</span> Giữ Lịch Ghế Cắt
+            </a>
+          </div>
+
+          <div class="hero-trust-row">
+            <div class="trust-pill">
+              <span class="trust-icon">✓</span>
+              <div><strong>Đọc chất tóc khô</strong> trước khi chạm nước</div>
+            </div>
+            <div class="trust-pill">
+              <span class="trust-icon">✓</span>
+              <div><strong>Dao cạo tiệt trùng riêng</strong> 100% từng khách</div>
+            </div>
+            <div class="trust-pill">
+              <span class="trust-icon">✓</span>
+              <div><strong>Khăn nóng 3 tầng nhiệt</strong> ủ tinh dầu đàn hương</div>
+            </div>
+            <div class="trust-pill">
+              <span class="trust-icon">✓</span>
+              <div><strong>Bảo hành chỉnh viền 7 ngày</strong> hoàn toàn miễn phí</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-frame">
+          <div class="hero-image-wrapper">
+            <img src="assets/crop.webp" alt="Thợ cắt tóc kiểu Crop có kết cấu tự nhiên nhìn từ góc ba phần tư tại Gọn Barbershop" fetchpriority="high">
+          </div>
+          <div class="hero-floating-badge">
+            <div class="badge-seal">✂️</div>
+            <div class="badge-text">
+              <strong>Kỹ Thuật Cắt Phân Tách Nếp</strong>
+              <span>Dễ chăm sóc dưới mũ bảo hiểm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Section: 4 Grooming Pillars (Bento Grid) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Chuẩn Mực Nghề Cạo</span>
+          <h2 class="section-title">Bốn Trụ Cột Tạo Nên Dáng Tóc Tự Nhiên</h2>
+          <p class="section-subtitle">
+            Chúng tôi tin rằng một kiểu tóc đẹp không phải là kiểu tóc bóng bẩy khi vừa rời khỏi tiệm, mà là kiểu tóc bạn có thể tự vuốt lại đẹp mắt mỗi sáng mà không cần quá nhiều sáp hay kỹ năng phức tạp.
+          </p>
+        </div>
+
+        <div class="pillars-bento">
+          <div class="pillar-card">
+            <span class="pillar-num">01</span>
+            <h3>Đọc Tóc Khi Còn Khô</h3>
+            <p>
+              Tóc ướt thường giấu đi độ co rút tự nhiên và hướng mọc của xoáy đầu. Thợ Gọn luôn dành 5 phút đầu quan sát độ rơi và vị trí tóc chỉa để quyết định điểm hạ kéo chính xác.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-num">02</span>
+            <h3>May Đo Theo Mũ Bảo Hiểm</h3>
+            <p>
+              Với nam giới Việt, nón bảo hiểm là thử thách lớn nhất của nếp tóc. Chúng tôi tính toán độ phồng chân tóc và độ dài hai bên tai để khi cởi nón, tóc chỉ cần lắc nhẹ là trở về nếp.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-num">03</span>
+            <h3>Quy Trình Khăn Nóng 70°C</h3>
+            <p>
+              Cạo râu không chỉ là làm sạch, mà là liệu pháp thư giãn. Tinh dầu đàn hương cùng hơi ấm làm mềm từng nang râu cứng nhất, chống kích ứng và mang lại cảm giác nhẹ nhõm tối đa.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-num">04</span>
+            <h3>Bàn Giao Thói Quen Sấy 3 Phút</h3>
+            <p>
+              Trước khi rời ghế, bạn sẽ được thợ hướng dẫn cách đưa tay điều hướng gió sấy theo chiều xoáy tóc. Bạn có thể tự thao tác thử một bên đầu ngay tại quầy gương tiệm.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Section: Signature Grooming Services -->
+    <section class="section section-sand">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Thực Đơn Chữ Ký</span>
+          <h2 class="section-title">Dịch Vụ Cắt Kéo &amp; Chăm Sóc Râu Tóc</h2>
+          <p class="section-subtitle">
+            Mỗi gói dịch vụ đều được định lượng thời gian chuẩn xác, đảm bảo người thợ có đủ sự tỉ mỉ cho từng đường cạo mà không khiến bạn phải chờ đợi ngoài lịch hẹn.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <article class="service-item-card">
+            <div class="service-card-media">
+              <img src="assets/crop.webp" alt="Cắt tóc tạo dáng Signature tại Gọn Barbershop" loading="lazy">
+              <span class="service-duration-badge">⏱ 45 Phút</span>
+            </div>
+            <div class="service-card-body">
+              <span class="service-category-tag">Cắt Tóc Tạo Dáng</span>
+              <h3 class="service-card-title">Cắt Tóc Kéo Tay Signature</h3>
+              <p class="service-card-desc">
+                Tư vấn cấu trúc hộp sọ, cắt kéo phân lớp mềm mại, hạ độ dài mai gáy theo phom đầu, xả sạch bọt tóc và sấy nếp chuẩn mực.
+              </p>
+              <ul class="service-card-steps">
+                <li>Đọc cấu trúc xoáy &amp; phom hộp sọ</li>
+                <li>Cắt kéo tạo khối không bạt chân tóc</li>
+                <li>Gội thảo mộc làm sạch nang tóc</li>
+                <li>Bảo hành chỉnh viền miễn phí 7 ngày</li>
+              </ul>
+              <div class="service-card-footer">
+                <div class="service-price">180.000 ₫</div>
+                <a href="lien-he.html?dich-vu=crop" class="btn-service-select">Giữ Ghế</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 2 -->
+          <article class="service-item-card">
+            <div class="service-card-media">
+              <img src="assets/taper.webp" alt="Taper Fade sắc nét quanh mai và gáy" loading="lazy">
+              <span class="service-duration-badge">⏱ 50 Phút</span>
+            </div>
+            <div class="service-card-body">
+              <span class="service-category-tag">Fade Kỹ Thuật Cao</span>
+              <h3 class="service-card-title">Taper Fade Mai &amp; Chân Gáy</h3>
+              <p class="service-card-desc">
+                Chuyển độ dài mượt như khói từ chân tai lên đỉnh. Giữ trọn độ dày phần trên cho các kiểu Side-part, Ivy League hoặc chải ngược.
+              </p>
+              <ul class="service-card-steps">
+                <li>Xác định độ sát phù hợp làn da</li>
+                <li>Căn chỉnh đối xứng hai bên tai</li>
+                <li>Tỉa mỏng ngọn tóc tạo độ đan xen</li>
+                <li>Thoa dưỡng da sau cạo Aftershave</li>
+              </ul>
+              <div class="service-card-footer">
+                <div class="service-price">230.000 ₫</div>
+                <a href="lien-he.html?dich-vu=taper" class="btn-service-select">Giữ Ghế</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 3 -->
+          <article class="service-item-card">
+            <div class="service-card-media">
+              <img src="assets/rau.webp" alt="Cạo râu khăn nóng hoàng gia tinh dầu đàn hương" loading="lazy">
+              <span class="service-duration-badge">⏱ 35 Phút</span>
+            </div>
+            <div class="service-card-body">
+              <span class="service-category-tag">Nghi Thức Cạo Mặt</span>
+              <h3 class="service-card-title">Cạo Râu Khăn Nóng Hoàng Gia</h3>
+              <p class="service-card-desc">
+                Nghi thức cạo mặt cổ điển với 3 lượt khăn ủ nóng 70°C, bọt cạo xà phòng kem ấm đánh tay bằng chổi lông lửng và dao lam tiệt trùng mới 100%.
+              </p>
+              <ul class="service-card-steps">
+                <li>Ủ khăn nóng mở nang lông</li>
+                <li>Đánh bọt kem xà phòng ấm tay thủ công</li>
+                <li>Cạo dao thẳng nhẹ nhàng theo chiều râu</li>
+                <li>Chườm khăn lạnh &amp; khóa ẩm se khít</li>
+              </ul>
+              <div class="service-card-footer">
+                <div class="service-price">120.000 ₫</div>
+                <a href="lien-he.html?dich-vu=rau" class="btn-service-select">Giữ Ghế</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 4 -->
+          <article class="service-item-card">
+            <div class="service-card-media">
+              <img src="assets/banner.webp" alt="Combo trọn vẹn cắt tóc và cạo râu tại Gọn Barbershop" loading="lazy">
+              <span class="service-duration-badge">⏱ 75 Phút</span>
+            </div>
+            <div class="service-card-body">
+              <span class="service-category-tag">Gói Combo Toàn Diện</span>
+              <h3 class="service-card-title">Combo Tóc &amp; Râu Toàn Diện</h3>
+              <p class="service-card-desc">
+                Trải nghiệm trọn vẹn sự chỉn chu: Cắt tóc tạo kiểu chuyên sâu kết hợp cạo râu khăn nóng và massage vùng cổ vai gáy thảo mộc phục hồi.
+              </p>
+              <ul class="service-card-steps">
+                <li>Cắt tóc kéo tay tạo dáng chuẩn phom</li>
+                <li>Liệu trình cạo râu khăn nóng 3 bước</li>
+                <li>Gội dưỡng sinh &amp; ấn huyệt thái dương</li>
+                <li>Tặng tinh dầu dưỡng râu &amp; tóc</li>
+              </ul>
+              <div class="service-card-footer">
+                <div class="service-price">315.000 ₫</div>
+                <a href="lien-he.html?dich-vu=cap-gon" class="btn-service-select">Giữ Ghế</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="san-pham.html" class="btn-primary">
+            <span>📖</span> Xem Toàn Bộ 12 Dịch Vụ &amp; Bảng Giá Chi Tiết
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Section: Hairstyle Lookbook -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Lookbook Thực Tế</span>
+          <h2 class="section-title">Bốn Kiểu Tóc Được Yêu Thích Nhất</h2>
+          <p class="section-subtitle">
+            Những phom tóc được nghiên cứu kỹ lưỡng cho góc cạnh khuôn mặt và chất tóc nam giới Á Đông.
+          </p>
+        </div>
+
+        <div class="lookbook-grid">
+          <!-- Hairstyle 1 -->
+          <div class="lookbook-card">
+            <div class="lookbook-thumb">
+              <img src="assets/crop.webp" alt="Textured French Crop - Dáng tóc ngắn trẻ trung, viền mềm" loading="lazy">
+              <span class="lookbook-face-pill">Mặt Tròn &bull; Mặt Kim Cương</span>
+            </div>
+            <div class="lookbook-content">
+              <h3>Textured French Crop</h3>
+              <p>Mái ngắn cắt tỉa phân tầng nhẹ nhàng, viền mai mỏng tự nhiên. Không đòi hỏi sấy phức tạp, thích hợp cho người hay vận động thể thao hoặc đội mũ cả ngày.</p>
+              <div class="lookbook-specs">
+                <div><strong>Độ dài mái:</strong> 2.5 – 3.5 cm</div>
+                <div><strong>Sản phẩm khuyên dùng:</strong> Matte Clay / Sea Salt Spray</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hairstyle 2 -->
+          <div class="lookbook-card">
+            <div class="lookbook-thumb">
+              <img src="assets/taper.webp" alt="Classic Taper Fade - Gọn viền mai và gáy, giữ phom trên" loading="lazy">
+              <span class="lookbook-face-pill">Mặt Vuông &bull; Mặt Trái Xoan</span>
+            </div>
+            <div class="lookbook-content">
+              <h3>Classic Taper Fade</h3>
+              <p>Hạ thấp độ dài sát mai tai và chân gáy nhưng vẫn giữ nguyên đường nét lịch lãm. Dễ dàng chuyển đổi giữa vuốt sáp rẽ ngôi đi họp và để tự nhiên cuối tuần.</p>
+              <div class="lookbook-specs">
+                <div><strong>Độ dài đỉnh đầu:</strong> 5.0 – 7.0 cm</div>
+                <div><strong>Sản phẩm khuyên dùng:</strong> Pomade gốc nước / Kem vuốt nhẹ</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hairstyle 3 -->
+          <div class="lookbook-card">
+            <div class="lookbook-thumb">
+              <img src="assets/chai-lech.webp" alt="Scissor Side-Part - Chải lệch tự nhiên bằng kéo thủ công" loading="lazy">
+              <span class="lookbook-face-pill">Mặt Dài &bull; Trán Cao</span>
+            </div>
+            <div class="lookbook-content">
+              <h3>Scissor Side-Part Thủ Công</h3>
+              <p>Sử dụng 100% kéo cắt tay để điều chỉnh hướng rơi của tóc theo nếp rẽ tự nhiên. Giữ được vẻ cổ điển, trang nhã, không để lộ da đầu như cắt tông đơ.</p>
+              <div class="lookbook-specs">
+                <div><strong>Độ dài đỉnh đầu:</strong> 7.0 – 9.0 cm</div>
+                <div><strong>Sản phẩm khuyên dùng:</strong> Grooming Tonic &amp; Lược thưa</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hairstyle 4 -->
+          <div class="lookbook-card">
+            <div class="lookbook-thumb">
+              <img src="assets/toc-xoan.webp" alt="Natural Wavy Flow - Tóc xoăn tự nhiên giữ nếp bồng bềnh" loading="lazy">
+              <span class="lookbook-face-pill">Mọi Dáng Mặt</span>
+            </div>
+            <div class="lookbook-content">
+              <h3>Natural Wavy Flow</h3>
+              <p>Dành riêng cho những mái tóc gợn sóng hoặc xoăn tự nhiên. Thợ tỉa bớt sức nặng ở vùng thái dương để các lọn xoăn tự do rơi bồng bềnh mà không bị xù thô ráp.</p>
+              <div class="lookbook-specs">
+                <div><strong>Chất tóc lý tưởng:</strong> Tóc gợn sóng nhẹ hoặc xoăn lọn</div>
+                <div><strong>Sản phẩm khuyên dùng:</strong> Dầu dưỡng Argan &amp; Sấy loa</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 36px;">
+          <a href="kieu-toc.html" class="btn-secondary">
+            <span>✨</span> Khám Phá Toàn Bộ Sưu Tập Kiểu Tóc &amp; Hướng Dẫn Sấy
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Section: Interactive Diagnostic Studio -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Công Cụ Tương Tác</span>
+          <h2 class="section-title">Bộ Chẩn Đoán Dáng Tóc &amp; Khuôn Mặt</h2>
+          <p class="section-subtitle">
+            Chọn đặc điểm hiện tại của bạn để nhận gợi ý phác đồ cắt kéo và kiểu tóc tối ưu nhất từ thợ cả của Gọn Barbershop.
+          </p>
+        </div>
+
+        <div class="diagnostic-box">
+          <div class="diagnostic-grid">
+            <div class="diagnostic-selectors">
+              <!-- Selector 1 -->
+              <div class="diagnostic-selector-group">
+                <label>01. Dáng khuôn mặt của bạn:</label>
+                <div class="option-chips" id="face-chips">
+                  <button type="button" class="chip-btn active" data-face="tron">Mặt Tròn / Bầu Bĩnh</button>
+                  <button type="button" class="chip-btn" data-face="vuong">Mặt Vuông Chữ Điền</button>
+                  <button type="button" class="chip-btn" data-face="traixoan">Mặt Trái Xoan</button>
+                  <button type="button" class="chip-btn" data-face="dai">Mặt Dài / Trán Cao</button>
+                </div>
+              </div>
+
+              <!-- Selector 2 -->
+              <div class="diagnostic-selector-group">
+                <label>02. Đặc điểm chất tóc thực tế:</label>
+                <div class="option-chips" id="hair-chips">
+                  <button type="button" class="chip-btn active" data-hair="cung">Tóc Dày Cứng &bull; Chỉa Hai Bên</button>
+                  <button type="button" class="chip-btn" data-hair="manh">Tóc Tơ Mảnh &bull; Xẹp Chân</button>
+                  <button type="button" class="chip-btn" data-hair="xoan">Tóc Xoăn / Gợn Tự Nhiên</button>
+                  <button type="button" class="chip-btn" data-hair="xoay">Có Xoáy Trán / Vùng Bò Liếm</button>
+                </div>
+              </div>
+
+              <!-- Selector 3 -->
+              <div class="diagnostic-selector-group">
+                <label>03. Thời gian bạn muốn dành để sấy tóc mỗi sáng:</label>
+                <div class="option-chips" id="time-chips">
+                  <button type="button" class="chip-btn active" data-time="nhanh">Dưới 2 phút (Lau khô là đi)</button>
+                  <button type="button" class="chip-btn" data-time="trungbinh">5 phút (Sấy nhẹ &amp; vuốt clay)</button>
+                  <button type="button" class="chip-btn" data-time="chusan">Thích chải chuốt chỉn chu</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Result Box -->
+            <div class="diagnostic-result-card" id="diagnostic-result-box">
+              <div class="result-header">
+                <span class="result-kicker">Phác Thảo Đề Xuất Dành Riêng Cho Bạn</span>
+                <h3 class="result-title" id="diag-rec-title">Textured Crop Tỉa Mai Ép Nếp</h3>
+              </div>
+              <div class="result-body">
+                <p id="diag-rec-desc">
+                  Với khuôn mặt tròn và sợi tóc cứng hay chỉa, giải pháp tốt nhất là hạ sát chân mai bằng Taper nhẹ để thu hẹp chiều ngang khuôn mặt, đồng thời tỉa texture phân tầng ở đỉnh đầu tạo hiệu ứng chiều cao thon gọn.
+                </p>
+                <div class="result-meta-row">
+                  <div>Kiểu tóc: <strong id="diag-hair-style">Textured French Crop</strong></div>
+                  <div>Thời gian sấy: <span id="diag-dry-time">1.5 phút</span></div>
+                </div>
+                <a href="lien-he.html?dich-vu=crop" id="diag-book-btn" class="btn-primary" style="width: 100%; justify-content: center;">
+                  <span>📅</span> Đặt Hẹn Kiểu Tóc Này
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Section: Master Barbers Profile -->
+    <section class="section section-sand">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Những Người Giữ Kéo</span>
+          <h2 class="section-title">Đội Ngũ Thợ Cạo Tại Gọn Barbershop</h2>
+          <p class="section-subtitle">
+            Mỗi người thợ tại Gọn đều có ít nhất 6 năm cầm kéo và trải qua kỳ kiểm tra tay nghề nghiêm ngặt về kỹ thuật nhận diện góc xoáy tóc trước khi đứng ghế chính.
+          </p>
+        </div>
+
+        <div class="barbers-grid">
+          <!-- Barber 1 -->
+          <article class="barber-profile-card">
+            <div class="barber-avatar-wrap">
+              <img src="assets/doi-tho.webp" alt="Thợ Cả Nguyễn Minh Hoàng - 12 năm kinh nghiệm cầm kéo" loading="lazy">
+              <span class="barber-exp-tag">12 Năm Cầm Kéo</span>
+            </div>
+            <div class="barber-info">
+              <h3 class="barber-name">Nguyễn Minh Hoàng</h3>
+              <span class="barber-role">Thợ Cả &bull; Nhà Sáng Lập Gọn</span>
+              <p class="barber-bio">
+                Từng tu nghiệp kỹ thuật cắt kéo phân tách tại Tokyo. Thế mạnh lớn nhất của anh là xử lý các ca tóc có từ 2 xoáy đầu trở lên và tóc chỉa ngược khó thuần phục.
+              </p>
+              <div class="barber-specialties">
+                <strong>Chuyên môn:</strong> Scissor Cut cổ điển, Taper Fade doanh nhân, tư vấn phom đầu.
+              </div>
+            </div>
+          </article>
+
+          <!-- Barber 2 -->
+          <article class="barber-profile-card">
+            <div class="barber-avatar-wrap">
+              <img src="assets/crop.webp" alt="Thợ chính Lê Trọng Đạt - Chuyên gia Fade hiện đại" loading="lazy">
+              <span class="barber-exp-tag">8 Năm Nghề</span>
+            </div>
+            <div class="barber-info">
+              <h3 class="barber-name">Lê Trọng Đạt</h3>
+              <span class="barber-role">Senior Fade &amp; Texture Specialist</span>
+              <p class="barber-bio">
+                Được mệnh danh là đôi tay tạo độ mịn của chân tóc. Anh am hiểu sâu sắc về phong cách đường phố đương đại, từ Mullet mềm mại đến các kiểu Crop sắc sảo.
+              </p>
+              <div class="barber-specialties">
+                <strong>Chuyên môn:</strong> Skin Fade, French Crop, Textured Quiff, nhuộm nâu khói tự nhiên.
+              </div>
+            </div>
+          </article>
+
+          <!-- Barber 3 -->
+          <article class="barber-profile-card">
+            <div class="barber-avatar-wrap">
+              <img src="assets/rau.webp" alt="Nghệ nhân Vũ Khắc Khiêm - Bậc thầy cạo mặt khăn nóng" loading="lazy">
+              <span class="barber-exp-tag">10 Năm Cầm Dao</span>
+            </div>
+            <div class="barber-info">
+              <h3 class="barber-name">Vũ Khắc Khiêm</h3>
+              <span class="barber-role">Master Shave &amp; Beard Artisan</span>
+              <p class="barber-bio">
+                Gìn giữ trọn vẹn nghệ thuật cạo mặt khăn nóng truyền thống. Từng nhát dao lam của anh di chuyển êm ái như lông vũ, giải tỏa triệt để căng thẳng vùng cổ mặt.
+              </p>
+              <div class="barber-specialties">
+                <strong>Chuyên môn:</strong> Cạo râu khăn nóng 3 tầng nhiệt, tỉa râu quai nón, massage huyệt đầu.
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 36px;">
+          <a href="gioi-thieu.html" class="btn-secondary" style="border-color: var(--border-light); color: var(--text-light-primary);">
+            <span>📖</span> Đọc Câu Chuyện Nghề &amp; Tiêu Chuẩn Tiệt Trùng Dụng Cụ
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Section: Grooming At Home Guide -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Cẩm Nang Chăm Sóc</span>
+          <h2 class="section-title">Bốn Bước Sấy Tóc Vào Nếp Trong 3 Phút</h2>
+          <p class="section-subtitle">
+            Bí quyết duy trì mái tóc luôn như vừa rời ghế tiệm mà không cần phụ thuộc vào thợ mỗi ngày.
+          </p>
+        </div>
+
+        <div class="guide-steps-grid">
+          <div class="guide-step-card">
+            <div class="step-number">01</div>
+            <h4>Lau Thấm Khăn Mềm</h4>
+            <p>Không chà xát mạnh gây xước biểu bì tóc. Dùng khăn bông dặm nhẹ cho ráo nước đến khi tóc còn ẩm khoảng 30%.</p>
+          </div>
+          <div class="guide-step-card">
+            <div class="step-number">02</div>
+            <h4>Sấy Chân Theo Hướng Xoáy</h4>
+            <p>Để máy sấy nghiêng góc 45 độ, luồn ngón tay nâng chân tóc và sấy thuận theo hướng xoáy tự nhiên mà thợ đã hướng dẫn.</p>
+          </div>
+          <div class="guide-step-card">
+            <div class="step-number">03</div>
+            <h4>Lượng Sáp Bằng Hạt Đậu</h4>
+            <p>Lấy lượng sáp nhỏ bằng nửa đốt ngón tay, xoa đều trong lòng bàn tay đến khi tan trong suốt trước khi chạm vào tóc.</p>
+          </div>
+          <div class="guide-step-card">
+            <div class="step-number">04</div>
+            <h4>Tán Từ Sau Ra Trước</h4>
+            <p>Luồn tay bóp sáp từ phần gáy ngược lên đỉnh, phần sáp dư mỏng nhất mới dùng để chỉnh viền mái phía trước.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Section: Client Reviews & Journal -->
+    <section class="section section-sand">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Đánh Giá Thực Tế</span>
+          <h2 class="section-title">Khách Hàng Nói Gì Về Gọn Barbershop?</h2>
+          <p class="section-subtitle">
+            Những trải nghiệm được chia sẻ chân thực từ những người gắn bó nhiều năm với ghế cạo của chúng tôi.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-quote">
+              &ldquo;Tôi có 2 xoáy đầu đối xứng và sợi tóc rất cứng, cắt ở đâu về cũng bị chỉa bung như rơm sau 3 ngày. Đến Gọn gặp anh Hoàng, anh chỉ cắt kéo từng tép và hướng dẫn sấy thuận chiều xoáy. Nay tóc mọc ra 3 tuần vẫn êm ru.&rdquo;
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">Đ</div>
+              <div class="author-meta">
+                <strong>Trần Hải Đăng</strong>
+                <span>Kiến trúc sư &bull; Khách quen 4 năm</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-quote">
+              &ldquo;Không gian ở đây rất tĩnh, không mở nhạc xập xình hay chèo kéo mua sáp dưỡng. Dịch vụ cạo khăn nóng với tinh dầu đàn hương thật sự là liều thuốc xả stress tuyệt vời sau một tuần làm việc căng thẳng bên bàn dựng.&rdquo;
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">V</div>
+              <div class="author-meta">
+                <strong>Lê Quang Vinh</strong>
+                <span>Đạo diễn âm thanh &bull; Quận 3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-quote">
+              &ldquo;Cực kỳ ấn tượng với quy trình vệ sinh. Dao cạo bóc lưỡi mới ngay trước mắt khách, khăn ủ nóng thơm mùi thảo dược tự nhiên. Giá cả ở trung tâm Quận 1 như vậy là quá xứng đáng cho chất lượng dịch vụ.&rdquo;
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">B</div>
+              <div class="author-meta">
+                <strong>Phan Quốc Bảo</strong>
+                <span>Chủ chuỗi Cafe Specialty &bull; Quận 1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Section: FAQ Accordion -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Giải Đáp Thắc Mắc</span>
+          <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
+          <p class="section-subtitle">
+            Mọi thông tin bạn cần biết trước khi bước vào buổi hẹn tại Gọn Barbershop.
+          </p>
+        </div>
+
+        <div class="faq-wrap">
+          <details class="faq-item" open>
+            <summary>Tôi có cần đặt lịch hẹn trước khi đến tiệm không?</summary>
+            <div class="faq-content">
+              Khuyến khích bạn đặt trước ít nhất 2 đến 3 tiếng qua website hoặc Zalo. Chúng tôi giới hạn mỗi khung giờ chỉ nhận số lượng khách đúng bằng số ghế thợ phục vụ để đảm bảo mỗi lượt cắt đều có đủ từ 45 đến 60 phút chăm sóc chu đáo, không phải hối hả chạy số lượng.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Tóc tôi bị chỉa mạnh hai bên tai thì có kiểu nào che được không?</summary>
+            <div class="faq-content">
+              Đây là đặc điểm rất phổ biến ở nam giới Á Đông. Thợ Gọn sẽ đề xuất phương án Taper thấp kết hợp giữ độ dài mái che nhẹ hoặc kỹ thuật tỉa so le giảm mật độ để tóc mọc ra không bị bung ngang. Bạn có thể thử công cụ Chẩn Đoán Kiểu Tóc ở trên để xem phác đồ chi tiết.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Dao cạo và khăn nóng tại tiệm được tiệt trùng như thế nào?</summary>
+            <div class="faq-content">
+              100% dao cạo tại Gọn dùng lưỡi lam tiệt trùng dùng một lần và thay mới ngay trước mắt khách hàng. Khăn ủ được giặt sấy nhiệt độ cao, hấp tiệt trùng trong tủ sấy y tế chuyên dụng ở 70°C và tẩm tinh dầu đàn hương tự nhiên trước mỗi lượt sử dụng.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Chính sách bảo hành chỉnh viền miễn phí 7 ngày áp dụng ra sao?</summary>
+            <div class="faq-content">
+              Trong vòng 7 ngày sau khi cắt, nếu bạn cảm thấy phần chân gáy hoặc đường mai mọc ra hơi nhanh, hoặc muốn tỉa bớt một góc mái, bạn chỉ cần nhắn tin cho tiệm để ghé chỉnh viền hoàn toàn miễn phí trong 15 phút.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Tiệm có chỗ đậu ô tô không?</summary>
+            <div class="faq-content">
+              Đầu hẻm Thước Mộc có bãi đỗ xe ô tô có người trông coi (cách tiệm 40 mét). Nếu bạn đi ô tô, vui lòng ghi chú trong form đặt lịch để nhân viên tiệm hướng dẫn vị trí đỗ thuận tiện nhất.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Section: Booking Appointment Form & Local Request -->
+    <section class="section booking-section-wrap" id="dat-lich">
+      <div class="container">
+        <div class="booking-layout-grid">
+          <div class="booking-info-box">
+            <span class="section-kicker">Sẵn Sàng Ghế Cắt</span>
+            <h2>Đặt Lịch Hẹn Ngay Hôm Nay</h2>
+            <p>
+              Chọn khung giờ thuận tiện và dịch vụ mong muốn. Lịch hẹn của bạn sẽ được lưu giữ trên thiết bị và hỗ trợ gửi nhanh qua Zalo để nhân viên xác nhận tức thì trong 5 phút.
+            </p>
+
+            <ul class="booking-perks">
+              <li><span>✓</span> Được chọn đích danh người thợ cầm kéo bạn tin tưởng</li>
+              <li><span>✓</span> Miễn phí cà phê phin mộc hoặc trà lài lạnh đón tiếp</li>
+              <li><span>✓</span> Không thu tiền cọc trước, hủy hoặc đổi lịch linh hoạt</li>
+              <li><span>✓</span> Nhắc lịch tự động trước giờ hẹn 45 phút</li>
+            </ul>
+
+            <div style="background: rgba(255,255,255,0.06); padding: 18px 24px; border-radius: var(--radius-sm); border: 1px solid var(--border-dark);">
+              <div style="font-size: 0.85rem; color: var(--accent-brass-light); margin-bottom: 4px;">Cần tư vấn kiểu tóc gấp?</div>
+              <div style="font-size: 1.25rem; font-weight: 700; color: #fff;">Hotline: 0971 183 939</div>
+            </div>
+          </div>
+
+          <div class="ticket-form-card">
+            <h3>Phiếu Đặt Hẹn Ghế Cắt</h3>
+            <p>Dữ liệu được lưu cục bộ trên trình duyệt. Bạn có thể xuất JSON hoặc chuyển qua Zalo.</p>
+
+            <form id="booking-form" action="lien-he.html" method="GET">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="book-name">Họ và tên của bạn *</label>
+                  <input type="text" id="book-name" name="ho-ten" class="form-control" placeholder="Ví dụ: Hoàng Nam" required>
+                </div>
+                <div class="form-group">
+                  <label for="book-phone">Số điện thoại / Zalo *</label>
+                  <input type="tel" id="book-phone" name="so-dien-thoai" class="form-control" placeholder="09xx xxx xxx" required pattern="[0-9]{10,11}">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="service">Dịch vụ bạn chọn *</label>
+                <select id="service" name="dich-vu" class="form-control" required>
+                  <option value="" disabled selected>-- Chọn dịch vụ --</option>
+                  <option value="crop" data-minutes="45">Cắt Tóc Kéo Tay Signature (45 phút - 180.000₫)</option>
+                  <option value="taper" data-minutes="50">Taper Fade Mai &amp; Gáy Kéo Dày (50 phút - 230.000₫)</option>
+                  <option value="side-part" data-minutes="50">Chải Lệch Side-Part Kéo Tay (50 phút - 270.000₫)</option>
+                  <option value="xoan" data-minutes="55">Cắt Giữ Nếp Tóc Xoăn Tự Nhiên (55 phút - 290.000₫)</option>
+                  <option value="buzz" data-minutes="25">Buzz Cut Đầu Tròn Đều Đặn (25 phút - 140.000₫)</option>
+                  <option value="ghe-gon" data-minutes="15">Gọn Viền Giữa Hai Lần Cắt (15 phút - 80.000₫)</option>
+                  <option value="rau" data-minutes="35">Cạo Râu Khăn Nóng Hoàng Gia (35 phút - 120.000₫)</option>
+                  <option value="ria-mep" data-minutes="15">Tỉa Viền Ria Mép Cổ Điển (15 phút - 75.000₫)</option>
+                  <option value="cap-gon" data-minutes="75">Combo Tóc &amp; Râu Khăn Nóng Toàn Diện (75 phút - 315.000₫)</option>
+                  <option value="combo-mem" data-minutes="65">Combo Crop &amp; Hướng Dẫn Sấy Tóc (65 phút - 250.000₫)</option>
+                </select>
+                <input type="hidden" id="service-summary" name="dich-vu-ten">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="barber-select">Thợ cạo ưu tiên</label>
+                  <select id="barber-select" name="tho-cao" class="form-control">
+                    <option value="bat-ky">Thợ bất kỳ có lịch trống</option>
+                    <option value="hoang">Nguyễn Minh Hoàng (Thợ cả - 12 năm)</option>
+                    <option value="dat">Lê Trọng Đạt (Senior Fade)</option>
+                    <option value="khiem">Vũ Khắc Khiêm (Nghệ nhân cạo)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="visit-day">Ngày hẹn (Thứ Ba – CN) *</label>
+                  <input type="date" id="visit-day" name="ngay-hen" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="visit-time">Khung giờ đón tiếp *</label>
+                <select id="visit-time" name="gio-hen" class="form-control" required>
+                  <option value="" disabled selected>-- Chọn giờ hẹn --</option>
+                  <option value="09:30">09:30 Sáng</option>
+                  <option value="10:30">10:30 Sáng</option>
+                  <option value="11:30">11:30 Trưa</option>
+                  <option value="13:30">13:30 Chiều</option>
+                  <option value="14:30">14:30 Chiều</option>
+                  <option value="15:30">15:30 Chiều</option>
+                  <option value="16:30">16:30 Chiều</option>
+                  <option value="17:30">17:30 Chiều</option>
+                  <option value="18:30">18:30 Tối (Lượt cuối)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="book-notes">Ghi chú đặc điểm tóc (Xoáy đầu, tóc chỉa, yêu cầu thêm)</label>
+                <textarea id="book-notes" name="ghi-chu" class="form-control" rows="2" placeholder="Ví dụ: Tóc tôi có 2 xoáy, thích giữ mái hơi dài..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit-booking">
+                <span>Xác Nhận &amp; Lưu Lịch Ghế Cắt</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 12. Master Enterprise Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="brand-mark-group" style="margin-bottom: 16px;">
+          <div class="brand-crest">G</div>
+          <div class="brand-titles">
+            <span class="brand-name">GỌN BARBERSHOP</span>
+            <span class="brand-sub">Artisan Grooming Atelier</span>
+          </div>
+        </div>
+        <p>
+          Không gian cắt kéo thủ công và cạo mặt khăn nóng dành cho nam giới tìm kiếm sự chỉn chu tự nhiên và thói quen chăm sóc tóc tối giản.
+        </p>
+        <p style="font-size: 0.8rem; color: var(--accent-brass-light);">
+          * Lưu ý: Gọn Barbershop là website mẫu thuộc Thư Viện Theme RackerWeb. Thông tin giá, lịch hẹn và hồ sơ là dữ liệu minh họa nghiệp vụ chuyên sâu.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Hệ Thống Dịch Vụ</h4>
+        <ul class="footer-links">
+          <li><a href="san-pham.html?nhom=C%E1%BA%AFt%20t%C3%B3c">Cắt Kéo Thủ Công Phân Lớp</a></li>
+          <li><a href="san-pham.html?nhom=Duy%20tr%C3%AC">Chỉnh Viền Taper Fade Mai Gáy</a></li>
+          <li><a href="san-pham.html?nhom=R%C3%A2u">Cạo Râu Khăn Nóng 70°C</a></li>
+          <li><a href="san-pham.html?nhom=G%C3%B3i%20k%E1%BA%BFt%20h%E1%BB%A3p">Combo Tóc &amp; Râu Toàn Diện</a></li>
+          <li><a href="san-pham.html">Bảng Báo Giá Minh Bạch 12 Dịch Vụ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Về Gọn Barbershop</h4>
+        <ul class="footer-links">
+          <li><a href="gioi-thieu.html">Triết Lý Đọc Tóc Khi Còn Khô</a></li>
+          <li><a href="gioi-thieu.html#doi-tho">Hồ Sơ Đội Ngũ Thợ Cạo</a></li>
+          <li><a href="kieu-toc.html">Bộ Sưu Tập Kiểu Tóc Lookbook</a></li>
+          <li><a href="gioi-thieu.html#tiet-trung">Tiêu Chuẩn Tiệt Trùng Y Tế</a></li>
+          <li><a href="lien-he.html">Chính Sách Chỉnh Viền 7 Ngày</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Thông Tin Ghế Cắt</h4>
+        <p>
+          📍 Hẻm Thước Mộc, P. Bến Nghé, Quận 1, TP. Hồ Chí Minh.<br>
+          📞 Hotline: <strong>0971 183 939</strong><br>
+          💬 Zalo Tiếp Nhận: <a href="https://zalo.me/0971183939" target="_blank" rel="noopener noreferrer" style="color: #fff; text-decoration: underline;">0971 183 939</a><br>
+          ⏰ Giờ hoạt động: 09:30 – 20:00 (Thứ Ba – Chủ Nhật).<br>
+          <em>(Tiệm nghỉ định kỳ vào Thứ Hai hàng tuần).</em>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-wrap">
+        <div>
+          &copy; 2026 Gọn Barbershop Atelier &bull; Thiết kế mẫu chuẩn doanh nghiệp #MS45.
+        </div>
+        <div>
+          <a href="../../index.html" style="color: var(--accent-brass-light); font-weight: 600;">&larr; RackerWeb Theme Portfolio Index</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

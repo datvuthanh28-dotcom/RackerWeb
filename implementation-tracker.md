@@ -8,7 +8,7 @@ Tiêu chuẩn nghiệm thu mới áp dụng cho cả 113 website và 461 trang. 
 |---|---|---|
 | `blog-tin-tuc-demo-84` | Mạch Phố, bốn trang báo điện tử, ba bài hoàn chỉnh, tìm kiếm không dấu, chuyên mục, bài liên quan và lưu đề tài | TESTED |
 | `building-demo-17` | Nếp Công Trình, bốn trang, hồ sơ cải tạo, yêu cầu khảo sát điền sẵn loại công trình, tải JSON và lịch sử cục bộ | TESTED |
-| `barbershop-demo-45` | Gọn Barbershop, bốn trang, bảng dịch vụ ghi giá và thời lượng, chọn ngày giờ và lưu bản nháp lịch cắt | TESTED |
+| `barbershop-demo-45` | **Gọn Barbershop & Grooming Atelier**: Tái thiết kế toàn diện chuẩn Enterprise (#MS45). 5 trang hoàn chỉnh (`index.html`, `san-pham.html`, `kieu-toc.html`, `gioi-thieu.html`, `lien-he.html`). Trang chủ 11 section điện ảnh, bento 4 trụ cột, 12 dịch vụ chi tiết có thời lượng và quy trình, lookbook kiểu tóc, bộ chẩn đoán tương tác khuôn mặt & chất tóc (`diagnostic-box`), hồ sơ 3 thợ cả, cẩm nang sấy 3 phút, FAQ accordion, đặt hẹn ghế cắt có validate nghỉ Thứ Hai & giới hạn giờ đón tiếp, footer 4 cột. | 🟢 **CLIENT_READY (PREMIUM)** |
 | `cua-hang-hoa-demo-58` | Vòm Hoa, studio cưới hư cấu, ba hồ sơ theo không gian với giá và brief cục bộ | TESTED |
 | `cua-hang-hoa-tuoi-demo-85` | Nếp Cành, dịch vụ chăm hoa văn phòng hư cấu, ba gói và dự toán theo số bình | TESTED |
 | `flower-demo-14` | Mùa Gần, quầy hoa theo mùa hư cấu, kệ bó theo độ dài và lịch lấy cành | TESTED |
