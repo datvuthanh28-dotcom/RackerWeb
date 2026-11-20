@@ -16,7 +16,9 @@
     if (/search|login|register|auth|growth|calculator|estimate/i.test(form.id + ' ' + form.className)) return;
     form.dataset.localRequest = 'true';
     const note = document.createElement('p'); note.className = 'local-request-note';
-    note.textContent = 'Yêu cầu được lưu trên trình duyệt của bạn. Sau khi kiểm tra, hãy xuất bản yêu cầu hoặc mở kênh liên hệ để gửi.';
+    note.textContent = form.dataset.contactChannel === 'none'
+      ? 'Bản nháp lưu trên thiết bị này. Bạn có thể tải xuống sau khi lưu.'
+      : 'Yêu cầu được lưu trên trình duyệt của bạn. Sau khi kiểm tra, hãy xuất bản yêu cầu hoặc mở kênh liên hệ để gửi.';
     form.prepend(note);
     form.querySelectorAll('button[type="submit"],input[type="submit"]').forEach(button => {
       if (button.tagName === 'INPUT') button.value = 'Lưu yêu cầu trên thiết bị';
@@ -41,7 +43,7 @@
     if (!result) { result = document.createElement('div'); result.className = 'local-request-result'; form.append(result); }
     result.replaceChildren(); result.setAttribute('role','status'); result.tabIndex = -1;
     const message = document.createElement('p');
-    message.textContent = saved ? 'Đã lưu trên thiết bị này · Chưa gửi. Xuất bản yêu cầu để giữ bản sao hoặc gửi qua kênh liên hệ.' : 'Chưa gửi. Trình duyệt không lưu được bản nháp. Hãy xuất bản yêu cầu để giữ thông tin.';
+    message.textContent = saved ? 'Đã lưu trên thiết bị này · Chưa gửi. Bạn có thể tải xuống để giữ bản sao.' : 'Chưa gửi. Trình duyệt không lưu được bản nháp. Hãy xuất bản yêu cầu để giữ thông tin.';
     const exportButton = document.createElement('button'); exportButton.type = 'button'; exportButton.textContent = 'Xuất yêu cầu JSON'; exportButton.onclick = () => download(request);
     const channel = document.createElement('a'); channel.href = 'https://zalo.me/0971183939'; channel.target = '_blank'; channel.rel = 'noopener noreferrer'; channel.textContent = 'Mở Zalo để gửi';
     const copy = document.createElement('button'); copy.type = 'button'; copy.textContent = 'Sao chép thông tin';
@@ -50,7 +52,9 @@
       try { await navigator.clipboard.writeText(text); message.textContent = 'Đã sao chép · Chưa gửi. Dán nội dung vào cuộc trò chuyện của bạn.'; }
       catch { const area = document.createElement('textarea'); area.value = text; area.setAttribute('aria-label','Thông tin yêu cầu để sao chép'); result.append(area); area.select(); }
     };
-    result.append(message, exportButton, copy, channel); result.focus();
+    result.append(message, exportButton, copy);
+    if (form.dataset.contactChannel !== 'none') result.append(channel);
+    result.focus();
   }, true);
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('form').forEach(prepare);

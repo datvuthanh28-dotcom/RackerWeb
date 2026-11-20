@@ -1,6 +1,20 @@
 # RackerWeb Transformation Tracker
 
-## Portfolio Status & Metrics Summary
+## Đợt thiết kế theo từng website
+
+Tiêu chuẩn nghiệm thu mới áp dụng cho cả 113 website và 461 trang. Các nhãn VERIFIED và PROTECTED trong phần lịch sử bên dưới là trạng thái cũ của kho.
+
+| Website | Thay đổi trong đợt | Trạng thái |
+|---|---|---|
+| `blog-tin-tuc-demo-84` | Mạch Phố, bốn trang báo điện tử, ba bài hoàn chỉnh, tìm kiếm không dấu, chuyên mục, bài liên quan và lưu đề tài | TESTED |
+| `building-demo-17` | Nếp Công Trình, bốn trang, hồ sơ cải tạo, yêu cầu khảo sát điền sẵn loại công trình, tải JSON và lịch sử cục bộ | TESTED |
+| `barbershop-demo-45` | Gọn Barbershop, bốn trang, bảng dịch vụ ghi giá và thời lượng, chọn ngày giờ và lưu bản nháp lịch cắt | TESTED |
+
+Ba website có chín ảnh WebP tách từ ba ảnh tổng hợp được tạo riêng. Chrome đã chạy 60 lượt kiểm tra trên 12 trang ở 320, 375, 768, 1366 và 1920 px. Ba luồng chính đều chạy trong trình duyệt. Các mục này sẽ được đối chiếu tiếp khi nghiệm thu thiết kế và nội dung của cả kho.
+
+[Kiểm kê trước đợt triển khai](reports/frontend-redesign-baseline.json) · [Bằng chứng theo từng website](reports/frontend-acceptance.json) · [Danh mục ảnh đã tạo](reports/frontend-image-manifest.json)
+
+## Portfolio Status & Metrics Summary — Historical
 
 - **Total Sites in Portfolio:** 113
 - **Protected Original Custom Sites (Do Not Modify):** 5 (100% production-ready)

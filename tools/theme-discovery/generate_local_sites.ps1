@@ -10,7 +10,7 @@ param(
 $ErrorActionPreference = "Continue"
 
 $rootDir = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
-if (-not $rootDir) { $rootDir = "d:\dvweb" }
+if (-not $rootDir) { throw "Cannot determine the repository root." }
 
 $isDryRun = -not $ApplyChanges
 if ($isDryRun) {
@@ -200,6 +200,11 @@ foreach ($t in $themes) {
         Write-Host "  -> [PROTECTED] Skipping site $themeId (Protected in data/protected_sites.json)" -ForegroundColor Green
         continue
     }
+    $existingHome = Join-Path $sitesDir "$themeId/index.html"
+    if ((Test-Path -LiteralPath $existingHome) -and (Select-String -LiteralPath $existingHome -SimpleMatch 'name="rackerweb-custom-design"' -Quiet)) {
+        Write-Host "  -> [CUSTOM] Skipping hand-authored site $themeId"
+        continue
+    }
 
     if ($isDryRun) {
         Write-Host "  -> [DRY-RUN] Would generate site: $themeId ($category)"
@@ -218,8 +223,8 @@ foreach ($t in $themes) {
     if (-not (Test-Path $assetsDir)) { New-Item -ItemType Directory -Path $assetsDir -Force | Out-Null }
     
     # Copy preview image as banner if available
-    $srcImg = "d:\dvweb\assets\previews\$themeId.webp"
-    $srcJpg = "d:\dvweb\assets\previews\$themeId.jpg"
+    $srcImg = "$rootDir\assets\previews\$themeId.webp"
+    $srcJpg = "$rootDir\assets\previews\$themeId.jpg"
     $bannerRel = "assets/banner.webp"
     if (Test-Path $srcJpg) {
         Copy-Item $srcJpg "$assetsDir\banner.jpg" -Force
@@ -228,7 +233,7 @@ foreach ($t in $themes) {
         Copy-Item $srcImg "$assetsDir\banner.webp" -Force
         $bannerRel = "assets/banner.webp"
     } else {
-        Copy-Item "d:\dvweb\assets\previews\fallback.webp" "$assetsDir\banner.webp" -Force
+        Copy-Item "$rootDir\assets\previews\fallback.webp" "$assetsDir\banner.webp" -Force
     }
 
     # 1. Write css/style.css
@@ -684,11 +689,13 @@ $(($cfg.items | ForEach-Object {
 
 Write-Host "`n>>> Generation complete! Total $siteCount local websites created."
 
+if ($isDryRun -or $siteCount -eq 0) { return }
+
 # Save updated themes.json and themes-data.js with localUrl
 $updatedJson = $themes | ConvertTo-Json -Depth 6
-[System.IO.File]::WriteAllText("d:\dvweb\data\themes.json", $updatedJson, [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText("$rootDir\data\themes.json", $updatedJson, [System.Text.Encoding]::UTF8)
 $jsContent = "window.THEMES_DATA = " + $updatedJson + ";"
-[System.IO.File]::WriteAllText("d:\dvweb\js\themes-data.js", $jsContent, [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText("$rootDir\js\themes-data.js", $jsContent, [System.Text.Encoding]::UTF8)
 Write-Host "Updated data/themes.json and js/themes-data.js with localUrl!"
 
 # Generate reports/local-sites-report.md
@@ -732,5 +739,5 @@ $reportMd += @"
 4. **Tương thích GitHub Pages:** 100% đường dẫn tương đối, thuần HTML/CSS/JS, không cần backend hoặc server riêng.
 "@
 
-[System.IO.File]::WriteAllText("d:\dvweb\reports\local-sites-report.md", $reportMd, [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText("$rootDir\reports\local-sites-report.md", $reportMd, [System.Text.Encoding]::UTF8)
 Write-Host "Saved reports/local-sites-report.md!"

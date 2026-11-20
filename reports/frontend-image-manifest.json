@@ -1,0 +1,167 @@
+[
+  {
+    "websiteId": "blog-tin-tuc-demo-84",
+    "pages": [
+      "index.html",
+      "san-pham.html"
+    ],
+    "placement": "Trang nhất và thư viện",
+    "purpose": "Điện thoại mở nắp trên bàn sửa",
+    "imagePrompt": "Create a 3-panel equal-width vertical triptych of documentary editorial photographs for fictional Vietnamese repair and technology journal Circuit Local. Composition exact 3 equal rectangular vertical columns, hard straight boundaries at 1/3 and 2/3, absolutely no gutter, no typography or watermarks. Left: overhead macro of a disassembled dark smartphone and precision screwdrivers on a teal repair mat. Center: careful hands soldering a tiny circuit board by a sunny workshop window. Right: overhead laptop motherboard beside sorted screws on a clean pale desk. Warm paper and oxidized teal grade, natural light, tactile, magazine photography, each panel individually framed for portrait web article images. Wide 3:2 canvas.",
+    "panel": 1,
+    "filePath": "sites/blog-tin-tuc-demo-84/assets/pin.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS"
+    }
+  },
+  {
+    "websiteId": "blog-tin-tuc-demo-84",
+    "pages": [
+      "san-pham.html"
+    ],
+    "placement": "Thư viện",
+    "purpose": "Kỹ thuật viên thao tác với bo mạch",
+    "imagePrompt": "Create a 3-panel equal-width vertical triptych of documentary editorial photographs for fictional Vietnamese repair and technology journal Circuit Local. Composition exact 3 equal rectangular vertical columns, hard straight boundaries at 1/3 and 2/3, absolutely no gutter, no typography or watermarks. Left: overhead macro of a disassembled dark smartphone and precision screwdrivers on a teal repair mat. Center: careful hands soldering a tiny circuit board by a sunny workshop window. Right: overhead laptop motherboard beside sorted screws on a clean pale desk. Warm paper and oxidized teal grade, natural light, tactile, magazine photography, each panel individually framed for portrait web article images. Wide 3:2 canvas.",
+    "panel": 2,
+    "filePath": "sites/blog-tin-tuc-demo-84/assets/sua.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS"
+    }
+  },
+  {
+    "websiteId": "blog-tin-tuc-demo-84",
+    "pages": [
+      "san-pham.html"
+    ],
+    "placement": "Thư viện",
+    "purpose": "Bo mạch laptop và khay vít",
+    "imagePrompt": "Create a 3-panel equal-width vertical triptych of documentary editorial photographs for fictional Vietnamese repair and technology journal Circuit Local. Composition exact 3 equal rectangular vertical columns, hard straight boundaries at 1/3 and 2/3, absolutely no gutter, no typography or watermarks. Left: overhead macro of a disassembled dark smartphone and precision screwdrivers on a teal repair mat. Center: careful hands soldering a tiny circuit board by a sunny workshop window. Right: overhead laptop motherboard beside sorted screws on a clean pale desk. Warm paper and oxidized teal grade, natural light, tactile, magazine photography, each panel individually framed for portrait web article images. Wide 3:2 canvas.",
+    "panel": 3,
+    "filePath": "sites/blog-tin-tuc-demo-84/assets/laptop.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS"
+    }
+  },
+  {
+    "websiteId": "building-demo-17",
+    "pages": [
+      "index.html",
+      "san-pham.html"
+    ],
+    "placement": "Tổng quan và hồ sơ",
+    "purpose": "Nhà ống cải tạo",
+    "imagePrompt": "Photorealistic architectural portfolio for a fictional Vietnamese renovation contractor Nếp Công Trình. Landscape 3:2 canvas with three equal vertical panels, hard seams at exact thirds, no gutters or logos. Each is independently composed as a portrait render: left, narrow 4m Vietnamese brick townhouse under renovation, warmly lit ventilated stair with terracotta screen; center, street-facing small coffee shop fit-out with ribbed wood counter and blue-gray concrete; right, multipurpose family kitchen renovation with matte cement and pale oak cabinetry, morning side light. Restrained slate and clay palette, no people, no signage, no type.",
+    "panel": 1,
+    "filePath": "sites/building-demo-17/assets/nha-ong.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS"
+    }
+  },
+  {
+    "websiteId": "building-demo-17",
+    "pages": [
+      "san-pham.html"
+    ],
+    "placement": "Hồ sơ",
+    "purpose": "Quầy quán cà phê",
+    "imagePrompt": "Photorealistic architectural portfolio for a fictional Vietnamese renovation contractor Nếp Công Trình. Landscape 3:2 canvas with three equal vertical panels, hard seams at exact thirds, no gutters or logos. Each is independently composed as a portrait render: left, narrow 4m Vietnamese brick townhouse under renovation, warmly lit ventilated stair with terracotta screen; center, street-facing small coffee shop fit-out with ribbed wood counter and blue-gray concrete; right, multipurpose family kitchen renovation with matte cement and pale oak cabinetry, morning side light. Restrained slate and clay palette, no people, no signage, no type.",
+    "panel": 2,
+    "filePath": "sites/building-demo-17/assets/quan-cafe.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS"
+    }
+  },
+  {
+    "websiteId": "building-demo-17",
+    "pages": [
+      "san-pham.html"
+    ],
+    "placement": "Hồ sơ",
+    "purpose": "Bếp cải tạo",
+    "imagePrompt": "Photorealistic architectural portfolio for a fictional Vietnamese renovation contractor Nếp Công Trình. Landscape 3:2 canvas with three equal vertical panels, hard seams at exact thirds, no gutters or logos. Each is independently composed as a portrait render: left, narrow 4m Vietnamese brick townhouse under renovation, warmly lit ventilated stair with terracotta screen; center, street-facing small coffee shop fit-out with ribbed wood counter and blue-gray concrete; right, multipurpose family kitchen renovation with matte cement and pale oak cabinetry, morning side light. Restrained slate and clay palette, no people, no signage, no type.",
+    "panel": 3,
+    "filePath": "sites/building-demo-17/assets/bep.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS"
+    }
+  },
+  {
+    "websiteId": "barbershop-demo-45",
+    "pages": [
+      "index.html",
+      "san-pham.html"
+    ],
+    "placement": "Trang tiệm và bảng dịch vụ",
+    "purpose": "Kiểu tóc crop",
+    "imagePrompt": "Premium documentary photo triptych for fictional Vietnamese men's barbershop Gọn. Three equal width vertical panels, sharp seams at exact thirds with no gutter, landscape 3:2 canvas, no text or marks. Left: chest-up Vietnamese adult male model with short textured crop seated in olive upholstery at a classic barber shop, facing camera three-quarter. Center: side profile Vietnamese adult man with smooth taper fade, dark wall. Right: barber's hands shaping a short beard with small scissors, close detail. Dark navy and rust color grading, tactile film grain, directional window light. Distinct individually composed photos.",
+    "panel": 1,
+    "filePath": "sites/barbershop-demo-45/assets/crop.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS"
+    }
+  },
+  {
+    "websiteId": "barbershop-demo-45",
+    "pages": [
+      "san-pham.html"
+    ],
+    "placement": "Bảng dịch vụ",
+    "purpose": "Kiểu tóc taper",
+    "imagePrompt": "Premium documentary photo triptych for fictional Vietnamese men's barbershop Gọn. Three equal width vertical panels, sharp seams at exact thirds with no gutter, landscape 3:2 canvas, no text or marks. Left: chest-up Vietnamese adult male model with short textured crop seated in olive upholstery at a classic barber shop, facing camera three-quarter. Center: side profile Vietnamese adult man with smooth taper fade, dark wall. Right: barber's hands shaping a short beard with small scissors, close detail. Dark navy and rust color grading, tactile film grain, directional window light. Distinct individually composed photos.",
+    "panel": 2,
+    "filePath": "sites/barbershop-demo-45/assets/taper.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS"
+    }
+  },
+  {
+    "websiteId": "barbershop-demo-45",
+    "pages": [
+      "san-pham.html"
+    ],
+    "placement": "Bảng dịch vụ",
+    "purpose": "Chỉnh viền râu",
+    "imagePrompt": "Premium documentary photo triptych for fictional Vietnamese men's barbershop Gọn. Three equal width vertical panels, sharp seams at exact thirds with no gutter, landscape 3:2 canvas, no text or marks. Left: chest-up Vietnamese adult male model with short textured crop seated in olive upholstery at a classic barber shop, facing camera three-quarter. Center: side profile Vietnamese adult man with smooth taper fade, dark wall. Right: barber's hands shaping a short beard with small scissors, close detail. Dark navy and rust color grading, tactile film grain, directional window light. Distinct individually composed photos.",
+    "panel": 3,
+    "filePath": "sites/barbershop-demo-45/assets/rau.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS"
+    }
+  }
+]

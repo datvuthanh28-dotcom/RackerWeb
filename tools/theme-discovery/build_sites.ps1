@@ -10,7 +10,7 @@ param(
 $ErrorActionPreference = "Continue"
 
 $rootDir = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
-if (-not $rootDir) { $rootDir = "d:\dvweb" }
+if (-not $rootDir) { throw "Cannot determine the repository root." }
 
 $isDryRun = -not $ApplyChanges
 if ($isDryRun) {
@@ -60,6 +60,11 @@ foreach ($t in $themes) {
         Write-Host "  -> [PROTECTED] Skipping site $id (Protected in data/protected_sites.json)" -ForegroundColor Green
         continue
     }
+    $existingHome = Join-Path $sitesDir "$id/index.html"
+    if ((Test-Path -LiteralPath $existingHome) -and (Select-String -LiteralPath $existingHome -SimpleMatch 'name="rackerweb-custom-design"' -Quiet)) {
+        Write-Host "  -> [CUSTOM] Skipping hand-authored site $id"
+        continue
+    }
 
     if ($isDryRun) {
         Write-Host "  -> [DRY-RUN] Would generate site: $id ($category)"
@@ -82,8 +87,8 @@ foreach ($t in $themes) {
     if (-not (Test-Path $assetsPath)) { New-Item -ItemType Directory -Path $assetsPath -Force | Out-Null }
 
     # Copy preview image
-    $srcWebp = "d:\dvweb\assets\previews\$id.webp"
-    $srcJpg = "d:\dvweb\assets\previews\$id.jpg"
+    $srcWebp = "$rootDir\assets\previews\$id.webp"
+    $srcJpg = "$rootDir\assets\previews\$id.jpg"
     $bannerFile = "banner.webp"
     
     if (Test-Path $srcJpg) {
@@ -93,7 +98,7 @@ foreach ($t in $themes) {
         Copy-Item $srcWebp "$assetsPath\banner.webp" -Force
         $bannerFile = "assets/banner.webp"
     } else {
-        Copy-Item "d:\dvweb\assets\previews\fallback.webp" "$assetsPath\banner.webp" -Force
+        Copy-Item "$rootDir\assets\previews\fallback.webp" "$assetsPath\banner.webp" -Force
         $bannerFile = "assets/banner.webp"
     }
 
@@ -167,11 +172,13 @@ foreach ($t in $themes) {
 
 Write-Host ">>> Generated $count local standalone sites successfully!"
 
+if ($isDryRun -or $count -eq 0) { return }
+
 # Update data/themes.json & js/themes-data.js
 $newJson = $themes | ConvertTo-Json -Depth 6
-[System.IO.File]::WriteAllText("d:\dvweb\data\themes.json", $newJson, [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText("$rootDir\data\themes.json", $newJson, [System.Text.Encoding]::UTF8)
 $jsData = "window.THEMES_DATA = " + $newJson + ";"
-[System.IO.File]::WriteAllText("d:\dvweb\js\themes-data.js", $jsData, [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText("$rootDir\js\themes-data.js", $jsData, [System.Text.Encoding]::UTF8)
 Write-Host "Updated data/themes.json and js/themes-data.js with localUrl."
 
 # Write reports/local-sites-report.md
@@ -223,5 +230,5 @@ $mdFooter = @"
 "@
 
 $fullMd = $mdHeader + $mdRows + $mdFooter
-[System.IO.File]::WriteAllText("d:\dvweb\reports\local-sites-report.md", $fullMd, [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText("$rootDir\reports\local-sites-report.md", $fullMd, [System.Text.Encoding]::UTF8)
 Write-Host "Saved reports/local-sites-report.md!"

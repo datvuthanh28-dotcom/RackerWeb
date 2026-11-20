@@ -1,2 +1,18 @@
 /* A coffee menu and large cafe photograph replace the split sales hero. */
 .cafe-hero{display:grid;grid-template-columns:minmax(0,1fr);margin:0 auto 72px;padding:36px 24px;gap:32px}.cafe-hero .hero-content{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);column-gap:60px;align-items:start}.cafe-hero .subtitle{grid-column:1/-1}.cafe-hero .hero-content h2{grid-row:2/5;font-size:clamp(2.4rem,4.4vw,4.7rem);max-width:17ch;line-height:1.07}.cafe-hero .hero-media{width:100%}.cafe-hero .hero-img-main{height:420px;border-radius:0}.cafe-hero .hero-img-main img{height:100%;width:100%;object-fit:cover;object-position:center 40%}.hero-floating-card{display:none}.menu-items-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}.coffee-card{display:grid;grid-template-columns:130px minmax(0,1fr);border-radius:0!important;box-shadow:none!important;border:0;border-bottom:1px solid #d6c6b6;padding:24px 0}.coffee-card img{height:140px;object-fit:cover;border-radius:0}.section-heading-editorial{text-align:left}.menu-tab-btn{border-radius:0}.space-grid{gap:64px}.booking-section{background:#e7ddd1}@media(max-width:760px){.cafe-hero .hero-content{display:block}.cafe-hero .hero-content h2{font-size:2.3rem}.cafe-hero .hero-img-main{height:300px}.menu-items-grid{grid-template-columns:minmax(0,1fr)}.header-wrap{display:grid!important;grid-template-columns:minmax(0,1fr) auto}.header-actions{grid-column:1/-1}.header-actions>a,.header-actions>button{flex:1}.brand-title{min-width:0}.menu-section>[style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr)!important;gap:20px!important}}
+
+@media (max-width: 600px) {
+  .menu-section div[style*="grid-template-columns"],
+  #table-booking-form div[style*="grid-template-columns"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  .hero-badges-row, .hero-cta-row { flex-wrap: wrap; }
+  .cart-drawer { max-width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .booking-form-grid { grid-template-columns: minmax(0, 1fr); }
+  .booking-card { padding: 1.25rem; }
+}

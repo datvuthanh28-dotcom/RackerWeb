@@ -1,22 +1,25 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
-  let cartCount = 0;
-  const cartBadge = document.getElementById('cart-count');
-  
-  document.querySelectorAll('.btn-buy').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      cartCount++;
-      if (cartBadge) cartBadge.textContent = cartCount;
-      const itemName = e.target.getAttribute('data-name') || 'Mục';
-      alert('Đã thêm "' + itemName + '" vào giỏ hàng thành công!\nLiên hệ ngay Zalo: 0971183939 để xác nhận và nhận tư vấn chi tiết.');
-    });
-  });
-
-  const contactForm = document.getElementById('site-contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Cảm ơn bạn đã gửi liên hệ!\nChuyên viên tư vấn sẽ liên hệ lại qua số Zalo / Điện thoại của bạn trong ít phút.');
-      contactForm.reset();
-    });
+const query = document.getElementById('query');
+const topic = document.getElementById('topic');
+if (query && topic) {
+  const results = document.getElementById('results');
+  const articles = [...document.querySelectorAll('article[data-topic]')];
+  const fold = value => value.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '').replace(/đ/g, 'd');
+  function filter() {
+    const term = fold(query.value.trim());
+    let matching = 0;
+    for (const article of articles) {
+      article.hidden = Boolean((topic.value && topic.value !== article.dataset.topic) || !fold(article.textContent).includes(term));
+      if (!article.hidden) matching++;
+    }
+    results.textContent = matching ? matching + ' bài viết' : 'Không có bài viết phù hợp.';
   }
-});
+  query.addEventListener('input', filter);
+  topic.addEventListener('change', filter);
+  window.addEventListener('hashchange', () => {
+    query.value = '';
+    topic.value = '';
+    filter();
+    document.getElementById(location.hash.slice(1))?.scrollIntoView();
+  });
+  filter();
+}

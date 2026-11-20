@@ -185,7 +185,7 @@
   },
   {
     "id": "blog-tin-tuc-demo-84",
-    "category": "Doanh nghiệp",
+    "category": "Tin tức",
     "pages": [
       {
         "status": "verified-200",
@@ -213,13 +213,13 @@
         "name": "Liên hệ & Báo giá"
       }
     ],
-    "previewImage": "assets/previews/blog-tin-tuc-demo-84.webp",
+    "previewImage": "sites/blog-tin-tuc-demo-84/assets/pin.webp",
     "sourceStatus": "public-frontend",
     "code": "MS84",
-    "name": "Blog tin tức - demo 84",
+    "name": "Mạch Phố",
     "demoUrl": "https://themes.sikidodemo.com/demo-website/web84",
     "price": 2500000,
-    "description": "Giao diện website Doanh nghiệp chuyên nghiệp, chuẩn SEO, thiết kế hiện đại, tối ưu tốc độ tải và trải nghiệm trên mọi thiết bị.",
+    "description": "Tạp chí tiếng Việt về sử dụng thiết bị bền hơn, sửa chữa và mua máy đã qua sử dụng.",
     "accessStatus": "verified-200",
     "listingUrl": "https://themes.sikidodemo.com/blog-tin-tuc-demo-84",
     "previewStatus": "catalog-preview",
@@ -227,11 +227,11 @@
     "originalPreviewImage": "https://themes.sikidodemo.com/uploads/source/demo/theme-84-desktop.webp",
     "localUrl": "sites/blog-tin-tuc-demo-84/index.html",
     "localSiteStatus": "ready",
-    "designStatus": "generic-template"
+    "designStatus": "custom-redesigned"
   },
   {
     "id": "building-demo-17",
-    "category": "Khac",
+    "category": "Xây dựng",
     "pages": [
       {
         "status": "verified-200",
@@ -259,13 +259,13 @@
         "name": "Liên hệ & Báo giá"
       }
     ],
-    "previewImage": "assets/previews/building-demo-17.webp",
+    "previewImage": "sites/building-demo-17/assets/nha-ong.webp",
     "sourceStatus": "public-frontend",
     "code": "MS17",
-    "name": "Building demo 17",
+    "name": "Nếp Công Trình",
     "demoUrl": "https://themes.sikidodemo.com/demo-website/web17",
     "price": 2500000,
-    "description": "Giao diện website Khac chuyên nghiệp, chuẩn SEO, thiết kế hiện đại, tối ưu tốc độ tải và trải nghiệm trên mọi thiết bị.",
+    "description": "Hồ sơ cải tạo nhà phố, mặt bằng nhỏ và nội thất, kèm phiếu khảo sát cục bộ.",
     "accessStatus": "verified-200",
     "listingUrl": "https://themes.sikidodemo.com/building-demo-17",
     "previewStatus": "catalog-preview",
@@ -273,7 +273,7 @@
     "originalPreviewImage": "https://themes.sikidodemo.com/uploads/source/demo/build/demo-17-desktop-rs-w.webp",
     "localUrl": "sites/building-demo-17/index.html",
     "localSiteStatus": "ready",
-    "designStatus": "generic-template"
+    "designStatus": "custom-redesigned"
   },
   {
     "id": "cat-toc-phong-cach-nam-nu-web-102",
@@ -1059,7 +1059,7 @@
   },
   {
     "id": "barbershop-demo-45",
-    "category": "Thời trang",
+    "category": "Spa - Làm đẹp",
     "pages": [
       {
         "status": "http-500",
@@ -1087,13 +1087,13 @@
         "name": "Liên hệ & Báo giá"
       }
     ],
-    "previewImage": "assets/previews/barbershop-demo-45.webp",
+    "previewImage": "sites/barbershop-demo-45/assets/crop.webp",
     "sourceStatus": "public-frontend",
     "code": "MS45",
-    "name": "demo 45",
+    "name": "Gọn Barbershop",
     "demoUrl": "https://themes.sikidodemo.com/demo-website/web45/",
     "price": 2500000,
-    "description": "Giao diện website Thời trang chuyên nghiệp, chuẩn SEO, thiết kế hiện đại, tối ưu tốc độ tải và trải nghiệm trên mọi thiết bị.",
+    "description": "Bảng dịch vụ cắt tóc nam, taper và chỉnh râu, có thể chọn lịch mong muốn và lưu bản nháp.",
     "accessStatus": "http-500",
     "listingUrl": "https://themes.sikidodemo.com/barbershop-demo-45",
     "previewStatus": "catalog-preview",
@@ -1101,7 +1101,7 @@
     "originalPreviewImage": "https://themes.sikidodemo.com/uploads/source/demo/other/demo-45-desktop-rs-w.webp",
     "localUrl": "sites/barbershop-demo-45/index.html",
     "localSiteStatus": "ready",
-    "designStatus": "generic-template"
+    "designStatus": "custom-redesigned"
   },
   {
     "id": "dich-vu-bao-ve-demo-76",
