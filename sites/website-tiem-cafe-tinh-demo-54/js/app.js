@@ -228,10 +228,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
       if (cart.length === 0) return;
-      alert('ĐÃ XÁC NHẬN ĐƠN MẪU (DEMO)!\n\nĐơn đồ uống của bạn đã được ghi nhận vào hàng đợi chuẩn bị tại quầy Bar Tình Cafe (Thảo Điền).\nTổng giá trị: ' + (cart.reduce((s, i) => s + i.price * i.qty, 0)).toLocaleString('vi-VN') + '₫\n\nĐây là tính năng trình diễn Frontend cho Thư Viện Theme (#MS54). Quý khách có thể liên hệ trực tiếp Zalo: 0971183939 để đặt bàn và tư vấn.');
-      cart = [];
-      saveCart();
-      closeCart();
+      const url = URL.createObjectURL(new Blob([JSON.stringify({status:'unsent', items:cart}, null, 2)], {type:'application/json'}));
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'do-uong-chua-gui.json';
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      checkoutBtn.textContent = 'Đã xuất · Đơn chưa gửi';
     });
   }
 
