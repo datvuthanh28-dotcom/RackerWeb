@@ -829,7 +829,7 @@ window.THEMES_DATA = [
   },
   {
     "id": "cua-hang-hoa-demo-58",
-    "category": "Tổ chức sự kiện",
+    "category": "Hoa tươi",
     "pages": [
       {
         "status": "verified-200",
@@ -857,13 +857,13 @@ window.THEMES_DATA = [
         "name": "Liên hệ & Báo giá"
       }
     ],
-    "previewImage": "assets/previews/cua-hang-hoa-demo-58.webp",
+    "previewImage": "sites/cua-hang-hoa-demo-58/assets/vom-tiec.webp",
     "sourceStatus": "public-frontend",
     "code": "MS58",
-    "name": "Cửa hàng hoa - demo 58",
+    "name": "Vòm Hoa",
     "demoUrl": "https://themes.sikidodemo.com/demo-website/web58",
     "price": 2500000,
-    "description": "Giao diện website Tổ chức sự kiện chuyên nghiệp, chuẩn SEO, thiết kế hiện đại, tối ưu tốc độ tải và trải nghiệm trên mọi thiết bị.",
+    "description": "Studio hoa cưới với hồ sơ thiết kế vòm lễ, bàn tiệc và lễ gia tiên, kèm phiếu lập brief cục bộ.",
     "accessStatus": "verified-200",
     "listingUrl": "https://themes.sikidodemo.com/cua-hang-hoa-demo-58",
     "previewStatus": "catalog-preview",
@@ -871,7 +871,7 @@ window.THEMES_DATA = [
     "originalPreviewImage": "https://themes.sikidodemo.com/uploads/source/demo/other/demo-58-desktop.webp",
     "localUrl": "sites/cua-hang-hoa-demo-58/index.html",
     "localSiteStatus": "ready",
-    "designStatus": "generic-template"
+    "designStatus": "custom-redesigned"
   },
   {
     "id": "cua-hang-hoa-demo-64",
@@ -921,7 +921,7 @@ window.THEMES_DATA = [
   },
   {
     "id": "cua-hang-hoa-tuoi-demo-85",
-    "category": "Dịch vụ",
+    "category": "Hoa tươi",
     "pages": [
       {
         "status": "verified-200",
@@ -949,13 +949,13 @@ window.THEMES_DATA = [
         "name": "Liên hệ & Báo giá"
       }
     ],
-    "previewImage": "assets/previews/cua-hang-hoa-tuoi-demo-85.webp",
+    "previewImage": "sites/cua-hang-hoa-tuoi-demo-85/assets/le-tan.webp",
     "sourceStatus": "public-frontend",
     "code": "MS85",
-    "name": "Cửa hàng hoa tươi - demo 85",
+    "name": "Nếp Cành",
     "demoUrl": "https://themes.sikidodemo.com/demo-website/web85",
     "price": 2500000,
-    "description": "Giao diện website Dịch vụ chuyên nghiệp, chuẩn SEO, thiết kế hiện đại, tối ưu tốc độ tải và trải nghiệm trên mọi thiết bị.",
+    "description": "Chăm hoa định kỳ cho quầy lễ tân, phòng họp và quán nhỏ, có bảng so sánh gói và dự toán cho bốn tuần.",
     "accessStatus": "verified-200",
     "listingUrl": "https://themes.sikidodemo.com/cua-hang-hoa-tuoi-demo-85",
     "previewStatus": "catalog-preview",
@@ -963,7 +963,7 @@ window.THEMES_DATA = [
     "originalPreviewImage": "https://themes.sikidodemo.com/uploads/source/demo/theme-85-desktop.webp",
     "localUrl": "sites/cua-hang-hoa-tuoi-demo-85/index.html",
     "localSiteStatus": "ready",
-    "designStatus": "generic-template"
+    "designStatus": "custom-redesigned"
   },
   {
     "id": "cua-hang-my-pham-demo-62",
@@ -1703,7 +1703,7 @@ window.THEMES_DATA = [
   },
   {
     "id": "flower-demo-14",
-    "category": "Tổ chức sự kiện",
+    "category": "Hoa tươi",
     "pages": [
       {
         "status": "verified-200",
@@ -1731,13 +1731,13 @@ window.THEMES_DATA = [
         "name": "Liên hệ & Báo giá"
       }
     ],
-    "previewImage": "assets/previews/flower-demo-14.webp",
+    "previewImage": "sites/flower-demo-14/assets/thung-canh.webp",
     "sourceStatus": "public-frontend",
     "code": "MS14",
-    "name": "Flower demo 14",
+    "name": "Mùa Gần",
     "demoUrl": "https://themes.sikidodemo.com/demo-website/web14",
     "price": 2500000,
-    "description": "Giao diện website Tổ chức sự kiện chuyên nghiệp, chuẩn SEO, thiết kế hiện đại, tối ưu tốc độ tải và trải nghiệm trên mọi thiết bị.",
+    "description": "Quầy cành theo mùa có hướng dẫn tự cắm, giá theo bó và lịch lấy minh họa sáng thứ Sáu, thứ Bảy.",
     "accessStatus": "verified-200",
     "listingUrl": "https://themes.sikidodemo.com/flower-demo-14",
     "previewStatus": "catalog-preview",
@@ -1745,7 +1745,7 @@ window.THEMES_DATA = [
     "originalPreviewImage": "https://themes.sikidodemo.com/uploads/source/demo/demo-14-desktop-rs-w.webp",
     "localUrl": "sites/flower-demo-14/index.html",
     "localSiteStatus": "ready",
-    "designStatus": "generic-template"
+    "designStatus": "custom-redesigned"
   },
   {
     "id": "food-demo-07",
@@ -4049,7 +4049,7 @@ window.THEMES_DATA = [
   },
   {
     "id": "website-ban-hoa-tuoi-demo-117",
-    "category": "Quà tặng",
+    "category": "Hoa tươi",
     "pages": [
       {
         "status": "verified-200",
@@ -4077,13 +4077,13 @@ window.THEMES_DATA = [
         "name": "Liên hệ & Báo giá"
       }
     ],
-    "previewImage": "assets/previews/website-ban-hoa-tuoi-demo-117.webp",
+    "previewImage": "sites/website-ban-hoa-tuoi-demo-117/assets/hong-bo.webp",
     "sourceStatus": "public-frontend",
     "code": "MS117",
-    "name": "Website bán hoa tươi - demo 117",
+    "name": "Gửi Nở",
     "demoUrl": "https://themes.sikido.com/web117",
     "price": 2500000,
-    "description": "Giao diện website Quà tặng chuyên nghiệp, chuẩn SEO, thiết kế hiện đại, tối ưu tốc độ tải và trải nghiệm trên mọi thiết bị.",
+    "description": "Cửa hàng hoa quà tặng với bộ lọc theo dịp, biến thể, giỏ cục bộ và thiệp lưu cùng đơn nháp.",
     "accessStatus": "verified-200",
     "listingUrl": "https://themes.sikidodemo.com/website-ban-hoa-tuoi-demo-117",
     "previewStatus": "catalog-preview",
@@ -4091,7 +4091,7 @@ window.THEMES_DATA = [
     "originalPreviewImage": "https://themes.sikidodemo.com/uploads/source/demo/flower/web117-desktop.webp",
     "localUrl": "sites/website-ban-hoa-tuoi-demo-117/index.html",
     "localSiteStatus": "ready",
-    "designStatus": "generic-template"
+    "designStatus": "custom-redesigned"
   },
   {
     "id": "website-ban-rem-cua-demo-52",

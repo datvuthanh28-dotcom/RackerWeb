@@ -163,5 +163,270 @@
       "localFile": "PASS",
       "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS"
     }
+  },
+  {
+    "websiteId": "cua-hang-hoa-demo-58",
+    "pages": [
+      "index.html",
+      "san-pham.html"
+    ],
+    "placement": "Ảnh mở đầu hoặc danh mục",
+    "purpose": "A wide low arch of ivory calla lilies and smilax framing a Vietnamese garden wedding aisle at dusk",
+    "imagePrompt": "Generate one 2-by-2 photo contact sheet, landscape 4:3, exact equally sized quadrants with clean straight boundaries at half width and half height, no borders or words. Portfolio for fictional Vietnamese wedding florist Vòm Hoa. Top left: centered low arch of white calla lilies and smilax in a garden wedding aisle at dusk, dark greenery and candle light, framed wide so the full arrangement remains in crop. Top right: long narrow wedding banquet table with white flowers, warm candles and linen under a stone arch. Bottom left: minimal Vietnamese family tea ceremony in a room, paired pedestals of mauve orchids, terracotta linen, uncluttered symmetry. Bottom right: close-up cream petals for color reference. Moody editorial film photography, deep olive and ivory, no faces, logos, watermarks or lettering.",
+    "panel": 1,
+    "filePath": "sites/cua-hang-hoa-demo-58/assets/vom-tiec.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS_AND_STATIC_HTTP"
+    }
+  },
+  {
+    "websiteId": "cua-hang-hoa-demo-58",
+    "pages": [
+      "index.html",
+      "san-pham.html"
+    ],
+    "placement": "Ảnh hồ sơ hoặc sản phẩm",
+    "purpose": "Long narrow editorial wedding banquet table under stone arch, white flowers and linen with pillar candles",
+    "imagePrompt": "Generate one 2-by-2 photo contact sheet, landscape 4:3, exact equally sized quadrants with clean straight boundaries at half width and half height, no borders or words. Portfolio for fictional Vietnamese wedding florist Vòm Hoa. Top left: centered low arch of white calla lilies and smilax in a garden wedding aisle at dusk, dark greenery and candle light, framed wide so the full arrangement remains in crop. Top right: long narrow wedding banquet table with white flowers, warm candles and linen under a stone arch. Bottom left: minimal Vietnamese family tea ceremony in a room, paired pedestals of mauve orchids, terracotta linen, uncluttered symmetry. Bottom right: close-up cream petals for color reference. Moody editorial film photography, deep olive and ivory, no faces, logos, watermarks or lettering.",
+    "panel": 2,
+    "filePath": "sites/cua-hang-hoa-demo-58/assets/ban-dai.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS_AND_STATIC_HTTP"
+    }
+  },
+  {
+    "websiteId": "cua-hang-hoa-demo-58",
+    "pages": [
+      "index.html",
+      "san-pham.html"
+    ],
+    "placement": "Ảnh hồ sơ hoặc sản phẩm",
+    "purpose": "Minimal indoor tea ceremony setup with paired pedestals of mauve orchids and incense-colored fabric",
+    "imagePrompt": "Generate one 2-by-2 photo contact sheet, landscape 4:3, exact equally sized quadrants with clean straight boundaries at half width and half height, no borders or words. Portfolio for fictional Vietnamese wedding florist Vòm Hoa. Top left: centered low arch of white calla lilies and smilax in a garden wedding aisle at dusk, dark greenery and candle light, framed wide so the full arrangement remains in crop. Top right: long narrow wedding banquet table with white flowers, warm candles and linen under a stone arch. Bottom left: minimal Vietnamese family tea ceremony in a room, paired pedestals of mauve orchids, terracotta linen, uncluttered symmetry. Bottom right: close-up cream petals for color reference. Moody editorial film photography, deep olive and ivory, no faces, logos, watermarks or lettering.",
+    "panel": 3,
+    "filePath": "sites/cua-hang-hoa-demo-58/assets/le-thanh-hon.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS_AND_STATIC_HTTP"
+    }
+  },
+  {
+    "websiteId": "cua-hang-hoa-tuoi-demo-85",
+    "pages": [
+      "index.html",
+      "san-pham.html"
+    ],
+    "placement": "Ảnh mở đầu hoặc danh mục",
+    "purpose": "Compact vase of green and white flowers on a limestone reception counter",
+    "imagePrompt": "Generate one 2-by-2 photograph sheet of 4 exact equally sized quadrants with straight boundaries at half width and height, no spaces, landscape 4:3. Corporate florist Nếp Cành in Vietnam. Bright cool window lighting, blue grey architectural concrete, chartreuse-green foliage and white blooms, clean crisp commercial photography, no text, labels, people or logos. Top left: compact upright sculptural green-and-white lisianthus and eucalyptus in a steel cylinder on a grey reception desk, entire vase visible. Top right: low loose white ranunculus and leafy branches on a bright muted blue meeting room table, stools out of focus. Bottom left: three squat white ceramic flower vases dotted across a long coffee counter, clean orderly environment. Bottom right: close-up stems in water only.",
+    "panel": 1,
+    "filePath": "sites/cua-hang-hoa-tuoi-demo-85/assets/le-tan.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS_AND_STATIC_HTTP"
+    }
+  },
+  {
+    "websiteId": "cua-hang-hoa-tuoi-demo-85",
+    "pages": [
+      "san-pham.html",
+      "gioi-thieu.html"
+    ],
+    "placement": "Ảnh hồ sơ hoặc sản phẩm",
+    "purpose": "Low sculptural arrangement with branched white flowers on a meeting table",
+    "imagePrompt": "Generate one 2-by-2 photograph sheet of 4 exact equally sized quadrants with straight boundaries at half width and height, no spaces, landscape 4:3. Corporate florist Nếp Cành in Vietnam. Bright cool window lighting, blue grey architectural concrete, chartreuse-green foliage and white blooms, clean crisp commercial photography, no text, labels, people or logos. Top left: compact upright sculptural green-and-white lisianthus and eucalyptus in a steel cylinder on a grey reception desk, entire vase visible. Top right: low loose white ranunculus and leafy branches on a bright muted blue meeting room table, stools out of focus. Bottom left: three squat white ceramic flower vases dotted across a long coffee counter, clean orderly environment. Bottom right: close-up stems in water only.",
+    "panel": 2,
+    "filePath": "sites/cua-hang-hoa-tuoi-demo-85/assets/phong-hop.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS_AND_STATIC_HTTP"
+    }
+  },
+  {
+    "websiteId": "cua-hang-hoa-tuoi-demo-85",
+    "pages": [
+      "index.html",
+      "san-pham.html"
+    ],
+    "placement": "Ảnh hồ sơ hoặc sản phẩm",
+    "purpose": "Three matching low vases on the counter of a contemporary cafe",
+    "imagePrompt": "Generate one 2-by-2 photograph sheet of 4 exact equally sized quadrants with straight boundaries at half width and height, no spaces, landscape 4:3. Corporate florist Nếp Cành in Vietnam. Bright cool window lighting, blue grey architectural concrete, chartreuse-green foliage and white blooms, clean crisp commercial photography, no text, labels, people or logos. Top left: compact upright sculptural green-and-white lisianthus and eucalyptus in a steel cylinder on a grey reception desk, entire vase visible. Top right: low loose white ranunculus and leafy branches on a bright muted blue meeting room table, stools out of focus. Bottom left: three squat white ceramic flower vases dotted across a long coffee counter, clean orderly environment. Bottom right: close-up stems in water only.",
+    "panel": 3,
+    "filePath": "sites/cua-hang-hoa-tuoi-demo-85/assets/quay-dai.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS_AND_STATIC_HTTP"
+    }
+  },
+  {
+    "websiteId": "flower-demo-14",
+    "pages": [
+      "index.html"
+    ],
+    "placement": "Ảnh mở đầu hoặc danh mục",
+    "purpose": "Harvested seasonal stems sorted next to a small grower's field",
+    "imagePrompt": "Generate one 2-by-2 sheet of photo scenes, exact equal quadrants with hard straight cuts precisely at half width and height, no borders or type, shot for fictional Vietnamese seasonal cut flower workshop Mùa Gần. Natural bright morning, muted strawberry and leaf green, earthy artisanal documentary style, close and intimate. Top left: four shallow wooden harvest crates with freshly cut mixed flowers beside a small growing plot, viewed overhead with dry path and boots absent. Top right: pink and pale white cosmos flower bunch resting on a wood packing table on kraft paper. Bottom left: burnt-orange gerbera stems fanned on recycled paper with raking sunlight. Bottom right: silver dollar eucalyptus stems with soft rain droplets in close-up, dark muted green background. No people, labels, logos or typography.",
+    "panel": 1,
+    "filePath": "sites/flower-demo-14/assets/thung-canh.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS_AND_STATIC_HTTP"
+    }
+  },
+  {
+    "websiteId": "flower-demo-14",
+    "pages": [
+      "san-pham.html"
+    ],
+    "placement": "Ảnh hồ sơ hoặc sản phẩm",
+    "purpose": "Pink and white cosmos stems grouped on a wooden packing table",
+    "imagePrompt": "Generate one 2-by-2 sheet of photo scenes, exact equal quadrants with hard straight cuts precisely at half width and height, no borders or type, shot for fictional Vietnamese seasonal cut flower workshop Mùa Gần. Natural bright morning, muted strawberry and leaf green, earthy artisanal documentary style, close and intimate. Top left: four shallow wooden harvest crates with freshly cut mixed flowers beside a small growing plot, viewed overhead with dry path and boots absent. Top right: pink and pale white cosmos flower bunch resting on a wood packing table on kraft paper. Bottom left: burnt-orange gerbera stems fanned on recycled paper with raking sunlight. Bottom right: silver dollar eucalyptus stems with soft rain droplets in close-up, dark muted green background. No people, labels, logos or typography.",
+    "panel": 2,
+    "filePath": "sites/flower-demo-14/assets/sao-nhai.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS_AND_STATIC_HTTP"
+    }
+  },
+  {
+    "websiteId": "flower-demo-14",
+    "pages": [
+      "san-pham.html"
+    ],
+    "placement": "Ảnh hồ sơ hoặc sản phẩm",
+    "purpose": "Bunch of burnt-orange gerbera daisies in raking afternoon light",
+    "imagePrompt": "Generate one 2-by-2 sheet of photo scenes, exact equal quadrants with hard straight cuts precisely at half width and height, no borders or type, shot for fictional Vietnamese seasonal cut flower workshop Mùa Gần. Natural bright morning, muted strawberry and leaf green, earthy artisanal documentary style, close and intimate. Top left: four shallow wooden harvest crates with freshly cut mixed flowers beside a small growing plot, viewed overhead with dry path and boots absent. Top right: pink and pale white cosmos flower bunch resting on a wood packing table on kraft paper. Bottom left: burnt-orange gerbera stems fanned on recycled paper with raking sunlight. Bottom right: silver dollar eucalyptus stems with soft rain droplets in close-up, dark muted green background. No people, labels, logos or typography.",
+    "panel": 3,
+    "filePath": "sites/flower-demo-14/assets/dong-tien.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS_AND_STATIC_HTTP"
+    }
+  },
+  {
+    "websiteId": "flower-demo-14",
+    "pages": [
+      "san-pham.html"
+    ],
+    "placement": "Ảnh hồ sơ hoặc sản phẩm",
+    "purpose": "Silvery eucalyptus stems with rain droplets and natural foliage",
+    "imagePrompt": "Generate one 2-by-2 sheet of photo scenes, exact equal quadrants with hard straight cuts precisely at half width and height, no borders or type, shot for fictional Vietnamese seasonal cut flower workshop Mùa Gần. Natural bright morning, muted strawberry and leaf green, earthy artisanal documentary style, close and intimate. Top left: four shallow wooden harvest crates with freshly cut mixed flowers beside a small growing plot, viewed overhead with dry path and boots absent. Top right: pink and pale white cosmos flower bunch resting on a wood packing table on kraft paper. Bottom left: burnt-orange gerbera stems fanned on recycled paper with raking sunlight. Bottom right: silver dollar eucalyptus stems with soft rain droplets in close-up, dark muted green background. No people, labels, logos or typography.",
+    "panel": 4,
+    "filePath": "sites/flower-demo-14/assets/la-bac.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS_AND_STATIC_HTTP"
+    }
+  },
+  {
+    "websiteId": "website-ban-hoa-tuoi-demo-117",
+    "pages": [
+      "index.html",
+      "san-pham.html",
+      "lien-he.html"
+    ],
+    "placement": "Ảnh mở đầu hoặc danh mục",
+    "purpose": "Coral ranunculus and cream roses in a folded lavender paper bouquet",
+    "imagePrompt": "Generate one 2-by-2 product-photography contact sheet with exact equal quadrants, hard straight cuts at 50 percent width and height, no gaps or writing, landscape 4:3. Fictional Vietnamese gifting florist Gửi Nở. All arrangements fully inside their quadrants with margin for cards, diagonal shadows, saturated studio color blocking with no props that could look like text. Top left: coral ranunculus and cream roses arranged in folded lavender paper, on pale pink background. Top right: sunny yellow gerbera and tiny white daisies in a soft blue paper wrapper, on blue backdrop. Bottom left: mauve lisianthus and violet statice wrapped in pearly pale paper, on warm purple studio backdrop. Bottom right: compact wicker basket with peach carnations, pale roses and green foliage, on orange-peach backdrop. Entire items visible, elegant premium ecommerce photography, no text, hands, logos or borders.",
+    "panel": 1,
+    "filePath": "sites/website-ban-hoa-tuoi-demo-117/assets/hong-bo.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS_AND_STATIC_HTTP"
+    }
+  },
+  {
+    "websiteId": "website-ban-hoa-tuoi-demo-117",
+    "pages": [
+      "san-pham.html",
+      "lien-he.html"
+    ],
+    "placement": "Ảnh hồ sơ hoặc sản phẩm",
+    "purpose": "Yellow gerbera and white daisies in a soft blue wrapper",
+    "imagePrompt": "Generate one 2-by-2 product-photography contact sheet with exact equal quadrants, hard straight cuts at 50 percent width and height, no gaps or writing, landscape 4:3. Fictional Vietnamese gifting florist Gửi Nở. All arrangements fully inside their quadrants with margin for cards, diagonal shadows, saturated studio color blocking with no props that could look like text. Top left: coral ranunculus and cream roses arranged in folded lavender paper, on pale pink background. Top right: sunny yellow gerbera and tiny white daisies in a soft blue paper wrapper, on blue backdrop. Bottom left: mauve lisianthus and violet statice wrapped in pearly pale paper, on warm purple studio backdrop. Bottom right: compact wicker basket with peach carnations, pale roses and green foliage, on orange-peach backdrop. Entire items visible, elegant premium ecommerce photography, no text, hands, logos or borders.",
+    "panel": 2,
+    "filePath": "sites/website-ban-hoa-tuoi-demo-117/assets/nang-mat.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS_AND_STATIC_HTTP"
+    }
+  },
+  {
+    "websiteId": "website-ban-hoa-tuoi-demo-117",
+    "pages": [
+      "san-pham.html",
+      "gioi-thieu.html",
+      "lien-he.html"
+    ],
+    "placement": "Ảnh hồ sơ hoặc sản phẩm",
+    "purpose": "Mauve lisianthus and violet statice in pale gift paper",
+    "imagePrompt": "Generate one 2-by-2 product-photography contact sheet with exact equal quadrants, hard straight cuts at 50 percent width and height, no gaps or writing, landscape 4:3. Fictional Vietnamese gifting florist Gửi Nở. All arrangements fully inside their quadrants with margin for cards, diagonal shadows, saturated studio color blocking with no props that could look like text. Top left: coral ranunculus and cream roses arranged in folded lavender paper, on pale pink background. Top right: sunny yellow gerbera and tiny white daisies in a soft blue paper wrapper, on blue backdrop. Bottom left: mauve lisianthus and violet statice wrapped in pearly pale paper, on warm purple studio backdrop. Bottom right: compact wicker basket with peach carnations, pale roses and green foliage, on orange-peach backdrop. Entire items visible, elegant premium ecommerce photography, no text, hands, logos or borders.",
+    "panel": 3,
+    "filePath": "sites/website-ban-hoa-tuoi-demo-117/assets/mua-giay.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS_AND_STATIC_HTTP"
+    }
+  },
+  {
+    "websiteId": "website-ban-hoa-tuoi-demo-117",
+    "pages": [
+      "index.html",
+      "san-pham.html",
+      "lien-he.html"
+    ],
+    "placement": "Ảnh hồ sơ hoặc sản phẩm",
+    "purpose": "Compact wicker basket of peach carnations and green foliage",
+    "imagePrompt": "Generate one 2-by-2 product-photography contact sheet with exact equal quadrants, hard straight cuts at 50 percent width and height, no gaps or writing, landscape 4:3. Fictional Vietnamese gifting florist Gửi Nở. All arrangements fully inside their quadrants with margin for cards, diagonal shadows, saturated studio color blocking with no props that could look like text. Top left: coral ranunculus and cream roses arranged in folded lavender paper, on pale pink background. Top right: sunny yellow gerbera and tiny white daisies in a soft blue paper wrapper, on blue backdrop. Bottom left: mauve lisianthus and violet statice wrapped in pearly pale paper, on warm purple studio backdrop. Bottom right: compact wicker basket with peach carnations, pale roses and green foliage, on orange-peach backdrop. Entire items visible, elegant premium ecommerce photography, no text, hands, logos or borders.",
+    "panel": 4,
+    "filePath": "sites/website-ban-hoa-tuoi-demo-117/assets/gio-cam-on.webp",
+    "generation": "GENERATED_AND_EXTRACTED",
+    "integration": "INTEGRATED",
+    "checks": {
+      "format": "WebP",
+      "localFile": "PASS",
+      "browser": "PASS_LOCAL_DECODE_5_VIEWPORTS_AND_STATIC_HTTP"
+    }
   }
 ]

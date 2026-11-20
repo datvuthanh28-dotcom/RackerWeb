@@ -1256,8 +1256,8 @@
     },
     {
       "id": "cua-hang-hoa-demo-58",
-      "name": "Cửa hàng hoa - demo 58",
-      "industry": "Tổ chức sự kiện",
+      "name": "Vòm Hoa",
+      "industry": "Hoa tươi",
       "pages": [
         "gioi-thieu.html",
         "index.html",
@@ -1265,80 +1265,25 @@
         "san-pham.html"
       ],
       "originalGroup": "STANDARD",
-      "status": "IN PROGRESS",
-      "links": "PASS_LOCAL_SOURCE_REFERENCES",
-      "design": null,
-      "content": "PENDING_INDIVIDUAL_REVIEW",
-      "images": "PENDING_INDIVIDUAL_REVIEW",
-      "functionality": "PENDING_BROWSER_JOURNEY",
+      "status": "TESTED",
+      "links": "PASS_LOCAL_SOURCE_REFERENCES_AND_DIRECT_STATIC_HTTP",
+      "design": "Trang chủ ảnh tiệc toàn khung và bảng màu tối. Hồ sơ luân phiên ảnh và nội dung, form brief theo ngày, số khách và mức chi.",
+      "content": "Thương hiệu studio hoa cưới hư cấu, câu chuyện bắt đầu năm 2019, đội ngũ, ba phương án có quy mô và giá, quy trình lắp đặt, hai FAQ.",
+      "images": "3 WEBP_FROM_AI_GENERATED_PANELS",
+      "functionality": "Mở hồ sơ gia tiên, tự điền loại phương án, kiểm tra trường bắt buộc, lưu và xuất brief chưa gửi.",
       "responsive": [
-        375
+        320,
+        375,
+        768,
+        1366,
+        1920
       ],
-      "uniqueness": {
-        "baselineSharedLegacyScript": true,
-        "baselineSameStylesheet": [
-          "blog-tin-tuc-demo-84",
-          "building-demo-17",
-          "cua-hang-hoa-tuoi-demo-85",
-          "dich-vu-bao-ve-demo-76",
-          "dich-vu-gia-cong-co-khi-demo-38",
-          "dich-vu-in-an-va-thiet-ke-demo-44",
-          "dich-vu-sua-chua-co-nhiet-dien-lanh-demo-47",
-          "dich-vu-thiep-cuoi-demo-87",
-          "duoc-pham-viet-nam-demo-66",
-          "fashion-demo-63",
-          "flower-demo-14",
-          "furniture-demo-10",
-          "furniture-demo-25",
-          "giao-duc-mam-non-demo-112",
-          "kien-truc-xay-dung-demo-93",
-          "mam-non-tri-tam-demo-67",
-          "media-demo-08",
-          "son-nuoc-demo-43",
-          "the-gioi-ruou-ngoai-demo-71",
-          "thiep-cuoi-demo-30",
-          "trung-tam-can-thiep-som-demo-86",
-          "trung-tam-day-boi-demo-74",
-          "trung-tam-day-lai-xe-demo-88",
-          "trung-tam-day-yoga-demo-60",
-          "trung-tam-ngoai-ngu-demo-46",
-          "trung-tam-the-duc-the-hinh-demo-82",
-          "van-tai-logistics-demo-42",
-          "van-tai-logistics",
-          "website-ban-banh-trung-thu-demo-110",
-          "website-ban-dac-san-demo-107",
-          "website-ban-do-an-nhanh-demo-53",
-          "website-ban-hoa-tuoi-demo-117",
-          "website-gio-cha-demo-109",
-          "website-shop-tra-thao-moc-demo-57",
-          "website-thiet-ke-xay-dung-san-vuon-demo-116",
-          "xay-dung-driller-demo-23",
-          "xe-dap-the-thao-electric-bicycle-21",
-          "yen-sao-nguyen-chat-demo-69"
-        ],
-        "baselineSameHero": []
-      },
+      "uniqueness": "So sánh trực quan bốn mẫu hoa mới tại 1366 px. Mỗi mẫu có hướng nội dung và cấu trúc chính riêng. Chờ so sánh toàn kho.",
       "browserDiagnostics": [
-        {
-          "file": "gioi-thieu.html",
-          "overflow": 0,
-          "title": "Giới Thiệu | Cửa hàng hoa - demo 58",
-          "headings": 1,
-          "brokenLocalImages": [],
-          "errors": []
-        },
         {
           "file": "index.html",
           "overflow": 0,
-          "title": "Cửa hàng hoa - demo 58 | Tổ chức sự kiện Official Demo",
-          "headings": 1,
-          "brokenLocalImages": [],
-          "errors": []
-        },
-        {
-          "file": "lien-he.html",
-          "overflow": 0,
-          "title": "Liên Hệ & Tư Vấn | Cửa hàng hoa - demo 58",
+          "title": "Thiết kế hoa cưới · Vòm Hoa",
           "headings": 1,
           "brokenLocalImages": [],
           "errors": []
@@ -1346,13 +1291,36 @@
         {
           "file": "san-pham.html",
           "overflow": 0,
-          "title": "Danh Mục | Cửa hàng hoa - demo 58",
+          "title": "Hồ sơ tiệc · Vòm Hoa",
+          "headings": 1,
+          "brokenLocalImages": [],
+          "errors": []
+        },
+        {
+          "file": "gioi-thieu.html",
+          "overflow": 0,
+          "title": "Xưởng Vòm Hoa · Vòm Hoa",
+          "headings": 1,
+          "brokenLocalImages": [],
+          "errors": []
+        },
+        {
+          "file": "lien-he.html",
+          "overflow": 0,
+          "title": "Lập brief tiệc · Vòm Hoa",
           "headings": 1,
           "brokenLocalImages": [],
           "errors": []
         }
       ],
-      "remaining": "Individual redesign, content, image curation and full browser journeys remain to be verified."
+      "remaining": "Tiếp tục so sánh trùng lặp với kho 113 mẫu trước nghiệm thu toàn bộ.",
+      "responsiveFindings": [],
+      "browserVerification": {
+        "directStaticHttp": true,
+        "viewportAndPageChecks": 20,
+        "journey": "PASS",
+        "representativeScreenshots": 6
+      }
     },
     {
       "id": "cua-hang-hoa-demo-64",
@@ -1417,8 +1385,8 @@
     },
     {
       "id": "cua-hang-hoa-tuoi-demo-85",
-      "name": "Cửa hàng hoa tươi - demo 85",
-      "industry": "Dịch vụ",
+      "name": "Nếp Cành",
+      "industry": "Hoa tươi",
       "pages": [
         "gioi-thieu.html",
         "index.html",
@@ -1426,80 +1394,25 @@
         "san-pham.html"
       ],
       "originalGroup": "STANDARD",
-      "status": "IN PROGRESS",
-      "links": "PASS_LOCAL_SOURCE_REFERENCES",
-      "design": null,
-      "content": "PENDING_INDIVIDUAL_REVIEW",
-      "images": "PENDING_INDIVIDUAL_REVIEW",
-      "functionality": "PENDING_BROWSER_JOURNEY",
+      "status": "TESTED",
+      "links": "PASS_LOCAL_SOURCE_REFERENCES_AND_DIRECT_STATIC_HTTP",
+      "design": "Khung sáng xanh lá kết hợp ảnh quầy. Bảng so sánh ba gói và form tách phần nhập khỏi dự toán.",
+      "content": "Dịch vụ định kỳ hư cấu, câu chuyện bắt đầu năm 2021, phân công vận hành, lịch và chi phí bốn tuần, quy tắc thay cành.",
+      "images": "3 WEBP_FROM_AI_GENERATED_PANELS",
+      "functionality": "Chọn gói Phòng họp, thêm hai bình mỗi lượt, kiểm tra 8.080.000 ₫ và xuất bản yêu cầu chưa gửi.",
       "responsive": [
-        375
+        320,
+        375,
+        768,
+        1366,
+        1920
       ],
-      "uniqueness": {
-        "baselineSharedLegacyScript": true,
-        "baselineSameStylesheet": [
-          "blog-tin-tuc-demo-84",
-          "building-demo-17",
-          "cua-hang-hoa-demo-58",
-          "dich-vu-bao-ve-demo-76",
-          "dich-vu-gia-cong-co-khi-demo-38",
-          "dich-vu-in-an-va-thiet-ke-demo-44",
-          "dich-vu-sua-chua-co-nhiet-dien-lanh-demo-47",
-          "dich-vu-thiep-cuoi-demo-87",
-          "duoc-pham-viet-nam-demo-66",
-          "fashion-demo-63",
-          "flower-demo-14",
-          "furniture-demo-10",
-          "furniture-demo-25",
-          "giao-duc-mam-non-demo-112",
-          "kien-truc-xay-dung-demo-93",
-          "mam-non-tri-tam-demo-67",
-          "media-demo-08",
-          "son-nuoc-demo-43",
-          "the-gioi-ruou-ngoai-demo-71",
-          "thiep-cuoi-demo-30",
-          "trung-tam-can-thiep-som-demo-86",
-          "trung-tam-day-boi-demo-74",
-          "trung-tam-day-lai-xe-demo-88",
-          "trung-tam-day-yoga-demo-60",
-          "trung-tam-ngoai-ngu-demo-46",
-          "trung-tam-the-duc-the-hinh-demo-82",
-          "van-tai-logistics-demo-42",
-          "van-tai-logistics",
-          "website-ban-banh-trung-thu-demo-110",
-          "website-ban-dac-san-demo-107",
-          "website-ban-do-an-nhanh-demo-53",
-          "website-ban-hoa-tuoi-demo-117",
-          "website-gio-cha-demo-109",
-          "website-shop-tra-thao-moc-demo-57",
-          "website-thiet-ke-xay-dung-san-vuon-demo-116",
-          "xay-dung-driller-demo-23",
-          "xe-dap-the-thao-electric-bicycle-21",
-          "yen-sao-nguyen-chat-demo-69"
-        ],
-        "baselineSameHero": []
-      },
+      "uniqueness": "So sánh trực quan bốn mẫu hoa mới tại 1366 px. Mỗi mẫu có hướng nội dung và cấu trúc chính riêng. Chờ so sánh toàn kho.",
       "browserDiagnostics": [
-        {
-          "file": "gioi-thieu.html",
-          "overflow": 0,
-          "title": "Giới Thiệu | Cửa hàng hoa tươi - demo 85",
-          "headings": 1,
-          "brokenLocalImages": [],
-          "errors": []
-        },
         {
           "file": "index.html",
           "overflow": 0,
-          "title": "Cửa hàng hoa tươi - demo 85 | Dịch vụ Official Demo",
-          "headings": 1,
-          "brokenLocalImages": [],
-          "errors": []
-        },
-        {
-          "file": "lien-he.html",
-          "overflow": 0,
-          "title": "Liên Hệ & Tư Vấn | Cửa hàng hoa tươi - demo 85",
+          "title": "Chăm hoa định kỳ · Nếp Cành",
           "headings": 1,
           "brokenLocalImages": [],
           "errors": []
@@ -1507,13 +1420,36 @@
         {
           "file": "san-pham.html",
           "overflow": 0,
-          "title": "Danh Mục | Cửa hàng hoa tươi - demo 85",
+          "title": "Gói chăm hoa · Nếp Cành",
+          "headings": 1,
+          "brokenLocalImages": [],
+          "errors": []
+        },
+        {
+          "file": "gioi-thieu.html",
+          "overflow": 0,
+          "title": "Vận hành dịch vụ · Nếp Cành",
+          "headings": 1,
+          "brokenLocalImages": [],
+          "errors": []
+        },
+        {
+          "file": "lien-he.html",
+          "overflow": 0,
+          "title": "Tính chi phí và lưu yêu cầu · Nếp Cành",
           "headings": 1,
           "brokenLocalImages": [],
           "errors": []
         }
       ],
-      "remaining": "Individual redesign, content, image curation and full browser journeys remain to be verified."
+      "remaining": "Tiếp tục so sánh trùng lặp với kho 113 mẫu trước nghiệm thu toàn bộ.",
+      "responsiveFindings": [],
+      "browserVerification": {
+        "directStaticHttp": true,
+        "viewportAndPageChecks": 20,
+        "journey": "PASS",
+        "representativeScreenshots": 6
+      }
     },
     {
       "id": "cua-hang-my-pham-demo-62",
@@ -2840,8 +2776,8 @@
     },
     {
       "id": "flower-demo-14",
-      "name": "Flower demo 14",
-      "industry": "Tổ chức sự kiện",
+      "name": "Mùa Gần",
+      "industry": "Hoa tươi",
       "pages": [
         "gioi-thieu.html",
         "index.html",
@@ -2849,80 +2785,25 @@
         "san-pham.html"
       ],
       "originalGroup": "STANDARD",
-      "status": "IN PROGRESS",
-      "links": "PASS_LOCAL_SOURCE_REFERENCES",
-      "design": null,
-      "content": "PENDING_INDIVIDUAL_REVIEW",
-      "images": "PENDING_INDIVIDUAL_REVIEW",
-      "functionality": "PENDING_BROWSER_JOURNEY",
+      "status": "TESTED",
+      "links": "PASS_LOCAL_SOURCE_REFERENCES_AND_DIRECT_STATIC_HTTP",
+      "design": "Ảnh luống trồng bên trái trong khung vòm, lịch hai buổi ngay trên trang chủ, kệ ảnh so le và mặt phiếu lấy hoa theo hai bước.",
+      "content": "Quầy cành theo mùa hư cấu, câu chuyện bắt đầu năm 2022, nhân vật chăm luống, lịch mở quầy, ba bó có thông số, hướng dẫn cắm và đổi bó.",
+      "images": "4 WEBP_FROM_AI_GENERATED_PANELS",
+      "functionality": "Chọn đồng tiền từ kệ, lưu buổi lấy thứ Bảy, xuất JSON và mở lại lịch sử sau refresh.",
       "responsive": [
-        375
+        320,
+        375,
+        768,
+        1366,
+        1920
       ],
-      "uniqueness": {
-        "baselineSharedLegacyScript": true,
-        "baselineSameStylesheet": [
-          "blog-tin-tuc-demo-84",
-          "building-demo-17",
-          "cua-hang-hoa-demo-58",
-          "cua-hang-hoa-tuoi-demo-85",
-          "dich-vu-bao-ve-demo-76",
-          "dich-vu-gia-cong-co-khi-demo-38",
-          "dich-vu-in-an-va-thiet-ke-demo-44",
-          "dich-vu-sua-chua-co-nhiet-dien-lanh-demo-47",
-          "dich-vu-thiep-cuoi-demo-87",
-          "duoc-pham-viet-nam-demo-66",
-          "fashion-demo-63",
-          "furniture-demo-10",
-          "furniture-demo-25",
-          "giao-duc-mam-non-demo-112",
-          "kien-truc-xay-dung-demo-93",
-          "mam-non-tri-tam-demo-67",
-          "media-demo-08",
-          "son-nuoc-demo-43",
-          "the-gioi-ruou-ngoai-demo-71",
-          "thiep-cuoi-demo-30",
-          "trung-tam-can-thiep-som-demo-86",
-          "trung-tam-day-boi-demo-74",
-          "trung-tam-day-lai-xe-demo-88",
-          "trung-tam-day-yoga-demo-60",
-          "trung-tam-ngoai-ngu-demo-46",
-          "trung-tam-the-duc-the-hinh-demo-82",
-          "van-tai-logistics-demo-42",
-          "van-tai-logistics",
-          "website-ban-banh-trung-thu-demo-110",
-          "website-ban-dac-san-demo-107",
-          "website-ban-do-an-nhanh-demo-53",
-          "website-ban-hoa-tuoi-demo-117",
-          "website-gio-cha-demo-109",
-          "website-shop-tra-thao-moc-demo-57",
-          "website-thiet-ke-xay-dung-san-vuon-demo-116",
-          "xay-dung-driller-demo-23",
-          "xe-dap-the-thao-electric-bicycle-21",
-          "yen-sao-nguyen-chat-demo-69"
-        ],
-        "baselineSameHero": []
-      },
+      "uniqueness": "So sánh trực quan bốn mẫu hoa mới tại 1366 px. Mỗi mẫu có hướng nội dung và cấu trúc chính riêng. Chờ so sánh toàn kho.",
       "browserDiagnostics": [
-        {
-          "file": "gioi-thieu.html",
-          "overflow": 0,
-          "title": "Giới Thiệu | Flower demo 14",
-          "headings": 1,
-          "brokenLocalImages": [],
-          "errors": []
-        },
         {
           "file": "index.html",
           "overflow": 0,
-          "title": "Flower demo 14 | Tổ chức sự kiện Official Demo",
-          "headings": 1,
-          "brokenLocalImages": [],
-          "errors": []
-        },
-        {
-          "file": "lien-he.html",
-          "overflow": 0,
-          "title": "Liên Hệ & Tư Vấn | Flower demo 14",
+          "title": "Hoa cành theo mùa · Mùa Gần",
           "headings": 1,
           "brokenLocalImages": [],
           "errors": []
@@ -2930,13 +2811,36 @@
         {
           "file": "san-pham.html",
           "overflow": 0,
-          "title": "Danh Mục | Flower demo 14",
+          "title": "Kệ cành theo mùa · Mùa Gần",
+          "headings": 1,
+          "brokenLocalImages": [],
+          "errors": []
+        },
+        {
+          "file": "gioi-thieu.html",
+          "overflow": 0,
+          "title": "Nhật ký vườn · Mùa Gần",
+          "headings": 1,
+          "brokenLocalImages": [],
+          "errors": []
+        },
+        {
+          "file": "lien-he.html",
+          "overflow": 0,
+          "title": "Lưu lịch lấy hoa · Mùa Gần",
           "headings": 1,
           "brokenLocalImages": [],
           "errors": []
         }
       ],
-      "remaining": "Individual redesign, content, image curation and full browser journeys remain to be verified."
+      "remaining": "Tiếp tục so sánh trùng lặp với kho 113 mẫu trước nghiệm thu toàn bộ.",
+      "responsiveFindings": [],
+      "browserVerification": {
+        "directStaticHttp": true,
+        "viewportAndPageChecks": 20,
+        "journey": "PASS",
+        "representativeScreenshots": 6
+      }
     },
     {
       "id": "food-demo-07",
@@ -6998,8 +6902,8 @@
     },
     {
       "id": "website-ban-hoa-tuoi-demo-117",
-      "name": "Website bán hoa tươi - demo 117",
-      "industry": "Quà tặng",
+      "name": "Gửi Nở",
+      "industry": "Hoa tươi",
       "pages": [
         "gioi-thieu.html",
         "index.html",
@@ -7007,80 +6911,25 @@
         "san-pham.html"
       ],
       "originalGroup": "STANDARD",
-      "status": "IN PROGRESS",
-      "links": "PASS_LOCAL_SOURCE_REFERENCES",
-      "design": null,
-      "content": "PENDING_INDIVIDUAL_REVIEW",
-      "images": "PENDING_INDIVIDUAL_REVIEW",
-      "functionality": "PENDING_BROWSER_JOURNEY",
+      "status": "TESTED",
+      "links": "PASS_LOCAL_SOURCE_REFERENCES_AND_DIRECT_STATIC_HTTP",
+      "design": "Cặp ảnh quà song song trên nền hồng phấn, danh mục lọc theo dịp, khối giỏ dạng danh sách trước phần ghi thiệp.",
+      "content": "Tiệm hoa quà tặng hư cấu, câu chuyện bắt đầu năm 2023, bốn sản phẩm có giá, kích thước và biến thể riêng, cách chăm và chính sách mẫu.",
+      "images": "4 WEBP_FROM_AI_GENERATED_PANELS",
+      "functionality": "Lọc theo dịp, tìm không dấu, sắp xếp giá, chọn cỡ, kiểm tra hết tồn, chỉnh giỏ sau tải lại và xuất đơn có lời nhắn.",
       "responsive": [
-        375
+        320,
+        375,
+        768,
+        1366,
+        1920
       ],
-      "uniqueness": {
-        "baselineSharedLegacyScript": true,
-        "baselineSameStylesheet": [
-          "blog-tin-tuc-demo-84",
-          "building-demo-17",
-          "cua-hang-hoa-demo-58",
-          "cua-hang-hoa-tuoi-demo-85",
-          "dich-vu-bao-ve-demo-76",
-          "dich-vu-gia-cong-co-khi-demo-38",
-          "dich-vu-in-an-va-thiet-ke-demo-44",
-          "dich-vu-sua-chua-co-nhiet-dien-lanh-demo-47",
-          "dich-vu-thiep-cuoi-demo-87",
-          "duoc-pham-viet-nam-demo-66",
-          "fashion-demo-63",
-          "flower-demo-14",
-          "furniture-demo-10",
-          "furniture-demo-25",
-          "giao-duc-mam-non-demo-112",
-          "kien-truc-xay-dung-demo-93",
-          "mam-non-tri-tam-demo-67",
-          "media-demo-08",
-          "son-nuoc-demo-43",
-          "the-gioi-ruou-ngoai-demo-71",
-          "thiep-cuoi-demo-30",
-          "trung-tam-can-thiep-som-demo-86",
-          "trung-tam-day-boi-demo-74",
-          "trung-tam-day-lai-xe-demo-88",
-          "trung-tam-day-yoga-demo-60",
-          "trung-tam-ngoai-ngu-demo-46",
-          "trung-tam-the-duc-the-hinh-demo-82",
-          "van-tai-logistics-demo-42",
-          "van-tai-logistics",
-          "website-ban-banh-trung-thu-demo-110",
-          "website-ban-dac-san-demo-107",
-          "website-ban-do-an-nhanh-demo-53",
-          "website-gio-cha-demo-109",
-          "website-shop-tra-thao-moc-demo-57",
-          "website-thiet-ke-xay-dung-san-vuon-demo-116",
-          "xay-dung-driller-demo-23",
-          "xe-dap-the-thao-electric-bicycle-21",
-          "yen-sao-nguyen-chat-demo-69"
-        ],
-        "baselineSameHero": []
-      },
+      "uniqueness": "So sánh trực quan bốn mẫu hoa mới tại 1366 px. Mỗi mẫu có hướng nội dung và cấu trúc chính riêng. Chờ so sánh toàn kho.",
       "browserDiagnostics": [
-        {
-          "file": "gioi-thieu.html",
-          "overflow": 0,
-          "title": "Giới Thiệu | Website bán hoa tươi - demo 117",
-          "headings": 1,
-          "brokenLocalImages": [],
-          "errors": []
-        },
         {
           "file": "index.html",
           "overflow": 0,
-          "title": "Website bán hoa tươi - demo 117 | Quà tặng Official Demo",
-          "headings": 1,
-          "brokenLocalImages": [],
-          "errors": []
-        },
-        {
-          "file": "lien-he.html",
-          "overflow": 0,
-          "title": "Liên Hệ & Tư Vấn | Website bán hoa tươi - demo 117",
+          "title": "Hoa quà tặng · Gửi Nở",
           "headings": 1,
           "brokenLocalImages": [],
           "errors": []
@@ -7088,13 +6937,36 @@
         {
           "file": "san-pham.html",
           "overflow": 0,
-          "title": "Danh Mục | Website bán hoa tươi - demo 117",
+          "title": "Chọn hoa · Gửi Nở",
+          "headings": 1,
+          "brokenLocalImages": [],
+          "errors": []
+        },
+        {
+          "file": "gioi-thieu.html",
+          "overflow": 0,
+          "title": "Cách Gửi Nở gói hoa · Gửi Nở",
+          "headings": 1,
+          "brokenLocalImages": [],
+          "errors": []
+        },
+        {
+          "file": "lien-he.html",
+          "overflow": 0,
+          "title": "Giỏ hoa và lời nhắn · Gửi Nở",
           "headings": 1,
           "brokenLocalImages": [],
           "errors": []
         }
       ],
-      "remaining": "Individual redesign, content, image curation and full browser journeys remain to be verified."
+      "remaining": "Tiếp tục so sánh trùng lặp với kho 113 mẫu trước nghiệm thu toàn bộ.",
+      "responsiveFindings": [],
+      "browserVerification": {
+        "directStaticHttp": true,
+        "viewportAndPageChecks": 20,
+        "journey": "PASS",
+        "representativeScreenshots": 6
+      }
     },
     {
       "id": "website-ban-rem-cua-demo-52",
